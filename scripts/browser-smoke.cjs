@@ -124,7 +124,15 @@ async function run() {
     check('CLEAN-VISIBLE-TEXT', 'visible learner UI has no leaked object text or forbidden institution label', !/\[object Object\]|HUTECH/i.test(onlineState.bodyText), null);
 
     await page.locator('#nav [data-view="learning"]').click();
-    await page.waitForFunction(() => window.__BAUMAN_CORE_API && window.__BAUMAN_CORE_API.state.view === 'learning');
+    await page.waitForTimeout(500);
+    const learningRoute = await page.evaluate(() => ({
+      apiView: window.__BAUMAN_CORE_API && window.__BAUMAN_CORE_API.state.view,
+      mathStateView: window.__MATH_STATE && window.__MATH_STATE.view,
+      activeNav: document.querySelector('#nav [data-view].active') && document.querySelector('#nav [data-view].active').getAttribute('data-view'),
+      pageTitle: document.getElementById('pageTitle') && document.getElementById('pageTitle').textContent,
+      viewPrefix: document.getElementById('view') && document.getElementById('view').innerText.slice(0, 240)
+    }));
+    check('NAV-LEARNING-CLICK', 'clicking the primary Học tập tab changes the canonical runtime route', learningRoute.apiView === 'learning' && learningRoute.mathStateView === 'learning' && learningRoute.activeNav === 'learning', learningRoute);
     await page.waitForSelector('.e129-theory-shell', { timeout: 30000 });
     const c03 = 'MATH-VN-C03-ham_so_ao_ham_va_gradien';
     await page.locator(`[data-e129-chapter="${c03}"]`).first().click();
