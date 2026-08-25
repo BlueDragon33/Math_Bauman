@@ -1,7 +1,7 @@
 (function (global) {
   'use strict';
 
-  const RELEASE = 'MATH-BAUMAN-WEBAPP-V2-L2.1';
+  const RELEASE = 'MATH-BAUMAN-WEBAPP-V2-L2.2';
   const LEARNING_TABS = ['theory', 'exercises', 'practice', 'review', 'exam'];
 
   function markReady() {
@@ -31,6 +31,10 @@
     if (view === 'writing') state.simulationKind = 'unified';
     if (typeof api.save === 'function') api.save();
     if (typeof api.render === 'function') api.render();
+    if (view === 'learning' && state.learnTab === 'theory') {
+      const theory = global.BAUMAN_MATH_THEORY_E129;
+      if (theory && typeof theory.render === 'function') theory.render();
+    }
     return state.view === view;
   }
 
