@@ -1,323 +1,193 @@
 {
-  "id": "bauman_math_content_manifest_e113_subjects_only_clean",
-  "version": "E113_SUBJECTS_ONLY_CLEAN",
+  "schema": "bauman.math.content-catalog.v2",
+  "id": "math-bauman-content-catalog-l3",
+  "version": "2.0.0-l3",
   "subject": "math",
-  "createdAt": "2026-06-22",
-  "status": "framework_only_empty_content_subjects_only_clean",
-  "isFinal": false,
-  "final": false,
-  "release": "E113_SUBJECTS_ONLY_CLEAN",
-  "focus": "Bản sạch subject-only: chỉ giữ sources cần thiết để chạy môn Toán và Kho môn học frame/content.",
-  "counts": {
-    "content_vault_manifest": 13,
-    "discipline_spine": 12,
-    "chapter_spine": 56,
-    "curriculum": 10,
-    "content-manifest": 30,
-    "learning_rules": 3,
-    "theory_lecture_frame": 56,
-    "theory_lecture_content": 18,
-    "formula_frame": 56,
-    "formula_content": 18,
-    "simulation_frame": 56,
-    "simulation_content": 18,
-    "exercise_frame": 56,
-    "exercise_content": 18,
-    "application_frame": 56,
-    "application_content": 18,
-    "professor_qa_frame": 56,
-    "professor_qa_content": 18,
-    "review_pack_frame": 56,
-    "review_pack_content": 18,
-    "question_bank_frame": 56,
-    "question_bank_content": 18,
-    "test_blueprint_frame": 56,
-    "test_blueprint_content": 18,
-    "chapter_lecture_frame": 56,
-    "chapter_lecture_content": 18,
-    "mindmap_frame": 56,
-    "mindmap_content": 18,
-    "concept_map_frame": 56,
-    "concept_map_content": 18,
-    "media_frame": 56,
-    "media_content": 18,
-    "lessons": 0,
-    "formulas": 0,
-    "simulations": 0,
-    "exercises": 0,
-    "applications": 0,
-    "professor_qa": 0,
-    "review_packs": 0,
-    "question_bank": 0,
-    "test_blueprints": 0,
-    "chapter_lectures": 0,
-    "mindmap": 0,
-    "concept-map": 0,
-    "tests": 5,
-    "content-index": 0,
-    "knowledge-index": 0,
-    "mastery-map": 0
+  "status": "migration-audited",
+  "programIdentity": "data/program_identity.json",
+  "sourcePriority": [
+    "authoritative-overlay",
+    "legacy-compatibility",
+    "planned-empty"
+  ],
+  "policy": {
+    "packageRoot": "./",
+    "dataRoot": "data/",
+    "selection": "Ưu tiên overlay đã kiểm tra khi chapter anchor hợp lệ; nếu thiếu hoặc lỗi thì đọc lesson legacy mà không đổi ID.",
+    "emptySource": "Nguồn rỗng phải khai actualCount 0 và planned; không được dùng plannedCount thay cho dữ liệu thực.",
+    "historicalIds": "Không viết lại ID nguồn. Liên kết khác namespace đi qua registry/mapping có provenance."
   },
-  "activeStatus": {
-    "content": "empty_by_design",
-    "ui": "clean_vault_ready",
-    "dataVault": "frame_content_ready",
-    "schedule": "today_table_focused"
+  "inventory": {
+    "legacyLessons": 347,
+    "theoryOverlays": 18,
+    "canonicalChapters": 56,
+    "activeMasterChapters": 40,
+    "frameworkOnlyPhdChapters": 16,
+    "vaultDomains": 13
   },
-  "treePolicy": "E112_stage_discipline_frame_content_clean_json",
-  "contentPolicy": "Mọi khối nội dung chính có frame/content riêng; nhập nội dung vào *_content.json; thay khung ở *_frame.json.",
-  "dataSources": [
+  "sources": [
     {
       "id": "content_vault_manifest",
-      "label": "Manifest Kho môn học",
-      "group": "Khung hệ thống",
-      "path": "subjects/math/data/content_vault_manifest.json",
-      "description": "Bản điều khiển các cặp frame/content",
-      "plannedCount": 13
+      "path": "data/content_vault_manifest.json",
+      "role": "vault-router",
+      "authority": "system",
+      "actualCount": 13,
+      "status": "active"
+    },
+    {
+      "id": "curriculum",
+      "path": "data/curriculum.json",
+      "role": "curriculum",
+      "authority": "framework",
+      "actualCount": 10,
+      "status": "active"
     },
     {
       "id": "discipline_spine",
-      "label": "12 phân môn lõi",
-      "group": "Khung hệ thống",
-      "path": "subjects/math/data/discipline_spine.json",
-      "description": "Phân môn có lớp thuần túy và ứng dụng",
-      "plannedCount": 12
+      "path": "data/discipline_spine.json",
+      "role": "discipline-frame",
+      "authority": "framework",
+      "actualCount": 12,
+      "status": "active"
     },
     {
       "id": "chapter_spine",
-      "label": "Xương sống 56 chương",
-      "group": "Khung hệ thống",
-      "path": "subjects/math/data/chapter_spine.json",
-      "description": "40 chương thạc sĩ + 16 chương mở rộng tiến sĩ",
-      "plannedCount": 56
-    },
-    {
-      "id": "content-manifest",
-      "label": "Manifest nguồn dữ liệu",
-      "group": "Khung hệ thống",
-      "path": "subjects/math/data/content-manifest.json",
-      "description": "Danh mục nguồn dữ liệu và plannedCount",
-      "plannedCount": 30
+      "path": "data/chapter_spine.json",
+      "role": "chapter-frame-compatibility",
+      "authority": "framework",
+      "actualCount": 56,
+      "status": "active"
     },
     {
       "id": "theory_lecture_frame",
-      "label": "Bài giảng lý thuyết · Khung",
-      "group": "Bài giảng lý thuyết",
-      "path": "subjects/math/data/theory_lecture_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Bài giảng lý thuyết",
-      "plannedCount": 56
+      "path": "data/theory_lecture_frame.json",
+      "role": "canonical-chapter-frame",
+      "authority": "authoritative",
+      "actualCount": 56,
+      "status": "active"
     },
     {
       "id": "theory_lecture_content",
-      "label": "Bài giảng lý thuyết · Nội dung",
-      "group": "Bài giảng lý thuyết",
-      "path": "subjects/math/data/theory_lecture_content.json",
-      "description": "Records nội dung import/export cho Bài giảng lý thuyết",
-      "plannedCount": 18
+      "path": "data/theory_lecture_content.json",
+      "role": "theory-overlay",
+      "authority": "authoritative-overlay",
+      "actualCount": 18,
+      "status": "partial"
     },
     {
-      "id": "formula_frame",
-      "label": "Công thức · Khung",
-      "group": "Công thức",
-      "path": "subjects/math/data/formula_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Công thức",
-      "plannedCount": 56
+      "id": "lessons",
+      "path": "data/lessons.json",
+      "role": "theory-compatibility",
+      "authority": "legacy-compatibility",
+      "actualCount": 347,
+      "status": "active"
     },
     {
-      "id": "formula_content",
-      "label": "Công thức · Nội dung",
-      "group": "Công thức",
-      "path": "subjects/math/data/formula_content.json",
-      "description": "Records nội dung import/export cho Công thức",
-      "plannedCount": 18
+      "id": "formulas",
+      "path": "data/formulas.json",
+      "role": "formula-bank",
+      "authority": "planned-empty",
+      "actualCount": 0,
+      "status": "planned"
     },
     {
-      "id": "simulation_frame",
-      "label": "Mô phỏng · Khung",
-      "group": "Mô phỏng",
-      "path": "subjects/math/data/simulation_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Mô phỏng",
-      "plannedCount": 56
+      "id": "exercises",
+      "path": "data/exercises.json",
+      "role": "exercise-bank",
+      "authority": "planned-empty",
+      "actualCount": 0,
+      "status": "planned"
     },
     {
-      "id": "simulation_content",
-      "label": "Mô phỏng · Nội dung",
-      "group": "Mô phỏng",
-      "path": "subjects/math/data/simulation_content.json",
-      "description": "Records nội dung import/export cho Mô phỏng",
-      "plannedCount": 18
+      "id": "applications",
+      "path": "data/applications.json",
+      "role": "application-bank",
+      "authority": "planned-empty",
+      "actualCount": 0,
+      "status": "planned"
     },
     {
-      "id": "exercise_frame",
-      "label": "Bài tập · Khung",
-      "group": "Bài tập",
-      "path": "subjects/math/data/exercise_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Bài tập",
-      "plannedCount": 56
+      "id": "simulations",
+      "path": "data/simulations.json",
+      "role": "simulation-bank",
+      "authority": "planned-empty",
+      "actualCount": 0,
+      "status": "planned"
     },
     {
-      "id": "exercise_content",
-      "label": "Bài tập · Nội dung",
-      "group": "Bài tập",
-      "path": "subjects/math/data/exercise_content.json",
-      "description": "Records nội dung import/export cho Bài tập",
-      "plannedCount": 18
+      "id": "question_bank",
+      "path": "data/question_bank.json",
+      "role": "assessment-bank",
+      "authority": "planned-empty",
+      "actualCount": 0,
+      "status": "planned"
     },
     {
-      "id": "application_frame",
-      "label": "Ứng dụng · Khung",
-      "group": "Ứng dụng",
-      "path": "subjects/math/data/application_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Ứng dụng",
-      "plannedCount": 56
+      "id": "review_packs",
+      "path": "data/review_packs.json",
+      "role": "review-bank",
+      "authority": "planned-empty",
+      "actualCount": 0,
+      "status": "planned"
     },
     {
-      "id": "application_content",
-      "label": "Ứng dụng · Nội dung",
-      "group": "Ứng dụng",
-      "path": "subjects/math/data/application_content.json",
-      "description": "Records nội dung import/export cho Ứng dụng",
-      "plannedCount": 18
+      "id": "test_blueprints",
+      "path": "data/test_blueprints.json",
+      "role": "assessment-blueprint-bank",
+      "authority": "planned-empty",
+      "actualCount": 0,
+      "status": "planned"
     },
     {
-      "id": "professor_qa_frame",
-      "label": "Vấn đáp · Khung",
-      "group": "Vấn đáp",
-      "path": "subjects/math/data/professor_qa_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Vấn đáp",
-      "plannedCount": 56
+      "id": "professor_qa",
+      "path": "data/professor_qa.json",
+      "role": "oral-defense-bank",
+      "authority": "planned-empty",
+      "actualCount": 0,
+      "status": "planned"
     },
     {
-      "id": "professor_qa_content",
-      "label": "Vấn đáp · Nội dung",
-      "group": "Vấn đáp",
-      "path": "subjects/math/data/professor_qa_content.json",
-      "description": "Records nội dung import/export cho Vấn đáp",
-      "plannedCount": 18
+      "id": "mindmap",
+      "path": "data/mindmap.json",
+      "role": "mindmap-bank",
+      "authority": "planned-empty",
+      "actualCount": 0,
+      "status": "planned"
     },
     {
-      "id": "review_pack_frame",
-      "label": "Ôn tập · Khung",
-      "group": "Ôn tập",
-      "path": "subjects/math/data/review_pack_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Ôn tập",
-      "plannedCount": 56
+      "id": "learning_rules",
+      "path": "data/learning_rules.json",
+      "role": "learning-policy",
+      "authority": "system",
+      "actualCount": 2,
+      "status": "active"
     },
     {
-      "id": "review_pack_content",
-      "label": "Ôn tập · Nội dung",
-      "group": "Ôn tập",
-      "path": "subjects/math/data/review_pack_content.json",
-      "description": "Records nội dung import/export cho Ôn tập",
-      "plannedCount": 18
-    },
-    {
-      "id": "question_bank_frame",
-      "label": "Ngân hàng câu hỏi · Khung",
-      "group": "Ngân hàng câu hỏi",
-      "path": "subjects/math/data/question_bank_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Ngân hàng câu hỏi",
-      "plannedCount": 56
-    },
-    {
-      "id": "question_bank_content",
-      "label": "Ngân hàng câu hỏi · Nội dung",
-      "group": "Ngân hàng câu hỏi",
-      "path": "subjects/math/data/question_bank_content.json",
-      "description": "Records nội dung import/export cho Ngân hàng câu hỏi",
-      "plannedCount": 18
-    },
-    {
-      "id": "test_blueprint_frame",
-      "label": "Blueprint kiểm tra · Khung",
-      "group": "Blueprint kiểm tra",
-      "path": "subjects/math/data/test_blueprint_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Blueprint kiểm tra",
-      "plannedCount": 56
-    },
-    {
-      "id": "test_blueprint_content",
-      "label": "Blueprint kiểm tra · Nội dung",
-      "group": "Blueprint kiểm tra",
-      "path": "subjects/math/data/test_blueprint_content.json",
-      "description": "Records nội dung import/export cho Blueprint kiểm tra",
-      "plannedCount": 18
-    },
-    {
-      "id": "chapter_lecture_frame",
-      "label": "Slide bổ trợ cấp chương · Khung",
-      "group": "Slide bổ trợ cấp chương",
-      "path": "subjects/math/data/chapter_lecture_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Slide bổ trợ cấp chương",
-      "plannedCount": 56
-    },
-    {
-      "id": "chapter_lecture_content",
-      "label": "Slide bổ trợ cấp chương · Nội dung",
-      "group": "Slide bổ trợ cấp chương",
-      "path": "subjects/math/data/chapter_lecture_content.json",
-      "description": "Records nội dung import/export cho Slide bổ trợ cấp chương",
-      "plannedCount": 18
-    },
-    {
-      "id": "mindmap_frame",
-      "label": "Mind map · Khung",
-      "group": "Mind map",
-      "path": "subjects/math/data/mindmap_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Mind map",
-      "plannedCount": 56
-    },
-    {
-      "id": "mindmap_content",
-      "label": "Mind map · Nội dung",
-      "group": "Mind map",
-      "path": "subjects/math/data/mindmap_content.json",
-      "description": "Records nội dung import/export cho Mind map",
-      "plannedCount": 18
-    },
-    {
-      "id": "concept_map_frame",
-      "label": "Concept map · Khung",
-      "group": "Concept map",
-      "path": "subjects/math/data/concept_map_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Concept map",
-      "plannedCount": 56
-    },
-    {
-      "id": "concept_map_content",
-      "label": "Concept map · Nội dung",
-      "group": "Concept map",
-      "path": "subjects/math/data/concept_map_content.json",
-      "description": "Records nội dung import/export cho Concept map",
-      "plannedCount": 18
-    },
-    {
-      "id": "media_frame",
-      "label": "Media / Canva · Khung",
-      "group": "Media / Canva",
-      "path": "subjects/math/data/media_frame.json",
-      "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Media / Canva",
-      "plannedCount": 56
-    },
-    {
-      "id": "media_content",
-      "label": "Media / Canva · Nội dung",
-      "group": "Media / Canva",
-      "path": "subjects/math/data/media_content.json",
-      "description": "Records nội dung import/export cho Media / Canva",
-      "plannedCount": 18
+      "id": "tests",
+      "path": "data/tests.json",
+      "role": "legacy-assessment-shell",
+      "authority": "legacy-compatibility",
+      "actualCount": 0,
+      "status": "planned"
     }
   ],
-  "qualityGate": {
-    "legacyNotes": [
-      "Bài giảng lý thuyết bắt buộc tách 2 file: theory_lecture_frame.json và theory_lecture_content.json",
-      "File khung chỉ chứa stage/discipline/chapter, không chứa slide bài giảng dài",
-      "File nội dung chỉ chứa record bài giảng theo lessonId/chapterId, không tự sinh khung mới",
-      "Lịch trình hôm nay phải hiển thị bảng lịch là trung tâm, không đưa bảng phụ lên modal chính",
-      "Nút Lịch trình hôm nay phải nổi bật và dễ nhận diện ngay ở Tổng quan"
-    ],
-    "visibleSplitVaultUi": true,
-    "allSplitSourcesLoadedByDefault": true
+  "support": {
+    "vocab": { "path": "data/vocab.json", "actualCount": 852 },
+    "grammar": { "path": "data/grammar.json", "actualCount": 48 },
+    "grammarPath": { "path": "data/grammar-path.json", "actualCount": 48 },
+    "speaking": { "path": "data/speaking.json", "actualCount": 260 },
+    "dialogueBaumanAz": { "path": "data/dialogue-bauman-az.json", "actualCount": 520 },
+    "deepSpeakingBauman": { "path": "data/deep-speaking-bauman.json", "actualCount": 48 },
+    "writing": { "path": "data/writing.json", "actualCount": 48 },
+    "handwriting": { "path": "data/handwriting.json", "actualCount": 32 },
+    "videos": { "path": "data/videos.json", "actualCount": 18 },
+    "concepts": { "path": "data/concepts.json", "actualCount": 87 },
+    "projects": { "path": "data/projects.json", "actualCount": 7 },
+    "resources": { "path": "data/resources.json", "actualCount": 5 }
   },
-  "updatedAt": "2026-06-22T07:15:00Z"
+  "namespaceRegistry": "data/id-namespace-registry.json",
+  "knownDebt": [
+    "Support artifact lesson/chapter references require reviewed L5 mappings.",
+    "Nine primary learning families are real empty sources and are scheduled for L6-L9."
+  ]
 }

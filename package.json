@@ -1,12 +1,15 @@
 {
   "name": "math-bauman-webapp",
-  "version": "2.0.0-l2",
+  "version": "2.0.0-l3",
   "private": true,
   "description": "Standalone learner-first Mathematics Web App for the Bauman roadmap.",
   "scripts": {
-    "audit": "node scripts/audit-source.cjs",
+    "audit": "node scripts/audit-source.cjs && node scripts/audit-data-contract.cjs",
+    "audit:data": "node scripts/audit-data-contract.cjs",
+    "build:manifest": "node scripts/build-subject-manifest.cjs",
+    "check:manifest": "node scripts/build-subject-manifest.cjs --check",
     "test:browser": "node scripts/browser-smoke.cjs",
-    "test": "npm run audit"
+    "test": "npm run check:manifest && npm run audit"
   },
   "devDependencies": {
     "playwright": "1.55.0"

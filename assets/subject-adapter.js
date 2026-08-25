@@ -318,3 +318,86 @@ try{
     return xs.filter(function(x){return x && (x.kind==='theory' || x.contentRole==='theory_only' || !/thực hành|bài tập|ứng dụng/i.test([x.kind,x.category,x.mode,x.title].filter(Boolean).join(' ')));});
   };
 })();
+
+/* Math Bauman Web App V2 · L3 standalone data-contract synchronization. */
+(function syncStandaloneDataContract(){
+  var A=window.SUBJECT_ADAPTER;
+  if(!A)return;
+
+  var actualCounts={
+    'content-manifest':18,
+    content_vault_manifest:13,
+    curriculum:10,
+    discipline_spine:12,
+    chapter_spine:56,
+    theory_lecture_frame:56,
+    theory_lecture_content:18,
+    lessons:347,
+    formula_content:0,
+    formulas:0,
+    exercise_content:0,
+    exercises:0,
+    application_content:0,
+    applications:0,
+    simulation_content:0,
+    simulations:0,
+    question_bank_content:0,
+    question_bank:0,
+    review_pack_content:0,
+    review_packs:0,
+    test_blueprint_content:0,
+    test_blueprints:0,
+    professor_qa_content:0,
+    professor_qa:0,
+    mindmap_content:0,
+    mindmap:0,
+    tests:0,
+    vocab:852,
+    grammar:48,
+    'grammar-path':48,
+    speaking:260,
+    'dialogue-bauman-az':520,
+    'deep-speaking-bauman':48,
+    writing:48,
+    handwriting:32,
+    videos:18
+  };
+
+  A.version='Math Bauman Web App V2 · L3 Data Contract';
+  A.release='MATH_BAUMAN_WEBAPP_V2_L3_DATA_CONTRACT';
+  A.latestPatch=A.release;
+  A.coreVersion=A.release;
+  A.packageRoot='./';
+  A.localRoot='./';
+  A.dataRoot='data/';
+  A.manifestPath='subject-manifest.json';
+  A.programIdentity={
+    department:'ИУ-5',
+    officialPublishedCode:'09.04.01',
+    personalizedDisplayCode:'09.04.01/11',
+    learnerDisplay:'Bauman ИУ-5 · 09.04.01/11'
+  };
+  A.integration=Object.assign({},A.integration||{}, {
+    selfContained:true,
+    standaloneMode:true,
+    mainEntry:'index.html',
+    mainEditor:'editor.html'
+  });
+  A.dataSourceMeta=A.dataSourceMeta||{};
+  Object.keys(actualCounts).forEach(function applyActualCount(id){
+    A.dataSourceMeta[id]=Object.assign({},A.dataSourceMeta[id]||{}, {
+      path:(A.dataSourceMeta[id]&&A.dataSourceMeta[id].path)||('data/'+id+'.json'),
+      actualCount:actualCounts[id],
+      plannedCount:actualCounts[id]
+    });
+  });
+  A.namespaceRegistry={
+    path:'data/id-namespace-registry.json',
+    policy:'preserve-source-ids-and-map-with-provenance'
+  };
+  A.ui=A.ui||{};
+  A.ui.coreLabel='MATH · Web App V2 L3';
+  A.ui.heroBadge='Math Bauman · Web App V2';
+  A.ui.heroTitle='Toán Bauman · Lộ trình học tập thống nhất';
+  A.ui.subtitle='Bauman ИУ-5 · 09.04.01/11';
+})();

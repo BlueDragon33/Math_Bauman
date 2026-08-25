@@ -1,0 +1,26 @@
+{
+  "schema": "bauman.program-identity.v1",
+  "institution": {
+    "shortName": "Bauman",
+    "officialNameRu": "МГТУ им. Н. Э. Баумана"
+  },
+  "department": {
+    "code": "ИУ-5",
+    "learnerLabel": "Bauman ИУ-5"
+  },
+  "programCodes": {
+    "officialPublished": "09.04.01",
+    "personalizedDisplay": "09.04.01/11"
+  },
+  "display": {
+    "learnerProgramLabel": "Bauman ИУ-5 · 09.04.01/11",
+    "officialSourceLabel": "Bauman · 09.04.01"
+  },
+  "policy": {
+    "officialSourceCode": "Khi mô tả hoặc trích nguồn công bố chính thức, chỉ dùng 09.04.01.",
+    "personalizedCode": "09.04.01/11 chỉ là mã hiển thị cá nhân hóa của lộ trình người học.",
+    "forbiddenInstitutionLabels": [
+      "HUTECH"
+    ]
+  }
+}

@@ -24,12 +24,21 @@ jobs:
       - name: Syntax check
         run: |
           node --check assets/webapp-bootstrap.js
+          node --check assets/subject-adapter.js
           node --check service-worker.js
           node --check scripts/audit-source.cjs
+          node --check scripts/audit-data-contract.cjs
+          node --check scripts/build-subject-manifest.cjs
+      - name: Generated manifest parity
+        run: node scripts/build-subject-manifest.cjs --check
       - name: Source preservation and standalone audit
         run: |
           node scripts/audit-source.cjs
           git diff --exit-code -- reports/source-audit.generated.json
+      - name: L3 data contract and migration dry-run
+        run: |
+          node scripts/audit-data-contract.cjs
+          git diff --exit-code -- reports/data-contract.generated.json
 
   browser-gate:
     runs-on: ubuntu-latest

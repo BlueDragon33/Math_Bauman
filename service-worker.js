@@ -1,6 +1,6 @@
 'use strict';
 
-const RELEASE = 'math-bauman-webapp-v2-l2-4';
+const RELEASE = 'math-bauman-webapp-v2-l3-1';
 const CACHE = RELEASE + '-shell';
 const SHELL = [
   './',
@@ -15,6 +15,7 @@ const SHELL = [
   './assets/theory_skin/theory-ui-tokens-E132.css',
   './assets/theory_skin/theory-slideshow-E132.css',
   './subject-manifest.js',
+  './subject-manifest.json',
   './assets/core.js',
   './assets/subject-adapter.js',
   './assets/planning-bridge.js',
@@ -42,6 +43,12 @@ const SHELL = [
   './assets/theory_skin/theory-slideshow-reader-fit-E212.js',
   './assets/webapp-bootstrap.js',
   './data/curriculum.json',
+  './data/program_identity.json',
+  './data/id-namespace-registry.json',
+  './data/content-manifest.json',
+  './data/content_vault_manifest.json',
+  './data/discipline_spine.json',
+  './data/chapter_spine.json',
   './data/lessons.json',
   './data/theory_lecture_frame.json',
   './data/theory_lecture_content.json'

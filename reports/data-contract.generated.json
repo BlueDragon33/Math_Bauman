@@ -1,0 +1,422 @@
+{
+  "gate": "MATH-BAUMAN-WEBAPP-V2-L3-DATA-CONTRACT",
+  "status": "PASS",
+  "contract": {
+    "manifestVersion": "2.0.0-l3",
+    "officialPublishedCode": "09.04.01",
+    "personalizedDisplayCode": "09.04.01/11",
+    "legacyLessons": 347,
+    "theoryOverlays": 18,
+    "canonicalChapters": 56,
+    "catalogSources": 18,
+    "vaultDomains": 13
+  },
+  "migrationDryRun": {
+    "sourceBefore": {
+      "lessons": "5554fc9265d640a99831763e073c8e42ccf756a1f7f0a9f92a8df9a376b0a086",
+      "overlays": "b20a903463b9c24575b6666377c2549e295ba1ff2d56796b94c16de4564643eb"
+    },
+    "sourceAfter": {
+      "lessons": "5554fc9265d640a99831763e073c8e42ccf756a1f7f0a9f92a8df9a376b0a086",
+      "overlays": "b20a903463b9c24575b6666377c2549e295ba1ff2d56796b94c16de4564643eb"
+    },
+    "resolvedSources": 365,
+    "overlaySources": 18,
+    "legacyFallbackSources": 347,
+    "mutatedSourceRecords": false
+  },
+  "supportReferenceAudit": [
+    {
+      "file": "data/vocab.json",
+      "lessonRefs": 772,
+      "unmappedLessonRefs": 740,
+      "chapterRefs": 772,
+      "unmappedChapterRefs": 772,
+      "moduleRefs": 0
+    },
+    {
+      "file": "data/grammar.json",
+      "lessonRefs": 48,
+      "unmappedLessonRefs": 48,
+      "chapterRefs": 0,
+      "unmappedChapterRefs": 0,
+      "moduleRefs": 48
+    },
+    {
+      "file": "data/grammar-path.json",
+      "lessonRefs": 48,
+      "unmappedLessonRefs": 48,
+      "chapterRefs": 0,
+      "unmappedChapterRefs": 0,
+      "moduleRefs": 48
+    },
+    {
+      "file": "data/speaking.json",
+      "lessonRefs": 260,
+      "unmappedLessonRefs": 201,
+      "chapterRefs": 260,
+      "unmappedChapterRefs": 260,
+      "moduleRefs": 0
+    },
+    {
+      "file": "data/dialogue-bauman-az.json",
+      "lessonRefs": 520,
+      "unmappedLessonRefs": 402,
+      "chapterRefs": 520,
+      "unmappedChapterRefs": 520,
+      "moduleRefs": 0
+    },
+    {
+      "file": "data/deep-speaking-bauman.json",
+      "lessonRefs": 96,
+      "unmappedLessonRefs": 96,
+      "chapterRefs": 0,
+      "unmappedChapterRefs": 0,
+      "moduleRefs": 96
+    },
+    {
+      "file": "data/writing.json",
+      "lessonRefs": 48,
+      "unmappedLessonRefs": 48,
+      "chapterRefs": 0,
+      "unmappedChapterRefs": 0,
+      "moduleRefs": 48
+    },
+    {
+      "file": "data/videos.json",
+      "lessonRefs": 18,
+      "unmappedLessonRefs": 18,
+      "chapterRefs": 0,
+      "unmappedChapterRefs": 0,
+      "moduleRefs": 18
+    }
+  ],
+  "checks": [
+    {
+      "id": "SCHEMA-LOCAL",
+      "title": "manifest declares the tracked local JSON Schema",
+      "ok": true,
+      "evidence": {
+        "declaration": "schemas/subject-manifest.schema.json",
+        "schemaId": "https://bluedragon33.github.io/Math_Bauman/schemas/subject-manifest.schema.json"
+      }
+    },
+    {
+      "id": "MANIFEST-REQUIRED",
+      "title": "all schema-required subject manifest fields are present",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "MANIFEST-STANDALONE",
+      "title": "subject manifest uses the standalone Web App entry and package paths",
+      "ok": true,
+      "evidence": {
+        "schema": "bauman.math.subject-manifest.v2",
+        "id": "math",
+        "entry": "index.html"
+      }
+    },
+    {
+      "id": "PROGRAM-CODE-POLICY",
+      "title": "official and personalized program codes remain distinct and correctly labeled",
+      "ok": true,
+      "evidence": {
+        "officialPublished": "09.04.01",
+        "personalizedDisplay": "09.04.01/11",
+        "learnerDisplay": "Bauman ИУ-5 · 09.04.01/11"
+      }
+    },
+    {
+      "id": "MANIFEST-SOURCE-PROVENANCE",
+      "title": "source and destination repository provenance is explicit",
+      "ok": true,
+      "evidence": {
+        "repository": "BlueDragon33/Bauman-master-ai-system",
+        "branch": "migration/webapp-l1-audit-storage",
+        "package": "subjects/math",
+        "destinationRepository": "BlueDragon33/Math_Bauman",
+        "destinationBranch": "migration/full-webapp-v2",
+        "importPolicy": "controlled-overlay-no-blind-merge"
+      }
+    },
+    {
+      "id": "MANIFEST-DATAFILE-SHAPE",
+      "title": "manifest dataFiles use unique object IDs and standalone JSON paths",
+      "ok": true,
+      "evidence": {
+        "count": 18,
+        "uniqueIds": true,
+        "uniquePaths": true
+      }
+    },
+    {
+      "id": "MANIFEST-DATAFILE-EXISTS",
+      "title": "every declared manifest data file exists",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "MANIFEST-ACTUAL-COUNTS",
+      "title": "manifest actualCount values match on-disk records",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "MANIFEST-JS-PARITY",
+      "title": "generated browser manifest matches the canonical JSON manifest",
+      "ok": true,
+      "evidence": {
+        "jsonDigest": "ef9cf818fd657912e9b1765a84770c9468dad7a992be693932f3e22dfd09f2d4",
+        "browserDigest": "ef9cf818fd657912e9b1765a84770c9468dad7a992be693932f3e22dfd09f2d4"
+      }
+    },
+    {
+      "id": "NO-NESTED-PACKAGE-PATHS",
+      "title": "active manifests contain no obsolete subjects/math paths",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "CONTENT-CATALOG-SHAPE",
+      "title": "content catalog has 18 unique source records and standalone paths",
+      "ok": true,
+      "evidence": {
+        "count": 18,
+        "uniqueIds": true,
+        "uniquePaths": true
+      }
+    },
+    {
+      "id": "CONTENT-CATALOG-FILES",
+      "title": "every content catalog source exists",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "CONTENT-CATALOG-COUNTS",
+      "title": "content catalog counts match actual data",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "CONTENT-CATALOG-INVENTORY",
+      "title": "content catalog reports the audited legacy, overlay and chapter inventories",
+      "ok": true,
+      "evidence": {
+        "legacyLessons": 347,
+        "theoryOverlays": 18,
+        "canonicalChapters": 56,
+        "activeMasterChapters": 40,
+        "frameworkOnlyPhdChapters": 16,
+        "vaultDomains": 13
+      }
+    },
+    {
+      "id": "SUPPORT-CATALOG-COUNTS",
+      "title": "support catalog counts match actual data",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "VAULT-ROUTER-CONTRACT",
+      "title": "all 13 vault frame/content pairs exist and report actual counts",
+      "ok": true,
+      "evidence": {
+        "domains": 13,
+        "mismatches": []
+      }
+    },
+    {
+      "id": "LEGACY-IDS",
+      "title": "all 347 legacy lesson IDs are present and unique",
+      "ok": true,
+      "evidence": {
+        "count": 347,
+        "unique": 347
+      }
+    },
+    {
+      "id": "OVERLAY-IDS",
+      "title": "all 18 overlay IDs are present and unique",
+      "ok": true,
+      "evidence": {
+        "count": 18,
+        "unique": 18
+      }
+    },
+    {
+      "id": "CANONICAL-CHAPTER-IDS",
+      "title": "all 56 canonical chapter IDs are present and unique",
+      "ok": true,
+      "evidence": {
+        "count": 56,
+        "unique": 56
+      }
+    },
+    {
+      "id": "FRAME-TREE-PARITY",
+      "title": "staged theory-frame chapters equal the flat authoritative chapter list",
+      "ok": true,
+      "evidence": {
+        "staged": 56,
+        "flat": 56
+      }
+    },
+    {
+      "id": "CHAPTER-SPINE-PARITY",
+      "title": "chapter spine and curriculum use the same canonical 56 chapter IDs",
+      "ok": true,
+      "evidence": {
+        "chapterSpine": 56,
+        "curriculum": 56,
+        "canonical": 56
+      }
+    },
+    {
+      "id": "OVERLAY-ANCHORS",
+      "title": "every authoritative overlay resolves to one canonical chapter",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "ID-NAMESPACE-BOUNDARY",
+      "title": "legacy and overlay lesson IDs remain separate namespaces",
+      "ok": true,
+      "evidence": {
+        "legacy": 347,
+        "overlays": 18,
+        "collisions": []
+      }
+    },
+    {
+      "id": "NAMESPACE-REGISTRY",
+      "title": "namespace registry discloses canonical, legacy, overlay and support bridge policies",
+      "ok": true,
+      "evidence": {
+        "namespaces": [
+          "math.chapter.canonical.v2",
+          "math.lesson.legacy.v1",
+          "math.lesson.overlay.v1",
+          "math.support.legacy-lesson.v1",
+          "math.support.module.v1"
+        ],
+        "bridgePolicy": {
+          "round": "L5",
+          "writeLegacyIds": false,
+          "mappingKey": "sourceNamespace+sourceId",
+          "target": "canonical lesson/chapter adapter",
+          "requires": [
+            "provenance",
+            "confidence",
+            "reviewStatus",
+            "rollbackTarget"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SUPPORT-DEBT-DISCLOSED",
+      "title": "historical support-reference namespaces are measured and scheduled for an L5 bridge",
+      "ok": true,
+      "evidence": [
+        {
+          "file": "data/vocab.json",
+          "lessonRefs": 772,
+          "unmappedLessonRefs": 740,
+          "chapterRefs": 772,
+          "unmappedChapterRefs": 772,
+          "moduleRefs": 0
+        },
+        {
+          "file": "data/grammar.json",
+          "lessonRefs": 48,
+          "unmappedLessonRefs": 48,
+          "chapterRefs": 0,
+          "unmappedChapterRefs": 0,
+          "moduleRefs": 48
+        },
+        {
+          "file": "data/grammar-path.json",
+          "lessonRefs": 48,
+          "unmappedLessonRefs": 48,
+          "chapterRefs": 0,
+          "unmappedChapterRefs": 0,
+          "moduleRefs": 48
+        },
+        {
+          "file": "data/speaking.json",
+          "lessonRefs": 260,
+          "unmappedLessonRefs": 201,
+          "chapterRefs": 260,
+          "unmappedChapterRefs": 260,
+          "moduleRefs": 0
+        },
+        {
+          "file": "data/dialogue-bauman-az.json",
+          "lessonRefs": 520,
+          "unmappedLessonRefs": 402,
+          "chapterRefs": 520,
+          "unmappedChapterRefs": 520,
+          "moduleRefs": 0
+        },
+        {
+          "file": "data/deep-speaking-bauman.json",
+          "lessonRefs": 96,
+          "unmappedLessonRefs": 96,
+          "chapterRefs": 0,
+          "unmappedChapterRefs": 0,
+          "moduleRefs": 96
+        },
+        {
+          "file": "data/writing.json",
+          "lessonRefs": 48,
+          "unmappedLessonRefs": 48,
+          "chapterRefs": 0,
+          "unmappedChapterRefs": 0,
+          "moduleRefs": 48
+        },
+        {
+          "file": "data/videos.json",
+          "lessonRefs": 18,
+          "unmappedLessonRefs": 18,
+          "chapterRefs": 0,
+          "unmappedChapterRefs": 0,
+          "moduleRefs": 18
+        }
+      ]
+    },
+    {
+      "id": "MIGRATION-DRY-RUN",
+      "title": "migration dry-run preserves source records and selects 18 overlays plus 347 legacy fallbacks without collisions",
+      "ok": true,
+      "evidence": {
+        "before": {
+          "lessons": "5554fc9265d640a99831763e073c8e42ccf756a1f7f0a9f92a8df9a376b0a086",
+          "overlays": "b20a903463b9c24575b6666377c2549e295ba1ff2d56796b94c16de4564643eb"
+        },
+        "after": {
+          "lessons": "5554fc9265d640a99831763e073c8e42ccf756a1f7f0a9f92a8df9a376b0a086",
+          "overlays": "b20a903463b9c24575b6666377c2549e295ba1ff2d56796b94c16de4564643eb"
+        },
+        "resolved": 365,
+        "overlays": 18,
+        "legacyFallbacks": 347,
+        "runtimeKeyCollisions": 0
+      }
+    },
+    {
+      "id": "NO-FORBIDDEN-INSTITUTION-UI",
+      "title": "learner-facing runtime files do not expose HUTECH",
+      "ok": true,
+      "evidence": []
+    }
+  ],
+  "warnings": [
+    {
+      "id": "SUPPORT-REFERENCE-MAPPING-DEBT",
+      "message": "Support artifacts contain historical lesson/chapter/module namespaces; L5 must bridge them without rewriting source IDs.",
+      "total": 3153
+    }
+  ]
+}

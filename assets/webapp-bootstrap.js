@@ -1,7 +1,7 @@
 (function (global) {
   'use strict';
 
-  const RELEASE = 'MATH-BAUMAN-WEBAPP-V2-L2.4';
+  const RELEASE = 'MATH-BAUMAN-WEBAPP-V2-L3.1';
   const LEARNING_TABS = ['theory', 'exercises', 'practice', 'review', 'exam'];
   const THEORY_RETRY_DELAYS = [0, 250, 1000, 2500];
   let theoryOwnershipObserver = null;

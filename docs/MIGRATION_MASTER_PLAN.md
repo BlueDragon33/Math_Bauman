@@ -3,8 +3,14 @@
 Nhánh làm việc: `migration/full-webapp-v2`. `main` chỉ được cập nhật sau khi
 toàn bộ gate tương ứng có bằng chứng test/CI.
 
-Quy mô sau audit: **15 lượt · 128 bước**. Kế hoạch có thể tăng khi audit chất
+Quy mô sau audit: **15 lượt · 130 bước**. Kế hoạch có thể tăng khi audit chất
 lượng học liệu phát hiện khoảng trống cần thiết; không giảm chuẩn để giữ số bước.
+
+Trạng thái checkpoint:
+
+- Lượt 1: **PASS** — source audit và preservation gate 15/15.
+- Lượt 2: **PASS** — GitHub Actions run `32835461390`; static và browser gate đều xanh, browser smoke 14/14.
+- Lượt 3: **ĐANG THỰC HIỆN** — chuẩn hóa identity, catalog, namespace và schema.
 
 ## Lượt 1 · Source audit, preservation and rollback · 8 bước
 
@@ -54,7 +60,7 @@ lượng học liệu phát hiện khoảng trống cần thiết; không giảm
 9. Empty/error/loading states có hướng xử lý.
 10. UX regression desktop/tablet/mobile.
 
-## Lượt 5 · Legacy 347 + 18 overlay bridge · 8 bước
+## Lượt 5 · Legacy 347 + 18 overlay bridge · 10 bước
 
 1. Giữ nguyên toàn bộ ID và thứ tự nguồn.
 2. Read-only adapter sang Universal Lesson Contract.
@@ -64,6 +70,8 @@ lượng học liệu phát hiện khoảng trống cần thiết; không giảm
 6. Công thức và slide route không đổi.
 7. Rollback theo lesson/source.
 8. Cross-version regression.
+9. Lập mapping registry cho namespace lesson/chapter cũ trong vocab, speaking, dialogue và artifact hỗ trợ.
+10. Regression toàn bộ support cross-link mà không viết lại ID lịch sử.
 
 ## Lượt 6 · Theory, formulas, proofs and worked examples · 8 bước
 

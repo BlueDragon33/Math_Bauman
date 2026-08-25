@@ -1,0 +1,63 @@
+{
+  "schema": "bauman.math.id-namespace-registry.v1",
+  "subject": "math",
+  "policy": "Giữ nguyên ID nguồn; mọi liên kết chéo namespace phải qua mapping có provenance và rollback.",
+  "namespaces": [
+    {
+      "id": "math.chapter.canonical.v2",
+      "source": "data/theory_lecture_frame.json",
+      "key": "chapterId",
+      "status": "authoritative",
+      "count": 56
+    },
+    {
+      "id": "math.lesson.legacy.v1",
+      "source": "data/lessons.json",
+      "key": "id|lessonId",
+      "status": "compatibility",
+      "count": 347
+    },
+    {
+      "id": "math.lesson.overlay.v1",
+      "source": "data/theory_lecture_content.json",
+      "key": "lessonId",
+      "anchor": "math.chapter.canonical.v2",
+      "status": "authoritative-overlay",
+      "count": 18
+    },
+    {
+      "id": "math.support.legacy-lesson.v1",
+      "sourcePatterns": [
+        "data/vocab.json",
+        "data/speaking.json",
+        "data/dialogue-bauman-az.json"
+      ],
+      "status": "mapping-required-l5",
+      "note": "Nguồn hỗ trợ dùng lesson/chapter ID lịch sử khác ID của 347 bài hiện tại."
+    },
+    {
+      "id": "math.support.module.v1",
+      "pattern": "^M\\d{2}$",
+      "sourcePatterns": [
+        "data/grammar.json",
+        "data/grammar-path.json",
+        "data/deep-speaking-bauman.json",
+        "data/writing.json",
+        "data/videos.json"
+      ],
+      "status": "mapping-required-l5"
+    }
+  ],
+  "bridgePolicy": {
+    "round": "L5",
+    "writeLegacyIds": false,
+    "mappingKey": "sourceNamespace+sourceId",
+    "target": "canonical lesson/chapter adapter",
+    "requires": [
+      "provenance",
+      "confidence",
+      "reviewStatus",
+      "rollbackTarget"
+    ]
+  }
+}

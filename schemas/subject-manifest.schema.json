@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bluedragon33.github.io/Math_Bauman/schemas/subject-manifest.schema.json",
+  "title": "Math Bauman standalone subject manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "id",
+    "title",
+    "entry",
+    "language",
+    "version",
+    "status",
+    "program",
+    "source",
+    "tabs",
+    "learningTabs",
+    "stages",
+    "catalog",
+    "idNamespaces",
+    "dataFiles",
+    "supportCatalog",
+    "knownDebt",
+    "quality"
+  ],
+  "properties": {
+    "$schema": { "type": "string", "const": "schemas/subject-manifest.schema.json" },
+    "schema": { "type": "string", "const": "bauman.math.subject-manifest.v2" },
+    "id": { "type": "string", "const": "math" },
+    "title": { "type": "string", "minLength": 1 },
+    "entry": { "type": "string", "const": "index.html" },
+    "language": { "type": "string", "const": "vi" },
+    "version": { "type": "string", "pattern": "^2\\.0\\.0-l[0-9]+$" },
+    "status": { "type": "string", "enum": ["migration", "release-candidate", "stable"] },
+    "program": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "institution",
+        "department",
+        "officialPublishedCode",
+        "personalizedDisplayCode",
+        "learnerDisplay",
+        "codePolicy"
+      ],
+      "properties": {
+        "institution": { "type": "string", "minLength": 1 },
+        "department": { "type": "string", "const": "ИУ-5" },
+        "officialPublishedCode": { "type": "string", "const": "09.04.01" },
+        "personalizedDisplayCode": { "type": "string", "const": "09.04.01/11" },
+        "learnerDisplay": { "type": "string", "const": "Bauman ИУ-5 · 09.04.01/11" },
+        "codePolicy": { "type": "string", "minLength": 20 }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "branch",
+        "package",
+        "destinationRepository",
+        "destinationBranch",
+        "importPolicy"
+      ],
+      "properties": {
+        "repository": { "type": "string", "const": "BlueDragon33/Bauman-master-ai-system" },
+        "branch": { "type": "string", "const": "migration/webapp-l1-audit-storage" },
+        "package": { "type": "string", "const": "subjects/math" },
+        "destinationRepository": { "type": "string", "const": "BlueDragon33/Math_Bauman" },
+        "destinationBranch": { "type": "string", "const": "migration/full-webapp-v2" },
+        "importPolicy": { "type": "string", "const": "controlled-overlay-no-blind-merge" }
+      }
+    },
+    "tabs": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "learningTabs": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "stages": { "$ref": "#/$defs/nonEmptyUniqueStrings" },
+    "catalog": { "type": "object" },
+    "idNamespaces": { "type": "object" },
+    "dataFiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/dataFile" }
+    },
+    "supportCatalog": { "type": "object" },
+    "knownDebt": { "type": "array", "items": { "type": "object" } },
+    "quality": { "type": "object" }
+  },
+  "$defs": {
+    "nonEmptyUniqueStrings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "dataFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "role", "actualCount", "status"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+        "path": { "type": "string", "pattern": "^data/[a-z0-9_-]+\\.json$" },
+        "role": { "type": "string", "minLength": 1 },
+        "actualCount": { "type": "integer", "minimum": 0 },
+        "status": { "type": "string", "enum": ["active", "partial", "planned"] }
+      }
+    }
+  }
+}

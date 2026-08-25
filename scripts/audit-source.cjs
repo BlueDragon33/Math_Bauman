@@ -65,7 +65,7 @@ const uncachedShellRefs = localRefs.filter((ref) => {
 check('STANDALONE-PATHS', 'index has no parent-repository dependency', !html.includes('../../'), localRefs);
 check('LOCAL-ASSETS', 'all index local assets exist', missingRefs.length === 0, missingRefs);
 check('WEBAPP-SHELL', 'single Web App shell retains legacy core and new theory runtime', html.includes('assets/core.js') && html.includes('theory-tab-E129.js') && html.includes('webapp-bootstrap.js'), null);
-check('PWA', 'manifest and versioned Service Worker are present', fs.existsSync(path.join(ROOT, 'manifest.webmanifest')) && serviceWorker.includes('math-bauman-webapp-v2-l2'), null);
+check('PWA', 'manifest and versioned Service Worker are present', fs.existsSync(path.join(ROOT, 'manifest.webmanifest')) && serviceWorker.includes('math-bauman-webapp-v2-l3'), null);
 check('PWA-SHELL-COVERAGE', 'every local asset referenced by index is precached for first offline reload', uncachedShellRefs.length === 0, uncachedShellRefs);
 check('NO-HUTECH-UI', 'learner-facing shell does not expose HUTECH', !/HUTECH/i.test(html), null);
 
