@@ -161,6 +161,7 @@ async function run() {
         state: window.__BAUMAN_CORE_API && window.__BAUMAN_CORE_API.state
       };
     });
+    check('THEORY-FRAME-56-RUNTIME', 'the E129 runtime deduplicates the dual frame views to 56 canonical chapters', theoryRoute.sourceStatus && theoryRoute.sourceStatus.frame === 56, theoryRoute.sourceStatus);
     check('THEORY-SHELL-ROUTE', 'the primary learner route keeps the E129 theory surface visible after data settles', theoryRoute.shellCount === 1 && theoryRoute.shellDisplay !== 'none' && theoryRoute.shellVisibility !== 'hidden' && theoryRoute.shellRect && theoryRoute.shellRect.height > 0, theoryRoute);
     const c03 = 'MATH-VN-C03-ham_so_ao_ham_va_gradien';
     await page.locator('[data-e186-open="chapter"]:visible').click();

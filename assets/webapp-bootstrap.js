@@ -1,9 +1,11 @@
 (function (global) {
   'use strict';
 
-  const RELEASE = 'MATH-BAUMAN-WEBAPP-V2-L2.3';
+  const RELEASE = 'MATH-BAUMAN-WEBAPP-V2-L2.4';
   const LEARNING_TABS = ['theory', 'exercises', 'practice', 'review', 'exam'];
   const THEORY_RETRY_DELAYS = [0, 250, 1000, 2500];
+  let theoryOwnershipObserver = null;
+  let theoryOwnershipQueued = false;
 
   function markReady() {
     const app = document.getElementById('app');
@@ -25,13 +27,51 @@
     const state = api && api.state;
     if (!state || state.view !== 'learning' || state.learnTab !== 'theory') return;
     const theory = global.BAUMAN_MATH_THEORY_E129;
-    const rendered = Boolean(theory && typeof theory.render === 'function' && theory.render());
+    let rendered = false;
+    try {
+      rendered = Boolean(theory && typeof theory.render === 'function' && theory.render());
+    } catch (_) {
+      rendered = false;
+    }
     const nextAttempt = Number(attempt || 0) + 1;
     if (!rendered && nextAttempt < THEORY_RETRY_DELAYS.length) {
       global.setTimeout(function () {
         renderTheoryWhenReady(nextAttempt);
       }, THEORY_RETRY_DELAYS[nextAttempt]);
     }
+  }
+
+  function restoreTheoryOwnership() {
+    theoryOwnershipQueued = false;
+    const api = global.__BAUMAN_CORE_API;
+    const state = api && api.state;
+    const view = document.getElementById('view');
+    if (!state || !view || state.view !== 'learning' || state.learnTab !== 'theory') return;
+    if (view.querySelector('.e129-theory-shell')) return;
+    const theory = global.BAUMAN_MATH_THEORY_E129;
+    let status = null;
+    try {
+      status = theory && typeof theory.sourceStatus === 'function' && theory.sourceStatus();
+    } catch (_) {
+      return;
+    }
+    if (!status || Number(status.frame || 0) < 1) return;
+    try {
+      theory.render();
+    } catch (_) {
+      renderTheoryWhenReady(0);
+    }
+  }
+
+  function bindTheoryOwnership() {
+    const view = document.getElementById('view');
+    if (!view || theoryOwnershipObserver) return;
+    theoryOwnershipObserver = new MutationObserver(function () {
+      if (theoryOwnershipQueued) return;
+      theoryOwnershipQueued = true;
+      global.setTimeout(restoreTheoryOwnership, 0);
+    });
+    theoryOwnershipObserver.observe(view, { childList: true });
   }
 
   function navigate(view) {
@@ -70,7 +110,8 @@
         subjectId: global.SUBJECT_ADAPTER && global.SUBJECT_ADAPTER.id || null,
         online: navigator.onLine,
         primaryNavigation: Boolean(global.__BAUMAN_CORE_API && typeof global.__BAUMAN_CORE_API.render === 'function'),
-        theoryRouteHandoff: true
+        theoryRouteHandoff: true,
+        theoryRouteOwnership: Boolean(theoryOwnershipObserver)
       };
     },
     navigate: navigate
@@ -79,5 +120,6 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', markReady, { once: true });
   else markReady();
   bindPrimaryNavigation();
+  bindTheoryOwnership();
   registerServiceWorker();
 })(window);

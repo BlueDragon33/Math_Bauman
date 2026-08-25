@@ -4,7 +4,7 @@
  */
 (function(){
   'use strict';
-  var RELEASE = 'E129_THEORY_CONTENT_IMPORTER';
+  var RELEASE = 'E129_THEORY_CONTENT_IMPORTER_V2';
   var CONTENT_OVERLAY_KEY = 'bauman_math_e129_theory_content_overlay_v1';
   var CONTENT_REPORT_KEY = 'bauman_math_e129_theory_content_report_v1';
   var SUBJECT_STORAGE = window.BaumanSubjectStorage.forSubject('math');
@@ -220,7 +220,7 @@
     var out=[];
     if(Array.isArray(raw)){
       raw.forEach(function(ch){ out.push(normalizeChapter(ch, ch.stageId||ch.stage||'vn', ch.stageTitle||'', ch.disciplineId||'', ch.disciplineTitle||'')); });
-      return out.filter(Boolean);
+      return uniqueChapters(out);
     }
     arr(raw && raw.stages).forEach(function(stage){
       arr(stage.disciplines).forEach(function(disc){
@@ -228,7 +228,16 @@
       });
     });
     arr(raw && raw.chapters).forEach(function(ch){ out.push(normalizeChapter(ch, ch.stageId||ch.stage||'vn', ch.stageTitle||'', ch.disciplineId||'', ch.disciplineTitle||'')); });
-    return out.filter(Boolean);
+    return uniqueChapters(out);
+  }
+  function uniqueChapters(chapters){
+    var seen=Object.create(null);
+    return chapters.filter(Boolean).filter(function(chapter){
+      var id=S(chapter.chapterId).trim();
+      if(!id || seen[id]) return false;
+      seen[id]=true;
+      return true;
+    });
   }
   function normalizeChapter(ch,stageId,stageTitle,disciplineId,disciplineTitle){
     if(!ch) return null;

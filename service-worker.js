@@ -1,6 +1,6 @@
 'use strict';
 
-const RELEASE = 'math-bauman-webapp-v2-l2-3';
+const RELEASE = 'math-bauman-webapp-v2-l2-4';
 const CACHE = RELEASE + '-shell';
 const SHELL = [
   './',
