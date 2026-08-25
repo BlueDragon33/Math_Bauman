@@ -184,7 +184,7 @@ async function run() {
         recovery: /KHÔI PHỤC TAB HỌC TẬP|Chưa có nội dung bài giảng/.test(document.querySelector('#view').innerText)
       };
     }, c03);
-    check('C03-CANONICAL-ROUTE', 'the visible E169 learner route exposes all six corrected C03 overlays', c03State.records === 6 && /^MATH-VN-C03/.test(c03State.currentLesson || '') && !c03State.recovery, c03State);
+    check('C03-CANONICAL-ROUTE', 'the visible E186 learner route exposes all six corrected C03 overlays', c03State.records === 6 && /^MATH-VN-C03/.test(c03State.currentLesson || '') && !c03State.recovery, c03State);
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.waitForTimeout(250);
@@ -206,7 +206,15 @@ async function run() {
     phase = 'offline';
     await context.setOffline(true);
     await page.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
-    await page.waitForFunction(() => window.MathBaumanWebApp && window.MathBaumanWebApp.selfCheck().ok, null, { timeout: 60000 });
+    await page.waitForFunction(() => {
+      const theory = window.DB && window.DB.theory_lecture_content;
+      const records = Array.isArray(theory) ? theory : theory && theory.records;
+      const frame = window.DB && window.DB.theory_lecture_frame;
+      return window.MathBaumanWebApp && window.MathBaumanWebApp.selfCheck().ok &&
+        window.DB && Array.isArray(window.DB.lessons) && window.DB.lessons.length === 347 &&
+        Array.isArray(records) && records.length === 18 &&
+        frame && Array.isArray(frame.chapters) && frame.chapters.length === 56;
+    }, null, { timeout: 60000 });
     const offlineState = await page.evaluate(() => {
       const theory = window.DB && window.DB.theory_lecture_content;
       const records = Array.isArray(theory) ? theory : theory && theory.records;
