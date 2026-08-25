@@ -9,7 +9,7 @@ const ROOT = path.resolve(__dirname, '..');
 const HOST = '127.0.0.1';
 const PORT = Number(process.env.MATH_WEBAPP_PORT || 4173);
 const BASE_URL = `http://${HOST}:${PORT}`;
-const report = { gate: 'MATH-V2-L2-BROWSER', status: 'FAIL', checks: [], diagnostics: {} };
+const report = { gate: 'MATH-V2-L4-BROWSER', status: 'FAIL', checks: [], diagnostics: {} };
 
 const MIME = {
   '.css': 'text/css; charset=utf-8',
@@ -185,6 +185,92 @@ async function run() {
       };
     }, c03);
     check('C03-CANONICAL-ROUTE', 'the visible E186 learner route exposes all six corrected C03 overlays', c03State.records === 6 && /^MATH-VN-C03/.test(c03State.currentLesson || '') && !c03State.recovery, c03State);
+
+    await page.waitForSelector('#learnerContext[data-mode="lesson"] [data-l4-lesson]', { timeout: 30000 });
+    const learnerContext = await page.evaluate(() => {
+      const host = document.getElementById('learnerContext');
+      const lesson = host && host.querySelector('[data-l4-lesson]');
+      return {
+        release: window.MathBaumanLearnerUX && window.MathBaumanLearnerUX.selfCheck(),
+        lessonId: lesson && lesson.getAttribute('data-l4-lesson'),
+        text: host && host.innerText,
+        breadcrumbs: host && host.querySelectorAll('.learner-breadcrumb li').length,
+        bookmark: Boolean(host && host.querySelector('[data-l4-action="bookmark"]')),
+        note: Boolean(host && host.querySelector('[data-l4-action="note"]')),
+        checklist: host && host.querySelectorAll('[data-l4-check]').length
+      };
+    });
+    check(
+      'LEARNER-CONTEXT',
+      'current lesson exposes goal, prerequisite, duration, misconception and learner tools',
+      learnerContext.release && learnerContext.release.ok
+        && /^MATH-VN-C03/.test(learnerContext.lessonId || '')
+        && /Mục tiêu/.test(learnerContext.text || '')
+        && /Kiến thức cần trước/.test(learnerContext.text || '')
+        && /Lỗi dễ mắc/.test(learnerContext.text || '')
+        && /phút/.test(learnerContext.text || '')
+        && learnerContext.breadcrumbs >= 5
+        && learnerContext.bookmark
+        && learnerContext.note
+        && learnerContext.checklist === 3,
+      learnerContext
+    );
+
+    await page.locator('#learnerContext [data-l4-action="bookmark"]').click();
+    await page.locator('#learnerContext [data-l4-action="note"]').click();
+    await page.locator('#learnerNotesDialog[open]').waitFor({ state: 'visible', timeout: 10000 });
+    await page.locator('#learnerNotesText').fill('Ghi chú regression L4: kiểm tra gradient và điều kiện áp dụng.');
+    await page.locator('[data-l4-note-save]').click();
+    await page.locator('#learnerContext [data-l4-check="concept"]').check();
+    await page.waitForTimeout(150);
+    const learnerTools = await page.evaluate(() => {
+      const key = window.MathBaumanLearnerUX.storageKey;
+      const stored = JSON.parse(localStorage.getItem(key));
+      const current = document.querySelector('[data-current-lesson]').getAttribute('data-current-lesson');
+      return {
+        current,
+        pressed: document.querySelector('#learnerContext [data-l4-action="bookmark"]').getAttribute('aria-pressed'),
+        bookmark: Boolean(stored.bookmarks[current]),
+        note: stored.notes[current],
+        concept: Boolean(stored.checklists[current] && stored.checklists[current].concept),
+        snapshot: window.MathBaumanLearnerUX.selfCheck()
+      };
+    });
+    check(
+      'LEARNER-TOOLS-PERSIST',
+      'bookmark, lesson note and checklist persist in the local-first learner store',
+      learnerTools.pressed === 'true'
+        && learnerTools.bookmark
+        && /Ghi chú regression L4/.test(learnerTools.note || '')
+        && learnerTools.concept
+        && learnerTools.snapshot.storageHealthy,
+      learnerTools
+    );
+
+    const resumeLessonId = learnerTools.current;
+    await page.evaluate(() => window.MathBaumanWebApp.navigate('overview'));
+    await page.waitForSelector(`#learnerContext[data-mode="overview"] [data-l4-resume="${resumeLessonId}"]`, { timeout: 30000 });
+    await page.locator('#learnerContext [data-l4-action="resume"]').click();
+    await page.waitForFunction((lessonId) => {
+      const current = document.querySelector('[data-current-lesson]');
+      return current && current.getAttribute('data-current-lesson') === lessonId
+        && document.querySelector('#learnerContext[data-mode="lesson"]');
+    }, resumeLessonId, { timeout: 30000 });
+    const resumeState = await page.evaluate(() => ({
+      currentLesson: document.querySelector('[data-current-lesson]').getAttribute('data-current-lesson'),
+      view: window.__BAUMAN_CORE_API.state.view,
+      learnTab: window.__BAUMAN_CORE_API.state.learnTab,
+      bookmarked: document.querySelector('#learnerContext [data-l4-action="bookmark"]').getAttribute('aria-pressed')
+    }));
+    check(
+      'RESUME-LESSON-FLOW',
+      'overview resume returns to the exact E186 lesson and preserves learner state',
+      resumeState.currentLesson === resumeLessonId
+        && resumeState.view === 'learning'
+        && resumeState.learnTab === 'theory'
+        && resumeState.bookmarked === 'true',
+      resumeState
+    );
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.waitForTimeout(250);

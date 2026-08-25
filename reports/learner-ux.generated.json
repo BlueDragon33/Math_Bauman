@@ -1,0 +1,97 @@
+{
+  "gate": "MATH-BAUMAN-WEBAPP-V2-L4-LEARNER-UX",
+  "status": "PASS",
+  "release": "MATH-BAUMAN-WEBAPP-V2-L4.1",
+  "checks": [
+    {
+      "id": "L4-DASHBOARD",
+      "title": "overview exposes today/resume actions without replacing the existing dashboard",
+      "ok": true,
+      "evidence": {
+        "todaySchedule": true,
+        "learnerContext": true
+      }
+    },
+    {
+      "id": "L4-HIERARCHY",
+      "title": "lesson-first hierarchy keeps module-course-chapter-lesson-activity navigation",
+      "ok": true,
+      "evidence": "E186 lesson-first route"
+    },
+    {
+      "id": "L4-SEARCH-STATE",
+      "title": "search and filter state remain part of the persisted canonical core state",
+      "ok": true,
+      "evidence": [
+        "lessonQuery",
+        "conceptQuery",
+        "practiceQuery"
+      ]
+    },
+    {
+      "id": "L4-READER-CONTEXT",
+      "title": "reader context is mounted outside the replaceable lesson surface",
+      "ok": true,
+      "evidence": {
+        "persistentHostBeforeView": true
+      }
+    },
+    {
+      "id": "L4-LEARNING-METADATA",
+      "title": "current lesson context supplies goal, prerequisite and estimated duration",
+      "ok": true,
+      "evidence": [
+        "objective",
+        "prerequisite",
+        "estimatedMinutes"
+      ]
+    },
+    {
+      "id": "L4-CONTENT-HIERARCHY",
+      "title": "existing reader retains formula, example and misconception-oriented content structure",
+      "ok": true,
+      "evidence": [
+        "formula-section",
+        "Tự kiểm",
+        "misconception copy"
+      ]
+    },
+    {
+      "id": "L4-RESUME",
+      "title": "last lesson and E186 path are saved and can be restored",
+      "ok": true,
+      "evidence": "math.bauman.learner-ux.v1"
+    },
+    {
+      "id": "L4-LEARNER-TOOLS",
+      "title": "bookmark, note and three-step checklist are local-first and lesson-scoped",
+      "ok": true,
+      "evidence": [
+        "bookmark",
+        "note",
+        "concept/example/selfCheck"
+      ]
+    },
+    {
+      "id": "L4-RECOVERY-STATES",
+      "title": "learner UI retains actionable loading, empty and error/recovery states",
+      "ok": true,
+      "evidence": [
+        "loading",
+        "empty",
+        "recovery"
+      ]
+    },
+    {
+      "id": "L4-RESPONSIVE-ACCESSIBLE",
+      "title": "learner context and notes provide responsive, labeled and keyboard-native controls",
+      "ok": true,
+      "evidence": [
+        "dialog",
+        "aria-live",
+        "600px layout",
+        "focus-visible"
+      ]
+    }
+  ]
+}

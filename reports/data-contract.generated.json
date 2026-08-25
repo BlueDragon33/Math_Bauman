@@ -2,7 +2,7 @@
   "gate": "MATH-BAUMAN-WEBAPP-V2-L3-DATA-CONTRACT",
   "status": "PASS",
   "contract": {
-    "manifestVersion": "2.0.0-l3",
+    "manifestVersion": "2.0.0-l4",
     "officialPublishedCode": "09.04.01",
     "personalizedDisplayCode": "09.04.01/11",
     "legacyLessons": 347,
@@ -167,8 +167,8 @@
       "title": "generated browser manifest matches the canonical JSON manifest",
       "ok": true,
       "evidence": {
-        "jsonDigest": "ef9cf818fd657912e9b1765a84770c9468dad7a992be693932f3e22dfd09f2d4",
-        "browserDigest": "ef9cf818fd657912e9b1765a84770c9468dad7a992be693932f3e22dfd09f2d4"
+        "jsonDigest": "6c31fcb60ca357939f481221483303e9472143ef53296e91dc5c7286af803602",
+        "browserDigest": "6c31fcb60ca357939f481221483303e9472143ef53296e91dc5c7286af803602"
       }
     },
     {

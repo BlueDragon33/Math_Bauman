@@ -1,6 +1,6 @@
 'use strict';
 
-const RELEASE = 'math-bauman-webapp-v2-l3-1';
+const RELEASE = 'math-bauman-webapp-v2-l4-1';
 const CACHE = RELEASE + '-shell';
 const SHELL = [
   './',
@@ -10,6 +10,7 @@ const SHELL = [
   './assets/core.css',
   './assets/math.css',
   './assets/webapp.css',
+  './assets/learner-ux.js',
   './assets/theory_skin/theory-tab-E129.css',
   './assets/theory_skin/theory-title-clean-E183.css',
   './assets/theory_skin/theory-ui-tokens-E132.css',

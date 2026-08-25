@@ -31,11 +31,23 @@
         <div><span id="coreLabel" class="kicker">MATH BAUMAN · WEB APP</span><h2 id="pageTitle">Tổng quan</h2><p id="pageSub">Nền tảng → Dự bị → Bauman → НИР/ВКР</p></div>
         <div class="top-actions"><button id="themeBtn" class="btn soft" type="button">Giao diện</button><button id="aiBtn" class="btn primary" type="button">AI Mentor</button><span id="saveState" class="status" role="status">Đang tải</span></div>
       </header>
+      <section id="learnerContext" class="learner-context" aria-live="polite" hidden></section>
       <section id="view" class="view" tabindex="-1"></section>
     </main>
   </div>
   <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Hộp thoại"><div class="modal-card"><button class="modal-close" id="modalClose" type="button" aria-label="Đóng">×</button><div id="modalBody"></div></div></div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="learnerNotesDialog" class="learner-notes-dialog" aria-labelledby="learnerNotesTitle">
+    <form method="dialog" data-l4-note-form>
+      <header>
+        <div><span class="learner-eyebrow">Ghi chú theo bài</span><h2 id="learnerNotesTitle">Ghi chú học tập</h2></div>
+        <button class="learner-icon-button" value="cancel" type="submit" aria-label="Đóng ghi chú">×</button>
+      </header>
+      <label for="learnerNotesText">Điều cần nhớ, câu hỏi hoặc lỗi cần sửa</label>
+      <textarea id="learnerNotesText" rows="8" maxlength="4000" placeholder="Ví dụ: cần xem lại ý nghĩa hình học của gradient…"></textarea>
+      <footer><button class="btn soft" value="cancel" type="submit">Hủy</button><button class="btn primary" value="save" type="submit" data-l4-note-save>Lưu ghi chú</button></footer>
+    </form>
+  </dialog>
 
   <script src="assets/platform/storage-adapter.js?v=1"></script>
   <script src="assets/platform/subject-storage.js?v=1"></script>
@@ -63,6 +75,7 @@
   <script src="assets/theory_skin/theory-formula-typeset-E234.js?v=247"></script>
   <script src="assets/theory_skin/theory-formula-fraction-align-E235.js?v=247"></script>
   <script src="assets/theory_skin/theory-slideshow-reader-fit-E212.js?v=247"></script>
+  <script src="assets/learner-ux.js?v=1"></script>
   <script src="assets/webapp-bootstrap.js?v=1"></script>
 </body>
 </html>

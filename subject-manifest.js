@@ -8,7 +8,7 @@ window.SUBJECT_MANIFEST = {
   "title": "Toán Bauman",
   "entry": "index.html",
   "language": "vi",
-  "version": "2.0.0-l3",
+  "version": "2.0.0-l4",
   "status": "migration",
   "program": {
     "institution": "МГТУ им. Н. Э. Баумана",

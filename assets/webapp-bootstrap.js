@@ -1,7 +1,7 @@
 (function (global) {
   'use strict';
 
-  const RELEASE = 'MATH-BAUMAN-WEBAPP-V2-L3.1';
+  const RELEASE = 'MATH-BAUMAN-WEBAPP-V2-L4.1';
   const LEARNING_TABS = ['theory', 'exercises', 'practice', 'review', 'exam'];
   const THEORY_RETRY_DELAYS = [0, 250, 1000, 2500];
   let theoryOwnershipObserver = null;
@@ -111,7 +111,8 @@
         online: navigator.onLine,
         primaryNavigation: Boolean(global.__BAUMAN_CORE_API && typeof global.__BAUMAN_CORE_API.render === 'function'),
         theoryRouteHandoff: true,
-        theoryRouteOwnership: Boolean(theoryOwnershipObserver)
+        theoryRouteOwnership: Boolean(theoryOwnershipObserver),
+        learnerUx: Boolean(global.MathBaumanLearnerUX && global.MathBaumanLearnerUX.selfCheck().ok)
       };
     },
     navigate: navigate
