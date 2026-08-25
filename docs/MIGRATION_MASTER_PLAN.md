@@ -10,7 +10,8 @@ Trạng thái checkpoint:
 
 - Lượt 1: **PASS** — source audit và preservation gate 15/15.
 - Lượt 2: **PASS** — GitHub Actions run `32835461390`; static và browser gate đều xanh, browser smoke 14/14.
-- Lượt 3: **ĐANG THỰC HIỆN** — chuẩn hóa identity, catalog, namespace và schema.
+- Lượt 3: **PASS** — GitHub Actions run `32836910247`; static 15/15, data contract 27/27 và browser 14/14.
+- Lượt 4: **ĐANG THỰC HIỆN** — learner-first navigation, reader state và UX regression.
 
 ## Lượt 1 · Source audit, preservation and rollback · 8 bước
 
