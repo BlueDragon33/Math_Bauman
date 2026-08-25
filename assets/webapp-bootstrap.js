@@ -1,8 +1,9 @@
 (function (global) {
   'use strict';
 
-  const RELEASE = 'MATH-BAUMAN-WEBAPP-V2-L2.2';
+  const RELEASE = 'MATH-BAUMAN-WEBAPP-V2-L2.3';
   const LEARNING_TABS = ['theory', 'exercises', 'practice', 'review', 'exam'];
+  const THEORY_RETRY_DELAYS = [0, 250, 1000, 2500];
 
   function markReady() {
     const app = document.getElementById('app');
@@ -19,6 +20,20 @@
     });
   }
 
+  function renderTheoryWhenReady(attempt) {
+    const api = global.__BAUMAN_CORE_API;
+    const state = api && api.state;
+    if (!state || state.view !== 'learning' || state.learnTab !== 'theory') return;
+    const theory = global.BAUMAN_MATH_THEORY_E129;
+    const rendered = Boolean(theory && typeof theory.render === 'function' && theory.render());
+    const nextAttempt = Number(attempt || 0) + 1;
+    if (!rendered && nextAttempt < THEORY_RETRY_DELAYS.length) {
+      global.setTimeout(function () {
+        renderTheoryWhenReady(nextAttempt);
+      }, THEORY_RETRY_DELAYS[nextAttempt]);
+    }
+  }
+
   function navigate(view) {
     const api = global.__BAUMAN_CORE_API;
     const state = api && api.state;
@@ -31,10 +46,7 @@
     if (view === 'writing') state.simulationKind = 'unified';
     if (typeof api.save === 'function') api.save();
     if (typeof api.render === 'function') api.render();
-    if (view === 'learning' && state.learnTab === 'theory') {
-      const theory = global.BAUMAN_MATH_THEORY_E129;
-      if (theory && typeof theory.render === 'function') theory.render();
-    }
+    if (view === 'learning' && state.learnTab === 'theory') renderTheoryWhenReady(0);
     return state.view === view;
   }
 
@@ -57,7 +69,8 @@
         release: RELEASE,
         subjectId: global.SUBJECT_ADAPTER && global.SUBJECT_ADAPTER.id || null,
         online: navigator.onLine,
-        primaryNavigation: Boolean(global.__BAUMAN_CORE_API && typeof global.__BAUMAN_CORE_API.render === 'function')
+        primaryNavigation: Boolean(global.__BAUMAN_CORE_API && typeof global.__BAUMAN_CORE_API.render === 'function'),
+        theoryRouteHandoff: true
       };
     },
     navigate: navigate
