@@ -22,7 +22,10 @@ const MIME = {
 
 function check(id, title, ok, evidence) {
   report.checks.push({ id, title, ok: Boolean(ok), evidence });
-  if (!ok) throw new Error(`${id}: ${title}`);
+  if (!ok) {
+    console.error(`EVIDENCE ${id}`, JSON.stringify(evidence));
+    throw new Error(`${id}: ${title}`);
+  }
 }
 
 function safeFile(requestUrl) {
@@ -133,7 +136,32 @@ async function run() {
       viewPrefix: document.getElementById('view') && document.getElementById('view').innerText.slice(0, 240)
     }));
     check('NAV-LEARNING-CLICK', 'clicking the primary Học tập tab changes the canonical runtime route', learningRoute.apiView === 'learning' && learningRoute.mathStateView === 'learning' && learningRoute.activeNav === 'learning', learningRoute);
-    await page.waitForSelector('.e129-theory-shell', { timeout: 30000 });
+    await page.waitForTimeout(5000);
+    const theoryRoute = await page.evaluate(() => {
+      const frame = window.DB && window.DB.theory_lecture_frame || {};
+      const shell = document.querySelector('.e129-theory-shell');
+      const view = document.getElementById('view');
+      let sourceStatus = null;
+      let selfCheck = null;
+      try { sourceStatus = window.BAUMAN_MATH_THEORY_E129 && window.BAUMAN_MATH_THEORY_E129.sourceStatus(); } catch (error) { sourceStatus = { error: error.message }; }
+      try { selfCheck = window.BAUMAN_MATH_THEORY_E129 && window.BAUMAN_MATH_THEORY_E129.selfCheck(); } catch (error) { selfCheck = { error: error.message }; }
+      const style = shell && getComputedStyle(shell);
+      return {
+        frameKeys: Object.keys(frame),
+        frameStages: Array.isArray(frame.stages) ? frame.stages.length : 0,
+        frameChapters: Array.isArray(frame.chapters) ? frame.chapters.length : 0,
+        sourceStatus,
+        selfCheck,
+        shellCount: document.querySelectorAll('.e129-theory-shell').length,
+        shellDisplay: style && style.display,
+        shellVisibility: style && style.visibility,
+        shellRect: shell && shell.getBoundingClientRect().toJSON(),
+        viewChildClass: view && view.firstElementChild && view.firstElementChild.className,
+        viewPrefix: view && view.innerText.slice(0, 500),
+        state: window.__BAUMAN_CORE_API && window.__BAUMAN_CORE_API.state
+      };
+    });
+    check('THEORY-SHELL-ROUTE', 'the primary learner route keeps the E129 theory surface visible after data settles', theoryRoute.shellCount === 1 && theoryRoute.shellDisplay !== 'none' && theoryRoute.shellVisibility !== 'hidden' && theoryRoute.shellRect && theoryRoute.shellRect.height > 0, theoryRoute);
     const c03 = 'MATH-VN-C03-ham_so_ao_ham_va_gradien';
     await page.locator('[data-e186-open="chapter"]:visible').click();
     const c03Choice = page.locator('[data-e186-pick="chapter"][data-e186-id="c03"]:visible');
