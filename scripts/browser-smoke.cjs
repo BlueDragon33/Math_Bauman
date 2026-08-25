@@ -135,7 +135,13 @@ async function run() {
     check('NAV-LEARNING-CLICK', 'clicking the primary Học tập tab changes the canonical runtime route', learningRoute.apiView === 'learning' && learningRoute.mathStateView === 'learning' && learningRoute.activeNav === 'learning', learningRoute);
     await page.waitForSelector('.e129-theory-shell', { timeout: 30000 });
     const c03 = 'MATH-VN-C03-ham_so_ao_ham_va_gradien';
-    await page.locator(`[data-e129-chapter="${c03}"]`).first().click();
+    await page.locator('[data-e169-open="chapter"]:visible').click();
+    const c03Choice = page.locator('[data-e169-pick-chapter="c03"]:visible');
+    await c03Choice.waitFor({ state: 'visible', timeout: 30000 });
+    await c03Choice.click();
+    const c03Lesson = page.locator('[data-e169-pick-activity="theory"][data-e169-pick-lesson^="MATH-VN-C03"]:visible').first();
+    await c03Lesson.waitFor({ state: 'visible', timeout: 30000 });
+    await c03Lesson.click();
     await page.waitForSelector('[data-current-lesson^="MATH-VN-C03"]', { timeout: 30000 });
     const c03State = await page.evaluate((chapterId) => {
       const theory = window.DB.theory_lecture_content;
@@ -146,7 +152,7 @@ async function run() {
         recovery: /KHÔI PHỤC TAB HỌC TẬP|Chưa có nội dung bài giảng/.test(document.querySelector('#view').innerText)
       };
     }, c03);
-    check('C03-CANONICAL-ROUTE', 'the corrected C03 chapter route exposes all six overlays', c03State.records === 6 && /^MATH-VN-C03/.test(c03State.currentLesson || '') && !c03State.recovery, c03State);
+    check('C03-CANONICAL-ROUTE', 'the visible E169 learner route exposes all six corrected C03 overlays', c03State.records === 6 && /^MATH-VN-C03/.test(c03State.currentLesson || '') && !c03State.recovery, c03State);
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.waitForTimeout(250);
