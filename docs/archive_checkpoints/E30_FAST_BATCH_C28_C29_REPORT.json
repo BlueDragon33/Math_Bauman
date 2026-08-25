@@ -1,0 +1,64 @@
+{
+  "checkpoint": "E30",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapters": [
+    {
+      "checkpoint": "E30",
+      "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+      "mode": "FAST_BATCH",
+      "chapterId": "MATH-HK3-NNOPT-C28",
+      "chapterTitle": "Chương 28 · Tối ưu hóa số, gradient descent và backpropagation cho mô hình AI kỹ thuật",
+      "stage": "hk3",
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "focus": "Loss, empirical risk, gradient, Jacobian, backpropagation, regularization và chẩn đoán huấn luyện mô hình AI kỹ thuật",
+      "notFinal": true
+    },
+    {
+      "checkpoint": "E30",
+      "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+      "mode": "FAST_BATCH",
+      "chapterId": "MATH-HK3-RISK-C29",
+      "chapterTitle": "Chương 29 · Bất định, calibration và đánh giá rủi ro cho hệ AI tự hành",
+      "stage": "hk3",
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "focus": "Aleatoric/epistemic uncertainty, calibration, Bayesian intuition, ensembles, robustness, OOD detection và risk-aware decision thresholds",
+      "notFinal": true
+    }
+  ],
+  "finishRoadmap": {
+    "targetTotalChapters": 32,
+    "doneThroughChapter": 29,
+    "remainingChapters": [
+      "C30",
+      "C31",
+      "C32"
+    ],
+    "plannedCheckpoints": [
+      "E31: C30-C31",
+      "E32: C32 + toàn cục QA/hardening"
+    ],
+    "finalRule": "Only create official FINAL when user says FINAL or xuất bản cuối."
+  }
+}

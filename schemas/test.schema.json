@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "paperTypes",
+    "difficultyMix",
+    "items"
+  ],
+  "properties": {
+    "paperTypes": {
+      "type": "array"
+    },
+    "difficultyMix": {
+      "type": "object"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "stageId",
+          "partId",
+          "lessonId",
+          "conceptIds",
+          "examTags",
+          "difficulty",
+          "question",
+          "answer",
+          "explanation",
+          "remediation"
+        ]
+      }
+    }
+  }
+}

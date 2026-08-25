@@ -1,0 +1,22 @@
+{
+  "checkpoint": "E31",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "mode": "FAST_BATCH",
+  "chapterId": "MATH-HK3-VKR-C31",
+  "chapterTitle": "Chương 31 · Mô hình hóa toán học, mô phỏng số và trình bày kết quả НИР/ВКР",
+  "stage": "hk3",
+  "counts": {
+    "lessons": 8,
+    "slides": 160,
+    "formulas": 24,
+    "exercises": 64,
+    "applications": 16,
+    "simulations": 16,
+    "professorQa": 8,
+    "questions": 48,
+    "reviewPacks": 8,
+    "vocabCards": 32
+  },
+  "focus": "Biến đề tài thành mô hình toán, giả thiết, thí nghiệm số, sensitivity analysis, bảng kết quả và câu chuyện bảo vệ luận văn.",
+  "notFinal": true
+}

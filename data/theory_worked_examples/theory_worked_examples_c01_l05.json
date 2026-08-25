@@ -1,0 +1,587 @@
+{
+  "id": "bauman_math_theory_worked_examples_c01_l05_v1",
+  "schema": "bauman_math_theory_worked_examples_v1",
+  "version": "WORKED_EXAMPLES_C01_L05_V1_PASS08",
+  "status": "pass08_complete_pending_pass09_lab",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L05-subspace-data-representation-e140",
+  "lessonTitle": "§1.5 · Không gian con và biểu diễn dữ liệu",
+  "language": "vi",
+  "purpose": "Các ví dụ và phép dẫn xuất kiểm được cho subspace, affine centering, orthogonal projection, residual, numerical rank và retained energy. Artifact này độc lập với giao diện và không thay đổi runtime.",
+  "sourceContracts": {
+    "core": "subjects/math/data/theory_core/theory_core_c01_l05.json",
+    "formulaRegistry": "subjects/math/THEORY_C01_L05_FORMULA_REGISTRY.md",
+    "engineeringCase": "subjects/math/data/theory_case/theory_case_c01_l05.json",
+    "misconceptionMap": "subjects/math/THEORY_C01_L05_MISCONCEPTION_MAP.md",
+    "caseVersion": "CASE_C01_L05_V1_LOCKED"
+  },
+  "globalRules": [
+    "All engineering-case numbers come from or are exact derivations of CASE_C01_L05_V1_LOCKED.",
+    "Every equality is exact unless a numerical tolerance or approximation sign is stated.",
+    "A residual score is interpreted as model mismatch only, never as a unique fault diagnosis.",
+    "The full least-squares, PCA and SVD derivations remain deferred.",
+    "No runtime file may consume this artifact before academic acceptance."
+  ],
+  "examples": [
+    {
+      "id": "WE01",
+      "title": "Phân loại linear subspace, affine set, finite cloud và near-subspace",
+      "learningOutcomeRefs": ["LO1"],
+      "formulaRefs": ["F01", "F02"],
+      "claimRefs": ["C01", "C11"],
+      "misconceptionRefs": ["M01", "M02", "M04"],
+      "problem": "Phân loại bốn đối tượng trong R^4: U={(a,b,a,b)}, A=mu+U với mu=(0.4,0.35,0.45,0.3), D={x_normal,x_mismatch}, và mô hình x=mu+Qz+epsilon.",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "U chứa zero vì chọn a=b=0 được (0,0,0,0)."
+        },
+        {
+          "step": 2,
+          "statement": "Nếu u=(a,b,a,b) và v=(c,d,c,d) thì u+v=(a+c,b+d,a+c,b+d) vẫn thuộc U."
+        },
+        {
+          "step": 3,
+          "statement": "Với alpha in R, alpha u=(alpha a,alpha b,alpha a,alpha b) vẫn thuộc U. Vì vậy U là linear subspace của R^4."
+        },
+        {
+          "step": 4,
+          "statement": "A=mu+U là affine set. Mu không thuộc U vì 0.4!=0.45 và 0.35!=0.3, nên A không đi qua origin và không phải linear subspace."
+        },
+        {
+          "step": 5,
+          "statement": "D chỉ là hai observations đã ghi nhận. D không đóng dưới mọi linear combination nên không phải subspace."
+        },
+        {
+          "step": 6,
+          "statement": "x=mu+Qz+epsilon là near-subspace model. Khi epsilon=0, x thuộc affine model mu+col(Q); khi epsilon khác 0, observation chỉ nằm gần model."
+        }
+      ],
+      "answer": {
+        "U": "linear_subspace",
+        "A": "affine_not_linear",
+        "D": "finite_dataset_not_subspace",
+        "model": "noisy_near_subspace_model"
+      },
+      "qualityChecks": [
+        "Zero and both closure properties were tested for U.",
+        "Affine offset was not silently discarded.",
+        "Finite observations were not confused with the fitted model set."
+      ]
+    },
+    {
+      "id": "WE02",
+      "title": "Span, redundancy, dimension và rank phải nói về một matrix cụ thể",
+      "learningOutcomeRefs": ["LO2"],
+      "formulaRefs": ["F03", "F04"],
+      "claimRefs": ["C02"],
+      "misconceptionRefs": ["M06"],
+      "problem": "Xét G=[g1 g2 g3] với g1=(1,0,1)^T, g2=(0,1,1)^T và g3=g1+g2=(1,1,2)^T. Xác định span, redundancy và dimension.",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "g3=g1+g2 nên column 3 không thêm một independent direction."
+        },
+        {
+          "step": 2,
+          "statement": "g1 và g2 independent vì alpha g1+beta g2=0 buộc alpha=beta=0 từ hai components đầu."
+        },
+        {
+          "step": 3,
+          "statement": "col(G)=span(g1,g2,g3)=span(g1,g2)."
+        },
+        {
+          "step": 4,
+          "statement": "rank(G)=2 và dim(col(G))=2, dù G có ba columns."
+        }
+      ],
+      "answer": {
+        "generatorCount": 3,
+        "independentDirectionCount": 2,
+        "rank": 2,
+        "dimension": 2,
+        "redundantColumn": "g3"
+      },
+      "qualityChecks": [
+        "Rank object G is named.",
+        "Generator count is not equated with dimension."
+      ]
+    },
+    {
+      "id": "WE03",
+      "title": "Dẫn xuất projector QQ^T cho orthonormal basis",
+      "learningOutcomeRefs": ["LO3", "LO4"],
+      "formulaRefs": ["F05", "F06", "F07", "F10", "F12"],
+      "claimRefs": ["C03", "C04", "C05"],
+      "misconceptionRefs": ["M08", "M09"],
+      "problem": "Cho Q in R^(n x k) với Q^TQ=I_k. Dẫn xuất coordinates, projection và residual orthogonality cho y in R^n.",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "Tìm y_hat=Qz thuộc col(Q) sao cho residual r=y-Qz orthogonal với mọi column của Q."
+        },
+        {
+          "step": 2,
+          "statement": "Điều kiện orthogonality là Q^T r=Q^T(y-Qz)=0."
+        },
+        {
+          "step": 3,
+          "statement": "Q^Ty-Q^TQz=0. Vì Q^TQ=I_k nên z=Q^Ty."
+        },
+        {
+          "step": 4,
+          "statement": "Thay z vào y_hat=Qz được y_hat=QQ^Ty. Do đó P_U=QQ^T."
+        },
+        {
+          "step": 5,
+          "statement": "P_U^T=(QQ^T)^T=QQ^T=P_U nên P_U symmetric."
+        },
+        {
+          "step": 6,
+          "statement": "P_U^2=QQ^TQQ^T=Q(Q^TQ)Q^T=QQ^T=P_U nên P_U idempotent."
+        },
+        {
+          "step": 7,
+          "statement": "Q^Tr=Q^Ty-Q^TQQ^Ty=Q^Ty-Q^Ty=0."
+        }
+      ],
+      "answer": {
+        "coordinates": "z=Q^T y",
+        "projector": "P_U=QQ^T",
+        "projection": "y_hat=QQ^T y",
+        "residual": "r=(I-QQ^T)y",
+        "invariants": ["P_U^T=P_U", "P_U^2=P_U", "Q^Tr=0"]
+      },
+      "scopeNote": "This derives orthogonal projection from residual orthogonality without developing the full least-squares course."
+    },
+    {
+      "id": "WE04",
+      "title": "Dẫn xuất projector cho general full-column-rank basis",
+      "learningOutcomeRefs": ["LO3", "LO7"],
+      "formulaRefs": ["F08", "F09", "F10"],
+      "claimRefs": ["C06"],
+      "misconceptionRefs": ["M07", "M08", "M20"],
+      "problem": "Cho B in R^(n x k) full column rank nhưng không orthonormal. Dẫn xuất coordinates của orthogonal projection và projector lên col(B).",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "Đặt y_hat=Bc và r=y-Bc. Orthogonality với col(B) yêu cầu B^Tr=0."
+        },
+        {
+          "step": 2,
+          "statement": "B^T(y-Bc)=0 dẫn đến B^TB c=B^Ty."
+        },
+        {
+          "step": 3,
+          "statement": "Vì B full column rank, B^TB invertible và c=(B^TB)^(-1)B^Ty."
+        },
+        {
+          "step": 4,
+          "statement": "y_hat=Bc=B(B^TB)^(-1)B^Ty. Vì vậy P_U=B(B^TB)^(-1)B^T."
+        },
+        {
+          "step": 5,
+          "statement": "Trong code, giải system B^TB c=B^Ty hoặc dùng QR/lstsq thay vì mặc định tạo inverse."
+        }
+      ],
+      "answer": {
+        "coordinates": "c=(B^TB)^(-1)B^Ty",
+        "projector": "P_U=B(B^TB)^(-1)B^T",
+        "conditions": ["B has shape n x k", "rank(B)=k", "Euclidean inner product"]
+      },
+      "scopeNote": "The normal equations are used only to derive the projector. Full least-squares theory remains deferred."
+    },
+    {
+      "id": "WE05",
+      "title": "Locked Q và B mô tả cùng subspace nhưng coordinates khác nhau",
+      "learningOutcomeRefs": ["LO3", "LO4"],
+      "formulaRefs": ["F06", "F08", "F09"],
+      "claimRefs": ["C05", "C06"],
+      "misconceptionRefs": ["M07", "M08", "M10"],
+      "caseRefs": ["orthonormalBasis", "generalBasisEquivalent", "normalSample"],
+      "problem": "Với normal centred observation y=(0.22,0.39,0.18,0.41)^T, so sánh coordinates trong orthonormal Q và general basis B.",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "Q columns là q1=(0.5,0.5,0.5,0.5)^T và q2=(0.5,-0.5,0.5,-0.5)^T."
+        },
+        {
+          "step": 2,
+          "statement": "z1=q1^Ty=0.5(0.22+0.39+0.18+0.41)=0.6."
+        },
+        {
+          "step": 3,
+          "statement": "z2=q2^Ty=0.5(0.22-0.39+0.18-0.41)=-0.2."
+        },
+        {
+          "step": 4,
+          "statement": "Vậy z=(0.6,-0.2)^T và Qz=(0.2,0.4,0.2,0.4)^T."
+        },
+        {
+          "step": 5,
+          "statement": "Locked B has b1=2q1 and b2=q1+q2. Từ Qz=Bc suy ra 2c1+c2=0.6 và c2=-0.2."
+        },
+        {
+          "step": 6,
+          "statement": "c2=-0.2 và 2c1-0.2=0.6 nên c1=0.4. Do đó c=(0.4,-0.2)^T."
+        },
+        {
+          "step": 7,
+          "statement": "Qz=Bc=(0.2,0.4,0.2,0.4)^T. Coordinates khác nhau, projected physical vector không đổi."
+        }
+      ],
+      "answer": {
+        "QCoordinates": [0.6, -0.2],
+        "BCoordinates": [0.4, -0.2],
+        "commonProjection": [0.2, 0.4, 0.2, 0.4]
+      },
+      "qualityChecks": [
+        "Coordinates are labelled with their basis.",
+        "The reconstructed vector is invariant."
+      ]
+    },
+    {
+      "id": "WE06",
+      "title": "Locked general basis: projector đúng và shortcut BB^T sai",
+      "learningOutcomeRefs": ["LO3", "LO7"],
+      "formulaRefs": ["F08", "F09", "F10"],
+      "claimRefs": ["C06"],
+      "misconceptionRefs": ["M07", "M20"],
+      "caseRefs": ["generalBasisEquivalent", "orthogonalProjector"],
+      "problem": "Tính projector từ locked B và đối chiếu với BB^T.",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "B^TB=[[4,2],[2,2]] và (B^TB)^(-1)=[[0.5,-0.5],[-0.5,1]]."
+        },
+        {
+          "step": 2,
+          "statement": "B(B^TB)^(-1)B^T=[[0.5,0,0.5,0],[0,0.5,0,0.5],[0.5,0,0.5,0],[0,0.5,0,0.5]]=QQ^T."
+        },
+        {
+          "step": 3,
+          "statement": "BB^T=[[2,1,2,1],[1,1,1,1],[2,1,2,1],[1,1,1,1]], không bằng P_U."
+        },
+        {
+          "step": 4,
+          "statement": "BB^T cũng không idempotent cho locked B, nên không phải projector."
+        }
+      ],
+      "answer": {
+        "correctProjector": [
+          [0.5, 0.0, 0.5, 0.0],
+          [0.0, 0.5, 0.0, 0.5],
+          [0.5, 0.0, 0.5, 0.0],
+          [0.0, 0.5, 0.0, 0.5]
+        ],
+        "wrongBBT": [
+          [2.0, 1.0, 2.0, 1.0],
+          [1.0, 1.0, 1.0, 1.0],
+          [2.0, 1.0, 2.0, 1.0],
+          [1.0, 1.0, 1.0, 1.0]
+        ]
+      }
+    },
+    {
+      "id": "WE07",
+      "title": "Normal sample: centering, coordinates, projection, residual và bounded interpretation",
+      "learningOutcomeRefs": ["LO4", "LO6"],
+      "formulaRefs": ["F02", "F06", "F07", "F11", "F12", "F16"],
+      "claimRefs": ["C04", "C11", "C12"],
+      "misconceptionRefs": ["M10", "M12", "M22", "M25"],
+      "caseRefs": ["mean", "normalSample", "demonstrationThreshold"],
+      "problem": "Tính toàn bộ pipeline cho X_NORMAL_01.",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "x=(0.62,0.74,0.63,0.71)^T và mu=(0.4,0.35,0.45,0.3)^T."
+        },
+        {
+          "step": 2,
+          "statement": "y=x-mu=(0.22,0.39,0.18,0.41)^T."
+        },
+        {
+          "step": 3,
+          "statement": "z=Q^Ty=(0.6,-0.2)^T."
+        },
+        {
+          "step": 4,
+          "statement": "y_hat=Qz=(0.2,0.4,0.2,0.4)^T."
+        },
+        {
+          "step": 5,
+          "statement": "r=y-y_hat=(0.02,-0.01,-0.02,0.01)^T."
+        },
+        {
+          "step": 6,
+          "statement": "Q^Tr=(0,0)^T và y_hat+r=y."
+        },
+        {
+          "step": 7,
+          "statement": "||r||_2=sqrt(0.02^2+(-0.01)^2+(-0.02)^2+0.01^2)=sqrt(0.001)=0.0316227766016838."
+        },
+        {
+          "step": 8,
+          "statement": "0.0316227766016838<gamma_demo=0.1, nên sample được model hiện tại giải thích tốt trong teaching case. Không kết luận machine hoặc sensors chắc chắn healthy."
+        }
+      ],
+      "answer": {
+        "centered": [0.22, 0.39, 0.18, 0.41],
+        "coordinates": [0.6, -0.2],
+        "projected": [0.2, 0.4, 0.2, 0.4],
+        "residual": [0.02, -0.01, -0.02, 0.01],
+        "score": 0.0316227766016838,
+        "decision": "well_represented_by_current_teaching_model",
+        "prohibitedDecision": "proven_healthy"
+      }
+    },
+    {
+      "id": "WE08",
+      "title": "Mismatch sample: score vượt ngưỡng nhưng nguyên nhân vẫn chưa biết",
+      "learningOutcomeRefs": ["LO4", "LO6"],
+      "formulaRefs": ["F02", "F06", "F07", "F11", "F12", "F16"],
+      "claimRefs": ["C12"],
+      "misconceptionRefs": ["M21", "M23", "M24"],
+      "caseRefs": ["mean", "mismatchSample", "demonstrationThreshold"],
+      "problem": "Tính toàn bộ pipeline cho X_MISMATCH_01 và giới hạn kết luận.",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "x=(0.9,0.6,0.55,0.85)^T."
+        },
+        {
+          "step": 2,
+          "statement": "y=x-mu=(0.5,0.25,0.1,0.55)^T."
+        },
+        {
+          "step": 3,
+          "statement": "z=Q^Ty=(0.7,-0.1)^T."
+        },
+        {
+          "step": 4,
+          "statement": "y_hat=Qz=(0.3,0.4,0.3,0.4)^T."
+        },
+        {
+          "step": 5,
+          "statement": "r=y-y_hat=(0.2,-0.15,-0.2,0.15)^T."
+        },
+        {
+          "step": 6,
+          "statement": "Q^Tr=(0,0)^T và ||r||_2=sqrt(0.125)=0.3535533905932738."
+        },
+        {
+          "step": 7,
+          "statement": "0.3535533905932738>gamma_demo=0.1. Sample poorly represented by the current normal-operation teaching model."
+        },
+        {
+          "step": 8,
+          "statement": "Score alone cannot distinguish new operating regime, transient, calibration drift, sensor issue, outlier or an underspecified model."
+        }
+      ],
+      "answer": {
+        "centered": [0.5, 0.25, 0.1, 0.55],
+        "coordinates": [0.7, -0.1],
+        "projected": [0.3, 0.4, 0.3, 0.4],
+        "residual": [0.2, -0.15, -0.2, 0.15],
+        "score": 0.3535533905932738,
+        "decision": "poorly_represented_by_current_teaching_model",
+        "prohibitedDecision": "specific_fault_identified"
+      }
+    },
+    {
+      "id": "WE09",
+      "title": "Cùng residual norm, khác sensor pattern",
+      "learningOutcomeRefs": ["LO6"],
+      "formulaRefs": ["F12", "F16"],
+      "claimRefs": ["C12"],
+      "misconceptionRefs": ["M05", "M21"],
+      "caseRefs": ["orthogonalComplementBasis", "demonstrationThreshold"],
+      "problem": "Dùng gamma_demo=0.1 và hai complement directions q3, q4 để tạo hai residuals cùng norm.",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "q3=(0.5,0.5,-0.5,-0.5)^T và q4=(0.5,-0.5,-0.5,0.5)^T là unit vectors orthogonal với col(Q)."
+        },
+        {
+          "step": 2,
+          "statement": "r_a=0.1q3=(0.05,0.05,-0.05,-0.05)^T."
+        },
+        {
+          "step": 3,
+          "statement": "r_b=0.1q4=(0.05,-0.05,-0.05,0.05)^T."
+        },
+        {
+          "step": 4,
+          "statement": "||r_a||_2=||r_b||_2=0.1 nhưng sign pattern giữa channels khác nhau."
+        },
+        {
+          "step": 5,
+          "statement": "Một scalar score giữ distance nhưng làm mất residual direction và channel pattern."
+        }
+      ],
+      "answer": {
+        "residualA": [0.05, 0.05, -0.05, -0.05],
+        "residualB": [0.05, -0.05, -0.05, 0.05],
+        "commonScore": 0.1,
+        "sameCause": false
+      }
+    },
+    {
+      "id": "WE10",
+      "title": "Exact floating-point rank 4 và numerical rank 2 không mâu thuẫn",
+      "learningOutcomeRefs": ["LO5"],
+      "formulaRefs": ["F13", "F14"],
+      "claimRefs": ["C07", "C08", "C09"],
+      "misconceptionRefs": ["M16", "M17", "M18"],
+      "caseRefs": ["calibrationMatrix"],
+      "problem": "Diễn giải singular values của locked centred matrix X_c in R^(8 x 4).",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "Singular values là (1.44955817,0.77504298,0.03505112,0.00330126)."
+        },
+        {
+          "step": 2,
+          "statement": "Cả bốn values đều nonzero trong stored floating-point matrix, nên exact/default floating-point rank là 4."
+        },
+        {
+          "step": 3,
+          "statement": "Case-specific numerical rule dùng tau=0.05 và đếm sigma_i>tau."
+        },
+        {
+          "step": 4,
+          "statement": "1.44955817>0.05 và 0.77504298>0.05, còn 0.03505112<0.05 và 0.00330126<0.05."
+        },
+        {
+          "step": 5,
+          "statement": "Do đó rank_tau(X_c)=2 under tau=0.05. Đây là criterion-dependent numerical statement, không thay đổi exact rank statement."
+        }
+      ],
+      "answer": {
+        "matrixShape": [8, 4],
+        "orientation": "samples_as_rows",
+        "singularValues": [1.44955817, 0.77504298, 0.03505112, 0.00330126],
+        "floatingPointRank": 4,
+        "tolerance": 0.05,
+        "numericalRank": 2
+      }
+    },
+    {
+      "id": "WE11",
+      "title": "Retained energy 99.9541% nói về reconstruction, không nói về mọi nhiệm vụ",
+      "learningOutcomeRefs": ["LO5", "LO6", "LO8"],
+      "formulaRefs": ["F15"],
+      "claimRefs": ["C10"],
+      "misconceptionRefs": ["M03", "M19"],
+      "caseRefs": ["calibrationMatrix", "prohibitedClaims"],
+      "problem": "Diễn giải rho_2 cho locked calibration matrix.",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "rho_2=(sigma_1^2+sigma_2^2)/(sigma_1^2+sigma_2^2+sigma_3^2+sigma_4^2)."
+        },
+        {
+          "step": 2,
+          "statement": "Với locked singular values, rho_2=0.9995414686511285, tức khoảng 99.9541468651%."
+        },
+        {
+          "step": 3,
+          "statement": "Permitted conclusion: two directions retain nearly all squared singular-value energy of this centred, scaled teaching matrix."
+        },
+        {
+          "step": 4,
+          "statement": "Prohibited conclusions: guaranteed fault coverage, guaranteed prediction accuracy, causal physical-mode proof, or universal optimal dimension."
+        }
+      ],
+      "answer": {
+        "retainedEnergyK2": 0.9995414686511285,
+        "retainedEnergyPercentK2": 99.95414686511285,
+        "permittedMeaning": "reconstruction_energy_under_locked_preprocessing",
+        "notGuaranteed": [
+          "prediction_accuracy",
+          "fault_coverage",
+          "causal_mode_identity",
+          "universal_optimal_dimension"
+        ]
+      }
+    },
+    {
+      "id": "WE12",
+      "title": "Cầu sang §1.6: từ observations tương thích đến data matrix",
+      "learningOutcomeRefs": ["LO8"],
+      "formulaRefs": ["F14", "F15"],
+      "claimRefs": ["C09", "C10"],
+      "misconceptionRefs": ["M13", "M14", "M25"],
+      "caseRefs": ["calibrationMatrix", "physicalContract"],
+      "problem": "Giải thích cấu trúc locked X_c without teaching the complete PCA/SVD course.",
+      "derivation": [
+        {
+          "step": 1,
+          "statement": "Mỗi row của X_c là một centred four-feature observation theo cùng channel order."
+        },
+        {
+          "step": 2,
+          "statement": "X_c has shape 8x4: 8 samples, 4 features. Transposing it changes which space rows and columns describe."
+        },
+        {
+          "step": 3,
+          "statement": "SVD summarizes shared directions across observations; singular values rank their matrix-level magnitude."
+        },
+        {
+          "step": 4,
+          "statement": "§1.5 stops at this bridge. §1.6 will organize vector observations as matrices and distinguish row/column-space roles more fully."
+        }
+      ],
+      "answer": {
+        "shape": [8, 4],
+        "sampleAxis": 0,
+        "featureAxis": 1,
+        "nextLessonBridge": "vector_to_data_matrix"
+      }
+    }
+  ],
+  "coverage": {
+    "exampleCount": 12,
+    "learningOutcomes": {
+      "LO1": ["WE01"],
+      "LO2": ["WE02"],
+      "LO3": ["WE03", "WE04", "WE05", "WE06"],
+      "LO4": ["WE03", "WE05", "WE07", "WE08"],
+      "LO5": ["WE10", "WE11"],
+      "LO6": ["WE07", "WE08", "WE09", "WE11"],
+      "LO7": ["WE04", "WE06"],
+      "LO8": ["WE11", "WE12"]
+    },
+    "formulaIdsCovered": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "F13",
+      "F14",
+      "F15",
+      "F16"
+    ],
+    "lockedCaseNumericExamples": ["WE05", "WE06", "WE07", "WE08", "WE09", "WE10", "WE11", "WE12"]
+  },
+  "pass08Acceptance": {
+    "status": "PASS_08_WORKED_EXAMPLES_DERIVATIONS_COMPLETE",
+    "projectorFormsDerived": true,
+    "exactAffineNearSubspaceClassified": true,
+    "normalSampleFullyCalculated": true,
+    "mismatchSampleFullyCalculated": true,
+    "basisCoordinateComparisonComplete": true,
+    "projectorInvariantsCovered": true,
+    "rankToleranceDistinctionCovered": true,
+    "retainedEnergyBoundedInterpretationCovered": true,
+    "runtimeFilesModified": false,
+    "nextTask": "THEORY_C01_L05_DETERMINISTIC_COMPUTATIONAL_LAB_PASS_09"
+  }
+}

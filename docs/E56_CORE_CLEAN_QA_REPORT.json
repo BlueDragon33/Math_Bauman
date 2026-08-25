@@ -1,0 +1,37 @@
+{
+  "release": "E56_CORE_CLEAN_CHECKPOINT_TEST_SNAPSHOT",
+  "notFinal": true,
+  "actions": [
+    "Replaced patch-stack core.js with one clean renderer architecture",
+    "Normalized lesson/chapter labels in data",
+    "Restored one clean Chọn chương picker foundation",
+    "Kept basic Today Schedule shell for E57 deep sync"
+  ],
+  "counts": {
+    "lessons": 260,
+    "chapters": 32
+  },
+  "rendererFunctionCounts": {
+    "renderLearning": 1,
+    "renderTheory": 1,
+    "renderExercises": 1,
+    "renderApplications": 1,
+    "renderSimulation": 1,
+    "renderDialogue": 1,
+    "renderFormulaCards": 1,
+    "renderFormulaDeep": 1
+  },
+  "oldPatchMarkers": {
+    "E52": 0,
+    "E53": 0,
+    "E54": 0,
+    "E55": 0,
+    "FINAL V2": 0,
+    "Mô phỏng lý thuyết": 0,
+    "Mô phỏng ứng dụng": 1,
+    "writing-theory": 0,
+    "writing-application": 0
+  },
+  "duplicateChapterLabelData": 0,
+  "duplicateLessonLabelData": 0
+}

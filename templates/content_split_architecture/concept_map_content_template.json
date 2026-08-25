@@ -1,0 +1,12 @@
+{
+  "frameFile": "concept_map_frame.json",
+  "contentFile": "concept_map_content.json",
+  "recordKey": "conceptMapId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "conceptMapId": "MATH-VN-C01-CM01",
+    "concepts": [],
+    "relations": [],
+    "auditStatus": "DRAFT"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id":"bauman_math_theory_full_view_manifest_v1",
+  "schema":"bauman_math_theory_full_view_manifest_v1",
+  "version":"FULL_VIEW_MANIFEST_V1_1",
+  "sourcePolicy":"Full-view artifacts are complete reading-flow derivatives of approved theory-core, theory-reference and theory-slideshow files. Core has highest semantic precedence.",
+  "pipelinePosition":{"after":"slideshow","before":"formula_and_layout_normalization"},
+  "requiredSections":["sources","fullViewContract","readerCompatibility","informationArchitecture","readingFlow","formulaRegistry","diagramRegistry","cautionRegistry","retrievalAnchors","referenceHooks","sourceTraceability","downstreamMapping","qualityGate"],
+  "rules":[
+    "A full-view file requires approved core, reference and slideshow source versions.",
+    "Core remains the source of truth when downstream wording differs.",
+    "The full view must provide a complete reading flow without duplicating the full assessment blueprint or implementation code.",
+    "Every formula must retain meaning, conditions or warnings and source traceability.",
+    "Worked-case values must match approved sources exactly and include reconstruction.",
+    "Diagram entries remain semantic mappings and contain no CSS, pixel, color or animation directives.",
+    "Full-view files must not include renderer code, runtime wiring, Reader Pro patches or E235 modifications.",
+    "Reader compatibility is recorded as a semantic content contract only.",
+    "Downstream normalization and integration may consume full-view data but may not override core meaning."
+  ],
+  "records":[
+    {
+      "chapter":"C01",
+      "lesson":"L04",
+      "lessonId":"MATH-VN-C01-vector_trong_khong_gian_-L04-basis-span-coordinate-e140",
+      "path":"theory_full_view_c01_l04.json",
+      "sourceCorePath":"../theory_core/theory_core_c01_l04.json",
+      "sourceCoreVersion":"CORE_C01_L04_V1_APPROVED",
+      "sourceReferencePath":"../theory_reference/theory_reference_c01_l04.json",
+      "sourceReferenceVersion":"REFERENCE_C01_L04_V1_APPROVED",
+      "sourceSlideshowPath":"../theory_slideshow/theory_slideshow_c01_l04.json",
+      "sourceSlideshowVersion":"SLIDESHOW_C01_L04_V1_APPROVED",
+      "visualBaseline":"E235_READER_PRO_FORMULA_STANDARD_R2",
+      "sectionCount":11,
+      "formulaCount":12,
+      "diagramCount":8,
+      "cautionCount":14,
+      "retrievalAnchorCount":9,
+      "status":"approved_against_core_reference_slideshow"
+    }
+  ]
+}

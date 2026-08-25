@@ -1,0 +1,188 @@
+{
+  "id": "bauman_math_theory_lecture_content_c01_l01_e150_clean_replacement",
+  "schema": "bauman_math_content_records_v1",
+  "version": "E150_C01_L01_CLEAN_REPLACEMENT",
+  "title": "E150 · Clean UTF-8 replacement for C01 §1.1",
+  "role": "content_replacement",
+  "targetFile": "subjects/math/data/theory_lecture_content.json",
+  "targetLessonId": "MATH-VN-C01-vector_trong_khong_gian_-L01-vector-as-engineering-data-e130",
+  "recordKey": "lessonId",
+  "replacePolicy": "replace_exactly_one_record_by_lessonId_without_touching_other_records",
+  "records": [
+    {
+      "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L01-vector-as-engineering-data-e130",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "lessonTitle": "§1.1 · Vector như dữ liệu kỹ thuật",
+      "title": "§1.1 · Vector như dữ liệu kỹ thuật",
+      "programLectureId": "MATH-PROG-L02-vector-spaces-linear-maps",
+      "programLectureIds": ["MATH-PROG-L02-vector-spaces-linear-maps", "MATH-PROG-L01-linear-algebra-basic", "MATH-PROG-L09-topology-metric-spaces", "MATH-PROG-L17-ai-machine-learning-math-foundations"],
+      "programAnchorTitle": "Không gian vectơ và ánh xạ tuyến tính",
+      "roadmapRole": "foundation_before_prep",
+      "baumanFocus": "Biểu diễn dữ liệu kỹ thuật, trạng thái hệ thống, đo độ giống nhau, chuẩn hóa đặc trưng và chuẩn bị cho ma trận, PCA, machine learning, xử lý tín hiệu.",
+      "sourceAnchors": {"stageId": "vn", "disciplineId": "linear_algebra_data_space", "chapterId": "MATH-VN-C01-vector_trong_khong_gian_", "programLectureId": "MATH-PROG-L02-vector-spaces-linear-maps"},
+      "tags": ["vector", "linear algebra", "data representation", "cosine similarity", "state vector"],
+      "slides": [
+        {
+          "role": "problem_framing",
+          "title": "Vector là dạng chuẩn để biến hiện tượng kỹ thuật thành dữ liệu",
+          "blocks": [
+            {"type": "text", "title": "Vấn đề học tập", "body": "Thuật toán không xử lý trực tiếp một chiếc robot, một tín hiệu âm thanh hay một ảnh camera. Nó xử lý các số đã được đặt vào cấu trúc rõ ràng. Vector là cách đóng gói tối thiểu: mỗi thành phần là một đại lượng đo, còn thứ tự các thành phần giữ ý nghĩa của phép đo."},
+            {"type": "text", "title": "Diễn giải kỹ thuật", "body": "Khi viết x = [nhiệt độ, áp suất, vận tốc], ta không chỉ ghi ba con số. Ta đang tuyên bố hệ thống được quan sát qua ba kênh đo cố định. Nếu đổi thứ tự hoặc đổi đơn vị mà không khai báo, cùng một hiện tượng sẽ thành dữ liệu khác."},
+            {"type": "text", "title": "Ví dụ gần Bauman", "body": "Trong điều khiển, vector trạng thái có thể chứa vị trí, vận tốc và góc quay. Trong AI, vector đặc trưng có thể chứa pixel, embedding hoặc thống kê tín hiệu. Trong xử lý tín hiệu, một cửa sổ mẫu âm thanh cũng là vector."},
+            {"type": "qa", "title": "Câu hỏi tự kiểm", "body": "Nếu thuật toán nhận vector nhưng ta chưa xác định ý nghĩa từng chiều, lỗi kết quả đến từ toán học hay từ cách mã hóa dữ liệu? Thường là từ mã hóa. Toán chỉ xử lý cấu trúc được đưa vào."}
+          ]
+        },
+        {
+          "role": "deep_essence",
+          "title": "Bản chất kép của vector: hình học và dữ liệu",
+          "blocks": [
+            {"type": "text", "title": "Hai cách nhìn phải đi cùng nhau", "body": "Vector vừa là đối tượng hình học, vừa là bản ghi dữ liệu có thứ tự. Cách nhìn hình học giúp hiểu hướng, độ lớn, khoảng cách và góc. Cách nhìn dữ liệu giúp triển khai bằng code, kiểm soát đơn vị đo và kết nối với AI, cảm biến, điều khiển."},
+            {"type": "text", "title": "Khi nhìn bằng hình học", "body": "Ta hỏi hai trạng thái có gần nhau không, có cùng hướng không, độ lớn khác bao nhiêu. Đây là trực giác đứng sau norm, distance, dot product và cosine similarity, kể cả khi vector có hàng trăm chiều."},
+            {"type": "text", "title": "Khi nhìn như dữ liệu", "body": "Ta hỏi từng chiều đo cái gì, đơn vị ra sao, có nhiễu không, có cần chuẩn hóa không. Một vector kỹ thuật không phải mũi tên trừu tượng bay trong không gian rỗng; nó là bản ghi đo lường."},
+            {"type": "formula", "title": "Ký hiệu gọn", "body": "x = (x_1, x_2, ..., x_n)\nTrong đó x_i là giá trị của đặc trưng thứ i, n là số chiều. Hai vector chỉ so sánh trực tiếp được khi cùng n và cùng quy ước ý nghĩa từng chiều."}
+          ]
+        },
+        {
+          "role": "counter_intuition",
+          "title": "Vector không chỉ là mũi tên 2D hoặc 3D",
+          "blocks": [
+            {"type": "text", "title": "Phá trực giác 2D/3D", "body": "Sai lầm phổ biến là nghĩ vector phải vẽ được trên giấy. Trong AI, ảnh 28 x 28 có thể thành vector 784 chiều; một câu văn có thể thành embedding 768 chiều; một đoạn tín hiệu có thể thành vector hàng nghìn mẫu. Không vẽ được không có nghĩa là không hiểu được."},
+            {"type": "text", "title": "Điều cần giữ nguyên", "body": "Các phép toán vẫn dựa trên thành phần: cộng từng chiều, nhân vô hướng từng chiều, tính norm bằng tổng bình phương, tính dot product bằng tổng tích từng chiều. Chỉ số chiều tăng, không phải bản chất đại số thay đổi."},
+            {"type": "text", "title": "Hậu quả kỹ thuật", "body": "Ở số chiều cao, khoảng cách Euclidean có thể kém phân biệt nếu mọi điểm đều gần như xa nhau. Vì vậy embedding search thường dùng cosine, PCA dùng phương sai theo hướng, clustering cần chuẩn hóa hoặc giảm chiều."},
+            {"type": "qa", "title": "Câu hỏi tự kiểm", "body": "Nếu hai vector 1000 chiều không thể vẽ, làm sao biết chúng giống nhau? Ta dùng đại lượng đại số như cosine, distance, projection hoặc correlation. Trực giác hình học được tính bằng công thức thay vì nhìn bằng mắt."}
+          ]
+        },
+        {
+          "role": "real_bridge",
+          "title": "Từ hệ thống thật đến vector trạng thái",
+          "blocks": [
+            {"type": "text", "title": "Từ vật lý sang dữ liệu", "body": "Một hệ thật có rất nhiều chi tiết, nhưng mô hình chỉ chọn một số đại lượng đủ quan trọng. Robot di chuyển có thể được mô tả bằng vị trí, vận tốc, gia tốc, hướng quay. Máy chủ có thể được mô tả bằng CPU load, RAM usage, latency và error rate."},
+            {"type": "formula", "title": "Vector trạng thái ví dụ", "body": "x_robot = [p_x, p_y, v_x, v_y, theta, omega]\nx_server = [cpu, ram, latency, error_rate]\nMỗi ký hiệu phải có đơn vị, khoảng giá trị hợp lý và tần suất cập nhật."},
+            {"type": "text", "title": "Cái mất đi khi vector hóa", "body": "Vector hóa luôn là lựa chọn có mất mát. Nếu bỏ qua đại lượng quan trọng, mô hình sẽ mù trước phần đó của hệ thống. Nếu thêm quá nhiều chiều nhiễu, thuật toán có thể học tín hiệu giả."},
+            {"type": "qa", "title": "Câu hỏi kỹ thuật", "body": "Với một UAV nhỏ, nên đưa những đại lượng nào vào vector trạng thái ban đầu? Tối thiểu cần vị trí, vận tốc, góc hướng và tốc độ quay. Nếu bài toán có gió hoặc pin yếu, cần thêm biến mô tả môi trường và năng lượng."}
+          ]
+        },
+        {
+          "role": "notation",
+          "title": "Ký hiệu tối thiểu cần dùng ngay",
+          "blocks": [
+            {"type": "formula", "title": "Vector n chiều", "body": "x = (x_1, x_2, ..., x_n) hoặc x in R^n\nx_i là thành phần thứ i. R^n nghĩa là không gian tất cả vector thực có n thành phần."},
+            {"type": "formula", "title": "Cộng vector và nhân vô hướng", "body": "x + y = (x_1 + y_1, ..., x_n + y_n)\nalpha x = (alpha x_1, ..., alpha x_n)\nĐiều kiện: x và y phải cùng số chiều."},
+            {"type": "text", "title": "Ký hiệu trong code", "body": "Trong Python/NumPy, vector thường là mảng một chiều shape (n,). Trong dữ liệu batch, nhiều vector được xếp thành ma trận shape (m, n), với m là số mẫu và n là số đặc trưng."},
+            {"type": "code", "title": "Kiểm tra shape tối thiểu", "body": "import numpy as np\nx = np.array([1.0, 2.0, 3.0])\ny = np.array([4.0, 5.0, 6.0])\nassert x.shape == y.shape\nz = x + y"}
+          ]
+        },
+        {
+          "role": "core_formula",
+          "title": "Bốn phép đo lõi: norm, dot, distance, cosine",
+          "blocks": [
+            {"type": "formula", "title": "Công thức lõi", "body": "||x||_2 = sqrt(sum_i x_i^2)\nx · y = sum_i x_i y_i\nd(x,y) = ||x-y||_2\ncos(x,y) = (x · y)/(||x||_2 ||y||_2)"},
+            {"type": "text", "title": "Ý nghĩa từng đại lượng", "body": "Norm đo độ lớn tổng thể của vector. Dot product đo mức cùng hướng có tính đến độ lớn. Distance đo độ lệch tuyệt đối giữa hai trạng thái. Cosine đo độ giống về hướng và giảm ảnh hưởng của độ lớn."},
+            {"type": "text", "title": "Khi dùng cái nào", "body": "Dùng distance khi chênh lệch tuyệt đối quan trọng, ví dụ sai số vị trí robot. Dùng cosine khi pattern quan trọng hơn cường độ, ví dụ so văn bản embedding hoặc so dạng phổ tín hiệu."},
+            {"type": "qa", "title": "Câu hỏi tự kiểm", "body": "Nếu nhân một vector với 10, cosine với vector gốc có đổi nhiều không? Không, hướng giữ nguyên nên cosine gần 1. Nhưng distance tăng mạnh, vì độ lớn đã khác."}
+          ]
+        },
+        {
+          "role": "assumption_gate",
+          "title": "Điều kiện dùng công thức",
+          "blocks": [
+            {"type": "text", "title": "Điều kiện cùng không gian", "body": "Hai vector phải cùng số chiều và cùng ý nghĩa từng chiều. Không được so [nhiệt độ, áp suất] với [áp suất, nhiệt độ] như thể giống nhau. Thứ tự thành phần là một phần của dữ liệu."},
+            {"type": "text", "title": "Điều kiện chuẩn hóa", "body": "Nếu một chiều có thang đo lớn hơn nhiều, nó có thể thống trị distance và dot product. Ví dụ latency tính bằng ms có thể lấn át packet loss tính bằng tỷ lệ. Khi đó cần chuẩn hóa hoặc chọn metric phù hợp."},
+            {"type": "formula", "title": "Cosine không xác định với vector zero", "body": "cos(x,y) = (x · y)/(||x|| ||y||)\nNếu ||x|| = 0 hoặc ||y|| = 0 thì mẫu số bằng 0, cosine không dùng được."},
+            {"type": "qa", "title": "Cổng kiểm tra trước khi tính", "body": "Trước khi so vector, hãy hỏi: cùng chiều chưa, cùng đơn vị chưa, có vector zero không, có outlier không, có chiều nào cần chuẩn hóa không?"}
+          ]
+        },
+        {
+          "role": "mini_case",
+          "title": "Mini case: so sánh trạng thái mạng",
+          "blocks": [
+            {"type": "text", "title": "Bối cảnh", "body": "Giả sử mỗi phút hệ thống lưu một vector mạng: x = [throughput, latency, packet_loss]. Mục tiêu là phát hiện thời điểm hệ thống chuyển từ bình thường sang bất thường."},
+            {"type": "formula", "title": "Ba trạng thái mẫu", "body": "A = [100, 40, 0.01]\nB = [110, 44, 0.012]\nC = [20, 300, 0.20]\nA và B có pattern gần nhau; C khác mạnh về cả độ lớn lẫn hướng."},
+            {"type": "text", "title": "Diễn giải metric", "body": "Distance giúp phát hiện C rất xa A. Cosine giúp xem B có cùng pattern với A không dù throughput khác. Nếu packet_loss là chiều quan trọng nhất, ta có thể gán trọng số hoặc chuẩn hóa riêng."},
+            {"type": "code", "title": "Thử nghiệm ngắn", "body": "def cosine(x, y):\n    return (x @ y) / (np.linalg.norm(x) * np.linalg.norm(y))\n# so sánh A-B, A-C bằng distance và cosine"}
+          ]
+        },
+        {
+          "role": "interpretation",
+          "title": "Diễn giải các đại lượng trong hệ thống",
+          "blocks": [
+            {"type": "text", "title": "Norm là mức tổng thể", "body": "Norm lớn không tự động tốt hay xấu. Với vector tải hệ thống, norm lớn có thể báo hệ đang chịu tải cao. Với vector sai số, norm lớn thường là dấu hiệu cần sửa mô hình hoặc điều khiển."},
+            {"type": "text", "title": "Dot product là mức cùng hướng", "body": "Dot product lớn khi hai vector cùng hướng và có độ lớn đáng kể. Trong học máy, nó xuất hiện trong linear model, attention, projection và nhiều lớp neural network."},
+            {"type": "text", "title": "Cosine là độ giống pattern", "body": "Cosine bỏ bớt tác động của độ lớn nên hữu ích khi quan tâm hướng. Hai văn bản có embedding cùng hướng có thể cùng chủ đề dù độ dài văn bản khác nhau."},
+            {"type": "qa", "title": "Câu hỏi diễn giải", "body": "Nếu cosine cao nhưng distance lớn, hai vector giống pattern nhưng khác scale. Đây là tình huống phổ biến khi tín hiệu có cùng dạng nhưng biên độ khác."}
+          ]
+        },
+        {
+          "role": "simulation",
+          "title": "Thí nghiệm tính toán nhỏ bằng Python",
+          "blocks": [
+            {"type": "code", "title": "Công cụ NumPy", "body": "import numpy as np\nA = np.array([100.0, 40.0, 0.01])\nB = np.array([110.0, 44.0, 0.012])\nC = np.array([20.0, 300.0, 0.20])\ndef dist(x, y): return np.linalg.norm(x-y)\ndef cos(x, y): return np.dot(x,y)/(np.linalg.norm(x)*np.linalg.norm(y))"},
+            {"type": "text", "title": "Mục tiêu thí nghiệm", "body": "Tính distance và cosine cho A-B, A-C. Sau đó chuẩn hóa từng chiều theo mean/std của dữ liệu và tính lại. Sự thay đổi kết quả cho thấy metric phụ thuộc mạnh vào thang đo."},
+            {"type": "text", "title": "Điều cần quan sát", "body": "Trước chuẩn hóa, latency có thể lấn át packet loss. Sau chuẩn hóa, packet loss có tiếng nói hơn. Đây là lý do pipeline dữ liệu thường đặt chuẩn hóa trước PCA, clustering hoặc mô hình ML."},
+            {"type": "qa", "title": "Câu hỏi phòng lab", "body": "Nếu kết quả phân cụm thay đổi mạnh sau chuẩn hóa, lỗi nằm ở thuật toán hay ở cách biểu diễn dữ liệu? Thường là ở biểu diễn và thang đo đặc trưng."}
+          ]
+        },
+        {
+          "role": "common_mistakes",
+          "title": "Lỗi thường gặp",
+          "blocks": [
+            {"type": "text", "title": "Lỗi 1: khác chiều vẫn cố tính", "body": "Không thể cộng hoặc dot product hai vector khác số chiều. Nếu code tự broadcast im lặng, kết quả có thể sai mà không báo lỗi rõ. Luôn kiểm tra shape trước khi tính."},
+            {"type": "text", "title": "Lỗi 2: quên đơn vị và thang đo", "body": "So sánh nhiệt độ, áp suất, vận tốc bằng distance thô có thể vô nghĩa nếu chưa chuẩn hóa. Chiều có số lớn sẽ áp đảo, còn chiều nhỏ nhưng quan trọng bị nuốt mất."},
+            {"type": "text", "title": "Lỗi 3: dùng sai metric", "body": "Cosine tốt cho pattern nhưng kém khi độ lớn là tín hiệu chính. Distance tốt cho chênh lệch tuyệt đối nhưng nhạy với scale. Chọn metric là quyết định mô hình hóa, không phải thao tác trang trí."},
+            {"type": "qa", "title": "Câu hỏi sửa lỗi", "body": "Khi model phân loại sai, đừng hỏi ngay neural network có đủ sâu chưa. Hãy hỏi vector đầu vào có đúng chiều, đúng đơn vị, đúng chuẩn hóa và đúng metric chưa."}
+          ]
+        },
+        {
+          "role": "application",
+          "title": "Ứng dụng lập trình",
+          "blocks": [
+            {"type": "text", "title": "Nhiệm vụ cốt lõi", "body": "Viết các hàm norm, dot, distance, cosine có kiểm tra shape và kiểm tra vector zero. Đây là bài nhỏ nhưng ép người học hiểu điều kiện dùng công thức trước khi dùng thư viện."},
+            {"type": "code", "title": "Hàm an toàn tối thiểu", "body": "def safe_cosine(x, y, eps=1e-12):\n    x = np.asarray(x, dtype=float)\n    y = np.asarray(y, dtype=float)\n    if x.shape != y.shape:\n        raise ValueError('same shape required')\n    nx, ny = np.linalg.norm(x), np.linalg.norm(y)\n    if nx < eps or ny < eps:\n        raise ValueError('zero vector')\n    return float(np.dot(x, y)/(nx*ny))"},
+            {"type": "text", "title": "Mở rộng kỹ thuật", "body": "Thêm bước normalize dữ liệu theo từng đặc trưng, log lại shape và thống kê min/max. Trong dự án thật, hàm vector không chỉ trả kết quả; nó còn bảo vệ pipeline khỏi dữ liệu bẩn."},
+            {"type": "qa", "title": "Câu hỏi triển khai", "body": "Tại sao không nên để hàm cosine tự trả 0 khi gặp vector zero? Vì 0 có nghĩa là vuông góc, còn vector zero là trường hợp không xác định."}
+          ]
+        },
+        {
+          "role": "practice",
+          "title": "Bài luyện tập",
+          "blocks": [
+            {"type": "text", "title": "Bài 1: tính tay có diễn giải", "body": "Cho A = [10, 40, 0.01], B = [12, 45, 0.02], C = [100, 400, 0.10]. Tính distance và cosine từng cặp, rồi giải thích cặp nào giống pattern, cặp nào gần theo độ lệch tuyệt đối."},
+            {"type": "text", "title": "Bài 2: chuẩn hóa", "body": "Chuẩn hóa từng chiều bằng cách trừ mean và chia standard deviation trên ba vector A, B, C. Tính lại distance. So sánh trước và sau chuẩn hóa để thấy chiều nào đã áp đảo kết quả ban đầu."},
+            {"type": "text", "title": "Bài 3: thiết kế vector", "body": "Tự chọn một hệ kỹ thuật: UAV, server, cảm biến nhiệt hoặc robot mặt đất. Thiết kế vector trạng thái 5–8 chiều, ghi rõ đơn vị từng chiều, thang đo dự kiến và metric phù hợp."},
+            {"type": "qa", "title": "Tiêu chí tự chấm", "body": "Bài đạt yêu cầu nếu không chỉ ra kết quả số, mà còn giải thích vì sao metric đó phù hợp hoặc không phù hợp với mục tiêu kỹ thuật."}
+          ]
+        },
+        {
+          "role": "professor_qa",
+          "title": "Vấn đáp kiểm tra hiểu sâu",
+          "blocks": [
+            {"type": "qa", "title": "Câu 1", "body": "Nếu cosine cao nhưng Euclidean distance lớn, hai vector giống nhau ở điểm nào và khác nhau ở điểm nào? Trả lời: giống hướng hoặc pattern, khác độ lớn hoặc scale."},
+            {"type": "qa", "title": "Câu 2", "body": "Vì sao PCA và clustering cần xem dữ liệu như vector nhiều chiều? Vì chúng thao tác trên phương sai, khoảng cách, hướng và cấu trúc hình học của tập điểm trong không gian đặc trưng."},
+            {"type": "qa", "title": "Câu 3", "body": "Khi nào vector hóa gây hại? Khi chọn thiếu chiều quan trọng, trộn đơn vị, để dữ liệu nhiễu áp đảo, hoặc biến hiện tượng động thành ảnh chụp tĩnh quá nghèo thông tin."},
+            {"type": "qa", "title": "Câu 4", "body": "Nếu một đặc trưng có giá trị lớn hơn các đặc trưng khác 1000 lần, điều gì xảy ra với distance? Đặc trưng đó có thể thống trị kết quả, dù về kỹ thuật nó không quan trọng nhất."}
+          ]
+        },
+        {
+          "role": "bridge",
+          "title": "Cầu sang ma trận và ánh xạ tuyến tính",
+          "blocks": [
+            {"type": "text", "title": "Từ một vector đến nhiều vector", "body": "Một vector mô tả một mẫu hoặc một trạng thái. Khi gom nhiều mẫu cùng số chiều, ta có ma trận dữ liệu. Mỗi hàng có thể là một trạng thái, mỗi cột là một đặc trưng."},
+            {"type": "formula", "title": "Ma trận dữ liệu", "body": "X = [x_1^T; x_2^T; ...; x_m^T]\nX có shape (m, n), với m là số mẫu và n là số đặc trưng. Đây là dạng quen thuộc trong ML, thống kê và xử lý tín hiệu."},
+            {"type": "text", "title": "Ánh xạ tuyến tính", "body": "Ma trận không chỉ lưu dữ liệu; nó còn biến đổi vector. Phép y = A x có thể quay, co giãn, chiếu hoặc trộn các đặc trưng. Vì vậy chương sau chuyển tự nhiên từ vector sang ma trận."},
+            {"type": "qa", "title": "Câu hỏi mở đường", "body": "Nếu vector là một trạng thái, ma trận A trong y = A x đóng vai trò gì? Nó là quy tắc biến trạng thái cũ thành trạng thái mới hoặc biến dữ liệu thô thành biểu diễn khác."}
+          ]
+        },
+        {
+          "role": "takeaway",
+          "title": "Kết luận cần nhớ",
+          "blocks": [
+            {"type": "text", "title": "Cốt lõi 1", "body": "Vector là cách biến hiện tượng kỹ thuật thành dữ liệu có cấu trúc. Không có vector hóa rõ ràng, thuật toán không biết đang xử lý đại lượng nào, theo thứ tự nào, với đơn vị nào."},
+            {"type": "text", "title": "Cốt lõi 2", "body": "Vector phải được hiểu đồng thời bằng hình học và dữ liệu. Hình học cho trực giác về norm, distance, angle, projection; dữ liệu nhắc ta kiểm tra ý nghĩa từng chiều, đơn vị, nhiễu và chuẩn hóa."},
+            {"type": "text", "title": "Cốt lõi 3", "body": "Chọn metric là một quyết định kỹ thuật. Distance, dot product và cosine không trả lời cùng một câu hỏi. Trước khi tính, hãy xác định mục tiêu: đo độ lệch tuyệt đối, đo hướng, hay đo pattern."},
+            {"type": "qa", "title": "Một câu nhớ lâu", "body": "Vector không phải mũi tên để vẽ cho đẹp; nó là hợp đồng đo lường giữa hệ thống thật và thuật toán."}
+          ]
+        }
+      ]
+    }
+  ]
+}

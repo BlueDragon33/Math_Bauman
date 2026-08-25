@@ -1,0 +1,1 @@
+const fs=require('fs'), path=require('path'); const root=path.resolve(__dirname,'..'); const manifest=JSON.parse(fs.readFileSync(path.join(root,'subject-manifest.json'),'utf8')); console.log(JSON.stringify({id:manifest.id,title:manifest.title,tabs:manifest.tabs,dataFiles:manifest.dataFiles.length,stageGate:manifest.stageGate},null,2));

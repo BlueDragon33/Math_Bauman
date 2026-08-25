@@ -1,0 +1,23 @@
+{
+  "version": "V14",
+  "focus": "Deepen Math theory for Bauman master level before Canva visual redesign",
+  "lessons": 48,
+  "slidesPerLesson": 20,
+  "totalTheorySlides": 960,
+  "addedLayers": [
+    "formal definitions",
+    "theorems and conditions",
+    "derivation/proof sketch",
+    "worked seminar example protocol",
+    "counterexamples",
+    "numerical stability",
+    "algorithmic protocol",
+    "AI/robot/thesis bridge",
+    "simulation plan",
+    "professor oral defense",
+    "Russian academic answer frame",
+    "research readiness checklist"
+  ],
+  "mainFileExported": false,
+  "canvaDesign": "not yet; content-first because user requested deeper theory before slide UX/UI redesign"
+}

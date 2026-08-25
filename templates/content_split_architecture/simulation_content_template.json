@@ -1,0 +1,31 @@
+{
+  "frameFile": "simulation_frame.json",
+  "contentFile": "simulation_content.json",
+  "recordKey": "simulationId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonId": "MATH-VN-LA-C01-L04",
+    "tags": [
+      "vector",
+      "AI",
+      "điều khiển"
+    ],
+    "simulationId": "MATH-VN-LA-C01-L04-SIM01",
+    "title": "Lab cosine similarity",
+    "purpose": "Quan sát cách góc và độ dài ảnh hưởng đến tích vô hướng.",
+    "controls": [
+      {
+        "key": "a_x",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "computedReadouts": [
+      {
+        "key": "dot",
+        "label": "a·b"
+      }
+    ],
+    "auditStatus": "DRAFT"
+  }
+}

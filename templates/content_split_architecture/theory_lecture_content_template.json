@@ -1,0 +1,16 @@
+{
+  "frameFile": "theory_lecture_frame.json",
+  "contentFile": "theory_lecture_content.json",
+  "recordKey": "lessonId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonId": "SAMPLE-ID",
+    "tags": [
+      "vector",
+      "AI",
+      "điều khiển"
+    ],
+    "title": "Sample record",
+    "auditStatus": "DRAFT"
+  }
+}

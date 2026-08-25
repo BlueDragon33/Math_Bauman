@@ -1,0 +1,12 @@
+{
+  "frameFile": "mindmap_frame.json",
+  "contentFile": "mindmap_content.json",
+  "recordKey": "mindmapId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "mindmapId": "MATH-VN-C01-MM01",
+    "nodes": [],
+    "edges": [],
+    "auditStatus": "DRAFT"
+  }
+}

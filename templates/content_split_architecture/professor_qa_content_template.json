@@ -1,0 +1,18 @@
+{
+  "frameFile": "professor_qa_frame.json",
+  "contentFile": "professor_qa_content.json",
+  "recordKey": "qaId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonId": "MATH-VN-LA-C01-L04",
+    "tags": [
+      "vector",
+      "AI",
+      "điều khiển"
+    ],
+    "qaId": "MATH-VN-LA-C01-L04-QA01",
+    "question": "Vì sao tích vô hướng lớn chưa chắc hai vector giống nhau?",
+    "answer": "Vì tích vô hướng bị ảnh hưởng bởi độ dài; cần chuẩn hóa để xét hướng.",
+    "auditStatus": "DRAFT"
+  }
+}

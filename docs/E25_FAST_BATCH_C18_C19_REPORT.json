@@ -1,0 +1,44 @@
+{
+  "checkpoint": "E25",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "mode": "FAST_BATCH",
+  "chapters": [
+    {
+      "chapterId": "MATH-HK3-TS-C18",
+      "title": "Chương 18 · Lý thuyết chuỗi thời gian cho dữ liệu cảm biến",
+      "focus": "làm sâu chuỗi thời gian cảm biến: index thời gian, lag, rolling statistics, stationarity, autocorrelation, decomposition, smoothing, AR nhập môn và pipeline cảm biến"
+    },
+    {
+      "chapterId": "MATH-HK3-TS-C19",
+      "title": "Chương 19 · Sai số dự báo, đánh giá mô hình và cross-validation theo thời gian",
+      "focus": "chuẩn hóa Chương 19 từ 7 bài lên 8 bài, làm sâu residual, MAE/RMSE/MAPE, baseline, rolling origin, leakage, interval, drift và báo cáo đánh giá mô hình"
+    }
+  ],
+  "countsPerChapter": {
+    "MATH-HK3-TS-C18": {
+      "lessons": 8,
+      "slides": 160,
+      "formulas": 24,
+      "exercises": 64,
+      "applications": 16,
+      "simulations": 16,
+      "professorQa": 8,
+      "questions": 48,
+      "reviewPacks": 8,
+      "vocabCards": 32
+    },
+    "MATH-HK3-TS-C19": {
+      "lessons": 8,
+      "slides": 160,
+      "formulas": 24,
+      "exercises": 64,
+      "applications": 16,
+      "simulations": 16,
+      "professorQa": 8,
+      "questions": 48,
+      "reviewPacks": 8,
+      "vocabCards": 32
+    }
+  },
+  "notFinal": true
+}

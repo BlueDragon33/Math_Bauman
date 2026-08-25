@@ -1,0 +1,347 @@
+{
+  "schemaVersion": "BAUMAN_MATH_UNIFIED_SIM_CHAPTER_PACK_V1",
+  "status": "sample_ready_to_edit",
+  "subject": "math",
+  "runtimeTarget": "subjects/math/data/simulations.json",
+  "mergePolicy": {
+    "key": "lessonId",
+    "mode": "replace_or_insert",
+    "oneSimulationPerLesson": true,
+    "noSplitButtons": true,
+    "requiredRuntimeFile": "simulations/unified_lab.html"
+  },
+  "chapter": {
+    "stage": "vn",
+    "chapterNo": 1,
+    "chapterId": "MATH-VN-LA-C01",
+    "chapterTitle": "Chương 1 · Vector trong không gian dữ liệu",
+    "department": "Đại số tuyến tính & biểu diễn dữ liệu",
+    "chapterLearningGoal": "Biến dữ liệu thành vector, đọc độ dài, hướng, hình chiếu và hiểu vì sao similarity có thể sai nếu chuẩn hóa/điều kiện không đúng.",
+    "chapterSimulationTheme": "Vector board: điểm dữ liệu, vector đặc trưng, góc, norm, projection và decision PASS/REVIEW/RISK.",
+    "chapterOutputContract": [
+      "Đọc được norm/góc/projection.",
+      "Biết biến nào làm similarity đổi mạnh.",
+      "Kết luận được khi nào dùng cosine/dot product đáng tin."
+    ]
+  },
+  "miniLessons": [
+    {
+      "lessonNo": 1,
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "lessonTitle": "§1.1 · Dữ liệu dạng vector: điểm, đặc trưng và tọa độ",
+      "coreQuestion": "Một điểm dữ liệu trở thành vector như thế nào, và thay đổi tọa độ làm khoảng cách/hướng đổi ra sao?",
+      "prerequisites": [
+        "tọa độ phẳng",
+        "cộng trừ số thực"
+      ],
+      "coreConcepts": [
+        "vector đặc trưng",
+        "tọa độ",
+        "norm",
+        "khoảng cách"
+      ],
+      "mustUnderstand": [
+        "Vector không chỉ là mũi tên hình học mà còn là bản ghi đặc trưng.",
+        "Đổi scale một trục có thể làm khoảng cách bị hiểu sai."
+      ],
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-VN-LA-C01-L01",
+        "type": "unified",
+        "simKind": "unified",
+        "kind": "unified",
+        "mode": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "Mô phỏng tổng hợp · §1.1 · Dữ liệu dạng vector: điểm, đặc trưng và tọa độ",
+        "purpose": "Kéo tọa độ và hệ số scale để thấy norm/khoảng cách đổi, từ đó hiểu vì sao dữ liệu cần chuẩn hóa trước khi so sánh.",
+        "realUse": "So sánh đặc trưng ảnh, tọa độ robot hoặc vector embedding trước khi đưa vào mô hình AI.",
+        "formula": "x = (x₁, x₂, ..., xₙ),  ||x||₂ = √(Σxᵢ²),  d(x,y)=||x-y||₂",
+        "formulaRole": "Norm và khoảng cách cho biết hai điểm dữ liệu gần/xa, nhưng chỉ đáng tin khi các trục cùng thang đo hoặc đã chuẩn hóa.",
+        "visualProfile": "vector_plane",
+        "visualBoard": {
+          "type": "vector_plane",
+          "title": "Mặt phẳng vector và khoảng cách dữ liệu",
+          "requiredObjects": [
+            "axes",
+            "point x",
+            "point y",
+            "distance segment",
+            "norm arc",
+            "decision badge"
+          ],
+          "whatMustChangeWhenControlsMove": "Kéo x/y làm điểm di chuyển; tăng scale_y làm khoảng cách theo trục y phình lên; decision chuyển REVIEW nếu scale lệch quá lớn."
+        },
+        "controls": [
+          {
+            "key": "x1",
+            "label": "Tọa độ x₁",
+            "min": -5,
+            "max": 5,
+            "step": 0.1,
+            "default": 1.5,
+            "unit": "",
+            "role": "Dịch điểm theo trục ngang để đọc norm/khoảng cách."
+          },
+          {
+            "key": "x2",
+            "label": "Tọa độ x₂",
+            "min": -5,
+            "max": 5,
+            "step": 0.1,
+            "default": 2.0,
+            "unit": "",
+            "role": "Dịch điểm theo trục dọc để thấy ảnh hưởng của từng đặc trưng."
+          },
+          {
+            "key": "scale_y",
+            "label": "Scale trục y",
+            "min": 0.2,
+            "max": 5,
+            "step": 0.1,
+            "default": 1,
+            "unit": "×",
+            "role": "Mô phỏng lỗi khác đơn vị/thang đo giữa các đặc trưng."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "norm_x",
+            "label": "Norm ||x||₂",
+            "formula": "sqrt(x1^2 + (scale_y*x2)^2)",
+            "meaning": "Độ lớn vector sau khi xét scale."
+          },
+          {
+            "key": "scale_risk",
+            "label": "Rủi ro lệch scale",
+            "formula": "REVIEW nếu scale_y > 2 hoặc scale_y < 0.5",
+            "meaning": "Cảnh báo khi so sánh khoảng cách có thể sai do đơn vị lệch."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Baseline",
+            "setup": "scale_y=1, giữ x1/x2 vừa phải.",
+            "task": "Ghi norm và vị trí điểm.",
+            "expected": "Khoảng cách phản ánh tương đối đúng hình học."
+          },
+          {
+            "name": "Stress scale",
+            "setup": "tăng scale_y lên 3.",
+            "task": "So norm trước/sau và nêu vì sao cần chuẩn hóa.",
+            "expected": "Norm bị trục y chi phối, decision chuyển REVIEW."
+          },
+          {
+            "name": "Failure",
+            "setup": "so sánh hai vector khi một đặc trưng có đơn vị lớn hơn hẳn.",
+            "task": "Giải thích vì sao kết luận gần/xa không đáng tin.",
+            "expected": "Phải đề xuất chuẩn hóa hoặc đổi metric."
+          }
+        ],
+        "runProtocol": [
+          "Chạy Baseline.",
+          "Đổi riêng x1 rồi x2.",
+          "Tăng scale_y và quan sát norm/khoảng cách.",
+          "So baseline với stress scale.",
+          "Viết kết luận có điều kiện."
+        ],
+        "expectedOutputs": [
+          "Norm ||x||₂",
+          "Khoảng cách d(x,y)",
+          "Decision PASS/REVIEW/RISK"
+        ],
+        "decisionRule": {
+          "PASS": "scale_y gần 1 và output ổn định.",
+          "REVIEW": "scale_y lệch rõ, cần chuẩn hóa.",
+          "RISK": "dùng khoảng cách để kết luận khi đơn vị/thang đo chưa xử lý."
+        },
+        "commonMisreadings": [
+          "Coi khoảng cách Euclid luôn đúng dù đơn vị khác nhau.",
+          "Không nhận ra một trục đang chi phối toàn bộ norm.",
+          "Nhầm vector dữ liệu với vector hình học thuần túy."
+        ],
+        "reportTemplate": [
+          "Bài §1.1: dữ liệu được biểu diễn bởi vector ...",
+          "Biến đã đổi: x1/x2/scale_y ...",
+          "Output: norm/khoảng cách ...",
+          "Giới hạn: scale lệch làm metric kém tin ...",
+          "Kết luận: PASS/REVIEW/RISK ..."
+        ],
+        "integrationHints": {
+          "formulaIds": [],
+          "exerciseIds": [],
+          "applicationIds": [],
+          "qaIds": [],
+          "tags": [
+            "vector",
+            "norm",
+            "distance",
+            "normalization"
+          ]
+        }
+      }
+    },
+    {
+      "lessonNo": 4,
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "lessonTitle": "§1.4 · Tích vô hướng: đo tương quan hướng và năng lượng của vector",
+      "coreQuestion": "Tích vô hướng đo cái gì: độ cùng hướng, năng lượng hay projection?",
+      "prerequisites": [
+        "vector",
+        "góc giữa hai vector"
+      ],
+      "coreConcepts": [
+        "dot product",
+        "cosine",
+        "projection",
+        "energy"
+      ],
+      "mustUnderstand": [
+        "Dot product lớn có thể do vector dài, không chỉ do cùng hướng.",
+        "Cosine similarity tách hướng khỏi độ lớn."
+      ],
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-VN-LA-C01-L04",
+        "type": "unified",
+        "simKind": "unified",
+        "kind": "unified",
+        "mode": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "Mô phỏng tổng hợp · §1.4 · Tích vô hướng và projection",
+        "purpose": "Kéo góc và độ dài hai vector để thấy dot product, cosine và projection khác nhau ra sao.",
+        "realUse": "Đánh giá độ giống embedding, kiểm năng lượng tín hiệu, chiếu vector lỗi theo hướng cần điều khiển.",
+        "formula": "a·b = ||a|| ||b|| cosθ,  proj_b(a) = (a·b / ||b||²)b",
+        "formulaRole": "Dot product kết hợp độ dài và hướng; cosine chỉ đọc hướng; projection cho phần song song theo hướng b.",
+        "visualProfile": "vector_projection",
+        "visualBoard": {
+          "type": "vector_plane_projection",
+          "title": "Hai vector, góc và hình chiếu",
+          "requiredObjects": [
+            "vector a",
+            "vector b",
+            "angle wedge",
+            "projection shadow",
+            "cosine gauge",
+            "decision badge"
+          ],
+          "whatMustChangeWhenControlsMove": "Đổi góc làm cosine đổi; đổi độ dài làm dot product đổi nhưng cosine giữ nguyên nếu góc không đổi."
+        },
+        "controls": [
+          {
+            "key": "angle_deg",
+            "label": "Góc θ",
+            "min": 0,
+            "max": 180,
+            "step": 5,
+            "default": 45,
+            "unit": "°",
+            "role": "Kiểm ảnh hưởng của hướng tới dot/cosine/projection."
+          },
+          {
+            "key": "len_a",
+            "label": "Độ dài ||a||",
+            "min": 0.1,
+            "max": 5,
+            "step": 0.1,
+            "default": 2,
+            "unit": "",
+            "role": "Tách tác động độ lớn khỏi tác động góc."
+          },
+          {
+            "key": "len_b",
+            "label": "Độ dài ||b||",
+            "min": 0.1,
+            "max": 5,
+            "step": 0.1,
+            "default": 1.5,
+            "unit": "",
+            "role": "Cho thấy dot product không chỉ là độ giống hướng."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "dot",
+            "label": "a·b",
+            "formula": "len_a*len_b*cos(angle_deg)",
+            "meaning": "Tổng hợp độ dài và hướng."
+          },
+          {
+            "key": "cosine",
+            "label": "cosθ",
+            "formula": "cos(angle_deg)",
+            "meaning": "Độ cùng hướng độc lập với độ dài."
+          },
+          {
+            "key": "projection_length",
+            "label": "Độ dài hình chiếu",
+            "formula": "len_a*cos(angle_deg)",
+            "meaning": "Phần của a nằm theo hướng b."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Cùng hướng",
+            "setup": "θ=0°.",
+            "task": "So dot và cosine.",
+            "expected": "cosine=1, projection dương cực đại."
+          },
+          {
+            "name": "Vuông góc",
+            "setup": "θ=90°.",
+            "task": "Giải thích dot≈0.",
+            "expected": "Không có thành phần song song."
+          },
+          {
+            "name": "Dài nhưng lệch hướng",
+            "setup": "tăng len_a nhưng θ lớn.",
+            "task": "Chỉ ra dot lớn chưa chắc là giống hướng.",
+            "expected": "Cần đọc cosine kèm dot."
+          }
+        ],
+        "runProtocol": [
+          "Đặt θ=45° baseline.",
+          "Giữ góc, tăng len_a.",
+          "Giữ độ dài, đổi θ.",
+          "So dot với cosine.",
+          "Viết kết luận dùng metric nào cho embedding/tín hiệu."
+        ],
+        "expectedOutputs": [
+          "a·b",
+          "cosθ",
+          "projection length",
+          "Decision"
+        ],
+        "decisionRule": {
+          "PASS": "đọc đúng khác biệt giữa dot và cosine.",
+          "REVIEW": "dot/cosine cho kết luận lệch nhau.",
+          "RISK": "dùng dot để kết luận similarity mà không kiểm độ dài."
+        },
+        "commonMisreadings": [
+          "Tưởng dot product lớn luôn nghĩa là hai vector giống nhau.",
+          "Quên dot có thể âm khi góc tù.",
+          "Nhầm projection với norm của vector ban đầu."
+        ],
+        "reportTemplate": [
+          "Bài §1.4: dot/cosine/projection ...",
+          "Biến đã đổi: góc/độ dài ...",
+          "Output: dot, cosine, projection ...",
+          "Giới hạn: dot chịu ảnh hưởng độ dài ...",
+          "Kết luận: nên dùng dot hay cosine trong tình huống này ..."
+        ],
+        "integrationHints": {
+          "formulaIds": [],
+          "exerciseIds": [],
+          "applicationIds": [],
+          "qaIds": [],
+          "tags": [
+            "dot-product",
+            "cosine",
+            "projection",
+            "embedding"
+          ]
+        }
+      }
+    }
+  ],
+  "chapterNumberingPolicy": "chapterNo is local within the selected faculty/department; keep globalChapterNo only as optional reference",
+  "departmentTitle": "[Tên bộ môn/chuyên đề]",
+  "globalChapterNo": "[Tùy chọn: số chương toàn hệ cũ nếu có]"
+}

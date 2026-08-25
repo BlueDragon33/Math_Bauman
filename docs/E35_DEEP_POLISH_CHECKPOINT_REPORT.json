@@ -1,0 +1,52 @@
+{
+  "checkpoint": "E35 · DEEP POLISH CHECKPOINT / TEST / SNAPSHOT",
+  "isFinal": false,
+  "createdAt": "2026-06-18T23:21:39.862608",
+  "actions": [
+    "Deepened theory opening slides from objective/instruction style into concept-kernel lesson content.",
+    "Rebuilt professor QA as visible question-answer pairs with model answers and self-check logic.",
+    "Repaired generic true/false question choices into content-specific choices and explanations.",
+    "Strengthened exercise prompts and review packs.",
+    "Added compact premium view override: cleaner picker bar, chapter prev/next, elegant theory reader, micro-scroll lock."
+  ],
+  "metrics": {
+    "jsonParse": {
+      "status": "PASS",
+      "files": 29,
+      "errors": []
+    },
+    "jsSyntax": {
+      "status": "PASS",
+      "errors": []
+    },
+    "deepContentAudit": {
+      "status": "WARN",
+      "lessons": 260,
+      "introSlidesDeepened": 260,
+      "oldMucTieuTitles": 0,
+      "thinMarkers": 3,
+      "objectObject": 0,
+      "qaMissingAnswerPairs": 0,
+      "genericTrueFalseQuestions": 0,
+      "fixedQuestions": 153,
+      "fixedTests": 0,
+      "fixedExercises": 754,
+      "fixedReviewPacks": 260
+    },
+    "viewAudit": {
+      "status": "PASS",
+      "chapterPrevNextInPicker": true,
+      "premiumCompactCss": true,
+      "theoryMicroScrollLock": true
+    },
+    "chapterAudit": {
+      "status": "PASS",
+      "chapterIds": 32,
+      "lessons": 260
+    },
+    "zipIntegrity": {
+      "status": "PASS",
+      "bad": null
+    }
+  }
+}

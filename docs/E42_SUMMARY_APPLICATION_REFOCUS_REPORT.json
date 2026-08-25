@@ -1,0 +1,16 @@
+{
+  "checkpoint": "E42_SUMMARY_APPLICATION_REFOCUS_CHECKPOINT_TEST_SNAPSHOT",
+  "final": false,
+  "timestamp": "2026-06-19T02:20:40",
+  "changes": [
+    "Summary no longer appears at the end of every slide; it appears only on the final slide and summarizes the whole lesson/chapter slide set.",
+    "Application tab no longer depends on Exercise tab; it is grounded directly in Theory.",
+    "Removed the visible Review Exercise action from Application flow.",
+    "Application content is compact: theory anchor, real-life/engineering use, programming use, when to use, when not to use, concise protocol and self-check.",
+    "Kept Simulation deep lab from E41 and all previous regression locks."
+  ],
+  "data": {
+    "applications_refocused": 469
+  },
+  "notes": "CHECKPOINT / TEST / SNAPSHOT, not FINAL."
+}

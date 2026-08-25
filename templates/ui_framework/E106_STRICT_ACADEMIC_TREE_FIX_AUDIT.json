@@ -1,0 +1,17 @@
+{
+  "id": "E106_STRICT_ACADEMIC_FRAMEWORK_TREE_FIX_AUDIT",
+  "status": "PASS_AFTER_PATCH",
+  "treePolicy": "strict_id_only",
+  "routing": [
+    "facultyId",
+    "departmentId",
+    "chapterId",
+    "lessonId"
+  ],
+  "noKeywordInference": true,
+  "notes": [
+    "Patched core.js with strictGroupedTree renderer.",
+    "Overrode renderLearning/renderWriting/renderRouteModal to use strict tree.",
+    "Updated subject-manifest, subject-manifest.js, content-manifest, adapter labels."
+  ]
+}

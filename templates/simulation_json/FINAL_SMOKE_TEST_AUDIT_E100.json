@@ -1,0 +1,82 @@
+{
+  "type": "BAUMAN_MATH_E100_FINAL_SMOKE_REPORT",
+  "status": "PASS_AFTER_FIX",
+  "createdAt": "2026-06-21",
+  "scope": [
+    "runtime metadata",
+    "data cross-links",
+    "chapter lecture loading",
+    "simulation unified reality",
+    "question/review bank",
+    "data vault import/export surface",
+    "route modal smoke via Chromium harness"
+  ],
+  "counts": {
+    "lessons": 260,
+    "formulas": 780,
+    "exercises": 1040,
+    "applications": 520,
+    "simulations": 260,
+    "professorQa": 260,
+    "questionBank": 1040,
+    "reviewPacks": 260,
+    "blueprints": 32,
+    "chapterLectures": 32
+  },
+  "crossLinks": {
+    "formulas": {
+      "badCount": 0,
+      "extraCount": 0,
+      "sampleBad": [],
+      "sampleExtra": []
+    },
+    "exercises": {
+      "badCount": 0,
+      "extraCount": 0,
+      "sampleBad": [],
+      "sampleExtra": []
+    },
+    "applications": {
+      "badCount": 0,
+      "extraCount": 0,
+      "sampleBad": [],
+      "sampleExtra": []
+    },
+    "simulations": {
+      "badCount": 0,
+      "extraCount": 0,
+      "sampleBad": [],
+      "sampleExtra": []
+    },
+    "professor_qa": {
+      "badCount": 0,
+      "extraCount": 0,
+      "sampleBad": [],
+      "sampleExtra": []
+    },
+    "question_bank": {
+      "badCount": 0,
+      "extraCount": 0,
+      "sampleBad": [],
+      "sampleExtra": []
+    },
+    "review_packs": {
+      "badCount": 0,
+      "extraCount": 0,
+      "sampleBad": [],
+      "sampleExtra": []
+    }
+  },
+  "fixesApplied": [
+    "Added chapter_lectures to SUBJECT_ADAPTER runtime dataFiles/initialDataFiles",
+    "Updated stale E80/E81 index and adapter UI labels to E100",
+    "Corrected question_bank plannedCount from 1423 to 1040",
+    "Corrected legacy content-manifest simulation baseline from 520 to 260 unified labs",
+    "Exposed DB for final browser self-check compatibility"
+  ],
+  "browserHarness": {
+    "engine": "Chromium with routed local assets, CocCoc-compatible user-agent in prior passes",
+    "result": "No pageerror across overview/learning/dialogue/writing/vocab/grammar/mindmap/storage; localStorage warning only from sandbox set_content origin, not Live Server."
+  },
+  "finalSelfCheck": "BAUMAN_MATH_E100_SELF_CHECK().ok === true after all initial data loaded"
+}

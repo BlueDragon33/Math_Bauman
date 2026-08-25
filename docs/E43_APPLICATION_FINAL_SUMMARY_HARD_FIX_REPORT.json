@@ -1,0 +1,16 @@
+{
+  "checkpoint": "E43_APPLICATION_FINAL_SUMMARY_HARD_FIX",
+  "final": false,
+  "createdAt": "2026-06-19T02:43:19.787172Z",
+  "lessons": 260,
+  "applications": 469,
+  "summaryRemovedFromNonLastSlides": 137,
+  "finalSummarySlidesRebuilt": 260,
+  "applicationsRefocused": 469,
+  "rules": {
+    "summaryOnlyOnFinalSlide": true,
+    "applicationDependsOnTheoryOnly": true,
+    "applicationReviewExerciseButtonRemoved": true,
+    "simulationDeepLabPreserved": true
+  }
+}

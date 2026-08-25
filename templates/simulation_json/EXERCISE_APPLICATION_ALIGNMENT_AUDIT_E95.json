@@ -1,0 +1,29 @@
+{
+  "patch": "E95_EXERCISE_APPLICATION_ALIGNMENT_PASS",
+  "status": "PASS",
+  "counts": {
+    "lessons": 260,
+    "exercises": 1040,
+    "applications": 520
+  },
+  "perLessonExpected": {
+    "exercises": 4,
+    "applications": 2
+  },
+  "exerciseLevels": [
+    "easy",
+    "medium",
+    "advanced",
+    "hard"
+  ],
+  "checks": {
+    "missingExerciseLessons": [],
+    "missingApplicationLessons": [],
+    "genericForbiddenPatterns": [
+      "Định nghĩa → Công thức",
+      "dữ liệu cảm biến theo thời gian.*Penalty",
+      "rủi ro và bất định.*Mock defense"
+    ]
+  },
+  "method": "Rule-based rebuild from lesson metadata, formula trio and simulation anchor; no new lesson count added."
+}

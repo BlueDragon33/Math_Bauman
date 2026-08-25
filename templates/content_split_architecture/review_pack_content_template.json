@@ -1,0 +1,22 @@
+{
+  "frameFile": "review_pack_frame.json",
+  "contentFile": "review_pack_content.json",
+  "recordKey": "reviewPackId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonId": "MATH-VN-LA-C01-L04",
+    "tags": [
+      "vector",
+      "AI",
+      "điều khiển"
+    ],
+    "reviewPackId": "MATH-VN-LA-C01-L04-RP01",
+    "items": [
+      {
+        "type": "concept",
+        "prompt": "Nhắc lại ý nghĩa hình học của tích vô hướng."
+      }
+    ],
+    "auditStatus": "DRAFT"
+  }
+}

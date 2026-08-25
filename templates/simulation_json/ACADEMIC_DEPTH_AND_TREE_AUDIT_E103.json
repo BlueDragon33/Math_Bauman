@@ -1,0 +1,15 @@
+{
+  "id": "ACADEMIC_DEPTH_AND_TREE_AUDIT_E103",
+  "createdAt": "2026-06-21T15:31:26.863447Z",
+  "purpose": "Fix UI grouping that mixed chapters across departments and deepen theory slides with level-2/level-3 academic essence.",
+  "lessons": 260,
+  "slidesPerLessonMin": 16,
+  "slidesPerLessonMax": 16,
+  "chapterLectures": 32,
+  "fixes": [
+    "strict metadata grouping by facultyId/departmentId/chapterId",
+    "add deep essence/counter-intuition/real-bridge slides",
+    "chapter openers with level-2 and level-3 questions"
+  ],
+  "nextIfNeeded": "Only visual/pixel QA on Cốc Cốc after user opens E103."
+}

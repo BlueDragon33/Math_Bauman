@@ -1,0 +1,24 @@
+{
+  "checkpoint": "E25",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapterId": "MATH-HK3-TS-C19",
+  "title": "Chương 19 · Sai số dự báo, đánh giá mô hình và cross-validation theo thời gian",
+  "counts": {
+    "lessons": 8,
+    "slides": 160,
+    "formulas": 24,
+    "exercises": 64,
+    "applications": 16,
+    "simulations": 16,
+    "professorQa": 8,
+    "questions": 48,
+    "reviewPacks": 8,
+    "vocabCards": 32
+  },
+  "focus": "chuẩn hóa Chương 19 từ 7 bài lên 8 bài, làm sâu residual, MAE/RMSE/MAPE, baseline, rolling origin, leakage, interval, drift và báo cáo đánh giá mô hình",
+  "uiRegressionLocks": [
+    "theory-slide-strip-horizontal-only",
+    "renderFormula-shim-kept",
+    "storage-indicator-kept"
+  ]
+}

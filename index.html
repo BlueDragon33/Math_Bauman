@@ -1,36 +1,68 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Toán Bauman · E128 DataVault Importer Hardening</title>
-<link rel="stylesheet" href="assets/core.css?v=123">
-<link rel="stylesheet" href="assets/math.css?v=123">
-<link rel="stylesheet" href="assets/theory_skin/theory-main-adapter-E126.css?v=126">
-<link rel="stylesheet" href="assets/datavault_importer/datavault-importer-E128.css?v=128">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Web App Toán Bauman cho AI, tín hiệu, hệ thống và НИР/ВКР.">
+  <title>Toán Bauman · Web App</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/app-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/core.css?v=247">
+  <link rel="stylesheet" href="assets/math.css?v=247">
+  <link rel="stylesheet" href="assets/webapp.css?v=1">
+  <link rel="stylesheet" href="assets/theory_skin/theory-tab-E129.css?v=247">
+  <link rel="stylesheet" href="assets/theory_skin/theory-title-clean-E183.css?v=247">
+  <link rel="stylesheet" href="assets/theory_skin/theory-ui-tokens-E132.css?v=247">
+  <link rel="stylesheet" href="assets/theory_skin/theory-slideshow-E132.css?v=247">
 </head>
 <body>
-<div id="app" class="app">
-  <aside class="sidebar">
-    <div class="brand"><div id="subjectLogo" class="logo">∑</div><div><h1 id="subjectTitle">Toán Bauman</h1><p id="subjectSubtitle">Nền tảng → Dự bị → Bauman → НИР/ВКР</p></div></div>
-    <label id="stageLabel" class="select-label">Giai đoạn</label>
-    <select id="stageSelect" class="input"></select>
-    <nav id="nav" class="nav"></nav>
-  </aside>
-  <main class="main">
-    <header class="topbar">
-      <div><span id="coreLabel" class="kicker">MATH · E128 DataVault Importer Hardening</span><h2 id="pageTitle">Tổng quan</h2><p id="pageSub">E128 · Lý thuyết 347+ bài + DataVault Importer IndexedDB/validation/rollback</p></div>
-      <div class="top-actions"><button id="themeBtn" class="btn soft">🎛️ Giao diện</button><button id="aiBtn" class="btn primary">✨ AI Mentor</button><span id="saveState" class="status">Đã đồng bộ</span></div>
-    </header>
-    <section id="view" class="view"></section>
-  </main>
-</div>
-<div id="modal" class="modal hidden"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><div id="modalBody"></div></div></div>
-<div id="toast" class="toast"></div>
-<script src="assets/subject-adapter.js?v=123"></script>
-<script src="assets/planning-bridge.js?v=123"></script>
-<script src="assets/core.js?v=123"></script>
-<script src="assets/theory_skin/theory-main-adapter-E126.js?v=126"></script>
-<script src="assets/datavault_importer/datavault-importer-E128.js?v=128"></script>
+  <a class="skip-link" href="#view">Bỏ qua điều hướng</a>
+  <noscript>Ứng dụng cần JavaScript để tải bài học Toán và lưu tiến độ cục bộ.</noscript>
+  <div id="app" class="app" aria-busy="true">
+    <aside class="sidebar">
+      <div class="brand"><div id="subjectLogo" class="logo">∑</div><div><h1 id="subjectTitle">Toán Bauman</h1><p id="subjectSubtitle">Đang tải lộ trình…</p></div></div>
+      <label id="stageLabel" class="select-label" for="stageSelect">Giai đoạn</label>
+      <select id="stageSelect" class="input"></select>
+      <nav id="nav" class="nav" aria-label="Điều hướng môn Toán"></nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><span id="coreLabel" class="kicker">MATH BAUMAN · WEB APP</span><h2 id="pageTitle">Tổng quan</h2><p id="pageSub">Nền tảng → Dự bị → Bauman → НИР/ВКР</p></div>
+        <div class="top-actions"><button id="themeBtn" class="btn soft" type="button">Giao diện</button><button id="aiBtn" class="btn primary" type="button">AI Mentor</button><span id="saveState" class="status" role="status">Đang tải</span></div>
+      </header>
+      <section id="view" class="view" tabindex="-1"></section>
+    </main>
+  </div>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Hộp thoại"><div class="modal-card"><button class="modal-close" id="modalClose" type="button" aria-label="Đóng">×</button><div id="modalBody"></div></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/platform/storage-adapter.js?v=1"></script>
+  <script src="assets/platform/subject-storage.js?v=1"></script>
+  <script src="subject-manifest.js?v=247"></script>
+  <script src="assets/subject-adapter.js?v=247"></script>
+  <script src="assets/planning-bridge.js?v=247"></script>
+  <script src="assets/core.js?v=247"></script>
+  <script src="assets/theory_skin/theory-presenter-route-lock-E243.js?v=247"></script>
+  <script src="assets/program_frame/program-frame-E130.js?v=247"></script>
+  <script src="assets/theory_skin/theory-tab-E129.js?v=247"></script>
+  <script src="assets/theory_skin/theory-legacy-route-E246.js?v=247"></script>
+  <script src="assets/theory_skin/theory-min-slide-contract-E239.js?v=247"></script>
+  <script src="assets/theory_skin/theory-content-source-E240.js?v=247"></script>
+  <script src="assets/theory_skin/theory-learning-path-E186.js?v=247"></script>
+  <script src="assets/theory_skin/theory-title-clean-E183.js?v=247"></script>
+  <script src="assets/theory_skin/theory-learning-final-labels-E187.js?v=247"></script>
+  <script src="assets/theory_skin/theory-slideshow-E202.js?v=247"></script>
+  <script src="assets/theory_skin/theory-slideshow-identity-E210.js?v=247"></script>
+  <script src="assets/theory_skin/theory-slideshow-reader-content-E211.js?v=247"></script>
+  <script src="assets/theory_skin/theory-artifact-registry-E244.js?v=247"></script>
+  <script src="assets/theory_skin/theory-artifact-authoritative-route-E245.js?v=247"></script>
+  <script src="assets/theory_skin/theory-artifact-reader-E241.js?v=247"></script>
+  <script src="assets/theory_skin/theory-slideshow-richness-E242.js?v=247"></script>
+  <script src="assets/theory_skin/theory-slideshow-reader-formula-accuracy-E224.js?v=247"></script>
+  <script src="assets/theory_skin/theory-formula-typeset-E234.js?v=247"></script>
+  <script src="assets/theory_skin/theory-formula-fraction-align-E235.js?v=247"></script>
+  <script src="assets/theory_skin/theory-slideshow-reader-fit-E212.js?v=247"></script>
+  <script src="assets/webapp-bootstrap.js?v=1"></script>
 </body>
 </html>

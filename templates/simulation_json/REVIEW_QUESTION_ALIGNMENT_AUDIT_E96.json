@@ -1,0 +1,46 @@
+{
+  "checkpoint": "E96_REVIEW_QUESTION_ALIGNMENT_PASS",
+  "generatedAt": "2026-06-21",
+  "counts": {
+    "lessons": 260,
+    "questionBank": 1040,
+    "reviewPacks": 260,
+    "testBlueprints": 32
+  },
+  "perLessonQuestions": [
+    [
+      "MATH-VN-LA-C01-L01",
+      4
+    ],
+    [
+      "MATH-VN-LA-C01-L02",
+      4
+    ],
+    [
+      "MATH-VN-LA-C01-L03",
+      4
+    ],
+    [
+      "MATH-VN-LA-C01-L04",
+      4
+    ],
+    [
+      "MATH-VN-LA-C01-L05",
+      4
+    ]
+  ],
+  "difficultyCounts": {
+    "easy": 260,
+    "medium": 260,
+    "hard": 260,
+    "expert": 260
+  },
+  "blueprintPolicy": "32 chapters × 20 questions, exact easy 8 / medium 6 / hard 4 / expert 2",
+  "qualityFixes": [
+    "Removed duplicated generic questions per lesson",
+    "Aligned wrong-answer diagnosis with formula/simulation/practice",
+    "Updated review flow to include E94/E95 anchors",
+    "Synced mastery and indexes"
+  ],
+  "nextRecommendedPass": "E97 · Professor Q&A / Vấn đáp alignment pass"
+}

@@ -1,0 +1,113 @@
+{
+  "release": "C02_LEVEL_C_DECK_DATA_E201_PART_2_3_6",
+  "chapterId": "c02",
+  "level": "C",
+  "policy": {
+    "minimumSlidesPerLesson": 16,
+    "slideCountIsFloorNotCap": true,
+    "runtime": "data_only_not_wired",
+    "notes": "Continuation data for C02 Level C. Keep data separate until one stable renderer consumes it."
+  },
+  "lessons": [
+    {
+      "id": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L03-rank-column-space-independent-information-e142",
+      "label": "Bài 2.3 · Hạng ma trận, không gian cột và thông tin độc lập",
+      "targetSlideCount": 18,
+      "slides": [
+        {"title":"Rank đo số hướng độc lập","formula":"rank(A)=dim Col(A)=dim Row(A)","visual":"rank_core","core":"Rank cho biết ma trận giữ được bao nhiêu hướng thông tin tuyến tính độc lập.","application":"Feature audit, sensor redundancy, PCA, solve system.","check":"Rank đang nói về hàng, cột hay cả hai?"},
+        {"title":"Rank 1 nhìn bằng cột phụ thuộc","formula":"A=[[1,2],[2,4]], rank(A)=1","visual":"rank1_columns","core":"Hai cột cùng hướng chỉ tạo một hướng thông tin dù có hai cột.","application":"Phát hiện feature dư hoặc sensor trùng.","check":"Cột 2 có phải bội của cột 1 không?"},
+        {"title":"Full rank 2×2","formula":"det(A)≠0 ⇒ rank(A)=2","visual":"full_rank_2x2","core":"Hai cột độc lập phủ được mặt phẳng 2D.","application":"Điều kiện inverse 2×2, nghiệm duy nhất.","check":"Hai cột có cùng hướng không?"},
+        {"title":"Rank thiếu trong 3×3","formula":"row_3=row_1+row_2 ⇒ rank(A)<3","visual":"rank_deficient_3x3","core":"Một hàng/cột là tổ hợp của phần còn lại thì thông tin bị lặp.","application":"Covariance suy biến, sensor fusion, linear dependency.","check":"Hàng nào là tổ hợp tuyến tính?"},
+        {"title":"Column space là vùng output có thể tạo","formula":"Col(A)=span(a_1,...,a_n)","visual":"column_space","core":"Ax chỉ có thể nằm trong không gian cột của A.","application":"Kiểm hệ Ax=b có nghiệm hay không.","check":"b có nằm trong Col(A)?"},
+        {"title":"Row space đọc ràng buộc đo","formula":"Row(A)=span(rows of A)","visual":"row_space","core":"Row space nói những phép đo tuyến tính mà A thực hiện trên đầu vào.","application":"Linear constraints, classifier, measurement matrix.","check":"Các hàng có đo trùng thông tin không?"},
+        {"title":"Null space là hướng bị xóa","formula":"N(A)={x:Ax=0}","visual":"null_space","core":"Nếu x khác 0 mà Ax=0, A đã xóa một hướng thông tin.","application":"Projection, inverse problem, ambiguity.","check":"Hướng nào không thể phục hồi từ output?"},
+        {"title":"Rank-nullity","formula":"rank(A)+nullity(A)=n","visual":"rank_nullity","core":"Số chiều đầu vào được chia thành phần giữ lại và phần bị xóa.","application":"Đọc mất mát thông tin trong transform.","check":"A có n cột, rank r thì nullity bao nhiêu?"},
+        {"title":"Pivot và rank","formula":"rank(A)=số pivot sau khử Gauss","visual":"pivot_rank","core":"Khử Gauss cho cách tính rank qua số pivot độc lập.","application":"Tính tay, kiểm nghiệm, linear solver.","check":"Pivot nào thật sự độc lập?"},
+        {"title":"Singular values đọc rank thực tế","formula":"A=UΣV^T","visual":"singular_values_rank","core":"Dữ liệu nhiễu thường không có rank đại số sạch; singular values giúp đọc rank gần đúng.","application":"PCA, denoising, low-rank approximation.","check":"Ngưỡng nào tách tín hiệu khỏi nhiễu?"},
+        {"title":"Low-rank có thể là cấu trúc tốt","formula":"A≈U_kΣ_kV_k^T","visual":"low_rank_structure","core":"Rank thấp có thể cho thấy dữ liệu nằm gần một cấu trúc đơn giản.","application":"Compression, PCA, latent factors.","check":"Rank thấp là cấu trúc hay mất dữ liệu?"},
+        {"title":"Low-rank cũng có thể là lỗi","formula":"rank(X)<expected","visual":"low_rank_fault","core":"Nếu sensor chết hoặc feature trùng, rank thấp là tín hiệu cảnh báo.","application":"Sensor diagnostics, data quality audit.","check":"Cột nào gần hằng hoặc copy cột khác?"},
+        {"title":"Rank và nghiệm hệ","formula":"Ax=b","visual":"rank_solve_link","core":"Rank quyết định hệ có nghiệm duy nhất, vô số nghiệm hay không nghiệm.","application":"Linear systems, calibration, estimation.","check":"rank(A) và rank([A|b]) có bằng nhau không?"},
+        {"title":"Rank và dimension reduction","formula":"Y=XW, rank(Y)≤min(rank(X),rank(W))","visual":"rank_after_transform","core":"Một transform có rank thấp có thể nén dữ liệu xuống ít hướng hơn.","application":"PCA, bottleneck layer, feature compression.","check":"Nén có bỏ mất tín hiệu quan trọng không?"},
+        {"title":"Rank trong covariance","formula":"C=X_c^TX_c/(m-1)","visual":"covariance_rank","core":"Rank covariance bị giới hạn bởi số mẫu và rank của dữ liệu đã center.","application":"PCA, statistics, feature dependency.","check":"Số mẫu có đủ để ước lượng covariance không?"},
+        {"title":"Mini-case cảm biến UGV","formula":"X=[temp,current,vibration,speed]","visual":"ugv_sensor_rank","core":"Nếu current và vibration gần phụ thuộc, rank cho thấy thông tin độc lập ít hơn số sensor.","application":"Predictive maintenance, sensor fusion.","check":"Sensor nào thêm thông tin thật?"},
+        {"title":"Checklist rank","formula":"rank + Col(A) + Row(A) + N(A) + σ_i","visual":"rank_checklist","core":"Đọc rank phải kèm column space, row space, null space và singular values.","application":"Audit ma trận trước solve/PCA/model.","check":"Bạn đã đọc đủ bốn không gian cơ bản chưa?"},
+        {"title":"Chốt 2.3","formula":"rank = số hướng thông tin độc lập","visual":"rank_summary","core":"Rank là máy soi X-quang của ma trận: cho biết giữ, lặp hay xóa thông tin.","application":"Cầu sang inverse, solve và PCA.","check":"Rank thấp trong bài toán này là tốt hay nguy hiểm?"}
+      ]
+    },
+    {
+      "id": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L04-inverse-linear-system-solution-e143",
+      "label": "Bài 2.4 · Nghịch đảo, giải hệ và điều kiện tồn tại nghiệm",
+      "targetSlideCount": 18,
+      "slides": [
+        {"title":"Giải hệ là tìm nguyên nhân","formula":"Ax=b","visual":"solve_as_cause","core":"Ta tìm x sao cho A biến x thành quan sát b.","application":"Calibration, sensor fusion, circuit, mechanics.","check":"b có thể được tạo từ cột của A không?"},
+        {"title":"Inverse là undo transform","formula":"A^{-1}A=I","visual":"inverse_undo","core":"Nghịch đảo hoàn tác A nếu A không làm mất thông tin.","application":"Coordinate transform, solve exact, model inversion.","check":"A có vuông và full rank không?"},
+        {"title":"Công thức inverse 2×2","formula":"A^{-1}=1/(ad-bc)[[d,-b],[-c,a]]","visual":"inverse_2x2_formula","core":"det(A)=ad-bc là cổng tồn tại inverse 2×2.","application":"Trực giác invertibility, tính tay nhanh.","check":"Điều gì xảy ra nếu ad-bc=0?"},
+        {"title":"Det gần 0 là vùng nguy hiểm","formula":"det(A)≈0","visual":"near_singular","core":"Ma trận gần suy biến khuếch đại sai số rất mạnh.","application":"Numerical solve, calibration, control.","check":"Nghiệm nhạy với nhiễu bao nhiêu?"},
+        {"title":"Không nên tính inverse trực tiếp","formula":"solve(A,b) tốt hơn inv(A)b","visual":"solve_not_inverse","core":"Tính inverse rõ ràng thường kém ổn định và tốn hơn solve trực tiếp.","application":"NumPy, MATLAB, linear solver.","check":"Code đang dùng inv(A)@b không?"},
+        {"title":"Ma trận mở rộng","formula":"[A|b]","visual":"augmented_matrix","core":"Khử Gauss trên [A|b] cho thấy nghiệm và mâu thuẫn.","application":"Tính tay và debug hệ tuyến tính.","check":"Có hàng dạng 0=nonzero không?"},
+        {"title":"Điều kiện có nghiệm","formula":"rank(A)=rank([A|b])","visual":"existence_condition","core":"b phải tương thích với không gian cột của A.","application":"Solve system, measurement consistency.","check":"rank augmented có tăng không?"},
+        {"title":"Điều kiện nghiệm duy nhất","formula":"rank(A)=n","visual":"unique_solution","core":"Với A có n cột, full column rank cho nghiệm duy nhất nếu hệ tương thích.","application":"Parameter estimation, calibration.","check":"Có null space khác 0 không?"},
+        {"title":"Vô số nghiệm","formula":"nullity(A)>0","visual":"infinite_solutions","core":"Nếu null space còn hướng tự do, nhiều x khác nhau cho cùng b.","application":"Underdetermined system, inverse problem.","check":"Cần thêm ràng buộc nào để chọn nghiệm?"},
+        {"title":"Không nghiệm đúng","formula":"b∉Col(A)","visual":"no_exact_solution","core":"Nếu b ngoài column space, hệ không có nghiệm chính xác.","application":"Noisy measurements, least squares.","check":"Nên chuyển sang least squares không?"},
+        {"title":"Least squares","formula":"min_x ||Ax-b||_2^2","visual":"least_squares_projection","core":"Tìm x để Ax gần b nhất khi không nghiệm đúng.","application":"Regression, sensor fitting, calibration.","check":"Residual có ý nghĩa vật lý gì?"},
+        {"title":"Normal equation","formula":"A^TAx=A^Tb","visual":"normal_equation","core":"Điều kiện tối ưu least squares chiếu b lên Col(A).","application":"Hồi quy tuyến tính, fit model.","check":"A^TA có điều kiện số tốt không?"},
+        {"title":"Regularization","formula":"min ||Ax-b||^2 + λ||x||^2","visual":"regularization","core":"Thêm penalty để nghiệm bớt nhạy và bớt phóng đại nhiễu.","application":"Ridge regression, ill-posed inverse problem.","check":"λ đang giảm nhiễu hay làm bias quá mạnh?"},
+        {"title":"Condition number","formula":"κ(A)=||A||||A^{-1}||","visual":"condition_number","core":"κ lớn nghĩa là sai số nhỏ ở b có thể thành sai số lớn ở x.","application":"Numerical stability audit.","check":"κ có vượt mức cho phép không?"},
+        {"title":"Pseudo-inverse","formula":"x=A^+b","visual":"pseudoinverse","core":"Pseudo-inverse xử lý hệ không vuông hoặc thiếu rank theo nghĩa least squares/min-norm.","application":"Robotics, inverse kinematics, regression.","check":"Nghiệm A^+b là min norm hay exact?"},
+        {"title":"Mini-case sensor fusion","formula":"Hx=z","visual":"sensor_fusion_solve","core":"Hệ đo z=Hx có thể thừa đo, thiếu đo hoặc nhiễu.","application":"Kalman filter, localization, estimation.","check":"H có đủ rank để ước lượng state không?"},
+        {"title":"Checklist solve","formula":"shape + rank + consistency + κ + residual","visual":"solve_checklist","core":"Đừng tin nghiệm chỉ vì code trả số. Phải kiểm tồn tại, duy nhất và ổn định.","application":"Review mọi solve trước khi dùng kết quả.","check":"Residual và condition number đã được log chưa?"},
+        {"title":"Chốt 2.4","formula":"solve = existence + uniqueness + stability","visual":"solve_summary","core":"Giải hệ tuyến tính tốt cần đúng toán, đúng số học và đúng ngữ cảnh.","application":"Cầu sang transform geometry và PCA.","check":"Bài toán cần inverse thật hay chỉ cần solve?"}
+      ]
+    },
+    {
+      "id": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L05-linear-transform-geometry-data-e143",
+      "label": "Bài 2.5 · Phép biến đổi tuyến tính trong hình học và dữ liệu",
+      "targetSlideCount": 18,
+      "slides": [
+        {"title":"Ma trận biến basis đi đâu","formula":"A=[Ae_1 Ae_2 ... Ae_n]","visual":"basis_images","core":"Các cột của A chính là ảnh của các vector basis chuẩn.","application":"Đọc transform 2D/3D, graphics, robotics.","check":"Cột 1 cho biết e1 bị đưa đi đâu?"},
+        {"title":"Identity giữ nguyên hình","formula":"I_2=[[1,0],[0,1]]","visual":"identity_geometry","core":"Identity không đổi vector nào và giữ toàn bộ hình học.","application":"Mốc so sánh mọi transform.","check":"Vì sao I là transform trung tính?"},
+        {"title":"Scale kéo/co trục","formula":"S=[[s_x,0],[0,s_y]]","visual":"scale_geometry","core":"Scale thay đổi độ dài theo từng trục.","application":"Feature scaling, graphics, normalization.","check":"Scale khác nhau có làm méo góc không?"},
+        {"title":"Rotation giữ norm","formula":"R=[[cosθ,-sinθ],[sinθ,cosθ]]","visual":"rotation_geometry","core":"Rotation đổi hướng nhưng giữ độ dài và góc.","application":"Robot pose, camera, PCA basis.","check":"R^TR có bằng I không?"},
+        {"title":"Shear trộn trục","formula":"H=[[1,k],[0,1]]","visual":"shear_geometry","core":"Shear giữ một trục nhưng kéo điểm theo trục kia.","application":"Graphics, deformation, coordinate transform.","check":"Shear có giữ diện tích không?"},
+        {"title":"Projection giảm chiều","formula":"P=[[1,0],[0,0]]","visual":"projection_geometry","core":"Projection nén mọi điểm về không gian con.","application":"Least squares, PCA, denoising.","check":"Chiều bị xóa có quan trọng không?"},
+        {"title":"Reflection đổi phía","formula":"F=[[1,0],[0,-1]]","visual":"reflection_geometry","core":"Reflection lật một chiều và đổi orientation.","application":"Geometry, symmetry, coordinate frames.","check":"det(F) âm hay dương?"},
+        {"title":"Det đọc scale diện tích","formula":"area(AU)=|det(A)| area(U)","visual":"det_area","core":"Determinant cho biết transform làm đổi diện tích/thể tích bao nhiêu lần.","application":"Invertibility, geometry, probability density.","check":"det=0 nói hình bị gì?"},
+        {"title":"Rank đọc dimension sau biến đổi","formula":"dim image(A)=rank(A)","visual":"rank_dimension","core":"Rank nói hình sau biến đổi còn bao nhiêu chiều.","application":"Projection, compression, singular transform.","check":"A biến mặt phẳng thành đường hay vẫn là mặt phẳng?"},
+        {"title":"Đổi cơ sở","formula":"[v]_B = P^{-1}v","visual":"change_of_basis","core":"Đổi cơ sở là đổi hệ tọa độ mô tả cùng vector.","application":"PCA, robotics frames, diagonalization.","check":"Vector đổi hay chỉ tọa độ đổi?"},
+        {"title":"Affine khác tuyến tính","formula":"y=Ax+b","visual":"affine_transform","core":"Thêm b tạo tịnh tiến, không còn là tuyến tính thuần vì gốc không giữ nguyên.","application":"Neural layer, graphics, regression.","check":"Transform có đưa 0 về 0 không?"},
+        {"title":"Orthogonal matrix","formula":"Q^TQ=I","visual":"orthogonal_transform","core":"Orthogonal transform giữ dot product, norm và góc.","application":"Rotation, PCA basis, numerical stability.","check":"Cột của Q có trực chuẩn không?"},
+        {"title":"Eigenvector là hướng giữ phương","formula":"Av=λv","visual":"eigen_direction","core":"Eigenvector chỉ đổi độ dài/dấu, không đổi hướng.","application":"Dynamics, stability, PCA covariance.","check":"λ lớn hơn 1 có ý nghĩa gì trong dynamics?"},
+        {"title":"Transform dữ liệu đám mây điểm","formula":"Y=XA","visual":"point_cloud_transform","core":"A làm đám mây dữ liệu xoay, co, giãn, chiếu hoặc trộn feature.","application":"PCA, embedding, visualization.","check":"Đám mây bị nén theo hướng nào?"},
+        {"title":"Mini-case robot frame","formula":"p_world=R p_body + t","visual":"robot_frame_transform","core":"Rotation + translation đưa tọa độ thân robot sang thế giới.","application":"Localization, control, SLAM.","check":"Đây là tuyến tính hay affine?"},
+        {"title":"Mini-case sensor transform","formula":"z=A x","visual":"sensor_transform","core":"A có thể mô tả cách sensor đo trạng thái thật.","application":"Measurement model, Kalman filter.","check":"Sensor có bỏ mất chiều trạng thái nào không?"},
+        {"title":"Checklist hình học ma trận","formula":"columns + det + rank + norm + basis","visual":"geometry_checklist","core":"Đọc transform bằng cột, determinant, rank, norm preservation và basis.","application":"Review mọi transform 2D/3D/data.","check":"Transform giữ, bóp méo hay xóa thông tin?"},
+        {"title":"Chốt 2.5","formula":"matrix = geometry engine","visual":"geometry_summary","core":"Ma trận là động cơ hình học: kéo, xoay, chiếu, đổi basis và biến dữ liệu.","application":"Cầu sang PCA: tìm basis tốt nhất cho dữ liệu.","check":"Bạn đọc được transform từ cột của A chưa?"}
+      ]
+    },
+    {
+      "id": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L06-matrix-to-pca-linear-model-e143",
+      "label": "Bài 2.6 · Từ ma trận sang PCA và mô hình tuyến tính",
+      "targetSlideCount": 18,
+      "slides": [
+        {"title":"PCA bắt đầu từ data matrix","formula":"X∈R^{m×n}","visual":"pca_data_matrix","core":"Hàng là mẫu, cột là feature. PCA đọc cấu trúc biến thiên của X.","application":"Giảm chiều, visualization, denoising.","check":"m và n trong X là gì?"},
+        {"title":"Center dữ liệu","formula":"X_c = X - 1μ^T","visual":"center_data","core":"PCA cần dữ liệu quanh mean, không phải quanh gốc tùy ý.","application":"Preprocessing PCA/covariance.","check":"Mean có bị outlier kéo lệch không?"},
+        {"title":"Covariance matrix","formula":"C = X_c^T X_c/(m-1)","visual":"covariance_matrix","core":"Covariance cho thấy feature cùng biến thiên ra sao.","application":"PCA, correlation, feature dependency.","check":"Đường chéo và ngoài đường chéo nói gì?"},
+        {"title":"Covariance 3×3","formula":"C=[[var1,c12,c13],[c21,var2,c23],[c31,c32,var3]]","visual":"covariance_3x3","core":"Ma trận covariance đối xứng, đường chéo là variance.","application":"3 sensor/feature diagnostics.","check":"Feature nào tương quan mạnh nhất?"},
+        {"title":"Eigenvectors của covariance","formula":"Cv=λv","visual":"cov_eigenvectors","core":"Eigenvectors chỉ hướng biến thiên chính của dữ liệu.","application":"PCA basis, principal axes.","check":"λ lớn nghĩa là gì?"},
+        {"title":"SVD là lõi ổn định","formula":"X_c=UΣV^T","visual":"svd_pca","core":"V chứa principal directions, Σ cho độ mạnh từng hướng.","application":"PCA thực tế, numerical linear algebra.","check":"Giữ bao nhiêu singular values?"},
+        {"title":"Explained variance","formula":"ratio_k = σ_k^2 / Σ_i σ_i^2","visual":"explained_variance","core":"Tỷ lệ phương sai giải thích giúp chọn số chiều k.","application":"Model compression, visualization.","check":"90% variance có đủ cho bài toán không?"},
+        {"title":"Projection xuống k chiều","formula":"Z=X_c V_k","visual":"pca_projection","core":"Dữ liệu được chiếu sang basis chính để giảm số feature.","application":"2D/3D visualization, ML preprocessing.","check":"Z có shape gì?"},
+        {"title":"Tái tạo gần đúng","formula":"X_hat=Z V_k^T + μ","visual":"pca_reconstruction","core":"PCA cho phép nén rồi tái tạo gần đúng dữ liệu.","application":"Compression, denoising.","check":"Residual là nhiễu hay tín hiệu hiếm?"},
+        {"title":"PCA không phải classifier","formula":"PCA ignores y","visual":"pca_unsupervised","core":"PCA chỉ nhìn variance của X, không biết nhãn hay mục tiêu dự đoán.","application":"Preprocessing, exploration.","check":"Hướng variance lớn có liên quan nhãn không?"},
+        {"title":"Linear model dùng ma trận","formula":"ŷ=Xw+b","visual":"linear_model_matrix","core":"Mô hình tuyến tính dự đoán y bằng tổ hợp tuyến tính feature.","application":"Regression, baseline ML, signal estimation.","check":"w_j diễn giải feature j thế nào?"},
+        {"title":"Normal equation nối về solve","formula":"w=(X^TX)^{-1}X^Ty","visual":"normal_equation_model","core":"Hồi quy tuyến tính có thể đọc như bài toán giải hệ least squares.","application":"Regression, calibration.","check":"X^TX có ổn định không?"},
+        {"title":"Regularized linear model","formula":"w=(X^TX+λI)^{-1}X^Ty","visual":"ridge_model","core":"Ridge giảm nhạy khi feature phụ thuộc hoặc dữ liệu nhiễu.","application":"Robust regression, ill-conditioned data.","check":"λ làm bias-variance đổi thế nào?"},
+        {"title":"PCA trước linear model","formula":"Z=X_cV_k,  ŷ=Zw","visual":"pca_then_model","core":"PCA có thể giảm chiều trước khi dự đoán, nhưng cũng có thể bỏ mất tín hiệu dự đoán.","application":"High-dimensional ML, compression.","check":"PCA có giữ thông tin liên quan y không?"},
+        {"title":"Whitening","formula":"Z = X_c V Σ^{-1}","visual":"whitening","core":"Whitening làm các thành phần mới có variance gần bằng nhau.","application":"Preprocessing, signal decorrelation.","check":"Whitening có làm mất ý nghĩa đơn vị không?"},
+        {"title":"Mini-case sensor health PCA","formula":"X=[temp,current,vibration,speed]","visual":"sensor_health_pca","core":"PCA tìm mode vận hành chính và phần residual báo bất thường.","application":"Predictive maintenance, anomaly detection.","check":"Bất thường nằm ở principal component hay residual?"},
+        {"title":"Checklist PCA/model","formula":"center + scale + covariance/SVD + k + validate","visual":"pca_checklist","core":"PCA cần preprocessing, chọn k và kiểm tác động downstream.","application":"Pipeline ML nghiêm túc.","check":"Bạn có kiểm validation sau PCA không?"},
+        {"title":"Chốt 2.6","formula":"X → center → covariance/SVD → PCA → model","visual":"pca_summary","core":"C02 kết thúc bằng cách biến ma trận thành công cụ đọc cấu trúc, giảm chiều và dự đoán.","application":"Cầu sang C03 gradient và tối ưu.","check":"Bạn đang tìm cấu trúc hay tối ưu dự đoán?"}
+      ]
+    }
+  ]
+}

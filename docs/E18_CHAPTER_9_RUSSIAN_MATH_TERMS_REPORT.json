@@ -1,0 +1,24 @@
+{
+  "checkpoint": "E18_CHECKPOINT_TEST_SNAPSHOT",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapterId": "MATH-PREP-MT-C09",
+  "chapterTitle": "Chương 9 · Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật",
+  "stage": "GĐ2 · Dự bị Nga/STANKIN",
+  "lessons": 8,
+  "theorySlides": 160,
+  "formulas": 24,
+  "exercises": 64,
+  "applications": 16,
+  "simulations": 16,
+  "professorQa": 8,
+  "questions": 48,
+  "reviewPacks": 8,
+  "vocabCards": 32,
+  "focus": [
+    "Thuật ngữ Toán Nga-Việt-Anh",
+    "Đọc đề dự bị: дано/найти/доказать/вычислить",
+    "Vấn đáp giáo viên dự bị",
+    "Render Cyrillic + công thức an toàn"
+  ],
+  "notFinal": true
+}

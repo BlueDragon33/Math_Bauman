@@ -1,0 +1,35 @@
+{
+  "id":"bauman_math_theory_slideshow_manifest_v1",
+  "schema":"bauman_math_theory_slideshow_manifest_v1",
+  "version":"SLIDESHOW_MANIFEST_V1_1",
+  "sourcePolicy":"Slideshow artifacts are presentation-data derivatives of approved theory-core and theory-reference files. They may reorganize learning beats but may not add mathematics or contradict sources.",
+  "pipelinePosition":{"after":"reference_table","before":"full_view"},
+  "requiredSections":["sourceCore","sourceReference","slideshowContract","narrativeArc","slides","retrievalPlan","sourceTraceability","downstreamMapping","qualityGate"],
+  "rules":[
+    "A slideshow file requires approved core and reference source versions.",
+    "Each slide must have one primary learning beat and source traceability.",
+    "Formulas must include meaning or application conditions in the slide context.",
+    "Diagram specifications must be semantic and must not contain CSS, pixel placement, colors or animation instructions.",
+    "Misconception intercepts and retrieval checks must appear near the relevant learning beat.",
+    "Worked-case values must match the approved core exactly.",
+    "Slideshow files must not contain renderer code, runtime wiring or Reader Pro changes.",
+    "Downstream full-view and integration work may consume slideshow data but may not override core meaning."
+  ],
+  "records":[
+    {
+      "chapter":"C01",
+      "lesson":"L04",
+      "lessonId":"MATH-VN-C01-vector_trong_khong_gian_-L04-basis-span-coordinate-e140",
+      "path":"theory_slideshow_c01_l04.json",
+      "sourceCorePath":"../theory_core/theory_core_c01_l04.json",
+      "sourceCoreVersion":"CORE_C01_L04_V1_APPROVED",
+      "sourceReferencePath":"../theory_reference/theory_reference_c01_l04.json",
+      "sourceReferenceVersion":"REFERENCE_C01_L04_V1_APPROVED",
+      "slideCount":22,
+      "diagramSpecCount":8,
+      "retrievalCheckCount":9,
+      "misconceptionInterceptCount":16,
+      "status":"approved_against_core_and_reference"
+    }
+  ]
+}

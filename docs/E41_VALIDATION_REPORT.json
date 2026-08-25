@@ -1,0 +1,20 @@
+{
+  "json_errors": [],
+  "json_pass": true,
+  "js_errors": [],
+  "js_pass": true,
+  "sim_count": 520,
+  "missing_e41": 0,
+  "missing_model": 0,
+  "missing_vars": 0,
+  "object_object_hits": 0,
+  "markers": {
+    "e41InteractiveBoard": true,
+    "e41Scenario": true,
+    "e41Labs": true,
+    "renderFormulaShim": true,
+    "theoryScrollLock": true,
+    "storageIndicator": true
+  },
+  "pass": true
+}

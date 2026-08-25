@@ -1,0 +1,370 @@
+{
+  "id": "bauman_math_program_frame_e130",
+  "schema": "bauman_math_program_frame_v1",
+  "version": "E130_MATH_PROGRAM_FRAME_INTEGRATED",
+  "subject": "math",
+  "title": "KHUNG CHƯƠNG TRÌNH BÀI GIẢNG: MÔN TOÁN HỌC",
+  "orientation": "Định hướng chuyên sâu cho Thạc sĩ Kỹ thuật Máy tính & CNTT - Mã ngành 09.04.01 Bauman",
+  "purpose": "Khung chương trình tích hợp để gom toàn bộ chương/bài/nội dung Toán hiện có và nội dung tương lai vào các trục bài giảng Bauman, không thay thế chapter_spine hoặc theory_lecture_frame.",
+  "routePolicy": {
+    "baumanRoute": "stage -> discipline -> chapter",
+    "programRoute": "block -> section -> programLectureAnchor -> linkedChapterIds",
+    "rule": "program frame is an overlay; it must not replace stage/discipline/chapter",
+    "anchorPolicy": "21 anchors organize the full content base; they are not a 21-lesson limit"
+  },
+  "contentPolicy": {
+    "contentLivesIn": [
+      "theory_lecture_content",
+      "formula_content",
+      "exercise_content",
+      "simulation_content",
+      "application_content",
+      "professor_qa_content",
+      "question_bank_content",
+      "review_pack_content"
+    ],
+    "programFrameStores": "metadata, focus, lab-work requirements, and links only",
+    "legacyFallbackOnly": [
+      "lessons",
+      "formulas",
+      "exercises",
+      "simulations",
+      "applications",
+      "professor_qa"
+    ]
+  },
+  "labWorkDefault": {
+    "required": true,
+    "label": "Ứng dụng lập trình (Lab Work)",
+    "languages": [
+      "Python/NumPy/SciPy",
+      "C++"
+    ],
+    "taskTypes": [
+      "formula_to_code",
+      "numerical_experiment",
+      "simulation",
+      "performance_check",
+      "engineering_interpretation"
+    ],
+    "rule": "Lab Work bridges formulas to executable code and must not replace theory."
+  },
+  "blocks": [
+    {
+      "blockId": "pure_foundation",
+      "blockNo": 1,
+      "blockTitle": "Khối 1: Toán học Thuần túy (Nền tảng lý thuyết)",
+      "blockRole": "Build the theoretical spine used later by computing, AI, control, signal processing, security, and systems modeling.",
+      "sections": [
+        {
+          "sectionId": "A",
+          "sectionTitle": "Phân mục A: Đại số và Cấu trúc",
+          "lectureAnchors": [
+            {
+              "programLectureId": "MATH-PROG-L01-linear-algebra-basic",
+              "lectureNo": 1,
+              "title": "Đại số tuyến tính cơ bản",
+              "baumanFocus": "Thuật toán khử Gauss, tính toán ma trận mật độ cao, định thức của các ma trận lớn trong hệ thống lưu trữ dữ liệu.",
+              "stageHints": ["vn", "prep", "hk1"],
+              "roadmapRole": "foundation_to_computing_matrix_methods",
+              "linkedDisciplineIds": ["linear_algebra_data_space", "numerical_computational_math"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Implement Gaussian elimination with partial pivoting", "Benchmark dense matrix determinant methods", "Compare NumPy and C++ matrix operations"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L02-vector-spaces-linear-maps",
+              "lectureNo": 2,
+              "title": "Không gian vectơ và Ánh xạ tuyến tính",
+              "baumanFocus": "Các phép biến đổi không gian, không gian trạng thái hệ thống, phân tích trị riêng để nén dữ liệu và giảm chiều dữ liệu bằng PCA.",
+              "stageHints": ["vn", "prep", "hk1", "hk2"],
+              "roadmapRole": "state_space_data_representation_pca",
+              "linkedDisciplineIds": ["linear_algebra_data_space", "automatic_control_theory", "state_estimation_sensor_fusion"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Implement vector-space projections", "Run PCA on a small sensor dataset", "Visualize eigenvectors and state transforms"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L03-abstract-structures",
+              "lectureNo": 3,
+              "title": "Đại số cấu trúc trừu tượng",
+              "baumanFocus": "Nhóm tuần hoàn, trường hữu hạn GF(2^n), nền tảng mã hóa bảo mật mạng và sửa lỗi truyền tin như CRC, Reed-Solomon.",
+              "stageHints": ["prep", "hk1", "hk2"],
+              "roadmapRole": "security_coding_theory_foundation",
+              "linkedDisciplineIds": ["math_language_logic", "discrete_graph_db_knowledge"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Implement finite-field arithmetic over GF(2^n)", "Code CRC checksum toy example", "Explore cyclic groups with modular arithmetic"]},
+              "contentStatus": "map_pending"
+            }
+          ]
+        },
+        {
+          "sectionId": "B",
+          "sectionTitle": "Phân mục B: Giải tích toán học",
+          "lectureAnchors": [
+            {
+              "programLectureId": "MATH-PROG-L04-single-variable-analysis",
+              "lectureNo": 4,
+              "title": "Giải tích hàm một biến",
+              "baumanFocus": "Đạo hàm và tích phân số, xấp xỉ số, chuỗi Taylor để tính toán sai số thuật toán trên máy tính.",
+              "stageHints": ["vn", "prep"],
+              "roadmapRole": "calculus_error_estimation_numerical_intro",
+              "linkedDisciplineIds": ["calculus_multivariable", "numerical_computational_math"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Approximate derivatives numerically", "Compare Taylor approximation errors", "Implement trapezoidal and Simpson integration"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L05-multivariable-analysis-differential-geometry",
+              "lectureNo": 5,
+              "title": "Giải tích hàm nhiều biến và Hình học vi phân sơ cấp",
+              "baumanFocus": "Gradient, ma trận Hessian phục vụ cho các thuật toán tối ưu và mạng thần kinh.",
+              "stageHints": ["vn", "prep", "hk1"],
+              "roadmapRole": "gradient_hessian_optimization_neural_networks",
+              "linkedDisciplineIds": ["calculus_multivariable", "optimization_programming"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Compute gradients and Hessians with NumPy", "Visualize a loss surface", "Implement gradient descent on a two-variable function"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L06-differential-equations-dynamical-systems",
+              "lectureNo": 6,
+              "title": "Phương trình vi phân và Hệ động lực",
+              "baumanFocus": "Mô hình hóa trạng thái liên tục của phần cứng, hệ thống điều khiển tự động và feedback loops.",
+              "stageHints": ["prep", "hk1", "hk2"],
+              "roadmapRole": "continuous_state_control_feedback",
+              "linkedDisciplineIds": ["ode_dynamical_systems", "automatic_control_theory"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Solve ODEs with scipy.integrate", "Simulate a feedback loop", "Analyze equilibrium and stability numerically"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L07-complex-functions-functional-analysis",
+              "lectureNo": 7,
+              "title": "Lý thuyết hàm phức và Cơ sở giải tích hàm",
+              "baumanFocus": "Biến đổi Laplace và biến đổi Z để phân tích tính ổn định của hệ thống số và bộ lọc tín hiệu.",
+              "stageHints": ["hk1", "hk2", "hk3"],
+              "roadmapRole": "signals_filters_stability_transform_methods",
+              "linkedDisciplineIds": ["signal_processing_time_series", "automatic_control_theory", "calculus_multivariable"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Plot poles and zeros", "Apply Z-transform intuition to a digital filter", "Compare time-domain and transform-domain behavior"]},
+              "contentStatus": "map_pending"
+            }
+          ]
+        },
+        {
+          "sectionId": "C",
+          "sectionTitle": "Phân mục C: Hình học và Không gian",
+          "lectureAnchors": [
+            {
+              "programLectureId": "MATH-PROG-L08-euclidean-computational-geometry",
+              "lectureNo": 8,
+              "title": "Hình học sơ cấp và Hình học Euclid nâng cao",
+              "baumanFocus": "Hình học tính toán phục vụ cho đồ họa máy tính, xử lý ảnh và thị giác máy tính.",
+              "stageHints": ["prep", "hk1", "hk2"],
+              "roadmapRole": "computer_vision_geometry_foundation",
+              "linkedDisciplineIds": ["linear_algebra_data_space", "numerical_computational_math"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Compute distances and projections", "Implement simple 2D transformations", "Test geometry operations for image coordinates"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L09-topology-metric-spaces",
+              "lectureNo": 9,
+              "title": "Cơ sở Tôpô học",
+              "baumanFocus": "Không gian metric, khoảng cách dữ liệu Euclidean, Manhattan, Cosine để phân cụm dữ liệu trong Data Mining.",
+              "stageHints": ["hk1", "hk2"],
+              "roadmapRole": "metric_spaces_data_mining_clustering",
+              "linkedDisciplineIds": ["linear_algebra_data_space", "probability_statistics_inference"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Compare Euclidean, Manhattan, and cosine distances", "Cluster toy data using different metrics", "Visualize metric sensitivity"]},
+              "contentStatus": "map_pending"
+            }
+          ]
+        },
+        {
+          "sectionId": "D",
+          "sectionTitle": "Phân mục D: Logic và Cấu trúc số",
+          "lectureAnchors": [
+            {
+              "programLectureId": "MATH-PROG-L10-logic-set-theory-boolean",
+              "lectureNo": 10,
+              "title": "Cơ sở Logic toán và Lý thuyết tập hợp",
+              "baumanFocus": "Đại số Boolean, tối thiểu hóa hàm logic bằng bản đồ Karnaugh, thiết kế mạch số, kiến trúc máy tính và logic mờ.",
+              "stageHints": ["vn", "prep", "hk1"],
+              "roadmapRole": "digital_logic_computer_architecture_foundation",
+              "linkedDisciplineIds": ["math_language_logic", "discrete_graph_db_knowledge"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Implement Boolean truth tables", "Minimize logic expressions", "Build a toy fuzzy-rule evaluator"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L11-number-theory-cryptography-basics",
+              "lectureNo": 11,
+              "title": "Lý thuyết số và Ứng dụng số nguyên tố cơ bản",
+              "baumanFocus": "Hàm số học, đồng dư thức, kiểm tra số nguyên tố lớn phục vụ RSA và Diffie-Hellman.",
+              "stageHints": ["prep", "hk1", "hk2"],
+              "roadmapRole": "cryptography_number_theory_foundation",
+              "linkedDisciplineIds": ["math_language_logic", "discrete_graph_db_knowledge"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Implement modular exponentiation", "Test primality on large integers", "Build a toy RSA key/demo"]},
+              "contentStatus": "map_pending"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blockId": "applied_tools_practice",
+      "blockNo": 2,
+      "blockTitle": "Khối 2: Toán học Ứng dụng (Công cụ & Thực hành)",
+      "blockRole": "Turn mathematical foundations into computing, AI, data, network, control, reliability, and system-engineering tools.",
+      "sections": [
+        {
+          "sectionId": "E",
+          "sectionTitle": "Phân mục E: Xác suất và Thống kê dữ liệu",
+          "lectureAnchors": [
+            {
+              "programLectureId": "MATH-PROG-L12-probability-random-variables",
+              "lectureNo": 12,
+              "title": "Lý thuyết Xác suất và Biến ngẫu nhiên",
+              "baumanFocus": "Mô hình hóa luồng dữ liệu ngẫu nhiên đi vào hệ thống, các phân phối Poisson và Exponential của gói tin mạng.",
+              "stageHints": ["vn", "prep", "hk1", "hk2"],
+              "roadmapRole": "random_data_network_traffic_modeling",
+              "linkedDisciplineIds": ["probability_statistics_inference", "state_estimation_sensor_fusion"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Simulate Poisson arrivals", "Fit exponential inter-arrival times", "Estimate mean/variance under random traffic"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L13-mathematical-statistics",
+              "lectureNo": 13,
+              "title": "Thống kê toán học",
+              "baumanFocus": "Kiểm định giả thuyết về hiệu năng phần mềm, ước lượng thời gian phản hồi của hệ thống phân tán dưới tải cao.",
+              "stageHints": ["hk1", "hk2", "hk3"],
+              "roadmapRole": "system_performance_statistics_validation",
+              "linkedDisciplineIds": ["probability_statistics_inference", "reliability_verification_lifecycle"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Run confidence intervals for latency", "Perform hypothesis tests on benchmark results", "Bootstrap response-time samples"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L14-stochastic-processes-time-series",
+              "lectureNo": 14,
+              "title": "Các quá trình ngẫu nhiên và Phân tích chuỗi thời gian",
+              "baumanFocus": "Chuỗi Markov để dự báo trạng thái hệ thống và phân tích độ tin cậy phần cứng.",
+              "stageHints": ["hk2", "hk3", "hk4"],
+              "roadmapRole": "markov_reliability_time_series_research",
+              "linkedDisciplineIds": ["probability_statistics_inference", "signal_processing_time_series", "reliability_verification_lifecycle"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Simulate Markov-chain transitions", "Analyze reliability state diagrams", "Forecast a toy time series"]},
+              "contentStatus": "map_pending"
+            }
+          ]
+        },
+        {
+          "sectionId": "F",
+          "sectionTitle": "Phân mục F: Toán rời rạc và Máy tính",
+          "lectureAnchors": [
+            {
+              "programLectureId": "MATH-PROG-L15-discrete-math-graph-theory",
+              "lectureNo": 15,
+              "title": "Toán rời rạc và Lý thuyết đồ thị",
+              "baumanFocus": "Cấu trúc liên kết mạng, thuật toán tìm đường tối ưu Dijkstra/A*, luồng cực đại Ford-Fulkerson trong mạng.",
+              "stageHints": ["prep", "hk1", "hk2"],
+              "roadmapRole": "network_topology_graph_algorithms",
+              "linkedDisciplineIds": ["discrete_graph_db_knowledge", "optimization_programming"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Implement Dijkstra and A*", "Compute max flow with Ford-Fulkerson", "Visualize network topology metrics"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L16-numerical-methods-computing",
+              "lectureNo": 16,
+              "title": "Phương pháp tính và Giải tích số",
+              "baumanFocus": "FFT và các thuật toán xấp xỉ số song song chạy trên kiến trúc đa lõi hoặc GPU.",
+              "stageHints": ["vn", "prep", "hk1", "hk2"],
+              "roadmapRole": "numerical_methods_parallel_computing",
+              "linkedDisciplineIds": ["numerical_computational_math", "signal_processing_time_series"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Compare direct DFT and FFT", "Benchmark numerical approximation", "Discuss GPU/parallel speedup limits"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L17-ai-machine-learning-math-foundations",
+              "lectureNo": 17,
+              "title": "Cơ sở toán học cho Trí tuệ nhân tạo và Học máy",
+              "baumanFocus": "Kết hợp đại số tuyến tính, xác suất và tối ưu hóa để giải thích backpropagation và deep learning.",
+              "stageHints": ["hk1", "hk2", "hk3", "hk4"],
+              "roadmapRole": "ai_ml_deep_learning_math_core",
+              "linkedDisciplineIds": ["linear_algebra_data_space", "probability_statistics_inference", "optimization_programming"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Implement a tiny neural network from scratch", "Compute backpropagation gradients manually and with code", "Compare loss landscapes"]},
+              "contentStatus": "map_pending"
+            }
+          ]
+        },
+        {
+          "sectionId": "G",
+          "sectionTitle": "Phân mục G: Tối ưu hóa và Mô hình hóa chuyên ngành",
+          "lectureAnchors": [
+            {
+              "programLectureId": "MATH-PROG-L18-linear-programming-operations-research",
+              "lectureNo": 18,
+              "title": "Quy hoạch tuyến tính và Tối ưu hóa vận trù",
+              "baumanFocus": "Phân bổ tài nguyên hệ thống CPU/RAM/băng thông, tối ưu hóa chi phí vận hành cloud computing.",
+              "stageHints": ["hk1", "hk2", "hk3"],
+              "roadmapRole": "resource_allocation_cloud_optimization",
+              "linkedDisciplineIds": ["optimization_programming", "automatic_control_theory"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Solve a small linear program", "Model CPU/RAM/bandwidth allocation", "Compare greedy and optimized allocation"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L19-game-theory-decision-math",
+              "lectureNo": 19,
+              "title": "Lý thuyết trò chơi và Ra quyết định toán học",
+              "baumanFocus": "Định tuyến cân bằng trong mạng bằng Nash equilibrium, thuật toán ra quyết định cho hệ thống tự hành hoặc AI agents.",
+              "stageHints": ["hk2", "hk3", "hk4"],
+              "roadmapRole": "decision_math_ai_agents_network_equilibrium",
+              "linkedDisciplineIds": ["optimization_programming", "discrete_graph_db_knowledge"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Simulate a routing game", "Compute a simple Nash equilibrium", "Compare agent decision policies"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L20-quantitative-finance-econometrics",
+              "lectureNo": 20,
+              "title": "Toán tài chính định lượng và Kinh tế lượng",
+              "baumanFocus": "Mô hình hóa rủi ro và chi phí khi đầu tư phát triển các dự án phần mềm/hệ thống thông tin lớn.",
+              "stageHints": ["hk3", "hk4"],
+              "roadmapRole": "project_risk_cost_modeling",
+              "linkedDisciplineIds": ["probability_statistics_inference", "optimization_programming", "reliability_verification_lifecycle"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Estimate project risk with random variables", "Run Monte Carlo cost scenarios", "Visualize uncertainty bands"]},
+              "contentStatus": "map_pending"
+            },
+            {
+              "programLectureId": "MATH-PROG-L21-mathematical-physics-system-modeling",
+              "lectureNo": 21,
+              "title": "Phương trình Vật lý toán và Mô hình hóa hệ thống thực tế",
+              "baumanFocus": "Mô phỏng số Monte Carlo để đánh giá khả năng chịu lỗi và an toàn thông tin của hệ thống máy tính.",
+              "stageHints": ["hk2", "hk3", "hk4"],
+              "roadmapRole": "system_modeling_fault_tolerance_security",
+              "linkedDisciplineIds": ["ode_dynamical_systems", "numerical_computational_math", "reliability_verification_lifecycle"],
+              "linkedChapterIds": [],
+              "labWork": {"required": true, "suggestedTasks": ["Run Monte Carlo reliability simulation", "Model fault-tolerance scenarios", "Estimate system safety metrics"]},
+              "contentStatus": "map_pending"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverageStatus": {
+    "activeChaptersTarget": "1-40",
+    "frameworkOnlyChaptersTarget": "41-56 optional display with framework-only label",
+    "currentMappingStatus": "draft_sample_only",
+    "nextRequiredStep": "Create or expand math_program_map.json until every active chapter has at least one primaryProgramLectureId."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "frameFile": "exercise_frame.json",
+  "contentFile": "exercise_content.json",
+  "recordKey": "exerciseId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonId": "MATH-VN-LA-C01-L04",
+    "tags": [
+      "vector",
+      "AI",
+      "điều khiển"
+    ],
+    "exerciseId": "MATH-VN-LA-C01-L04-E01",
+    "level": "easy",
+    "prompt": "Tính tích vô hướng của hai vector đã cho.",
+    "solution": "Nhân từng thành phần rồi cộng lại.",
+    "auditStatus": "DRAFT"
+  }
+}

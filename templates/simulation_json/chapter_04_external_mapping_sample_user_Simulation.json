@@ -1,0 +1,1476 @@
+{
+  "packType": "bauman_math_unified_simulation_chapter_pack",
+  "version": "1.0-L01-L03-fixed",
+  "subject": "math",
+  "chapterNo": 4,
+  "chapterTitle": "Không gian Euclid, ánh xạ tuyến tính và cấu trúc phổ của ma trận",
+  "chapterPurpose": "Chương này giúp người học nắm chắc các công cụ đại số tuyến tính cốt lõi dùng trong AI, robotics, xử lý tín hiệu, tối ưu và điều khiển: không gian vector, ánh xạ tuyến tính, chiếu trực giao, bình phương tối thiểu, số điều kiện, trị riêng, dạng toàn phương và SVD/PCA. Trọng tâm là hiểu khi nào dữ liệu thật sự có thêm chiều thông tin, khi nào phép biến đổi mất khả nghịch, khi nào nghiệm nhạy với nhiễu, khi nào hệ động lực ổn định và khi nào giảm chiều vẫn giữ được cấu trúc quan trọng.",
+  "chapterApplications": [
+    "Thiết kế và kiểm tra bộ đặc trưng, hồi quy tuyến tính, PCA và độ ổn định số trong AI và khoa học dữ liệu.",
+    "Phân tích Jacobian, nghịch đảo gần suy biến, hiệu chỉnh cảm biến và động học rời rạc trong robotics và điều khiển.",
+    "Khử nhiễu, xấp xỉ hạng thấp, tách mode năng lượng và đánh giá sai số tái tạo trong xử lý tín hiệu."
+  ],
+  "lessons": [
+    {
+      "lessonNo": 1,
+      "lessonId": "MATH-LA-C04-L01",
+      "lessonTitle": "§4.1 Không gian vector, độc lập tuyến tính và cơ sở",
+      "coreQuestion": "Khi nào một vector mới thật sự bổ sung một chiều thông tin, và khi nào nó chỉ là tổ hợp tuyến tính của những vector đã có?",
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-LA-C04-L01",
+        "type": "unified",
+        "simKind": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "Span, hạng và cơ sở trong không gian 3D",
+        "purpose": "Mô phỏng giúp người học thấy trực tiếp quan hệ giữa span, độc lập tuyến tính, hạng, thể tích sinh bởi các vector và sai số khi kiểm tra vector mới. Trọng tâm là phân biệt số lượng vector, độ dài vector và số chiều thông tin thật.",
+        "realUse": "Dùng để phát hiện đặc trưng dư thừa trong machine learning, kênh cảm biến gần trùng hướng trong robot, bộ biến đầu vào lặp thông tin trong hồi quy, embedding có chiều danh nghĩa lớn nhưng hạng hiệu dụng thấp, và bộ hướng điều khiển không tạo đủ bậc tự do trong không gian thao tác.",
+        "formula": "V = [v1 v2 v3] thuộc R^(3x3), rank(V) = dim(span{v1,v2,v3}), volume = |det(V)|, det(V^T V) = volume^2, residual(v3|span(v1,v2)) = ||v3 - Proj_span(v1,v2)(v3)||2",
+        "conceptualModel": "Mỗi vector là một hướng thông tin. Nếu vector mới nằm trong span của các vector cũ, không gian biểu diễn không mở rộng dù vector đó rất dài. Nếu vector mới có thành phần ngoài span, nó tạo thêm chiều thông tin và làm tăng hạng. Trong 3D, ba vector mới có thể sinh đường, mặt phẳng hoặc toàn bộ không gian.",
+        "visualProfile": "vector_space_3d",
+        "controls": [
+          {
+            "key": "v1",
+            "label": "Vector v1",
+            "type": "vector3",
+            "default": [
+              1,
+              0,
+              0
+            ],
+            "min": -4,
+            "max": 4,
+            "step": 0.1,
+            "meaning": "Hướng thông tin cơ sở thứ nhất. Có thể hiểu là một đặc trưng, một trục cảm biến hoặc một hướng điều khiển."
+          },
+          {
+            "key": "v2",
+            "label": "Vector v2",
+            "type": "vector3",
+            "default": [
+              0,
+              1,
+              0
+            ],
+            "min": -4,
+            "max": 4,
+            "step": 0.1,
+            "meaning": "Hướng thông tin cơ sở thứ hai, dùng để kiểm tra khả năng mở rộng từ đường sang mặt phẳng."
+          },
+          {
+            "key": "v3",
+            "label": "Vector v3 cần kiểm tra",
+            "type": "vector3",
+            "default": [
+              0,
+              0,
+              1
+            ],
+            "min": -4,
+            "max": 4,
+            "step": 0.1,
+            "meaning": "Vector mới, cần xác định có tạo thêm chiều thông tin ngoài span(v1,v2) hay chỉ là tổ hợp của hai vector cũ."
+          },
+          {
+            "key": "independenceThreshold",
+            "label": "Ngưỡng độc lập tuyến tính",
+            "type": "range",
+            "default": 0.05,
+            "min": 0.001,
+            "max": 0.5,
+            "step": 0.001,
+            "meaning": "Ngưỡng số dùng để xem singular value nhỏ là độc lập thật hay gần phụ thuộc tuyến tính trong tính toán thực."
+          },
+          {
+            "key": "showProjection",
+            "label": "Hiện hình chiếu của v3 lên span(v1,v2)",
+            "type": "toggle",
+            "default": true,
+            "meaning": "Bật lớp trực quan để thấy phần nào của v3 được giải thích bởi v1,v2 và phần nào là thông tin mới."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "rankV",
+            "label": "Hạng của ma trận V",
+            "formula": "rank([v1 v2 v3]) với singular value >= independenceThreshold",
+            "interpretation": "Cho biết bộ vector đang sinh đường, mặt phẳng hay toàn bộ không gian 3D."
+          },
+          {
+            "key": "volume123",
+            "label": "Thể tích sinh bởi v1, v2, v3",
+            "formula": "|det([v1 v2 v3])|",
+            "interpretation": "Bằng 0 nghĩa là ba vector đồng phẳng hoặc phụ thuộc tuyến tính; càng lớn nghĩa là ba hướng càng tạo không gian 3D rõ rệt."
+          },
+          {
+            "key": "gramDet",
+            "label": "Định thức Gram",
+            "formula": "det(V^T V) = det(V)^2 khi V là 3x3",
+            "interpretation": "Đo bình phương thể tích hình hộp sinh bởi ba vector. Giá trị rất nhỏ báo hiệu gần phụ thuộc tuyến tính và dễ bất ổn số."
+          },
+          {
+            "key": "residualV3ToSpan12",
+            "label": "Sai số dư của v3 so với span(v1,v2)",
+            "formula": "||v3 - Proj_span(v1,v2)(v3)||2",
+            "interpretation": "Gần 0 nghĩa là v3 hầu như không thêm chiều thông tin mới so với v1,v2; lớn nghĩa là v3 có thành phần thật sự mới."
+          },
+          {
+            "key": "angle12",
+            "label": "Góc giữa v1 và v2",
+            "formula": "arccos((v1·v2)/(|v1||v2|))",
+            "interpretation": "Góc nhỏ báo hiệu hai biến hoặc hai cảm biến gần cùng một hướng thông tin, làm nền không gian kém ổn định."
+          },
+          {
+            "key": "smallestSingularValue",
+            "label": "Singular value nhỏ nhất của V",
+            "formula": "sigma_min(V)",
+            "interpretation": "Chỉ báo độ mong manh của độc lập tuyến tính. Nếu sigma_min nhỏ, kết luận hạng có thể thay đổi khi đổi ngưỡng hoặc khi có nhiễu."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Chuẩn",
+            "setup": "v1 = [1,0,0], v2 = [0,1,0], v3 = [0,0,1], independenceThreshold = 0.05.",
+            "expectedObservation": "Hạng bằng 3, volume123 bằng 1, gramDet bằng 1, residual của v3 so với span(v1,v2) bằng 1.",
+            "learningPoint": "Ba vector trực giao trong 3D tạo đủ ba chiều thông tin. v3 thật sự thêm chiều mới vì nó nằm ngoài mặt phẳng sinh bởi v1 và v2."
+          },
+          {
+            "name": "Biên",
+            "setup": "v1 = [1,0,0], v2 = [1,0.02,0], v3 = [0,0,0.03], sau đó tăng independenceThreshold từ 0.001 lên 0.1.",
+            "expectedObservation": "Hạng có thể đổi theo ngưỡng, volume123 rất nhỏ, gramDet cực nhỏ và singular value nhỏ nhất báo động gần phụ thuộc tuyến tính.",
+            "learningPoint": "Trong tính toán thực, gần phụ thuộc tuyến tính nguy hiểm vì một bộ vector nhìn có vẻ đủ ba hướng nhưng thật ra rất mong manh trước nhiễu và ngưỡng số."
+          },
+          {
+            "name": "Dễ sai",
+            "setup": "v1 = [1,0,0], v2 = [0,1,0], v3 = [10,10,0].",
+            "expectedObservation": "v3 có norm rất lớn nhưng residualV3ToSpan12 bằng 0, rankV vẫn bằng 2, volume123 bằng 0 và gramDet bằng 0.",
+            "learningPoint": "Vector dài không đồng nghĩa với vector mang chiều thông tin mới. Điều quyết định là hướng của nó có ra ngoài span hiện có hay không."
+          }
+        ],
+        "commonMisreadings": [
+          "Nhầm nhiều vector hơn với nhiều chiều thông tin hơn.",
+          "Tưởng vector dài hơn chắc chắn quan trọng hơn, trong khi nó có thể chỉ nằm trong span cũ.",
+          "Nhìn det hoặc volume bằng 0 như lỗi đồ họa, trong khi đó là tín hiệu học thuật cho phụ thuộc tuyến tính.",
+          "Tưởng rank chỉ là con số đại số khô khan, không liên quan tới cảm biến, đặc trưng hoặc bậc tự do điều khiển.",
+          "Quên rằng trong tính toán số, gần phụ thuộc tuyến tính cũng đáng lo gần như phụ thuộc tuyến tính tuyệt đối."
+        ],
+        "reportTemplate": {
+          "observation": "Khi thay đổi hướng của v2 hoặc vị trí 3D của v3, tôi quan sát thấy rank(V) = ... , volume123 = ... , residualV3ToSpan12 = ...",
+          "explanation": "Điều này xảy ra vì chiều thông tin phụ thuộc vào độc lập tuyến tính và thành phần ngoài span, không phụ thuộc riêng vào số lượng vector hoặc độ dài vector ...",
+          "application": "Trong bài toán thật, kết quả này giúp phát hiện đặc trưng dư thừa, kênh cảm biến gần trùng hướng hoặc bộ hướng điều khiển không tạo đủ bậc tự do ...",
+          "warning": "Không nên kết luận bộ vector giàu thông tin chỉ vì có nhiều vector hoặc norm lớn; cần kiểm tra rank, volume, singular value nhỏ nhất và residual so với span hiện có ..."
+        }
+      }
+    },
+    {
+      "lessonNo": 2,
+      "lessonId": "MATH-LA-C04-L02",
+      "lessonTitle": "§4.2 Ma trận của ánh xạ tuyến tính, hạng và tính khả nghịch",
+      "coreQuestion": "Một ma trận đang kéo giãn, quay, cắt xiên hay làm sụp những hướng nào của không gian, và khi nào đầu vào còn khôi phục được?",
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-LA-C04-L02",
+        "type": "unified",
+        "simKind": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "Lưới biến đổi dưới ánh xạ tuyến tính",
+        "purpose": "Mô phỏng giúp người học nhìn ma trận như một phép biến đổi hình học, thấy được hạng, định thức, diện tích biến đổi, số điều kiện và nguy cơ mất thông tin khi suy ngược.",
+        "realUse": "Dùng trong biến đổi tọa độ robot, hiệu chuẩn camera, lớp tuyến tính trong mạng neural, Jacobian cục bộ và chuyển hệ trục trong xử lý tín hiệu.",
+        "formula": "y = Ax; det(A) đo hệ số co giãn diện tích trong 2D; rank(A) đo số chiều ảnh; kappa2(A) = sigma_max(A)/sigma_min(A); A khả nghịch khi det(A) != 0 trong trường hợp vuông đủ hạng, nhưng chỉ ổn định khi kappa2(A) không quá lớn.",
+        "conceptualModel": "Ma trận biến lưới đầu vào thành lưới đầu ra. Nếu lưới bị ép thành đường, thông tin một chiều đã mất. Nếu lưới còn diện tích khác 0, đầu vào vẫn khôi phục được trên lý thuyết, nhưng phép nghịch đảo có thể khuếch đại nhiễu mạnh nếu sigma_min nhỏ và kappa2(A) lớn.",
+        "visualProfile": "matrix_grid",
+        "controls": [
+          {
+            "key": "a11",
+            "label": "A11",
+            "type": "number",
+            "default": 1.2,
+            "min": -3,
+            "max": 3,
+            "step": 0.1,
+            "meaning": "Phần tử hàng 1 cột 1 của ma trận biến đổi."
+          },
+          {
+            "key": "a12",
+            "label": "A12",
+            "type": "number",
+            "default": 0.8,
+            "min": -3,
+            "max": 3,
+            "step": 0.1,
+            "meaning": "Mức trộn từ trục thứ hai sang trục thứ nhất."
+          },
+          {
+            "key": "a21",
+            "label": "A21",
+            "type": "number",
+            "default": -0.4,
+            "min": -3,
+            "max": 3,
+            "step": 0.1,
+            "meaning": "Mức trộn từ trục thứ nhất sang trục thứ hai."
+          },
+          {
+            "key": "a22",
+            "label": "A22",
+            "type": "number",
+            "default": 1.1,
+            "min": -3,
+            "max": 3,
+            "step": 0.1,
+            "meaning": "Phần tử hàng 2 cột 2 của ma trận biến đổi."
+          },
+          {
+            "key": "probeX",
+            "label": "Vector khảo sát x",
+            "type": "vector",
+            "default": [
+              1,
+              1
+            ],
+            "min": -3,
+            "max": 3,
+            "step": 0.1,
+            "meaning": "Vector đầu vào cụ thể để quan sát ảnh y = Ax."
+          },
+          {
+            "key": "inputNoise",
+            "label": "Nhiễu nhỏ trên ảnh y",
+            "type": "range",
+            "default": 0.001,
+            "min": 0,
+            "max": 0.1,
+            "step": 0.001,
+            "meaning": "Nhiễu nhỏ thêm vào y = Ax để kiểm tra phép khôi phục x có ổn định hay bị khuếch đại."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "detA",
+            "label": "Định thức det(A)",
+            "formula": "a11*a22 - a12*a21",
+            "interpretation": "Cho biết phép biến đổi co giãn diện tích bao nhiêu lần và có đổi orientation hay không."
+          },
+          {
+            "key": "rankA",
+            "label": "Hạng của A",
+            "formula": "rank(A)",
+            "interpretation": "Nếu hạng giảm, có ít nhất một hướng đầu vào bị mất thông tin."
+          },
+          {
+            "key": "areaScale",
+            "label": "Hệ số co giãn diện tích",
+            "formula": "|det(A)|",
+            "interpretation": "Gần 0 nghĩa là hình bị ép dẹt và phép nghịch đảo dễ bất ổn."
+          },
+          {
+            "key": "reconstructionResidual",
+            "label": "Sai số tái tạo A^-1Ax",
+            "formula": "||x - A^-1(Ax)||2 nếu A khả nghịch",
+            "interpretation": "Sai số nhỏ xác nhận khả năng khôi phục trạng thái trong mô hình số hiện tại."
+          },
+          {
+            "key": "conditionNumberA",
+            "label": "Số điều kiện của A",
+            "formula": "kappa2(A) = sigma_max(A) / sigma_min(A)",
+            "interpretation": "Cho biết phép nghịch đảo của A có thể khuếch đại nhiễu mạnh đến mức nào. A có thể khả nghịch nhưng vẫn nguy hiểm nếu kappa2(A) lớn."
+          },
+          {
+            "key": "noiseAmplificationOnInverse",
+            "label": "Khuếch đại nhiễu khi khôi phục",
+            "formula": "||A^-1(y + delta y) - A^-1y||2 / ||delta y||2 nếu A khả nghịch",
+            "interpretation": "Đo trực tiếp việc một nhiễu nhỏ ở đầu ra y làm nghiệm khôi phục x thay đổi bao nhiêu."
+          },
+          {
+            "key": "inverseRiskStatus",
+            "label": "Rủi ro khi dùng A^-1",
+            "formula": "PASS nếu rank đầy đủ và kappa2 thấp; REVIEW nếu kappa2 trung bình/cao; RISK nếu rank thiếu hoặc sigma_min gần 0",
+            "interpretation": "Ngăn nhầm lẫn giữa khả nghịch lý thuyết và khả năng suy ngược ổn định trong tính toán."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Chuẩn",
+            "setup": "A = [[1.2,0.8],[-0.4,1.1]], inputNoise rất nhỏ.",
+            "expectedObservation": "Lưới bị xiên và kéo giãn nhưng vẫn giữ đủ 2 chiều; det(A) khác 0, conditionNumberA vừa phải và vector khảo sát khôi phục ổn định.",
+            "learningPoint": "Ma trận khả nghịch có thể làm biến dạng mạnh nhưng vẫn giữ thông tin nếu số điều kiện còn tốt."
+          },
+          {
+            "name": "Biên",
+            "setup": "A = [[1,1.01],[2,2.02]], inputNoise tăng nhẹ.",
+            "expectedObservation": "Lưới gần như ép vào một dải mỏng, det(A) rất nhỏ, conditionNumberA tăng mạnh và noiseAmplificationOnInverse nhảy vọt.",
+            "learningPoint": "Gần suy biến là trạng thái nguy hiểm trong robot và hiệu chuẩn vì nghịch đảo khuếch đại nhiễu dù rank có thể vẫn đầy đủ trên lý thuyết."
+          },
+          {
+            "name": "Dễ sai",
+            "setup": "A = [[100,200],[50,100]].",
+            "expectedObservation": "Các phần tử lớn nhưng rank chỉ bằng 1, hình bị sụp thành một đường; inverseRiskStatus báo RISK.",
+            "learningPoint": "Hệ số lớn không đồng nghĩa với truyền nhiều thông tin; quan hệ giữa các cột, rank và sigma_min mới quyết định khả năng khôi phục."
+          }
+        ],
+        "runProtocol": [
+          "Điều chỉnh từng phần tử của A và quan sát lưới chuẩn biến dạng.",
+          "Theo dõi đồng thời det(A), rank(A), areaScale, conditionNumberA và ảnh của vector x.",
+          "Tạo ma trận gần suy biến, thêm inputNoise rất nhỏ và quan sát noiseAmplificationOnInverse.",
+          "Kết luận phép biến đổi hiện tại phù hợp cho đổi tọa độ ổn định hay đang tiềm ẩn mất thông tin và khuếch đại nhiễu."
+        ],
+        "decisionRule": {
+          "PASS": "rank(A) đầy đủ, det(A) cách xa 0, conditionNumberA thấp và sai số/khuếch đại khi khôi phục nhỏ.",
+          "REVIEW": "det(A) nhỏ hoặc lưới sau biến đổi quá dẹt dù rank vẫn đủ; conditionNumberA tăng làm phép nghịch đảo nhạy nhiễu.",
+          "RISK": "Dùng ma trận suy biến hoặc gần suy biến để suy ngược trạng thái mà không đánh giá conditionNumberA và noiseAmplificationOnInverse."
+        },
+        "commonMisreadings": [
+          "Tưởng det(A) âm nghĩa là sai, trong khi nó chỉ báo đổi orientation.",
+          "Nhầm hạng đầy đủ với ổn định số tốt.",
+          "Cho rằng phần tử ma trận lớn thì phép biến đổi chắc chắn mạnh và giàu thông tin.",
+          "Thấy A khả nghịch rồi bỏ qua conditionNumberA, dẫn tới tin nhầm phép nghịch đảo trong bài toán nhiễu."
+        ],
+        "reportTemplate": {
+          "observation": "Khi thay đổi các phần tử của A, tôi quan sát thấy lưới bị ...; det(A), rank(A), conditionNumberA và noiseAmplificationOnInverse thay đổi theo ...",
+          "explanation": "Điều này xảy ra vì ma trận là ánh xạ tuyến tính có thể kéo giãn, xoay, cắt xiên hoặc làm sụp các hướng; khi sigma_min nhỏ, phép nghịch đảo khuếch đại nhiễu ...",
+          "application": "Trong bài toán thật, kết quả này giúp kiểm tra phép đổi tọa độ, calibration hoặc Jacobian có còn khôi phục trạng thái ổn định được hay không ...",
+          "warning": "Không nên kết luận phép biến đổi tốt chỉ vì hệ số lớn hoặc det(A) khác 0 nếu conditionNumberA cao, rank thiếu hoặc nhiễu bị khuếch đại khi suy ngược ..."
+        }
+      }
+    },
+    {
+      "lessonNo": 3,
+      "lessonId": "MATH-LA-C04-L03",
+      "lessonTitle": "§4.3 Trực chuẩn hóa Gram-Schmidt và phép chiếu trực giao",
+      "coreQuestion": "Vì sao cùng một không gian con nhưng cơ sở trực chuẩn giúp phép chiếu, đo residual và suy luận sai số ổn định hơn?",
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-LA-C04-L03",
+        "type": "unified",
+        "simKind": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "Gram-Schmidt 3D, mặt phẳng chiếu và residual trực giao",
+        "purpose": "Mô phỏng cho người học thấy Gram-Schmidt giữ nguyên mặt phẳng span(a1,a2) nhưng biến cơ sở bên trong mặt phẳng thành q1,q2 trực chuẩn, nhờ đó phép chiếu của vector x lên mặt phẳng và phần residual vuông góc được đo đúng, rõ và ổn định hơn.",
+        "realUse": "Dùng trong QR decomposition, least squares ổn định, tách tín hiệu khỏi nền nhiễu, ước lượng trạng thái robot, lọc dữ liệu cảm biến, nén đặc trưng và hiệu chỉnh không gian quan sát trong machine learning.",
+        "formula": "u1 = a1, q1 = u1/||u1||2; u2 = a2 - (q1^T a2)q1, q2 = u2/||u2||2; Q = [q1 q2]; x_hat = QQ^T x; r = x - x_hat; residual = ||r||2; q1^T q2 = 0; Q^T r = 0",
+        "conceptualModel": "Trong R3, hai vector độc lập a1,a2 sinh ra một mặt phẳng. Gram-Schmidt không xoay sang một mặt phẳng mới mà chỉ dựng hai trục vuông góc q1,q2 nằm ngay trên mặt phẳng đó. Khi chiếu x xuống mặt phẳng, phần còn lại r phải vuông góc với cả q1 và q2. Nếu a1,a2 gần song song, mặt phẳng vẫn tồn tại nhưng phép dựng q2 trở nên nhạy như kim đồng hồ trong bão số học.",
+        "visualProfile": "vector_plane_projection_3d",
+        "controls": [
+          {
+            "key": "a1",
+            "label": "Vector a1 trong R3",
+            "type": "vector3",
+            "default": [
+              1,
+              0,
+              0
+            ],
+            "min": -4,
+            "max": 4,
+            "step": 0.1,
+            "meaning": "Vector đầu tiên sinh mặt phẳng chiếu."
+          },
+          {
+            "key": "a2",
+            "label": "Vector a2 trong R3",
+            "type": "vector3",
+            "default": [
+              0,
+              1,
+              0
+            ],
+            "min": -4,
+            "max": 4,
+            "step": 0.1,
+            "meaning": "Vector thứ hai sinh mặt phẳng chiếu, có thể kéo gần song song với a1 để tạo trường hợp biên."
+          },
+          {
+            "key": "x",
+            "label": "Vector cần chiếu x trong R3",
+            "type": "vector3",
+            "default": [
+              1.2,
+              1.4,
+              1
+            ],
+            "min": -4,
+            "max": 4,
+            "step": 0.1,
+            "meaning": "Tín hiệu, trạng thái robot hoặc vector đặc trưng cần xấp xỉ trên mặt phẳng span(a1,a2)."
+          },
+          {
+            "key": "noiseLevel",
+            "label": "Mức nhiễu đo trên a2",
+            "type": "range",
+            "default": 0,
+            "min": 0,
+            "max": 0.5,
+            "step": 0.01,
+            "meaning": "Thêm nhiễu nhỏ vào a2 để khảo sát độ nhạy của Gram-Schmidt khi hai vector gần phụ thuộc."
+          },
+          {
+            "key": "showResidual",
+            "label": "Hiện vector residual r = x - x_hat",
+            "type": "toggle",
+            "default": true,
+            "meaning": "Bật để thấy phần của x nằm ngoài mặt phẳng chiếu."
+          },
+          {
+            "key": "showOriginalBasis",
+            "label": "So sánh với cơ sở gốc a1,a2",
+            "type": "toggle",
+            "default": true,
+            "meaning": "Bật để so sánh cơ sở xiên ban đầu với cơ sở trực chuẩn q1,q2 sau Gram-Schmidt."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "u2Norm",
+            "label": "Độ dài thành phần mới ||u2||",
+            "formula": "||a2 - (q1^T a2)q1||2",
+            "interpretation": "Nếu rất nhỏ, a2 gần nằm trên hướng a1 và quá trình dựng q2 dễ mất ổn định."
+          },
+          {
+            "key": "orthogonalityError",
+            "label": "Sai lệch trực giao |q1·q2|",
+            "formula": "|q1^T q2|",
+            "interpretation": "Càng gần 0 thì cơ sở q1,q2 càng sạch, phép chiếu càng đáng tin."
+          },
+          {
+            "key": "projectionCoefficients",
+            "label": "Hệ số chiếu trên q1,q2",
+            "formula": "[q1^T x, q2^T x]",
+            "interpretation": "Mỗi hệ số đo thành phần của x theo một hướng trực giao nằm trong mặt phẳng."
+          },
+          {
+            "key": "projectedVector",
+            "label": "Vector chiếu x_hat",
+            "formula": "x_hat = QQ^T x",
+            "interpretation": "Điểm gần x nhất nằm trên mặt phẳng span(a1,a2)."
+          },
+          {
+            "key": "residualNorm",
+            "label": "Norm residual ||r||",
+            "formula": "||x - QQ^T x||2",
+            "interpretation": "Đo độ lớn phần của x nằm ngoài mặt phẳng. Trong R3, giá trị này không còn mặc định bằng 0 như lab 2D cũ."
+          },
+          {
+            "key": "residualOrthogonality",
+            "label": "Residual có vuông góc với mặt phẳng không?",
+            "formula": "max(|q1^T r|, |q2^T r|)",
+            "interpretation": "Gần 0 nghĩa là residual thật sự vuông góc với mặt phẳng chiếu, đúng bản chất least squares."
+          },
+          {
+            "key": "basisStability",
+            "label": "Chỉ báo ổn định cơ sở gốc",
+            "formula": "1/sin(angle(a1,a2))",
+            "interpretation": "Càng lớn thì cơ sở gốc càng xiên hoặc gần phụ thuộc, hệ số biểu diễn càng nhạy với nhiễu."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Chuẩn",
+            "setup": "a1 = [1,0,0], a2 = [0,1,0], x = [1.2,1.4,1].",
+            "expectedObservation": "q1,q2 trùng với hai trục của mặt phẳng Oxy; x_hat = [1.2,1.4,0]; residual = [0,0,1] và residualNorm = 1.",
+            "learningPoint": "Phép chiếu trực giao tách rõ phần nằm trong mặt phẳng và phần nằm ngoài mặt phẳng."
+          },
+          {
+            "name": "Biên",
+            "setup": "a1 = [1,0,0], a2 = [1,0.01,0], noiseLevel tăng dần từ 0 đến 0.1.",
+            "expectedObservation": "u2Norm rất nhỏ, basisStability tăng cao; q2 và projectionCoefficients nhạy mạnh với nhiễu dù mặt phẳng hình học gần như không đổi.",
+            "learningPoint": "Cơ sở gần phụ thuộc không nhất thiết làm sai mô hình hình học, nhưng làm phép tính số học trở nên mong manh."
+          },
+          {
+            "name": "Dễ sai",
+            "setup": "So sánh x = [2,2,0] và x = [2,2,2] trên cùng mặt phẳng span(a1,a2) = Oxy.",
+            "expectedObservation": "Hai vector có cùng hình chiếu x_hat trên Oxy nhưng residualNorm khác nhau rõ rệt: vector có thành phần z lớn mang thông tin ngoài mặt phẳng lớn hơn.",
+            "learningPoint": "Không được kết luận hai tín hiệu giống nhau chỉ vì hình chiếu của chúng lên subspace giống nhau; residual mới cho biết phần bị bỏ ngoài mô hình."
+          }
+        ],
+        "runProtocol": [
+          "Thiết lập a1, a2 để tạo mặt phẳng chiếu trong R3, sau đó quan sát q1,q2 sinh bởi Gram-Schmidt.",
+          "Di chuyển x ra khỏi mặt phẳng và đọc x_hat, residualNorm, residualOrthogonality.",
+          "Kéo a2 gần song song với a1 rồi tăng noiseLevel để kiểm tra u2Norm và basisStability.",
+          "So sánh hệ số trên cơ sở gốc a1,a2 với hệ số chiếu trên q1,q2 để thấy khác biệt giữa biểu diễn xiên và chiếu trực giao.",
+          "Kết luận khi nào nên dùng QR hoặc cơ sở trực chuẩn trong least squares, xử lý tín hiệu và ước lượng trạng thái."
+        ],
+        "decisionRule": {
+          "PASS": "orthogonalityError nhỏ, residualOrthogonality gần 0, residualNorm phản ánh đúng phần của x nằm ngoài mặt phẳng và projectionCoefficients ổn định khi nhiễu nhỏ.",
+          "REVIEW": "u2Norm nhỏ hoặc basisStability cao, cho thấy cơ sở gốc gần phụ thuộc và phép tính cần dùng QR ổn định hơn.",
+          "RISK": "Dùng cơ sở xiên gần phụ thuộc để đọc ý nghĩa vật lý của từng hệ số, hoặc bỏ qua residual khi nén tín hiệu xuống một mặt phẳng."
+        },
+        "commonMisreadings": [
+          "Tưởng trực chuẩn hóa làm thay đổi không gian con, trong khi nó chỉ đổi cơ sở bên trong cùng mặt phẳng.",
+          "Đọc hệ số trên cơ sở không chuẩn như hệ số chiếu trực giao.",
+          "Nhầm residual nhỏ với cơ sở tốt, dù residual đo mức khớp với span còn độ ổn định phụ thuộc góc giữa a1 và a2.",
+          "Quên kiểm tra phần ngoài mặt phẳng nên tưởng phép chiếu giữ đủ thông tin của tín hiệu."
+        ],
+        "reportTemplate": {
+          "observation": "Khi đưa x ra khỏi mặt phẳng span(a1,a2), tôi quan sát thấy x_hat ... còn residual r ... với residualNorm ...",
+          "explanation": "Điều này xảy ra vì Gram-Schmidt giữ nguyên mặt phẳng nhưng tạo q1,q2 trực chuẩn, nên x được tách thành phần trong mặt phẳng và thành phần vuông góc ...",
+          "application": "Trong bài toán thật, kết quả này giúp chọn QR/cơ sở trực chuẩn khi giải least squares, tách tín hiệu khỏi nền, hiệu chỉnh cảm biến hoặc ước lượng trạng thái robot ...",
+          "warning": "Không nên đọc hệ số trên cơ sở xiên như hệ số chiếu trực giao, và không nên bỏ qua residual khi subspace chỉ mô tả một phần dữ liệu ..."
+        }
+      }
+    },
+    {
+      "lessonNo": 4,
+      "lessonId": "MATH-LA-C04-L04",
+      "lessonTitle": "§4.4 Hệ quá xác định và bình phương tối thiểu",
+      "coreQuestion": "Khi dữ liệu mâu thuẫn và không tồn tại nghiệm chính xác, nghiệm nào là tốt nhất và vì sao?",
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-LA-C04-L04",
+        "type": "unified",
+        "simKind": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "Hồi quy tuyến tính, hình học least squares và độ giàu của dữ liệu",
+        "purpose": "Mô phỏng giúp người học hiểu least squares như phép chiếu dữ liệu lên không gian cột của ma trận thiết kế, đồng thời thấy rõ vì sao phân bố điểm đo, nhiễu, outlier và thuật toán giải quyết định độ tin cậy của tham số ước lượng.",
+        "realUse": "Dùng trong calibration cảm biến, nhận dạng tham số động học robot, fitting tín hiệu, hồi quy tuyến tính nền cho dữ liệu thực nghiệm, đánh giá outlier và kiểm tra độ giàu kích thích của dữ liệu điều khiển.",
+        "formula": "beta_hat = argmin_beta ||X beta - y||2^2; nếu X đủ hạng cột thì beta_hat = (X^T X)^(-1)X^T y; residual r = y - X beta_hat và X^T r = 0. Khi kappa2(X^T X) lớn, nên so sánh normal equation với QR hoặc SVD.",
+        "conceptualModel": "Khi các phép đo không giao tại một nghiệm chính xác, nghiệm least squares là điểm trong không gian cột của X gần y nhất. Nhưng nghiệm này chỉ đáng tin khi dữ liệu đủ trải rộng, ma trận thiết kế đủ hạng và thuật toán giải không khuếch đại sai số số học.",
+        "visualProfile": "graph_curve_with_design_matrix_panel",
+        "controls": [
+          {
+            "key": "sampleSize",
+            "label": "Số mẫu",
+            "type": "range",
+            "default": 20,
+            "min": 4,
+            "max": 200,
+            "step": 1,
+            "meaning": "Số điểm dữ liệu dùng để khớp đường thẳng. Ít mẫu làm nghiệm dễ dao động, nhiều mẫu chỉ hữu ích khi mẫu đủ đa dạng."
+          },
+          {
+            "key": "xDistributionMode",
+            "label": "Kiểu phân bố x",
+            "type": "select",
+            "default": "wide_uniform",
+            "options": [
+              {
+                "value": "wide_uniform",
+                "label": "Trải đều rộng"
+              },
+              {
+                "value": "clustered",
+                "label": "Co cụm gần một vùng"
+              },
+              {
+                "value": "two_clusters",
+                "label": "Hai cụm tách xa"
+              },
+              {
+                "value": "repeated_x",
+                "label": "Nhiều x gần lặp lại"
+              }
+            ],
+            "meaning": "Quy định độ giàu hình học của ma trận thiết kế X. Đây là nút chính để tạo tình huống biên trong bài."
+          },
+          {
+            "key": "xSpread",
+            "label": "Độ trải của x",
+            "type": "range",
+            "default": 6,
+            "min": 0.05,
+            "max": 10,
+            "step": 0.05,
+            "meaning": "Độ rộng miền giá trị x. xSpread rất nhỏ làm các cột của X gần phụ thuộc và làm hệ số góc kém tin cậy."
+          },
+          {
+            "key": "trueSlope",
+            "label": "Hệ số góc thật",
+            "type": "range",
+            "default": 1.5,
+            "min": -5,
+            "max": 5,
+            "step": 0.1,
+            "meaning": "Tham số sinh dữ liệu nền cần được ước lượng lại từ dữ liệu đo."
+          },
+          {
+            "key": "trueIntercept",
+            "label": "Hệ số chặn thật",
+            "type": "range",
+            "default": 0.5,
+            "min": -3,
+            "max": 3,
+            "step": 0.1,
+            "meaning": "Độ lệch gốc của mô hình nền cần được ước lượng lại."
+          },
+          {
+            "key": "noiseSigma",
+            "label": "Độ lệch chuẩn nhiễu",
+            "type": "range",
+            "default": 0.3,
+            "min": 0,
+            "max": 2,
+            "step": 0.05,
+            "meaning": "Cường độ nhiễu đo trên dữ liệu. Nhiễu lớn làm residual tăng và tham số dao động."
+          },
+          {
+            "key": "outlierToggle",
+            "label": "Bật ngoại lai",
+            "type": "toggle",
+            "default": false,
+            "meaning": "Chèn điểm ngoại lai để quan sát độ nhạy của tiêu chuẩn bình phương sai số."
+          },
+          {
+            "key": "solverMethod",
+            "label": "Cách giải",
+            "type": "select",
+            "default": "qr",
+            "options": [
+              {
+                "value": "normal_equation",
+                "label": "Phương trình chuẩn"
+              },
+              {
+                "value": "qr",
+                "label": "QR"
+              },
+              {
+                "value": "svd",
+                "label": "SVD"
+              }
+            ],
+            "meaning": "Cho người học so sánh nghiệm khi giải bằng X^T X với nghiệm ổn định hơn từ QR hoặc SVD."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "estimatedParams",
+            "label": "Tham số ước lượng",
+            "formula": "beta_hat = [m_hat, c_hat]^T từ nghiệm LS của X beta = y",
+            "interpretation": "So sánh với tham số thật để thấy tác động của nhiễu, outlier và cấu trúc dữ liệu."
+          },
+          {
+            "key": "parameterError",
+            "label": "Sai số tham số",
+            "formula": "||beta_hat - beta_true||2",
+            "interpretation": "Đo trực tiếp độ lệch của tham số ước lượng; cần xem cùng residualNorm để tránh kết luận lệch."
+          },
+          {
+            "key": "residualNorm",
+            "label": "Norm residual",
+            "formula": "||y - X beta_hat||2",
+            "interpretation": "Sai số còn lại sau fitting; nhỏ không đồng nghĩa mô hình đúng hoặc tham số đáng tin."
+          },
+          {
+            "key": "mse",
+            "label": "Sai số trung bình bình phương",
+            "formula": "||y - X beta_hat||2^2 / sampleSize",
+            "interpretation": "Đo mức khớp trung bình của mô hình với dữ liệu hiện tại."
+          },
+          {
+            "key": "conditionNumberX",
+            "label": "Số điều kiện của X",
+            "formula": "kappa2(X)",
+            "interpretation": "Cho biết độ nhạy hình học của bài toán least squares trước khi lập phương trình chuẩn."
+          },
+          {
+            "key": "normalEqCondition",
+            "label": "Số điều kiện của X^T X",
+            "formula": "kappa2(X^T X) ≈ kappa2(X)^2",
+            "interpretation": "Lớn báo hiệu không nên giải bằng nghịch đảo phương trình chuẩn, cần QR hoặc SVD."
+          },
+          {
+            "key": "orthogonalityCheck",
+            "label": "Kiểm tra trực giao residual",
+            "formula": "||X^T r||2",
+            "interpretation": "Nghiệm LS đúng phải làm residual gần trực giao với không gian cột của X."
+          },
+          {
+            "key": "solverDisagreement",
+            "label": "Độ lệch giữa các cách giải",
+            "formula": "||beta_normal - beta_svd||2",
+            "interpretation": "Nếu lệch lớn, bài toán hoặc phương pháp giải đang kém ổn định."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Chuẩn",
+            "setup": "sampleSize = 20, xDistributionMode = wide_uniform, xSpread = 6, noiseSigma = 0.3, outlierToggle = false, solverMethod = qr.",
+            "expectedObservation": "Đường fit bám xu hướng chung, tham số ước lượng gần tham số thật, residual hữu hạn và kappa2(X) ở mức an toàn.",
+            "learningPoint": "Least squares hoạt động tốt khi mô hình phù hợp, dữ liệu trải đủ rộng và nhiễu vừa phải."
+          },
+          {
+            "name": "Biên",
+            "setup": "sampleSize = 4, xDistributionMode = clustered hoặc repeated_x, xSpread = 0.05, noiseSigma = 0.1, outlierToggle = false.",
+            "expectedObservation": "conditionNumberX và normalEqCondition tăng mạnh; hệ số góc dao động lớn dù residualNorm hoặc MSE có thể thấp.",
+            "learningPoint": "Fit đẹp trên mẫu hiện tại không bảo đảm tham số đáng tin nếu thiết kế thí nghiệm nghèo hoặc điểm đo gần lặp lại."
+          },
+          {
+            "name": "Dễ sai",
+            "setup": "xDistributionMode = clustered, xSpread nhỏ, bật outlierToggle hoặc chọn solverMethod = normal_equation khi normalEqCondition rất lớn.",
+            "expectedObservation": "Đường fit bị kéo lệch hoặc nghiệm từ normal_equation khác QR/SVD; residual có thể không báo hết rủi ro tham số.",
+            "learningPoint": "Tối ưu bình phương sai số, dữ liệu ngoại lai và cách giải số học là ba thứ khác nhau; cần kiểm tra cả residual, điều kiện ma trận và độ ổn định nghiệm."
+          }
+        ],
+        "runProtocol": [
+          "Sinh dữ liệu với wide_uniform, xSpread vừa phải và đọc đường fitted cùng estimatedParams.",
+          "Giảm xSpread hoặc chuyển sang clustered để quan sát conditionNumberX và normalEqCondition tăng.",
+          "So sánh solverMethod giữa normal_equation, QR và SVD khi ma trận thiết kế kém điều kiện.",
+          "Bật outlierToggle và so sánh parameterError, residualNorm, MSE và solverDisagreement.",
+          "Kết luận nghiệm LS hiện tại đáng dùng cho nhận dạng tham số hay chỉ nên xem là baseline cần kiểm chứng thêm."
+        ],
+        "decisionRule": {
+          "PASS": "Dữ liệu đủ trải rộng, residual hợp lý, tham số ổn định, kappa2(X) không quá lớn và các cách giải cho nghiệm gần nhau.",
+          "REVIEW": "Residual thấp nhưng xSpread nhỏ, số điều kiện cao, số mẫu ít hoặc nghiệm thay đổi mạnh khi đổi solver/bỏ vài điểm.",
+          "RISK": "Tin tuyệt đối vào nghiệm LS khi có outlier mạnh, dữ liệu co cụm hoặc giải bằng X^T X trong trạng thái kém điều kiện."
+        },
+        "commonMisreadings": [
+          "Nhầm residual nhỏ với mô hình chắc chắn đúng.",
+          "Tưởng thêm mẫu luôn tốt, dù mẫu có thể lặp gần cùng một vùng x và không thêm thông tin hình học.",
+          "Quên rằng dùng phương trình chuẩn làm số điều kiện bị bình phương hóa.",
+          "Nhầm đường fit đẹp trong vùng hẹp với khả năng dự đoán tốt ngoài vùng dữ liệu.",
+          "Không phân biệt lỗi do outlier với lỗi do ma trận thiết kế kém điều kiện."
+        ],
+        "reportTemplate": {
+          "observation": "Khi thay đổi xDistributionMode, xSpread, mức nhiễu hoặc bật ngoại lai, tôi quan sát thấy đường fit ..., estimatedParams ..., residualNorm ... và conditionNumberX ...",
+          "explanation": "Điều này xảy ra vì nghiệm least squares là phép chiếu dữ liệu lên không gian cột của ma trận thiết kế; nếu các cột của X gần phụ thuộc hoặc dữ liệu co cụm, tham số có thể rất nhạy dù residual nhỏ ...",
+          "application": "Trong calibration cảm biến hoặc nhận dạng tham số robot, kết quả này giúp quyết định khi nào tin vào tham số ước lượng, khi nào cần thu dữ liệu trải rộng hơn, lọc outlier hoặc dùng QR/SVD ...",
+          "warning": "Không nên kết luận mô hình đúng chỉ vì residual nhỏ nếu dữ liệu có outlier, xSpread quá hẹp hoặc normalEqCondition quá lớn ..."
+        }
+      }
+    },
+    {
+      "lessonNo": 5,
+      "lessonId": "MATH-LA-C04-L05",
+      "lessonTitle": "§4.5 Chuẩn ma trận, số điều kiện và độ nhạy của nghiệm",
+      "coreQuestion": "Khi nhiễu đầu vào rất nhỏ, vì sao nghiệm đầu ra có thể sai rất lớn?",
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-LA-C04-L05",
+        "type": "unified",
+        "simKind": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "Khuếch đại sai số qua số điều kiện",
+        "purpose": "Mô phỏng giúp người học thấy ma trận càng làm dẹt theo một hướng thì bài toán nghịch đảo càng biến nhiễu nhỏ thành sai số lớn, đồng thời phân biệt residual nhỏ với nghiệm thật sự đáng tin.",
+        "realUse": "Dùng trong nghịch động học robot gần kỳ dị, giải bài toán khử chập, nhận dạng hệ, chuẩn hóa dữ liệu và suy luận từ phép đo có thang đo bất cân đối.",
+        "formula": "kappa2(A) = sigma_max(A) / sigma_min(A); với Ax = b và nhiễu delta b, ||delta x||/||x|| <= kappa2(A) * ||delta b||/||b||; residualNorm = ||A*x_hat - b_noisy||2 không tự nó bảo đảm x_hat gần x thật nếu A kém điều kiện.",
+        "conceptualModel": "Số điều kiện đo khả năng khuếch đại sai số khi giải ngược. Nó không nói lỗi chắc chắn xảy ra theo mọi hướng, mà nói mức tệ nhất có thể xảy ra nếu nhiễu nằm gần hướng nhạy của hệ. Residual nhỏ chỉ cho biết nghiệm khớp với hệ đã nhiễu, không đảm bảo nghiệm gần nghiệm gốc.",
+        "visualProfile": "matrix_grid",
+        "controls": [
+          {
+            "key": "sigmaMax",
+            "label": "Singular value lớn nhất",
+            "type": "range",
+            "default": 5,
+            "min": 0.5,
+            "max": 20,
+            "step": 0.1,
+            "meaning": "Mức kéo giãn mạnh nhất của ma trận."
+          },
+          {
+            "key": "sigmaMin",
+            "label": "Singular value nhỏ nhất",
+            "type": "range",
+            "default": 1,
+            "min": 0.001,
+            "max": 5,
+            "step": 0.001,
+            "meaning": "Mức kéo giãn yếu nhất; càng nhỏ thì bài toán càng gần suy biến."
+          },
+          {
+            "key": "rotationDeg",
+            "label": "Góc xoay cơ sở",
+            "type": "range",
+            "default": 25,
+            "min": 0,
+            "max": 180,
+            "step": 1,
+            "meaning": "Xoay hệ singular vector để khảo sát hướng nhiễu so với hướng nhạy."
+          },
+          {
+            "key": "rhsNoise",
+            "label": "Nhiễu tương đối của b",
+            "type": "range",
+            "default": 0.01,
+            "min": 0,
+            "max": 0.5,
+            "step": 0.001,
+            "meaning": "Mức nhiễu chèn vào quan sát b trước khi giải nghịch đảo."
+          },
+          {
+            "key": "noiseDirectionDeg",
+            "label": "Hướng nhiễu của b",
+            "type": "range",
+            "default": 0,
+            "min": 0,
+            "max": 180,
+            "step": 1,
+            "meaning": "Điều khiển hướng của nhiễu trong b để thấy cùng một biên độ nhiễu có thể gây sai số nghiệm rất khác nhau."
+          },
+          {
+            "key": "solutionProbe",
+            "label": "Vector nghiệm gốc x",
+            "type": "vector",
+            "default": [
+              1,
+              1
+            ],
+            "min": -5,
+            "max": 5,
+            "step": 0.1,
+            "meaning": "Nghiệm chuẩn để sinh b và kiểm tra sai lệch khi nhiễu xuất hiện."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "kappa2",
+            "label": "Số điều kiện kappa2(A)",
+            "formula": "sigmaMax / sigmaMin",
+            "interpretation": "Độ khuếch đại sai số tệ nhất theo chuẩn 2."
+          },
+          {
+            "key": "relativeInputPerturbation",
+            "label": "Nhiễu tương đối của b",
+            "formula": "||delta b||2 / ||b||2",
+            "interpretation": "Mức sai lệch tương đối của dữ liệu quan sát."
+          },
+          {
+            "key": "relativeOutputError",
+            "label": "Sai số tương đối của x",
+            "formula": "||x_hat - x||2 / ||x||2",
+            "interpretation": "Sai số thực của nghiệm sau khi nhiễu đi qua phép nghịch đảo."
+          },
+          {
+            "key": "amplificationFactor",
+            "label": "Hệ số khuếch đại quan sát được",
+            "formula": "(||x_hat - x||2 / ||x||2) / (||delta b||2 / ||b||2)",
+            "interpretation": "Cho biết thí nghiệm hiện tại đã khuếch đại nhiễu mạnh đến mức nào."
+          },
+          {
+            "key": "residualNorm",
+            "label": "Chuẩn residual",
+            "formula": "||A*x_hat - b_noisy||2",
+            "interpretation": "Residual nhỏ cho biết nghiệm khớp với hệ đã nhiễu, nhưng không bảo đảm nghiệm gần nghiệm thật nếu A kém điều kiện."
+          },
+          {
+            "key": "noiseAlignmentWithSensitiveDirection",
+            "label": "Độ trùng hướng với hướng nhạy",
+            "formula": "|cos(angle(delta b, u_min))|, với u_min là singular vector đầu ra ứng với sigma_min",
+            "interpretation": "Nhiễu càng trùng với hướng nhạy thì cùng một biên độ nhiễu càng dễ tạo sai số nghiệm lớn."
+          },
+          {
+            "key": "trustStatus",
+            "label": "Độ tin cậy của nghiệm",
+            "formula": "PASS nếu kappa2 thấp, residualNorm thấp và relativeOutputError thấp; REVIEW nếu một chỉ số xấu; RISK nếu residualNorm thấp nhưng relativeOutputError cao",
+            "interpretation": "Ngăn người học kết luận sai rằng residual nhỏ là đủ chứng minh nghiệm tốt."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Chuẩn",
+            "setup": "sigmaMax = 5, sigmaMin = 1, rhsNoise = 0.01, noiseDirectionDeg xa hướng nhạy.",
+            "expectedObservation": "kappa2 vừa phải, residualNorm thấp và sai số nghiệm tăng nhưng còn trong tầm kiểm soát.",
+            "learningPoint": "Bài toán điều kiện tốt cho phép suy ngược ổn định khi dữ liệu có nhiễu nhỏ."
+          },
+          {
+            "name": "Biên",
+            "setup": "sigmaMax = 5, sigmaMin = 0.01, rhsNoise = 0.01, noiseDirectionDeg gần hướng nhạy.",
+            "expectedObservation": "kappa2 tăng vọt, noiseAlignmentWithSensitiveDirection cao và cùng mức nhiễu tạo ra sai số nghiệm lớn.",
+            "learningPoint": "Chỉ một singular value rất nhỏ cũng đủ phá độ tin cậy của nghiệm nghịch đảo, đặc biệt khi nhiễu đi vào hướng nhạy."
+          },
+          {
+            "name": "Dễ sai",
+            "setup": "Chọn sigmaMin rất nhỏ, residualNorm gần 0 rồi suy ra nghiệm tốt.",
+            "expectedObservation": "Residual có thể thấp nhưng relativeOutputError vẫn lớn; trustStatus báo REVIEW hoặc RISK.",
+            "learningPoint": "Residual nhỏ không bảo đảm nghiệm thật gần đúng khi bài toán kém điều kiện."
+          }
+        ],
+        "runProtocol": [
+          "Điều chỉnh sigmaMin để tạo ma trận từ điều kiện tốt đến gần suy biến.",
+          "Giữ rhsNoise cố định và thay đổi noiseDirectionDeg để xem hướng nhiễu nào nguy hiểm.",
+          "Theo dõi kappa2, residualNorm, relativeOutputError, amplificationFactor và noiseAlignmentWithSensitiveDirection.",
+          "So sánh trường hợp residualNorm nhỏ nhưng relativeOutputError lớn để tránh kết luận sai.",
+          "Kết luận nên giải nghịch đảo trực tiếp, regularize, chuẩn hóa thang đo hay đổi mô hình đo."
+        ],
+        "decisionRule": {
+          "PASS": "kappa2 vừa phải, residualNorm thấp và sai số đầu ra không bị phóng đại quá mức so với nhiễu đầu vào.",
+          "REVIEW": "kappa2 lớn, noiseAlignmentWithSensitiveDirection cao hoặc sai số nghiệm biến động mạnh theo hướng nhiễu.",
+          "RISK": "Tin nghiệm chỉ vì residualNorm nhỏ trong khi sigmaMin rất nhỏ, relativeOutputError cao và bài toán sát kỳ dị."
+        },
+        "commonMisreadings": [
+          "Nhầm số điều kiện với sai số đã xảy ra trong mọi trường hợp.",
+          "Tin residual nhỏ là đủ chứng minh nghiệm tốt.",
+          "Bỏ qua hướng của nhiễu, dù cùng biên độ nhưng khác hướng có thể gây hậu quả rất khác.",
+          "Nhìn nghiệm khớp dữ liệu đã nhiễu rồi quên so với nghiệm thật hoặc nghiệm tham chiếu."
+        ],
+        "reportTemplate": {
+          "observation": "Khi giảm sigmaMin hoặc đổi noiseDirectionDeg, tôi quan sát thấy residualNorm ..., relativeOutputError ... và amplificationFactor ...",
+          "explanation": "Điều này xảy ra vì hướng gần-null của ma trận khuếch đại sai số khi giải nghịch đảo; residual nhỏ chỉ chứng minh khớp hệ đã nhiễu, không chứng minh nghiệm gần nghiệm thật ...",
+          "application": "Trong bài toán thật, kết quả này giúp nhận ra khi nào phải regularize, chuẩn hóa thang đo, tránh làm việc gần điểm kỳ dị hoặc thay đổi cấu hình cảm biến/robot ...",
+          "warning": "Không nên tin nghiệm chỉ dựa trên residualNorm nhỏ nếu kappa2 lớn, sigmaMin nhỏ hoặc nhiễu nằm gần hướng nhạy của hệ ..."
+        }
+      }
+    },
+    {
+      "lessonNo": 6,
+      "lessonId": "MATH-LA-C04-L06",
+      "lessonTitle": "§4.6 Trị riêng, vector riêng và ổn định của động học rời rạc",
+      "coreQuestion": "Các trị riêng quyết định như thế nào việc hệ x_{k+1} = Ax_k hội tụ, dao động hay bùng nổ?",
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-LA-C04-L06",
+        "type": "unified",
+        "simKind": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "Phổ ma trận, dao động xoắn ốc và ổn định rời rạc",
+        "purpose": "Mô phỏng giúp người học thấy trực tiếp trị riêng quyết định hành vi của hệ x_{k+1}=Ax_k: co về gốc, dao động đổi dấu, xoắn ốc tắt dần, giữ biên hoặc bùng nổ. Bản vá bổ sung cặp trị riêng phức để bài học sát hơn với tín hiệu, điều khiển và động học robot.",
+        "realUse": "Dùng trong phân tích ổn định hệ điều khiển rời rạc, bộ lọc Kalman tuyến tính hóa, RNN tuyến tính cục bộ, dao động của hệ cơ điện, mode trội trong tín hiệu và kiểm tra vòng feedback trước khi triển khai trên robot.",
+        "formula": "x_{k+1}=Ax_k. Với real_pair: A=R(theta) diag(lambda1,lambda2) R(theta)^T. Với complex_pair: A=r[[cos(phi),-sin(phi)],[sin(phi),cos(phi)]]. rho(A)=max_i |lambda_i| hoặc r.",
+        "conceptualModel": "Trị riêng thực mô tả co/giãn và đảo dấu theo các hướng riêng. Cặp trị riêng phức r e^{±i phi} mô tả đồng thời hai hiện tượng: r quyết định biên độ tăng hay giảm, còn phi quyết định tốc độ quay/dao động. Hệ rời rạc ổn định tiệm cận khi mọi trị riêng nằm trong vòng tròn đơn vị.",
+        "visualProfile": "state_space_spiral",
+        "controls": [
+          {
+            "key": "eigenMode",
+            "label": "Chế độ phổ",
+            "type": "select",
+            "default": "complex_pair",
+            "options": [
+              {
+                "value": "real_pair",
+                "label": "Hai trị riêng thực"
+              },
+              {
+                "value": "complex_pair",
+                "label": "Cặp trị riêng phức liên hợp"
+              }
+            ],
+            "meaning": "Chọn loại phổ để so sánh dao động đổi dấu của trị riêng thực âm với dao động xoắn ốc do cặp trị riêng phức."
+          },
+          {
+            "key": "lambda1",
+            "label": "lambda1 nếu là cặp thực",
+            "type": "range",
+            "default": 0.8,
+            "min": -1.5,
+            "max": 1.5,
+            "step": 0.01,
+            "meaning": "Tốc độ co/giãn theo hướng riêng thứ nhất khi dùng chế độ hai trị riêng thực."
+          },
+          {
+            "key": "lambda2",
+            "label": "lambda2 nếu là cặp thực",
+            "type": "range",
+            "default": 0.4,
+            "min": -1.5,
+            "max": 1.5,
+            "step": 0.01,
+            "meaning": "Tốc độ co/giãn theo hướng riêng thứ hai khi dùng chế độ hai trị riêng thực."
+          },
+          {
+            "key": "radius",
+            "label": "Bán kính r của cặp phức",
+            "type": "range",
+            "default": 0.85,
+            "min": 0,
+            "max": 1.5,
+            "step": 0.01,
+            "meaning": "Độ lớn của trị riêng phức. r < 1 làm xoắn ốc tắt dần, r = 1 giữ biên, r > 1 làm xoắn ốc phình ra."
+          },
+          {
+            "key": "angleDeg",
+            "label": "Góc pha phi mỗi bước",
+            "type": "range",
+            "default": 25,
+            "min": 0,
+            "max": 180,
+            "step": 1,
+            "meaning": "Góc quay của trạng thái sau mỗi bước khi dùng cặp trị riêng phức. Góc càng lớn thì dao động càng nhanh."
+          },
+          {
+            "key": "basisAngle",
+            "label": "Góc xoay cơ sở riêng nếu là cặp thực",
+            "type": "range",
+            "default": 30,
+            "min": 0,
+            "max": 180,
+            "step": 1,
+            "meaning": "Xoay các hướng riêng so với hệ tọa độ quan sát trong chế độ trị riêng thực."
+          },
+          {
+            "key": "x0",
+            "label": "Trạng thái đầu x0",
+            "type": "vector",
+            "default": [
+              1.5,
+              0.8
+            ],
+            "min": -3,
+            "max": 3,
+            "step": 0.1,
+            "meaning": "Trạng thái ban đầu để sinh quỹ đạo lặp. Nếu x0 gần vuông với mode trội, vài bước đầu có thể gây đọc sai."
+          },
+          {
+            "key": "steps",
+            "label": "Số bước lặp",
+            "type": "range",
+            "default": 40,
+            "min": 1,
+            "max": 160,
+            "step": 1,
+            "meaning": "Độ dài quỹ đạo cần quan sát. Các hệ gần vòng tròn đơn vị cần nhiều bước mới lộ rõ hội tụ hay bùng nổ."
+          },
+          {
+            "key": "showUnitCircle",
+            "label": "Hiện vòng tròn đơn vị",
+            "type": "toggle",
+            "default": true,
+            "meaning": "Hiển thị biên ổn định |lambda| = 1 trong mặt phẳng phổ để tránh nhầm ổn định với hình dạng quỹ đạo ngắn hạn."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "eigenvaluesDisplay",
+            "label": "Trị riêng đang dùng",
+            "formula": "real_pair: {lambda1,lambda2}; complex_pair: r(cos phi ± i sin phi)",
+            "interpretation": "Cho biết hệ đang được điều khiển bởi hai mode thực hay một cặp dao động phức liên hợp."
+          },
+          {
+            "key": "spectralRadius",
+            "label": "Bán kính phổ",
+            "formula": "real_pair: max(|lambda1|,|lambda2|); complex_pair: radius",
+            "interpretation": "Nhỏ hơn 1 thì hệ co về 0; bằng 1 là biên; lớn hơn 1 báo nguy cơ bùng nổ."
+          },
+          {
+            "key": "oscillationPeriod",
+            "label": "Chu kỳ dao động ước lượng",
+            "formula": "complex_pair: 360/angleDeg bước; real_pair với lambda âm: 2 bước cho đảo dấu",
+            "interpretation": "Giải thích vì sao quỹ đạo xoay nhanh/chậm hoặc đổi dấu qua từng bước."
+          },
+          {
+            "key": "decayRate",
+            "label": "Tốc độ suy giảm/khuếch đại mỗi bước",
+            "formula": "spectralRadius^k hoặc log(spectralRadius)",
+            "interpretation": "r = 0.99 vẫn ổn định nhưng tắt rất chậm; r = 1.01 có thể nhìn ổn lúc đầu nhưng sẽ phình theo thời gian."
+          },
+          {
+            "key": "stateNormAtK",
+            "label": "Norm trạng thái ở bước cuối",
+            "formula": "||A^steps x0||2",
+            "interpretation": "Chỉ báo trực tiếp hệ đang hội tụ, giữ biên hay phình to sau số bước đã chọn."
+          },
+          {
+            "key": "trajectoryShape",
+            "label": "Dạng quỹ đạo",
+            "formula": "line_decay / sign_flip / spiral_decay / spiral_growth / marginal_rotation",
+            "interpretation": "Biến kết quả phổ thành mô tả trực quan của quỹ đạo trong không gian trạng thái."
+          },
+          {
+            "key": "convergenceStatus",
+            "label": "Trạng thái hội tụ",
+            "formula": "stable nếu spectralRadius < 1, marginal nếu ≈ 1, unstable nếu > 1",
+            "interpretation": "Tóm tắt hành vi định tính của hệ rời rạc theo tiêu chuẩn vòng tròn đơn vị."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Chuẩn",
+            "setup": "eigenMode = complex_pair, radius = 0.85, angleDeg = 25, steps = 40.",
+            "expectedObservation": "Quỹ đạo xoắn ốc co dần về gốc; norm giảm theo từng vòng, không chỉ đi thẳng về 0.",
+            "learningPoint": "Cặp trị riêng phức có phần góc tạo dao động/quay, còn bán kính quyết định biên độ tắt dần hay phình ra."
+          },
+          {
+            "name": "Biên",
+            "setup": "eigenMode = complex_pair, radius = 0.99, angleDeg = 30, steps = 120.",
+            "expectedObservation": "Quỹ đạo vẫn co nhưng rất chậm; nếu chỉ nhìn vài bước đầu dễ tưởng hệ gần như không suy giảm.",
+            "learningPoint": "Ổn định không đồng nghĩa hội tụ nhanh. Hệ gần vòng tròn đơn vị cần quan sát dài hơn và có thể làm robot/bộ lọc phản ứng ì."
+          },
+          {
+            "name": "Dễ sai",
+            "setup": "eigenMode = complex_pair, radius = 1.02, angleDeg = 8, steps = 30 rồi tăng lên 160.",
+            "expectedObservation": "Vài bước đầu quỹ đạo chỉ hơi xoay và tăng rất nhỏ, nhưng khi tăng số bước thì norm phình rõ rệt.",
+            "learningPoint": "Không được kết luận ổn định từ quỹ đạo ngắn. Chỉ cần bán kính phổ lớn hơn 1 một chút, hệ rời rạc vẫn mất ổn định dài hạn."
+          }
+        ],
+        "runProtocol": [
+          "Chọn real_pair để quan sát co/giãn theo hướng riêng và hiện tượng đảo dấu khi lambda âm.",
+          "Chọn complex_pair để quan sát xoắn ốc tắt dần, giữ biên hoặc phình ra theo radius.",
+          "Đặt showUnitCircle = true rồi so sánh vị trí trị riêng với đường |lambda| = 1.",
+          "Tăng steps khi spectralRadius rất gần 1 để tránh đọc sai do quan sát quá ngắn.",
+          "Kết luận hệ rời rạc phù hợp làm mô hình ổn định hay cần chỉnh feedback/gain."
+        ],
+        "decisionRule": {
+          "PASS": "Bán kính phổ, hình dạng quỹ đạo và norm cuối cùng nhất quán; người học phân biệt được dao động ổn định với mất ổn định.",
+          "REVIEW": "Trị riêng rất gần vòng tròn đơn vị hoặc angleDeg quá nhỏ khiến quỹ đạo ngắn hạn dễ gây đọc sai.",
+          "RISK": "Kết luận ổn định chỉ từ vài bước đầu, nhầm xoắn ốc với nhiễu, hoặc quên kiểm tra spectralRadius."
+        },
+        "commonMisreadings": [
+          "Tưởng quỹ đạo xoắn ốc là bất ổn dù radius nhỏ hơn 1.",
+          "Đồng nhất ổn định với hội tụ nhanh.",
+          "Nhầm trị riêng âm với trị riêng phức: trị riêng âm gây đảo dấu theo hướng thực, còn cặp phức tạo chuyển động quay.",
+          "Chỉ nhìn 20-30 bước đầu và bỏ qua trường hợp spectralRadius hơi lớn hơn 1.",
+          "Quên rằng x0 có thể che bớt mode trội trong vài bước đầu nếu thành phần theo mode đó nhỏ."
+        ],
+        "reportTemplate": {
+          "observation": "Khi chọn chế độ phổ ..., đặt spectralRadius/radius = ... và angleDeg = ..., tôi quan sát thấy quỹ đạo trạng thái ...",
+          "explanation": "Điều này xảy ra vì bán kính phổ quyết định biên độ dài hạn, còn góc pha hoặc dấu của trị riêng quyết định kiểu dao động ...",
+          "application": "Trong bài toán điều khiển, tín hiệu hoặc robot, kết quả này giúp đánh giá vòng feedback/bộ lọc có hội tụ đủ nhanh và ổn định dài hạn hay không ...",
+          "warning": "Không nên kết luận ổn định chỉ bằng vài bước mô phỏng; cần kiểm tra vị trí trị riêng so với vòng tròn đơn vị và tăng số bước khi spectralRadius gần 1 ..."
+        }
+      }
+    },
+    {
+      "lessonNo": 7,
+      "lessonId": "MATH-LA-C04-L07",
+      "lessonTitle": "§4.7 Dạng toàn phương, ma trận xác định dương và độ cong",
+      "coreQuestion": "Làm thế nào nhận ra một hàm năng lượng là bát úp có cực tiểu thật, hay chỉ là yên ngựa đánh lừa trực giác?",
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-LA-C04-L07",
+        "type": "unified",
+        "simKind": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "Độ cong Hessian, năng lượng và một bước giảm gradient",
+        "purpose": "Mô phỏng giúp người học liên kết dạng toàn phương với hình học bề mặt tối ưu, điều kiện cực trị và tác động thật của một bước cập nhật gradient.",
+        "realUse": "Dùng trong tối ưu bậc hai, kiểm tra Hessian trong machine learning, thiết kế hàm Lyapunov, ma trận hiệp phương sai, điều khiển robot và đánh giá độ an toàn của bước cập nhật trong thuật toán học.",
+        "formula": "q(x)=x^T H x, H=[[h11,h12],[h12,h22]], gradient ∇q(x)=2Hx, x_next=x-stepSize*∇q(x), deltaQ=q(x_next)-q(x). H xác định dương khi mọi trị riêng dương.",
+        "conceptualModel": "Dạng toàn phương cho biết cost hoặc năng lượng tăng thế nào quanh một điểm. Hessian quyết định hình học toàn cục của bề mặt, còn stepSize cho thấy một thuật toán tối ưu có đang đi xuống, đi ngang hay bắn khỏi thung lũng.",
+        "visualProfile": "optimization_landscape_gradient_step",
+        "controls": [
+          {
+            "key": "h11",
+            "label": "H11",
+            "type": "range",
+            "default": 2,
+            "min": -5,
+            "max": 5,
+            "step": 0.1,
+            "meaning": "Độ cong theo trục thứ nhất."
+          },
+          {
+            "key": "h12",
+            "label": "H12",
+            "type": "range",
+            "default": 0.5,
+            "min": -5,
+            "max": 5,
+            "step": 0.1,
+            "meaning": "Mức liên kết chéo giữa hai biến, tạo xoay của các trục chính."
+          },
+          {
+            "key": "h22",
+            "label": "H22",
+            "type": "range",
+            "default": 1.5,
+            "min": -5,
+            "max": 5,
+            "step": 0.1,
+            "meaning": "Độ cong theo trục thứ hai."
+          },
+          {
+            "key": "probePoint",
+            "label": "Điểm khảo sát x",
+            "type": "vector",
+            "default": [
+              1,
+              -1
+            ],
+            "min": -3,
+            "max": 3,
+            "step": 0.1,
+            "meaning": "Điểm đang đứng trên bề mặt năng lượng để đọc q(x), gradient và hướng cập nhật."
+          },
+          {
+            "key": "stepSize",
+            "label": "Bước giảm gradient η",
+            "type": "range",
+            "default": 0.2,
+            "min": 0.01,
+            "max": 1.5,
+            "step": 0.01,
+            "meaning": "Cỡ bước dùng trong x_next = x - η∇q(x). Núm này phải làm thay đổi nextPoint, deltaQ và trạng thái an toàn của bước."
+          },
+          {
+            "key": "showGradientVector",
+            "label": "Hiện vector gradient",
+            "type": "toggle",
+            "default": true,
+            "meaning": "Bật/tắt mũi tên ∇q(x) để thấy hướng tăng nhanh nhất của năng lượng."
+          },
+          {
+            "key": "showNextPoint",
+            "label": "Hiện điểm sau một bước",
+            "type": "toggle",
+            "default": true,
+            "meaning": "Bật/tắt điểm x_next để kiểm tra bước gradient có làm năng lượng giảm thật không."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "eigenvaluesH",
+            "label": "Các trị riêng của H",
+            "formula": "eig(H)",
+            "interpretation": "Dấu của trị riêng quyết định bề mặt là bowl, valley phẳng hay saddle."
+          },
+          {
+            "key": "detH",
+            "label": "Định thức det(H)",
+            "formula": "h11*h22 - h12^2",
+            "interpretation": "Trong 2D, cùng với h11 hoặc trị riêng giúp phân loại trạng thái xác định của H."
+          },
+          {
+            "key": "quadraticValue",
+            "label": "Giá trị q(x)",
+            "formula": "x^T H x tại probePoint",
+            "interpretation": "Đo mức năng lượng hoặc cost tại điểm đang xét."
+          },
+          {
+            "key": "gradientVector",
+            "label": "Vector gradient ∇q(x)",
+            "formula": "2H*x",
+            "interpretation": "Chỉ hướng tăng nhanh nhất của năng lượng; bước giảm gradient phải đi theo hướng ngược lại."
+          },
+          {
+            "key": "gradientNorm",
+            "label": "Độ lớn gradient",
+            "formula": "||2H*x||2",
+            "interpretation": "Cho biết lực kéo tối ưu tại điểm hiện tại mạnh hay yếu. Gradient bằng 0 chưa đủ để kết luận có cực tiểu."
+          },
+          {
+            "key": "nextPoint",
+            "label": "Điểm sau một bước",
+            "formula": "x_next = x - stepSize * 2H*x",
+            "interpretation": "Vị trí người học sẽ tới sau một bước cập nhật gradient với stepSize đã chọn."
+          },
+          {
+            "key": "nextQuadraticValue",
+            "label": "Năng lượng sau một bước",
+            "formula": "q(x_next)=x_next^T H x_next",
+            "interpretation": "Giá trị cost/năng lượng sau cập nhật, dùng để kiểm chứng bước có đi xuống thật không."
+          },
+          {
+            "key": "deltaQ",
+            "label": "Mức thay đổi năng lượng Δq",
+            "formula": "q(x_next)-q(x)",
+            "interpretation": "Nếu Δq < 0, bước đang giảm năng lượng; nếu Δq > 0, bước quá lớn hoặc bề mặt bất định khiến cập nhật nguy hiểm."
+          },
+          {
+            "key": "stepSafetyStatus",
+            "label": "Trạng thái bước gradient",
+            "formula": "SAFE nếu H xác định dương và deltaQ < 0; REVIEW nếu trị riêng nhỏ hoặc giảm rất ít; RISK nếu deltaQ > 0 hoặc Hessian bất định",
+            "interpretation": "Chuyển các số đo thành cảnh báo UX để người học không chỉ nhìn hình mà bỏ qua điều kiện toán."
+          },
+          {
+            "key": "definitenessStatus",
+            "label": "Trạng thái xác định",
+            "formula": "SPD nếu mọi eigenvalue > 0; PSD nếu có eigenvalue = 0; indefinite nếu khác dấu",
+            "interpretation": "Tóm tắt việc có cực tiểu thật, thung lũng phẳng hay saddle."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Chuẩn",
+            "setup": "h11 = 2, h12 = 0.5, h22 = 1.5, probePoint = [1,-1], stepSize = 0.2.",
+            "expectedObservation": "Hai trị riêng dương, gradient chỉ hướng tăng, x_next đi ngược gradient và deltaQ < 0.",
+            "learningPoint": "Ma trận xác định dương tạo hình học thuận lợi; với stepSize hợp lý, một bước gradient thật sự làm năng lượng giảm."
+          },
+          {
+            "name": "Biên",
+            "setup": "h11 = 1, h12 = 1, h22 = 1, probePoint = [1,-1], stepSize = 0.5.",
+            "expectedObservation": "Một trị riêng gần 0, bề mặt có thung lũng phẳng; gradient có thể nhỏ theo hướng phẳng và deltaQ giảm chậm hoặc gần 0.",
+            "learningPoint": "Bán xác định dương không bảo đảm cực tiểu duy nhất; thuật toán có thể chậm và thiếu nhận dạng tham số."
+          },
+          {
+            "name": "Dễ sai",
+            "setup": "h11 = 1, h12 = 2, h22 = 1, probePoint = [1,-1], stepSize = 0.4.",
+            "expectedObservation": "det(H) âm, Hessian bất định; có thể thấy gradient bằng 0 tại gốc nhưng bề mặt là yên ngựa, không phải cực tiểu. Một số bước có thể làm q giảm theo hướng này nhưng tăng nguy hiểm theo hướng khác.",
+            "learningPoint": "Không thể kết luận cực tiểu chỉ bằng gradient bằng 0 hoặc một lát cắt đẹp; phải kiểm toàn bộ phổ Hessian và deltaQ của bước cập nhật."
+          }
+        ],
+        "runProtocol": [
+          "Điều chỉnh h11, h12, h22 để đổi hình dạng bề mặt năng lượng.",
+          "Di chuyển probePoint và quan sát q(x), gradientVector và gradientNorm.",
+          "Thay đổi stepSize rồi so sánh nextPoint, nextQuadraticValue và deltaQ.",
+          "Nếu deltaQ > 0, ghi lại vì sao bước cập nhật không an toàn: stepSize quá lớn, Hessian bất định hoặc bề mặt quá dốc theo một hướng.",
+          "Kết luận bài toán hiện tại là convex cục bộ, phẳng một phần hay saddle nguy hiểm dựa trên eigenvaluesH, definitenessStatus và stepSafetyStatus."
+        ],
+        "decisionRule": {
+          "PASS": "Trị riêng, định thức, deltaQ và hình học bề mặt cùng chỉ ra kết luận nhất quán; bước gradient hợp lý làm q giảm.",
+          "REVIEW": "Có trị riêng rất nhỏ, bề mặt quá phẳng theo một hướng hoặc deltaQ giảm rất ít dù bước đúng chiều.",
+          "RISK": "Kết luận có cực tiểu chỉ vì gradient bằng 0, hoặc chọn stepSize khiến deltaQ > 0, hoặc Hessian bất định nhưng vẫn coi như bài toán convex."
+        },
+        "commonMisreadings": [
+          "Tưởng det(H) dương là đủ để kết luận xác định dương mà quên kiểm h11 hoặc trị riêng.",
+          "Nhầm bán xác định dương với xác định dương nên tưởng cực tiểu là duy nhất.",
+          "Thấy gradient bằng 0 rồi kết luận có cực tiểu, trong khi Hessian có thể bất định và điểm đó là saddle.",
+          "Tăng stepSize vì muốn hội tụ nhanh nhưng không kiểm deltaQ, làm bước gradient bắn khỏi thung lũng.",
+          "Cho rằng Hessian chỉ phục vụ tối ưu, trong khi nó còn mang nghĩa năng lượng và ổn định trong điều khiển."
+        ],
+        "reportTemplate": {
+          "observation": "Khi thay đổi H và stepSize, tôi quan sát thấy eigenvaluesH = ..., gradientNorm = ..., deltaQ = ... và bề mặt chuyển từ ... sang ...",
+          "explanation": "Điều này xảy ra vì dấu của các trị riêng Hessian quyết định độ cong theo mọi hướng, còn stepSize quyết định bước cập nhật có làm q(x) giảm thật hay không ...",
+          "application": "Trong bài toán thật, kết quả này giúp chọn bước học an toàn, kiểm tra Hessian trong tối ưu, hoặc đánh giá hàm Lyapunov trong điều khiển robot ...",
+          "warning": "Không nên kết luận hàm là convex cục bộ nếu chỉ nhìn gradient bằng 0, một vài lát cắt 1D, hoặc một lần giảm q tạm thời trong Hessian bất định ..."
+        }
+      }
+    },
+    {
+      "lessonNo": 8,
+      "lessonId": "MATH-LA-C04-L08",
+      "lessonTitle": "§4.8 SVD, năng lượng phổ và PCA",
+      "coreQuestion": "Giữ lại bao nhiêu mode là đủ để giảm chiều mà chưa phá hỏng cấu trúc thông tin quan trọng?",
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-LA-C04-L08",
+        "type": "unified",
+        "simKind": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "SVD, explained variance và tái tạo hạng thấp",
+        "purpose": "Mô phỏng giúp người học hiểu SVD như phép tách dữ liệu thành các mode trực giao theo năng lượng, từ đó đọc explained variance, sai số tái tạo và rủi ro cắt mất mode quan trọng cho nhiệm vụ thật.",
+        "realUse": "Dùng trong PCA, nén dữ liệu cảm biến, khử nhiễu ảnh hoặc tín hiệu, latent representation, giảm bậc mô hình, phát hiện lớp hiếm và tiền xử lý dữ liệu cho AI/robotics.",
+        "formula": "A = U Sigma V^T; A_r = U_r Sigma_r V_r^T; explainedVariance(r) = (sum_{i=1..r} sigma_i^2)/(sum_j sigma_j^2); reconstructionError_F = ||A - A_r||F; taskLossRisk phụ thuộc vào việc retainedRank có giữ mode quan trọng cho tác vụ hay không.",
+        "conceptualModel": "SVD sắp các mode trực giao theo năng lượng. Cắt singular value nhỏ có thể nén và khử nhiễu, nhưng nếu mode nhỏ chứa tín hiệu hiếm, dấu lỗi cảm biến hoặc biên điều khiển quan trọng, explained variance cao vẫn có thể là quyết định sai.",
+        "visualProfile": "custom",
+        "controls": [
+          {
+            "key": "sigma1",
+            "label": "Singular value 1",
+            "type": "range",
+            "default": 9,
+            "min": 0.1,
+            "max": 20,
+            "step": 0.1,
+            "meaning": "Năng lượng của mode trội thứ nhất."
+          },
+          {
+            "key": "sigma2",
+            "label": "Singular value 2",
+            "type": "range",
+            "default": 4,
+            "min": 0.1,
+            "max": 20,
+            "step": 0.1,
+            "meaning": "Năng lượng của mode thứ hai."
+          },
+          {
+            "key": "sigma3",
+            "label": "Singular value 3",
+            "type": "range",
+            "default": 1,
+            "min": 0.1,
+            "max": 20,
+            "step": 0.1,
+            "meaning": "Năng lượng của mode thứ ba, thường đại diện cho chi tiết yếu hoặc nhiễu."
+          },
+          {
+            "key": "retainedRank",
+            "label": "Hạng giữ lại r",
+            "type": "range",
+            "default": 2,
+            "min": 1,
+            "max": 3,
+            "step": 1,
+            "meaning": "Số mode giữ lại trong xấp xỉ hạng thấp."
+          },
+          {
+            "key": "noiseFloor",
+            "label": "Mức nền nhiễu",
+            "type": "range",
+            "default": 0.2,
+            "min": 0,
+            "max": 3,
+            "step": 0.05,
+            "meaning": "Mốc để phân biệt mode tín hiệu với mode có thể là nhiễu."
+          },
+          {
+            "key": "taskCriticalMode",
+            "label": "Mode quan trọng cho tác vụ",
+            "type": "select",
+            "default": "mode3",
+            "options": [
+              "mode1",
+              "mode2",
+              "mode3",
+              "none"
+            ],
+            "meaning": "Chọn mode mang thông tin quan trọng cho phân loại, dự báo, cảnh báo lỗi cảm biến hoặc điều khiển."
+          },
+          {
+            "key": "rareSignalWeight",
+            "label": "Trọng số tín hiệu hiếm",
+            "type": "range",
+            "default": 0.7,
+            "min": 0,
+            "max": 1,
+            "step": 0.05,
+            "meaning": "Mức độ mode quan trọng ảnh hưởng tới nhiệm vụ dù năng lượng toàn cục có thể thấp."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "explainedVariance",
+            "label": "Tỉ lệ phương sai giải thích",
+            "formula": "(sigma1^2 + ... + sigma_r^2)/(sigma1^2 + sigma2^2 + sigma3^2)",
+            "interpretation": "Cho biết phần năng lượng toàn cục được giữ lại sau giảm chiều."
+          },
+          {
+            "key": "frobeniusReconstructionError",
+            "label": "Sai số tái tạo Frobenius",
+            "formula": "sqrt(sum_{i>r} sigma_i^2)",
+            "interpretation": "Đo mức thông tin toàn cục bị mất khi bỏ các mode sau r."
+          },
+          {
+            "key": "effectiveRank",
+            "label": "Hạng hiệu dụng theo ngưỡng nhiễu",
+            "formula": "count(sigma_i > noiseFloor)",
+            "interpretation": "Ước lượng số mode có tín hiệu vượt nền nhiễu."
+          },
+          {
+            "key": "compressionStatus",
+            "label": "Trạng thái nén",
+            "formula": "PASS nếu explainedVariance cao, mode bị bỏ dưới noiseFloor và không chứa taskCriticalMode; REVIEW nếu còn xung đột; RISK nếu retainedRank cắt mất mode quan trọng hoặc mode trên noiseFloor.",
+            "interpretation": "Hướng dẫn quyết định giữ hay cắt mode bằng cả năng lượng phổ, nền nhiễu và ý nghĩa tác vụ."
+          },
+          {
+            "key": "taskLossRisk",
+            "label": "Rủi ro mất thông tin tác vụ",
+            "formula": "RISK nếu taskCriticalMode bị loại bởi retainedRank; PASS nếu mode quan trọng được giữ lại hoặc taskCriticalMode = none",
+            "interpretation": "Giúp người học không chọn số chiều PCA chỉ dựa trên explained variance."
+          },
+          {
+            "key": "taskAwareCompressionStatus",
+            "label": "Trạng thái nén theo nhiệm vụ",
+            "formula": "PASS nếu compressionStatus tốt và taskLossRisk thấp; REVIEW nếu năng lượng tốt nhưng nhiệm vụ chưa chắc; RISK nếu bỏ mode quan trọng cho tác vụ.",
+            "interpretation": "Kết hợp tiêu chí toán học với mục tiêu AI/robotics để quyết định hạng giữ lại."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Chuẩn",
+            "setup": "sigma1 = 9, sigma2 = 4, sigma3 = 1, retainedRank = 2, noiseFloor = 0.2, taskCriticalMode = none hoặc mode1/mode2.",
+            "expectedObservation": "explainedVariance cao, sai số tái tạo nhỏ, mode thứ ba yếu hơn rõ và taskLossRisk thấp.",
+            "learningPoint": "Khi phổ suy giảm nhanh và mode bị bỏ không quan trọng cho tác vụ, giảm chiều hạng thấp có thể nén mạnh mà vẫn giữ cấu trúc chính."
+          },
+          {
+            "name": "Biên",
+            "setup": "sigma1 = 5, sigma2 = 4.5, sigma3 = 4.0, retainedRank = 1 hoặc 2, taskCriticalMode = mode3.",
+            "expectedObservation": "Các mode đều mang năng lượng đáng kể; bỏ mode làm sai số tái tạo tăng và taskLossRisk báo nguy hiểm nếu mode3 bị cắt.",
+            "learningPoint": "Phổ phẳng báo rằng thông tin phân bố trên nhiều hướng, không nên nén quá mạnh."
+          },
+          {
+            "name": "Dễ sai",
+            "setup": "sigma1 = 10, sigma2 = 3, sigma3 = 1.2, noiseFloor = 1.0, retainedRank = 2, taskCriticalMode = mode3, rareSignalWeight cao.",
+            "expectedObservation": "explainedVariance có vẻ cao nhưng taskLossRisk và taskAwareCompressionStatus cảnh báo vì mode bị bỏ vẫn quan trọng cho nhiệm vụ.",
+            "learningPoint": "Explained variance cao không đủ chứng minh mode bị cắt là vô nghĩa cho phân loại, dự báo, cảnh báo lỗi hoặc điều khiển."
+          }
+        ],
+        "runProtocol": [
+          "Điều chỉnh ba singular value để tạo phổ suy giảm nhanh hoặc phổ phẳng.",
+          "Thay đổi retainedRank và quan sát explainedVariance cùng reconstructionError.",
+          "Dịch noiseFloor để phân biệt cắt vì nhiễu và cắt vì muốn nén.",
+          "Chọn taskCriticalMode và rareSignalWeight để kiểm tra mode năng lượng thấp có quan trọng cho nhiệm vụ hay không.",
+          "Kết luận mức giảm chiều hiện tại phù hợp cho nén, khử nhiễu hay đang làm mất mode quan trọng."
+        ],
+        "decisionRule": {
+          "PASS": "retainedRank giữ phần lớn năng lượng, các mode bị bỏ nằm dưới hoặc sát nền nhiễu và không chứa taskCriticalMode.",
+          "REVIEW": "explainedVariance cao nhưng còn mode bị bỏ vượt noiseFloor, phổ quá phẳng hoặc tác vụ chưa chắc chịu được việc cắt mode.",
+          "RISK": "Ra quyết định giảm chiều chỉ từ explainedVariance và cắt mất mode quan trọng cho phân loại, cảnh báo lỗi, dự báo hoặc điều khiển."
+        },
+        "commonMisreadings": [
+          "Tưởng singular value nhỏ luôn là nhiễu.",
+          "Đồng nhất PCA/SVD với nén càng mạnh càng tốt.",
+          "Cho rằng explained variance là thước đo duy nhất của chất lượng biểu diễn.",
+          "Bỏ qua mode năng lượng thấp nhưng chứa lớp hiếm, dấu lỗi cảm biến hoặc tín hiệu điều khiển quan trọng."
+        ],
+        "reportTemplate": {
+          "observation": "Khi đổi các singular value, hạng giữ lại r hoặc taskCriticalMode, tôi quan sát thấy explained variance ..., sai số tái tạo ..., taskLossRisk ...",
+          "explanation": "Điều này xảy ra vì SVD sắp các mode theo năng lượng, nhưng quyết định cắt mode phải xét thêm nền nhiễu và vai trò của mode đối với nhiệm vụ thật ...",
+          "application": "Trong bài toán thật, kết quả này giúp chọn số chiều PCA, mức nén, bậc mô hình giảm thấp hoặc chiến lược giữ mode hiếm trong dữ liệu cảm biến/AI ...",
+          "warning": "Không nên chọn r chỉ dựa vào explained variance cao nếu mode bị bỏ vẫn vượt nền nhiễu hoặc quan trọng đối với tác vụ dự báo, phân loại và điều khiển ..."
+        }
+      }
+    }
+  ],
+  "chapterNumberingPolicy": "chapterNo is local within the selected faculty/department; keep globalChapterNo only as optional reference",
+  "departmentTitle": "[Tên bộ môn/chuyên đề]",
+  "globalChapterNo": "[Tùy chọn: số chương toàn hệ cũ nếu có]"
+}

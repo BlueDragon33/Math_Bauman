@@ -1,0 +1,24 @@
+{
+  "checkpoint": "E24",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapterId": "MATH-HK1-MT-C16",
+  "title": "Chương 16 · Clustering, similarity và cấu trúc không gian dữ liệu",
+  "counts": {
+    "lessons": 8,
+    "slides": 160,
+    "formulas": 24,
+    "exercises": 64,
+    "applications": 16,
+    "simulations": 16,
+    "professorQa": 8,
+    "questions": 48,
+    "reviewPacks": 8,
+    "vocabCards": 32
+  },
+  "focus": "chuẩn hóa Chương 16 từ 7 bài lên 8 bài, làm sâu metric, similarity, k-means, hierarchical, density clustering, validation và telemetry clustering",
+  "uiRegressionLocks": [
+    "theory-slide-strip-horizontal-only",
+    "renderFormula-shim-kept",
+    "storage-indicator-kept"
+  ]
+}

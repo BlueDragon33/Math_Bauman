@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "Main ↔ Math V2 alignment",
+    "created": "2026-06-11",
+    "purpose": "Kết hợp dữ liệu lộ trình Main với môn Toán V2 để Lịch hôm nay mở đúng bài/phần/kiểm tra.",
+    "activeSubject": "subjects/math",
+    "legacyBackup": "subjects/_legacy_math_from_main_before_v2"
+  },
+  "mainSubjectId": "math",
+  "bridgeProtocol": "BAUMAN_PLANNING_BRIDGE_V4_STAGE_GATE",
+  "rules": {
+    "examOpen": "today_schedule_exam_gate_only",
+    "unlock": "next_part_or_next_stage_only",
+    "paperTypes": [
+      "standard:20",
+      "intensive:40",
+      "advanced:60",
+      "deep:100"
+    ],
+    "difficultyMix": "30 easy / 30 medium / 20 good / 20 excellent"
+  },
+  "courseAlignment": [
+    {
+      "mainCourseId": "p2",
+      "stageId": "prepare",
+      "mathStageId": "prepare",
+      "partHints": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "focus": "Toán nền cho AI: vector, ma trận, gradient, xác suất, thống kê, PCA, chuỗi thời gian nhập môn"
+    },
+    {
+      "mainCourseId": "s5",
+      "stageId": "preparatory",
+      "mathStageId": "preparatory",
+      "partHints": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "focus": "Thuật ngữ Toán tiếng Nga, đọc đề, trình bày lời giải và chuyển nền toán sang tiếng Nga kỹ thuật"
+    },
+    {
+      "mainCourseId": "c4",
+      "stageId": "m1",
+      "mathStageId": "m1",
+      "partHints": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "focus": "Phân tích dữ liệu đa chiều, PCA/SVD, similarity, clustering, feature space"
+    },
+    {
+      "mainCourseId": "signal_support_m3",
+      "stageId": "m3",
+      "mathStageId": "m3",
+      "partHints": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "focus": "Chuỗi thời gian, metric dự báo, anomaly detection, telemetry, signal/AI"
+    },
+    {
+      "mainCourseId": "thesis_math_m4",
+      "stageId": "m4",
+      "mathStageId": "m4",
+      "partHints": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "focus": "Metric luận văn, mô hình hóa dữ liệu, sai số, độ tin cậy, phụ lục công thức và bảo vệ"
+    }
+  ],
+  "payloadExample": {
+    "type": "BAUMAN_TODAY_TASK",
+    "subjectId": "math",
+    "source": "today_schedule",
+    "taskType": "exam_gate",
+    "stageId": "prepare",
+    "partId": 1,
+    "lessonIds": [
+      "math_l01"
+    ],
+    "conceptIds": [
+      "vector_norm"
+    ],
+    "gateReady": true
+  }
+}

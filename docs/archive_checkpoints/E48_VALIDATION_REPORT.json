@@ -1,0 +1,45 @@
+{
+  "episode": "E48",
+  "isFinal": false,
+  "checks": {
+    "json_parse": {
+      "status": "PASS",
+      "bad": [],
+      "count": 160
+    },
+    "js_syntax": {
+      "status": "PASS",
+      "bad": []
+    },
+    "formula_deep_required": {
+      "status": "PASS",
+      "missing": {
+        "deepAssumptionGates": 0,
+        "deepDerivationSketch": 0,
+        "deepSensitivityChecklist": 0,
+        "deepFailureModes": 0,
+        "deepSystemPipeline": 0,
+        "deepDebugQuestions": 0,
+        "deepDefensePoints": 0,
+        "deepMiniExperiment": 0,
+        "deepFormulaTakeaway": 0
+      },
+      "total": 678
+    },
+    "e48_markers": {
+      "status": "PASS"
+    },
+    "object_object_literals": {
+      "status": "PASS"
+    },
+    "final_summary_only_markers": {
+      "status": "PASS"
+    },
+    "renderFormula_shim": {
+      "status": "PASS"
+    },
+    "theory_scroll_lock": {
+      "status": "PASS"
+    }
+  }
+}

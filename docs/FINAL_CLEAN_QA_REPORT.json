@@ -1,0 +1,13 @@
+{
+  "release": "FINAL CLEAN",
+  "chapters": 32,
+  "lessons": 260,
+  "exercises": 1040,
+  "applications": 520,
+  "simulations": 260,
+  "simulationsPolicy": "260 unified labs, one per lesson, no theory/application split buttons",
+  "chapterPicker": "Restored in Theory, Exercises, Applications, Simulation with non-repeating labels",
+  "nonRepeatingLabels": true,
+  "summaryPolicy": "Only final slide has total lesson summary",
+  "codePolicy": "Late E52/E55/FINAL_v2 patch stack replaced by one consolidated final clean architecture block"
+}

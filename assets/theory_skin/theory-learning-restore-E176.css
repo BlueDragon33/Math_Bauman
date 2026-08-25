@@ -1,0 +1,134 @@
+/* E176 · Restore original learning preview
+ * Purpose: temporarily disable the new hierarchy selector surface and bring back the fuller E129 learning layout for review.
+ * Data/runtime are untouched.
+ */
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell{
+  display:grid!important;
+  grid-template-columns:minmax(280px,360px) minmax(0,1fr)!important;
+  gap:18px!important;
+  min-height:calc(100vh - 118px)!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-sidebar{
+  display:flex!important;
+  min-height:0!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-reader{
+  padding:22px!important;
+  background:linear-gradient(145deg,rgba(10,18,34,.92),rgba(18,30,55,.82))!important;
+  border:1px solid rgba(148,196,255,.18)!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.28)!important;
+  border-radius:24px!important;
+  min-height:0!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-reader-head{
+  display:flex!important;
+  align-items:flex-start!important;
+  justify-content:space-between!important;
+  gap:16px!important;
+  margin:0 0 18px!important;
+  padding:0 0 18px!important;
+  border:0!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e169-learning-router{
+  display:none!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e176-learning-title{
+  display:block!important;
+  min-width:0!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e176-learning-title .e129-kicker{
+  display:block!important;
+  color:#8fc2ff!important;
+  font-weight:900!important;
+  font-size:12px!important;
+  text-transform:uppercase!important;
+  letter-spacing:.08em!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e176-learning-title h1{
+  display:block!important;
+  margin:8px 0 8px!important;
+  font-size:clamp(26px,3.2vw,38px)!important;
+  line-height:1.05!important;
+  color:#fff!important;
+  letter-spacing:-.03em!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e176-learning-title p{
+  display:block!important;
+  margin:0!important;
+  color:#a9bad4!important;
+  font-size:13px!important;
+  line-height:1.55!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-kicker,
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-reader-head .e129-muted,
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-grid,
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-status{
+  display:revert!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-reader-head .e129-actions{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:8px!important;
+  justify-content:flex-end!important;
+  margin-left:auto!important;
+  align-self:flex-start!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-actions [data-e129-open-vault],
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-actions [data-e129-refresh],
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-actions [data-e129-present]{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:auto!important;
+  min-width:auto!important;
+  padding:10px 13px!important;
+  border-radius:13px!important;
+  font-size:14px!important;
+  font-weight:800!important;
+  letter-spacing:0!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-actions [data-e129-present]{
+  background:linear-gradient(135deg,#407cff,#7c5cff)!important;
+  border-color:rgba(255,255,255,.28)!important;
+  color:#fff!important;
+  text-shadow:none!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-actions [data-e129-open-vault],
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-actions [data-e129-refresh]{
+  background:rgba(255,255,255,.055)!important;
+  border:1px solid rgba(157,194,255,.18)!important;
+  color:#dcecff!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-placeholder{
+  display:block!important;
+  margin-top:18px!important;
+  padding:20px!important;
+  border:1px dashed rgba(129,184,255,.34)!important;
+  border-radius:22px!important;
+  background:linear-gradient(135deg,rgba(53,106,255,.16),rgba(255,255,255,.04))!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-placeholder>.e129-badge,
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-placeholder>.e129-muted{
+  display:inline-flex!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell .e129-placeholder h2{
+  margin:12px 0 6px!important;
+  font-size:22px!important;
+  line-height:1.15!important;
+  color:#fff!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e129-slide-list{
+  max-height:none!important;
+  overflow:visible!important;
+}
+@media(max-width:980px){
+  body:not(.e129-presenting):not(.e129-theory-storage) .e129-theory-shell{grid-template-columns:1fr!important;}
+  body:not(.e129-presenting):not(.e129-theory-storage) .e129-reader-head{display:block!important;}
+  body:not(.e129-presenting):not(.e129-theory-storage) .e129-reader-head .e129-actions{justify-content:flex-start!important;margin-top:14px!important;margin-left:0!important;}
+}

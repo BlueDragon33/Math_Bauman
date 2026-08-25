@@ -1,0 +1,255 @@
+{
+  "id": "bauman_math_formula_academic_c03_e237c",
+  "schema": "bauman_math_formula_academic_registry_v1",
+  "version": "E237C_C03_FORMULA_ACADEMIC_REGISTRY",
+  "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+  "profiles": [
+    {
+      "id": "c03_scalar_function",
+      "priority": 108,
+      "matchAll": ["y = f(x)"],
+      "analysis": [
+        {"title": "Hàm là quy luật ánh xạ", "body": "Công thức y=f(x) nói mỗi đầu vào hợp lệ x được ánh xạ tới một đầu ra y. Muốn dùng như mô hình kỹ thuật phải xác định domain, đơn vị, độ trơn và miền dữ liệu mà quan hệ đã được kiểm chứng."},
+        {"title": "Công thức không thay thế giả định", "body": "Cùng một biểu thức có thể phù hợp trong vùng vận hành này nhưng sai ngoài vùng đó. Mô hình cần đi kèm giả định, sai số và quy tắc xử lý đầu vào ngoài miền."}
+      ],
+      "application": [
+        {"title": "Mô hình đầu vào–đầu ra", "body": "Hàm vô hướng dùng cho đường hiệu chuẩn cảm biến, quan hệ nhiệt–dòng, tín hiệu–đáp ứng và các mô hình dự báo một đầu ra."}
+      ],
+      "python": "def f(x):\n    return 2.0 * x + 1.0\n\nx = 3.5\ny = f(x)\nprint(y)"
+    },
+    {
+      "id": "c03_multivariable_function",
+      "priority": 112,
+      "matchAll": ["y = f(x_1, x_2", "x_n"],
+      "analysis": [
+        {"title": "Một đầu ra phụ thuộc nhiều biến", "body": "Mỗi x_i là một trục của không gian đầu vào. Thay đổi một biến khi giữ các biến khác cố định dẫn tới đạo hàm riêng; thay đổi đồng thời nhiều biến dẫn tới đạo hàm theo hướng hoặc gradient."},
+        {"title": "Schema của đầu vào phải cố định", "body": "Thứ tự, đơn vị và scale của các biến phải nhất quán. Một mô hình nhiều biến có thể cho kết quả số hợp lệ nhưng sai nghĩa nếu feature bị đảo vị trí hoặc dùng ngoài miền huấn luyện."}
+      ],
+      "application": [
+        {"title": "Dự báo từ vector đặc trưng", "body": "Nhiệt độ lõi, mức tiêu thụ, xác suất lỗi hoặc score điều khiển thường phụ thuộc đồng thời nhiều cảm biến và trạng thái."}
+      ],
+      "python": "import numpy as np\n\ndef f(x):\n    x = np.asarray(x, dtype=float)\n    if x.shape != (3,):\n        raise ValueError('expected three features')\n    return 0.4*x[0] - 0.2*x[1] + 1.3*x[2]"
+    },
+    {
+      "id": "c03_vector_function",
+      "priority": 114,
+      "matchAll": ["y = f(x)", "x in r^n", "y in r^m"],
+      "analysis": [
+        {"title": "Hàm vector ánh xạ giữa hai không gian", "body": "f nhận vector n chiều và tạo vector m chiều. Mỗi thành phần đầu ra có thể phụ thuộc vào toàn bộ đầu vào, nên độ nhạy tổng quát được mô tả bởi Jacobian kích thước m×n."},
+        {"title": "Shape của đầu ra là phần của mô hình", "body": "Không chỉ giá trị mà cả dimension của x và y phải được cố định. Thay đổi shape đồng nghĩa thay đổi miền, đối miền hoặc cấu trúc của bài toán."}
+      ],
+      "application": [
+        {"title": "Động lực và mô hình nhiều đầu ra", "body": "Hàm vector xuất hiện trong mô hình trạng thái, robot dynamics, mạng neural nhiều output và phép biến đổi tín hiệu đa kênh."}
+      ],
+      "python": "import numpy as np\n\ndef f(x):\n    x = np.asarray(x, dtype=float)\n    if x.shape != (2,):\n        raise ValueError('expected x in R^2')\n    return np.array([x[0] + x[1], x[0] - x[1], x @ x])"
+    },
+    {
+      "id": "c03_parameterized_model",
+      "priority": 116,
+      "matchAll": ["y = f(x; theta)"],
+      "analysis": [
+        {"title": "Biến và tham số có vai trò khác nhau", "body": "x là dữ liệu đầu vào thay đổi theo mẫu; theta là tham số mô hình được chọn hoặc học từ dữ liệu. Huấn luyện điều chỉnh theta, còn suy luận giữ theta cố định và đưa x mới vào."},
+        {"title": "Mô hình cần tiêu chí đánh giá", "body": "Công thức chỉ tạo dự đoán. Chất lượng phải được đo bằng loss, metric validation và yêu cầu kỹ thuật trên dữ liệu chưa dùng để fit."}
+      ],
+      "application": [
+        {"title": "Học tham số", "body": "Hồi quy, mạng neural, nhận dạng hệ thống và hiệu chuẩn đều tìm theta sao cho f(x;theta) khớp quan sát nhưng vẫn tổng quát hóa."}
+      ],
+      "python": "import numpy as np\n\ndef predict(x, theta):\n    x = np.asarray(x, dtype=float)\n    theta = np.asarray(theta, dtype=float)\n    if theta.size != x.size + 1:\n        raise ValueError('theta must contain weights and bias')\n    return float(x @ theta[:-1] + theta[-1])"
+    },
+    {
+      "id": "c03_derivative_limit",
+      "priority": 138,
+      "matchAll": ["f'(x) = lim", "(f(x+h)-f(x))/h"],
+      "analysis": [
+        {"title": "Đạo hàm là giới hạn của tỷ số sai phân", "body": "Tỷ số sai phân đo thay đổi đầu ra trên thay đổi đầu vào trong một khoảng h. Khi h tiến về 0 và giới hạn tồn tại, ta thu được độ nhạy tức thời tại x."},
+        {"title": "Đạo hàm số có hai nguồn sai số", "body": "h quá lớn tạo sai số xấp xỉ; h quá nhỏ làm phép trừ hai số gần nhau khuếch đại lỗi làm tròn. Sai phân trung tâm thường chính xác hơn sai phân tiến với cùng mức h."}
+      ],
+      "application": [
+        {"title": "Kiểm gradient", "body": "Numerical derivative dùng để kiểm đạo hàm giải tích hoặc autograd trên mô hình nhỏ. Nó là công cụ kiểm thử, không phải lựa chọn tối ưu cho mô hình hàng triệu tham số."}
+      ],
+      "python": "def central_difference(f, x, h=1e-5):\n    if h <= 0:\n        raise ValueError('h must be positive')\n    return (f(x + h) - f(x - h)) / (2.0 * h)\n\nprint(central_difference(lambda t: t**3, 2.0))"
+    },
+    {
+      "id": "c03_derivative_notation",
+      "priority": 118,
+      "matchAll": ["dy/dx", "f'(x)"],
+      "analysis": [
+        {"title": "Đạo hàm mang đơn vị tỷ lệ", "body": "dy/dx cho biết y thay đổi bao nhiêu đơn vị khi x tăng một đơn vị quanh điểm xét. Đơn vị của đạo hàm là đơn vị y chia đơn vị x."},
+        {"title": "Dấu và độ lớn là thông tin cục bộ", "body": "Đạo hàm dương, âm hoặc gần 0 mô tả xu hướng tại điểm hiện tại. Nó không bảo đảm xu hướng đó giữ nguyên trên toàn miền."}
+      ],
+      "application": [
+        {"title": "Độ nhạy cảm biến và hệ thống", "body": "Đạo hàm dùng để đánh giá gain, độ nhạy nhiệt, độ dốc đáp ứng và mức khuếch đại sai số quanh điểm vận hành."}
+      ],
+      "python": "import numpy as np\n\ndef sensitivity(f, x, h=1e-5):\n    return (f(x + h) - f(x - h)) / (2*h)\n\nprint(sensitivity(np.sin, 0.3))"
+    },
+    {
+      "id": "c03_local_linearization",
+      "priority": 132,
+      "matchAll": ["f(x+h)", "f'(x)h"],
+      "analysis": [
+        {"title": "Tiếp tuyến là mô hình cục bộ", "body": "Xấp xỉ f(x+h)≈f(x)+f'(x)h thay hàm phi tuyến bằng đường thẳng quanh x. Sai số còn lại thường giảm nhanh khi h nhỏ và hàm đủ trơn."},
+        {"title": "Phạm vi tin cậy phải được kiểm", "body": "Tuyến tính hóa có thể sai mạnh gần điểm gián đoạn, bão hòa, đổi mode hoặc khi h quá lớn. Không nên ngoại suy xa chỉ vì xấp xỉ đúng tại một điểm."}
+      ],
+      "application": [
+        {"title": "Điều khiển và lan truyền sai số", "body": "Tuyến tính hóa dùng trong bộ điều khiển cục bộ, Kalman filter mở rộng và ước lượng ảnh hưởng của nhiễu đầu vào lên đầu ra."}
+      ],
+      "python": "def linearize(f, df, x0, x):\n    return f(x0) + df(x0) * (x - x0)\n\nf = lambda x: x**2\ndf = lambda x: 2*x\nprint(linearize(f, df, 2.0, 2.1), f(2.1))"
+    },
+    {
+      "id": "c03_gradient_vector",
+      "priority": 142,
+      "matchAll": ["grad f(x)", "partial f/partial x_1"],
+      "analysis": [
+        {"title": "Gradient gom mọi độ nhạy riêng", "body": "Thành phần thứ i là đạo hàm riêng theo x_i khi các biến khác được giữ cố định. Gradient có cùng dimension với đầu vào và chỉ hướng tăng nhanh nhất theo chuẩn Euclid."},
+        {"title": "Scale của biến làm đổi hướng gradient", "body": "Nếu các biến khác đơn vị hoặc scale, thành phần gradient không thể so trực tiếp. Chuẩn hóa hoặc preconditioning thay đổi hình học bước tối ưu và thường cải thiện hội tụ."}
+      ],
+      "application": [
+        {"title": "Tối ưu mô hình nhiều tham số", "body": "Gradient cho biết mỗi tham số cần thay đổi theo chiều nào để tăng hoặc giảm loss. Norm gradient cũng giúp phát hiện vùng phẳng, gradient nổ hoặc gradient biến mất."}
+      ],
+      "python": "import numpy as np\n\ndef grad_f(x):\n    x = np.asarray(x, dtype=float)\n    return np.array([2*x[0], 6*x[1]])\n\nx = np.array([1., 2.])\ng = grad_f(x)\nprint(g, np.linalg.norm(g))"
+    },
+    {
+      "id": "c03_partial_derivative",
+      "priority": 124,
+      "matchAll": ["partial f/partial x_i"],
+      "analysis": [
+        {"title": "Đạo hàm riêng cô lập một hướng tọa độ", "body": "Ta thay đổi x_i và giữ các biến khác cố định. Kết quả đo độ nhạy dọc theo trục i, không phải theo một hướng bất kỳ trong không gian."},
+        {"title": "Tương tác giữa biến cần đạo hàm bậc hai", "body": "Đạo hàm riêng bậc một không mô tả đầy đủ tương tác giữa các biến. Các đạo hàm chéo trong Hessian cho biết độ dốc theo một biến thay đổi khi biến khác đổi."}
+      ],
+      "application": [
+        {"title": "Phân tích độ nhạy feature", "body": "Đạo hàm riêng giúp xem output hoặc loss nhạy với từng feature hay tham số ở một điểm cụ thể."}
+      ],
+      "python": "def partial_x(f, x, y, h=1e-5):\n    return (f(x+h, y) - f(x-h, y)) / (2*h)\n\nf = lambda x, y: x**2 + 3*y**2\nprint(partial_x(f, 1.0, 2.0))"
+    },
+    {
+      "id": "c03_directional_derivative",
+      "priority": 136,
+      "matchAll": ["d_u f(x)", "grad f(x) · u"],
+      "analysis": [
+        {"title": "Đạo hàm theo hướng là projection của gradient", "body": "D_u f=∇f·u đo tốc độ thay đổi khi đi theo vector đơn vị u. Giá trị lớn nhất đạt được khi u cùng hướng gradient, nhỏ nhất khi u ngược hướng."},
+        {"title": "u phải được chuẩn hóa", "body": "Nếu u không có norm bằng 1, kết quả trộn cả hướng và độ dài bước. Khi đó giá trị không còn là tốc độ thay đổi trên một đơn vị quãng đường."}
+      ],
+      "application": [
+        {"title": "Đánh giá một perturbation cụ thể", "body": "Trong kỹ thuật, ta thường không thể thay đổi mọi biến tự do. Directional derivative đo độ nhạy theo một kịch bản thay đổi, hướng nhiễu hoặc hướng điều khiển cụ thể."}
+      ],
+      "python": "import numpy as np\n\ndef directional_derivative(grad, u, eps=1e-12):\n    u = np.asarray(u, dtype=float)\n    n = np.linalg.norm(u)\n    if n < eps:\n        raise ValueError('direction must be non-zero')\n    return float(np.asarray(grad, dtype=float) @ (u / n))"
+    },
+    {
+      "id": "c03_gradient_descent_state",
+      "priority": 145,
+      "matchAll": ["x_{k+1} = x_k - eta grad f(x_k)"],
+      "analysis": [
+        {"title": "Âm gradient là hướng giảm nhanh nhất cục bộ", "body": "Bước cập nhật lấy điểm hiện tại rồi trừ gradient nhân learning rate. Gradient cho hướng; eta quyết định độ dài bước."},
+        {"title": "Hội tụ phụ thuộc độ cong", "body": "Eta quá lớn có thể vượt đáy hoặc dao động, quá nhỏ làm hội tụ chậm. Với hàm có các hướng độ cong rất khác nhau, chuẩn hóa hoặc optimizer thích nghi có thể cần thiết."}
+      ],
+      "application": [
+        {"title": "Tối ưu hàm mục tiêu", "body": "Gradient descent dùng trong fitting mô hình, hiệu chỉnh tham số, nhận dạng hệ và tối ưu cost điều khiển."}
+      ],
+      "python": "import numpy as np\n\nx = np.array([3., -2.])\neta = 0.1\nfor _ in range(50):\n    grad = np.array([2*x[0], 6*x[1]])\n    x = x - eta * grad\nprint(x)"
+    },
+    {
+      "id": "c03_gradient_descent_theta",
+      "priority": 144,
+      "matchAny": ["theta_{k+1} = theta_k - alpha", "theta = theta - alpha g"],
+      "analysis": [
+        {"title": "Cập nhật tham số là vòng phản hồi", "body": "Mỗi bước dùng gradient tại theta_k để dự đoán hướng giảm loss cục bộ, cập nhật theta rồi đo lại. Đây là quy trình lặp, không phải công thức một bước bảo đảm nghiệm tối ưu."},
+        {"title": "Learning rate là tham số động lực", "body": "Alpha quyết định tốc độ và độ ổn định của quỹ đạo. Theo dõi loss, gradient norm và validation metric giúp phân biệt lỗi mô hình với lỗi bước học."}
+      ],
+      "application": [
+        {"title": "Training loop có kiểm soát", "body": "Một vòng lặp tốt lưu best parameters, dừng sớm khi không cải thiện, phát hiện NaN và có scheduler hoặc clipping khi cần."}
+      ],
+      "python": "theta = 10.0\nalpha = 0.1\nhistory = []\nfor step in range(100):\n    loss = theta**2\n    grad = 2*theta\n    history.append(loss)\n    theta -= alpha*grad\n    if abs(grad) < 1e-8:\n        break"
+    },
+    {
+      "id": "c03_mse_loss",
+      "priority": 148,
+      "matchAll": ["j(theta) = (1/m)", "sum_{i=1}^m", "f(x_i;theta)-y_i"],
+      "analysis": [
+        {"title": "MSE đo sai số bình phương trung bình", "body": "Mỗi residual được bình phương nên sai số lớn bị phạt mạnh hơn. Chia cho m làm loss không phụ thuộc trực tiếp số mẫu và thuận tiện so giữa batch cùng phân phối."},
+        {"title": "MSE nhạy với outlier", "body": "Một điểm lỗi lớn có thể chi phối toàn bộ loss và kéo nghiệm. Cần xem phân phối residual, kiểm dữ liệu lỗi và cân nhắc MAE hoặc Huber khi nhiễu có đuôi nặng."}
+      ],
+      "application": [
+        {"title": "Hồi quy và hiệu chuẩn", "body": "MSE phù hợp khi nhiễu gần Gaussian và sai số lớn thực sự cần bị phạt mạnh. Metric kỹ thuật vẫn phải được theo dõi riêng trên validation/test."}
+      ],
+      "python": "import numpy as np\n\ndef mse(y_pred, y_true):\n    r = np.asarray(y_pred, dtype=float) - np.asarray(y_true, dtype=float)\n    return float(np.mean(r**2))\n\nprint(mse([1., 2.5, 4.], [1.2, 2., 3.8]))"
+    },
+    {
+      "id": "c03_stationary_point",
+      "priority": 140,
+      "matchAll": ["grad j(theta*) = 0"],
+      "analysis": [
+        {"title": "Gradient zero chỉ xác nhận điểm dừng", "body": "Tại điểm khả vi trong miền trong, gradient bằng 0 là điều kiện cần cho cực trị địa phương, nhưng điểm đó có thể là cực tiểu, cực đại, điểm yên ngựa hoặc vùng phẳng."},
+        {"title": "Cần thêm thông tin độ cong và biên", "body": "Hessian, giá trị hàm lân cận và ràng buộc giúp phân loại điểm dừng. Với nghiệm trên biên hoặc hàm không khả vi, điều kiện gradient zero có thể không áp dụng."}
+      ],
+      "application": [
+        {"title": "Chẩn đoán nơi optimizer dừng", "body": "Gradient nhỏ chưa chắc mô hình tốt. Cần xem validation loss, curvature, gradient norm theo lớp và khả năng optimizer mắc kẹt trong plateau hoặc saddle."}
+      ],
+      "python": "import numpy as np\n\ndef classify_1d(df, d2f, x, tol=1e-8):\n    if abs(df(x)) > tol:\n        return 'not stationary'\n    curvature = d2f(x)\n    return 'local minimum' if curvature > 0 else 'local maximum' if curvature < 0 else 'inconclusive'"
+    },
+    {
+      "id": "c03_second_order_test",
+      "priority": 146,
+      "matchAny": ["f''(x*) > 0", "hessian h positive definite"],
+      "analysis": [
+        {"title": "Đạo hàm bậc hai mô tả độ cong", "body": "Một biến: f'' dương tại điểm dừng gợi ý cực tiểu, âm gợi ý cực đại. Nhiều biến: Hessian positive definite tạo độ cong lên theo mọi hướng và gợi ý cực tiểu chặt."},
+        {"title": "Bán xác định chưa đủ kết luận mạnh", "body": "Nếu Hessian có trị riêng bằng 0 hoặc lẫn dấu, kiểm tra bậc hai có thể không kết luận hoặc cho điểm yên ngựa. Cần xét bậc cao hơn hoặc hành vi lân cận."}
+      ],
+      "application": [
+        {"title": "Độ cong điều khiển bước tối ưu", "body": "Curvature lớn yêu cầu bước nhỏ hơn; các hướng độ cong chênh lệch lớn làm gradient descent zigzag và hội tụ chậm."}
+      ],
+      "python": "import numpy as np\n\nH = np.array([[4., 1.], [1., 3.]])\neigenvalues = np.linalg.eigvalsh(H)\nclassification = 'positive definite' if np.all(eigenvalues > 0) else 'not positive definite'\nprint(eigenvalues, classification)"
+    },
+    {
+      "id": "c03_composite_function",
+      "priority": 122,
+      "matchAll": ["y = f_3(f_2(f_1(x)))"],
+      "analysis": [
+        {"title": "Mô hình nhiều tầng là hàm hợp", "body": "Đầu ra của f_1 trở thành đầu vào f_2 rồi f_3. Forward pass tính giá trị theo chiều này; đạo hàm toàn cục phải tính ảnh hưởng qua mọi tầng trung gian."},
+        {"title": "Giá trị trung gian cần cho backward", "body": "Đạo hàm cục bộ thường phụ thuộc activation hoặc pre-activation đã tính ở forward. Vì vậy autograd lưu computation graph hoặc tensors cần thiết."}
+      ],
+      "application": [
+        {"title": "Mạng neural và pipeline khả vi", "body": "Mỗi layer, activation và loss là một hàm. Ghép chúng tạo mô hình sâu mà gradient có thể truyền bằng chain rule."}
+      ],
+      "python": "def f1(x): return 2*x\ndef f2(z): return z**2\ndef f3(a): return a + 1\n\nx = 3.0\ny = f3(f2(f1(x)))\nprint(y)"
+    },
+    {
+      "id": "c03_chain_rule",
+      "priority": 150,
+      "matchAll": ["dj/dw", "dj/da", "da/dz", "dz/dw"],
+      "analysis": [
+        {"title": "Chain rule nhân các độ nhạy cục bộ", "body": "dJ/dw được tạo bằng tích độ nhạy từ loss tới a, từ a tới z và từ z tới w. Mỗi thừa số trả lời một mắt xích thay đổi ảnh hưởng tới mắt xích kế tiếp ra sao."},
+        {"title": "Gradient có thể nổ hoặc biến mất", "body": "Nhân nhiều đạo hàm có trị tuyệt đối lớn hơn 1 có thể làm gradient nổ; nhỏ hơn 1 qua nhiều tầng có thể làm gradient biến mất. Activation, initialization và normalization ảnh hưởng mạnh tới hiện tượng này."}
+      ],
+      "application": [
+        {"title": "Backpropagation", "body": "Backprop tổ chức chain rule theo thứ tự ngược của computation graph, tái sử dụng gradient trung gian để tính gradient cho mọi tham số hiệu quả."}
+      ],
+      "python": "# Scalar chain example: J=(w*x)^2\nx, w = 3.0, 2.0\nz = w*x\nJ = z**2\ndJ_dz = 2*z\ndz_dw = x\ndJ_dw = dJ_dz * dz_dw\nprint(J, dJ_dw)"
+    },
+    {
+      "id": "c03_backprop_flow",
+      "priority": 130,
+      "matchAny": ["dj/dy_hat ->", "dj/dz2 ->", "x -> z1 -> a1"],
+      "analysis": [
+        {"title": "Forward tạo giá trị, backward truyền gradient", "body": "Forward pass biến input thành prediction và loss. Backward pass đi ngược graph để tính đạo hàm loss theo từng intermediate và tham số; dữ liệu không bị chạy ngược."},
+        {"title": "Thứ tự thao tác trong training loop", "body": "Thông thường: zero gradient, forward, tính loss, backward, optimizer step. Nếu quên zero_grad, gradient có thể bị cộng dồn ngoài ý muốn."}
+      ],
+      "application": [
+        {"title": "Theo dõi gradient từng lớp", "body": "Log gradient norm giúp phát hiện lớp không học, gradient nổ hoặc biến mất. Gradient clipping là van an toàn, không thay thế việc sửa nguyên nhân gốc."}
+      ],
+      "python": "# PyTorch-style training step\noptimizer.zero_grad()\ny_hat = model(x)\nloss = criterion(y_hat, y)\nloss.backward()\ntorch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)\noptimizer.step()"
+    },
+    {
+      "id": "c03_weight_update",
+      "priority": 128,
+      "matchAll": ["w = w - alpha dj/dw"],
+      "analysis": [
+        {"title": "Backprop và optimizer có nhiệm vụ khác nhau", "body": "Backprop tính dJ/dw; công thức cập nhật dùng gradient đó để thay đổi w. SGD, Momentum và Adam khác nhau ở cách biến gradient hiện tại và lịch sử thành bước cập nhật."},
+        {"title": "Dấu trừ gắn với bài toán cực tiểu", "body": "Trừ gradient để giảm loss. Nếu mục tiêu là cực đại hóa reward, có thể cộng gradient hoặc tối thiểu hóa negative reward."}
+      ],
+      "application": [
+        {"title": "Huấn luyện mô hình", "body": "Cập nhật cần đi cùng learning-rate schedule, kiểm NaN, validation và lưu checkpoint tốt nhất."}
+      ],
+      "python": "w = 2.0\nalpha = 0.05\nfor _ in range(100):\n    dJ_dw = 2*(w - 1.0)\n    w -= alpha*dJ_dw\nprint(w)"
+    }
+  ]
+}

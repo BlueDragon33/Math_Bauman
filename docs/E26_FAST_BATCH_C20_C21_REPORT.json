@@ -1,0 +1,44 @@
+{
+  "checkpoint": "E26",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "mode": "FAST_BATCH",
+  "chapters": [
+    {
+      "chapterId": "MATH-HK3-TS-C20",
+      "title": "Chương 20 · AR, MA, ARIMA và dự báo chuỗi thời gian",
+      "focus": "AR/MA/ARIMA, ACF/PACF, mùa vụ, chẩn đoán phần dư và quy trình báo cáo mô hình dự báo"
+    },
+    {
+      "chapterId": "MATH-HK3-SIG-C21",
+      "title": "Chương 21 · Fourier, lọc số và phân tích phổ tín hiệu cảm biến",
+      "focus": "DFT/FFT, phổ biên độ/pha, sampling-Nyquist, aliasing, lọc FIR/IIR nhập môn, STFT/spectrogram và đặc trưng phổ cho AI"
+    }
+  ],
+  "countsPerChapter": {
+    "MATH-HK3-TS-C20": {
+      "lessons": 9,
+      "slides": 180,
+      "formulas": 27,
+      "exercises": 72,
+      "applications": 18,
+      "simulations": 18,
+      "professorQa": 9,
+      "questions": 54,
+      "reviewPacks": 9,
+      "vocabCards": 36
+    },
+    "MATH-HK3-SIG-C21": {
+      "lessons": 8,
+      "slides": 160,
+      "formulas": 24,
+      "exercises": 64,
+      "applications": 16,
+      "simulations": 16,
+      "professorQa": 8,
+      "questions": 48,
+      "reviewPacks": 8,
+      "vocabCards": 32
+    }
+  },
+  "notFinal": true
+}

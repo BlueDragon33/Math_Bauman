@@ -1,0 +1,93 @@
+{
+  "checkpoint": "E30",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "notFinal": true,
+  "checks": {
+    "jsonParse": {
+      "pass": true,
+      "errors": []
+    },
+    "simulationsTheoryApplication": {
+      "pass": true
+    },
+    "questionToReviewPack": {
+      "pass": true
+    },
+    "noReplacementChar": {
+      "pass": true,
+      "files": []
+    },
+    "jsSyntax": {
+      "pass": true,
+      "errors": []
+    },
+    "renderFormulaShim": {
+      "pass": true
+    },
+    "storageIndicator": {
+      "pass": true
+    },
+    "theoryMicroScrollLock": {
+      "pass": true
+    },
+    "allTargetsPass": {
+      "pass": true
+    }
+  },
+  "chapters": {
+    "MATH-HK3-NNOPT-C28": {
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "expected": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "pass": true
+    },
+    "MATH-HK3-RISK-C29": {
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "expected": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "pass": true
+    }
+  }
+}

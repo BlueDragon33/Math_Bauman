@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "schema",
+    "tabs",
+    "stageGate",
+    "bridge",
+    "dataFiles"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "schema": {
+      "const": "BAUMAN_SUBJECT_MODULE_V2"
+    },
+    "tabs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stageGate": {
+      "type": "object"
+    },
+    "bridge": {
+      "type": "object"
+    },
+    "dataFiles": {
+      "type": "array"
+    }
+  }
+}

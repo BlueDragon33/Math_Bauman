@@ -1,0 +1,33 @@
+{
+  "type": "bauman_math_e101_academic_lecture_ux_repair_audit",
+  "createdAt": "2026-06-21T15:01:39.094674Z",
+  "fixes": [
+    "Grouped-tree runtime now prefers explicit facultyId/departmentId/chapterId from data, not keyword inference.",
+    "Support chapters in Russian prep are labeled Phụ trợ instead of duplicate Chương labels.",
+    "Route modal rebuilt as one full-height scrollable academic cockpit; route buttons close modal before navigation.",
+    "Lesson slides rebuilt to academic lecture slides and removed route/stage/path boilerplate.",
+    "Chapter lecture slides rebuilt as chapter-level teaching support, not roadmap filler."
+  ],
+  "counts": {
+    "lessons": 260,
+    "chapterLectures": 32,
+    "lessonSlidesTotal": 3380,
+    "chapterSlidesTotal": 256
+  },
+  "supportChapters": {
+    "MATH-PREP-MT-C09": {
+      "chapterType": "support",
+      "chapterSupportNo": 1,
+      "chapterTitle": "Phụ trợ 1 · Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật",
+      "chapterName": "Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật",
+      "chapterLabel": "Phụ trợ 1"
+    },
+    "MATH-PREP-PS-C13": {
+      "chapterType": "support",
+      "chapterSupportNo": 2,
+      "chapterTitle": "Phụ trợ 2 · Tổng hợp dự bị: đại số, xác suất và thống kê",
+      "chapterName": "Tổng hợp dự bị: đại số, xác suất và thống kê",
+      "chapterLabel": "Phụ trợ 2"
+    }
+  }
+}

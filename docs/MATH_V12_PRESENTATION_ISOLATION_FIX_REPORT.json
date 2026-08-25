@@ -1,0 +1,12 @@
+{
+  "version": "MATH_V12_PRESENTATION_ISOLATION_FIX",
+  "date": "2026-06-13",
+  "fixed": [
+    "Ẩn Cấu trúc bài học khi mở Trình chiếu",
+    "Nâng z-index modal cao hơn dropdown Cấu trúc bài học",
+    "Khóa scroll nền khi trình chiếu",
+    "Đóng details/dropdown cấu trúc trước khi mở modal trình chiếu",
+    "Không xuất file main"
+  ],
+  "sourceSafety": "Chỉ vá module Toán V12; không ghi đè A1_Russian_Bauman_Exam_Stable_Final.zip."
+}

@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "package": "A2_Math_Bauman_Elearning_FINAL_REBUILD",
+  "counts": {
+    "chapters": 32,
+    "lessons": 260,
+    "exercises": 1040,
+    "applications": 520,
+    "simulations": 260,
+    "formulas": 678,
+    "professorQa": 260
+  },
+  "checks": {
+    "lessonsWith4ExerciseLevels": 260,
+    "duplicateChapterLessonLabels": 0,
+    "applicationsNotTheoryDependent": 0,
+    "uniqueSimulationKeys": true,
+    "formulaCardMetadata": 678,
+    "formulaDeepMetadata": 678,
+    "nonLastSummaryMarkers": 0,
+    "lastSummaryMissing": 0,
+    "objectObjectLiteralsActiveFiles": 0,
+    "rendererFunctionCounts": {
+      "renderLearning": 1,
+      "renderTheory": 1,
+      "renderExercises": 1,
+      "renderApplications": 1,
+      "renderSimulation": 1,
+      "renderDialogue": 1,
+      "renderFormulaDeep": 1,
+      "renderFormulaCard": 1
+    },
+    "activeCheckpointMarkers": {
+      "CHECKPOINT": 0,
+      "SNAPSHOT": 0,
+      "E56": 0,
+      "E57": 0,
+      "E58": 0,
+      "E59": 0,
+      "E60": 0,
+      "FINAL V2": 0
+    }
+  },
+  "notes": [
+    "Static QA + syntax/integrity checks. Browser spot-check with Live Server is still recommended before deployment."
+  ],
+  "errors": []
+}

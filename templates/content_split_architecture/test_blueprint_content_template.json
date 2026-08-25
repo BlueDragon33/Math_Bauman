@@ -1,0 +1,17 @@
+{
+  "frameFile": "test_blueprint_frame.json",
+  "contentFile": "test_blueprint_content.json",
+  "recordKey": "blueprintId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "blueprintId": "MATH-VN-C01-BP01",
+    "distribution": {
+      "easy": 8,
+      "medium": 6,
+      "hard": 4,
+      "expert": 2
+    },
+    "questionRefs": [],
+    "auditStatus": "DRAFT"
+  }
+}

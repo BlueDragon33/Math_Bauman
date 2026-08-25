@@ -1,0 +1,83 @@
+{
+  "checkpoint": "E28",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapters": [
+    {
+      "chapterId": "MATH-HK3-ID-C24",
+      "title": "Chương 24 · Nhận dạng hệ thống, least squares và mô hình hồi quy động học",
+      "targetPass": true,
+      "counts": {
+        "lessons.json": 8,
+        "formulas.json": 24,
+        "exercises.json": 64,
+        "applications.json": 16,
+        "simulations.json": 16,
+        "professor_qa.json": 8,
+        "question_bank.json": 48,
+        "review_packs.json": 8,
+        "mastery-map.json": 8,
+        "content-index.json": 8,
+        "vocab.json": 32
+      }
+    },
+    {
+      "chapterId": "MATH-HK3-OPT-C25",
+      "title": "Chương 25 · Tối ưu có ràng buộc, Lagrange-KKT và MPC nhập môn cho hệ tự hành",
+      "targetPass": true,
+      "counts": {
+        "lessons.json": 8,
+        "formulas.json": 24,
+        "exercises.json": 64,
+        "applications.json": 16,
+        "simulations.json": 16,
+        "professor_qa.json": 8,
+        "question_bank.json": 48,
+        "review_packs.json": 8,
+        "mastery-map.json": 8,
+        "content-index.json": 8,
+        "vocab.json": 32
+      }
+    }
+  ],
+  "jsonParse": "PASS",
+  "jsSyntax": {
+    "subjects/math/assets/core.js": "PASS",
+    "subjects/math/assets/subject-adapter.js": "PASS",
+    "subjects/math/assets/math.js": "PASS",
+    "subjects/math/assets/planning-bridge.js": "PASS",
+    "subjects/math/subject-manifest.js": "PASS"
+  },
+  "targets": {
+    "MATH-HK3-ID-C24": {
+      "lessons.json": 8,
+      "formulas.json": 24,
+      "exercises.json": 64,
+      "applications.json": 16,
+      "simulations.json": 16,
+      "professor_qa.json": 8,
+      "question_bank.json": 48,
+      "review_packs.json": 8,
+      "mastery-map.json": 8,
+      "content-index.json": 8,
+      "vocab.json": 32
+    },
+    "MATH-HK3-OPT-C25": {
+      "lessons.json": 8,
+      "formulas.json": 24,
+      "exercises.json": 64,
+      "applications.json": 16,
+      "simulations.json": 16,
+      "professor_qa.json": 8,
+      "question_bank.json": 48,
+      "review_packs.json": 8,
+      "mastery-map.json": 8,
+      "content-index.json": 8,
+      "vocab.json": 32
+    }
+  },
+  "renderFormulaShim": "PASS",
+  "storageIndicator": "PASS",
+  "theoryMicroScrollLock": "PASS",
+  "replacementChar": "PASS",
+  "zipIntegrity": "PASS"
+}

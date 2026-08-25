@@ -1,0 +1,24 @@
+{
+  "checkpoint": "E25",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapterId": "MATH-HK3-TS-C18",
+  "title": "Chương 18 · Lý thuyết chuỗi thời gian cho dữ liệu cảm biến",
+  "counts": {
+    "lessons": 8,
+    "slides": 160,
+    "formulas": 24,
+    "exercises": 64,
+    "applications": 16,
+    "simulations": 16,
+    "professorQa": 8,
+    "questions": 48,
+    "reviewPacks": 8,
+    "vocabCards": 32
+  },
+  "focus": "làm sâu chuỗi thời gian cảm biến: index thời gian, lag, rolling statistics, stationarity, autocorrelation, decomposition, smoothing, AR nhập môn và pipeline cảm biến",
+  "uiRegressionLocks": [
+    "theory-slide-strip-horizontal-only",
+    "renderFormula-shim-kept",
+    "storage-indicator-kept"
+  ]
+}

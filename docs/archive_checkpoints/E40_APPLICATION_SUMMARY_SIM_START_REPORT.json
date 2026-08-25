@@ -1,0 +1,16 @@
+{
+  "checkpoint": "E40_APPLICATION_SUMMARY_SIM_START_CHECKPOINT_TEST_SNAPSHOT",
+  "final": false,
+  "fixes": [
+    "Tóm tắt được đưa trở lại cuối slide, có bộ lọc chống trùng với tiêu đề/nội dung chính.",
+    "Tab Ứng dụng chuyển sang cấu trúc giống Bài tập: không picker đầu tab, phụ thuộc lý thuyết và bài tập cùng bài.",
+    "Ứng dụng có nút Xem lại lý thuyết, Xem lại bài tập, Mô phỏng ứng dụng, Chương tiếp.",
+    "Bắt đầu nội dung tab Mô phỏng phase 1: bổ sung protocol/variables/outputs/checklist cho toàn bộ mô phỏng."
+  ],
+  "simulation_phase": "E40 starts simulation content phase 1; E41 should deepen dedicated interactive HTML/logic for simulation tab.",
+  "counts": {
+    "lessons": 260,
+    "applications": 469,
+    "simulations": 520
+  }
+}

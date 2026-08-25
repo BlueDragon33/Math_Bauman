@@ -1,0 +1,74 @@
+{
+  "packageType": "bauman.math.theory_lecture_content.e130_patch_template",
+  "target": "theory_lecture_content",
+  "mode": "merge",
+  "templateRole": "E130 program-linked Theory content package",
+  "notes": [
+    "Import through E129 Kho Lý thuyết only.",
+    "Do not import this into lessons.json.",
+    "Keep chapterId stable and use programLectureId from math_program_map.json.",
+    "Replace SAMPLE fields before production import."
+  ],
+  "records": [
+    {
+      "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L01-e130-sample",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "lessonTitle": "§1.1 · Vector như dữ liệu kỹ thuật",
+      "title": "§1.1 · Vector như dữ liệu kỹ thuật",
+      "programLectureId": "MATH-PROG-L02-vector-spaces-linear-maps",
+      "programLectureIds": [
+        "MATH-PROG-L02-vector-spaces-linear-maps",
+        "MATH-PROG-L01-linear-algebra-basic",
+        "MATH-PROG-L17-ai-machine-learning-math-foundations"
+      ],
+      "programAnchorTitle": "Không gian vectơ và Ánh xạ tuyến tính",
+      "roadmapRole": "foundation_before_prep",
+      "sourceAnchors": {
+        "stageId": "vn",
+        "disciplineId": "linear_algebra_data_space",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "programLectureId": "MATH-PROG-L02-vector-spaces-linear-maps"
+      },
+      "labWork": {
+        "required": true,
+        "languages": [
+          "Python/NumPy",
+          "C++"
+        ],
+        "tasks": [
+          {
+            "taskId": "lab-c01-vector-norms-python",
+            "title": "Tính chuẩn vector và cosine similarity",
+            "language": "Python/NumPy",
+            "goal": "Biến định nghĩa vector, chuẩn và tích vô hướng thành code chạy được.",
+            "expectedOutput": "Bảng nhỏ so sánh norm L2 và cosine similarity giữa các vector dữ liệu.",
+            "starterCode": "import numpy as np\n\na = np.array([1.0, 2.0, 3.0])\nb = np.array([2.0, 0.0, 1.0])\n# TODO: compute norm and cosine similarity",
+            "validationChecklist": [
+              "Code chạy không lỗi.",
+              "Có kiểm tra trường hợp vector zero.",
+              "Giải thích được ý nghĩa kỹ thuật của cosine similarity."
+            ]
+          }
+        ]
+      },
+      "slides": [
+        {"role":"problem_framing","title":"Vì sao vector là ngôn ngữ đầu tiên của dữ liệu kỹ thuật?","blocks":[{"type":"text","title":"Bối cảnh","body":"Trong hệ thống máy tính, tín hiệu, đặc trưng ảnh, trạng thái cảm biến và embedding đều có thể được biểu diễn bằng vector."}]},
+        {"role":"deep_essence","title":"Bản chất sâu của vector","blocks":[{"type":"text","title":"Ý tưởng lõi","body":"Vector vừa là đối tượng đại số, vừa là gói dữ liệu có hướng, độ lớn và quan hệ với các vector khác."}]},
+        {"role":"counter_intuition","title":"Vector không chỉ là mũi tên hình học","blocks":[{"type":"text","title":"Phản trực giác","body":"Trong AI và xử lý dữ liệu, vector thường không cần được vẽ trong không gian 2D/3D; nó có thể sống trong hàng trăm hoặc hàng nghìn chiều."}]},
+        {"role":"real_bridge","title":"Cầu nối Bauman","blocks":[{"type":"text","title":"Ứng dụng kỹ thuật","body":"Vector trạng thái, vector đặc trưng và embedding là cầu nối giữa toán học tuyến tính và hệ thống thông tin thực tế."}]},
+        {"role":"notation","title":"Ký hiệu tối thiểu","blocks":[{"type":"text","title":"Ký hiệu","body":"Một vector có thể viết là x = (x1, x2, ..., xn). Các phép toán chính gồm cộng vector, nhân vô hướng, chuẩn và tích vô hướng."}]},
+        {"role":"core_formula","title":"Công thức lõi","blocks":[{"type":"formula","title":"Norm và cosine similarity","body":"||x||_2 = sqrt(sum_i x_i^2); cos(theta)=<x,y>/(||x|| ||y||)."}]},
+        {"role":"assumption_gate","title":"Điều kiện áp dụng","blocks":[{"type":"text","title":"Cần kiểm tra","body":"Cosine similarity không xác định nếu một vector có chuẩn bằng 0. Khi dữ liệu có thang đo khác nhau, cần chuẩn hóa trước khi so sánh."}]},
+        {"role":"mini_case","title":"Mini case","blocks":[{"type":"text","title":"So sánh hồ sơ dữ liệu","body":"Hai bản ghi người dùng có thể được mã hóa thành vector đặc trưng và so sánh độ gần nhau bằng cosine similarity."}]},
+        {"role":"interpretation","title":"Diễn giải kỹ thuật","blocks":[{"type":"text","title":"Ý nghĩa","body":"Norm đo độ lớn, tích vô hướng đo mức cùng hướng, cosine similarity đo độ giống về hướng bất kể độ lớn."}]},
+        {"role":"simulation","title":"Mô phỏng nhanh","blocks":[{"type":"text","title":"Thí nghiệm","body":"Sinh ba vector 2D/3D, thay đổi độ lớn và hướng, quan sát norm và cosine similarity thay đổi như thế nào."}]},
+        {"role":"common_mistakes","title":"Lỗi thường gặp","blocks":[{"type":"text","title":"Bẫy","body":"Nhầm cosine similarity với khoảng cách Euclidean; quên chuẩn hóa; không xử lý vector zero."}]},
+        {"role":"application","title":"Ứng dụng lập trình","blocks":[{"type":"text","title":"Lab Work","body":"Dùng NumPy để tính norm, dot product và cosine similarity; sau đó kiểm tra với dữ liệu nhỏ tự tạo."}]},
+        {"role":"practice","title":"Bài luyện tập","blocks":[{"type":"text","title":"Nhiệm vụ","body":"Cho ba vector dữ liệu, hãy tính norm, dot product, cosine similarity và xếp cặp vector giống nhau nhất."}]},
+        {"role":"professor_qa","title":"Vấn đáp giáo sư","blocks":[{"type":"qa","title":"Câu hỏi","body":"Tại sao cosine similarity hữu ích trong embedding hơn so với chỉ nhìn độ dài vector?"}]},
+        {"role":"bridge","title":"Cầu sang bài sau","blocks":[{"type":"text","title":"Tiếp nối","body":"Khi gom nhiều vector thành bảng, ta đi tới ma trận và phép biến đổi tuyến tính."}]},
+        {"role":"takeaway","title":"Kết luận cần nhớ","blocks":[{"type":"text","title":"Takeaway","body":"Vector là đơn vị cơ bản để biến đối tượng kỹ thuật thành dữ liệu có thể tính toán, so sánh và tối ưu."}]}
+      ]
+    }
+  ]
+}

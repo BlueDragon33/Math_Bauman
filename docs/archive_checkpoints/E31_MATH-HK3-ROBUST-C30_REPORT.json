@@ -1,0 +1,22 @@
+{
+  "checkpoint": "E31",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "mode": "FAST_BATCH",
+  "chapterId": "MATH-HK3-ROBUST-C30",
+  "chapterTitle": "Chương 30 · Robustness, anomaly detection và kiểm soát rủi ro ngoại lai cho hệ AI kỹ thuật",
+  "stage": "hk3",
+  "counts": {
+    "lessons": 8,
+    "slides": 160,
+    "formulas": 24,
+    "exercises": 64,
+    "applications": 16,
+    "simulations": 16,
+    "professorQa": 8,
+    "questions": 48,
+    "reviewPacks": 8,
+    "vocabCards": 32
+  },
+  "focus": "Robustness, residual, anomaly score, OOD detection, threshold, stress test và fail-safe decision cho hệ AI tự hành.",
+  "notFinal": true
+}

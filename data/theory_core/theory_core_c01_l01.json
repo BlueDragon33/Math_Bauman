@@ -1,0 +1,503 @@
+{
+  "id": "bauman_math_theory_core_c01_l01_v1",
+  "schema": "bauman_math_theory_core_v1",
+  "version": "CORE_C01_L01_V1",
+  "status": "gold_standard_candidate",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L01-vector-as-engineering-data-e130",
+  "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+  "lessonTitle": "§1.1 · Vector như dữ liệu kỹ thuật",
+  "language": "vi",
+  "purpose": "Nguồn nội dung lõi duy nhất cho bài 1.1. Không chứa quyết định về slide, popup, bố cục hoặc hiệu ứng trình bày.",
+  "contentContract": {
+    "sourceOfTruth": true,
+    "presentationIndependent": true,
+    "noUiCopy": true,
+    "noSlideNumbering": true,
+    "notationMustBeSemantic": true,
+    "downstreamOrder": [
+      "reference_table",
+      "slideshow",
+      "full_view",
+      "formula_and_layout_finalization"
+    ]
+  },
+  "lessonThesis": "Vector là hợp đồng đo lường giữa hệ thống thật và thuật toán: mỗi phần tử có vị trí, ý nghĩa, đơn vị và thời điểm xác định; mọi phép đo hình học chỉ có giá trị khi hợp đồng đó được giữ nguyên.",
+  "prerequisites": [
+    "Số thực và phép toán đại số cơ bản",
+    "Tổng hữu hạn và căn bậc hai",
+    "Khái niệm tọa độ trong mặt phẳng",
+    "Khái niệm mảng một chiều trong lập trình"
+  ],
+  "learningOutcomes": [
+    {
+      "id": "LO1",
+      "outcome": "Giải thích được vector đồng thời như đối tượng đại số, đối tượng hình học và bản ghi dữ liệu có thứ tự.",
+      "evidence": "Nêu đúng ý nghĩa của từng thành phần, thứ tự, đơn vị và dimension trong một vector kỹ thuật."
+    },
+    {
+      "id": "LO2",
+      "outcome": "Phân biệt được phần tử, chỉ số và lũy thừa trong ký hiệu vector.",
+      "evidence": "Đọc đúng x_i là phần tử thứ i, x_i^2 là bình phương phần tử thứ i và x^2 là lũy thừa của đại lượng x khi ngữ cảnh cho phép."
+    },
+    {
+      "id": "LO3",
+      "outcome": "Thực hiện và diễn giải được cộng vector, nhân vô hướng, norm L2, dot product, Euclidean distance và cosine similarity.",
+      "evidence": "Không chỉ tính đúng mà còn trả lời đúng câu hỏi kỹ thuật mà mỗi đại lượng đo."
+    },
+    {
+      "id": "LO4",
+      "outcome": "Kiểm tra được điều kiện áp dụng trước khi so sánh hai vector.",
+      "evidence": "Kiểm tra shape, schema, đơn vị, scale, timestamp, missing value và zero vector."
+    },
+    {
+      "id": "LO5",
+      "outcome": "Lựa chọn được metric phù hợp giữa distance và cosine cho một tình huống cụ thể.",
+      "evidence": "Giải thích được khi nào độ lệch tuyệt đối quan trọng hơn pattern và ngược lại."
+    },
+    {
+      "id": "LO6",
+      "outcome": "Thiết kế được vector trạng thái hoặc vector đặc trưng cho một hệ kỹ thuật đơn giản.",
+      "evidence": "Khai báo rõ từng chiều, đơn vị, miền hợp lệ, tần suất cập nhật và metric dự kiến."
+    }
+  ],
+  "notationRules": [
+    {
+      "raw": "x = (x_1, x_2, ..., x_n)",
+      "meaning": "Vector x có n thành phần thực được sắp theo thứ tự cố định."
+    },
+    {
+      "raw": "x_i",
+      "meaning": "Phần tử thứ i của vector x. i là chỉ số dưới, không phải lũy thừa."
+    },
+    {
+      "raw": "x_i^2",
+      "meaning": "Bình phương của phần tử thứ i. i ở dưới, 2 ở trên."
+    },
+    {
+      "raw": "x in R^n",
+      "meaning": "x thuộc không gian các vector thực n chiều."
+    },
+    {
+      "raw": "x_i^T",
+      "meaning": "Nếu x_i là vector mẫu thứ i thì T biểu thị chuyển vị; i vẫn là chỉ số dưới."
+    },
+    {
+      "raw": "X = [x_1^T; x_2^T; ...; x_m^T]",
+      "meaning": "Ma trận dữ liệu X gồm m vector mẫu x_i^T xếp theo hàng."
+    }
+  ],
+  "coreConcepts": [
+    {
+      "id": "C1",
+      "name": "Vector như hợp đồng dữ liệu",
+      "definition": "Vector là dãy có thứ tự các đại lượng số. Trong dữ liệu kỹ thuật, mỗi vị trí phải gắn với một đại lượng, đơn vị, miền hợp lệ và quy ước lấy mẫu cụ thể.",
+      "deepMeaning": "Hai dãy số giống nhau về shape chưa chắc biểu diễn cùng một đối tượng. Ý nghĩa nằm trong schema, không nằm riêng trong con số.",
+      "engineeringConsequence": "Đảo thứ tự feature, đổi đơn vị hoặc ghép dữ liệu khác timestamp có thể tạo vector số hợp lệ nhưng trạng thái vật lý sai.",
+      "counterexample": "[40 °C, 2 bar] và [40 bar, 2 °C] có cùng hai con số nhưng không thể xem là cùng vector trạng thái."
+    },
+    {
+      "id": "C2",
+      "name": "Bản chất kép hình học và dữ liệu",
+      "definition": "Vector vừa có thể được xem là điểm hoặc hướng trong không gian, vừa là bản ghi feature của một mẫu.",
+      "deepMeaning": "Hình học cung cấp norm, angle, projection và distance; góc nhìn dữ liệu buộc ta kiểm tra schema, đơn vị, nhiễu và chuẩn hóa.",
+      "engineeringConsequence": "Không được dùng trực giác hình học tách khỏi ý nghĩa dữ liệu. Một khoảng cách được tính đúng vẫn có thể vô nghĩa nếu các chiều không cùng scale."
+    },
+    {
+      "id": "C3",
+      "name": "Dimension và schema",
+      "definition": "Dimension n là số thành phần của vector; schema xác định ý nghĩa của từng thành phần.",
+      "deepMeaning": "Cùng dimension là điều kiện cần để thực hiện phép toán theo từng phần tử, nhưng cùng schema mới làm phép toán có nghĩa.",
+      "engineeringConsequence": "Shape check chỉ bắt được lỗi kích thước, không bắt được lỗi đảo feature hoặc sai đơn vị."
+    },
+    {
+      "id": "C4",
+      "name": "Vector hóa là phép mô hình hóa có mất mát",
+      "definition": "Một hệ thật được rút gọn thành một số hữu hạn đại lượng đại diện.",
+      "deepMeaning": "Biến bị loại bỏ trở thành phần không quan sát được; biến nhiễu được thêm vào có thể làm thuật toán học quan hệ giả.",
+      "engineeringConsequence": "Thiết kế vector phải dựa trên mục tiêu dự báo hoặc điều khiển, không dựa trên nguyên tắc càng nhiều feature càng tốt."
+    }
+  ],
+  "operations": [
+    {
+      "id": "OP1",
+      "name": "Cộng vector",
+      "formula": "x + y = (x_1 + y_1, ..., x_n + y_n)",
+      "conditions": [
+        "x và y cùng dimension",
+        "x và y cùng schema",
+        "các thành phần tương ứng dùng đơn vị tương thích"
+      ],
+      "meaning": "Kết hợp hai thay đổi hoặc hai trạng thái theo từng chiều tương ứng.",
+      "failureMode": "Broadcasting có thể khiến code chạy dù phép cộng không đúng ý nghĩa mô hình."
+    },
+    {
+      "id": "OP2",
+      "name": "Nhân vector với vô hướng",
+      "formula": "alpha x = (alpha x_1, ..., alpha x_n)",
+      "conditions": [
+        "alpha là hệ số áp dụng thống nhất cho toàn bộ vector"
+      ],
+      "meaning": "Co giãn độ lớn của vector; alpha âm đồng thời đảo hướng trong diễn giải hình học.",
+      "failureMode": "Không dùng một hệ số chung khi từng feature cần hệ số chuyển đổi đơn vị khác nhau."
+    }
+  ],
+  "coreMeasures": [
+    {
+      "id": "M1",
+      "name": "Chuẩn Euclid",
+      "formula": "||x||_2 = sqrt(sum_i x_i^2)",
+      "questionAnswered": "Vector lớn bao nhiêu theo hình học Euclid?",
+      "interpretation": "Căn bậc hai của tổng bình phương các thành phần.",
+      "conditions": [
+        "Các chiều phải được hiểu trong cùng một hình học hoặc đã được scale hợp lý"
+      ],
+      "sensitivity": "Nhạy với thành phần có trị tuyệt đối lớn và với outlier.",
+      "engineeringUse": "Độ lớn vận tốc, năng lượng sai số, norm gradient, độ lớn residual."
+    },
+    {
+      "id": "M2",
+      "name": "Tích vô hướng",
+      "formula": "x · y = sum_i x_i y_i",
+      "questionAnswered": "Hai vector cùng hướng và có độ lớn phối hợp tới mức nào?",
+      "interpretation": "Tổng tích các cặp thành phần tương ứng; cũng bằng ||x||_2 ||y||_2 cos(theta).",
+      "conditions": [
+        "Hai vector cùng dimension và schema"
+      ],
+      "sensitivity": "Phụ thuộc đồng thời hướng và độ lớn.",
+      "engineeringUse": "Linear score, projection, attention score, correlation-like matching sau khi xử lý mean và scale phù hợp."
+    },
+    {
+      "id": "M3",
+      "name": "Khoảng cách Euclid",
+      "formula": "d(x,y) = ||x-y||_2 = sqrt(sum_i (x_i-y_i)^2)",
+      "questionAnswered": "Hai vector lệch nhau bao nhiêu về giá trị tuyệt đối?",
+      "interpretation": "Norm của vector sai khác.",
+      "conditions": [
+        "Hai vector cùng dimension, schema và đơn vị",
+        "Scale giữa các chiều đã được đánh giá"
+      ],
+      "sensitivity": "Chiều có scale lớn có thể thống trị kết quả.",
+      "engineeringUse": "Sai số trạng thái, nearest neighbor, clustering, anomaly detection."
+    },
+    {
+      "id": "M4",
+      "name": "Cosine similarity",
+      "formula": "cos(x,y) = (x · y)/(||x||_2 ||y||_2)",
+      "questionAnswered": "Hai vector giống nhau về hướng hoặc pattern tới mức nào?",
+      "interpretation": "Giá trị gần 1: cùng hướng; gần 0: trực giao; gần -1: ngược hướng.",
+      "conditions": [
+        "x và y cùng dimension và schema",
+        "||x||_2 > 0",
+        "||y||_2 > 0"
+      ],
+      "sensitivity": "Ít nhạy với phép nhân toàn bộ vector bởi một hệ số dương, nhưng vẫn nhạy với preprocessing và offset.",
+      "engineeringUse": "Embedding search, so dạng phổ, matching pattern, so hướng gradient.",
+      "failureMode": "Vector zero không có hướng; không được gán cosine bằng 0 vì 0 mang nghĩa trực giao."
+    }
+  ],
+  "comparisonLogic": {
+    "distanceVsCosine": [
+      {
+        "situation": "Sai số vị trí robot",
+        "preferred": "Euclidean distance",
+        "reason": "Độ lệch tuyệt đối quyết định mức sai vị trí."
+      },
+      {
+        "situation": "Hai embedding văn bản có độ dài hoặc norm khác nhau",
+        "preferred": "Cosine similarity",
+        "reason": "Hướng biểu diễn thường quan trọng hơn biên độ."
+      },
+      {
+        "situation": "Hai tín hiệu cùng dạng nhưng gain khác nhau",
+        "preferred": "Cosine kết hợp kiểm tra norm",
+        "reason": "Cosine phát hiện pattern; norm phát hiện thay đổi biên độ."
+      },
+      {
+        "situation": "Feature khác đơn vị và scale",
+        "preferred": "Chuẩn hóa trước rồi mới chọn metric",
+        "reason": "Metric thô dễ bị chiều số lớn chi phối."
+      }
+    ],
+    "interpretationMatrix": [
+      {
+        "cosine": "cao",
+        "distance": "nhỏ",
+        "meaning": "Giống cả pattern lẫn độ lớn."
+      },
+      {
+        "cosine": "cao",
+        "distance": "lớn",
+        "meaning": "Cùng pattern nhưng khác scale hoặc biên độ."
+      },
+      {
+        "cosine": "thấp",
+        "distance": "nhỏ",
+        "meaning": "Có thể xảy ra gần gốc hoặc khi độ lớn nhỏ; cần xem dữ liệu và norm."
+      },
+      {
+        "cosine": "thấp hoặc âm",
+        "distance": "lớn",
+        "meaning": "Khác cả hướng lẫn giá trị tuyệt đối."
+      }
+    ]
+  },
+  "dataQualityGate": [
+    {
+      "check": "dimension",
+      "question": "Hai vector có cùng số phần tử không?",
+      "actionOnFail": "Dừng phép tính và sửa schema hoặc bước thu thập dữ liệu."
+    },
+    {
+      "check": "schema",
+      "question": "Cùng vị trí có cùng ý nghĩa feature không?",
+      "actionOnFail": "Ánh xạ lại thứ tự feature trước khi tính."
+    },
+    {
+      "check": "units",
+      "question": "Các thành phần tương ứng có cùng đơn vị không?",
+      "actionOnFail": "Đổi về đơn vị thống nhất."
+    },
+    {
+      "check": "timeAlignment",
+      "question": "Các thành phần có đại diện cho cùng thời điểm hoặc cùng cửa sổ thời gian không?",
+      "actionOnFail": "Đồng bộ timestamp hoặc resample."
+    },
+    {
+      "check": "missingAndInvalid",
+      "question": "Có NaN, infinity hoặc giá trị ngoài miền hợp lệ không?",
+      "actionOnFail": "Làm sạch, loại bỏ hoặc đánh dấu dữ liệu."
+    },
+    {
+      "check": "scale",
+      "question": "Có chiều nào lớn hơn nhiều chỉ vì đơn vị hoặc scale không?",
+      "actionOnFail": "Chuẩn hóa, standardize hoặc dùng metric có trọng số."
+    },
+    {
+      "check": "zeroVector",
+      "question": "Có vector norm gần 0 trước khi tính cosine không?",
+      "actionOnFail": "Trả trạng thái không xác định hoặc xử lý theo quy tắc miền, không tự gán 0."
+    }
+  ],
+  "workedCase": {
+    "id": "CASE_NETWORK_STATE",
+    "title": "Phát hiện thay đổi trạng thái mạng",
+    "schema": [
+      {
+        "feature": "throughput",
+        "unit": "Mbps",
+        "meaning": "Thông lượng trung bình trong cửa sổ đo"
+      },
+      {
+        "feature": "latency",
+        "unit": "ms",
+        "meaning": "Độ trễ trung bình"
+      },
+      {
+        "feature": "packet_loss",
+        "unit": "ratio",
+        "meaning": "Tỷ lệ gói tin mất"
+      }
+    ],
+    "samples": {
+      "A": [100.0, 40.0, 0.01],
+      "B": [110.0, 44.0, 0.012],
+      "C": [20.0, 300.0, 0.2]
+    },
+    "rawResults": {
+      "distance_AB": 10.770329799964346,
+      "distance_AC": 272.0294765278204,
+      "distance_BC": 271.3596052178732,
+      "cosine_AB": 0.9999999999643775,
+      "cosine_AC": 0.432329419654298,
+      "cosine_BC": 0.432329424914748
+    },
+    "interpretation": [
+      "A và B có pattern gần như cùng hướng, thể hiện ở cosine gần 1.",
+      "C rất xa A và B theo distance, đồng thời khác mạnh về hướng.",
+      "Distance thô bị throughput và latency chi phối vì packet_loss có scale nhỏ hơn nhiều.",
+      "Kết luận kỹ thuật phải được kiểm lại sau khi standardize hoặc đặt trọng số theo mức quan trọng của feature."
+    ],
+    "standardization": {
+      "method": "z_i = (x_i - mean_i)/std_i",
+      "featureMean": [76.66666666666667, 128.0, 0.074],
+      "featureStdPopulation": [40.2768199119819, 121.63332900211057, 0.08909919567372654],
+      "standardizedSamples": {
+        "A": [0.5793241220216575, -0.7234859125110502, -0.7183005403820044],
+        "B": [0.8276058886023678, -0.6906001892140934, -0.6958536484950668],
+        "C": [-1.4069300106240256, 1.4140861017251437, 1.414154188877071]
+      },
+      "standardizedResults": {
+        "distance_AB": 0.2514541098610331,
+        "distance_AC": 3.6141088428411536,
+        "distance_BC": 3.7249145094527156,
+        "cosine_AB": 0.983035716288259,
+        "cosine_AC": -0.9953583638665718,
+        "cosine_BC": -0.9961242170682141
+      },
+      "lesson": "Standardization thay đổi hình học dữ liệu. Đây không phải thao tác trang trí mà là lựa chọn mô hình hóa."
+    }
+  },
+  "engineeringExamples": [
+    {
+      "domain": "UGV/UAV",
+      "vector": "x_state = [p_x, p_y, v_x, v_y, theta, omega]",
+      "coreQuestion": "Trạng thái hiện tại lệch trạng thái mục tiêu bao nhiêu?",
+      "metricGuidance": "Dùng weighted distance khi vị trí, vận tốc và góc có đơn vị hoặc mức rủi ro khác nhau."
+    },
+    {
+      "domain": "Máy chủ",
+      "vector": "x_server = [cpu, ram, latency, error_rate]",
+      "coreQuestion": "Mẫu hoạt động hiện tại có giống trạng thái bình thường không?",
+      "metricGuidance": "Standardize theo feature; kết hợp distance với cosine để phân biệt thay đổi biên độ và thay đổi pattern."
+    },
+    {
+      "domain": "Xử lý tín hiệu",
+      "vector": "x_window = [s_1, s_2, ..., s_n]",
+      "coreQuestion": "Hai cửa sổ tín hiệu có cùng dạng hay không?",
+      "metricGuidance": "Cosine phù hợp khi gain có thể thay đổi; distance phù hợp khi sai số biên độ là tín hiệu cần phát hiện."
+    },
+    {
+      "domain": "Embedding",
+      "vector": "e in R^n",
+      "coreQuestion": "Hai đối tượng có gần nhau về biểu diễn ngữ nghĩa không?",
+      "metricGuidance": "Cosine thường dùng sau khi kiểm tra zero vector và nhất quán pipeline embedding."
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "wrong": "Vector phải là mũi tên 2D hoặc 3D.",
+      "correct": "Vector có thể có hàng nghìn chiều; các phép toán vẫn dựa trên thành phần và cấu trúc đại số."
+    },
+    {
+      "wrong": "Cùng dimension thì có thể so sánh trực tiếp.",
+      "correct": "Cần cùng schema, đơn vị và quy ước lấy mẫu."
+    },
+    {
+      "wrong": "Cosine bằng 0 khi gặp zero vector.",
+      "correct": "Cosine không xác định vì zero vector không có hướng."
+    },
+    {
+      "wrong": "Distance nhỏ luôn nghĩa là hai trạng thái giống nhau.",
+      "correct": "Một chiều an toàn quan trọng có thể bị che khuất nếu metric và trọng số không phù hợp."
+    },
+    {
+      "wrong": "Chuẩn hóa chỉ giúp mô hình chạy đẹp hơn.",
+      "correct": "Chuẩn hóa thay đổi hình học dữ liệu, do đó thay đổi distance, hướng và kết quả thuật toán."
+    },
+    {
+      "wrong": "x_i và x^i là cùng một ký hiệu trình bày.",
+      "correct": "x_i là phần tử thứ i; x^i là lũy thừa hoặc ký hiệu khác tùy ngữ cảnh."
+    }
+  ],
+  "masteryChecks": [
+    {
+      "level": "recall",
+      "question": "Trong x_i, i biểu thị điều gì?",
+      "expected": "Chỉ số của phần tử thứ i trong vector x."
+    },
+    {
+      "level": "understand",
+      "question": "Tại sao cùng dimension chưa đủ để cộng hoặc so sánh hai vector kỹ thuật?",
+      "expected": "Vì các vị trí còn phải cùng ý nghĩa, đơn vị và quy ước đo."
+    },
+    {
+      "level": "apply",
+      "question": "Hai embedding có cosine cao nhưng distance lớn. Diễn giải thế nào?",
+      "expected": "Chúng giống về hướng hoặc pattern nhưng khác norm hoặc scale."
+    },
+    {
+      "level": "analyze",
+      "question": "Một feature lớn hơn feature khác 1000 lần chỉ vì đơn vị. Điều gì xảy ra với Euclidean distance?",
+      "expected": "Feature đó có thể thống trị metric; cần đổi đơn vị, standardize hoặc dùng trọng số."
+    },
+    {
+      "level": "evaluate",
+      "question": "Có nên trả cosine bằng 0 khi gặp zero vector không?",
+      "expected": "Không. Zero vector làm cosine không xác định; 0 lại biểu thị trực giao."
+    },
+    {
+      "level": "create",
+      "question": "Thiết kế vector trạng thái 6 chiều cho một UGV và ghi rõ đơn vị, miền hợp lệ cùng metric dự kiến.",
+      "expected": "Có schema rõ, đơn vị thống nhất, timestamp và lý do chọn metric."
+    }
+  ],
+  "implementationContract": {
+    "safeCosineAlgorithm": [
+      "Chuyển x và y thành vector số thực.",
+      "Kiểm tra cùng shape.",
+      "Kiểm tra finite values.",
+      "Tính norm của hai vector.",
+      "Nếu norm nhỏ hơn epsilon, trả lỗi miền hoặc trạng thái không xác định.",
+      "Trả dot product chia tích hai norm."
+    ],
+    "requiredTelemetry": [
+      "shape",
+      "feature schema version",
+      "unit convention",
+      "min/max hoặc quantile theo feature",
+      "số lượng missing/invalid",
+      "norm distribution"
+    ],
+    "doNotDo": [
+      "Không dựa vào broadcasting để sửa shape tự động.",
+      "Không trộn standardization statistics của train và test.",
+      "Không gán cosine zero cho zero vector.",
+      "Không thay thế chỉ số dưới bằng số mũ trong renderer."
+    ]
+  },
+  "bridgeToNextLessons": [
+    {
+      "target": "§1.2 · Chuẩn vector và khoảng cách",
+      "bridge": "Từ L2 norm và Euclidean distance mở rộng sang L1, Linf, weighted norm và metric."
+    },
+    {
+      "target": "§1.3 · Tích vô hướng, góc và chiếu",
+      "bridge": "Từ dot product và cosine đi sâu vào góc, trực giao, projection và residual."
+    },
+    {
+      "target": "Chương 2 · Ma trận",
+      "bridge": "Gom m vector mẫu x_i thành ma trận X và dùng ma trận A như một ánh xạ tuyến tính."
+    }
+  ],
+  "downstreamMapping": {
+    "referenceTable": [
+      "coreConcepts",
+      "coreMeasures",
+      "dataQualityGate",
+      "commonMisconceptions",
+      "engineeringExamples"
+    ],
+    "slideshow": [
+      "lessonThesis",
+      "learningOutcomes",
+      "coreConcepts",
+      "operations",
+      "coreMeasures",
+      "workedCase",
+      "masteryChecks"
+    ],
+    "fullView": [
+      "coreMeasures",
+      "comparisonLogic",
+      "dataQualityGate",
+      "workedCase",
+      "implementationContract"
+    ],
+    "formulaFinalization": [
+      "notationRules",
+      "operations.formula",
+      "coreMeasures.formula"
+    ]
+  },
+  "qualityGate": {
+    "mustPass": [
+      "Mọi ký hiệu được định nghĩa trước hoặc ngay khi xuất hiện.",
+      "Mỗi công thức có câu hỏi mà nó trả lời, điều kiện áp dụng và failure mode.",
+      "Mỗi ví dụ kỹ thuật có schema và đơn vị.",
+      "Không trộn nội dung slide, UI hoặc code-formatting vào lõi.",
+      "x_i luôn được hiểu là chỉ số dưới; x^i chỉ là số mũ khi nguồn dùng dấu ^.",
+      "Kết luận metric phải phân biệt pattern, scale và độ lệch tuyệt đối."
+    ],
+    "reviewStatus": "needs_local_content_review"
+  }
+}

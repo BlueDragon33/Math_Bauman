@@ -1,0 +1,151 @@
+/* E132 · Theory UI Design Tokens
+ * Canva-inspired academic-tech palette for the Math Theory tab and slideshow.
+ * Scope: tokens only. Not loaded until a later round patches index.html.
+ */
+:root{
+  --e132-bg-deep:#050914;
+  --e132-bg-ink:#08111f;
+  --e132-bg-panel:rgba(9,18,34,.86);
+  --e132-bg-panel-strong:rgba(12,24,46,.94);
+  --e132-bg-glass:rgba(15,29,52,.72);
+  --e132-line-soft:rgba(148,196,255,.18);
+  --e132-line-bright:rgba(125,211,252,.42);
+  --e132-text-main:#f4f8ff;
+  --e132-text-soft:#d8e6f8;
+  --e132-text-muted:#9fb4cf;
+  --e132-accent-cyan:#38d7ff;
+  --e132-accent-cyan-soft:rgba(56,215,255,.16);
+  --e132-accent-violet:#8b7cff;
+  --e132-accent-violet-soft:rgba(139,124,255,.17);
+  --e132-accent-emerald:#34d399;
+  --e132-accent-emerald-soft:rgba(52,211,153,.14);
+  --e132-accent-amber:#fbbf24;
+  --e132-accent-amber-soft:rgba(251,191,36,.14);
+  --e132-accent-red:#fb7185;
+  --e132-accent-red-soft:rgba(251,113,133,.13);
+  --e132-formula-bg:rgba(2,8,20,.62);
+  --e132-code-bg:rgba(1,7,15,.72);
+  --e132-radius-sm:12px;
+  --e132-radius-md:18px;
+  --e132-radius-lg:24px;
+  --e132-radius-xl:32px;
+  --e132-radius-deck:36px;
+  --e132-shadow-card:0 18px 45px rgba(0,0,0,.22);
+  --e132-shadow-deck:0 34px 110px rgba(0,0,0,.46);
+  --e132-font-display:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --e132-font-body:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --e132-font-mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  --e132-slide-max:1180px;
+  --e132-readable:74ch;
+  --e132-topbar-h:72px;
+  --e132-motion-fast:160ms ease;
+  --e132-motion-med:260ms ease;
+}
+
+[data-e132-theme="theory"]{
+  color:var(--e132-text-main);
+  font-family:var(--e132-font-body);
+}
+
+.e132-surface{
+  background:
+    radial-gradient(circle at 14% 8%,rgba(56,215,255,.18),transparent 30%),
+    radial-gradient(circle at 92% 12%,rgba(139,124,255,.17),transparent 34%),
+    linear-gradient(135deg,var(--e132-bg-deep),var(--e132-bg-ink));
+  border:1px solid var(--e132-line-soft);
+  border-radius:var(--e132-radius-xl);
+  box-shadow:var(--e132-shadow-card);
+}
+
+.e132-glass{
+  background:var(--e132-bg-glass);
+  border:1px solid var(--e132-line-soft);
+  backdrop-filter:blur(18px);
+  box-shadow:var(--e132-shadow-card);
+}
+
+.e132-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--e132-accent-cyan);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.e132-title-xl{
+  color:var(--e132-text-main);
+  font-family:var(--e132-font-display);
+  font-size:clamp(34px,5vw,72px);
+  line-height:.96;
+  letter-spacing:-.055em;
+  margin:0;
+}
+
+.e132-title-lg{
+  color:var(--e132-text-main);
+  font-family:var(--e132-font-display);
+  font-size:clamp(26px,3.4vw,48px);
+  line-height:1.02;
+  letter-spacing:-.04em;
+  margin:0;
+}
+
+.e132-body-readable{
+  color:var(--e132-text-soft);
+  max-width:var(--e132-readable);
+  font-size:clamp(16px,1.35vw,20px);
+  line-height:1.68;
+}
+
+.e132-meta-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 10px;
+  border-radius:999px;
+  border:1px solid var(--e132-line-soft);
+  background:rgba(255,255,255,.055);
+  color:var(--e132-text-soft);
+  font-size:12px;
+  font-weight:800;
+}
+
+.e132-formula-card{
+  border-radius:var(--e132-radius-lg);
+  border:1px solid rgba(125,211,252,.26);
+  background:var(--e132-formula-bg);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06),var(--e132-shadow-card);
+  padding:24px;
+  color:var(--e132-text-main);
+  font-family:var(--e132-font-mono);
+  white-space:pre-wrap;
+  overflow:auto;
+}
+
+.e132-code-card{
+  border-radius:var(--e132-radius-lg);
+  border:1px solid rgba(52,211,153,.22);
+  background:var(--e132-code-bg);
+  color:#d1fae5;
+  font-family:var(--e132-font-mono);
+  font-size:14px;
+  line-height:1.65;
+  padding:18px;
+  overflow:auto;
+}
+
+.e132-role-problem{--e132-role-accent:var(--e132-accent-cyan);--e132-role-soft:var(--e132-accent-cyan-soft)}
+.e132-role-essence{--e132-role-accent:var(--e132-accent-violet);--e132-role-soft:var(--e132-accent-violet-soft)}
+.e132-role-formula{--e132-role-accent:var(--e132-accent-violet);--e132-role-soft:var(--e132-accent-violet-soft)}
+.e132-role-lab{--e132-role-accent:var(--e132-accent-emerald);--e132-role-soft:var(--e132-accent-emerald-soft)}
+.e132-role-warning{--e132-role-accent:var(--e132-accent-amber);--e132-role-soft:var(--e132-accent-amber-soft)}
+.e132-role-mistake{--e132-role-accent:var(--e132-accent-red);--e132-role-soft:var(--e132-accent-red-soft)}
+
+@media(max-width:900px){
+  :root{--e132-radius-deck:24px;--e132-slide-max:100%;}
+  .e132-title-xl{font-size:clamp(30px,9vw,48px)}
+  .e132-body-readable{font-size:16px;line-height:1.58}
+}

@@ -1,0 +1,38 @@
+{
+  "id": "bauman_math_formula_match_aliases_e238b",
+  "schema": "bauman_math_formula_match_aliases_v1",
+  "version": "E238B_FOCUSED_MATCH_ALIASES",
+  "aliases": {
+    "c01_vector_schema": [
+      "x_1 = [p_x, p_y, v_x, v_y]",
+      "x_2 = [p_x, p_y, v_x, v_y, speed]"
+    ],
+    "c01_dot_projection": [
+      "score = w · x + b",
+      "c_i = x · b_i"
+    ],
+    "c01_basis_span": [
+      "x = c_1 b_1 + c_2 b_2",
+      "r = v - Bc",
+      "v ≈ Bc"
+    ],
+    "c02_scale_matrix": [
+      "S = [[s_x, 0], [0, s_y]]"
+    ],
+    "c02_projection_matrix": [
+      "P = [[1, 0], [0, 0]]"
+    ],
+    "c02_state_transition": [
+      "x_{t+1} = A x_t"
+    ],
+    "c03_derivative_notation": [
+      "Delta y ≈ f'(x) Delta x"
+    ],
+    "c03_gradient_descent_theta": [
+      "theta = theta - alpha g"
+    ],
+    "c03_backprop_flow": [
+      "x -> z1 -> a1 -> z2 -> y_hat -> J"
+    ]
+  }
+}

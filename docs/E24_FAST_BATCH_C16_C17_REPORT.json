@@ -1,0 +1,44 @@
+{
+  "checkpoint": "E24",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "mode": "FAST_BATCH",
+  "chapters": [
+    {
+      "chapterId": "MATH-HK1-MT-C16",
+      "title": "Chương 16 · Clustering, similarity và cấu trúc không gian dữ liệu",
+      "focus": "chuẩn hóa Chương 16 từ 7 bài lên 8 bài, làm sâu metric, similarity, k-means, hierarchical, density clustering, validation và telemetry clustering"
+    },
+    {
+      "chapterId": "MATH-HK1-MT-C17",
+      "title": "Chương 17 · Bài toán kỳ thi phân tích dữ liệu đa chiều",
+      "focus": "chuẩn hóa Chương 17 từ 7 bài lên 8 bài, tập trung dạng đề covariance/PCA/SVD/metric/clustering, đọc đề Nga, notebook kiểm chứng và trả lời seminar"
+    }
+  ],
+  "countsPerChapter": {
+    "MATH-HK1-MT-C16": {
+      "lessons": 8,
+      "slides": 160,
+      "formulas": 24,
+      "exercises": 64,
+      "applications": 16,
+      "simulations": 16,
+      "professorQa": 8,
+      "questions": 48,
+      "reviewPacks": 8,
+      "vocabCards": 32
+    },
+    "MATH-HK1-MT-C17": {
+      "lessons": 8,
+      "slides": 160,
+      "formulas": 24,
+      "exercises": 64,
+      "applications": 16,
+      "simulations": 16,
+      "professorQa": 8,
+      "questions": 48,
+      "reviewPacks": 8,
+      "vocabCards": 32
+    }
+  },
+  "notFinal": true
+}

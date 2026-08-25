@@ -1,0 +1,10 @@
+{
+  "version": "E105_SYSTEM_QA_PATCH",
+  "scope": "system QA, metadata sync, department chapter sequence repair",
+  "fixed": [
+    "runtime labels still E103/E102 in index/adapter/manifest",
+    "research_methods department chapter numbering gap [1,4,5] -> [1,2,3]",
+    "added stronger BAUMAN_MATH_E105_SELF_CHECK"
+  ],
+  "notChanged": "No learning content rebuild; UI framework E104 retained; backend JSON import path retained."
+}

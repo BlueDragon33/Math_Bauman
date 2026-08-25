@@ -1,0 +1,229 @@
+{
+  "id": "bauman_math_theory_slideshow_c01_l05_v1",
+  "schema": "bauman_math_theory_slideshow_v1",
+  "version": "SLIDESHOW_C01_L05_V1_PASS13",
+  "status": "pass13_candidate_pending_academic_acceptance",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L05-subspace-data-representation-e140",
+  "lessonTitle": "§1.5 · Không gian con và biểu diễn dữ liệu",
+  "language": "vi",
+  "sourceCore": {"path":"../theory_core/theory_core_c01_l05.json","version":"CORE_C01_L05_V1_PASS07_ARCHITECTURE"},
+  "sourceReference": {"path":"../theory_reference/theory_reference_c01_l05.json","version":"REFERENCE_C01_L05_V1_PASS11"},
+  "sourceFullView": {"path":"../theory_full_view/theory_full_view_c01_l05.json","version":"FULL_VIEW_C01_L05_V1_PASS12"},
+  "sourceNormalization": {"path":"../theory_normalization/theory_normalization_c01_l05.json","version":"NORMALIZATION_C01_L05_V1_PASS12"},
+  "sourceCase": {"path":"../theory_case/theory_case_c01_l05.json","version":"CASE_C01_L05_V1_LOCKED"},
+  "slideshowContract": {
+    "presentationDataOnly": true,
+    "runtimeIndependent": true,
+    "minimumSlides": 16,
+    "maximumSlides": null,
+    "actualSlides": 22,
+    "compression": false,
+    "mustNotAddNewMathematics": true,
+    "mustNotContradictSources": true,
+    "onePrimaryLearningBeatPerSlide": true,
+    "oneRuntimeSlidePerSourceSlide": true,
+    "formulasRequireMeaningAndConditions": true,
+    "diagramsAreSemanticSpecificationsOnly": true,
+    "sourceTraceRequired": true,
+    "noCss": true,
+    "noJavascript": true,
+    "noAnimationInstructions": true,
+    "noReaderProChanges": true
+  },
+  "narrativeArc": [
+    {"id":"ARC1","title":"Phân loại cấu trúc dữ liệu","slideIds":["SL01","SL02","SL03","SL04","SL05"],"learningGoal":"Phân biệt feature dimension, subspace, affine set, finite dataset, span và rank."},
+    {"id":"ARC2","title":"Từ basis đến orthogonal projector","slideIds":["SL06","SL07","SL08","SL09","SL10"],"learningGoal":"Chọn và kiểm projector theo geometry của basis."},
+    {"id":"ARC3","title":"Case bốn cảm biến","slideIds":["SL11","SL12","SL13","SL14","SL15","SL16"],"learningGoal":"Tâm hóa, chiếu, tính residual và diễn giải hai samples khóa."},
+    {"id":"ARC4","title":"Rank, SVD và dimension giữ lại","slideIds":["SL17","SL18","SL19","SL20"],"learningGoal":"Tách exact rank, numerical rank và retained-energy statement."},
+    {"id":"ARC5","title":"Implementation và chuyển giao","slideIds":["SL21","SL22"],"learningGoal":"Audit pipeline và chuyển sang data matrix ở §1.6."}
+  ],
+  "slides": [
+    {
+      "id":"SL01","learningBeat":"Bốn feature không đồng nghĩa bốn hướng thông tin độc lập.","title":"Dữ liệu 4 chiều, mô hình 2 hướng","purpose":"Mở bài bằng distinction ambient dimension và model dimension.","coreMessage":"Feature count mô tả số components; subspace dimension mô tả số independent directions trong model.",
+      "contentBlocks":[{"type":"claim","text":"Một observation có 4 components nhưng variation bình thường có thể tập trung gần 2 directions."},{"type":"contrast","left":"ambient dimension n=4","right":"model dimension k=2"},{"type":"condition","text":"Low dimension là model claim, không phải kết luận từ số columns alone."}],
+      "formulaRefs":["F04"],
+      "diagramSpec":{"type":"four_sensor_space_two_mode_plane","purpose":"Bốn sensor axes được giải thích bởi hai mode directions.","entities":["sensor_A","sensor_B","sensor_C","sensor_D","q1","q2","model_plane"],"labels":["R^4","q1","q2","U"],"mathematicalConstraints":["Q has shape 4x2","dim(U)=2"],"sourceTrace":["core.B01","case.physicalContract"]},
+      "misconceptionIntercept":{"wrong":"Có 4 sensors nên cấu trúc thật chắc chắn 4 chiều.","correction":"Dimension của model phụ thuộc independent directions, không chỉ feature count.","sourceTrace":["M03","M06"]},
+      "transition":"Muốn nói model 2 chiều, trước hết phải xác định đối tượng nào thật sự là subspace.","sourceTrace":["core.B01","LO2","LO6"]
+    },
+    {
+      "id":"SL02","learningBeat":"Linear subspace là closure contract, không chỉ là hình dạng.","title":"Ba cổng để là linear subspace","purpose":"Khóa zero, addition closure và scalar closure.","coreMessage":"U⊆R^n là linear subspace khi chứa zero và đóng với cộng, nhân vô hướng.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"0∈U; u,v∈U⇒u+v∈U; α∈R,u∈U⇒αu∈U","meaning":"Ba cổng exact membership."},{"type":"example","text":"U={(a,b,a,b)} passes all three gates."},{"type":"condition","text":"Ambient space và scalar field phải được nêu."}],
+      "formulaRefs":["F01"],
+      "diagramSpec":{"type":"subspace_closure_triangle","purpose":"Ba cổng zero, addition, scalar multiplication.","entities":["zero_gate","addition_gate","scalar_gate","U"],"labels":["0∈U","u+v∈U","αu∈U"],"mathematicalConstraints":["All gates required"],"sourceTrace":["F01","WE01"]},
+      "misconceptionIntercept":{"wrong":"Line hoặc plane nhìn thẳng là subspace.","correction":"Shifted line/plane không chứa origin nên chỉ là affine.","sourceTrace":["M01"]},
+      "retrievalCheck":{"id":"RCHECK01","prompt":"Plane z=x+y+5 có là linear subspace không?","expectedEvidence":["Không chứa origin","Affine plane, not linear subspace"],"misconceptionTarget":"Chỉ nhìn hình dạng.","sourceTrace":["RC01","M01"]},
+      "transition":"Dữ liệu kỹ thuật thường còn có offset và noise, nên cần model rộng hơn.","sourceTrace":["core.B02","F01"]
+    },
+    {
+      "id":"SL03","learningBeat":"Linear, affine, near-subspace và dataset là bốn objects khác nhau.","title":"Đừng gọi mọi data cloud là subspace","purpose":"Phân loại object trước phép tính.","coreMessage":"Affine model là μ+U; near-subspace thêm ε; finite dataset chỉ là observations.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"x=μ+Qz+ε; y=x−μ","meaning":"Offset, represented component và mismatch được tách riêng."},{"type":"classification","text":"ε=0: exact affine membership; ε≠0 nhỏ: near-subspace; finite recorded rows: dataset."},{"type":"warning","text":"Dataset không đóng dưới mọi linear combinations."}],
+      "formulaRefs":["F02"],
+      "diagramSpec":{"type":"linear_affine_near_cloud_layers","purpose":"So origin subspace, shifted affine plane và noisy cloud.","entities":["origin","U","mu","mu_plus_U","near_points"],"labels":["U","μ+U","near model"],"mathematicalConstraints":["U passes origin","mu+U may not pass origin"],"sourceTrace":["core.B03","WE01"]},
+      "misconceptionIntercept":{"wrong":"100 samples nằm gần plane chính là subspace.","correction":"Samples là finite dataset; plane là fitted model set.","sourceTrace":["M02","M04"]},
+      "transition":"Sau khi model object rõ, span và rank cho biết model biểu diễn được gì và có bao nhiêu directions.","sourceTrace":["F02","RC02"]
+    },
+    {
+      "id":"SL04","learningBeat":"Span xác định exact representable set; rank xác định independent dimension.","title":"Span và rank trả lời hai câu hỏi khác nhau","purpose":"Phân biệt coverage với dimension.","coreMessage":"U=col(B)=span(columns); dim(U)=rank(B).",
+      "contentBlocks":[{"type":"formula_meaning","formula":"U=span(b₁,…,b_k)=col(B)","meaning":"Exact representable set."},{"type":"formula_meaning","formula":"dim(col(B))=rank(B)","meaning":"Independent direction count."},{"type":"example","text":"Ba generators với g3=g1+g2 vẫn chỉ tạo dimension 2."}],
+      "formulaRefs":["F03","F04"],
+      "misconceptionIntercept":{"wrong":"k columns luôn tạo k-dimensional subspace.","correction":"Dependent columns không tăng rank hoặc span.","sourceTrace":["M06"]},
+      "retrievalCheck":{"id":"RCHECK02","prompt":"B có 5 columns, rank(B)=3. dim(col(B)) bằng bao nhiêu?","expectedEvidence":["3","Hai columns là redundant directions"],"misconceptionTarget":"Nhầm column count với dimension.","sourceTrace":["RC03"]},
+      "transition":"Muốn dùng dot products và QQ^T, cần thêm một gate mạnh hơn: orthonormality.","sourceTrace":["core.B04","WE02"]
+    },
+    {
+      "id":"SL05","learningBeat":"Basis matrix là một representation contract có shape và feature semantics.","title":"Q không chỉ là một mảng 4×2","purpose":"Gắn matrix columns với channel order và model version.","coreMessage":"Q columns là directions trong cùng ambient feature space A,B,C,D.",
+      "contentBlocks":[{"type":"contract","text":"Q∈R^(4×2): rows map to sensors A,B,C,D; columns map to two model directions."},{"type":"condition","text":"Units, calibration, mean, feature order và regime phải khớp."},{"type":"warning","text":"Permute x nhưng giữ Q, μ làm score sai nghĩa dù shape vẫn đúng."}],
+      "formulaRefs":["F02","F05"],
+      "diagramSpec":{"type":"basis_matrix_semantic_axes","purpose":"Map matrix rows to sensors and columns to mode directions.","entities":["row_A","row_B","row_C","row_D","column_q1","column_q2"],"labels":["A","B","C","D","q1","q2"],"mathematicalConstraints":["Q shape 4x2","feature order fixed"],"sourceTrace":["core.B05","case.orthonormalBasis"]},
+      "misconceptionIntercept":{"wrong":"Matrix shape đúng là đủ để model compatible.","correction":"Feature semantics, order, units, preprocessing và version cũng phải đúng.","sourceTrace":["M10","M14"]},
+      "transition":"Kiểm Q^TQ trước khi dùng shortcut lấy coordinates.","sourceTrace":["core.B05","reference.preprocessingGate"]
+    },
+    {
+      "id":"SL06","learningBeat":"z=Q^Ty chỉ đúng sau orthonormality gate.","title":"Gate trực chuẩn trước dot-product coordinates","purpose":"Ngăn dùng shortcut sai basis.","coreMessage":"Q^TQ=I_k cho phép dot products cô lập từng coordinate.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"Q^TQ=I_k","meaning":"Columns mutually orthogonal and unit length."},{"type":"formula_meaning","formula":"z=Q^Ty","meaning":"Coordinates in orthonormal Q."},{"type":"condition","text":"Dùng declared tolerance và cùng inner product/feature contract."}],
+      "formulaRefs":["F05","F06"],
+      "misconceptionIntercept":{"wrong":"B^Ty luôn là basis coordinates.","correction":"Chỉ trực tiếp đúng khi B là orthonormal Q.","sourceTrace":["M08"]},
+      "retrievalCheck":{"id":"RCHECK03","prompt":"Trước z=Q^Ty cần ba evidence nào?","expectedEvidence":["Q shape n×k","Q^TQ≈I","y và Q cùng feature contract"],"misconceptionTarget":"Bỏ assumption gate.","sourceTrace":["RC04"]},
+      "transition":"Từ coordinates trực chuẩn suy ra projector QQ^T.","sourceTrace":["core.B06","WE03"]
+    },
+    {
+      "id":"SL07","learningBeat":"Residual orthogonality dẫn trực tiếp đến P_U=QQ^T.","title":"Dẫn xuất orthonormal projector","purpose":"Cho thấy formula xuất phát từ geometry, không phải mẹo nhớ.","coreMessage":"Q^T(y−Qz)=0 ⇒ z=Q^Ty ⇒ y_hat=QQ^Ty.",
+      "contentBlocks":[{"type":"derivation","steps":["r=y−Qz","Q^Tr=0","Q^Ty−Q^TQz=0","z=Q^Ty","y_hat=QQ^Ty"]},{"type":"formula_meaning","formula":"P_U=QQ^T","meaning":"Orthogonal projector onto col(Q)."},{"type":"condition","text":"Q^TQ=I_k."}],
+      "formulaRefs":["F06","F07","F12"],
+      "diagramSpec":{"type":"projection_decomposition_geometry","purpose":"Show y split into y_hat in U and r orthogonal to U.","entities":["U","y","y_hat","r","right_angle"],"labels":["y","ŷ","r","r⊥U"],"mathematicalConstraints":["y=y_hat+r","Q^Tr=0"],"sourceTrace":["WE03","F11","F12"]},
+      "transition":"Nếu basis không orthonormal, Gram matrix phải sửa geometry.","sourceTrace":["core.B07","WE03"]
+    },
+    {
+      "id":"SL08","learningBeat":"General basis cần solve normal equations và general projector.","title":"Khi B không trực chuẩn","purpose":"Dẫn xuất c và P_U cho full-column-rank B.","coreMessage":"B^T(y−Bc)=0 ⇒ B^TBc=B^Ty.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"c=(B^TB)^(−1)B^Ty","meaning":"Projection coordinates in general basis."},{"type":"formula_meaning","formula":"P_U=B(B^TB)^(−1)B^T","meaning":"Orthogonal projector onto col(B)."},{"type":"condition","text":"rank(B)=k; code nên solve/QR/lstsq."}],
+      "formulaRefs":["F08","F09"],
+      "misconceptionIntercept":{"wrong":"BB^T là projector cho mọi basis.","correction":"BB^T chỉ đúng với orthonormal columns.","sourceTrace":["M07","M20"]},
+      "retrievalCheck":{"id":"RCHECK04","prompt":"B full rank nhưng B^TB≠I. Chọn projector nào?","expectedEvidence":["B(B^TB)^(-1)B^T","Không dùng BB^T","Có full-column-rank condition"],"misconceptionTarget":"Lạm dụng orthonormal shortcut.","sourceTrace":["RC05"]},
+      "transition":"Dù formula nào, projector phải qua invariant tests.","sourceTrace":["core.B08","WE04"]
+    },
+    {
+      "id":"SL09","learningBeat":"Symmetry và idempotence kiểm hai thuộc tính khác nhau.","title":"Projector phải qua hai invariant","purpose":"Phân biệt orthogonal và oblique projection.","coreMessage":"P^T=P và P^2=P; thiếu symmetry thì chưa phải orthogonal projector.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"P_U^T=P_U","meaning":"Orthogonal geometry."},{"type":"formula_meaning","formula":"P_U^2=P_U","meaning":"Second projection changes nothing."},{"type":"check","text":"Also verify P_UQ=Q or P_UB=B."}],
+      "formulaRefs":["F10"],
+      "misconceptionIntercept":{"wrong":"Idempotent là đủ để gọi orthogonal projector.","correction":"Idempotent non-symmetric matrix có thể là oblique projector.","sourceTrace":["M09"]},
+      "transition":"Projector hợp lệ tạo decomposition y=ŷ+r.","sourceTrace":["core.B09","RC06"]
+    },
+    {
+      "id":"SL10","learningBeat":"Projection tách explained component và residual.","title":"Một observation, hai thành phần","purpose":"Khóa reconstruction và residual orthogonality.","coreMessage":"ŷ=P_Uy; r=y−ŷ; y=ŷ+r; Q^Tr=0.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"ŷ=P_Uy; r=(I−P_U)y","meaning":"Explained và unexplained components."},{"type":"formula_meaning","formula":"y=ŷ+r","meaning":"Reconstruction invariant."},{"type":"formula_meaning","formula":"Q^Tr=0","meaning":"Residual orthogonal to model directions."}],
+      "formulaRefs":["F11","F12"],
+      "diagramSpec":{"type":"explained_residual_split","purpose":"Show model component and complement component.","entities":["y","P_y","I_minus_P_y","U","U_perp"],"labels":["y","ŷ","r","U","U⊥"],"mathematicalConstraints":["y=ŷ+r","ŷ∈U","r⊥U"],"sourceTrace":["core.B10","F11","F12"]},
+      "misconceptionIntercept":{"wrong":"Residual chính là sensor noise.","correction":"Residual là mọi phần current model chưa giải thích; nguyên nhân chưa xác định.","sourceTrace":["M04","M21"]},
+      "transition":"Để áp dụng cho case thật, phải center và khóa feature contract.","sourceTrace":["core.B10","FV06"]
+    },
+    {
+      "id":"SL11","learningBeat":"Centering khác scaling và normalization.","title":"Đừng trộn ba preprocessing operations","purpose":"Ngăn projection affine sai pipeline.","coreMessage":"Centering subtracts μ; scaling changes feature scale; vector normalization changes observation norm.",
+      "contentBlocks":[{"type":"comparison","items":["centering: x−μ","scaling: per-feature scale","normalization: rescale each vector"]},{"type":"formula_meaning","formula":"y=x−μ","meaning":"Move affine model to linear coordinates."},{"type":"condition","text":"Same μ and preprocessing version used at training and scoring."}],
+      "formulaRefs":["F02","F11","F16"],
+      "misconceptionIntercept":{"wrong":"QQ^Tx xử lý được affine model.","correction":"Phải dùng QQ^T(x−μ), rồi cộng μ nếu reconstruct raw x.","sourceTrace":["M11","M12"]},
+      "retrievalCheck":{"id":"RCHECK05","prompt":"Với model μ+U, pipeline projection đúng là gì?","expectedEvidence":["y=x−μ","ŷ=P_Uy","x_hat=μ+ŷ nếu cần raw reconstruction"],"misconceptionTarget":"Bỏ centering.","sourceTrace":["RC07"]},
+      "transition":"Khóa toàn bộ contract cho case bốn sensors.","sourceTrace":["core.B11","FV03"]
+    },
+    {
+      "id":"SL12","learningBeat":"Case number chỉ có nghĩa trong feature và regime contract.","title":"Case ROTATING_MACHINE_4CH_2MODE","purpose":"Khai báo observation, units, mean và basis trước tính toán.","coreMessage":"x gồm 4 fixed-window RMS acceleration features theo order A,B,C,D.",
+      "contentBlocks":[{"type":"contract","text":"Feature order=(A,B,C,D), units=m/s² RMS, single normal regime."},{"type":"formula_meaning","formula":"μ=(0.4,0.35,0.45,0.3)^T","meaning":"Locked affine reference."},{"type":"formula_meaning","formula":"Q=[[0.5,0.5],[0.5,−0.5],[0.5,0.5],[0.5,−0.5]]","meaning":"Locked orthonormal directions."}],
+      "formulaRefs":["F02","F05"],
+      "misconceptionIntercept":{"wrong":"x là bốn raw waveform samples hoặc có thể reorder tùy ý.","correction":"x là four RMS features; order là model metadata.","sourceTrace":["M14","M25"]},
+      "transition":"Tính sample được model giải thích tốt.","sourceTrace":["core.B12","case.physicalContract"]
+    },
+    {
+      "id":"SL13","learningBeat":"Normal sample cho thấy complete affine-projection pipeline.","title":"Normal sample: từ x đến z","purpose":"Tính centering và coordinates khóa.","coreMessage":"x_normal−μ cho y; Q^Ty cho z=(0.6,−0.2).",
+      "contentBlocks":[{"type":"formula_meaning","formula":"x=(0.62,0.74,0.63,0.71)^T","meaning":"Locked raw observation."},{"type":"formula_meaning","formula":"y=x−μ=(0.22,0.39,0.18,0.41)^T","meaning":"Centred observation."},{"type":"formula_meaning","formula":"z=Q^Ty=(0.6,−0.2)^T","meaning":"Coordinates in Q."}],
+      "formulaRefs":["F02","F06"],
+      "diagramSpec":{"type":"normal_sample_pipeline","purpose":"Flow x to y to z.","entities":["x_normal","subtract_mu","y_normal","Q_transpose","z_normal"],"labels":["x","−μ","y","Q^T","z"],"mathematicalConstraints":["y=x−mu","z=Q^Ty"],"sourceTrace":["WE07","case.normalSample"]},
+      "transition":"Reconstruct explained component and residual.","sourceTrace":["core.B13","WE07"]
+    },
+    {
+      "id":"SL14","learningBeat":"Low residual means good model fit, not health proof.","title":"Normal sample: projection và residual","purpose":"Hoàn thành reconstruction và bounded interpretation.","coreMessage":"ŷ=(0.2,0.4,0.2,0.4); r=(0.02,−0.01,−0.02,0.01); score≈0.0316228.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"ŷ=Qz=(0.2,0.4,0.2,0.4)^T","meaning":"Explained component."},{"type":"formula_meaning","formula":"r=(0.02,−0.01,−0.02,0.01)^T; ‖r‖₂=0.0316227766016838","meaning":"Small mismatch under locked model."},{"type":"check","text":"Q^Tr=0; ŷ+r=y; score<γ_demo=0.1."}],
+      "formulaRefs":["F07","F11","F12","F16"],
+      "misconceptionIntercept":{"wrong":"Low score chứng minh machine và sensors healthy.","correction":"Chỉ chứng minh observation được current model giải thích tốt.","sourceTrace":["M22"]},
+      "retrievalCheck":{"id":"RCHECK06","prompt":"Nêu kết luận mạnh nhất được phép từ score normal.","expectedEvidence":["Well represented by current model","Không chứng minh health"],"misconceptionTarget":"Health overclaim.","sourceTrace":["RC08"]},
+      "transition":"Mẫu mismatch cho thấy score lớn vẫn chưa xác định nguyên nhân.","sourceTrace":["core.B13","WE07"]
+    },
+    {
+      "id":"SL15","learningBeat":"Mismatch sample có residual lớn và orthogonal với U.","title":"Mismatch sample: tính đầy đủ","purpose":"Tính coordinates, projection, residual và score.","coreMessage":"z=(0.7,−0.1); r=(0.2,−0.15,−0.2,0.15); score≈0.3535534.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"y=(0.5,0.25,0.1,0.55)^T; z=(0.7,−0.1)^T","meaning":"Centred sample and Q-coordinates."},{"type":"formula_meaning","formula":"ŷ=(0.3,0.4,0.3,0.4)^T","meaning":"Explained component."},{"type":"formula_meaning","formula":"r=(0.2,−0.15,−0.2,0.15)^T; ‖r‖₂=0.3535533905932738","meaning":"Locked model mismatch."}],
+      "formulaRefs":["F06","F07","F11","F12","F16"],
+      "misconceptionIntercept":{"wrong":"Score>0.1 chứng minh bearing fault.","correction":"Chỉ cho biết current normal-operation model giải thích sample kém.","sourceTrace":["M21"]},
+      "transition":"Residual direction giữ thông tin mà scalar score làm mất.","sourceTrace":["core.B14","WE08"]
+    },
+    {
+      "id":"SL16","learningBeat":"Equal score không đồng nghĩa equal deviation pattern hoặc cause.","title":"Residual vector quan trọng hơn một con số","purpose":"Chặn causal inference từ scalar norm.","coreMessage":"r_a=0.1q3 và r_b=0.1q4 có cùng norm nhưng channel patterns khác.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"r_a=(0.05,0.05,−0.05,−0.05)^T","meaning":"One complement direction."},{"type":"formula_meaning","formula":"r_b=(0.05,−0.05,−0.05,0.05)^T","meaning":"Another complement direction."},{"type":"contrast","left":"same ‖r‖₂=0.1","right":"different residual direction and sensor pattern"}],
+      "formulaRefs":["F12","F16"],
+      "misconceptionIntercept":{"wrong":"Hai samples cùng score có cùng cause.","correction":"Norm discards direction; equal magnitude can hide different patterns.","sourceTrace":["M05"]},
+      "retrievalCheck":{"id":"RCHECK07","prompt":"Score giữ và làm mất thông tin gì?","expectedEvidence":["Giữ magnitude","Mất direction/channel pattern","Không xác định cause"],"misconceptionTarget":"Scalar overinterpretation.","sourceTrace":["RC11"]},
+      "transition":"Từ từng observation chuyển sang matrix-level structure.","sourceTrace":["core.B15","WE09"]
+    },
+    {
+      "id":"SL17","learningBeat":"Noisy data matrix có thể exact rank cao hơn model dimension.","title":"Physical two-mode story, matrix rank 4","purpose":"Phân biệt stored matrix rank với model criterion.","coreMessage":"Locked X_c has four nonzero singular values, so floating-point rank 4.",
+      "contentBlocks":[{"type":"contract","text":"X_c∈R^(8×4), samples as rows, zero column mean."},{"type":"formula_meaning","formula":"σ=(1.44955817,0.77504298,0.03505112,0.00330126)","meaning":"All four stored singular values are nonzero."},{"type":"result","text":"np.linalg.matrix_rank(X_c)=4 for the locked stored matrix."}],
+      "formulaRefs":["F13","F14"],
+      "diagramSpec":{"type":"singular_value_spectrum_four_bars","purpose":"Show two dominant and two small nonzero singular values.","entities":["sigma1","sigma2","sigma3","sigma4","tau_line"],"labels":["1.4496","0.7750","0.0351","0.0033","τ=0.05"],"mathematicalConstraints":["All sigma positive","sigma1>=sigma2>=sigma3>=sigma4"],"sourceTrace":["case.calibrationMatrix","WE10"]},
+      "transition":"Numerical rank requires an explicit tolerance.","sourceTrace":["core.B16","WE10"]
+    },
+    {
+      "id":"SL18","learningBeat":"Numerical rank is a declared decision rule.","title":"Rank 2 chỉ đúng dưới τ=0.05","purpose":"Khóa matrix, orientation, tolerance và result trong cùng statement.","coreMessage":"rank_τ(X_c)=#{σ_i>τ}=2 under τ=0.05 for the locked case.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"rank_τ(A)=#{i:σ_i(A)>τ}","meaning":"Criterion-dependent numerical rank."},{"type":"comparison","left":"floating-point rank=4","right":"rank_0.05(X_c)=2"},{"type":"condition","text":"τ=0.05 is teaching-case-specific, not NumPy default or universal physical threshold."}],
+      "formulaRefs":["F13"],
+      "misconceptionIntercept":{"wrong":"Library rank tự biết physical number of modes.","correction":"Default tolerance là numerical convention; engineering criterion phải khai báo.","sourceTrace":["M16","M17","M18"]},
+      "retrievalCheck":{"id":"RCHECK08","prompt":"Viết rank statement đầy đủ cho locked X_c.","expectedEvidence":["Matrix X_c","shape/orientation 8×4 samples-as-rows","rank_τ=2","τ=0.05 case-specific","floating rank 4 separately"],"misconceptionTarget":"Naked rank integer.","sourceTrace":["RC12"]},
+      "transition":"SVD còn cho một summary về retained reconstruction energy.","sourceTrace":["core.B16","lab.LAB08"]
+    },
+    {
+      "id":"SL19","learningBeat":"Reduced SVD factor shapes depend on orientation.","title":"SVD preview với samples-as-rows","purpose":"Khóa shape contract trước interpretation.","coreMessage":"X_c=U diag(σ)V^T with U:(8×4), σ:(4,), V^T:(4×4).",
+      "contentBlocks":[{"type":"formula_meaning","formula":"X_c=U diag(σ)V^T","meaning":"Factorize sample coefficients, magnitudes and feature directions."},{"type":"shape","text":"U 8×4; σ length 4; V^T 4×4."},{"type":"condition","text":"Transposing X_c swaps which space the factors describe."}],
+      "formulaRefs":["F14"],
+      "misconceptionIntercept":{"wrong":"Transpose data matrix nhưng giữ nguyên interpretation.","correction":"Sample and feature spaces swap roles; factor shapes and semantics change.","sourceTrace":["M13"]},
+      "transition":"Retained energy summarizes reconstruction, not task success.","sourceTrace":["core.B17","lab.LAB07"]
+    },
+    {
+      "id":"SL20","learningBeat":"High retained energy is bounded reconstruction evidence.","title":"99.9541% không phải chứng nhận mọi nhiệm vụ","purpose":"Diễn giải rho_2 đúng giới hạn.","coreMessage":"First two singular directions retain 99.9541% squared singular-value energy of this locked centred matrix.",
+      "contentBlocks":[{"type":"formula_meaning","formula":"ρ_k=(Σ_{i≤k}σ_i²)/(Σ_iσ_i²)","meaning":"Retained reconstruction energy ratio."},{"type":"result","text":"ρ_2=0.9995414686511285≈99.9541468651%."},{"type":"warning","text":"Không chứng minh prediction accuracy, rare-fault coverage, physical causality hoặc universal optimal k."}],
+      "formulaRefs":["F15"],
+      "diagramSpec":{"type":"retained_energy_stack","purpose":"Show dominant retained energy and small discarded energy.","entities":["energy_first_two","energy_last_two","rho2"],"labels":["99.9541% retained","0.0459% remaining"],"mathematicalConstraints":["parts sum to 100 percent"],"sourceTrace":["WE11","case.calibrationMatrix"]},
+      "misconceptionIntercept":{"wrong":"99.9541% energy bảo đảm model tốt cho anomaly detection.","correction":"Reconstruction objective và detection objective khác nhau.","sourceTrace":["M19","M23"]},
+      "retrievalCheck":{"id":"RCHECK09","prompt":"Nêu hai permitted và hai prohibited conclusions từ ρ_2.","expectedEvidence":["Permitted: reconstruction energy under locked preprocessing","Permitted: compact two-direction approximation","Prohibited: prediction guarantee","Prohibited: fault coverage/causality"],"misconceptionTarget":"Energy overclaim.","sourceTrace":["RC14"]},
+      "transition":"Cuối cùng, audit code và metadata trước khi tin kết quả.","sourceTrace":["core.B18","WE11"]
+    },
+    {
+      "id":"SL21","learningBeat":"Correct formula without data-contract checks can still produce invalid output.","title":"Audit pipeline trước khi deploy","purpose":"Tổng hợp mathematical, numerical, data-contract và interpretation checks.","coreMessage":"Shape, centering, Q^TQ, projector invariants, reconstruction, tolerance và model version đều phải explicit.",
+      "contentBlocks":[{"type":"checklist","items":["assert shapes/order/version","center with μ","verify Q^TQ","verify P invariants","verify y=ŷ+r and Q^Tr","report τ and retain r"]},{"type":"failure","text":"Shape-correct channel permutation vẫn sai semantics."},{"type":"failure","text":"score>γ_demo không được convert thành fault class."}],
+      "formulaRefs":["F05","F10","F11","F12","F13","F16"],
+      "misconceptionIntercept":{"wrong":"Code ra đúng một expected scalar là đủ.","correction":"Pipeline phải kiểm semantic contract và invariants, không chỉ output number.","sourceTrace":["M14","M15","M20","M21"]},
+      "transition":"Đưa nhiều compatible observations vào data matrix ở bài tiếp theo.","sourceTrace":["core.B19","lab.BUG01-BUG06"]
+    },
+    {
+      "id":"SL22","learningBeat":"Subspace logic chuẩn bị cho matrix-level structure ở §1.6.","title":"Mastery close: từ model subspace sang data matrix","purpose":"Tổng kết decision path và bridge sang bài tiếp theo.","coreMessage":"Classify, center, choose projector, verify residual, report rank criterion, then organize compatible observations as X_c.",
+      "contentBlocks":[{"type":"decision_path","text":"object → contract → centering → basis gate → projector → invariants → residual → rank criterion → bounded interpretation"},{"type":"transfer","text":"§1.6 tiếp nhận X_c: rows as observations, columns as features, matrix transformations and shared structure."},{"type":"mastery","text":"Bạn phải giải thích được điều score và retained energy không chứng minh."}],
+      "formulaRefs":["F01","F02","F07","F09","F11","F13","F14","F15","F16"],
+      "retrievalCheck":{"id":"RCHECK10","prompt":"Nêu 7 bước tối thiểu trước khi tin một residual score.","expectedEvidence":["object/model classification","feature contract","centering","projector assumptions","invariants","compatible threshold/rank criterion","bounded interpretation"],"misconceptionTarget":"Nhảy thẳng từ array sang diagnosis.","sourceTrace":["RC16","assessment.MG1-MG5"]},
+      "transition":"Kết thúc §1.5; chuyển sang §1.6 với data matrix đã có contract.","sourceTrace":["core.B20","FV12"]
+    }
+  ],
+  "coverage": {
+    "slideCount": 22,
+    "diagramSlides": ["SL01","SL02","SL03","SL05","SL07","SL10","SL13","SL17","SL20"],
+    "retrievalSlides": ["SL02","SL04","SL06","SL08","SL11","SL14","SL16","SL18","SL20","SL22"],
+    "misconceptionSlides": ["SL01","SL02","SL03","SL04","SL05","SL06","SL08","SL09","SL10","SL11","SL12","SL14","SL15","SL16","SL18","SL19","SL20","SL21"],
+    "formulaIdsCovered": ["F01","F02","F03","F04","F05","F06","F07","F08","F09","F10","F11","F12","F13","F14","F15","F16"],
+    "learningOutcomesCovered": ["LO1","LO2","LO3","LO4","LO5","LO6","LO7","LO8"],
+    "caseVersion": "CASE_C01_L05_V1_LOCKED"
+  },
+  "pass13SlideshowAcceptance": {
+    "status": "PASS_13_SLIDESHOW_CANDIDATE_COMPLETE",
+    "slideCount": 22,
+    "minimumSatisfied": true,
+    "compression": false,
+    "onePrimaryBeatPerSlide": true,
+    "oneRuntimeSlidePerSourceSlideRequired": true,
+    "runtimeFilesModified": false
+  }
+}

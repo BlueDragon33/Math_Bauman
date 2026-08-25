@@ -1,0 +1,18 @@
+{
+  "schema": "bauman_math_theory_lecture_frame_v1",
+  "version": "E109_THEORY_FRAME_CONTENT_SPLIT",
+  "purpose": "Khung quản lý bài giảng lý thuyết: giai đoạn → phân môn → chương. Không chứa nội dung slide chi tiết.",
+  "framePolicy": "UI đọc file này để dựng cây lý thuyết. Nội dung bài giảng nằm riêng trong theory_lecture_content.json.",
+  "contentSource": "theory_lecture_content.json",
+  "expectedContentRecordSchema": {
+    "lessonId": "unique lesson id, for example MATH-VN-LA-C01-L04",
+    "chapterId": "must match a chapterId in theory_lecture_frame.json",
+    "lessonTitle": "lesson title",
+    "orderInChapter": "number",
+    "slides": "array of theory slide objects",
+    "pureLayer": "array of pure/foundation math anchors",
+    "appliedLayer": "array of application anchors",
+    "bridgeQuestion": "how pure math connects to application",
+    "auditStatus": "PASS | REVIEW | RISK"
+  }
+}

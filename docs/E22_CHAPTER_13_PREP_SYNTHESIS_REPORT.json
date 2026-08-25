@@ -1,0 +1,33 @@
+{
+  "checkpoint": "E22_CHECKPOINT_TEST_SNAPSHOT",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapterId": "MATH-PREP-PS-C13",
+  "chapterTitle": "Chương 13 · Tổng hợp dự bị: đại số, xác suất và thống kê",
+  "stage": "GĐ2 · Dự bị Nga/STANKIN",
+  "lessons": 8,
+  "theorySlides": 160,
+  "formulas": 24,
+  "exercises": 64,
+  "applications": 16,
+  "simulations": 16,
+  "professorQa": 8,
+  "questions": 48,
+  "reviewPacks": 8,
+  "vocabCards": 32,
+  "focus": [
+    "tổng hợp đại số tuyến tính",
+    "giải tích và tối ưu",
+    "xác suất Bayes",
+    "biến ngẫu nhiên và phân phối",
+    "thống kê mẫu",
+    "đọc đề tiếng Nga hỗn hợp",
+    "trình bày lời giải",
+    "bản đồ lỗi và thi thử"
+  ],
+  "preservedFix": {
+    "target": "Tab Lý thuyết · thanh chọn slide",
+    "source": "E19/E20/E21 screenshot fix",
+    "guarantee": "horizontal-only rail; overflow-y hidden; vertical scrollbar disabled"
+  },
+  "notFinal": true
+}

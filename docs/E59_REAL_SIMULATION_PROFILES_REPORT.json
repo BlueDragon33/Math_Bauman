@@ -1,0 +1,39 @@
+{
+  "checkpoint": "E59_REAL_SIMULATION_PROFILES_CHECKPOINT_TEST_SNAPSHOT",
+  "notFinal": true,
+  "base": "E58_DATA_SCHEMA_SYNC",
+  "scope": "Mô phỏng thật theo profile: visual board, biến điều khiển, output và kịch bản khác nhau giữa nhóm Toán.",
+  "counts": {
+    "lessons": 260,
+    "chapters": 32,
+    "simulations": 260,
+    "profiles": {
+      "linear_vector": 21,
+      "pca_multidim": 41,
+      "optimization_mpc": 25,
+      "probability_bayes": 45,
+      "signal_spectral": 19,
+      "time_series": 32,
+      "russian_math_terms": 16,
+      "state_space_kalman": 32,
+      "research_robustness": 29
+    },
+    "uniqueNoRepeatKeys": 260
+  },
+  "checks": {
+    "allSimulationsHaveE59": true,
+    "uniqueNoRepeatKeys": true,
+    "visualTypes": {
+      "vector_plane": 21,
+      "scatter_projection": 41,
+      "loss_landscape": 25,
+      "distribution_bars": 45,
+      "spectrum_filter": 19,
+      "time_series_line": 32,
+      "term_mapping": 16,
+      "state_space": 32,
+      "evidence_matrix": 29
+    },
+    "noPendingProfile": 0
+  }
+}

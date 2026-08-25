@@ -1,0 +1,23 @@
+{
+  "version": "V13 · Theory Content First",
+  "source": "Bauman_Common_NewRussianUIRoot_Math_PresentationFix_V12.zip",
+  "scope": "Chỉ môn Toán; không xuất main; không sửa Tiếng Nga.",
+  "changes": [
+    "Bổ sung sâu nội dung Lý thuyết cho 48 bài học.",
+    "Mỗi bài có 12 slide nội dung theo trục: lộ trình, trực giác, ký hiệu, định nghĩa, công thức, ví dụ, protocol, lỗi sai, ứng dụng, mô phỏng, vấn đáp, ghi nhớ.",
+    "Gắn thuật ngữ Việt-Nga-Anh lấy từ dữ liệu ứng dụng hiện có.",
+    "Gắn gợi ý mô phỏng lý thuyết và mô phỏng ứng dụng cho từng bài.",
+    "Tạo outline sẵn cho bước thiết kế UX/UI slide bằng Canva sau khi duyệt nội dung."
+  ],
+  "counts": {
+    "lessons": 48,
+    "slidesPerLesson": 12,
+    "totalTheorySlides": 576
+  },
+  "qa": {
+    "jsonParsed": true,
+    "contentFirst": true,
+    "canvaDesignGenerated": false,
+    "reason": "Theo yêu cầu: slide nội dung trước, sau đó mới dùng Canva làm lại UX/UI slide."
+  }
+}

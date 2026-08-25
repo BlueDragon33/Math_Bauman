@@ -1,0 +1,14 @@
+{
+  "checkpoint": "E46",
+  "errors": [],
+  "jsonFiles": 29,
+  "jsFilesChecked": 4,
+  "lessons": 260,
+  "applications": 469,
+  "simulations": 520,
+  "simE46Active": 520,
+  "nonLastFinalSummary": 0,
+  "lastSummaryMissing": 0,
+  "appsTheoryDependent": 469,
+  "zipIntegrity": "PASS"
+}

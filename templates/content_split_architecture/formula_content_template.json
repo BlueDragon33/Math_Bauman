@@ -1,0 +1,22 @@
+{
+  "frameFile": "formula_frame.json",
+  "contentFile": "formula_content.json",
+  "recordKey": "formulaId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonId": "MATH-VN-LA-C01-L04",
+    "tags": [
+      "vector",
+      "AI",
+      "điều khiển"
+    ],
+    "formulaId": "MATH-VN-LA-C01-L04-F01",
+    "title": "Tích vô hướng và cosine similarity",
+    "formula": "a · b = ||a|| ||b|| cos(theta)",
+    "meaning": "Đo quan hệ hướng và năng lượng giữa hai vector.",
+    "conditions": [
+      "Hai vector cùng số chiều"
+    ],
+    "auditStatus": "DRAFT"
+  }
+}

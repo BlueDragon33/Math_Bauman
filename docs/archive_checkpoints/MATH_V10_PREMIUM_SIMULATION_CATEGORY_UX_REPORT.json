@@ -1,0 +1,16 @@
+{
+  "version": "MATH_V10_PREMIUM_SIMULATION_CATEGORY_UX",
+  "main_file_exported": false,
+  "changes": [
+    "Gom Mô phỏng lý thuyết và Mô phỏng ứng dụng vào nút Phân loại nổi bật trong tab Mô phỏng.",
+    "Làm nổi bật nút Mở: Mô phỏng trong Học tập > Lý thuyết và Học tập > Ứng dụng.",
+    "Thiết kế lại phòng lab mô phỏng sang trọng hơn, gần phong cách MATLAB/Canva, thân thiện với người học.",
+    "Giữ logic nhảy đúng simulationKind và targetId theo bài học/case ứng dụng.",
+    "Bám 6 giai đoạn lộ trình: Việt Nam, Dự bị, HK1, HK2, НИР, ВКР."
+  ],
+  "validation": {
+    "json": "pending",
+    "js_syntax": "pending",
+    "zip": "pending"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": "A2_Math_Bauman_Elearning_INFO_V20_formula_display_fixed",
+  "changes": [
+    "Patched core.js so block type formula/math is rendered as a large boxed formula frame, not as a code/pre block.",
+    "Added formula CSS: large, bold, boxed, scroll-safe formula display.",
+    "Added slide subtitle rendering as a visible lead line.",
+    "Replaced data/lessons.json in math and common template with the one-chapter PDF-style clean lessons JSON without raw LaTeX blocks.",
+    "Kept module structure intact; no main file included."
+  ],
+  "data_source": "PDF-style chapter 1 lessons generated from the uploaded matrix PDF pattern",
+  "safe_math_policy": "Formula blocks render as pedagogical formula frames; LaTeX-like leftovers are cleaned instead of displayed as raw code."
+}

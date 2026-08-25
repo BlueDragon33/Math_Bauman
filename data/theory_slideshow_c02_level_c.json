@@ -1,0 +1,77 @@
+{
+  "release": "C02_LEVEL_C_DECK_DATA_E200",
+  "chapter": {
+    "id": "c02",
+    "title": "Chương 2 · Ma trận, phép biến đổi tuyến tính và dữ liệu",
+    "level": "C",
+    "policy": {
+      "minimumSlidesPerLesson": 16,
+      "slideCountIsFloorNotCap": true,
+      "runtime": "data_only_not_wired",
+      "notes": "Deck data first. Do not load as runtime wrapper. Future renderer must consume this data through one stable slideshow engine."
+    }
+  },
+  "lessons": [
+    {
+      "id": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L01-matrix-as-data-and-transform-e142",
+      "label": "Bài 2.1 · Ma trận như dữ liệu và phép biến đổi",
+      "targetSlideCount": 20,
+      "slides": [
+        {"title":"Ma trận là bảng số có hình học","formula":"A = [[a,b],[c,d]],  A ∈ R^{2×2}","visual":"matrix_2x2_general","core":"Ma trận không chỉ là bảng số. Nó có hàng, cột, shape và vai trò trong mô hình.","application":"Đọc dữ liệu cảm biến, state vector, linear layer, transform 2D.","check":"Hàng, cột và shape của A là gì?"},
+        {"title":"Ma trận 3×3 cho ba biến","formula":"A = [[a11,a12,a13],[a21,a22,a23],[a31,a32,a33]]","visual":"matrix_3x3_general","core":"Ma trận 3×3 mô tả tương tác giữa ba đầu vào và ba đầu ra.","application":"Robot 3D, rotation, covariance 3 feature, hệ ba phương trình.","check":"Phần tử a23 nằm ở hàng nào, cột nào?"},
+        {"title":"Hai đời sống của ma trận","formula":"X data,  y = A x","visual":"data_vs_operator","core":"X thường là dữ liệu; A thường là toán tử biến đổi. Cùng dạng bảng nhưng khác vai trò.","application":"ML dùng X làm dataset, A/W làm feature transform hoặc linear model.","check":"Ma trận đang lưu quan sát hay đang tác động lên vector?"},
+        {"title":"Shape là hợp đồng đầu tiên","formula":"A ∈ R^{m×n}, x ∈ R^n ⇒ Ax ∈ R^m","visual":"shape_contract","core":"Số cột của A phải khớp số chiều vector đầu vào.","application":"NumPy, MATLAB, PyTorch, linear system, neural layer.","check":"A 3×2 nhận vector mấy chiều và trả vector mấy chiều?"},
+        {"title":"Đọc theo hàng","formula":"y_i = row_i(A) · x","visual":"row_dot_vector","core":"Mỗi hàng của A là một phép đo tuyến tính tạo ra một thành phần đầu ra.","application":"Classifier tuyến tính, sensor equation, score function.","check":"Hàng thứ hai của A tạo output nào?"},
+        {"title":"Đọc theo cột","formula":"Ax = x_1 a_1 + x_2 a_2 + ... + x_n a_n","visual":"column_combination","core":"Đầu ra là tổ hợp tuyến tính của các cột A với hệ số từ x.","application":"Giải hệ, column space, feature contribution.","check":"Biến x_j kéo output theo hướng cột nào?"},
+        {"title":"Ma trận dữ liệu","formula":"X = [x_1^T; x_2^T; ...; x_m^T] ∈ R^{m×n}","visual":"data_matrix_rows_samples","core":"Mỗi hàng thường là một mẫu, mỗi cột là một feature.","application":"Dataset ML, log cảm biến, PCA, regression.","check":"m là số mẫu hay số feature?"},
+        {"title":"Ma trận toán tử","formula":"y = A x","visual":"operator_box","core":"A mô tả cách trộn, chiếu, xoay, co giãn hoặc đo vector x.","application":"Control, graphics, projection, signal transform.","check":"A đang đo, chiếu, xoay hay trộn feature?"},
+        {"title":"Ma trận trạng thái","formula":"x_{t+1} = A x_t","visual":"state_transition","core":"Trong hệ động lực, A mô tả cách trạng thái hiện tại sinh trạng thái kế tiếp.","application":"Kalman filter, robot dynamics, signal system.","check":"A làm trạng thái ổn định hay khuếch đại?"},
+        {"title":"Ma trận feature transform","formula":"Y = X A","visual":"feature_transform","core":"Nhân bên phải biến đổi hệ feature của từng mẫu.","application":"Linear layer, PCA projection, feature mixing.","check":"Y giữ số mẫu hay đổi số mẫu?"},
+        {"title":"Tuyến tính giữ cộng và scale","formula":"A(u+v)=Au+Av,  A(αu)=αAu","visual":"linearity_two_rules","core":"Tuyến tính cho phép phân tích biến đổi theo từng basis và từng thành phần.","application":"Superposition, control linearization, linear model.","check":"Phép xử lý hiện tại có giữ cộng và scale không?"},
+        {"title":"Transform có thể làm méo khoảng cách","formula":"||Ax-Ay|| ≠ ||x-y||","visual":"distance_distortion","core":"Ma trận có thể co, giãn, nén, xoay, chiếu dữ liệu.","application":"Embedding transform, feature scaling, PCA, projection.","check":"Sau biến đổi, khoảng cách còn cùng ý nghĩa không?"},
+        {"title":"Projection làm mất thông tin","formula":"P^2=P,  rank(P)<n","visual":"projection_loss","core":"Projection giữ phần trong một không gian con và bỏ phần còn lại.","application":"Least squares, PCA, denoising.","check":"Phần bị bỏ là nhiễu hay tín hiệu quan trọng?"},
+        {"title":"Identity là mốc trung tính","formula":"I x = x,  AI = IA = A","visual":"identity_matrix","core":"Identity không đổi vector và là mốc để hiểu mọi transform khác.","application":"Debug matrix multiplication, inverse, basis.","check":"Vì sao AI và IA đều bằng A khi shape hợp lệ?"},
+        {"title":"Diagonal matrix là scale từng trục","formula":"D = diag(d_1,...,d_n)","visual":"diagonal_scale","core":"Ma trận đường chéo không trộn chiều, chỉ co giãn từng thành phần.","application":"Feature scaling, covariance đơn giản, preconditioning.","check":"d_i lớn làm chiều i thay đổi thế nào?"},
+        {"title":"Ma trận sparse giữ cấu trúc","formula":"A_{ij}=0 với đa số i,j","visual":"sparse_matrix","core":"Nhiều hệ kỹ thuật có ma trận thưa, chỉ vài tương tác thật sự tồn tại.","application":"Graph, FEM, network, optimization lớn.","check":"Zero là cấu trúc thật hay missing value?"},
+        {"title":"Mini-case robot 2D","formula":"x_t=[p,v]^T,  x_{t+1}=A x_t","visual":"robot_state_matrix","core":"A cập nhật vị trí và vận tốc qua từng bước thời gian.","application":"Mô phỏng robot, điều khiển, dự đoán trạng thái.","check":"Nếu Δt đổi, A có cần đổi không?"},
+        {"title":"Mini-case sensor health","formula":"Y = X A,  X∈R^{3600×4}","visual":"sensor_health_transform","core":"A có thể trộn vibration, temperature, current, speed thành health score.","application":"Predictive maintenance, anomaly detection.","check":"Feature mới có còn diễn giải vật lý không?"},
+        {"title":"Checklist đọc ma trận","formula":"matrix = shape + role + rows + columns + unit","visual":"matrix_checklist","core":"Không đọc ma trận chỉ bằng số. Phải đọc shape, vai trò, hàng/cột, đơn vị và phép nhân.","application":"Review trước khi dùng matrix trong code hoặc mô hình.","check":"Bạn có thể mô tả A trong 5 trường này không?"},
+        {"title":"Chốt 2.1","formula":"X data; A operator; y=Ax; Y=XA","visual":"lesson_summary_map","core":"Ma trận là cầu nối giữa dữ liệu và phép biến đổi tuyến tính.","application":"Nền cho nhân ma trận, rank, inverse, transform, PCA.","check":"Ma trận mới gặp nên hỏi vai trò trước hay tính trước?"}
+      ]
+    },
+    {
+      "id": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L02-matrix-multiplication-pipeline-e142",
+      "label": "Bài 2.2 · Phép nhân ma trận và pipeline tuyến tính",
+      "targetSlideCount": 20,
+      "slides": [
+        {"title":"Nhân ma trận là hàng nhân cột","formula":"C=AB,  c_{ij}=Σ_k a_{ik}b_{kj}","visual":"matmul_row_column","core":"Mỗi ô của C là dot product giữa một hàng của A và một cột của B.","application":"Debug matmul, neural layer, transform composition.","check":"c12 lấy hàng nào của A và cột nào của B?"},
+        {"title":"Ví dụ 2×2 đầy đủ","formula":"[[a,b],[c,d]][[e,f],[g,h]] = [[ae+bg,af+bh],[ce+dg,cf+dh]]","visual":"matmul_2x2_expanded","core":"Công thức 2×2 cho thấy rõ bản chất hàng-cột của phép nhân.","application":"Tính tay, kiểm code, giải thích pipeline nhỏ.","check":"Vì sao ô c21 là ce+dg?"},
+        {"title":"Điều kiện shape","formula":"A∈R^{m×n}, B∈R^{n×p} ⇒ AB∈R^{m×p}","visual":"matmul_shape_rule","core":"Số cột của A phải bằng số hàng của B.","application":"NumPy/PyTorch/MATLAB matmul.","check":"A 4×3 nhân B 3×2 ra shape gì?"},
+        {"title":"Thứ tự trong pipeline","formula":"A(Bx)=(AB)x","visual":"pipeline_order","core":"Trong ABx, B tác động lên x trước, A tác động sau.","application":"Robot frame, graphics transform, feature pipeline.","check":"Transform nào chạm vào x trước?"},
+        {"title":"AB thường khác BA","formula":"AB ≠ BA","visual":"non_commutative","core":"Đổi thứ tự transform thường đổi kết quả và có thể đổi cả shape hợp lệ.","application":"Rotation-scale, shear-scale, coordinate frame.","check":"Khi nào AB và BA có thể bằng nhau?"},
+        {"title":"Nhân vector là trường hợp riêng","formula":"y=Ax","visual":"matrix_vector_special_case","core":"Matrix-vector multiplication là một cột output từ phép tổ hợp cột A.","application":"Linear system, sensor equation, linear model.","check":"y nằm trong không gian nào?"},
+        {"title":"Batch multiplication","formula":"Y=XW","visual":"batch_feature_transform","core":"Một ma trận dữ liệu X có thể xử lý cả batch mẫu cùng lúc.","application":"Linear layer, regression, PCA projection.","check":"W trộn mẫu hay trộn feature?"},
+        {"title":"Associativity cho phép đổi ngoặc","formula":"(AB)C=A(BC)","visual":"associativity","core":"Đổi ngoặc được nhưng không đổi thứ tự các ma trận.","application":"Tối ưu chi phí tính toán trong pipeline dài.","check":"Đổi ngoặc nào tiết kiệm phép nhân nhất?"},
+        {"title":"Elementwise khác matmul","formula":"A⊙B ≠ AB","visual":"elementwise_vs_matmul","core":"Nhân từng ô không giống nhân hàng-cột.","application":"Phân biệt NumPy *, @, matmul, broadcasting.","check":"Code đang dùng * hay @?"},
+        {"title":"Transpose đảo thứ tự","formula":"(AB)^T = B^T A^T","visual":"transpose_reverse_order","core":"Transpose của pipeline đảo chiều thứ tự nhân.","application":"Gradient, normal equation, covariance.","check":"Vì sao thứ tự bị đảo?"},
+        {"title":"Block matrix multiplication","formula":"[[A,B],[C,D]][[E,F],[G,H]]","visual":"block_matmul","core":"Ma trận khối giúp đọc hệ lớn bằng các khối con có ý nghĩa.","application":"Control system, covariance block, robotics.","check":"Khối trên-trái của tích là gì?"},
+        {"title":"Chi phí tính toán","formula":"cost(AB)≈mnp","visual":"matmul_cost","core":"Shape quyết định chi phí nhân ma trận.","application":"Tối ưu pipeline ML, HPC, embedded inference.","check":"Nên nhân cặp nào trước trong chuỗi dài?"},
+        {"title":"Numerical stability","formula":"floating point error accumulates","visual":"matmul_roundoff","core":"Phép nhân dài có thể tích lũy lỗi làm tròn.","application":"Simulation, optimization, large matrix computation.","check":"Dữ liệu có cần scale hoặc dtype tốt hơn không?"},
+        {"title":"Pipeline tuyến tính nhiều tầng","formula":"y=A_k...A_2A_1x","visual":"multi_layer_linear_pipeline","core":"Nhiều tầng tuyến tính liên tiếp vẫn là một transform tuyến tính.","application":"Linear neural layer without activation collapses to one matrix.","check":"Nếu bỏ activation, mạng nhiều tầng còn phi tuyến không?"},
+        {"title":"Mini-case camera transform","formula":"p_{world}=T_{world←cam} p_{cam}","visual":"camera_frame_pipeline","core":"Matrix multiplication mô tả đổi hệ tọa độ theo chuỗi frame.","application":"Robot vision, SLAM, camera calibration.","check":"Frame nào đứng bên trái trong công thức?"},
+        {"title":"Mini-case feature engineering","formula":"Z = X A B","visual":"feature_pipeline","core":"A có thể normalize/rotate feature, B có thể reduce hoặc mix tiếp.","application":"Data preprocessing, PCA, linear model.","check":"Có thể gộp A và B không? Có nên gộp không?"},
+        {"title":"Pitfall shape đúng nhưng ý nghĩa sai","formula":"AB shape valid ≠ model valid","visual":"shape_vs_semantics","core":"Code chạy không có nghĩa mô hình đúng.","application":"Debug ML pipeline và matrix API.","check":"Cột/hàng có đúng quy ước dữ liệu không?"},
+        {"title":"Checklist nhân ma trận","formula":"shape + order + role + cost + stability","visual":"matmul_checklist","core":"Trước khi nhân, kiểm shape, thứ tự, vai trò, chi phí và ổn định số.","application":"Review code trước khi train/model deploy.","check":"Bạn đã kiểm đủ 5 mục chưa?"},
+        {"title":"Cầu sang rank","formula":"rank(AB) ≤ min(rank(A),rank(B))","visual":"rank_after_matmul","core":"Nhân ma trận có thể làm mất hướng thông tin.","application":"Dimensionality reduction, bottleneck, projection.","check":"Pipeline có bottleneck thông tin ở đâu?"},
+        {"title":"Chốt 2.2","formula":"matrix multiplication = structured composition","visual":"lesson_summary_map","core":"Nhân ma trận là ghép transform có trật tự, không phải nhân từng ô.","application":"Nền cho rank, inverse, transform geometry và PCA.","check":"Bạn có giải thích từng ô và từng shape của AB không?"}
+      ]
+    }
+  ],
+  "remainingLessonsPlanned": [
+    "Bài 2.3 · Hạng ma trận, không gian cột và thông tin độc lập",
+    "Bài 2.4 · Nghịch đảo, giải hệ và điều kiện tồn tại nghiệm",
+    "Bài 2.5 · Phép biến đổi tuyến tính trong hình học và dữ liệu",
+    "Bài 2.6 · Từ ma trận sang PCA và mô hình tuyến tính"
+  ],
+  "implementationNote": "E200 creates Level C deck data for the first two C02 lessons. Continue the same data-only pattern for 2.3-2.6 before wiring into the stable renderer."
+}

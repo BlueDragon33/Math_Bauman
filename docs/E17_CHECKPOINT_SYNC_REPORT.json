@@ -1,0 +1,32 @@
+{
+  "id": "E17_CHECKPOINT_SYNCED_FROM_E16_BASE_FILE",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "date": "2026-06-18",
+  "inputFile": "A2_Math_Bauman_Elearning_VIP_FINAL.zip",
+  "baseDetected": "A2_Math_Bauman_Elearning_ContentSystem_CleanTabUX_V39",
+  "sequence": [
+    "1. Đồng bộ E15 Chương 7 vào file Toán thật.",
+    "2. Đồng bộ E16 kiểm định Linear Algebra + Chương 8 delta vào file Toán thật.",
+    "3. Thực hiện E17 checkpoint: làm sâu Chương 8 và vá logic render/storage indicator."
+  ],
+  "globalCounts": {
+    "lessons.json": 159,
+    "formulas.json": 191,
+    "exercises.json": 414,
+    "applications.json": 175,
+    "simulations.json": 175,
+    "professor_qa.json": 159,
+    "speaking.json": 159,
+    "question_bank.json": 525,
+    "tests.json": 525,
+    "review_packs.json": 159,
+    "mastery-map.json": 159,
+    "content-index.json": 159
+  },
+  "technicalFixes": [
+    "Thêm fallback window.renderFormula để tránh renderFormula is not defined.",
+    "Bổ sung indicator cố định dưới nút Kho môn học trong layout v38 đang thực thi.",
+    "Cập nhật subject-manifest counts, subject-adapter version và docs."
+  ],
+  "notFinal": true
+}

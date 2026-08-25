@@ -1,0 +1,31 @@
+{
+  "patch": "E98_SIMULATION_REALITY_VISUAL_PROFILE_PASS",
+  "totalSimulations": 260,
+  "profiles": {
+    "vector_coordinates": 3,
+    "span_rank_basis": 3,
+    "vector_norm_distance": 5,
+    "dot_projection_similarity": 9,
+    "matrix_transform_rank": 11,
+    "linear_system_gauss": 1,
+    "gradient_optimization": 16,
+    "constrained_optimization": 9,
+    "statistics_estimation": 24,
+    "signal_time_frequency": 65,
+    "seminar_proof_language": 42,
+    "svd_pca": 18,
+    "clustering_similarity": 7,
+    "least_squares": 9,
+    "kalman_state_estimation": 8,
+    "control_robotics": 14,
+    "robust_risk": 16
+  },
+  "genericOutputF": 0,
+  "genericProfile": 0,
+  "allUnified": true,
+  "allTheoryLocked": true,
+  "notes": [
+    "Mỗi bài có 1 lab unified; độ sâu nằm trong controls/readouts/scenarios, không tăng lại 520 lab split.",
+    "Profile được chọn từ tiêu đề bài, bộ môn, chương và công thức neo."
+  ]
+}

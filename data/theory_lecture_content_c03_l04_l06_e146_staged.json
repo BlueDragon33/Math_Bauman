@@ -1,0 +1,720 @@
+{
+  "id": "bauman_math_theory_lecture_content_c03_l04_l06_e146_staged",
+  "schema": "bauman_math_content_records_v1",
+  "version": "E146_C03_L04_L06_STAGED",
+  "title": "C03 · Giải tích, đạo hàm và gradient · Nội dung staged §3.4–§3.6",
+  "role": "content_staged_for_merge",
+  "targetFile": "subjects/math/data/theory_lecture_content.json",
+  "recordKey": "lessonId",
+  "mergePolicy": "append_records_without_touching_existing_C01_C02_or_C03_L01_L03_records",
+  "records": [
+    {
+      "lessonId": "MATH-VN-C03-giai_tich_dao_ham_gradient-L04-gradient-descent-learning-rate-e146",
+      "chapterId": "MATH-VN-C03-giai_tich_dao_ham_gradient",
+      "lessonTitle": "§3.4 · Gradient descent và learning rate",
+      "title": "§3.4 · Gradient descent và learning rate",
+      "programLectureId": "MATH-PROG-L03-calculus-gradient-optimization",
+      "programLectureIds": [
+        "MATH-PROG-L03-calculus-gradient-optimization",
+        "MATH-PROG-L17-ai-machine-learning-math-foundations",
+        "MATH-PROG-L02-vector-spaces-linear-maps"
+      ],
+      "programAnchorTitle": "Giải tích, gradient và tối ưu",
+      "roadmapRole": "foundation_before_prep",
+      "baumanFocus": "Nắm gradient descent như quy trình cập nhật tham số để giảm sai số, hiểu vai trò learning rate, hội tụ, dao động và lỗi triển khai thường gặp trong mô hình AI/kỹ thuật.",
+      "sourceAnchors": {
+        "stageId": "vn",
+        "disciplineId": "calculus_optimization",
+        "chapterId": "MATH-VN-C03-giai_tich_dao_ham_gradient",
+        "programLectureId": "MATH-PROG-L03-calculus-gradient-optimization"
+      },
+      "tags": [
+        "gradient descent",
+        "learning rate",
+        "optimization",
+        "loss",
+        "convergence"
+      ],
+      "slides": [
+        {
+          "role": "problem_framing",
+          "title": "Gradient descent biến đạo hàm thành cách tự cải thiện mô hình",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Ý chính",
+              "body": "Sau khi biết gradient chỉ hướng tăng nhanh nhất, ta đi ngược hướng đó để giảm sai số. Gradient descent là vòng lặp: đo sai số, tính hướng sửa, bước một bước nhỏ, rồi kiểm tra lại."
+            }
+          ]
+        },
+        {
+          "role": "deep_essence",
+          "title": "Tối ưu là điều khiển chuyển động trong không gian tham số",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Bản chất",
+              "body": "Tham số theta của mô hình tạo thành một điểm trong không gian nhiều chiều. Mỗi lần cập nhật theta là một bước di chuyển trên bề mặt hàm mất mát để tìm vùng có lỗi nhỏ hơn."
+            }
+          ]
+        },
+        {
+          "role": "counter_intuition",
+          "title": "Bước nhanh chưa chắc học nhanh",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Điểm dễ nhầm",
+              "body": "Learning rate lớn có thể nhảy qua nghiệm tốt hoặc làm loss dao động. Learning rate quá nhỏ thì quá trình học lê bước, giống một robot đi dò đường nhưng mỗi lần chỉ dịch một hạt bụi."
+            }
+          ]
+        },
+        {
+          "role": "real_bridge",
+          "title": "Gradient descent trong AI, điều khiển và nhận dạng hệ thống",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Ví dụ",
+              "body": "Huấn luyện mạng neural, fitting đường cong cảm biến, hiệu chỉnh tham số bộ điều khiển và nhận dạng mô hình động lực đều dùng cùng ý tưởng: giảm sai số bằng các bước cập nhật có hướng."
+            }
+          ]
+        },
+        {
+          "role": "notation",
+          "title": "Ký hiệu cập nhật tham số",
+          "blocks": [
+            {
+              "type": "formula",
+              "title": "Cập nhật một chiều",
+              "body": "theta_{k+1} = theta_k - alpha dJ/dtheta"
+            },
+            {
+              "type": "formula",
+              "title": "Cập nhật nhiều chiều",
+              "body": "theta_{k+1} = theta_k - alpha grad J(theta_k)"
+            },
+            {
+              "type": "text",
+              "title": "Tên gọi",
+              "body": "alpha là learning rate; J(theta) là hàm mất mát; grad J là vector đạo hàm riêng theo các tham số."
+            }
+          ]
+        },
+        {
+          "role": "core_formula",
+          "title": "Vòng lặp gradient descent tối thiểu",
+          "blocks": [
+            {
+              "type": "formula",
+              "title": "Thuật toán",
+              "body": "1. y_hat = f(x; theta)\n2. J = loss(y_hat, y)\n3. g = grad J(theta)\n4. theta = theta - alpha g"
+            },
+            {
+              "type": "text",
+              "title": "Ý nghĩa",
+              "body": "Bước 1 dự đoán, bước 2 đo sai, bước 3 tìm hướng làm sai số tăng, bước 4 đi ngược hướng đó."
+            }
+          ]
+        },
+        {
+          "role": "assumption_gate",
+          "title": "Điều kiện để bước gradient đáng tin",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Điều kiện",
+              "body": "Hàm mất mát cần đủ trơn ở vùng đang học, gradient phải tính đúng hoặc xấp xỉ đủ ổn, dữ liệu không quá nhiễu, và learning rate phải phù hợp với độ cong của bề mặt loss."
+            }
+          ]
+        },
+        {
+          "role": "mini_case",
+          "title": "Mini case: fitting đường thẳng cho dữ liệu cảm biến",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Case",
+              "body": "Mô hình y_hat = ax + b dự đoán nhiệt độ từ dòng điện. Gradient descent chỉnh a và b để giảm sai số giữa y_hat và y đo được. Nếu alpha hợp lý, đường thẳng dần ôm dữ liệu tốt hơn."
+            }
+          ]
+        },
+        {
+          "role": "interpretation",
+          "title": "Learning rate là tay ga của thuật toán",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Quá nhỏ",
+              "body": "Loss giảm đều nhưng rất chậm, tốn nhiều vòng lặp."
+            },
+            {
+              "type": "text",
+              "title": "Vừa đủ",
+              "body": "Loss giảm ổn định và nhanh."
+            },
+            {
+              "type": "text",
+              "title": "Quá lớn",
+              "body": "Loss nhảy loạn, tăng trở lại hoặc không hội tụ."
+            }
+          ]
+        },
+        {
+          "role": "simulation",
+          "title": "Thí nghiệm gradient descent bằng Python",
+          "blocks": [
+            {
+              "type": "code",
+              "title": "Công cụ",
+              "body": "theta = theta - alpha * grad\nloss_history.append(loss)\n\n# kiểm tra hội tụ\nif abs(loss_history[-1]-loss_history[-2]) < eps:\n    stop = True"
+            },
+            {
+              "type": "text",
+              "title": "Mục tiêu",
+              "body": "Vẽ loss theo vòng lặp với alpha nhỏ, vừa, lớn để thấy ba kiểu: chậm, hội tụ tốt, dao động."
+            }
+          ]
+        },
+        {
+          "role": "common_mistakes",
+          "title": "Lỗi thường gặp khi dùng gradient descent",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Lỗi",
+              "body": "Không chuẩn hóa đặc trưng; chọn alpha theo cảm tính; không theo dõi loss; nhầm dấu cộng/trừ trong cập nhật; kết luận mô hình sai trong khi chỉ là learning rate sai."
+            }
+          ]
+        },
+        {
+          "role": "application",
+          "title": "Ứng dụng lập trình cho mô hình nhỏ",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Nhiệm vụ",
+              "body": "Viết vòng lặp train tuyến tính y_hat = ax+b. In loss mỗi 10 epoch, lưu best theta, dừng sớm khi loss không giảm, và kiểm tra dữ liệu đầu vào đã normalize chưa."
+            }
+          ]
+        },
+        {
+          "role": "practice",
+          "title": "Bài luyện tập",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Bài tập",
+              "body": "Cho J(theta)=theta^2. Bắt đầu theta=10. Tính 5 bước cập nhật với alpha=0.1 và alpha=1.1. So sánh quỹ đạo theta và giải thích vì sao một trường hợp ổn định hơn."
+            }
+          ]
+        },
+        {
+          "role": "professor_qa",
+          "title": "Vấn đáp kiểm tra hiểu sâu",
+          "blocks": [
+            {
+              "type": "qa",
+              "title": "Câu hỏi",
+              "body": "Vì sao gradient descent đi theo -grad J chứ không phải grad J? Learning rate liên quan thế nào đến độ cong của hàm mất mát? Khi loss không giảm, cần kiểm tra những gì trước khi đổi mô hình?"
+            }
+          ]
+        },
+        {
+          "role": "bridge",
+          "title": "Cầu sang hàm mất mát và cực trị",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Liên kết",
+              "body": "Gradient descent cần một bề mặt để đi trên đó. Bề mặt ấy chính là hàm mất mát. Bài sau làm rõ loss, cực tiểu, cực đại, điểm yên ngựa và điều kiện tối ưu."
+            }
+          ]
+        },
+        {
+          "role": "takeaway",
+          "title": "Kết luận cần nhớ",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Cốt lõi",
+              "body": "Gradient descent là cơ chế cập nhật tham số theo hướng giảm loss. Learning rate quyết định bước đi, và bước đi đúng quan trọng không kém hướng đi đúng."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-C03-giai_tich_dao_ham_gradient-L05-loss-extrema-optimality-e146",
+      "chapterId": "MATH-VN-C03-giai_tich_dao_ham_gradient",
+      "lessonTitle": "§3.5 · Hàm mất mát, cực trị và điều kiện tối ưu",
+      "title": "§3.5 · Hàm mất mát, cực trị và điều kiện tối ưu",
+      "programLectureId": "MATH-PROG-L03-calculus-gradient-optimization",
+      "programLectureIds": [
+        "MATH-PROG-L03-calculus-gradient-optimization",
+        "MATH-PROG-L17-ai-machine-learning-math-foundations",
+        "MATH-PROG-L02-vector-spaces-linear-maps"
+      ],
+      "programAnchorTitle": "Giải tích, gradient và tối ưu",
+      "roadmapRole": "foundation_before_prep",
+      "baumanFocus": "Hiểu hàm mất mát như mục tiêu tối ưu, phân biệt cực tiểu/cực đại/điểm yên ngựa, điều kiện tối ưu và rủi ro khi loss không phản ánh đúng yêu cầu kỹ thuật.",
+      "sourceAnchors": {
+        "stageId": "vn",
+        "disciplineId": "calculus_optimization",
+        "chapterId": "MATH-VN-C03-giai_tich_dao_ham_gradient",
+        "programLectureId": "MATH-PROG-L03-calculus-gradient-optimization"
+      },
+      "tags": [
+        "loss function",
+        "extrema",
+        "optimality",
+        "Hessian",
+        "validation"
+      ],
+      "slides": [
+        {
+          "role": "problem_framing",
+          "title": "Hàm mất mát biến mục tiêu học thành một con số cần giảm",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Ý chính",
+              "body": "Mô hình không tự biết mình tốt hay kém. Hàm mất mát J đo độ sai giữa dự đoán và thực tế, rồi biến mục tiêu kỹ thuật thành bài toán tìm cực trị."
+            }
+          ]
+        },
+        {
+          "role": "deep_essence",
+          "title": "Loss là la bàn, nhưng cũng có thể là mê cung",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Bản chất",
+              "body": "Một loss tốt phải phản ánh đúng điều ta cần tối ưu. Nếu loss lệch mục tiêu thật, thuật toán vẫn tối ưu rất chăm chỉ, chỉ là chăm chỉ đi nhầm hành lang."
+            }
+          ]
+        },
+        {
+          "role": "counter_intuition",
+          "title": "Loss nhỏ không luôn đồng nghĩa hệ thống tốt trong đời thật",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Điểm dễ nhầm",
+              "body": "Mô hình có thể loss thấp trên dữ liệu huấn luyện nhưng kém trên dữ liệu mới. Có thể tối ưu đúng con số nhưng sai yêu cầu kỹ thuật như an toàn, độ trễ, năng lượng hoặc độ bền."
+            }
+          ]
+        },
+        {
+          "role": "real_bridge",
+          "title": "Loss trong dự đoán, phân loại và điều khiển",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Ví dụ",
+              "body": "Hồi quy thường dùng MSE hoặc MAE. Phân loại dùng cross-entropy. Điều khiển có thể cộng sai lệch vị trí, năng lượng điều khiển và mức vi phạm ràng buộc vào cùng một cost."
+            }
+          ]
+        },
+        {
+          "role": "notation",
+          "title": "Ký hiệu loss, risk và cực trị",
+          "blocks": [
+            {
+              "type": "formula",
+              "title": "MSE",
+              "body": "J(theta) = (1/m) sum_{i=1}^m (f(x_i;theta)-y_i)^2"
+            },
+            {
+              "type": "formula",
+              "title": "Điểm cực tiểu cục bộ",
+              "body": "theta* is local minimum if J(theta*) <= J(theta) near theta*"
+            },
+            {
+              "type": "formula",
+              "title": "Điểm dừng",
+              "body": "grad J(theta*) = 0"
+            }
+          ]
+        },
+        {
+          "role": "core_formula",
+          "title": "Điều kiện tối ưu bậc một và bậc hai",
+          "blocks": [
+            {
+              "type": "formula",
+              "title": "Bậc một",
+              "body": "grad J(theta*) = 0"
+            },
+            {
+              "type": "formula",
+              "title": "Bậc hai một biến",
+              "body": "f''(x*) > 0: local minimum\nf''(x*) < 0: local maximum"
+            },
+            {
+              "type": "formula",
+              "title": "Nhiều biến",
+              "body": "Hessian H positive definite suggests local minimum"
+            }
+          ]
+        },
+        {
+          "role": "assumption_gate",
+          "title": "Điều kiện dùng điều kiện tối ưu",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Điều kiện",
+              "body": "Hàm cần khả vi quanh điểm xét. Điều kiện grad J=0 chỉ cho điểm dừng, không tự đảm bảo cực tiểu. Với hàm không lồi, có thể gặp cực tiểu cục bộ, điểm yên ngựa hoặc vùng phẳng."
+            }
+          ]
+        },
+        {
+          "role": "mini_case",
+          "title": "Mini case: chọn loss cho cảm biến nhiễu",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Case",
+              "body": "Nếu dữ liệu có vài outlier rất lớn, MSE phạt outlier mạnh và có thể kéo mô hình lệch. MAE ít nhạy outlier hơn. Chọn loss phụ thuộc bản chất nhiễu và mục tiêu sử dụng."
+            }
+          ]
+        },
+        {
+          "role": "interpretation",
+          "title": "Cực trị dưới góc nhìn bề mặt loss",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Cực tiểu",
+              "body": "Vùng xung quanh đều có loss cao hơn."
+            },
+            {
+              "type": "text",
+              "title": "Cực đại",
+              "body": "Vùng xung quanh đều có loss thấp hơn, thường không phải mục tiêu khi train."
+            },
+            {
+              "type": "text",
+              "title": "Điểm yên ngựa",
+              "body": "Một hướng giống cực tiểu, hướng khác giống cực đại; mạng neural lớn gặp điểm yên ngựa thường xuyên."
+            }
+          ]
+        },
+        {
+          "role": "simulation",
+          "title": "Thí nghiệm so sánh loss bằng Python",
+          "blocks": [
+            {
+              "type": "code",
+              "title": "Công cụ",
+              "body": "mse = ((y_pred - y_true)**2).mean()\nmae = abs(y_pred - y_true).mean()\n\n# quét theta để xem bề mặt loss\nloss_grid = [loss(theta) for theta in theta_values]"
+            },
+            {
+              "type": "text",
+              "title": "Mục tiêu",
+              "body": "Tạo một bộ dữ liệu có outlier, so sánh nghiệm khi tối ưu MSE và MAE để thấy loss ảnh hưởng trực tiếp đến tham số học được."
+            }
+          ]
+        },
+        {
+          "role": "common_mistakes",
+          "title": "Lỗi thường gặp với hàm mất mát",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Lỗi",
+              "body": "Chọn loss vì quen tay; chỉ xem train loss mà bỏ validation loss; quên đơn vị vật lý của sai số; nhầm cực tiểu cục bộ với nghiệm toàn cục; bỏ qua ràng buộc an toàn."
+            }
+          ]
+        },
+        {
+          "role": "application",
+          "title": "Ứng dụng lập trình: log đúng thứ cần tối ưu",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Nhiệm vụ",
+              "body": "Khi train, lưu train loss, validation loss, metric kỹ thuật và tham số tốt nhất. Với bài toán điều khiển, tách từng thành phần cost để biết hệ đang sai do vị trí, năng lượng hay ràng buộc."
+            }
+          ]
+        },
+        {
+          "role": "practice",
+          "title": "Bài luyện tập",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Bài tập",
+              "body": "Cho dữ liệu dự đoán nhiệt có một điểm đo lỗi rất lớn. Giải thích khi nào nên dùng MSE, khi nào nên dùng MAE, và khi nào cần Huber loss. Liên hệ với yêu cầu cảnh báo quá nhiệt."
+            }
+          ]
+        },
+        {
+          "role": "professor_qa",
+          "title": "Vấn đáp kiểm tra hiểu sâu",
+          "blocks": [
+            {
+              "type": "qa",
+              "title": "Câu hỏi",
+              "body": "Vì sao grad J=0 chưa đủ để kết luận cực tiểu? Một loss tối ưu trên dữ liệu huấn luyện có thể thất bại ngoài thực tế vì những nguyên nhân nào? Chọn loss có phải là quyết định kỹ thuật không?"
+            }
+          ]
+        },
+        {
+          "role": "bridge",
+          "title": "Cầu sang backpropagation",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Liên kết",
+              "body": "Khi loss phụ thuộc vào hàng nghìn hoặc hàng triệu tham số trong mạng neural, ta cần cách tính gradient hiệu quả. Backpropagation chính là kỹ thuật truyền đạo hàm qua chuỗi phép toán."
+            }
+          ]
+        },
+        {
+          "role": "takeaway",
+          "title": "Kết luận cần nhớ",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Cốt lõi",
+              "body": "Hàm mất mát định nghĩa điều mô hình đang cố giảm. Cực trị và điều kiện tối ưu giúp hiểu nơi thuật toán dừng, nhưng chất lượng thật còn phụ thuộc dữ liệu, ràng buộc và metric kỹ thuật."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-C03-giai_tich_dao_ham_gradient-L06-gradient-backprop-ml-optimization-e146",
+      "chapterId": "MATH-VN-C03-giai_tich_dao_ham_gradient",
+      "lessonTitle": "§3.6 · Từ gradient sang backpropagation và tối ưu ML",
+      "title": "§3.6 · Từ gradient sang backpropagation và tối ưu ML",
+      "programLectureId": "MATH-PROG-L03-calculus-gradient-optimization",
+      "programLectureIds": [
+        "MATH-PROG-L03-calculus-gradient-optimization",
+        "MATH-PROG-L17-ai-machine-learning-math-foundations",
+        "MATH-PROG-L02-vector-spaces-linear-maps"
+      ],
+      "programAnchorTitle": "Giải tích, gradient và tối ưu",
+      "roadmapRole": "foundation_before_prep",
+      "baumanFocus": "Liên kết gradient, chain rule, backpropagation và training loop ML để hiểu cách mô hình nhiều tầng tính gradient, cập nhật trọng số và kiểm soát lỗi train thực tế.",
+      "sourceAnchors": {
+        "stageId": "vn",
+        "disciplineId": "calculus_optimization",
+        "chapterId": "MATH-VN-C03-giai_tich_dao_ham_gradient",
+        "programLectureId": "MATH-PROG-L03-calculus-gradient-optimization"
+      },
+      "tags": [
+        "backpropagation",
+        "chain rule",
+        "autograd",
+        "optimizer",
+        "machine learning"
+      ],
+      "slides": [
+        {
+          "role": "problem_framing",
+          "title": "Backpropagation là cách tính gradient cho mô hình nhiều tầng",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Ý chính",
+              "body": "Khi mô hình là chuỗi nhiều phép biến đổi, gradient của loss theo tham số sâu bên trong không thể tính thủ công từng cái. Backpropagation dùng quy tắc dây chuyền để truyền sai số từ đầu ra ngược về các lớp trước."
+            }
+          ]
+        },
+        {
+          "role": "deep_essence",
+          "title": "Backprop không phải phép màu, chỉ là chain rule có tổ chức",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Bản chất",
+              "body": "Mạng neural là hàm hợp: đầu vào đi xuôi để tạo dự đoán, loss đo sai số, đạo hàm đi ngược để biết mỗi trọng số chịu trách nhiệm bao nhiêu trong sai số đó."
+            }
+          ]
+        },
+        {
+          "role": "counter_intuition",
+          "title": "Sai số đi ngược, dữ liệu không đi ngược",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Điểm dễ nhầm",
+              "body": "Backprop không đảo ngược quá trình dự đoán. Nó truyền gradient của loss qua các phép toán đã lưu từ forward pass. Cái quay về là thông tin đạo hàm, không phải mẫu dữ liệu."
+            }
+          ]
+        },
+        {
+          "role": "real_bridge",
+          "title": "Từ perceptron nhỏ đến mạng sâu",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Ví dụ",
+              "body": "Một mạng nhận vector cảm biến, qua nhiều lớp tạo dự đoán lỗi thiết bị. Loss ở đầu ra được truyền ngược để cập nhật từng trọng số, từ lớp cuối đến lớp đầu."
+            }
+          ]
+        },
+        {
+          "role": "notation",
+          "title": "Ký hiệu hàm hợp và chain rule",
+          "blocks": [
+            {
+              "type": "formula",
+              "title": "Hàm hợp",
+              "body": "y = f_3(f_2(f_1(x)))"
+            },
+            {
+              "type": "formula",
+              "title": "Quy tắc dây chuyền",
+              "body": "dJ/dw = dJ/da · da/dz · dz/dw"
+            },
+            {
+              "type": "formula",
+              "title": "Cập nhật",
+              "body": "w = w - alpha dJ/dw"
+            }
+          ]
+        },
+        {
+          "role": "core_formula",
+          "title": "Quy trình forward, backward, update",
+          "blocks": [
+            {
+              "type": "formula",
+              "title": "Forward",
+              "body": "x -> z1 -> a1 -> z2 -> y_hat -> J"
+            },
+            {
+              "type": "formula",
+              "title": "Backward",
+              "body": "dJ/dy_hat -> dJ/dz2 -> dJ/dw2 -> dJ/da1 -> dJ/dw1"
+            },
+            {
+              "type": "text",
+              "title": "Update",
+              "body": "Optimizer dùng gradient để cập nhật trọng số. SGD, Momentum, RMSProp và Adam khác nhau ở cách dùng lịch sử gradient."
+            }
+          ]
+        },
+        {
+          "role": "assumption_gate",
+          "title": "Điều kiện để gradient truyền được",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Điều kiện",
+              "body": "Các phép toán cần khả vi hoặc có đạo hàm gần đúng/subgradient. Cần lưu giá trị trung gian của forward pass. Hàm kích hoạt, chuẩn hóa dữ liệu và khởi tạo trọng số ảnh hưởng mạnh đến gradient."
+            }
+          ]
+        },
+        {
+          "role": "mini_case",
+          "title": "Mini case: một mạng hai lớp dự đoán lỗi cảm biến",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Case",
+              "body": "Input x là vector đặc trưng. Lớp ẩn tạo biểu diễn a1. Đầu ra y_hat dự đoán xác suất lỗi. Cross-entropy tạo loss, backprop tính gradient cho W2 rồi W1 để cả bộ trích đặc trưng và bộ phân loại cùng được sửa."
+            }
+          ]
+        },
+        {
+          "role": "interpretation",
+          "title": "Gradient nói tham số nào cần chịu trách nhiệm",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Diễn giải",
+              "body": "Nếu dJ/dw lớn, thay đổi nhỏ ở w ảnh hưởng mạnh đến loss. Nếu gradient gần 0, w ít được cập nhật, có thể vì mô hình đã ổn, vùng bão hòa, learning rate/activation không phù hợp hoặc gradient bị biến mất."
+            }
+          ]
+        },
+        {
+          "role": "simulation",
+          "title": "Thí nghiệm autograd tối giản",
+          "blocks": [
+            {
+              "type": "code",
+              "title": "Công cụ",
+              "body": "loss.backward()\noptimizer.step()\noptimizer.zero_grad()\n\n# kiểm tra gradient\nfor name, p in model.named_parameters():\n    print(name, p.grad.norm())"
+            },
+            {
+              "type": "text",
+              "title": "Mục tiêu",
+              "body": "Theo dõi norm gradient từng lớp để phát hiện lớp học quá chậm, gradient nổ hoặc gradient biến mất."
+            }
+          ]
+        },
+        {
+          "role": "common_mistakes",
+          "title": "Lỗi thường gặp khi train mạng",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Lỗi",
+              "body": "Quên zero_grad; cập nhật trước khi backward; learning rate quá lớn; activation bão hòa; dữ liệu chưa normalize; chỉ nhìn accuracy mà không nhìn loss và gradient norm."
+            }
+          ]
+        },
+        {
+          "role": "application",
+          "title": "Ứng dụng lập trình cho tối ưu ML",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Nhiệm vụ",
+              "body": "Tạo training loop có forward, loss, backward, step, zero_grad. Log loss, validation metric, gradient norm và learning rate. Thêm gradient clipping nếu gradient nổ."
+            }
+          ]
+        },
+        {
+          "role": "practice",
+          "title": "Bài luyện tập",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Bài tập",
+              "body": "Vẽ sơ đồ forward/backward cho mô hình y_hat = sigmoid(w2 * relu(w1*x + b1) + b2). Ghi rõ gradient cần đi qua những phép toán nào trước khi cập nhật w1."
+            }
+          ]
+        },
+        {
+          "role": "professor_qa",
+          "title": "Vấn đáp kiểm tra hiểu sâu",
+          "blocks": [
+            {
+              "type": "qa",
+              "title": "Câu hỏi",
+              "body": "Backprop khác gradient descent ở điểm nào? Vì sao cần lưu intermediate values từ forward pass? Khi gradient của lớp đầu gần 0 liên tục, em sẽ kiểm tra những nguyên nhân nào?"
+            }
+          ]
+        },
+        {
+          "role": "bridge",
+          "title": "Cầu sang tối ưu nâng cao và mô hình lớn",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Liên kết",
+              "body": "Sau backprop, câu hỏi thực tế là làm sao train ổn định hơn: mini-batch, momentum, Adam, scheduler, regularization, batch normalization và kiểm soát overfitting."
+            }
+          ]
+        },
+        {
+          "role": "takeaway",
+          "title": "Kết luận cần nhớ",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Cốt lõi",
+              "body": "Backpropagation tính gradient hiệu quả cho mô hình nhiều tầng. Gradient descent dùng các gradient đó để cập nhật tham số; optimizer quyết định cách bước đi trên bề mặt loss."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

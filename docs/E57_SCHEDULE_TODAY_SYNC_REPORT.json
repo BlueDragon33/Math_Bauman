@@ -1,0 +1,38 @@
+{
+  "version": "E57_SCHEDULE_TODAY_SYNC_CHECKPOINT_TEST_SNAPSHOT",
+  "notFinal": true,
+  "scope": [
+    "Đồng bộ nút Lịch trình hôm nay với bài học hiện tại",
+    "Mỗi nhiệm vụ mở đúng lesson/tab/level",
+    "Trạng thái hoàn thành lưu trong localStorage",
+    "Loại bỏ lịch kiểu tiếng Nga khỏi module Toán"
+  ],
+  "scheduleTasks": [
+    "Lý thuyết",
+    "Bài tập nền",
+    "Bài tập nâng cao",
+    "Ứng dụng",
+    "Mô phỏng tổng hợp",
+    "Công thức & công thức sâu",
+    "Vấn đáp tự kiểm",
+    "Xem trước bài tiếp"
+  ],
+  "validation": {
+    "jsonFiles": 39,
+    "jsFilesChecked": 5,
+    "lessons": 260,
+    "chapters": 32,
+    "exercises": 1040,
+    "applications": 520,
+    "simulations": 260,
+    "scheduleFunctions": true,
+    "taskActions": true,
+    "todayProgressLocalStorage": true,
+    "opensExerciseLevelFromSchedule": true,
+    "opensSimulationUnified": true,
+    "noRussianScheduleTerms": true,
+    "jsSyntax": "PASS",
+    "jsonParse": "PASS",
+    "zipIntegrity": "PASS"
+  }
+}

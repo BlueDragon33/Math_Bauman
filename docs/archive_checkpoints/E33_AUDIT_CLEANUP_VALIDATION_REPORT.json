@@ -1,0 +1,41 @@
+{
+  "id": "E33_AUDIT_CLEANUP_VALIDATION_REPORT",
+  "status": "PASS",
+  "results": {
+    "json_files": 93,
+    "json_errors": 0,
+    "lessons": 260,
+    "chapterIds": 32,
+    "formulas_badLessonRefs": 0,
+    "exercises_badLessonRefs": 0,
+    "applications_badLessonRefs": 0,
+    "simulations_badLessonRefs": 0,
+    "professor_qa_badLessonRefs": 0,
+    "question_bank_badLessonRefs": 0,
+    "review_packs_badLessonRefs": 0,
+    "content-index_badLessonRefs": 0,
+    "knowledge-index_badLessonRefs": 0,
+    "bad_answers": 0,
+    "bad_review_refs": 0,
+    "missing_sims": 0,
+    "missing_sim_types": 0,
+    "duplicate_chapter_numbers": {},
+    "non8_chapter_lesson_counts": {
+      "MATH-VN-CA-C03": 9,
+      "MATH-VN-LA-C02": 9,
+      "MATH-VN-PS-C05": 9,
+      "MATH-HK3-TS-C20": 9
+    },
+    "markers": {
+      "renderFormula": true,
+      "storageIndicator": true,
+      "overflowYHidden": true,
+      "xAuto": true,
+      "E33TheoryLock": true
+    },
+    "replacement_char_files": [],
+    "js_files": 10,
+    "js_bad": []
+  },
+  "errors": []
+}

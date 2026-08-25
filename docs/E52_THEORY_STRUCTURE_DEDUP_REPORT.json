@@ -1,0 +1,17 @@
+{
+  "checkpoint": "E52_THEORY_STRUCTURE_DEDUP_CHECKPOINT_TEST_SNAPSHOT",
+  "final": false,
+  "scope": [
+    "Audit and fix theory chapter/lesson display duplication",
+    "Direct theory reader without top chapter picker",
+    "Final summary only on final slide via renderer guard",
+    "Clean resource picker chapter labels"
+  ],
+  "changes": {
+    "chapterLabel": "Chương n · Tên chương (không lặp Chương n hai lần)",
+    "lessonLabel": "§n.m · Tên bài (không lặp n.m/§n.m)",
+    "theoryView": "Vào thẳng nội dung bài, bỏ picker chương ở đầu tab lý thuyết",
+    "summary": "Không kéo lesson.summary vào mọi slide; chỉ slide cuối mới nhận tổng kết",
+    "slideStrip": "Chỉ hiện tên ngắn của slide, bỏ prefix tiêu đề bài lặp lại"
+  }
+}

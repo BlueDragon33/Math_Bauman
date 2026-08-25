@@ -1,0 +1,2752 @@
+{
+  "id": "math_v13_theory_slide_content_outline",
+  "created": "2026-06-13",
+  "scope": "Môn Toán Bauman only",
+  "note": "Đây là ruột nội dung slide đã làm trước. Bước sau mới dùng Canva/Canva-style để làm UX/UI slide.",
+  "designStyleSuggestion": {
+    "mood": "trang trọng, học thuật, phòng lab Toán-AI",
+    "palette": "navy, cyan, gold, warm white",
+    "typography": "heading rõ, công thức có vùng riêng, nội dung 3 tầng: trực giác - công thức - ứng dụng",
+    "layout": "mỗi slide tối đa 3 khối chính; tránh nhồi chữ; dùng visual board, formula card, protocol rail và Q&A panel"
+  },
+  "slideTemplateRoles": [
+    {
+      "role": "opening-roadmap",
+      "purpose": "xác định vị trí bài trong lộ trình"
+    },
+    {
+      "role": "intuition-visual",
+      "purpose": "giải thích bản chất trước công thức"
+    },
+    {
+      "role": "notation-board",
+      "purpose": "ký hiệu, biến, thuật ngữ Việt-Nga-Anh"
+    },
+    {
+      "role": "definition-logic",
+      "purpose": "định nghĩa và điều kiện áp dụng"
+    },
+    {
+      "role": "formula-deep-dive",
+      "purpose": "đọc ý nghĩa từng phần công thức"
+    },
+    {
+      "role": "worked-example",
+      "purpose": "ví dụ tính tay có kiểm tra"
+    },
+    {
+      "role": "solution-protocol",
+      "purpose": "quy trình giải chuẩn"
+    },
+    {
+      "role": "pitfall-counterexample",
+      "purpose": "lỗi sai và phản ví dụ"
+    },
+    {
+      "role": "application-ai-bridge",
+      "purpose": "ứng dụng AI/tín hiệu/robot/luận văn"
+    },
+    {
+      "role": "simulation-link",
+      "purpose": "dẫn sang mô phỏng lý thuyết/ứng dụng"
+    },
+    {
+      "role": "professor-qa",
+      "purpose": "câu hỏi giáo sư"
+    },
+    {
+      "role": "closing-memory",
+      "purpose": "ghi nhớ và nhiệm vụ chuyển bài"
+    }
+  ],
+  "lessons": [
+    {
+      "lessonId": "M01",
+      "stage": "vn",
+      "title": "Vector trong không gian dữ liệu",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M02",
+      "stage": "vn",
+      "title": "Ma trận và hệ phương trình tuyến tính",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M03",
+      "stage": "vn",
+      "title": "Đạo hàm và trực giác gradient",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M04",
+      "stage": "vn",
+      "title": "Tích phân và diện tích dưới đường cong",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M05",
+      "stage": "vn",
+      "title": "Xác suất cơ bản và Bayes",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M06",
+      "stage": "vn",
+      "title": "Thống kê mô tả và sai số đo",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M07",
+      "stage": "vn",
+      "title": "Số phức và dao động",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M08",
+      "stage": "vn",
+      "title": "Python tính toán Toán",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M09",
+      "stage": "prep",
+      "title": "Ký hiệu Toán Nga và cách đọc công thức",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M10",
+      "stage": "prep",
+      "title": "Hàm số, giới hạn và liên tục",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M11",
+      "stage": "prep",
+      "title": "Chuỗi số và chuỗi hàm",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M12",
+      "stage": "prep",
+      "title": "Phương trình vi phân thường",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M13",
+      "stage": "prep",
+      "title": "Hình học giải tích và tọa độ",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M14",
+      "stage": "prep",
+      "title": "Xác suất rời rạc và biến ngẫu nhiên",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M15",
+      "stage": "prep",
+      "title": "Logic chứng minh và phản ví dụ",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M16",
+      "stage": "prep",
+      "title": "Bảng thuật ngữ Toán Nga-Việt-Anh",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M17",
+      "stage": "hk1",
+      "title": "Không gian vector và cơ sở",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M18",
+      "stage": "hk1",
+      "title": "Trị riêng, vector riêng và chéo hóa",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M19",
+      "stage": "hk1",
+      "title": "SVD và bình phương tối thiểu",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M20",
+      "stage": "hk1",
+      "title": "Giải tích nhiều biến và Jacobian",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M21",
+      "stage": "hk1",
+      "title": "Tối ưu lồi cơ bản",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M22",
+      "stage": "hk1",
+      "title": "Số trị tuyến tính và conditioning",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M23",
+      "stage": "hk1",
+      "title": "Xác suất liên tục và kỳ vọng",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M24",
+      "stage": "hk1",
+      "title": "Notebook Toán cho học phần Bauman",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M25",
+      "stage": "hk2",
+      "title": "Hồi quy tuyến tính và regularization",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M26",
+      "stage": "hk2",
+      "title": "Gradient descent và biến thể",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M27",
+      "stage": "hk2",
+      "title": "Xác suất Bayes và ước lượng",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M28",
+      "stage": "hk2",
+      "title": "Quá trình ngẫu nhiên và chuỗi thời gian",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M29",
+      "stage": "hk2",
+      "title": "Fourier và miền tần số",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M30",
+      "stage": "hk2",
+      "title": "Lọc số và convolution",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M31",
+      "stage": "hk2",
+      "title": "Entropy, thông tin và phân loại",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M32",
+      "stage": "hk2",
+      "title": "Đánh giá mô hình và kiểm định",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M33",
+      "stage": "hk3",
+      "title": "Mô hình trạng thái cho robot",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M34",
+      "stage": "hk3",
+      "title": "Kalman filter và sensor fusion",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M35",
+      "stage": "hk3",
+      "title": "Tối ưu quỹ đạo và ràng buộc",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M36",
+      "stage": "hk3",
+      "title": "Graph và thuật toán trên mạng",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M37",
+      "stage": "hk3",
+      "title": "Học máy hình học và embedding",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M38",
+      "stage": "hk3",
+      "title": "Thiết kế thí nghiệm và ablation",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M39",
+      "stage": "hk3",
+      "title": "Độ tin cậy, sai số và uncertainty",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M40",
+      "stage": "hk3",
+      "title": "Đọc paper Toán/AI có kiểm chứng",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M41",
+      "stage": "hk4",
+      "title": "Khung Toán của luận văn",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M42",
+      "stage": "hk4",
+      "title": "Chứng minh tính đúng và giới hạn",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M43",
+      "stage": "hk4",
+      "title": "Phân tích độ phức tạp thuật toán",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M44",
+      "stage": "hk4",
+      "title": "So sánh baseline và kiểm định kết quả",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M45",
+      "stage": "hk4",
+      "title": "Visualization Toán cho bảo vệ",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M46",
+      "stage": "hk4",
+      "title": "Chuẩn hóa phụ lục công thức/code",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M47",
+      "stage": "hk4",
+      "title": "Kịch bản phản biện Toán",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    },
+    {
+      "lessonId": "M48",
+      "stage": "hk4",
+      "title": "Tổng ôn Toán Bauman Master AI",
+      "slideCount": 12,
+      "slides": [
+        {
+          "title": "1 · Vị trí bài học trong lộ trình",
+          "role": "opening-roadmap"
+        },
+        {
+          "title": "2 · Trực giác nền: nhìn thấy trước khi tính",
+          "role": "intuition-visual"
+        },
+        {
+          "title": "3 · Ký hiệu, biến và ngôn ngữ công thức",
+          "role": "notation-board"
+        },
+        {
+          "title": "4 · Định nghĩa cốt lõi và điều kiện áp dụng",
+          "role": "definition-logic"
+        },
+        {
+          "title": "5 · Công thức cốt lõi: đọc ý nghĩa từng thành phần",
+          "role": "formula-deep-dive"
+        },
+        {
+          "title": "6 · Ví dụ tính tay có kiểm tra",
+          "role": "worked-example"
+        },
+        {
+          "title": "7 · Quy trình giải chuẩn cho bài thi và seminar",
+          "role": "solution-protocol"
+        },
+        {
+          "title": "8 · Lỗi sai, phản ví dụ và bẫy tư duy",
+          "role": "pitfall-counterexample"
+        },
+        {
+          "title": "9 · Ứng dụng vào AI, tín hiệu, robot và luận văn",
+          "role": "application-ai-bridge"
+        },
+        {
+          "title": "10 · Mô phỏng cần chạy sau lý thuyết",
+          "role": "simulation-link"
+        },
+        {
+          "title": "11 · Câu hỏi giáo sư có thể hỏi",
+          "role": "professor-qa"
+        },
+        {
+          "title": "12 · Ghi nhớ sâu và chuẩn bị bài tiếp theo",
+          "role": "closing-memory"
+        }
+      ]
+    }
+  ]
+}

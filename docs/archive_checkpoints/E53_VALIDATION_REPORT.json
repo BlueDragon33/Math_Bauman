@@ -1,0 +1,53 @@
+{
+  "json": {
+    "applications.json": "PASS",
+    "concept-map.json": "PASS",
+    "content-index.json": "PASS",
+    "content-manifest.json": "PASS",
+    "curriculum.json": "PASS",
+    "deep-speaking-bauman.json": "PASS",
+    "dialogue-bauman-az.json": "PASS",
+    "exercises.json": "PASS",
+    "formulas.json": "PASS",
+    "grammar-path.json": "PASS",
+    "grammar.json": "PASS",
+    "handwriting.json": "PASS",
+    "knowledge-index.json": "PASS",
+    "learning_rules.json": "PASS",
+    "lessons.json": "PASS",
+    "mastery-map.json": "PASS",
+    "mindmap.json": "PASS",
+    "professor_qa.json": "PASS",
+    "question_bank.json": "PASS",
+    "review_packs.json": "PASS",
+    "simulations.json": "PASS",
+    "speaking-link-index.json": "PASS",
+    "speaking.json": "PASS",
+    "test_blueprints.json": "PASS",
+    "tests.json": "PASS",
+    "theory-framework.json": "PASS",
+    "videos.json": "PASS",
+    "vocab.json": "PASS",
+    "writing.json": "PASS"
+  },
+  "js": {
+    "core.js": "PASS",
+    "math.js": "PASS",
+    "planning-bridge.js": "PASS",
+    "subject-adapter.js": "PASS"
+  },
+  "counts": {
+    "lessons": 260,
+    "exercises": 1040,
+    "professor_qa": 260,
+    "applications": 520
+  },
+  "semantic": {
+    "lessons": 260,
+    "exercise_levels_per_lesson": "PASS",
+    "qa_missing_answers": 0,
+    "apps_not_theory_dependent": 0,
+    "app_forbidden_exercise_fields": 0,
+    "object_object_literal_in_core": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "checkpoint": "E45_SIM_LAB_SPECIALIZATION_FLOW",
+  "not_final": true,
+  "source": "E44_APPLICATION_REAL_USE_FINAL_SUMMARY_LOCK",
+  "simulation_count": 520,
+  "profiles": {
+    "linear": 118,
+    "optimization": 34,
+    "probability": 90,
+    "signal": 36,
+    "time_series": 80,
+    "russian_math": 24,
+    "system": 64,
+    "general": 34,
+    "research": 40
+  },
+  "changes": [
+    "Specialized 520 simulations by domain profile",
+    "Replaced generic variables with domain-specific control panels",
+    "Added compact premium simulation renderer override",
+    "Added E45 theory/application lab iframe stubs",
+    "Kept E44 final-slide-only summary and theory-grounded application flow"
+  ]
+}

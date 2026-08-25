@@ -1,0 +1,73 @@
+{
+  "id": "bauman_math_theory_core_manifest_v1",
+  "schema": "bauman_math_theory_core_manifest_v1",
+  "version": "CORE_MANIFEST_V1_4",
+  "sourcePolicy": "Core content is authored before reference tables, slides, full-view content, formulas, and layout.",
+  "goldStandard": {
+    "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L01-vector-as-engineering-data-e130",
+    "path": "theory_core_c01_l01.json",
+    "title": "§1.1 · Vector như dữ liệu kỹ thuật",
+    "status": "gold_standard_candidate"
+  },
+  "pipeline": [
+    "core_content",
+    "reference_table",
+    "slideshow",
+    "full_view",
+    "formula_and_layout_finalization"
+  ],
+  "requiredSections": [
+    "lessonThesis",
+    "prerequisites",
+    "learningOutcomes",
+    "notationRules",
+    "coreConcepts",
+    "operations_or_mainMechanisms",
+    "coreMeasures_or_mainFormulas",
+    "comparisonLogic",
+    "dataQualityGate_or_assumptionGate",
+    "workedCase",
+    "engineeringExamples",
+    "commonMisconceptions",
+    "masteryChecks",
+    "implementationContract",
+    "bridgeToNextLessons",
+    "downstreamMapping",
+    "qualityGate"
+  ],
+  "rules": [
+    "Core files must not contain slide numbers, popup labels, CSS classes, layout directives, or animation instructions.",
+    "Every symbol must be defined before or when it first appears.",
+    "Every formula must include meaning, conditions, sensitivity or failure mode, and engineering use.",
+    "Every engineering vector or matrix example must define schema and units where applicable.",
+    "Subscripts and superscripts must be semantically explicit in raw notation.",
+    "Examples must distinguish algebraic correctness from modeling correctness.",
+    "Downstream presentation files may summarize the core, but may not contradict it."
+  ],
+  "records": [
+    {
+      "chapter": "C01",
+      "lesson": "L01",
+      "path": "theory_core_c01_l01.json",
+      "status": "gold_standard_candidate"
+    },
+    {
+      "chapter": "C01",
+      "lesson": "L02",
+      "path": "theory_core_c01_l02.json",
+      "status": "draft_against_gold_standard"
+    },
+    {
+      "chapter": "C01",
+      "lesson": "L03",
+      "path": "theory_core_c01_l03.json",
+      "status": "approved_against_gold_standard"
+    },
+    {
+      "chapter": "C01",
+      "lesson": "L04",
+      "path": "theory_core_c01_l04.json",
+      "status": "approved_against_gold_standard"
+    }
+  ]
+}

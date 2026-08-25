@@ -1,0 +1,20 @@
+{
+  "checkpoint": "E17_CHECKPOINT_AFTER_E16_SYNC",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapterId": "MATH-VN-TS-C08",
+  "chapterTitle": "Chương 8 · Chuỗi thời gian nhập môn",
+  "lessons": 8,
+  "theorySlides": 160,
+  "formulas": 24,
+  "exercises": 64,
+  "applications": 16,
+  "simulations": 16,
+  "professorQa": 8,
+  "questions": 48,
+  "reviewPacks": 8,
+  "notes": [
+    "Đã thay dữ liệu chương bằng bản mở rộng có công thức an toàn và bẫy sư phạm.",
+    "Mô phỏng tách 1 lý thuyết + 1 ứng dụng mỗi bài.",
+    "Câu kiểm tra liên kết review pack để ôn lỗi."
+  ]
+}

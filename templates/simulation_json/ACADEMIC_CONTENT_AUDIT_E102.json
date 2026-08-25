@@ -1,0 +1,319 @@
+{
+  "id": "ACADEMIC_CONTENT_AUDIT_E102",
+  "created": "2026-06-21",
+  "status": "REPAIRED_AFTER_E101_REVIEW",
+  "summary": {
+    "lessons": 260,
+    "slidesPerLesson": [
+      13
+    ],
+    "totalLessonSlides": 3380,
+    "chapterLectures": 32,
+    "chapterSupportSlides": 256,
+    "departments": 18
+  },
+  "mainFindingsBeforeRepair": [
+    "E101 slide structure was clean but many body blocks used repeated academic frame phrases.",
+    "Several prep/research chapters were technically valid but pedagogically too broad inside one department.",
+    "Chapter support slides needed more domain-specific entry gates, formula maps and simulation maps."
+  ],
+  "repairs": [
+    "Rebuilt 260 lesson slide decks using formulas, simulations, exercises, applications and professor Q&A anchors.",
+    "Split confusing prep/research departments into clearer academic departments where needed.",
+    "Rebuilt 32 chapter lecture packs with chapter-specific entry gates, formula maps, lab maps and assessment standards."
+  ],
+  "departmentSequences": [
+    {
+      "facultyId": "faculty_foundation_vn",
+      "departmentId": "faculty_foundation_vn_dept_linear_data",
+      "departmentTitle": "Bộ môn Đại số tuyến tính & biểu diễn dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-VN-LA-C01",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Vector trong không gian dữ liệu"
+        },
+        {
+          "chapterId": "MATH-VN-LA-C02",
+          "localChapterNo": 2,
+          "chapterTitle": "Chương 2 · Ma trận, hệ tuyến tính và biến đổi dữ liệu"
+        },
+        {
+          "chapterId": "MATH-VN-LA-C07",
+          "localChapterNo": 3,
+          "chapterTitle": "Chương 3 · Hiệp phương sai, tương quan và PCA nhập môn"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_foundation_vn",
+      "departmentId": "faculty_foundation_vn_dept_calculus_optim",
+      "departmentTitle": "Bộ môn Giải tích & tối ưu hóa",
+      "chapters": [
+        {
+          "chapterId": "MATH-VN-CA-C03",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Đạo hàm, gradient và tối ưu hóa mô hình"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_foundation_vn",
+      "departmentId": "faculty_foundation_vn_dept_probability_stats",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-VN-PS-C04",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Xác suất cơ bản, Bayes và suy luận bất định"
+        },
+        {
+          "chapterId": "MATH-VN-PS-C05",
+          "localChapterNo": 2,
+          "chapterTitle": "Chương 2 · Biến ngẫu nhiên, kỳ vọng và phương sai"
+        },
+        {
+          "chapterId": "MATH-VN-PS-C06",
+          "localChapterNo": 3,
+          "chapterTitle": "Chương 3 · Thống kê mô tả, khoảng tin cậy và đánh giá mẫu"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_foundation_vn",
+      "departmentId": "faculty_foundation_vn_dept_signal_time",
+      "departmentTitle": "Bộ môn Tín hiệu & chuỗi thời gian",
+      "chapters": [
+        {
+          "chapterId": "MATH-VN-TS-C08",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Chuỗi thời gian nhập môn"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_prep_prep",
+      "departmentId": "faculty_prep_prep_dept_math_language",
+      "departmentTitle": "Bộ môn Ngôn ngữ toán tiếng Nga",
+      "chapters": [
+        {
+          "chapterId": "MATH-PREP-MT-C09",
+          "localChapterNo": 1,
+          "chapterTitle": "Phụ trợ 1 · Ngôn ngữ đề toán tiếng Nga và cấu trúc lời giải"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_prep_prep",
+      "departmentId": "faculty_prep_prep_dept_linear_data",
+      "departmentTitle": "Bộ môn Đại số tuyến tính & biểu diễn dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-PREP-LA-C10",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Đại số tuyến tính bằng tiếng Nga"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_prep_prep",
+      "departmentId": "faculty_prep_prep_dept_probability_stats",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-PREP-PS-C11",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Xác suất - thống kê bằng tiếng Nga"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_prep_prep",
+      "departmentId": "faculty_prep_prep_dept_ai_data_bridge",
+      "departmentTitle": "Bộ môn Toán dữ liệu AI dự bị",
+      "chapters": [
+        {
+          "chapterId": "MATH-PREP-MT-C12",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Toán cho dữ liệu đa chiều trong hệ thống AI"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_prep_prep",
+      "departmentId": "faculty_prep_prep_dept_integrated_review",
+      "departmentTitle": "Bộ môn Ôn tập tích hợp dự bị",
+      "chapters": [
+        {
+          "chapterId": "MATH-PREP-PS-C13",
+          "localChapterNo": 1,
+          "chapterTitle": "Phụ trợ 1 · Tổng hợp dự bị: đại số, xác suất và thống kê"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_bauman_core_hk1",
+      "departmentId": "faculty_bauman_core_hk1_dept_general",
+      "departmentTitle": "Bộ môn Toán nền tảng tích hợp",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK1-MT-C14",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Nền tảng phân tích dữ liệu đa chiều"
+        },
+        {
+          "chapterId": "MATH-HK1-MT-C16",
+          "localChapterNo": 2,
+          "chapterTitle": "Chương 2 · Clustering, similarity và cấu trúc không gian dữ liệu"
+        },
+        {
+          "chapterId": "MATH-HK1-MT-C17",
+          "localChapterNo": 3,
+          "chapterTitle": "Chương 3 · Bài toán kỳ thi phân tích dữ liệu đa chiều"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_bauman_core_hk1",
+      "departmentId": "faculty_bauman_core_hk1_dept_linear_data",
+      "departmentTitle": "Bộ môn Đại số tuyến tính & biểu diễn dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK1-LA-C15",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · PCA, SVD và trực quan hóa không gian đặc trưng"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_research_hk3",
+      "departmentId": "faculty_research_hk3_dept_signal_time",
+      "departmentTitle": "Bộ môn Tín hiệu & chuỗi thời gian",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-TS-C18",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Lý thuyết chuỗi thời gian cho dữ liệu cảm biến"
+        },
+        {
+          "chapterId": "MATH-HK3-TS-C19",
+          "localChapterNo": 2,
+          "chapterTitle": "Chương 2 · Sai số dự báo, đánh giá mô hình và cross-validation theo thời gian"
+        },
+        {
+          "chapterId": "MATH-HK3-TS-C20",
+          "localChapterNo": 3,
+          "chapterTitle": "Chương 3 · AR, MA, ARIMA và dự báo chuỗi thời gian"
+        },
+        {
+          "chapterId": "MATH-HK3-SIG-C21",
+          "localChapterNo": 4,
+          "chapterTitle": "Chương 4 · Fourier, lọc số và phân tích phổ tín hiệu cảm biến"
+        },
+        {
+          "chapterId": "MATH-HK3-SIG-C22",
+          "localChapterNo": 5,
+          "chapterTitle": "Chương 5 · Wavelet, lọc thích nghi và phân tích thời-tần cho tín hiệu không dừng"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_research_hk3",
+      "departmentId": "faculty_research_hk3_dept_dynamics_control",
+      "departmentTitle": "Bộ môn Mô hình động lực & điều khiển",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-EST-C23",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Không gian trạng thái, Kalman filter và sensor fusion nhập môn"
+        },
+        {
+          "chapterId": "MATH-HK3-ID-C24",
+          "localChapterNo": 2,
+          "chapterTitle": "Chương 2 · Nhận dạng hệ thống, least squares và mô hình hồi quy động học"
+        },
+        {
+          "chapterId": "MATH-HK3-OPT-C25",
+          "localChapterNo": 3,
+          "chapterTitle": "Chương 3 · Tối ưu có ràng buộc, Lagrange-KKT và MPC nhập môn cho hệ tự hành"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_research_hk3",
+      "departmentId": "faculty_research_hk3_dept_research_methods",
+      "departmentTitle": "Bộ môn Toán nghiên cứu, robot & luận văn",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-NIR-C26",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Thiết kế thí nghiệm, ablation và độ tin cậy kết quả НИР"
+        },
+        {
+          "chapterId": "MATH-HK3-VKR-C31",
+          "localChapterNo": 2,
+          "chapterTitle": "Chương 2 · Mô hình hóa toán học, mô phỏng số và trình bày kết quả НИР/ВКР"
+        },
+        {
+          "chapterId": "MATH-HK3-FINAL-C32",
+          "localChapterNo": 3,
+          "chapterTitle": "Chương 3 · Tổng kết môn Toán: từ mô hình toán đến bảo vệ НИР/ВКР"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_research_hk3",
+      "departmentId": "faculty_research_hk3_dept_graph_multiagent",
+      "departmentTitle": "Bộ môn Đồ thị, mạng và đa tác tử",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-GRAPH-C27",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Đồ thị, Laplacian và điều phối đa tác tử cho hệ tự hành"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_research_hk3",
+      "departmentId": "faculty_research_hk3_dept_numerical",
+      "departmentTitle": "Bộ môn Tính toán số & tối ưu thuật toán",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-NNOPT-C28",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Tối ưu hóa số, gradient descent và backpropagation cho mô hình AI kỹ thuật"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_research_hk3",
+      "departmentId": "faculty_research_hk3_dept_probability_stats",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-RISK-C29",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Bất định, calibration và đánh giá rủi ro cho hệ AI tự hành"
+        }
+      ]
+    },
+    {
+      "facultyId": "faculty_research_hk3",
+      "departmentId": "faculty_research_hk3_dept_robust_anomaly",
+      "departmentTitle": "Bộ môn Robustness, anomaly detection & kiểm soát rủi ro",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-ROBUST-C30",
+          "localChapterNo": 1,
+          "chapterTitle": "Chương 1 · Robustness, anomaly detection và kiểm soát rủi ro ngoại lai cho hệ AI kỹ thuật"
+        }
+      ]
+    }
+  ],
+  "qualityMetrics": {
+    "avgLessonSlideTextChars": 5585.1,
+    "minLessonSlideTextChars": 5217,
+    "avgBlockBodyChars": 164.4,
+    "noEmptySlides": true
+  }
+}

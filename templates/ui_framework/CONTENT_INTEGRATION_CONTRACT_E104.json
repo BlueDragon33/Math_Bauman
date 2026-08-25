@@ -1,0 +1,26 @@
+{
+  "contract": "BAUMAN_MATH_E104_CONTENT_INTEGRATION_CONTRACT",
+  "principle": "UI reads content; backend content enters through JSON slots in Kho môn học.",
+  "primaryKey": "lessonId",
+  "slots": [
+    "lessons",
+    "formulas",
+    "simulations",
+    "exercises",
+    "applications",
+    "professor_qa",
+    "review_packs",
+    "question_bank",
+    "chapter_lectures"
+  ],
+  "requiredLessonFields": [
+    "lessonId",
+    "facultyId",
+    "departmentId",
+    "chapterId",
+    "title",
+    "slides"
+  ],
+  "runtimeRule": "Do not hard-code academic content into core.js. Import/export JSON instead.",
+  "uiRule": "Navigation must preserve lessonId across theory, exercises, applications, simulation, QA, review and exam."
+}

@@ -1,0 +1,54 @@
+name: Math Bauman Web App Quality
+
+on:
+  push:
+    branches:
+      - migration/full-webapp-v2
+  pull_request:
+    branches:
+      - main
+      - migration/full-webapp-v2
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - name: Syntax check
+        run: |
+          node --check assets/webapp-bootstrap.js
+          node --check service-worker.js
+          node --check scripts/audit-source.cjs
+      - name: Source preservation and standalone audit
+        run: |
+          node scripts/audit-source.cjs
+          git diff --exit-code -- reports/source-audit.generated.json
+
+  browser-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - name: Install pinned browser test runtime
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Desktop, mobile and offline Web App smoke
+        run: node scripts/browser-smoke.cjs
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: math-webapp-browser-smoke
+          path: reports/browser-smoke.generated.json
+          if-no-files-found: error

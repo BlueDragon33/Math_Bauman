@@ -1,0 +1,22 @@
+{
+  "json_files": 42,
+  "json_errors": [],
+  "js_files": 5,
+  "js_errors": [],
+  "checks": {
+    "e36_marker": true,
+    "exercise_top_picker_removed": true,
+    "theory_cta": true,
+    "exercise_review_theory": true,
+    "exercise_next_chapter": true,
+    "levels_unlocked": true,
+    "sim_navline": true,
+    "formula_prev_next": true,
+    "theory_micro_scroll_lock": true,
+    "object_safe_renderer": true,
+    "renderFormula_shim": true
+  },
+  "lesson_count": 260,
+  "chapter_count": 32,
+  "passed": true
+}

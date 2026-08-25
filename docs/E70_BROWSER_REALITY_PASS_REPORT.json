@@ -1,0 +1,65 @@
+{
+  "version": "E70_BROWSER_REALITY_PASS_CHECKPOINT_TEST_SNAPSHOT",
+  "generatedAt": "2026-06-19 22:48:59",
+  "browserAutomation": {
+    "attempted": true,
+    "result": "blocked_by_sandbox_policy",
+    "error": "Chromium navigation returned ERR_BLOCKED_BY_ADMINISTRATOR for both localhost and file URLs",
+    "fallback": "static audit + runtime self-check hook"
+  },
+  "counts": {
+    "chapters": 32,
+    "lessons": 260,
+    "exercises": 1040,
+    "applications": 520,
+    "simulations": 260,
+    "formulas": 678,
+    "professorQa": 260
+  },
+  "validations": {
+    "jsonParsePass": true,
+    "jsonFileCount": 154,
+    "jsonErrors": [],
+    "jsSyntaxPass": false,
+    "jsFiles": [
+      [
+        "subjects/math/assets/core.js",
+        true
+      ],
+      [
+        "subjects/math/assets/math.js",
+        true
+      ],
+      [
+        "subjects/math/assets/planning-bridge.js",
+        true
+      ],
+      [
+        "subjects/math/assets/subject-adapter.js",
+        false
+      ],
+      [
+        "subjects/math/subject-manifest.js",
+        true
+      ]
+    ],
+    "jsErrors": [
+      [
+        "/mnt/data/A2_Math_Bauman_Elearning_E70_BROWSER_REALITY_PASS_CHECKPOINT_TEST_SNAPSHOT/subjects/math/assets/subject-adapter.js",
+        "/mnt/data/A2_Math_Bauman_Elearning_E70_BROWSER_REALITY_PASS_CHECKPOINT_TEST_SNAPSHOT/subjects/math/assets/subject-adapter.js:1\n/* E70 Browser Reality Pass\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at checkSyntax (node:internal/main/check_syntax:78:3)\n\nNode.js v22.16.0\n"
+      ]
+    ],
+    "lessonExerciseLevelsMissing": 0,
+    "simulationOnePerLessonMissingOrDuplicate": 0,
+    "applicationsNotTheoryDependent": 0,
+    "activeSplitSimulationTerms": 2,
+    "activeObjectObjectLiterals": 0,
+    "duplicateLessonLabels": 0,
+    "e70GuardPresent": true
+  },
+  "testerNotes": [
+    "E70 không gọi FINAL. Đây là checkpoint kiểm luồng thực tế và chống hồi quy UI.",
+    "Cần người dùng mở trình duyệt thật để xác nhận bằng mắt: Chọn chương, Lịch trình hôm nay, trình chiếu, mô phỏng, công thức sâu.",
+    "Nếu E70 ổn trên trình duyệt thật, bước kế tiếp mới là FINAL Candidate sạch."
+  ]
+}

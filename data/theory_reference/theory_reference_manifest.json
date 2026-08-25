@@ -1,0 +1,48 @@
+{
+  "id": "bauman_math_theory_reference_manifest_v1",
+  "schema": "bauman_math_theory_reference_manifest_v1",
+  "version": "REFERENCE_MANIFEST_V1_1",
+  "sourcePolicy": "Reference artifacts are compact, source-traceable derivatives of approved theory-core files. They may summarize but may not add mathematics or contradict the approved core.",
+  "pipelinePosition": {
+    "after": "core_content",
+    "before": "slideshow"
+  },
+  "requiredSections": [
+    "sourceCore",
+    "referenceContract",
+    "informationArchitecture",
+    "conceptMap",
+    "notationLookup",
+    "formulaTable",
+    "familyComparison",
+    "methodDecisionTable",
+    "assumptionChecklist",
+    "failureQuickGuide",
+    "workedCaseSnapshot",
+    "engineeringTransfer",
+    "masteryCompass",
+    "sourceTraceability",
+    "downstreamMapping",
+    "qualityGate"
+  ],
+  "rules": [
+    "Reference files must derive from an approved core version.",
+    "Every summarized concept or formula must point to a core ID or core field.",
+    "Worked-case numbers must match the approved core exactly.",
+    "Reference files must remain compact and must not duplicate assessment blueprints or implementation code.",
+    "Reference files must not contain UI labels, CSS, animation, layout directives or runtime behavior.",
+    "A reference artifact may select high-value failure modes, but its traceability block must state what was selected.",
+    "Downstream slideshow and full-view content may use the reference artifact but may not override the core."
+  ],
+  "records": [
+    {
+      "chapter": "C01",
+      "lesson": "L04",
+      "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L04-basis-span-coordinate-e140",
+      "path": "theory_reference_c01_l04.json",
+      "sourceCorePath": "../theory_core/theory_core_c01_l04.json",
+      "sourceCoreVersion": "CORE_C01_L04_V1_APPROVED",
+      "status": "approved_against_core"
+    }
+  ]
+}

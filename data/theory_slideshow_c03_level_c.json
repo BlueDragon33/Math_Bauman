@@ -1,0 +1,91 @@
+{
+  "release": "C03_LEVEL_C_DECK_DATA_E203",
+  "chapter": {
+    "id": "c03",
+    "title": "Chương 3 · Giải tích, đạo hàm, gradient và tối ưu học máy",
+    "level": "C",
+    "policy": {
+      "minimumSlidesPerLesson": 16,
+      "slideCountIsFloorNotCap": true,
+      "runtime": "data_only_not_wired",
+      "notes": "C03 Level C deck data. Do not wire into runtime until E202 C02 smoke is confirmed stable."
+    }
+  },
+  "lessons": [
+    {
+      "id": "MATH-VN-C03-giai_tich_dao_ham_gradient-L01-function-as-input-output-model-e145",
+      "label": "Bài 3.1 · Hàm số như mô hình đầu vào–đầu ra",
+      "targetSlideCount": 18,
+      "slides": [
+        {"title":"Hàm số là mô hình ánh xạ","formula":"y=f(x)","visual":"function_io_box","core":"Hàm nhận đầu vào và tạo đầu ra theo quy luật xác định.","application":"Sensor model, controller, linear model, neural layer.","check":"Đầu vào, đầu ra và đơn vị của f là gì?"},
+        {"title":"Domain là vùng an toàn","formula":"x ∈ D_f","visual":"domain_warning","core":"Mô hình chỉ đáng tin trong miền đầu vào đã kiểm chứng.","application":"Chống ngoại suy nguy hiểm trong ML và điều khiển.","check":"Dữ liệu hiện tại có nằm trong domain không?"},
+        {"title":"Range là vùng đầu ra có thể xuất hiện","formula":"y ∈ Range(f)","visual":"range_region","core":"Không phải mọi y đều có thể sinh ra từ f.","application":"Kiểm output bất thường, giới hạn sensor, actuator saturation.","check":"Output này hợp lệ hay ngoài vùng dự kiến?"},
+        {"title":"Đồ thị cho trực giác đầu tiên","formula":"graph(f)={(x,f(x))}","visual":"function_graph","core":"Đồ thị cho thấy tăng, giảm, bão hòa, ngưỡng và vùng nhạy.","application":"Khảo sát mô hình trước khi đạo hàm hoặc tối ưu.","check":"Đồ thị có vùng phẳng hoặc bão hòa không?"},
+        {"title":"Hàm tuyến tính là nền","formula":"f(x)=ax+b","visual":"linear_function","core":"Hàm tuyến tính cho quan hệ đổi đều giữa input và output.","application":"Regression baseline, calibration, local approximation.","check":"Slope a có đơn vị gì?"},
+        {"title":"Hàm phi tuyến tạo độ cong","formula":"f(x)=x^2, sin(x), exp(x)","visual":"nonlinear_curves","core":"Phi tuyến làm độ nhạy thay đổi theo vị trí.","application":"Dynamics, activation function, sensor response.","check":"Độ nhạy có cố định trên toàn miền không?"},
+        {"title":"Hàm nhiều biến","formula":"f:R^n→R","visual":"multivariable_function","core":"Một output có thể phụ thuộc nhiều feature hoặc nhiều trạng thái.","application":"Loss function, score model, energy function.","check":"Feature nào tác động mạnh nhất?"},
+        {"title":"Hàm vector","formula":"f:R^n→R^m","visual":"vector_function","core":"Mô hình có thể nhận vector và trả vector.","application":"Robot dynamics, neural network, signal transform.","check":"Shape input-output có khớp pipeline không?"},
+        {"title":"Tham số làm hàm đổi hình","formula":"y=f(x;θ)","visual":"parameterized_curve","core":"θ điều khiển hình dạng của hàm và thường là thứ cần học.","application":"Model fitting, neural network weights, system identification.","check":"Đâu là biến, đâu là tham số?"},
+        {"title":"Sai số mô hình","formula":"e=y-f(x;θ)","visual":"model_error","core":"Mô hình không chỉ dự đoán, nó còn để lại sai số cần đo.","application":"Loss function, residual analysis, calibration.","check":"Residual là nhiễu hay mô hình thiếu biến?"},
+        {"title":"Vector hóa dữ liệu vào hàm","formula":"x=[x_1,...,x_n]^T","visual":"feature_vector_to_function","core":"Hàm học máy nhìn thế giới qua feature vector.","application":"Preprocessing, feature engineering, inference.","check":"Feature nào có ý nghĩa vật lý?"},
+        {"title":"Đơn vị và scale của hàm","formula":"unit(y)=unit(f(x))","visual":"unit_scale","core":"Hàm đúng toán nhưng sai đơn vị vẫn là mô hình sai.","application":"Sensor calibration, physics-informed ML.","check":"Output có đúng đơn vị mong đợi không?"},
+        {"title":"Composition tạo pipeline","formula":"h(x)=g(f(x))","visual":"function_composition","core":"Nhiều hàm ghép lại thành pipeline xử lý.","application":"Neural networks, preprocessing + model, control pipeline.","check":"Hàm nào chạy trước?"},
+        {"title":"Invertibility hỏi có quay lại được không","formula":"x=f^{-1}(y)","visual":"inverse_function","core":"Không phải hàm nào cũng đảo được; mất thông tin thì không phục hồi chính xác.","application":"Calibration inverse, decoding, inverse problem.","check":"f có one-to-one trên domain không?"},
+        {"title":"Continuity là không nhảy bất thường","formula":"x→a ⇒ f(x)→f(a)","visual":"continuity","core":"Hàm liên tục không đổi output đột ngột khi input đổi rất nhỏ.","application":"Control, simulation, robust prediction.","check":"Mô hình có discontinuity nguy hiểm không?"},
+        {"title":"Mini-case cảm biến nhiệt","formula":"V=f(T)","visual":"temperature_sensor_curve","core":"Điện áp sensor là hàm của nhiệt độ, thường tuyến tính gần đúng trong một miền.","application":"Calibration và kiểm vùng hoạt động.","check":"Ngoài miền calibration có dùng được không?"},
+        {"title":"Checklist mô hình hàm","formula":"function = domain + range + parameter + unit + error","visual":"function_checklist","core":"Một hàm dùng được cần đủ miền, đầu ra, tham số, đơn vị và sai số.","application":"Review trước khi tối ưu hoặc deploy model.","check":"Bạn đã ghi đủ metadata cho f chưa?"},
+        {"title":"Chốt 3.1","formula":"x → f(·;θ) → y,  e=y-f(x;θ)","visual":"function_summary","core":"Hàm số là ngôn ngữ chung để mô tả mô hình kỹ thuật và AI.","application":"Cầu sang đạo hàm: input đổi nhỏ thì output đổi bao nhiêu?","check":"Muốn đo độ nhạy của f, ta cần công cụ gì?"}
+      ]
+    },
+    {
+      "id": "MATH-VN-C03-giai_tich_dao_ham_gradient-L02-derivative-system-sensitivity-e145",
+      "label": "Bài 3.2 · Đạo hàm và độ nhạy của hệ thống",
+      "targetSlideCount": 18,
+      "slides": [
+        {"title":"Đạo hàm là độ nhạy cục bộ","formula":"f'(x)=lim_{h→0}(f(x+h)-f(x))/h","visual":"derivative_limit","core":"Đạo hàm đo output đổi nhanh thế nào quanh một điểm.","application":"Sensitivity analysis, control, optimization.","check":"Độ nhạy tại điểm này lớn hay nhỏ?"},
+        {"title":"Tiếp tuyến là mô hình tuyến tính nhỏ","formula":"f(x+h)≈f(x)+f'(x)h","visual":"tangent_line","core":"Gần một điểm, hàm phi tuyến có thể xấp xỉ bằng đường thẳng.","application":"Linearization, EKF, Newton method.","check":"h có đủ nhỏ không?"},
+        {"title":"Đạo hàm có đơn vị","formula":"unit(f')=unit(y)/unit(x)","visual":"derivative_units","core":"Đạo hàm không phải số trừu tượng, nó có ý nghĩa vật lý.","application":"Sensor gain, velocity, acceleration.","check":"Đạo hàm đang đo V/°C hay m/s?"},
+        {"title":"Dấu đạo hàm đọc xu hướng","formula":"f'>0, f'<0, f'=0","visual":"slope_signs","core":"Dấu cho biết tăng, giảm hoặc phẳng tại điểm xét.","application":"Stability, monotonicity, saturation detection.","check":"Điểm f'=0 là optimum hay vùng bão hòa?"},
+        {"title":"Độ lớn đạo hàm đọc độ nhạy","formula":"|f'(x)|","visual":"slope_magnitude","core":"Đạo hàm lớn nghĩa là output rất nhạy với input.","application":"Robustness, control gain, sensor calibration.","check":"Nhiễu input bị khuếch đại bao nhiêu?"},
+        {"title":"Sai phân tiến","formula":"f'(x)≈(f(x+h)-f(x))/h","visual":"forward_difference","core":"Cách tính gần đúng đơn giản nhưng nhạy với chọn h.","application":"Gradient checking, numerical derivative.","check":"h quá lớn hay quá nhỏ?"},
+        {"title":"Sai phân trung tâm","formula":"f'(x)≈(f(x+h)-f(x-h))/(2h)","visual":"central_difference","core":"Sai phân trung tâm thường chính xác hơn sai phân tiến.","application":"Numerical analysis, kiểm gradient.","check":"Bạn có so kết quả theo nhiều h không?"},
+        {"title":"Đạo hàm và nhiễu","formula":"noise ⇒ derivative unstable","visual":"noisy_derivative","core":"Đạo hàm có thể phóng đại nhiễu trong dữ liệu.","application":"Signal processing, smoothing, filtering.","check":"Slope là tín hiệu thật hay gai nhiễu?"},
+        {"title":"Đạo hàm bậc hai đọc độ cong","formula":"f''(x)","visual":"second_derivative","core":"Đạo hàm bậc hai cho biết slope đang tăng hay giảm.","application":"Curvature, acceleration, optimization.","check":"Độ cong âm hay dương?"},
+        {"title":"Taylor bậc một","formula":"f(x+h)=f(x)+f'(x)h+O(h^2)","visual":"taylor_first_order","core":"Taylor giải thích vì sao tuyến tính hóa có sai số bậc cao.","application":"Approximation, EKF, local model.","check":"Sai số xấp xỉ có đáng kể không?"},
+        {"title":"Taylor bậc hai","formula":"f(x+h)≈f(x)+f'(x)h+1/2 f''(x)h^2","visual":"taylor_second_order","core":"Thêm độ cong giúp xấp xỉ tốt hơn khi h không quá nhỏ.","application":"Newton method, optimization curvature.","check":"Có cần dùng thông tin Hessian sau này không?"},
+        {"title":"Đạo hàm riêng","formula":"∂f/∂x_i","visual":"partial_derivative","core":"Khi có nhiều biến, đạo hàm riêng đo độ nhạy theo từng biến.","application":"Feature sensitivity, loss gradient.","check":"Giữ các biến khác cố định có hợp lý không?"},
+        {"title":"Jacobian cho hàm vector","formula":"J_{ij}=∂f_i/∂x_j","visual":"jacobian_matrix","core":"Jacobian gom độ nhạy của nhiều output theo nhiều input.","application":"Robot kinematics, EKF, neural network.","check":"J có shape m×n hay n×m?"},
+        {"title":"Đạo hàm trong hệ động lực","formula":"dx/dt=f(x,t)","visual":"system_derivative","core":"Đạo hàm theo thời gian mô tả tốc độ biến đổi trạng thái.","application":"ODE, control, simulation.","check":"Trạng thái nào đổi nhanh nhất?"},
+        {"title":"Sensitivity của parameter","formula":"∂y/∂θ","visual":"parameter_sensitivity","core":"Đạo hàm theo tham số cho biết model đổi thế nào khi chỉnh θ.","application":"Training, calibration, system identification.","check":"Tham số nào đáng tune nhất?"},
+        {"title":"Mini-case điều khiển nhiệt","formula":"dV/dT","visual":"thermal_gain","core":"Gain sensor là đạo hàm điện áp theo nhiệt độ.","application":"Calibration, fault detection.","check":"Gain có ổn định trên toàn miền không?"},
+        {"title":"Checklist đạo hàm","formula":"point + unit + sign + magnitude + noise","visual":"derivative_checklist","core":"Đọc đạo hàm phải kèm điểm xét, đơn vị, dấu, độ lớn và nhiễu.","application":"Review mọi phân tích độ nhạy.","check":"Bạn có đang dùng đạo hàm ngoài miền tin cậy không?"},
+        {"title":"Chốt 3.2","formula":"derivative = local sensitivity","visual":"derivative_summary","core":"Đạo hàm là kính hiển vi của hàm số quanh một điểm.","application":"Cầu sang gradient khi hàm có nhiều biến.","check":"Nhiều biến thì gom đạo hàm riêng bằng gì?"}
+      ]
+    },
+    {
+      "id": "MATH-VN-C03-giai_tich_dao_ham_gradient-L03-gradient-direction-fastest-change-e145",
+      "label": "Bài 3.3 · Gradient như hướng thay đổi nhanh nhất",
+      "targetSlideCount": 18,
+      "slides": [
+        {"title":"Gradient gom đạo hàm riêng","formula":"∇f=[∂f/∂x_1,...,∂f/∂x_n]^T","visual":"gradient_vector","core":"Gradient là vector độ nhạy của f theo mọi biến đầu vào.","application":"Optimization, ML, sensitivity analysis.","check":"Thành phần nào lớn nhất?"},
+        {"title":"Gradient là hướng tăng nhanh nhất","formula":"direction max = ∇f/||∇f||","visual":"steepest_ascent","core":"Đi theo gradient làm f tăng nhanh nhất tại điểm đó.","application":"Loss landscape, control energy, field analysis.","check":"Nếu muốn giảm f thì đi hướng nào?"},
+        {"title":"Âm gradient là hướng giảm nhanh","formula":"x_{k+1}=x_k-η∇f(x_k)","visual":"negative_gradient","core":"Tối ưu loss thường đi ngược gradient.","application":"Gradient descent, training ML.","check":"Dấu cập nhật đang đúng chưa?"},
+        {"title":"Gradient vuông góc contour","formula":"∇f ⟂ level set","visual":"contour_gradient","core":"Đường đồng mức giữ f không đổi, gradient cắt vuông góc các đường đó.","application":"Visualize loss landscape.","check":"Vector gradient có vuông góc contour không?"},
+        {"title":"Đạo hàm theo hướng","formula":"D_u f = ∇f · u","visual":"directional_derivative","core":"Độ thay đổi theo hướng u là dot product giữa gradient và u.","application":"Search direction, constrained movement.","check":"Hướng u làm f tăng hay giảm?"},
+        {"title":"Gradient norm báo độ dốc","formula":"||∇f||","visual":"gradient_norm","core":"Norm gradient lớn nghĩa là bề mặt dốc; nhỏ nghĩa là gần phẳng hoặc kẹt.","application":"Training diagnostics, convergence check.","check":"Gradient đang vanish hay explode?"},
+        {"title":"Scale feature làm méo gradient","formula":"x_scaled=(x-μ)/σ","visual":"scale_gradient","core":"Feature có scale lớn có thể chi phối hướng gradient.","application":"Normalization before gradient descent.","check":"Feature nào đang làm gradient lệch?"},
+        {"title":"Gradient của hàm quadratic","formula":"f(x)=1/2 x^T A x ⇒ ∇f=Ax nếu A symmetric","visual":"quadratic_gradient","core":"Quadratic cho bề mặt bowl và gradient tuyến tính.","application":"Least squares, convex optimization.","check":"A có symmetric positive definite không?"},
+        {"title":"Gradient của MSE tuyến tính","formula":"∇_w J = X^T(Xw-y)/m","visual":"mse_gradient","core":"Gradient của loss tuyến tính nối trực tiếp ma trận dữ liệu với sai số.","application":"Linear regression, ML training.","check":"Shape của gradient w là gì?"},
+        {"title":"Stationary point","formula":"∇f=0","visual":"stationary_point","core":"Gradient bằng 0 là điểm dừng, chưa chắc là cực tiểu tốt.","application":"Optimization, saddle analysis.","check":"Điểm này là min, max hay saddle?"},
+        {"title":"Hessian đọc độ cong nhiều biến","formula":"H=∇²f","visual":"hessian_preview","core":"Hessian nói bề mặt cong thế nào quanh điểm dừng.","application":"Newton, second-order optimization.","check":"H positive definite hay indefinite?"},
+        {"title":"Gradient field","formula":"x ↦ ∇f(x)","visual":"gradient_field","core":"Mỗi điểm trong không gian có một vector chỉ hướng tăng nhanh.","application":"Potential field, optimization path.","check":"Field có hội tụ về một vùng không?"},
+        {"title":"Gradient và constraint","formula":"∇f = λ∇g","visual":"lagrange_hint","core":"Khi bị ràng buộc, optimum nằm nơi gradient mục tiêu cân bằng gradient ràng buộc.","application":"Constrained optimization.","check":"Ràng buộc đang đổi hướng đi thế nào?"},
+        {"title":"Gradient checking","formula":"finite diff ≈ backprop gradient","visual":"gradient_checking","core":"So gradient analytic với finite difference giúp phát hiện lỗi code.","application":"Debug ML implementation.","check":"Sai lệch relative error bao nhiêu?"},
+        {"title":"Mini-case linear model","formula":"ŷ=Xw,  error=ŷ-y","visual":"linear_model_gradient","core":"Gradient cho biết cần chỉnh từng trọng số theo hướng giảm lỗi.","application":"Regression, sensor calibration.","check":"Trọng số nào bị kéo mạnh nhất?"},
+        {"title":"Mini-case robot cost field","formula":"J(p)=distance_to_goal + obstacle_penalty","visual":"robot_cost_gradient","core":"Gradient của cost field chỉ hướng giảm chi phí di chuyển.","application":"Path planning, potential field.","check":"Có local minimum nguy hiểm không?"},
+        {"title":"Checklist gradient","formula":"shape + scale + norm + direction + check","visual":"gradient_checklist","core":"Gradient tốt phải đúng shape, scale hợp lý, norm ổn và được kiểm số.","application":"Review mọi training loop.","check":"Bạn đã log gradient norm chưa?"},
+        {"title":"Chốt 3.3","formula":"gradient = vector sensitivity + direction","visual":"gradient_summary","core":"Gradient biến đạo hàm thành la bàn tối ưu trong nhiều chiều.","application":"Cầu sang gradient descent và learning rate.","check":"Có hướng rồi, bước đi bao dài?"}
+      ]
+    }
+  ]
+}

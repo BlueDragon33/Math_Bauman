@@ -1,0 +1,206 @@
+{
+  "checkpoint": "E76_FINAL_READINESS_AUDIT_PATCH",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "source": "E75_BLUEPRINT_MANIFEST_AUDIT_PATCH",
+  "timestamp": "2026-06-20",
+  "changes": [
+    "Sửa nhãn UI/manifest còn mắc ở E71/E75.",
+    "Chuẩn hóa blueprint kiểm tra theo 40/30/20/10: 8 easy, 6 medium, 4 hard, 2 expert cho 32 chương.",
+    "Không thêm câu hỏi mới; chỉ hiệu chỉnh difficulty của một số câu hard ở chương cũ thành expert để đúng vai trò Giỏi.",
+    "Đổi active simulation file từ e50_theory_lab.html sang unified_lab.html cho 260 mô phỏng.",
+    "Dọn README active còn mô tả mô phỏng tách.",
+    "E76 hotfix: subject-adapter không còn ép UI về E73; assessment critical files chuyển sang initial load để self-check/mastery/test không thấy DB rỗng."
+  ],
+  "releveledQuestionCount": 12,
+  "releveledQuestions": [
+    {
+      "id": "TEST-MATH-VN-LA-C01-L07-003",
+      "chapterId": "MATH-VN-LA-C01",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-LA-C01-L08-003",
+      "chapterId": "MATH-VN-LA-C01",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-LA-C02-L08-003",
+      "chapterId": "MATH-VN-LA-C02",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-LA-C02-L09-003",
+      "chapterId": "MATH-VN-LA-C02",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-CA-C03-L08-003",
+      "chapterId": "MATH-VN-CA-C03",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-CA-C03-L09-003",
+      "chapterId": "MATH-VN-CA-C03",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-PS-C04-L07-003",
+      "chapterId": "MATH-VN-PS-C04",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-PS-C04-L08-003",
+      "chapterId": "MATH-VN-PS-C04",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-PS-C05-L08-003",
+      "chapterId": "MATH-VN-PS-C05",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-PS-C05-L09-003",
+      "chapterId": "MATH-VN-PS-C05",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-PS-C06-L07-003",
+      "chapterId": "MATH-VN-PS-C06",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    },
+    {
+      "id": "TEST-MATH-VN-PS-C06-L08-003",
+      "chapterId": "MATH-VN-PS-C06",
+      "old": [
+        "hard",
+        "hard"
+      ],
+      "new": [
+        "expert",
+        "expert"
+      ]
+    }
+  ],
+  "blueprintIssuesAfterBuild": [],
+  "counts": {
+    "chapters": 32,
+    "lessons": 260,
+    "exercises": 1040,
+    "applications": 520,
+    "simulations": 260,
+    "formulas": 678,
+    "professorQa": 260,
+    "questionBank": 1423,
+    "testBlueprints": 32
+  },
+  "hashes": {
+    "core.js": "c15fca94175d4b393f6c6366fc45b25b48ffc6f10c8487214c823a365bf767d4",
+    "subject-manifest.json": "9acfd996e721e075c64a4e3cda54bb0fc7ddc6579c9d2148ea7b1078d89cb053",
+    "content-manifest.json": "8912b8dbf254704f2f8f4a6254ecb6b0c7d2fb58c4c9866e2535fa7346026175",
+    "question_bank.json": "18dcfdfa8c840b8826b73d1172a4c5ffaf42903d3d47cd7d658301dd76d703c4",
+    "test_blueprints.json": "3507a39262043148f43e945d249484c1fe516ff394df9148f8d894ad9e3dc70c",
+    "simulations.json": "4359c98f0cf3ec146ba78a1ca4cc847c15d8f4841d62fda8108d21741588df0f",
+    "subjects/math/README.md": "2a9ff40e11a1e25c115d4e3a75b8604268d2dc43e14e1ce7577806e2edd61633",
+    "assets/subject-adapter.js": "f47fa5e38f38cab3944dbe5421c99c1f8c0cebe919349bfc86e97f5b7eb3155e",
+    "subject-manifest.js": "29883757bc7b8afd2f25a2b344367468c6bcfe336b12be56e92a4eb147a3a70a",
+    "index.html": "a42593203fd3fe3eae6177ce64924135e64021671ee2df883ee89cdc20c76ba5",
+    "assets/core.js": "c15fca94175d4b393f6c6366fc45b25b48ffc6f10c8487214c823a365bf767d4",
+    "data/question_bank.json": "18dcfdfa8c840b8826b73d1172a4c5ffaf42903d3d47cd7d658301dd76d703c4",
+    "data/test_blueprints.json": "3507a39262043148f43e945d249484c1fe516ff394df9148f8d894ad9e3dc70c",
+    "data/simulations.json": "4359c98f0cf3ec146ba78a1ca4cc847c15d8f4841d62fda8108d21741588df0f"
+  },
+  "adapterHotfix": {
+    "storageKey": "bauman_math_e76_checkpoint",
+    "criticalAssessmentInitial": [
+      "question_bank",
+      "test_blueprints",
+      "review_packs",
+      "tests"
+    ],
+    "initialDataFiles": 23,
+    "backgroundDataFiles": 6
+  },
+  "browserSmoke": "Chromium engine with CocCoc-style UA: localhost blocked by sandbox admin, so used set_content + routed resources; after 15s BAUMAN_MATH_E76_SELF_CHECK().ok = true. Console warnings are sandbox/localStorage and document.write warnings, not runtime pageerrors.",
+  "browserSmokeResult": {
+    "pageErrors": 0,
+    "selfCheckOk": true,
+    "note": "Cốc Cốc thật không có trong sandbox; this is CocCoc-compatible Chromium smoke."
+  }
+}

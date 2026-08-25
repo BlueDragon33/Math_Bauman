@@ -1,0 +1,32 @@
+{
+  "schema": "bauman_math_frame_vs_content_contract_v1",
+  "frameData": [
+    "data/discipline_spine.json",
+    "data/chapter_spine.json"
+  ],
+  "contentData": [
+    "data/lessons.json",
+    "data/formulas.json",
+    "data/simulations.json",
+    "data/exercises.json",
+    "data/applications.json",
+    "data/professor_qa.json",
+    "data/question_bank.json",
+    "data/review_packs.json"
+  ],
+  "rule": "Frame JSON defines stage/discipline/chapter. Content JSON defines lessons and resources. UI must not hard-code academic tree.",
+  "changeFrameWorkflow": [
+    "Export current discipline_spine/chapter_spine",
+    "Edit frame JSON",
+    "Import/replace frame JSON via DataVault or replace files",
+    "Run BAUMAN_MATH_E108_SELF_CHECK",
+    "Only then generate lesson content"
+  ],
+  "contentWorkflow": [
+    "Create lesson seed from chapter",
+    "Generate theory/formula/simulation/etc via bundles",
+    "Audit",
+    "Import into target content source",
+    "Check UI"
+  ]
+}

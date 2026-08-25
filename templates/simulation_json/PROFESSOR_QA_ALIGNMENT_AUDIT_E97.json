@@ -1,0 +1,18 @@
+{
+  "patch": "E97_PROFESSOR_QA_ALIGNMENT_PASS",
+  "createdAt": "2026-06-21",
+  "scope": "professor_qa.json, oral defense, Vấn đáp tab alignment",
+  "counts": {
+    "lessons": 260,
+    "professorQa": 260,
+    "qaPairs": 1560,
+    "turns": 3120
+  },
+  "policy": [
+    "6 professor questions per lesson",
+    "formula/simulation/application/review anchors",
+    "topic profile derived from department/chapter/title",
+    "no generic mismatch like Penalty -> time series unless time-series department"
+  ],
+  "nextStep": "E98_SIMULATION_REALITY_VISUAL_PROFILE_PASS"
+}

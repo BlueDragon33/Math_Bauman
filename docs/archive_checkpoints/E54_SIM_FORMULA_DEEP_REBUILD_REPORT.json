@@ -1,0 +1,15 @@
+{
+  "checkpoint": "E54 · SIMULATION / FORMULA / DEEP FORMULA REBUILD",
+  "final": false,
+  "changes": [
+    "Mô phỏng chuyển sang real visual lab: biến điều khiển, SVG board, readout live, kết luận lab.",
+    "Công thức: mặt sau thẻ phân tích sâu input-output/từng phần chức năng, không lặp bảng Ý nghĩa.",
+    "Bảng Ý nghĩa đổi thành Chức năng ký hiệu.",
+    "Công thức sâu: audit hệ thống, giả thiết, pipeline code, failure mode, mini lab."
+  ],
+  "counts": {
+    "lessons": 260,
+    "simulations": 520,
+    "formulas": 678
+  }
+}

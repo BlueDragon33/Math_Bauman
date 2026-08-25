@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "type": {
+      "enum": [
+        "BAUMAN_ASSIGN_TASK",
+        "BAUMAN_TODAY_TASK",
+        "BAUMAN_SUBJECT_PROGRESS",
+        "BAUMAN_UNLOCK_REQUEST"
+      ]
+    },
+    "subjectId": {
+      "type": "string"
+    },
+    "stageId": {
+      "type": "string"
+    },
+    "partId": {
+      "type": "integer"
+    },
+    "taskType": {
+      "enum": [
+        "lesson",
+        "practice",
+        "review",
+        "exam_gate",
+        "remediation",
+        "project"
+      ]
+    },
+    "source": {
+      "type": "string"
+    }
+  }
+}

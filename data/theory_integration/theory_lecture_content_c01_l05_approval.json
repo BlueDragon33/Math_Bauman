@@ -1,0 +1,58 @@
+{
+  "id": "bauman_math_theory_integration_approval_c01_l05_v1",
+  "schema": "bauman_math_theory_integration_approval_v1",
+  "version": "APPROVAL_C01_L05_V1",
+  "status": "approved_for_durable_merge",
+  "date": "2026-07-09",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L05-subspace-data-representation-e140",
+  "lessonTitle": "§1.5 · Không gian con và biểu diễn dữ liệu",
+  "academicAcceptance": {
+    "path": "../../THEORY_C01_L05_ACADEMIC_ACCEPTANCE.json",
+    "version": "ACADEMIC_ACCEPTANCE_C01_L05_V1",
+    "status": "PASS"
+  },
+  "approvedImport": {
+    "path": "theory_lecture_content_c01_l05_import.json",
+    "version": "C01_L05_E129_IMPORT_V1_22_SLIDES_CANDIDATE",
+    "commit": "00196604e2e68095860e6bf37a205a9d772c0e5e",
+    "packageType": "bauman.math.theory_lecture_content.merge",
+    "target": "theory_lecture_content",
+    "mode": "merge",
+    "recordCount": 1,
+    "sourceSlideCount": 22,
+    "runtimeSlideCount": 22,
+    "minimumSlides": 16,
+    "maximumSlides": null,
+    "compression": false,
+    "oneToOneMapping": true
+  },
+  "approvalRule": "The pre-acceptance runtimeMergeAllowed=false flag inside the immutable candidate package is superseded only for the exact path, version and commit identified here. Any content change requires a new approval version.",
+  "requiredPass15Checks": [
+    "Parse durable theory_lecture_content.json and the approved import JSON.",
+    "Verify this approval status and academic acceptance status are PASS.",
+    "Verify target lesson occurs exactly once before and after replacement.",
+    "Verify source SL01-SL22 map exactly to runtime S01-S22.",
+    "Verify all non-target record canonical hashes remain unchanged.",
+    "Verify target record index and neighboring lesson IDs remain unchanged.",
+    "Verify duplicate lesson IDs remain zero.",
+    "Verify formula coverage F01-F16.",
+    "Verify locked case values and prohibited claims remain intact.",
+    "Do not modify Reference, Full View, Normalization or runtime reader code in Pass 15."
+  ],
+  "runtimeMergePerformed": true,
+  "nextTask": "THEORY_C01_L05_RUNTIME_SOURCE_REGISTRATION_PASS_16",
+  "runtimeMergeResult": {
+    "status": "PASS_15_DURABLE_MERGE_STATIC_VERIFY_PASS",
+    "targetIndex": 4,
+    "previousLessonId": "MATH-VN-C01-vector_trong_khong_gian_-L04-basis-span-coordinate-e140",
+    "nextLessonId": "MATH-VN-C01-vector_trong_khong_gian_-L06-vector-to-data-matrix-e140",
+    "recordsBefore": 18,
+    "recordsAfter": 18,
+    "sourceSlides": 22,
+    "runtimeSlides": 22,
+    "changedNonTargetRecords": 0,
+    "duplicateLessonIds": 0,
+    "durableFileSha256Before": "dc5462df37227b49ab1759f8631f0dc682816cb59733ef2193688366d23dfb1e",
+    "durableFileSha256After": "d0cd18601b1ede84f58072b3c47cfcc176b4d21d3fa71b23762b908485391447"
+  }
+}

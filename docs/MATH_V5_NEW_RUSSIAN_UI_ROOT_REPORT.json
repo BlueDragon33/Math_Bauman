@@ -1,0 +1,29 @@
+{
+  "name": "MATH_V5_NEW_RUSSIAN_UI_ROOT_REPORT",
+  "source": "/mnt/data/A1_Russian_Bauman_Exam_Stable_Final.zip",
+  "rule": "UX/UI lấy từ file Tiếng Nga mới làm gốc; Toán chỉ thay adapter + data + nhãn môn.",
+  "source_ui_copied": {
+    "core.css": "byte-for-byte from new Russian file",
+    "planning-bridge.js": "byte-for-byte from new Russian file",
+    "math.css": "starts with russian.css from new file, then thin math identity layer",
+    "index.html": "same shell structure as new Russian file"
+  },
+  "math_data_counts": {
+    "curriculum": 7,
+    "lessons": 63,
+    "grammar": 25,
+    "vocab": 46,
+    "exercises": 63,
+    "tests": 294,
+    "simulations": 3,
+    "speaking": 12,
+    "dialogue-bauman-az": 12,
+    "deep-speaking-bauman": 40,
+    "speaking-link-index": 12,
+    "handwriting": 19,
+    "writing": 60,
+    "videos": 5,
+    "knowledge-index": 64
+  },
+  "checks": []
+}

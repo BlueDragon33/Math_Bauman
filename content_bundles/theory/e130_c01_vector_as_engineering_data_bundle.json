@@ -1,0 +1,217 @@
+{
+  "packageType": "bauman.math.theory_lecture_content.e130_sample_bundle",
+  "target": "theory_lecture_content",
+  "mode": "merge",
+  "bundleId": "E130-C01-L01-vector-as-engineering-data",
+  "bundleStatus": "sample_for_review_not_auto_imported",
+  "runtimeTarget": "subjects/math/data/theory_lecture_content.json",
+  "programFrameVersion": "E130_MATH_PROGRAM_FRAME_INTEGRATED",
+  "notes": [
+    "This is a production-like sample bundle for review and import testing.",
+    "Import through E129 Kho Lý thuyết only.",
+    "The durable source of truth remains data/theory_lecture_content.json after explicit approval/export/commit.",
+    "Do not import this into lessons.json."
+  ],
+  "records": [
+    {
+      "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L01-vector-as-engineering-data-e130",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "lessonTitle": "§1.1 · Vector như dữ liệu kỹ thuật",
+      "title": "§1.1 · Vector như dữ liệu kỹ thuật",
+      "programLectureId": "MATH-PROG-L02-vector-spaces-linear-maps",
+      "programLectureIds": [
+        "MATH-PROG-L02-vector-spaces-linear-maps",
+        "MATH-PROG-L01-linear-algebra-basic",
+        "MATH-PROG-L09-topology-metric-spaces",
+        "MATH-PROG-L17-ai-machine-learning-math-foundations"
+      ],
+      "programAnchorTitle": "Không gian vectơ và Ánh xạ tuyến tính",
+      "roadmapRole": "foundation_before_prep",
+      "baumanFocus": "Các phép biến đổi không gian, không gian trạng thái hệ thống, phân tích trị riêng, nén dữ liệu và giảm chiều dữ liệu bằng PCA.",
+      "sourceAnchors": {
+        "stageId": "vn",
+        "disciplineId": "linear_algebra_data_space",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "programLectureId": "MATH-PROG-L02-vector-spaces-linear-maps"
+      },
+      "tags": [
+        "vector",
+        "linear algebra",
+        "data representation",
+        "cosine similarity",
+        "state vector",
+        "Bauman 09.04.01"
+      ],
+      "labWork": {
+        "required": true,
+        "languages": [
+          "Python/NumPy",
+          "C++"
+        ],
+        "tasks": [
+          {
+            "taskId": "lab-c01-vector-metrics-python",
+            "title": "Vector metrics for engineering data",
+            "language": "Python/NumPy",
+            "goal": "Convert vector definitions into runnable code for norm, dot product, Euclidean distance, and cosine similarity.",
+            "expectedOutput": "A printed comparison of three data vectors and a short explanation of which pair is closest by direction and by distance.",
+            "starterCode": "import numpy as np\n\ndef l2_norm(x):\n    return float(np.linalg.norm(x))\n\ndef cosine_similarity(a, b):\n    na, nb = l2_norm(a), l2_norm(b)\n    if na == 0 or nb == 0:\n        return None\n    return float(np.dot(a, b) / (na * nb))\n\nsamples = {\n    'network_A': np.array([120.0, 35.0, 0.02]),\n    'network_B': np.array([110.0, 40.0, 0.03]),\n    'network_C': np.array([20.0, 95.0, 0.40])\n}\n\nfor name, vec in samples.items():\n    print(name, 'norm=', round(l2_norm(vec), 4))\n\nprint('cos(A,B)=', cosine_similarity(samples['network_A'], samples['network_B']))\nprint('cos(A,C)=', cosine_similarity(samples['network_A'], samples['network_C']))",
+            "validationChecklist": [
+              "The code handles a zero vector case.",
+              "The learner explains the difference between Euclidean distance and cosine similarity.",
+              "The learner links vector metrics to data similarity, sensor features, or network-state comparison."
+            ]
+          },
+          {
+            "taskId": "lab-c01-vector-struct-cpp",
+            "title": "Minimal vector struct in C++",
+            "language": "C++",
+            "goal": "Implement dot product and norm without relying on a large numerical library.",
+            "expectedOutput": "A compiled small program that prints dot product and L2 norm for two vectors.",
+            "validationChecklist": [
+              "The program compiles cleanly.",
+              "The dot product uses the same dimension for both vectors.",
+              "The learner can explain floating-point precision limitations."
+            ]
+          }
+        ]
+      },
+      "slides": [
+        {
+          "role": "problem_framing",
+          "title": "Vì sao vector là ngôn ngữ đầu tiên của dữ liệu kỹ thuật?",
+          "blocks": [
+            {"type": "text", "title": "Vấn đề", "body": "Trong kỹ thuật máy tính và CNTT, dữ liệu thô thường chưa tính toán được trực tiếp. Ta cần biến ảnh, tín hiệu, trạng thái mạng, log hệ thống hoặc đặc trưng cảm biến thành một cấu trúc số học thống nhất."},
+            {"type": "text", "title": "Câu hỏi dẫn đường", "body": "Một vector toán học trở thành dữ liệu kỹ thuật như thế nào, và vì sao nó là bước đầu để học PCA, machine learning, điều khiển và xử lý tín hiệu?"}
+          ]
+        },
+        {
+          "role": "deep_essence",
+          "title": "Bản chất sâu: vector là đối tượng vừa hình học vừa tính toán",
+          "blocks": [
+            {"type": "text", "title": "Hai mặt của vector", "body": "Về toán học, vector có độ lớn, hướng và phép toán tuyến tính. Về kỹ thuật, vector là một gói số có thứ tự, biểu diễn trạng thái hoặc đặc trưng của một đối tượng trong hệ thống."},
+            {"type": "text", "title": "Tư duy Bauman", "body": "Không học vector chỉ để tính tọa độ; học vector để chuẩn bị cho không gian trạng thái, embedding, vector đặc trưng, sensor fusion và các mô hình tuyến tính trong hệ thống thông tin."}
+          ]
+        },
+        {
+          "role": "counter_intuition",
+          "title": "Phản trực giác: vector không nhất thiết là mũi tên 2D/3D",
+          "blocks": [
+            {"type": "text", "title": "Sai lầm phổ biến", "body": "Người học hay nghĩ vector là mũi tên có thể vẽ được. Trong AI và dữ liệu kỹ thuật, vector có thể có hàng trăm hoặc hàng nghìn chiều và không còn trực quan hình học đơn giản."},
+            {"type": "text", "title": "Cách nhìn đúng", "body": "Mỗi chiều là một đặc trưng: độ trễ mạng, tải CPU, mức nhiễu tín hiệu, xác suất lỗi, cường độ pixel hoặc trọng số trong mô hình."}
+          ]
+        },
+        {
+          "role": "real_bridge",
+          "title": "Cầu nối thực tế: từ trạng thái hệ thống đến vector dữ liệu",
+          "blocks": [
+            {"type": "text", "title": "Ví dụ hệ thống", "body": "Một máy chủ có thể được mô tả bởi vector x = [CPU load, RAM usage, network latency, error rate]. Một robot có thể có vector trạng thái gồm vị trí, vận tốc, gia tốc và góc quay."},
+            {"type": "text", "title": "Ý nghĩa", "body": "Khi đã có vector, ta có thể đo khoảng cách, so sánh độ giống nhau, dự báo trạng thái tiếp theo hoặc đưa dữ liệu vào thuật toán học máy."}
+          ]
+        },
+        {
+          "role": "notation",
+          "title": "Ký hiệu tối thiểu cần nắm",
+          "blocks": [
+            {"type": "text", "title": "Vector cột", "body": "Một vector n chiều có thể viết là x = (x1, x2, ..., xn). Trong tính toán, ta thường lưu nó như một array một chiều hoặc một ma trận n x 1."},
+            {"type": "text", "title": "Phép toán cơ bản", "body": "Các phép toán cần dùng ngay: cộng vector, nhân vô hướng, tích vô hướng, chuẩn vector, khoảng cách Euclidean và chuẩn hóa."}
+          ]
+        },
+        {
+          "role": "core_formula",
+          "title": "Công thức lõi: norm, dot product, distance, cosine",
+          "blocks": [
+            {"type": "formula", "title": "Norm L2", "body": "||x||_2 = sqrt(x1^2 + x2^2 + ... + xn^2)."},
+            {"type": "formula", "title": "Tích vô hướng", "body": "dot(x,y) = x1*y1 + x2*y2 + ... + xn*yn."},
+            {"type": "formula", "title": "Cosine similarity", "body": "cos(x,y) = dot(x,y) / (||x||_2 * ||y||_2)."}
+          ]
+        },
+        {
+          "role": "assumption_gate",
+          "title": "Cổng điều kiện: khi nào công thức dùng được?",
+          "blocks": [
+            {"type": "text", "title": "Điều kiện 1", "body": "Hai vector phải cùng số chiều nếu muốn cộng, trừ hoặc tính dot product."},
+            {"type": "text", "title": "Điều kiện 2", "body": "Cosine similarity không xác định nếu một trong hai vector có norm bằng 0."},
+            {"type": "text", "title": "Điều kiện 3", "body": "Nếu các chiều có đơn vị rất khác nhau, cần chuẩn hóa hoặc scale dữ liệu trước khi so sánh."}
+          ]
+        },
+        {
+          "role": "mini_case",
+          "title": "Mini case: so sánh trạng thái mạng",
+          "blocks": [
+            {"type": "text", "title": "Dữ liệu", "body": "Giả sử mỗi trạng thái mạng có vector [throughput, latency, packet_loss]. Hai trạng thái có thể gần nhau về hướng nhưng khác nhau về độ lớn."},
+            {"type": "text", "title": "Câu hỏi", "body": "Khi nào nên dùng khoảng cách Euclidean, khi nào nên dùng cosine similarity? Nếu quan tâm pattern tương đối, cosine thường hữu ích; nếu quan tâm mức chênh lệch tuyệt đối, distance quan trọng hơn."}
+          ]
+        },
+        {
+          "role": "interpretation",
+          "title": "Diễn giải kỹ thuật của các đại lượng",
+          "blocks": [
+            {"type": "text", "title": "Norm", "body": "Norm đo độ lớn tổng thể của vector. Với vector tải hệ thống, norm lớn có thể gợi ý trạng thái nặng tải."},
+            {"type": "text", "title": "Dot product", "body": "Dot product lớn khi hai vector vừa lớn vừa cùng hướng. Nó là hạt nhân của projection, attention score và nhiều mô hình tuyến tính."},
+            {"type": "text", "title": "Cosine", "body": "Cosine tập trung vào hướng, nên phù hợp khi độ lớn không phải điều quan trọng nhất."}
+          ]
+        },
+        {
+          "role": "simulation",
+          "title": "Mô phỏng nhanh bằng Python",
+          "blocks": [
+            {"type": "text", "title": "Thí nghiệm", "body": "Tạo ba vector trạng thái mạng, tính norm và cosine similarity, sau đó thay đổi scale của một vector để thấy cosine ít nhạy với độ lớn hơn Euclidean distance."},
+            {"type": "code", "title": "Gợi ý thao tác", "body": "Dùng numpy.linalg.norm, numpy.dot và in ra bảng so sánh từng cặp vector."}
+          ]
+        },
+        {
+          "role": "common_mistakes",
+          "title": "Lỗi thường gặp khi học vector cho kỹ thuật",
+          "blocks": [
+            {"type": "text", "title": "Lỗi 1", "body": "Quên kiểm tra cùng số chiều trước khi tính toán."},
+            {"type": "text", "title": "Lỗi 2", "body": "So sánh vector chưa chuẩn hóa dù các chiều có thang đo khác nhau."},
+            {"type": "text", "title": "Lỗi 3", "body": "Nhầm cosine similarity với khoảng cách Euclidean và dùng sai trong bài toán clustering."}
+          ]
+        },
+        {
+          "role": "application",
+          "title": "Ứng dụng lập trình: Lab Work",
+          "blocks": [
+            {"type": "text", "title": "Nhiệm vụ Python", "body": "Viết hàm tính norm L2, dot product, cosine similarity và Euclidean distance cho các vector trạng thái mạng."},
+            {"type": "text", "title": "Nhiệm vụ C++", "body": "Viết một struct hoặc class vector tối giản, có hàm dot và norm. Kiểm tra lỗi khi hai vector khác chiều."}
+          ]
+        },
+        {
+          "role": "practice",
+          "title": "Bài luyện tập có kiểm tra tư duy",
+          "blocks": [
+            {"type": "text", "title": "Bài 1", "body": "Cho ba vector A, B, C biểu diễn trạng thái hệ thống. Tính norm, dot product và cosine similarity từng cặp."},
+            {"type": "text", "title": "Bài 2", "body": "Nhân vector B với 10 rồi so sánh lại Euclidean distance và cosine similarity. Giải thích vì sao kết quả thay đổi khác nhau."},
+            {"type": "text", "title": "Bài 3", "body": "Đề xuất cách chuẩn hóa nếu throughput, latency và packet loss có đơn vị đo khác nhau."}
+          ]
+        },
+        {
+          "role": "professor_qa",
+          "title": "Vấn đáp giáo sư",
+          "blocks": [
+            {"type": "qa", "title": "Câu hỏi 1", "body": "Nếu hai vector có cosine similarity cao nhưng Euclidean distance lớn, điều đó nói gì về dữ liệu?"},
+            {"type": "qa", "title": "Câu hỏi 2", "body": "Vì sao vector zero là trường hợp nguy hiểm khi tính cosine similarity?"},
+            {"type": "qa", "title": "Câu hỏi 3", "body": "Trong bài toán PCA, vì sao cần xem dữ liệu như các vector trong không gian nhiều chiều?"}
+          ]
+        },
+        {
+          "role": "bridge",
+          "title": "Cầu sang bài tiếp theo: ma trận và phép biến đổi",
+          "blocks": [
+            {"type": "text", "title": "Liên kết", "body": "Khi gom nhiều vector dữ liệu thành một bảng, ta có ma trận. Khi biến đổi vector từ không gian này sang không gian khác, ta dùng ánh xạ tuyến tính và ma trận."},
+            {"type": "text", "title": "Chuẩn bị", "body": "Bài sau sẽ dùng vector làm nguyên liệu để hiểu ma trận, Gaussian elimination, eigenvalues và PCA."}
+          ]
+        },
+        {
+          "role": "takeaway",
+          "title": "Kết luận cần nhớ",
+          "blocks": [
+            {"type": "text", "title": "Một câu nhớ lâu", "body": "Vector là cách biến đối tượng kỹ thuật thành dữ liệu có thể tính toán, so sánh, biến đổi và tối ưu."},
+            {"type": "text", "title": "Ba năng lực sau bài", "body": "Sau bài này, người học phải biết biểu diễn dữ liệu bằng vector, chọn phép đo phù hợp và hiện thực phép đo bằng code."}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1250 @@
+[
+  {
+    "id": "sim_report_M01",
+    "stage": "vn",
+    "lessonId": "M01",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Vector trong không gian dữ liệu",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Vector trong không gian dữ liệu, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Vector trong không gian dữ liệu, kết quả thay đổi theo ... Công thức <x,y>=Σxᵢyᵢ; ||x||₂=sqrt(Σxᵢ²); proj_u(x)=<x,u>/<u,u>·u cho thấy ... Trong ứng dụng AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M02",
+    "stage": "vn",
+    "lessonId": "M02",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Ma trận và hệ phương trình tuyến tính",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Ma trận và hệ phương trình tuyến tính, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Ma trận và hệ phương trình tuyến tính, kết quả thay đổi theo ... Công thức Ax=b; rank(A); A^{-1}A=I cho thấy ... Trong ứng dụng AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M03",
+    "stage": "vn",
+    "lessonId": "M03",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Đạo hàm và trực giác gradient",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Đạo hàm và trực giác gradient, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Đạo hàm và trực giác gradient, kết quả thay đổi theo ... Công thức f’(x)=lim(h→0)(f(x+h)-f(x))/h; ∇f=[∂f/∂xᵢ] cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M04",
+    "stage": "vn",
+    "lessonId": "M04",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Tích phân và diện tích dưới đường cong",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Tích phân và diện tích dưới đường cong, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Tích phân và diện tích dưới đường cong, kết quả thay đổi theo ... Công thức ∫_a^b f(x)dx; E[X]=∫x p(x)dx cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M05",
+    "stage": "vn",
+    "lessonId": "M05",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Xác suất cơ bản và Bayes",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Xác suất cơ bản và Bayes, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Xác suất cơ bản và Bayes, kết quả thay đổi theo ... Công thức P(A|B)=P(A∩B)/P(B); P(A|B)=P(B|A)P(A)/P(B) cho thấy ... Trong ứng dụng AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M06",
+    "stage": "vn",
+    "lessonId": "M06",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Thống kê mô tả và sai số đo",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Thống kê mô tả và sai số đo, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Thống kê mô tả và sai số đo, kết quả thay đổi theo ... Công thức μ=Σxᵢ/n; σ²=Σ(xᵢ-μ)²/n cho thấy ... Trong ứng dụng AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M07",
+    "stage": "vn",
+    "lessonId": "M07",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Số phức và dao động",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Số phức và dao động, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Số phức và dao động, kết quả thay đổi theo ... Công thức e^{jθ}=cosθ+j sinθ; z=a+jb cho thấy ... Trong ứng dụng Xử lý tín hiệu: lọc nhiễu, miền tần số, cảm biến và chuỗi đo., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M08",
+    "stage": "vn",
+    "lessonId": "M08",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Python tính toán Toán",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Python tính toán Toán, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Python tính toán Toán, kết quả thay đổi theo ... Công thức A @ x; np.linalg.solve(A,b); np.gradient(f) cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M09",
+    "stage": "prep",
+    "lessonId": "M09",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Ký hiệu Toán Nga và cách đọc công thức",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Ký hiệu Toán Nga và cách đọc công thức, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Ký hiệu Toán Nga và cách đọc công thức, kết quả thay đổi theo ... Công thức пусть x∈R; доказать; найти cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M10",
+    "stage": "prep",
+    "lessonId": "M10",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Hàm số, giới hạn và liên tục",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Hàm số, giới hạn và liên tục, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Hàm số, giới hạn và liên tục, kết quả thay đổi theo ... Công thức lim_{x→a} f(x)=L; ε-δ cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M11",
+    "stage": "prep",
+    "lessonId": "M11",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Chuỗi số và chuỗi hàm",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Chuỗi số và chuỗi hàm, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Chuỗi số và chuỗi hàm, kết quả thay đổi theo ... Công thức Σ a_n; |r|<1; Taylor cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M12",
+    "stage": "prep",
+    "lessonId": "M12",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Phương trình vi phân thường",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Phương trình vi phân thường, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Phương trình vi phân thường, kết quả thay đổi theo ... Công thức dx/dt=f(x,t); x(t)=Ce^{at} cho thấy ... Trong ứng dụng Robot/điều khiển: mô hình trạng thái, ước lượng, sensor fusion và điều hướng., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M13",
+    "stage": "prep",
+    "lessonId": "M13",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Hình học giải tích và tọa độ",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Hình học giải tích và tọa độ, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Hình học giải tích và tọa độ, kết quả thay đổi theo ... Công thức x²+y²=r²; line: ax+by+c=0 cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M14",
+    "stage": "prep",
+    "lessonId": "M14",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Xác suất rời rạc và biến ngẫu nhiên",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Xác suất rời rạc và biến ngẫu nhiên, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Xác suất rời rạc và biến ngẫu nhiên, kết quả thay đổi theo ... Công thức E[X]; Var(X); Bernoulli, Normal cho thấy ... Trong ứng dụng AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M15",
+    "stage": "prep",
+    "lessonId": "M15",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Logic chứng minh và phản ví dụ",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Logic chứng minh và phản ví dụ, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Logic chứng minh và phản ví dụ, kết quả thay đổi theo ... Công thức A⇒B; ∀x; ∃x cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M16",
+    "stage": "prep",
+    "lessonId": "M16",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Bảng thuật ngữ Toán Nga-Việt-Anh",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Bảng thuật ngữ Toán Nga-Việt-Anh, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Bảng thuật ngữ Toán Nga-Việt-Anh, kết quả thay đổi theo ... Công thức определение, теорема, следствие cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M17",
+    "stage": "hk1",
+    "lessonId": "M17",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Không gian vector và cơ sở",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Không gian vector và cơ sở, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Không gian vector và cơ sở, kết quả thay đổi theo ... Công thức span(v₁,...,v_k); dim(V) cho thấy ... Trong ứng dụng AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M18",
+    "stage": "hk1",
+    "lessonId": "M18",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Trị riêng, vector riêng và chéo hóa",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Trị riêng, vector riêng và chéo hóa, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Trị riêng, vector riêng và chéo hóa, kết quả thay đổi theo ... Công thức Av=λv; A=PDP^{-1} cho thấy ... Trong ứng dụng AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M19",
+    "stage": "hk1",
+    "lessonId": "M19",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · SVD và bình phương tối thiểu",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng SVD và bình phương tối thiểu, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong SVD và bình phương tối thiểu, kết quả thay đổi theo ... Công thức A=UΣVᵀ; x̂=(AᵀA)^{-1}Aᵀb cho thấy ... Trong ứng dụng AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M20",
+    "stage": "hk1",
+    "lessonId": "M20",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Giải tích nhiều biến và Jacobian",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Giải tích nhiều biến và Jacobian, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Giải tích nhiều biến và Jacobian, kết quả thay đổi theo ... Công thức J_ij=∂f_i/∂x_j; Hessian H cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M21",
+    "stage": "hk1",
+    "lessonId": "M21",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Tối ưu lồi cơ bản",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Tối ưu lồi cơ bản, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Tối ưu lồi cơ bản, kết quả thay đổi theo ... Công thức ∇f(x*)=0; x_{k+1}=x_k-α∇f cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M22",
+    "stage": "hk1",
+    "lessonId": "M22",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Số trị tuyến tính và conditioning",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Số trị tuyến tính và conditioning, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Số trị tuyến tính và conditioning, kết quả thay đổi theo ... Công thức κ(A)=||A||||A^{-1}|| cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M23",
+    "stage": "hk1",
+    "lessonId": "M23",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Xác suất liên tục và kỳ vọng",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Xác suất liên tục và kỳ vọng, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Xác suất liên tục và kỳ vọng, kết quả thay đổi theo ... Công thức E[g(X)]=∫g(x)p(x)dx cho thấy ... Trong ứng dụng AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M24",
+    "stage": "hk1",
+    "lessonId": "M24",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Notebook Toán cho học phần Bauman",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Notebook Toán cho học phần Bauman, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Notebook Toán cho học phần Bauman, kết quả thay đổi theo ... Công thức seed, vectorize, validate cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M25",
+    "stage": "hk2",
+    "lessonId": "M25",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Hồi quy tuyến tính và regularization",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Hồi quy tuyến tính và regularization, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Hồi quy tuyến tính và regularization, kết quả thay đổi theo ... Công thức min ||Xβ-y||²+λ||β||² cho thấy ... Trong ứng dụng AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M26",
+    "stage": "hk2",
+    "lessonId": "M26",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Gradient descent và biến thể",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Gradient descent và biến thể, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Gradient descent và biến thể, kết quả thay đổi theo ... Công thức x_{k+1}=x_k-α∇f(x_k) cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M27",
+    "stage": "hk2",
+    "lessonId": "M27",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Xác suất Bayes và ước lượng",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Xác suất Bayes và ước lượng, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Xác suất Bayes và ước lượng, kết quả thay đổi theo ... Công thức posterior ∝ likelihood × prior cho thấy ... Trong ứng dụng AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M28",
+    "stage": "hk2",
+    "lessonId": "M28",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Quá trình ngẫu nhiên và chuỗi thời gian",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Quá trình ngẫu nhiên và chuỗi thời gian, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Quá trình ngẫu nhiên và chuỗi thời gian, kết quả thay đổi theo ... Công thức autocorr R(τ); AR(p) cho thấy ... Trong ứng dụng Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M29",
+    "stage": "hk2",
+    "lessonId": "M29",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Fourier và miền tần số",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Fourier và miền tần số, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Fourier và miền tần số, kết quả thay đổi theo ... Công thức X(ω)=∫x(t)e^{-jωt}dt cho thấy ... Trong ứng dụng Xử lý tín hiệu: lọc nhiễu, miền tần số, cảm biến và chuỗi đo., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M30",
+    "stage": "hk2",
+    "lessonId": "M30",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Lọc số và convolution",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Lọc số và convolution, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Lọc số và convolution, kết quả thay đổi theo ... Công thức y[n]=Σ h[k]x[n-k] cho thấy ... Trong ứng dụng Xử lý tín hiệu: lọc nhiễu, miền tần số, cảm biến và chuỗi đo., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M31",
+    "stage": "hk2",
+    "lessonId": "M31",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Entropy, thông tin và phân loại",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Entropy, thông tin và phân loại, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Entropy, thông tin và phân loại, kết quả thay đổi theo ... Công thức H(X)=-Σp log p cho thấy ... Trong ứng dụng AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M32",
+    "stage": "hk2",
+    "lessonId": "M32",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Đánh giá mô hình và kiểm định",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Đánh giá mô hình và kiểm định, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Đánh giá mô hình và kiểm định, kết quả thay đổi theo ... Công thức RMSE, F1, p-value, CI cho thấy ... Trong ứng dụng AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M33",
+    "stage": "hk3",
+    "lessonId": "M33",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Mô hình trạng thái cho robot",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Mô hình trạng thái cho robot, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Mô hình trạng thái cho robot, kết quả thay đổi theo ... Công thức x_{k+1}=Ax_k+Bu_k+w_k cho thấy ... Trong ứng dụng Robot/điều khiển: mô hình trạng thái, ước lượng, sensor fusion và điều hướng., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M34",
+    "stage": "hk3",
+    "lessonId": "M34",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Kalman filter và sensor fusion",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Kalman filter và sensor fusion, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Kalman filter và sensor fusion, kết quả thay đổi theo ... Công thức K=PHT(HPHT+R)^{-1} cho thấy ... Trong ứng dụng Robot/điều khiển: mô hình trạng thái, ước lượng, sensor fusion và điều hướng., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M35",
+    "stage": "hk3",
+    "lessonId": "M35",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Tối ưu quỹ đạo và ràng buộc",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Tối ưu quỹ đạo và ràng buộc, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Tối ưu quỹ đạo và ràng buộc, kết quả thay đổi theo ... Công thức min Σ cost(x,u) s.t. dynamics cho thấy ... Trong ứng dụng Robot/điều khiển: mô hình trạng thái, ước lượng, sensor fusion và điều hướng., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M36",
+    "stage": "hk3",
+    "lessonId": "M36",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Graph và thuật toán trên mạng",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Graph và thuật toán trên mạng, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Graph và thuật toán trên mạng, kết quả thay đổi theo ... Công thức G=(V,E); Laplacian L=D-A cho thấy ... Trong ứng dụng НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M37",
+    "stage": "hk3",
+    "lessonId": "M37",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Học máy hình học và embedding",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Học máy hình học và embedding, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Học máy hình học và embedding, kết quả thay đổi theo ... Công thức z=fθ(x); distance in latent space cho thấy ... Trong ứng dụng AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M38",
+    "stage": "hk3",
+    "lessonId": "M38",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Thiết kế thí nghiệm và ablation",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Thiết kế thí nghiệm và ablation, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Thiết kế thí nghiệm và ablation, kết quả thay đổi theo ... Công thức control variable; ablation Δmetric cho thấy ... Trong ứng dụng НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M39",
+    "stage": "hk3",
+    "lessonId": "M39",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Độ tin cậy, sai số và uncertainty",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Độ tin cậy, sai số và uncertainty, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Độ tin cậy, sai số và uncertainty, kết quả thay đổi theo ... Công thức CI, variance propagation cho thấy ... Trong ứng dụng AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M40",
+    "stage": "hk3",
+    "lessonId": "M40",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Đọc paper Toán/AI có kiểm chứng",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Đọc paper Toán/AI có kiểm chứng, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Đọc paper Toán/AI có kiểm chứng, kết quả thay đổi theo ... Công thức assumption → theorem → experiment cho thấy ... Trong ứng dụng НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M41",
+    "stage": "hk4",
+    "lessonId": "M41",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Khung Toán của luận văn",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Khung Toán của luận văn, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Khung Toán của luận văn, kết quả thay đổi theo ... Công thức problem → model → algorithm → proof → validation cho thấy ... Trong ứng dụng НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M42",
+    "stage": "hk4",
+    "lessonId": "M42",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Chứng minh tính đúng và giới hạn",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Chứng minh tính đúng và giới hạn, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Chứng minh tính đúng và giới hạn, kết quả thay đổi theo ... Công thức lemma, theorem, counterexample cho thấy ... Trong ứng dụng НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M43",
+    "stage": "hk4",
+    "lessonId": "M43",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Phân tích độ phức tạp thuật toán",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Phân tích độ phức tạp thuật toán, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Phân tích độ phức tạp thuật toán, kết quả thay đổi theo ... Công thức O(n), O(n log n), O(n³) cho thấy ... Trong ứng dụng НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M44",
+    "stage": "hk4",
+    "lessonId": "M44",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · So sánh baseline và kiểm định kết quả",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng So sánh baseline và kiểm định kết quả, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong So sánh baseline và kiểm định kết quả, kết quả thay đổi theo ... Công thức paired test; confidence interval cho thấy ... Trong ứng dụng AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M45",
+    "stage": "hk4",
+    "lessonId": "M45",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Visualization Toán cho bảo vệ",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Visualization Toán cho bảo vệ, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Visualization Toán cho bảo vệ, kết quả thay đổi theo ... Công thức plot, residual, spectrum, trajectory cho thấy ... Trong ứng dụng НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M46",
+    "stage": "hk4",
+    "lessonId": "M46",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Chuẩn hóa phụ lục công thức/code",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Chuẩn hóa phụ lục công thức/code, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Chuẩn hóa phụ lục công thức/code, kết quả thay đổi theo ... Công thức config, seed, dataset split cho thấy ... Trong ứng dụng НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M47",
+    "stage": "hk4",
+    "lessonId": "M47",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Kịch bản phản biện Toán",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Kịch bản phản biện Toán, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Kịch bản phản biện Toán, kết quả thay đổi theo ... Công thức why this model? why this metric? cho thấy ... Trong ứng dụng НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  },
+  {
+    "id": "sim_report_M48",
+    "stage": "hk4",
+    "lessonId": "M48",
+    "mode": "simulation-report",
+    "type": "simulation-reflection",
+    "title": "Báo cáo mô phỏng · Tổng ôn Toán Bauman Master AI",
+    "purpose": "Viết kết luận ngắn sau khi đổi tham số trong tab Mô phỏng.",
+    "prompt_vi": "Sau khi chạy mô phỏng Tổng ôn Toán Bauman Master AI, hãy ghi: biến đầu vào đã đổi, kết quả trước/sau, công thức giải thích hiện tượng và ứng dụng vào AI/Bauman.",
+    "target_words": 160,
+    "time_minutes": 12,
+    "required_patterns": [
+      "Biến đầu vào",
+      "Kết quả trước/sau",
+      "Giải thích bằng công thức",
+      "Ứng dụng AI/Bauman",
+      "Lỗi cần tránh"
+    ],
+    "model_vi": "Khi thay đổi biến đầu vào trong Tổng ôn Toán Bauman Master AI, kết quả thay đổi theo ... Công thức integrated notebook + report cho thấy ... Trong ứng dụng НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu., điều này giúp ...",
+    "rubric": [
+      "Có số liệu trước/sau",
+      "Có công thức giải thích",
+      "Có kết luận ứng dụng",
+      "Có giới hạn hoặc lỗi cần tránh"
+    ]
+  }
+]

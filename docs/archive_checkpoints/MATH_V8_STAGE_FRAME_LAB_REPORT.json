@@ -1,0 +1,20 @@
+{
+  "version": "V8 StageFrame Lab",
+  "changes": [
+    "Không xuất file main, chỉ xuất module/phôi Toán.",
+    "Tab Học tập: thay Vấn đáp bằng Ứng dụng, dùng data/dialogue-bauman-az.json làm case ứng dụng thực tế/AI/Bauman.",
+    "Tab Ứng dụng cũ: đổi thành Vấn đáp, dùng data/speaking.json cho câu hỏi giáo sư và thuật ngữ Việt-Nga-Anh.",
+    "Tab Mô phỏng: thiết kế lại dạng phòng lab giả lập gần phong cách MATLAB.",
+    "Flashcard: bỏ chữ Bấm để lật nghĩa, thay bằng ký hiệu/chip ↺ Lật thẻ.",
+    "Kho dữ liệu: bổ sung indicator luôn hiển thị nhóm nguồn dữ liệu đang chọn.",
+    "Tất cả nhãn và dữ liệu bám 6 giai đoạn lộ trình Toán."
+  ],
+  "data_counts": {
+    "lessons": 48,
+    "dialogue-bauman-az": 48,
+    "speaking": 48,
+    "simulations": 48,
+    "vocab": 80,
+    "exercises": 144
+  }
+}

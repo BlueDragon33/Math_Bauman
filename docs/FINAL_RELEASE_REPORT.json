@@ -1,0 +1,29 @@
+{
+  "id": "BAUMAN_MATH_FINAL_RELEASE_REPORT",
+  "status": "FINAL",
+  "releasedAt": "2026-06-20",
+  "sourceCheckpoint": "E76_FINAL_READINESS_AUDIT_PATCH_SNAPSHOT",
+  "counts": {
+    "chapters": 32,
+    "lessons": 260,
+    "exercises": 1040,
+    "applications": 520,
+    "simulationsUnified": 260,
+    "formulas": 678,
+    "professorQa": 260,
+    "questionBank": 1423,
+    "testBlueprints": 32
+  },
+  "changes": [
+    "Converted active metadata from checkpoint/snapshot to FINAL",
+    "Updated subject manifest JSON/JS",
+    "Updated content manifest final flags",
+    "Updated adapter/UI labels",
+    "Added BAUMAN_MATH_FINAL_SELF_CHECK()",
+    "Moved E71-E76 top-level checkpoint reports into archive_notes/finalization_history"
+  ],
+  "notes": [
+    "No new academic content was added during finalization",
+    "Cốc Cốc thật không tồn tại trong sandbox; final keeps Chromium-compatible checks and Cốc Cốc should be verified by opening through Live Server on the user machine"
+  ]
+}

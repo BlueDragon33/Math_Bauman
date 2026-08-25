@@ -1,0 +1,15 @@
+{
+  "version": "V33 · Grouped Tabs + Storage UX Fix",
+  "changes": [
+    "Tab Lý thuyết gom theo Khoa → Bộ môn → Chương → mục nhỏ, chương ôm các mục 1.1/1.2/...",
+    "Tab Bài tập trong Học tập dùng cùng cây phân cấp, không xổ phẳng.",
+    "Tab Ứng dụng trong Học tập dùng cùng cây phân cấp.",
+    "Tab Mô phỏng dùng cây phân cấp trong sidebar Workspace.",
+    "Tab Vấn đáp dùng cây phân cấp trong Kho câu hỏi giáo sư.",
+    "Tab Dữ liệu sửa layout tránh chữ bị bóp dọc, indicator và dropdown Kho môn học hiển thị ngang, gọn hơn.",
+    "Giữ nguyên dữ liệu V32 và hệ content manager."
+  ],
+  "notes": [
+    "Không thay nội dung JSON ở lượt này; chỉ sửa engine/UX/UI."
+  ]
+}

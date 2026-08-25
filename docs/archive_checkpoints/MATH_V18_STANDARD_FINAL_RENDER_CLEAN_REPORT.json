@@ -1,0 +1,18 @@
+{
+  "version": "V18",
+  "module": "math",
+  "changes": [
+    "Full module rebuilt from V12 shell",
+    "Applied renderer clean: hidden keyword metadata and related concept cards from slide body and presentation",
+    "Metadata remains in JSON for search/filter/linking",
+    "Replaced lessons.json with math_lessons_bauman_direct_reference_v17_clean_slides.json",
+    "Kept presentation overlay isolation fix from V12"
+  ],
+  "lessonCount": 48,
+  "slideCount": 576,
+  "validation": {
+    "jsonFilesChecked": 54,
+    "jsonErrors": [],
+    "jsErrors": []
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "checkpoint": "E38_DEDUP_DISPLAY_PRESENTATION_CTA",
+  "final": false,
+  "source": "E37_FLOW_COMPACT_REGRESSION_CHECKPOINT_TEST_SNAPSHOT",
+  "fixes": [
+    "Sanitize Công thức/Công thức sâu labels: no Chương n - Chương n duplication.",
+    "Remove redundant formula title blocks inside the same formula page.",
+    "Formula card header now shows non-duplicate section labels and keeps formula/title as supporting text.",
+    "Presentation mode now shows the same final-slide CTA as theory: Bài tập and Mô phỏng nhanh.",
+    "Keep theory slide strip horizontal only and retain compact premium layout."
+  ],
+  "data_title_prefixes_removed": 51,
+  "validation": {
+    "json_js_errors": [],
+    "checks": {
+      "E38 marker": true,
+      "clean label function": true,
+      "presentation end CTA": true,
+      "formula title sanitizer": true,
+      "object object": true
+    }
+  }
+}

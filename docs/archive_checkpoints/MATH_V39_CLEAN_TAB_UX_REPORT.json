@@ -1,0 +1,18 @@
+{
+  "version": "V39",
+  "name": "Clean tab UX + split simulation chapter pickers",
+  "changes": [
+    "Tab Mô phỏng tách 2 nút Chọn chương: Mô phỏng lý thuyết và Mô phỏng ứng dụng.",
+    "Tab Lý thuyết và Ứng dụng dùng thanh chọn chương gọn, giảm mô tả rườm rà và tránh lấn nội dung.",
+    "Tab Vấn đáp thiết kế lại theo card sạch: câu hỏi hiện tại, hành động trả lời, khung trả lời chuẩn, bản đồ lượt hỏi.",
+    "Giữ cơ chế chọn chương dạng modal rộng rãi, không nhồi cây trong panel hẹp.",
+    "Tăng cache version lên v39."
+  ],
+  "filesPatched": [
+    "core.js",
+    "core.css",
+    "math.css",
+    "index.html",
+    "subject-manifest.json"
+  ]
+}

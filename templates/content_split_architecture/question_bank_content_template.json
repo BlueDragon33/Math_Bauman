@@ -1,0 +1,25 @@
+{
+  "frameFile": "question_bank_frame.json",
+  "contentFile": "question_bank_content.json",
+  "recordKey": "questionId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonId": "MATH-VN-LA-C01-L04",
+    "tags": [
+      "vector",
+      "AI",
+      "điều khiển"
+    ],
+    "questionId": "MATH-VN-LA-C01-L04-Q001",
+    "level": "medium",
+    "question": "Cosine similarity loại bỏ ảnh hưởng nào?",
+    "options": [
+      "Độ dài vector",
+      "Số chiều",
+      "Dấu của vector",
+      "Tất cả nhiễu"
+    ],
+    "answer": "Độ dài vector",
+    "auditStatus": "DRAFT"
+  }
+}

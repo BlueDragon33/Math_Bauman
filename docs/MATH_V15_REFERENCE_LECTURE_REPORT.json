@@ -1,0 +1,29 @@
+{
+  "version": "V15 · Professor Reference Lectures",
+  "scope": "Làm lại toàn bộ Lý thuyết môn Toán theo phong cách giáo sư viết sách tham khảo, không còn dạng ghi chú cưỡi ngựa xem hoa.",
+  "lessons": 48,
+  "slidesPerLesson": 24,
+  "theorySlides": 1152,
+  "referenceChapters": 48,
+  "updatedFiles": [
+    "data/lessons.json",
+    "docs/CANVA_READY_REFERENCE_BOOK_THEORY_SLIDES_V15.json",
+    "docs/MATH_V15_REFERENCE_LECTURE_REPORT.json"
+  ],
+  "contentLayers": [
+    "formal definition",
+    "core formula",
+    "theorem/proposition",
+    "derivation/proof sketch",
+    "worked example",
+    "counterexample",
+    "numerical stability",
+    "algorithm/notebook",
+    "theory simulation",
+    "application simulation",
+    "AI/Bauman application",
+    "oral defense"
+  ],
+  "canvaNextStep": "Sau khi chốt ruột học thuật V15, dùng Canva để redesign hệ slide theo layout proof-example-lab, không làm trước khi nội dung được duyệt.",
+  "date": "2026-06-13"
+}

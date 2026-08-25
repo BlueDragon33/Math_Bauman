@@ -1,0 +1,565 @@
+{
+  "id": "bauman_math_theory_reference_c01_l04_v1",
+  "schema": "bauman_math_theory_reference_v1",
+  "version": "REFERENCE_C01_L04_V1_APPROVED",
+  "status": "approved_against_core",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L04-basis-span-coordinate-e140",
+  "lessonTitle": "§1.4 · Cơ sở, span và tọa độ",
+  "displayTitle": "Tham khảo thêm · Cơ sở, span và tọa độ",
+  "language": "vi",
+  "sourceCore": {
+    "path": "../theory_core/theory_core_c01_l04.json",
+    "version": "CORE_C01_L04_V1_APPROVED",
+    "status": "approved_against_gold_standard",
+    "sourceOfTruth": true
+  },
+  "purpose": "Bảng tra cứu nhanh dẫn xuất từ core đã approved. Nội dung giúp kiểm định nghĩa, công thức, điều kiện áp dụng, lựa chọn phương pháp, lỗi thường gặp và ý nghĩa kỹ thuật mà không thay thế bài học đầy đủ.",
+  "referenceContract": {
+    "referenceOnly": true,
+    "mustNotAddNewMathematics": true,
+    "mustNotContradictCore": true,
+    "compactByDesign": true,
+    "sourceTraceRequired": true,
+    "noUiInstructions": true,
+    "noRuntimeInstructions": true,
+    "noSlideNumbering": true
+  },
+  "informationArchitecture": [
+    {
+      "id": "R01",
+      "title": "Bản đồ khái niệm",
+      "purpose": "Nhìn nhanh quan hệ linear combination, span, independence, basis và coordinates.",
+      "sourceFields": ["lessonThesis", "coreConcepts"]
+    },
+    {
+      "id": "R02",
+      "title": "Bảng công thức",
+      "purpose": "Tra công thức cùng điều kiện, câu hỏi trả lời và cảnh báo.",
+      "sourceFields": ["mainFormulas"]
+    },
+    {
+      "id": "R03",
+      "title": "Phân loại họ biểu diễn",
+      "purpose": "Phân biệt spanning family, independent family, basis, orthonormal basis, dictionary và feature set.",
+      "sourceFields": ["comparisonLogic.familyTypes"]
+    },
+    {
+      "id": "R04",
+      "title": "Chọn phương pháp",
+      "purpose": "Chọn solve, dot shortcut, family analysis hoặc transform theo tình huống.",
+      "sourceFields": ["comparisonLogic.methodSelection", "mainMechanisms"]
+    },
+    {
+      "id": "R05",
+      "title": "Cổng kiểm tra kỹ thuật",
+      "purpose": "Kiểm target space, order, units, frame, time, uniqueness và reconstruction.",
+      "sourceFields": ["assumptionGate", "implementationContract.metadataContract"]
+    },
+    {
+      "id": "R06",
+      "title": "Lỗi và chẩn đoán nhanh",
+      "purpose": "Nhận diện symptom, root cause và hành động sửa.",
+      "sourceFields": ["commonMisconceptions", "failureModeAtlas"]
+    },
+    {
+      "id": "R07",
+      "title": "Case UGV mẫu",
+      "purpose": "Tra nhanh một phép đổi world-route đã kiểm số.",
+      "sourceFields": ["workedCase"]
+    }
+  ],
+  "conceptMap": {
+    "thesis": "Span cho existence, independence cho uniqueness; basis cho cả hai. Tọa độ thay đổi theo ordered basis, còn vector được mô tả không đổi.",
+    "chain": [
+      "linear_combination",
+      "span",
+      "linear_independence",
+      "basis",
+      "coordinates",
+      "uniqueness",
+      "change_of_basis",
+      "exact_or_approximate_representation"
+    ],
+    "entries": [
+      {
+        "id": "RC1",
+        "term": "Tổ hợp tuyến tính",
+        "compactDefinition": "Co giãn các vector b_i bằng c_i rồi cộng để tạo v.",
+        "keyQuestion": "Họ vector tạo ra vector nào với coefficients đã cho?",
+        "engineeringMeaning": "State reconstruction, signal synthesis hoặc actuator mixing.",
+        "sourceCore": ["C2", "F1"]
+      },
+      {
+        "id": "RC2",
+        "term": "Span",
+        "compactDefinition": "Tập mọi tổ hợp tuyến tính của một họ vector.",
+        "keyQuestion": "Những vector nào được biểu diễn chính xác?",
+        "engineeringMeaning": "Miền trạng thái, tín hiệu hoặc hướng điều khiển mà representation bao phủ.",
+        "sourceCore": ["C3", "F2", "F3"]
+      },
+      {
+        "id": "RC3",
+        "term": "Độc lập tuyến tính",
+        "compactDefinition": "Quan hệ sum_i z_i b_i=0 chỉ có nghiệm z=0.",
+        "keyQuestion": "Mỗi vector có thêm một hướng thông tin mới không?",
+        "engineeringMeaning": "Loại redundancy và hỗ trợ unique coefficients.",
+        "sourceCore": ["C4", "F4"]
+      },
+      {
+        "id": "RC4",
+        "term": "Basis",
+        "compactDefinition": "Họ vừa sinh target space vừa độc lập tuyến tính.",
+        "keyQuestion": "Representation có đủ và không dư không?",
+        "engineeringMeaning": "Coordinate contract tối thiểu cho target space.",
+        "sourceCore": ["C5", "F5"]
+      },
+      {
+        "id": "RC5",
+        "term": "Ordered basis",
+        "compactDefinition": "Basis có thứ tự cố định khi dùng để mã hóa tọa độ.",
+        "keyQuestion": "Coefficient thứ i đi với basis vector nào?",
+        "engineeringMeaning": "Axis order và feature order là metadata bắt buộc.",
+        "sourceCore": ["C6", "F6", "F7"]
+      },
+      {
+        "id": "RC6",
+        "term": "Coordinates",
+        "compactDefinition": "Cột coefficients [v]_B tái tạo v theo ordered basis B.",
+        "keyQuestion": "Vector cần bao nhiêu ở mỗi basis direction?",
+        "engineeringMeaning": "World, body, route, sensor hoặc modal coordinates.",
+        "sourceCore": ["C1", "F6", "F7"]
+      },
+      {
+        "id": "RC7",
+        "term": "Orthonormal basis",
+        "compactDefinition": "Các basis vectors trực giao đôi một và có norm 1.",
+        "keyQuestion": "Có thể lấy coordinates bằng dot products không?",
+        "engineeringMeaning": "Coefficient recovery đơn giản và norm được bảo toàn qua orthonormal change.",
+        "sourceCore": ["C7", "F9"]
+      },
+      {
+        "id": "RC8",
+        "term": "Near dependence",
+        "compactDefinition": "Họ vẫn independent chính xác nhưng các directions gần phụ thuộc.",
+        "keyQuestion": "Coefficients có nhạy với nhiễu nhỏ không?",
+        "engineeringMeaning": "Large canceling coefficients và condition warning.",
+        "sourceCore": ["C8", "workedCase.nearDependenceContrast"]
+      },
+      {
+        "id": "RC9",
+        "term": "Feature set hoặc dictionary",
+        "compactDefinition": "Representation family không tự động là mathematical basis.",
+        "keyQuestion": "Có spanning, independence và target space rõ không?",
+        "engineeringMeaning": "Sparse coefficients hoặc feature values không mặc nhiên là unique basis coordinates.",
+        "sourceCore": ["C9", "comparisonLogic.familyTypes"]
+      }
+    ]
+  },
+  "notationLookup": [
+    {"symbol":"V","meaning":"Target vector space cần được nêu rõ."},
+    {"symbol":"B=(b_1,...,b_k)","meaning":"Ordered family hoặc ordered basis."},
+    {"symbol":"B_mat=[b_1 ... b_k]","meaning":"Ma trận có các basis/generating vectors làm columns theo order."},
+    {"symbol":"c=(c_1,...,c_k)^T","meaning":"Coefficient column theo order của B."},
+    {"symbol":"[v]_B","meaning":"Coordinate column của v theo B, không phải bản thân v."},
+    {"symbol":"span(B)","meaning":"Tập mọi linear combinations của B."},
+    {"symbol":"r=v-B_mat c","meaning":"Reconstruction residual."},
+    {"symbol":"P_{E<-B}","meaning":"Coordinate transform từ B sang E; columns là [b_i]_E."},
+    {"symbol":"delta_ij","meaning":"1 khi i=j và 0 khi i khác j trong orthonormality condition."}
+  ],
+  "formulaTable": [
+    {
+      "id": "RF1",
+      "name": "Tổ hợp tuyến tính",
+      "formula": "v = sum_{i=1}^k c_i b_i",
+      "answers": "Vector được tạo từ directions và coefficients nào?",
+      "conditions": "Các b_i cùng vector space; units và frame cho phép cộng.",
+      "warning": "Rescale basis làm coefficients đổi; coefficients không tự động là invariant physical quantities.",
+      "sourceCore": "F1"
+    },
+    {
+      "id": "RF2",
+      "name": "Span",
+      "formula": "span(b_1,...,b_k) = {sum_i c_i b_i | c_i in R}",
+      "answers": "Representation tạo được toàn bộ tập vector nào?",
+      "conditions": "Các b_i thuộc cùng vector space.",
+      "warning": "Thêm vector redundant có thể không làm span lớn hơn.",
+      "sourceCore": "F2"
+    },
+    {
+      "id": "RF3",
+      "name": "Span membership",
+      "formula": "v in span(B) iff exists c such that B_mat c = v",
+      "answers": "Có exact representation không?",
+      "conditions": "v và columns của B_mat cùng ambient coordinates và metadata.",
+      "warning": "Existence không bảo đảm uniqueness.",
+      "sourceCore": "F3"
+    },
+    {
+      "id": "RF4",
+      "name": "Linear independence",
+      "formula": "sum_i z_i b_i = 0 implies z_i = 0 for all i",
+      "answers": "Họ có redundancy tuyến tính không?",
+      "conditions": "Đánh giá trong cùng vector space; numerical tolerance phải có scale.",
+      "warning": "Exact independence không loại trừ near dependence.",
+      "sourceCore": "F4"
+    },
+    {
+      "id": "RF5",
+      "name": "Basis condition",
+      "formula": "B is a basis of V iff span(B)=V and B is linearly independent",
+      "answers": "Họ có đủ và không dư cho V không?",
+      "conditions": "Phải nêu target space V.",
+      "warning": "Một independent subset chưa chắc là basis của ambient space lớn hơn.",
+      "sourceCore": "F5"
+    },
+    {
+      "id": "RF6",
+      "name": "Coordinates",
+      "formula": "[v]_B=(c_1,...,c_n)^T where v=sum_i c_i b_i",
+      "answers": "Mã của v trong ordered basis B là gì?",
+      "conditions": "B là ordered basis của space chứa v.",
+      "warning": "Bỏ basis label hoặc đổi order làm tuple mất nghĩa.",
+      "sourceCore": "F6"
+    },
+    {
+      "id": "RF7",
+      "name": "Reconstruction",
+      "formula": "v = B_mat [v]_B",
+      "answers": "Coordinate result có tái tạo đúng vector không?",
+      "conditions": "Column order và basis version phải khớp coordinate metadata.",
+      "warning": "Coordinate answer không reconstruction chưa đủ tin cậy.",
+      "sourceCore": "F7"
+    },
+    {
+      "id": "RF8",
+      "name": "Uniqueness",
+      "formula": "B_mat c = B_mat d and B independent imply c=d",
+      "answers": "Vì sao basis coordinates duy nhất?",
+      "conditions": "B independent; c và d theo cùng ordered family.",
+      "warning": "Solver trả một nghiệm không chứng minh mathematical uniqueness.",
+      "sourceCore": "F8"
+    },
+    {
+      "id": "RF9",
+      "name": "Orthonormal shortcut",
+      "formula": "c_i = v · b_i when b_i · b_j = delta_ij",
+      "answers": "Khi nào một dot product cho một coordinate?",
+      "conditions": "B orthonormal trong cùng inner-product space.",
+      "warning": "Orthogonal non-unit cần c_i=(v·b_i)/(b_i·b_i); arbitrary basis cần solve.",
+      "sourceCore": "F9"
+    },
+    {
+      "id": "RF10",
+      "name": "Change of coordinates",
+      "formula": "[v]_E = P_{E<-B}[v]_B",
+      "answers": "Chuyển B-coordinates sang E-coordinates thế nào?",
+      "conditions": "B và E là ordered bases cùng space; direction của transform rõ.",
+      "warning": "Không đảo source-target hoặc dùng transpose như inverse cho basis tổng quát.",
+      "sourceCore": "F10"
+    },
+    {
+      "id": "RF11",
+      "name": "Residual",
+      "formula": "r = v - B_mat c",
+      "answers": "Phần nào chưa được representation tái tạo?",
+      "conditions": "v và reconstruction cùng schema, units, frame và metric.",
+      "warning": "Residual nhỏ không chứng minh physical model đúng.",
+      "sourceCore": "F11"
+    },
+    {
+      "id": "RF12",
+      "name": "Non-uniqueness",
+      "formula": "if B_mat z=0, z!=0 and B_mat c=v, then B_mat(c+t z)=v",
+      "answers": "Vì sao redundant family có nhiều coefficient vectors?",
+      "conditions": "Có nonzero null relation z.",
+      "warning": "Regularizer hoặc solver chỉ chọn một nghiệm theo tiêu chí bổ sung.",
+      "sourceCore": "F12"
+    }
+  ],
+  "familyComparison": [
+    {
+      "family": "Spanning family",
+      "spansTarget": "Có",
+      "independent": "Có thể có hoặc không",
+      "existence": "Có cho target space",
+      "uniqueness": "Không bảo đảm",
+      "safeLabel": "Generating family"
+    },
+    {
+      "family": "Independent family",
+      "spansTarget": "Không bảo đảm",
+      "independent": "Có",
+      "existence": "Chỉ cho vectors trong span của họ",
+      "uniqueness": "Có trong span của họ",
+      "safeLabel": "Independent directions"
+    },
+    {
+      "family": "Basis",
+      "spansTarget": "Có",
+      "independent": "Có",
+      "existence": "Có",
+      "uniqueness": "Có",
+      "safeLabel": "Basis coordinates"
+    },
+    {
+      "family": "Orthonormal basis",
+      "spansTarget": "Có",
+      "independent": "Có",
+      "existence": "Có",
+      "uniqueness": "Có",
+      "safeLabel": "Dot-product coordinates after verification"
+    },
+    {
+      "family": "Overcomplete dictionary",
+      "spansTarget": "Có thể",
+      "independent": "Không",
+      "existence": "Có thể",
+      "uniqueness": "Không nếu thiếu tiêu chí bổ sung",
+      "safeLabel": "Dictionary coefficients"
+    },
+    {
+      "family": "Feature set",
+      "spansTarget": "Phụ thuộc model",
+      "independent": "Phải kiểm",
+      "existence": "Schema-defined",
+      "uniqueness": "Không phải kết luận basis",
+      "safeLabel": "Feature values"
+    }
+  ],
+  "methodDecisionTable": [
+    {
+      "situation": "B là basis tổng quát nhỏ",
+      "use": "Giải B_mat c=v rồi reconstruct",
+      "avoid": "Raw dot products"
+    },
+    {
+      "situation": "B đã được xác nhận orthonormal",
+      "use": "c_i=v·b_i rồi reconstruct",
+      "avoid": "Suy orthonormality chỉ từ hình dạng"
+    },
+    {
+      "situation": "B orthogonal nhưng chưa normalized",
+      "use": "c_i=(v·b_i)/(b_i·b_i)",
+      "avoid": "Dùng raw dots như coordinates"
+    },
+    {
+      "situation": "B redundant",
+      "use": "Báo non-uniqueness và solver/selection criterion",
+      "avoid": "Gọi output là unique basis coordinates"
+    },
+    {
+      "situation": "v nằm ngoài span(B)",
+      "use": "Báo exact failure và residual; dùng approximate mode nếu được yêu cầu",
+      "avoid": "Gọi approximation là exact"
+    },
+    {
+      "situation": "Coordinates khác frame, basis hoặc model version",
+      "use": "Transform hoặc align về common representation",
+      "avoid": "So component-wise trực tiếp"
+    }
+  ],
+  "assumptionChecklist": [
+    {"gate":"Target space","question":"B là basis của V nào?","failAction":"Không kết luận basis."},
+    {"gate":"Object type","question":"Đối tượng là free vector hay affine point?","failAction":"Không dùng pure basis change cho point khác origin."},
+    {"gate":"Order","question":"Basis order và version đã khóa chưa?","failAction":"Khóa order trước coordinates."},
+    {"gate":"Compatibility","question":"Schema, units, frame, timestamp và preprocessing có khớp không?","failAction":"Align hoặc reject."},
+    {"gate":"Spanning","question":"B có chứa v trong span hoặc sinh target space không?","failAction":"Báo missing direction hoặc out-of-span."},
+    {"gate":"Independence","question":"Coefficients có unique không?","failAction":"Gọi generating family/dictionary."},
+    {"gate":"Orthonormality","question":"Gram matrix có gần identity theo tolerance không?","failAction":"Không dùng dot shortcut."},
+    {"gate":"Reconstruction","question":"B_mat c có gần v theo tolerance không?","failAction":"Không chấp nhận result."},
+    {"gate":"Sensitivity","question":"Coefficients có lớn, triệt tiêu hoặc nhạy perturbation không?","failAction":"Bật warning và xem lại basis."}
+  ],
+  "failureQuickGuide": [
+    {
+      "failure": "Đảo basis-column order",
+      "symptom": "Tuple có vẻ hợp lệ nhưng reconstruction sai.",
+      "diagnosis": "So ordered-column hash và coordinate order.",
+      "repair": "Reorder columns và coefficients đồng bộ.",
+      "sourceCore": "FM01"
+    },
+    {
+      "failure": "Đảo transform direction",
+      "symptom": "Frame-conversion error lớn.",
+      "diagnosis": "Kiểm ký hiệu P_{target<-source}.",
+      "repair": "Dùng đúng source-target direction.",
+      "sourceCore": "FM02"
+    },
+    {
+      "failure": "Transform hoặc basis quá cũ",
+      "symptom": "Arithmetic đúng nhưng geometry sai thời điểm.",
+      "diagnosis": "Kiểm vector time, basis time và transform age.",
+      "repair": "Interpolate về common time hoặc reject.",
+      "sourceCore": "FM03"
+    },
+    {
+      "failure": "Đổi left/right normal convention",
+      "symptom": "Lateral coordinate đổi dấu.",
+      "diagnosis": "Kiểm normal vector và convention version.",
+      "repair": "Version convention và convert sign có kiểm soát.",
+      "sourceCore": "FM04"
+    },
+    {
+      "failure": "Dùng dot shortcut với non-unit hoặc non-orthogonal basis",
+      "symptom": "Reconstruction sai hoặc magnitude phóng đại.",
+      "diagnosis": "Kiểm norms và Gram off-diagonal terms.",
+      "repair": "Normalize, dùng quotient hoặc solve Bc=v.",
+      "sourceCore": ["FM05", "FM10"]
+    },
+    {
+      "failure": "Nhầm body frame với route frame",
+      "symptom": "Control components có ý nghĩa sai.",
+      "diagnosis": "So robot yaw, route heading và frame IDs.",
+      "repair": "Giữ frames riêng và transform rõ.",
+      "sourceCore": "FM07"
+    },
+    {
+      "failure": "Nhầm point với free vector",
+      "symptom": "Sai offset vị trí cố định.",
+      "diagnosis": "Kiểm object type và frame origins.",
+      "repair": "Dùng affine hoặc rigid transform ở bài phù hợp.",
+      "sourceCore": "FM08"
+    },
+    {
+      "failure": "Near-dependent basis",
+      "symptom": "Coefficients rất lớn và triệt tiêu nhau.",
+      "diagnosis": "Kiểm condition estimate, coefficient norm và perturbation response.",
+      "repair": "Đổi basis hoặc bật sensitivity warning.",
+      "sourceCore": "FM11"
+    },
+    {
+      "failure": "Residual được tin trước metadata",
+      "symptom": "False confidence hoặc false out-of-span alarm.",
+      "diagnosis": "Kiểm contract_valid trước residual norm.",
+      "repair": "Align metadata rồi tính lại.",
+      "sourceCore": "FM12"
+    },
+    {
+      "failure": "Raw IMU bị gọi là inertial acceleration",
+      "symptom": "Gravity hoặc bias error.",
+      "diagnosis": "Kiểm calibration, gravity compensation và sensor frame.",
+      "repair": "Ghi specific-force semantics và processing state.",
+      "sourceCore": "FM13"
+    },
+    {
+      "failure": "Embedding pipelines không tương thích",
+      "symptom": "Similarity drift sau model update.",
+      "diagnosis": "So model, encoder, pooling, normalization và alignment versions.",
+      "repair": "Dùng cùng pipeline hoặc explicit alignment.",
+      "sourceCore": "FM17"
+    },
+    {
+      "failure": "NaN, infinity hoặc silent broadcasting",
+      "symptom": "Output trông hợp lệ nhưng batch semantics hỏng.",
+      "diagnosis": "Kiểm exact shapes và finite status.",
+      "repair": "Reject invalid data, không silent reshape/broadcast.",
+      "sourceCore": "FM18"
+    }
+  ],
+  "workedCaseSnapshot": {
+    "caseId": "CASE_UGV_WORLD_ROUTE_BASIS",
+    "worldVelocity": {
+      "value": [5.0, 1.0],
+      "symbol": "[v]_W",
+      "units": "m/s"
+    },
+    "routeBasis": {
+      "t": [0.6, 0.8],
+      "nLeft": [-0.8, 0.6],
+      "order": ["t", "nLeft"],
+      "orthonormal": true
+    },
+    "transform": {
+      "symbol": "P_{W<-R}",
+      "matrix": [[0.6, -0.8], [0.8, 0.6]]
+    },
+    "routeCoordinates": {
+      "value": [3.8, -3.4],
+      "symbol": "[v]_R",
+      "interpretation": "3.8 m/s dọc tuyến và 3.4 m/s về bên phải theo left-normal convention."
+    },
+    "checks": {
+      "reconstructedWorld": [5.0, 1.0],
+      "residualNorm": 0.0,
+      "worldNormSquared": 26.0,
+      "routeNormSquared": 26.0,
+      "normPreserved": true
+    },
+    "doNotForget": [
+      "Route frame không tự động là body frame.",
+      "Lateral sign phụ thuộc normal convention.",
+      "Vector và basis phải cùng timestamp hoặc được align.",
+      "Case dùng velocity vector, không dùng position point."
+    ],
+    "sourceCore": "workedCase"
+  },
+  "engineeringTransfer": [
+    {
+      "domain": "UGV",
+      "safeUse": "World-route velocity conversion với frame, order, time và normal convention rõ.",
+      "unsafeShortcut": "Đọc route tuple như world tuple hoặc body command."
+    },
+    {
+      "domain": "IMU",
+      "safeUse": "Coordinate representation sau khi khai báo calibration và processing state.",
+      "unsafeShortcut": "Gọi raw accelerometer output là inertial acceleration."
+    },
+    {
+      "domain": "Signal",
+      "safeUse": "Inner-product coefficients khi sampling grid, window, weighting và normalization khớp.",
+      "unsafeShortcut": "Dùng basis từ sampling contract khác."
+    },
+    {
+      "domain": "Feature engineering",
+      "safeUse": "Phân biệt feature schema, information redundancy và exact linear dependence.",
+      "unsafeShortcut": "Gọi nonlinear derived feature là linearly dependent."
+    },
+    {
+      "domain": "Sparse dictionary",
+      "safeUse": "Ghi solver hoặc regularizer chọn coefficients nào.",
+      "unsafeShortcut": "Gọi một solution là unique basis coordinates."
+    },
+    {
+      "domain": "Embeddings",
+      "safeUse": "So sánh trong cùng pipeline hoặc sau explicit alignment.",
+      "unsafeShortcut": "Cùng dimension được coi là cùng coordinate space."
+    }
+  ],
+  "masteryCompass": [
+    "Có nêu target space và ordered basis trước khi gọi coordinates không?",
+    "Có phân biệt existence với uniqueness không?",
+    "Có kiểm orthonormality trước dot shortcut không?",
+    "Có reconstruction và residual không?",
+    "Có kiểm units, frame, time và version không?",
+    "Có đánh giá near dependence hoặc large coefficients không?",
+    "Có tránh gọi dictionary/feature set là basis khi chưa đủ điều kiện không?"
+  ],
+  "sourceTraceability": {
+    "coreConceptsCovered": ["C1","C2","C3","C4","C5","C6","C7","C8","C9"],
+    "formulasCovered": ["F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"],
+    "assumptionGatesCovered": ["declaredTargetSpace","sameAmbientSpace","orderedFamily","schemaUnitsFrame","spanningTarget","linearIndependence","orthonormality","basisScaling","nearDependence","exactVsApproximate","reconstruction","representationCompatibility"],
+    "workedCaseCovered": true,
+    "misconceptionClassesCovered": ["object_vs_representation","span_basis_uniqueness","method_and_numerics","engineering_and_ai_contracts"],
+    "failureModesSelected": ["FM01","FM02","FM03","FM04","FM05","FM07","FM08","FM10","FM11","FM12","FM13","FM17","FM18"],
+    "newMathematicsAdded": false
+  },
+  "downstreamMapping": {
+    "slideshowUse": ["conceptMap", "formulaTable", "workedCaseSnapshot", "masteryCompass"],
+    "fullViewUse": ["notationLookup", "formulaTable", "familyComparison", "methodDecisionTable", "assumptionChecklist", "failureQuickGuide", "engineeringTransfer"],
+    "formulaFinalizationUse": ["notationLookup.symbol", "formulaTable.formula", "workedCaseSnapshot"]
+  },
+  "qualityGate": {
+    "mustPass": [
+      "Reference content is derived only from CORE_C01_L04_V1_APPROVED.",
+      "All nine core concepts are represented.",
+      "All twelve main formulas are represented with conditions and warnings.",
+      "Spanning family, independent family, basis, orthonormal basis, dictionary and feature set are distinguished.",
+      "Method selection covers general, orthonormal, orthogonal non-unit, redundant, out-of-span and incompatible-representation cases.",
+      "Target space, object type, order, metadata, spanning, independence, orthonormality, reconstruction and sensitivity gates are visible.",
+      "Worked-case numbers match the approved core exactly.",
+      "Reference content is compact and does not duplicate assessment or implementation code.",
+      "No new mathematical claim, UI directive or runtime behavior is introduced."
+    ],
+    "reviewStatus": "reference_review_approved",
+    "nextPass": "PASS_11_SLIDESHOW"
+  }
+}

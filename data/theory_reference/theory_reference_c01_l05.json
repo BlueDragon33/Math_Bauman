@@ -1,0 +1,465 @@
+{
+  "id": "bauman_math_theory_reference_c01_l05_v1",
+  "schema": "bauman_math_theory_reference_v1",
+  "version": "REFERENCE_C01_L05_V1_PASS11",
+  "status": "pass11_complete_pending_full_view",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L05-subspace-data-representation-e140",
+  "lessonTitle": "§1.5 · Không gian con và biểu diễn dữ liệu",
+  "displayTitle": "Tham khảo thêm · Không gian con và biểu diễn dữ liệu",
+  "language": "vi",
+  "sourceCore": {
+    "path": "../theory_core/theory_core_c01_l05.json",
+    "version": "CORE_C01_L05_V1_PASS07_ARCHITECTURE",
+    "status": "architecture_locked_not_academically_accepted",
+    "sourceOfTruthCandidate": true
+  },
+  "sourceContracts": {
+    "formulaRegistry": "../../THEORY_C01_L05_FORMULA_REGISTRY.md",
+    "terminology": "../../THEORY_C01_L05_SOURCE_MAP_TERMINOLOGY.md",
+    "case": "../theory_case/theory_case_c01_l05.json",
+    "misconceptions": "../../THEORY_C01_L05_MISCONCEPTION_MAP.md",
+    "caseVersion": "CASE_C01_L05_V1_LOCKED"
+  },
+  "purpose": "Bảng tra cứu nhanh cho định nghĩa, projector, rank, preprocessing, case bốn cảm biến, lỗi phổ biến và giới hạn kết luận. Artifact không thay thế bài học đầy đủ và không thêm toán học ngoài các contract đã khóa.",
+  "referenceContract": {
+    "referenceOnly": true,
+    "mustNotAddNewMathematics": true,
+    "mustNotContradictCore": true,
+    "compactByDesign": true,
+    "sourceTraceRequired": true,
+    "lessonScoped": true,
+    "noUiInstructions": true,
+    "noRuntimeInstructions": true,
+    "noSlideNumbering": true,
+    "runtimeRegistrationAllowed": false
+  },
+  "informationArchitecture": [
+    {
+      "id": "R01",
+      "title": "Phân loại mô hình",
+      "purpose": "Phân biệt linear subspace, affine set, finite dataset và noisy near-subspace.",
+      "sourceFields": ["coreConcepts.C1", "coreConcepts.C2", "F01", "F02"]
+    },
+    {
+      "id": "R02",
+      "title": "Bảng công thức F01–F16",
+      "purpose": "Tra công thức cùng shape, điều kiện, kiểm chứng và lỗi dùng sai.",
+      "sourceFields": ["formulaRegistry"]
+    },
+    {
+      "id": "R03",
+      "title": "Chọn projector",
+      "purpose": "Chọn QQ^T hoặc B(B^TB)^(-1)B^T theo geometry của basis.",
+      "sourceFields": ["F05", "F06", "F07", "F08", "F09", "F10"]
+    },
+    {
+      "id": "R04",
+      "title": "Báo cáo dimension và rank",
+      "purpose": "Phân biệt generator count, algebraic rank, numerical rank và retained dimension.",
+      "sourceFields": ["F03", "F04", "F13", "F14", "F15"]
+    },
+    {
+      "id": "R05",
+      "title": "Cổng preprocessing và data contract",
+      "purpose": "Kiểm centering, scaling, feature order, units, orientation và model version.",
+      "sourceFields": ["F02", "F11", "F16", "physicalContract"]
+    },
+    {
+      "id": "R06",
+      "title": "Case bốn cảm biến đã kiểm số",
+      "purpose": "Tra mean, basis, projector, samples, scores, singular values và tolerance đã khóa.",
+      "sourceFields": ["theory_case_c01_l05"]
+    },
+    {
+      "id": "R07",
+      "title": "Lỗi và chẩn đoán nhanh",
+      "purpose": "Tra symptom, root cause, evidence và hành động sửa cho M01–M25.",
+      "sourceFields": ["misconceptionMap"]
+    },
+    {
+      "id": "R08",
+      "title": "Thuật ngữ Việt–Anh–Nga và giới hạn kết luận",
+      "purpose": "Tra thuật ngữ chuẩn và các câu được phép hoặc bị cấm trong diễn giải kỹ thuật.",
+      "sourceFields": ["terminology", "prohibitedClaims"]
+    }
+  ],
+  "modelClassification": {
+    "decisionTable": [
+      {
+        "id": "MC1",
+        "object": "U subset R^n",
+        "tests": ["0 in U", "u+v in U", "alpha u in U"],
+        "classification": "linear_subspace",
+        "language": "U là không gian con tuyến tính của R^n.",
+        "warning": "Hình dạng giống line/plane chưa đủ; phải kiểm zero và closure.",
+        "sourceRefs": ["F01", "M01"]
+      },
+      {
+        "id": "MC2",
+        "object": "mu + U",
+        "tests": ["U is a linear subspace", "mu may be outside U"],
+        "classification": "affine_set",
+        "language": "Dữ liệu được mô hình quanh mean/reference mu.",
+        "warning": "Không gọi là linear subspace nếu không đi qua origin.",
+        "sourceRefs": ["F02", "M01", "M12"]
+      },
+      {
+        "id": "MC3",
+        "object": "finite observations D",
+        "tests": ["recorded samples only"],
+        "classification": "dataset_not_subspace",
+        "language": "D là tập observations; có thể nằm trong hoặc gần một model set.",
+        "warning": "Finite dataset thường không đóng dưới mọi linear combinations.",
+        "sourceRefs": ["F01", "M02"]
+      },
+      {
+        "id": "MC4",
+        "object": "x = mu + Qz + epsilon",
+        "tests": ["Q^TQ=I", "epsilon may be nonzero"],
+        "classification": "noisy_near_subspace_model",
+        "language": "Observation nằm gần affine model mu+col(Q).",
+        "warning": "Small epsilon supports approximation, not exact membership.",
+        "sourceRefs": ["F02", "M04"]
+      }
+    ]
+  },
+  "notationLookup": [
+    {"symbol":"U subset R^n","meaning":"Target linear subspace inside a declared ambient space."},
+    {"symbol":"mu in R^n","meaning":"Mean/reference point of an affine model."},
+    {"symbol":"y=x-mu","meaning":"Centred observation; not feature scaling or unit normalization."},
+    {"symbol":"B=[b_1 ... b_k]","meaning":"General basis/generator matrix with vectors as columns."},
+    {"symbol":"Q in R^(n x k)","meaning":"Orthonormal basis matrix when Q^TQ=I_k."},
+    {"symbol":"z=Q^Ty","meaning":"Coordinates in orthonormal basis Q."},
+    {"symbol":"P_U","meaning":"Orthogonal projector onto U under the declared inner product."},
+    {"symbol":"y_hat=P_Uy","meaning":"Explained component in centred coordinates."},
+    {"symbol":"r=y-y_hat","meaning":"Residual/model-mismatch vector."},
+    {"symbol":"score(x)=||r||_2","meaning":"Euclidean distance to the current affine-subspace model under the locked contract."},
+    {"symbol":"rank_tau(A)","meaning":"Numerical rank of named matrix A under tolerance tau."},
+    {"symbol":"X_c in R^(m x n)","meaning":"Centred matrix with samples as rows and features as columns in this lesson."},
+    {"symbol":"sigma_i","meaning":"Ordered nonnegative singular values."},
+    {"symbol":"rho_k","meaning":"Retained squared-singular-value energy ratio for the first k directions."}
+  ],
+  "formulaTable": [
+    {
+      "id": "F01",
+      "name": "Linear-subspace test",
+      "formula": "0 in U; u,v in U => u+v in U; alpha in R,u in U => alpha u in U",
+      "answers": "U có thật sự là linear subspace không?",
+      "shape": "U subset of a declared vector space",
+      "conditions": "Exact mathematical membership and inherited operations.",
+      "checks": "Zero, addition closure, scalar closure.",
+      "warning": "Finite cloud hoặc shifted plane không tự động là subspace."
+    },
+    {
+      "id": "F02",
+      "name": "Affine near-subspace model",
+      "formula": "x=mu+Qz+epsilon; y=x-mu",
+      "answers": "Observation được biểu diễn quanh mean/reference thế nào?",
+      "shape": "x,mu,epsilon in R^n; Q in R^(n x k); z in R^k",
+      "conditions": "Same feature contract; Q orthonormal for the stated coordinate formula.",
+      "checks": "Center before projection; preserve units/order/model version.",
+      "warning": "epsilon không tự động là Gaussian noise hoặc một fault type."
+    },
+    {
+      "id": "F03",
+      "name": "Span and column space",
+      "formula": "U=span(b_1,...,b_k)=col(B); y in U iff exists c:Bc=y",
+      "answers": "Generators biểu diễn chính xác tập nào?",
+      "shape": "B in R^(n x k)",
+      "conditions": "Columns share ambient coordinates and feature semantics.",
+      "checks": "Reconstruct y from Bc.",
+      "warning": "Number of columns need not equal dimension."
+    },
+    {
+      "id": "F04",
+      "name": "Dimension-rank relation",
+      "formula": "dim(col(B))=rank(B)",
+      "answers": "Có bao nhiêu independent directions?",
+      "shape": "Named matrix B",
+      "conditions": "State exact or numerical rank explicitly.",
+      "checks": "Identify dependent columns or singular-value criterion.",
+      "warning": "Không nói 'data rank' mà thiếu matrix và orientation."
+    },
+    {
+      "id": "F05",
+      "name": "Orthonormality",
+      "formula": "Q^TQ=I_k",
+      "answers": "Columns của Q có trực chuẩn không?",
+      "shape": "Q in R^(n x k)",
+      "conditions": "Declared inner product and tolerance.",
+      "checks": "||Q^TQ-I_k|| <= tolerance.",
+      "warning": "Orthogonal nhưng non-unit chưa đủ."
+    },
+    {
+      "id": "F06",
+      "name": "Orthonormal coordinates",
+      "formula": "z=Q^Ty",
+      "answers": "Centred observation có coordinates nào trong Q?",
+      "shape": "Q^T:(k x n), y:(n,), z:(k,)",
+      "conditions": "Q^TQ=I and matching feature contract.",
+      "checks": "Reconstruct Qz.",
+      "warning": "Không dùng cho arbitrary basis B."
+    },
+    {
+      "id": "F07",
+      "name": "Orthonormal projector",
+      "formula": "P_U=QQ^T",
+      "answers": "Projector lên col(Q) là gì?",
+      "shape": "P_U in R^(n x n)",
+      "conditions": "Q^TQ=I_k.",
+      "checks": "Symmetry, idempotence, P_UQ=Q.",
+      "warning": "QQ^T thường singular khi k<n."
+    },
+    {
+      "id": "F08",
+      "name": "General-basis coordinates",
+      "formula": "c=(B^TB)^(-1)B^Ty",
+      "answers": "Coordinates của orthogonal projection trong general basis là gì?",
+      "shape": "B in R^(n x k), c in R^k",
+      "conditions": "B full column rank.",
+      "checks": "Solve B^TBc=B^Ty.",
+      "warning": "Code nên solve/QR/lstsq thay vì mặc định tạo inverse."
+    },
+    {
+      "id": "F09",
+      "name": "General-basis projector",
+      "formula": "P_U=B(B^TB)^(-1)B^T",
+      "answers": "Projector lên col(B) khi B không orthonormal là gì?",
+      "shape": "P_U in R^(n x n)",
+      "conditions": "rank(B)=k.",
+      "checks": "P_U^T=P_U; P_U^2=P_U; P_UB=B.",
+      "warning": "BB^T không phải general projector."
+    },
+    {
+      "id": "F10",
+      "name": "Orthogonal-projector invariants",
+      "formula": "P_U^T=P_U; P_U^2=P_U",
+      "answers": "Candidate matrix có phải orthogonal projector không?",
+      "shape": "Square matrix n x n",
+      "conditions": "Real Euclidean setting; numerical equality uses tolerance.",
+      "checks": "Both symmetry and idempotence.",
+      "warning": "Idempotence alone may describe an oblique projector."
+    },
+    {
+      "id": "F11",
+      "name": "Explained/residual decomposition",
+      "formula": "y_hat=P_Uy; r=y-y_hat=(I-P_U)y; y=y_hat+r",
+      "answers": "Phần nào được model giải thích?",
+      "shape": "All vectors in R^n",
+      "conditions": "Center first for affine model.",
+      "checks": "Reconstruction y=y_hat+r.",
+      "warning": "Residual không tự động là sensor noise."
+    },
+    {
+      "id": "F12",
+      "name": "Residual orthogonality",
+      "formula": "Q^Tr=0",
+      "answers": "Residual có orthogonal với model subspace không?",
+      "shape": "Q^T:(k x n), r:(n,)",
+      "conditions": "Orthogonal projection under same inner product.",
+      "checks": "||Q^Tr||_2 <= tolerance.",
+      "warning": "Không đòi floating-point exact zero."
+    },
+    {
+      "id": "F13",
+      "name": "Numerical rank",
+      "formula": "rank_tau(A)=#{i:sigma_i(A)>tau}",
+      "answers": "Bao nhiêu singular directions được coi là nonzero dưới criterion?",
+      "shape": "Named and oriented matrix A",
+      "conditions": "tau declared and scale-aware.",
+      "checks": "List singular values and comparison with tau.",
+      "warning": "Numerical rank khác retained dimension và physical mode count."
+    },
+    {
+      "id": "F14",
+      "name": "Reduced SVD preview",
+      "formula": "X_c=U diag(sigma) V^T",
+      "answers": "Data matrix có các directions và magnitudes nào?",
+      "shape": "X_c:(m x n); p=min(m,n); U:(m x p); sigma:(p,); V:(n x p)",
+      "conditions": "Samples-as-rows and centering declared.",
+      "checks": "Reconstruct X_c and verify shapes.",
+      "warning": "Không đổi orientation mà giữ nguyên interpretation."
+    },
+    {
+      "id": "F15",
+      "name": "Retained energy",
+      "formula": "rho_k=sum_{i<=k}sigma_i^2 / sum_i sigma_i^2",
+      "answers": "First k directions giữ bao nhiêu squared singular-value energy?",
+      "shape": "Scalar in [0,1] when denominator nonzero",
+      "conditions": "Same centred/scaled matrix and stated k.",
+      "checks": "Compute from locked singular values.",
+      "warning": "Không đồng nghĩa prediction accuracy hoặc fault coverage."
+    },
+    {
+      "id": "F16",
+      "name": "Residual diagnostic score",
+      "formula": "score(x)=||(I-P_U)(x-mu)||_2",
+      "answers": "Observation cách current affine-subspace model bao xa?",
+      "shape": "Nonnegative scalar with feature units",
+      "conditions": "Same mu, P_U, order, units, preprocessing, regime and model version.",
+      "checks": "Preserve residual vector and compare only compatible scores.",
+      "warning": "Score không xác định unique fault cause."
+    }
+  ],
+  "projectorSelection": [
+    {
+      "case": "Q^TQ=I_k",
+      "coordinates": "z=Q^Ty",
+      "projector": "QQ^T",
+      "recommendedComputation": "matrix products after orthonormality check",
+      "reject": "No need for Gram inverse."
+    },
+    {
+      "case": "B full column rank, B^TB != I_k",
+      "coordinates": "solve(B^TB c=B^Ty)",
+      "projector": "B solve(B^TB,B^T)",
+      "recommendedComputation": "solve, QR or lstsq",
+      "reject": "BB^T and blind B^Ty coordinates."
+    },
+    {
+      "case": "B rank deficient",
+      "coordinates": "not uniquely determined by the locked formula",
+      "projector": "requires an extended method outside the current core derivation",
+      "recommendedComputation": "defer pseudoinverse theory",
+      "reject": "Do not invert singular B^TB."
+    }
+  ],
+  "rankReporting": [
+    {
+      "label": "Algebraic/floating-point rank",
+      "requiredFields": ["matrix name", "orientation", "computation context"],
+      "example": "np.linalg.matrix_rank(X_c)=4 for the stored locked matrix.",
+      "forbidden": "The physical mode count is exactly four."
+    },
+    {
+      "label": "Numerical rank",
+      "requiredFields": ["matrix name", "orientation", "tau", "singular values or method"],
+      "example": "rank_tau(X_c)=2 under tau=0.05 for CASE_C01_L05_V1_LOCKED.",
+      "forbidden": "Rank is two, with no criterion."
+    },
+    {
+      "label": "Retained dimension",
+      "requiredFields": ["matrix/preprocessing", "k", "energy or task criterion"],
+      "example": "k=2 retains approximately 99.9541% squared singular-value energy.",
+      "forbidden": "k=2 is universally optimal."
+    }
+  ],
+  "preprocessingGate": [
+    {"check":"Feature order","lockedValue":"A,B,C,D","failure":"Shape-correct semantic mismatch."},
+    {"check":"Feature meaning","lockedValue":"four calibrated fixed-window RMS acceleration features","failure":"Confusing features with raw waveform samples."},
+    {"check":"Units","lockedValue":"m/s^2 RMS","failure":"Scores and geometry become incomparable after unit changes."},
+    {"check":"Centering","lockedValue":"subtract mu=(0.4,0.35,0.45,0.3)","failure":"Affine offset contaminates projection."},
+    {"check":"Scaling","lockedValue":"no alternate per-feature scaling inside the locked case","failure":"Singular values, directions, rank criterion and scores change."},
+    {"check":"Orientation","lockedValue":"calibration samples are rows of X_c","failure":"SVD factor roles are misread."},
+    {"check":"Operating regime","lockedValue":"single normal operating regime","failure":"Model drift can look like anomaly."},
+    {"check":"Model version","lockedValue":"CASE_C01_L05_V1_LOCKED","failure":"Coordinates and scores lose a common contract."}
+  ],
+  "caseLookup": {
+    "caseId": "ROTATING_MACHINE_4CH_2MODE",
+    "version": "CASE_C01_L05_V1_LOCKED",
+    "featureOrder": ["sensor_A_rms_acceleration","sensor_B_rms_acceleration","sensor_C_rms_acceleration","sensor_D_rms_acceleration"],
+    "units": "m/s^2 RMS",
+    "mean": [0.4,0.35,0.45,0.3],
+    "Q": [[0.5,0.5],[0.5,-0.5],[0.5,0.5],[0.5,-0.5]],
+    "P": [[0.5,0.0,0.5,0.0],[0.0,0.5,0.0,0.5],[0.5,0.0,0.5,0.0],[0.0,0.5,0.0,0.5]],
+    "generalB": [[1.0,1.0],[1.0,0.0],[1.0,1.0],[1.0,0.0]],
+    "normalSample": {
+      "x": [0.62,0.74,0.63,0.71],
+      "y": [0.22,0.39,0.18,0.41],
+      "zQ": [0.6,-0.2],
+      "cB": [0.4,-0.2],
+      "yHat": [0.2,0.4,0.2,0.4],
+      "r": [0.02,-0.01,-0.02,0.01],
+      "score": 0.0316227766016838,
+      "interpretation": "well represented by current model; health not proven"
+    },
+    "mismatchSample": {
+      "x": [0.9,0.6,0.55,0.85],
+      "y": [0.5,0.25,0.1,0.55],
+      "zQ": [0.7,-0.1],
+      "yHat": [0.3,0.4,0.3,0.4],
+      "r": [0.2,-0.15,-0.2,0.15],
+      "score": 0.3535533905932738,
+      "interpretation": "poorly represented by current model; cause undetermined"
+    },
+    "gammaDemo": {
+      "value": 0.1,
+      "status": "teaching_case_only"
+    },
+    "calibrationMatrix": {
+      "shape": [8,4],
+      "orientation": "samples_as_rows",
+      "singularValues": [1.44955817,0.77504298,0.03505112,0.00330126],
+      "floatingPointRank": 4,
+      "tau": 0.05,
+      "numericalRank": 2,
+      "retainedEnergyK2": 0.9995414686511285,
+      "retainedEnergyPercentK2": 99.95414686511285
+    }
+  },
+  "troubleshootingMatrix": [
+    {"ids":["M01","M02"],"symptom":"Gọi mọi line/plane/cloud là subspace.","rootCause":"Shape intuition replaces closure tests.","evidence":"Check zero and closure; distinguish dataset from model set.","repair":"Classify as linear, affine, finite data or near-subspace."},
+    {"ids":["M03","M19"],"symptom":"Equate low dimension/high energy with universal information or task success.","rootCause":"Reconstruction objective is confused with downstream value.","evidence":"Name rho_k and the exact matrix/preprocessing.","repair":"Validate task metrics separately."},
+    {"ids":["M04","M05"],"symptom":"Small/equal residual norm is overinterpreted.","rootCause":"Exact membership and residual direction are discarded.","evidence":"Inspect r, not only ||r||.","repair":"Use approximate language and preserve direction."},
+    {"ids":["M06"],"symptom":"Dimension is reported as number of columns.","rootCause":"Generator count confused with rank.","evidence":"Identify dependent columns or singular values.","repair":"Report dim(col(B))=rank(B)."},
+    {"ids":["M07","M08","M20"],"symptom":"Use BB^T or B^Ty for arbitrary basis; explicit inverse in code.","rootCause":"Orthonormal shortcut applied outside its gate.","evidence":"Compute B^TB and projector invariants.","repair":"Use solve/QR/lstsq and general formula."},
+    {"ids":["M09"],"symptom":"Idempotent matrix called orthogonal projector.","rootCause":"Symmetry condition omitted.","evidence":"Check P^T=P.","repair":"Distinguish orthogonal and oblique projection."},
+    {"ids":["M10","M14","M15"],"symptom":"Coordinates/scores compared across bases, order or versions.","rootCause":"Representation metadata discarded.","evidence":"Compare mu,Q,feature order,units,preprocessing and model version.","repair":"Align or version the complete contract."},
+    {"ids":["M11","M12"],"symptom":"Raw x is projected or centering is called normalization.","rootCause":"Affine offset and preprocessing operations are merged.","evidence":"Trace x -> y=x-mu -> projection.","repair":"Separate centering, scaling and vector normalization."},
+    {"ids":["M13"],"symptom":"SVD factors interpreted after an undeclared transpose.","rootCause":"Sample and feature axes swapped.","evidence":"State X_c shape and orientation.","repair":"Recompute or reinterpret all factor shapes consistently."},
+    {"ids":["M16","M17","M18"],"symptom":"One rank integer is treated as physical truth.","rootCause":"Tolerance and matrix object omitted.","evidence":"List singular values and tau.","repair":"Report floating rank and rank_tau separately."},
+    {"ids":["M21","M22","M23","M24"],"symptom":"Score becomes fault diagnosis or health proof.","rootCause":"Model fit confused with causal classification.","evidence":"Check regime, residual direction and independent fault evidence.","repair":"Use bounded model-mismatch language."},
+    {"ids":["M25"],"symptom":"Four-feature vector is treated as raw waveform.","rootCause":"Feature extraction contract omitted.","evidence":"Name window, RMS feature, units and channel order.","repair":"Restore feature semantics before modelling."}
+  ],
+  "terminologyLookup": [
+    {"id":"T01","vi":"không gian vectơ","en":"vector space","ru":"векторное пространство"},
+    {"id":"T02","vi":"không gian con tuyến tính","en":"linear subspace","ru":"линейное подпространство"},
+    {"id":"T03","vi":"không gian affine","en":"affine subspace / affine set","ru":"аффинное подпространство"},
+    {"id":"T04","vi":"không gian sinh / bao tuyến tính","en":"span / linear span","ru":"линейная оболочка"},
+    {"id":"T05","vi":"tập sinh","en":"generating set / spanning set","ru":"порождающая система"},
+    {"id":"T06","vi":"cơ sở","en":"basis","ru":"базис"},
+    {"id":"T07","vi":"số chiều","en":"dimension","ru":"размерность"},
+    {"id":"T08","vi":"ma trận cơ sở","en":"basis matrix","ru":"матрица базиса"},
+    {"id":"T09","vi":"không gian cột","en":"column space","ru":"пространство столбцов"},
+    {"id":"T10","vi":"hạng đại số","en":"algebraic rank","ru":"алгебраический ранг"},
+    {"id":"T11","vi":"hạng số","en":"numerical rank","ru":"численный ранг"},
+    {"id":"T12","vi":"chiều giữ lại","en":"retained dimension","ru":"сохраняемая размерность"},
+    {"id":"T13","vi":"giá trị kỳ dị","en":"singular value","ru":"сингулярное значение"},
+    {"id":"T14","vi":"phép chiếu trực giao","en":"orthogonal projection","ru":"ортогональная проекция"},
+    {"id":"T15","vi":"ma trận chiếu / projector","en":"projection matrix / projector","ru":"матрица проекции / проектор"},
+    {"id":"T16","vi":"thành phần được giải thích","en":"explained component","ru":"объяснённая составляющая"},
+    {"id":"T17","vi":"phần dư","en":"residual","ru":"невязка / остаток"},
+    {"id":"T18","vi":"tâm hóa dữ liệu","en":"data centering","ru":"центрирование данных"},
+    {"id":"T19","vi":"chuẩn hóa thang đo","en":"feature scaling / standardization","ru":"масштабирование / стандартизация"},
+    {"id":"T20","vi":"mô hình gần không gian con","en":"near-subspace model","ru":"модель данных вблизи подпространства"},
+    {"id":"T21","vi":"sai số tái tạo","en":"reconstruction error","ru":"ошибка реконструкции"},
+    {"id":"T22","vi":"tỷ lệ năng lượng giữ lại","en":"retained-energy ratio","ru":"доля сохранённой энергии"}
+  ],
+  "interpretationLimits": {
+    "permitted": [
+      "Observation is well or poorly represented by the current declared model.",
+      "The residual vector indicates the direction of unexplained variation.",
+      "Numerical rank is two under tau=0.05 for the locked teaching matrix.",
+      "The first two directions retain approximately 99.9541% squared singular-value energy of the locked centred matrix."
+    ],
+    "prohibited": [
+      "A score above 0.1 proves a bearing fault.",
+      "A low score proves the machine and all sensors are healthy.",
+      "The locked matrix has exact rank two.",
+      "NumPy default rank must equal physical mode count.",
+      "99.9541% retained energy guarantees prediction accuracy or fault coverage.",
+      "The learned directions are proven causal physical modes.",
+      "Scores remain comparable after changing feature order, scale or model version."
+    ]
+  },
+  "pass11Acceptance": {
+    "status": "PASS_11_REFERENCE_ARTIFACT_COMPLETE",
+    "sectionCount": 8,
+    "formulaCount": 16,
+    "terminologyCount": 22,
+    "caseValuesMatchLockedVersion": true,
+    "misconceptionCoverage": "M01-M25",
+    "runtimeFilesModified": false,
+    "nextTask": "THEORY_C01_L05_FULL_VIEW_NORMALIZATION_PASS_12"
+  }
+}

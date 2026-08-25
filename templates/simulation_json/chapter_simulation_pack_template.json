@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "BAUMAN_MATH_UNIFIED_SIM_CHAPTER_PACK_V1",
+  "status": "authoring_template",
+  "subject": "math",
+  "runtimeTarget": "subjects/math/data/simulations.json",
+  "mergePolicy": {
+    "key": "lessonId",
+    "mode": "replace_or_insert",
+    "oneSimulationPerLesson": true,
+    "noSplitButtons": true,
+    "requiredRuntimeFile": "simulations/unified_lab.html"
+  },
+  "chapter": {
+    "stage": "vn",
+    "chapterNo": 0,
+    "chapterId": "MATH-VN-XX-C00",
+    "chapterTitle": "Chương 0 · Tên chương",
+    "department": "Ví dụ: Đại số tuyến tính / Giải tích / Xác suất / Tối ưu / Tín hiệu",
+    "chapterLearningGoal": "Mục tiêu học tập lớn của chương, viết theo năng lực thực tế cần đạt.",
+    "chapterSimulationTheme": "Ý tưởng mô phỏng xuyên suốt chương, ví dụ: vector board, matrix lab, optimizer lab, probability lab...",
+    "chapterOutputContract": [
+      "Người học đọc được biến đầu vào nào làm output đổi.",
+      "Người học nêu được điều kiện áp dụng công thức.",
+      "Người học viết được kết luận PASS/REVIEW/RISK."
+    ]
+  },
+  "miniLessons": [
+    {
+      "lessonNo": 1,
+      "lessonId": "MATH-VN-XX-C00-L01",
+      "lessonTitle": "§0.1 · Tên ý nhỏ / bài nhỏ trong chương",
+      "coreQuestion": "Bài này trả lời câu hỏi học thuật/kỹ thuật nào?",
+      "prerequisites": [
+        "Điều kiện nền 1",
+        "Điều kiện nền 2"
+      ],
+      "coreConcepts": [
+        "khái niệm 1",
+        "khái niệm 2"
+      ],
+      "mustUnderstand": [
+        "Ý bắt buộc hiểu 1.",
+        "Ý bắt buộc hiểu 2."
+      ],
+      "simulation": {
+        "id": "SIM-UNIFIED-MATH-VN-XX-C00-L01",
+        "type": "unified",
+        "simKind": "unified",
+        "kind": "unified",
+        "mode": "unified",
+        "file": "simulations/unified_lab.html",
+        "title": "Mô phỏng tổng hợp · §0.1 · Tên bài",
+        "purpose": "Mục đích lab: kiểm bản chất công thức và ứng dụng thực tế/code trong cùng một bảng mô phỏng.",
+        "realUse": "Mô tả bối cảnh thật: robot, AI, tín hiệu, dữ liệu, điều khiển, tối ưu...",
+        "formula": "Công thức chính cần kiểm trong lab.",
+        "formulaRole": "Công thức dùng để tính gì, kiểm giả thiết nào, ra quyết định gì.",
+        "visualProfile": "vector_plane | matrix_grid | optimizer_curve | probability_distribution | signal_plot | control_response | geometry_3d | custom",
+        "visualBoard": {
+          "type": "custom",
+          "title": "Tên bảng visual riêng cho bài",
+          "requiredObjects": [
+            "đối tượng hình 1",
+            "đối tượng hình 2",
+            "decision badge",
+            "baseline trace"
+          ],
+          "whatMustChangeWhenControlsMove": "Mô tả rõ hình/đồ thị phải đổi thế nào khi kéo biến. Không được để đổi chương mà visual vẫn y hệt."
+        },
+        "controls": [
+          {
+            "key": "control_1",
+            "label": "Tên biến điều khiển 1",
+            "min": 0,
+            "max": 1,
+            "step": 0.05,
+            "default": 0.5,
+            "unit": "",
+            "role": "Biến này đại diện cho yếu tố nào trong bài và phải làm output nào đổi."
+          },
+          {
+            "key": "control_2",
+            "label": "Tên biến điều khiển 2",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "default": 3,
+            "unit": "",
+            "role": "Không dùng biến chung chung. Biến phải gắn riêng với nội dung bài."
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "readout_1",
+            "label": "Output 1",
+            "formula": "Cách tính/logic tính output 1",
+            "meaning": "Output này giúp kết luận điều gì."
+          },
+          {
+            "key": "decision",
+            "label": "Decision",
+            "formula": "PASS nếu..., REVIEW nếu..., RISK nếu...",
+            "meaning": "Quy tắc ra quyết định."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Baseline",
+            "setup": "Giữ biến mặc định để có đường/điểm chuẩn.",
+            "task": "Ghi input, output, điều kiện áp dụng.",
+            "expected": "Output hợp lý và chưa vi phạm giả thiết."
+          },
+          {
+            "name": "Stress",
+            "setup": "Đẩy một biến vào vùng nhạy.",
+            "task": "So với baseline và tìm biến gây đổi output mạnh nhất.",
+            "expected": "Output đổi rõ, kết luận không còn chung chung."
+          },
+          {
+            "name": "Failure",
+            "setup": "Cố tình phá giả thiết của công thức/mô hình.",
+            "task": "Chỉ ra vì sao phải chuyển REVIEW/RISK.",
+            "expected": "Người học nhận ra giới hạn áp dụng."
+          }
+        ],
+        "runProtocol": [
+          "Đọc mục tiêu lab và công thức chính.",
+          "Chạy Baseline, ghi output chuẩn.",
+          "Đổi từng biến một, không đổi nhiều biến cùng lúc ở lượt đầu.",
+          "Chạy Stress/Failure để thấy giới hạn.",
+          "Viết kết luận PASS/REVIEW/RISK kèm điều kiện."
+        ],
+        "expectedOutputs": [
+          "Output hiển thị 1",
+          "Output hiển thị 2",
+          "Decision"
+        ],
+        "decisionRule": {
+          "PASS": "Khi output ổn, giả thiết đúng, sai số nằm trong ngưỡng.",
+          "REVIEW": "Khi output nhạy, cần kiểm thêm dữ liệu/điều kiện.",
+          "RISK": "Khi phá giả thiết hoặc kết luận không còn đáng tin."
+        },
+        "commonMisreadings": [
+          "Nhìn score đẹp rồi kết luận chắc chắn nhưng không kiểm giả thiết.",
+          "Đổi nhiều biến cùng lúc nên không biết nguyên nhân.",
+          "Không so baseline với stress.",
+          "Chỉ mô tả hình mà không viết kết luận kỹ thuật."
+        ],
+        "reportTemplate": [
+          "Bối cảnh bài: ...",
+          "Biến đã đổi: ...",
+          "Output đọc được: ...",
+          "Điều kiện/giả thiết: ...",
+          "Kết luận PASS/REVIEW/RISK: ..."
+        ],
+        "integrationHints": {
+          "formulaIds": [],
+          "exerciseIds": [],
+          "applicationIds": [],
+          "qaIds": [],
+          "tags": [
+            "tag-1",
+            "tag-2"
+          ]
+        }
+      }
+    }
+  ],
+  "chapterNumberingPolicy": "chapterNo is local within the selected faculty/department; keep globalChapterNo only as optional reference",
+  "departmentTitle": "[Tên bộ môn/chuyên đề]",
+  "globalChapterNo": "[Tùy chọn: số chương toàn hệ cũ nếu có]"
+}

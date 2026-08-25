@@ -1,0 +1,18 @@
+{
+  "checkpoint": "E44_APPLICATION_REAL_USE_FINAL_SUMMARY_LOCK",
+  "type": "CHECKPOINT / TEST / SNAPSHOT",
+  "isFinal": false,
+  "changes": [
+    "Locked theory summary rendering so only the final slide shows a whole-lesson/chapter summary.",
+    "Removed summary/takeaway fields and summary-like blocks from non-last slides in lessons.json.",
+    "Refocused all applications to theory-dependent real-use cases, not exercise-dependent cases.",
+    "Application tab now renders compact real-life/engineering, programming, when-to-use, do-not-use, output, workflow, and self-check sections.",
+    "Application renderer uses E44-only navigation actions to avoid older event-listener conflicts."
+  ],
+  "counts": {
+    "lessons": 260,
+    "applications": 469,
+    "simulations": 520,
+    "chapters": 32
+  }
+}

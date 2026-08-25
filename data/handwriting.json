@@ -1,0 +1,770 @@
+[
+  {
+    "id": "sym_01",
+    "stage": "vn",
+    "mode": "symbol",
+    "print": "∑",
+    "cursive": "∑",
+    "text": "∑",
+    "copy": "∑",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_02",
+    "stage": "vn",
+    "mode": "symbol",
+    "print": "∫",
+    "cursive": "∫",
+    "text": "∫",
+    "copy": "∫",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_03",
+    "stage": "vn",
+    "mode": "symbol",
+    "print": "∂",
+    "cursive": "∂",
+    "text": "∂",
+    "copy": "∂",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_04",
+    "stage": "vn",
+    "mode": "symbol",
+    "print": "∇",
+    "cursive": "∇",
+    "text": "∇",
+    "copy": "∇",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_05",
+    "stage": "vn",
+    "mode": "symbol",
+    "print": "λ",
+    "cursive": "λ",
+    "text": "λ",
+    "copy": "λ",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_06",
+    "stage": "vn",
+    "mode": "symbol",
+    "print": "μ",
+    "cursive": "μ",
+    "text": "μ",
+    "copy": "μ",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_07",
+    "stage": "prep",
+    "mode": "symbol",
+    "print": "σ²",
+    "cursive": "σ²",
+    "text": "σ²",
+    "copy": "σ²",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_08",
+    "stage": "prep",
+    "mode": "symbol",
+    "print": "AᵀA",
+    "cursive": "AᵀA",
+    "text": "AᵀA",
+    "copy": "AᵀA",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_09",
+    "stage": "prep",
+    "mode": "symbol",
+    "print": "||x||₂",
+    "cursive": "||x||₂",
+    "text": "||x||₂",
+    "copy": "||x||₂",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_10",
+    "stage": "prep",
+    "mode": "symbol",
+    "print": "P(A|B)",
+    "cursive": "P(A|B)",
+    "text": "P(A|B)",
+    "copy": "P(A|B)",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_11",
+    "stage": "prep",
+    "mode": "symbol",
+    "print": "E[X]",
+    "cursive": "E[X]",
+    "text": "E[X]",
+    "copy": "E[X]",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_12",
+    "stage": "prep",
+    "mode": "symbol",
+    "print": "Var(X)",
+    "cursive": "Var(X)",
+    "text": "Var(X)",
+    "copy": "Var(X)",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_13",
+    "stage": "hk1",
+    "mode": "symbol",
+    "print": "argmin",
+    "cursive": "argmin",
+    "text": "argmin",
+    "copy": "argmin",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_14",
+    "stage": "hk1",
+    "mode": "symbol",
+    "print": "≈",
+    "cursive": "≈",
+    "text": "≈",
+    "copy": "≈",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_15",
+    "stage": "hk1",
+    "mode": "symbol",
+    "print": "→",
+    "cursive": "→",
+    "text": "→",
+    "copy": "→",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_16",
+    "stage": "hk1",
+    "mode": "symbol",
+    "print": "∀",
+    "cursive": "∀",
+    "text": "∀",
+    "copy": "∀",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_17",
+    "stage": "hk1",
+    "mode": "symbol",
+    "print": "∃",
+    "cursive": "∃",
+    "text": "∃",
+    "copy": "∃",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_18",
+    "stage": "hk1",
+    "mode": "symbol",
+    "print": "∈",
+    "cursive": "∈",
+    "text": "∈",
+    "copy": "∈",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_19",
+    "stage": "hk2",
+    "mode": "symbol",
+    "print": "⊂",
+    "cursive": "⊂",
+    "text": "⊂",
+    "copy": "⊂",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_20",
+    "stage": "hk2",
+    "mode": "symbol",
+    "print": "⊥",
+    "cursive": "⊥",
+    "text": "⊥",
+    "copy": "⊥",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_21",
+    "stage": "hk2",
+    "mode": "symbol",
+    "print": "FFT",
+    "cursive": "FFT",
+    "text": "FFT",
+    "copy": "FFT",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_22",
+    "stage": "hk2",
+    "mode": "symbol",
+    "print": "SVD",
+    "cursive": "SVD",
+    "text": "SVD",
+    "copy": "SVD",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_23",
+    "stage": "hk2",
+    "mode": "symbol",
+    "print": "RMSE",
+    "cursive": "RMSE",
+    "text": "RMSE",
+    "copy": "RMSE",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_24",
+    "stage": "hk2",
+    "mode": "symbol",
+    "print": "F1",
+    "cursive": "F1",
+    "text": "F1",
+    "copy": "F1",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_25",
+    "stage": "hk3",
+    "mode": "symbol",
+    "print": "O(n log n)",
+    "cursive": "O(n log n)",
+    "text": "O(n log n)",
+    "copy": "O(n log n)",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_26",
+    "stage": "hk3",
+    "mode": "symbol",
+    "print": "ẋ=Ax+Bu",
+    "cursive": "ẋ=Ax+Bu",
+    "text": "ẋ=Ax+Bu",
+    "copy": "ẋ=Ax+Bu",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_27",
+    "stage": "hk3",
+    "mode": "symbol",
+    "print": "K=PHTS⁻¹",
+    "cursive": "K=PHTS⁻¹",
+    "text": "K=PHTS⁻¹",
+    "copy": "K=PHTS⁻¹",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_28",
+    "stage": "hk3",
+    "mode": "symbol",
+    "print": "L=D-A",
+    "cursive": "L=D-A",
+    "text": "L=D-A",
+    "copy": "L=D-A",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_29",
+    "stage": "hk3",
+    "mode": "symbol",
+    "print": "β̂",
+    "cursive": "β̂",
+    "text": "β̂",
+    "copy": "β̂",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_30",
+    "stage": "hk3",
+    "mode": "symbol",
+    "print": "CI 95%",
+    "cursive": "CI 95%",
+    "text": "CI 95%",
+    "copy": "CI 95%",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_31",
+    "stage": "hk4",
+    "mode": "symbol",
+    "print": "J=∂f/∂x",
+    "cursive": "J=∂f/∂x",
+    "text": "J=∂f/∂x",
+    "copy": "J=∂f/∂x",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "sym_32",
+    "stage": "hk4",
+    "mode": "symbol",
+    "print": "H=∇²f",
+    "cursive": "H=∇²f",
+    "text": "H=∇²f",
+    "copy": "H=∇²f",
+    "note": "Luyện viết/gõ ký hiệu Toán rõ ràng, không lỗi font trong lời giải và slide.",
+    "strokes": [
+      {
+        "title": "Nhìn mẫu",
+        "guide": "Nhận diện ký hiệu và cách đọc."
+      },
+      {
+        "title": "Chép lại",
+        "guide": "Viết đúng vị trí chỉ số, mũ, ngoặc."
+      },
+      {
+        "title": "Dùng trong câu",
+        "guide": "Đặt ký hiệu vào một công thức hoàn chỉnh."
+      }
+    ]
+  }
+]

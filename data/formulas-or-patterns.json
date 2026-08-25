@@ -1,0 +1,1015 @@
+{
+  "items": [
+    {
+      "id": "f_sum",
+      "subjectId": "math",
+      "group": "foundations",
+      "name": "Ký hiệu tổng",
+      "latex": "\\sum_{i=1}^{n} x_i",
+      "meaning": "Cộng một dãy giá trị theo chỉ số; nền cho vector, kỳ vọng và loss.",
+      "whenToUse": "Khi cần viết gọn tổng nhiều thành phần.",
+      "example": "Tổng bình phương sai số trong MSE.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Cộng một dãy giá trị theo chỉ số; nền cho vector, kỳ vọng và loss. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_implication",
+      "subjectId": "math",
+      "group": "foundations",
+      "name": "Kéo theo logic",
+      "latex": "A \\Rightarrow B",
+      "meaning": "Nếu A đúng thì B phải đúng; dùng để trình bày chứng minh.",
+      "whenToUse": "Khi cần nối giả thiết với kết luận.",
+      "example": "Nếu ma trận khả nghịch thì hệ tuyến tính có nghiệm duy nhất.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Nếu A đúng thì B phải đúng; dùng để trình bày chứng minh. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_function",
+      "subjectId": "math",
+      "group": "foundations",
+      "name": "Hàm số",
+      "latex": "f: X \\to Y",
+      "meaning": "Ánh xạ mỗi đầu vào sang một đầu ra; mô hình AI cũng là hàm xấp xỉ.",
+      "whenToUse": "Khi mô tả quan hệ input-output.",
+      "example": "Mô hình dự báo nhận vector cảm biến và trả về giá trị dự báo.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Ánh xạ mỗi đầu vào sang một đầu ra; mô hình AI cũng là hàm xấp xỉ. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_limit_basic",
+      "subjectId": "math",
+      "group": "foundations",
+      "name": "Giới hạn cơ bản",
+      "latex": "\\lim_{x\\to a} f(x)=L",
+      "meaning": "Mô tả hành vi của hàm khi biến tiến gần một điểm.",
+      "whenToUse": "Khi cần hiểu liên tục, đạo hàm hoặc xấp xỉ.",
+      "example": "Cơ sở để định nghĩa đạo hàm.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Mô tả hành vi của hàm khi biến tiến gần một điểm. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_log_exp",
+      "subjectId": "math",
+      "group": "foundations",
+      "name": "Logarithm và exponential",
+      "latex": "\\log(ab)=\\log a+\\log b,\\ e^{a+b}=e^a e^b",
+      "meaning": "Hai phép biến đổi hay gặp trong xác suất, loss và mô hình tăng trưởng.",
+      "whenToUse": "Khi làm việc với xác suất nhỏ hoặc mô hình phi tuyến.",
+      "example": "Log-likelihood trong thống kê.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Hai phép biến đổi hay gặp trong xác suất, loss và mô hình tăng trưởng. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_norm_l2",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Chuẩn Euclid",
+      "latex": "\\|x\\|_2=\\sqrt{\\sum_i x_i^2}",
+      "meaning": "Đo độ dài hình học của vector.",
+      "whenToUse": "Khi cần đo độ lớn tín hiệu, sai số hoặc vector đặc trưng.",
+      "example": "Độ lớn vector telemetry tại một thời điểm.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đo độ dài hình học của vector. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_dot_product",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Tích vô hướng",
+      "latex": "a\\cdot b=\\sum_i a_i b_i",
+      "meaning": "Đo mức cùng hướng của hai vector.",
+      "whenToUse": "Khi cần đo góc, projection hoặc similarity.",
+      "example": "Tính điểm tương đồng giữa hai vector đặc trưng.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đo mức cùng hướng của hai vector. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_cosine_similarity",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Cosine similarity",
+      "latex": "\\cos\\theta=\\frac{a\\cdot b}{\\|a\\|\\|b\\|}",
+      "meaning": "Đo độ giống về hướng, ít phụ thuộc độ lớn tuyệt đối.",
+      "whenToUse": "Khi so sánh hồ sơ dữ liệu hoặc embedding.",
+      "example": "So sánh hai đoạn tín hiệu đã chuẩn hóa.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đo độ giống về hướng, ít phụ thuộc độ lớn tuyệt đối. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_projection",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Phép chiếu vector",
+      "latex": "\\operatorname{proj}_b(a)=\\frac{a\\cdot b}{b\\cdot b}b",
+      "meaning": "Tách phần của vector a nằm theo hướng b.",
+      "whenToUse": "Khi cần phân rã thành thành phần song song và vuông góc.",
+      "example": "Chiếu dữ liệu lên hướng PCA đầu tiên.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Tách phần của vector a nằm theo hướng b. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_matrix_product",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Nhân ma trận",
+      "latex": "(AB)_{ij}=\\sum_k A_{ik}B_{kj}",
+      "meaning": "Ghép hai biến đổi tuyến tính thành một biến đổi.",
+      "whenToUse": "Khi mô hình hóa pipeline biến đổi dữ liệu.",
+      "example": "Biến đổi tọa độ rồi chiếu đặc trưng.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Ghép hai biến đổi tuyến tính thành một biến đổi. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_rank",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Hạng ma trận",
+      "latex": "\\operatorname{rank}(A)=\\dim(\\operatorname{Col}(A))",
+      "meaning": "Số hướng độc lập thật sự trong dữ liệu hoặc hệ phương trình.",
+      "whenToUse": "Khi cần biết dữ liệu có dư chiều hay hệ có nghiệm duy nhất không.",
+      "example": "Phát hiện feature phụ thuộc tuyến tính.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Số hướng độc lập thật sự trong dữ liệu hoặc hệ phương trình. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_inverse",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Ma trận nghịch đảo",
+      "latex": "A^{-1}A=I",
+      "meaning": "Đảo ngược biến đổi tuyến tính nếu biến đổi không làm mất thông tin.",
+      "whenToUse": "Khi hệ vuông, đủ hạng và cần nghiệm đúng.",
+      "example": "Giải hệ tuyến tính nhỏ trong hiệu chỉnh cảm biến.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đảo ngược biến đổi tuyến tính nếu biến đổi không làm mất thông tin. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_least_squares",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Bình phương tối thiểu",
+      "latex": "\\hat{x}=\\arg\\min_x\\|Ax-b\\|_2^2",
+      "meaning": "Tìm nghiệm gần đúng khi hệ quá xác định hoặc dữ liệu nhiễu.",
+      "whenToUse": "Khi đo nhiều hơn ẩn và không có nghiệm chính xác.",
+      "example": "Ước lượng tham số tuyến tính từ dữ liệu đo.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Tìm nghiệm gần đúng khi hệ quá xác định hoặc dữ liệu nhiễu. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_cov_matrix",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Ma trận hiệp phương sai",
+      "latex": "\\Sigma=\\frac{1}{n-1}X^T X",
+      "meaning": "Tóm tắt cách các chiều dữ liệu cùng biến thiên.",
+      "whenToUse": "Khi cần PCA hoặc phân tích tương quan đa chiều.",
+      "example": "Ma trận hiệp phương sai của bộ cảm biến.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Tóm tắt cách các chiều dữ liệu cùng biến thiên. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_eigen",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Trị riêng - vector riêng",
+      "latex": "Av=\\lambda v",
+      "meaning": "Tìm hướng không đổi phương dưới biến đổi tuyến tính.",
+      "whenToUse": "Khi phân tích biến đổi, ổn định hoặc PCA.",
+      "example": "Hướng phương sai chính trong PCA.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Tìm hướng không đổi phương dưới biến đổi tuyến tính. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_svd",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Phân rã SVD",
+      "latex": "A=U\\Sigma V^T",
+      "meaning": "Tách ma trận thành các hướng trái, độ mạnh và hướng phải.",
+      "whenToUse": "Khi giảm chiều, nén dữ liệu hoặc phân tích hạng.",
+      "example": "Xấp xỉ ma trận dữ liệu telemetry bằng vài singular values lớn.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Tách ma trận thành các hướng trái, độ mạnh và hướng phải. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_pca_variance",
+      "subjectId": "math",
+      "group": "linear_algebra",
+      "name": "Tối đa phương sai PCA",
+      "latex": "w^*=\\arg\\max_{\\|w\\|=1} w^T\\Sigma w",
+      "meaning": "Tìm hướng chiếu giữ nhiều phương sai nhất.",
+      "whenToUse": "Khi giảm chiều mà vẫn giữ cấu trúc dữ liệu.",
+      "example": "Trực quan hóa feature space 2D.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Tìm hướng chiếu giữ nhiều phương sai nhất. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_derivative",
+      "subjectId": "math",
+      "group": "multivariable_calculus",
+      "name": "Đạo hàm một biến",
+      "latex": "f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}",
+      "meaning": "Tốc độ thay đổi tức thời của hàm.",
+      "whenToUse": "Khi cần độ dốc hoặc tối ưu một tham số.",
+      "example": "Độ nhạy loss theo một trọng số.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Tốc độ thay đổi tức thời của hàm. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_partial_derivative",
+      "subjectId": "math",
+      "group": "multivariable_calculus",
+      "name": "Đạo hàm riêng",
+      "latex": "\\frac{\\partial f}{\\partial x_i}",
+      "meaning": "Mức thay đổi của hàm khi chỉ một biến thay đổi.",
+      "whenToUse": "Khi hàm có nhiều biến đầu vào.",
+      "example": "Loss thay đổi theo từng tham số mô hình.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Mức thay đổi của hàm khi chỉ một biến thay đổi. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_gradient",
+      "subjectId": "math",
+      "group": "multivariable_calculus",
+      "name": "Gradient",
+      "latex": "\\nabla f=[\\partial f/\\partial x_1,\\ldots,\\partial f/\\partial x_n]^T",
+      "meaning": "Vector chỉ hướng tăng nhanh nhất của hàm.",
+      "whenToUse": "Khi cần hướng cập nhật tham số.",
+      "example": "Gradient descent đi ngược hướng gradient.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Vector chỉ hướng tăng nhanh nhất của hàm. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_directional_derivative",
+      "subjectId": "math",
+      "group": "multivariable_calculus",
+      "name": "Đạo hàm theo hướng",
+      "latex": "D_u f=\\nabla f\\cdot u",
+      "meaning": "Mức thay đổi của hàm theo hướng u.",
+      "whenToUse": "Khi cần đo độ nhạy theo một hướng cụ thể.",
+      "example": "Tác động của thay đổi đồng thời hai feature.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Mức thay đổi của hàm theo hướng u. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_jacobian",
+      "subjectId": "math",
+      "group": "multivariable_calculus",
+      "name": "Jacobian",
+      "latex": "J_{ij}=\\partial f_i/\\partial x_j",
+      "meaning": "Ma trận đạo hàm của hàm vector.",
+      "whenToUse": "Khi tuyến tính hóa hệ nhiều đầu vào/nhiều đầu ra.",
+      "example": "Robotics, sensor model, điều khiển trạng thái.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Ma trận đạo hàm của hàm vector. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_hessian",
+      "subjectId": "math",
+      "group": "multivariable_calculus",
+      "name": "Hessian",
+      "latex": "H_{ij}=\\partial^2 f/\\partial x_i\\partial x_j",
+      "meaning": "Ma trận độ cong bậc hai của hàm vô hướng.",
+      "whenToUse": "Khi cần hiểu cực trị, độ lồi hoặc xấp xỉ bậc hai.",
+      "example": "Kiểm tra mặt loss có thung lũng hay yên ngựa.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Ma trận độ cong bậc hai của hàm vô hướng. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_chain_rule",
+      "subjectId": "math",
+      "group": "multivariable_calculus",
+      "name": "Quy tắc dây chuyền",
+      "latex": "\\frac{d}{dx}f(g(x))=f'(g(x))g'(x)",
+      "meaning": "Theo dõi đạo hàm qua các hàm lồng nhau.",
+      "whenToUse": "Khi mô hình có pipeline nhiều lớp.",
+      "example": "Backpropagation trong neural network.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Theo dõi đạo hàm qua các hàm lồng nhau. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_taylor_2d",
+      "subjectId": "math",
+      "group": "multivariable_calculus",
+      "name": "Taylor bậc hai",
+      "latex": "f(x+\\Delta)\\approx f(x)+\\nabla f^T\\Delta+\\frac12\\Delta^T H\\Delta",
+      "meaning": "Xấp xỉ hàm quanh một điểm bằng độ dốc và độ cong.",
+      "whenToUse": "Khi phân tích local behavior hoặc thuật toán Newton.",
+      "example": "Ước lượng thay đổi loss khi tham số dịch nhẹ.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Xấp xỉ hàm quanh một điểm bằng độ dốc và độ cong. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_gradient_descent",
+      "subjectId": "math",
+      "group": "multivariable_calculus",
+      "name": "Gradient descent",
+      "latex": "x_{k+1}=x_k-\\eta\\nabla f(x_k)",
+      "meaning": "Cập nhật tham số theo hướng giảm nhanh của hàm mục tiêu.",
+      "whenToUse": "Khi tối ưu loss có gradient.",
+      "example": "Huấn luyện mô hình tuyến tính hoặc neural network.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Cập nhật tham số theo hướng giảm nhanh của hàm mục tiêu. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_probability",
+      "subjectId": "math",
+      "group": "probability_statistics",
+      "name": "Xác suất",
+      "latex": "0\\le P(A)\\le1",
+      "meaning": "Đo mức có thể xảy ra của biến cố.",
+      "whenToUse": "Khi mô hình hóa bất định.",
+      "example": "Xác suất cảm biến phát hiện vật cản.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đo mức có thể xảy ra của biến cố. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_conditional_probability",
+      "subjectId": "math",
+      "group": "probability_statistics",
+      "name": "Xác suất có điều kiện",
+      "latex": "P(A|B)=\\frac{P(A\\cap B)}{P(B)}",
+      "meaning": "Xác suất A khi đã biết B xảy ra.",
+      "whenToUse": "Khi bằng chứng làm thay đổi đánh giá.",
+      "example": "Xác suất lỗi khi môi trường nhiễu cao.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Xác suất A khi đã biết B xảy ra. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_bayes",
+      "subjectId": "math",
+      "group": "probability_statistics",
+      "name": "Định lý Bayes",
+      "latex": "P(A|B)=\\frac{P(B|A)P(A)}{P(B)}",
+      "meaning": "Cập nhật niềm tin theo bằng chứng mới.",
+      "whenToUse": "Khi phân loại, chẩn đoán hoặc suy luận bất định.",
+      "example": "Cập nhật xác suất vật cản dựa trên sensor reading.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Cập nhật niềm tin theo bằng chứng mới. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_expectation",
+      "subjectId": "math",
+      "group": "probability_statistics",
+      "name": "Kỳ vọng",
+      "latex": "E[X]=\\sum_x xP(X=x)",
+      "meaning": "Giá trị trung bình lý thuyết của biến ngẫu nhiên.",
+      "whenToUse": "Khi cần xu hướng trung tâm của phân phối.",
+      "example": "Kỳ vọng sai số đo sau nhiều lần đo.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Giá trị trung bình lý thuyết của biến ngẫu nhiên. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_variance",
+      "subjectId": "math",
+      "group": "probability_statistics",
+      "name": "Phương sai",
+      "latex": "Var(X)=E[(X-\\mu)^2]",
+      "meaning": "Độ phân tán quanh kỳ vọng.",
+      "whenToUse": "Khi đánh giá nhiễu hoặc độ ổn định.",
+      "example": "Sensor có variance cao dễ gây dự báo dao động.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Độ phân tán quanh kỳ vọng. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_covariance",
+      "subjectId": "math",
+      "group": "probability_statistics",
+      "name": "Hiệp phương sai",
+      "latex": "Cov(X,Y)=E[(X-\\mu_X)(Y-\\mu_Y)]",
+      "meaning": "Đo hai biến cùng tăng/giảm ra sao.",
+      "whenToUse": "Khi phân tích quan hệ giữa hai cảm biến/feature.",
+      "example": "Gia tốc và tốc độ cùng biến thiên.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đo hai biến cùng tăng/giảm ra sao. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_correlation",
+      "subjectId": "math",
+      "group": "probability_statistics",
+      "name": "Tương quan Pearson",
+      "latex": "\\rho=\\frac{Cov(X,Y)}{\\sigma_X\\sigma_Y}",
+      "meaning": "Chuẩn hóa hiệp phương sai về [-1,1].",
+      "whenToUse": "Khi so sánh mức liên hệ tuyến tính giữa hai biến.",
+      "example": "Tìm feature có liên hệ mạnh với lỗi dự báo.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Chuẩn hóa hiệp phương sai về [-1,1]. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_normal_z",
+      "subjectId": "math",
+      "group": "probability_statistics",
+      "name": "Z-score",
+      "latex": "z=\\frac{x-\\mu}{\\sigma}",
+      "meaning": "Chuẩn hóa một giá trị theo mean và standard deviation.",
+      "whenToUse": "Khi phát hiện giá trị lệch bất thường.",
+      "example": "Điểm cảm biến lệch 3 sigma.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Chuẩn hóa một giá trị theo mean và standard deviation. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_confidence_interval",
+      "subjectId": "math",
+      "group": "probability_statistics",
+      "name": "Khoảng tin cậy mean",
+      "latex": "\\bar{x}\\pm z_{\\alpha/2}\\frac{s}{\\sqrt n}",
+      "meaning": "Khoảng ước lượng mean có mức tin cậy xác định.",
+      "whenToUse": "Khi báo cáo kết quả thí nghiệm có sai số.",
+      "example": "Báo cáo RMSE trung bình kèm độ bất định.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Khoảng ước lượng mean có mức tin cậy xác định. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_mle",
+      "subjectId": "math",
+      "group": "probability_statistics",
+      "name": "Ước lượng hợp lý cực đại",
+      "latex": "\\hat{\\theta}=\\arg\\max_\\theta L(\\theta|x)",
+      "meaning": "Chọn tham số làm dữ liệu quan sát được có khả năng cao nhất.",
+      "whenToUse": "Khi fit phân phối hoặc mô hình xác suất.",
+      "example": "Ước lượng tham số noise Gaussian.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Chọn tham số làm dữ liệu quan sát được có khả năng cao nhất. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_mse_loss",
+      "subjectId": "math",
+      "group": "optimization",
+      "name": "MSE loss",
+      "latex": "MSE=\\frac1n\\sum_i(y_i-\\hat y_i)^2",
+      "meaning": "Phạt sai số lớn mạnh hơn sai số nhỏ.",
+      "whenToUse": "Khi tối ưu mô hình hồi quy.",
+      "example": "Đánh giá dự báo quỹ đạo.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Phạt sai số lớn mạnh hơn sai số nhỏ. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_mae_loss",
+      "subjectId": "math",
+      "group": "optimization",
+      "name": "MAE loss",
+      "latex": "MAE=\\frac1n\\sum_i|y_i-\\hat y_i|",
+      "meaning": "Đo sai số tuyệt đối trung bình, ít nhạy với outlier hơn MSE.",
+      "whenToUse": "Khi dữ liệu có ngoại lệ.",
+      "example": "Dự báo cảm biến có spike bất thường.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đo sai số tuyệt đối trung bình, ít nhạy với outlier hơn MSE. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_l2_regularization",
+      "subjectId": "math",
+      "group": "optimization",
+      "name": "L2 regularization",
+      "latex": "J(w)=L(w)+\\lambda\\|w\\|_2^2",
+      "meaning": "Phạt trọng số lớn để giảm overfit.",
+      "whenToUse": "Khi mô hình quá khớp dữ liệu train.",
+      "example": "Ridge regression cho sensor features.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Phạt trọng số lớn để giảm overfit. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_convexity",
+      "subjectId": "math",
+      "group": "optimization",
+      "name": "Điều kiện lồi",
+      "latex": "f(tx+(1-t)y)\\le tf(x)+(1-t)f(y)",
+      "meaning": "Hàm lồi có cực tiểu toàn cục dễ kiểm soát hơn.",
+      "whenToUse": "Khi phân tích bảo đảm tối ưu.",
+      "example": "Loss convex của linear regression.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Hàm lồi có cực tiểu toàn cục dễ kiểm soát hơn. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_lagrangian",
+      "subjectId": "math",
+      "group": "optimization",
+      "name": "Lagrangian",
+      "latex": "\\mathcal{L}(x,\\lambda)=f(x)+\\lambda g(x)",
+      "meaning": "Đưa ràng buộc vào hàm mục tiêu.",
+      "whenToUse": "Khi tối ưu dưới điều kiện.",
+      "example": "Tối ưu đường đi với giới hạn năng lượng.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đưa ràng buộc vào hàm mục tiêu. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_kkt_simple",
+      "subjectId": "math",
+      "group": "optimization",
+      "name": "Điều kiện KKT cơ bản",
+      "latex": "\\nabla_x\\mathcal{L}=0,\\ g(x)\\le0,\\lambda\\ge0,\\lambda g(x)=0",
+      "meaning": "Điều kiện cần cho nghiệm tối ưu có ràng buộc.",
+      "whenToUse": "Khi bài toán có inequality constraints.",
+      "example": "Điều khiển robot với giới hạn tốc độ.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Điều kiện cần cho nghiệm tối ưu có ràng buộc. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_learning_rate_rule",
+      "subjectId": "math",
+      "group": "optimization",
+      "name": "Quy tắc learning rate",
+      "latex": "x_{k+1}=x_k-\\eta_k\\nabla f(x_k)",
+      "meaning": "Learning rate quyết định bước đi nhỏ, vừa hay quá đà.",
+      "whenToUse": "Khi thuật toán dao động hoặc hội tụ chậm.",
+      "example": "Tuning optimizer trong mô hình dự báo.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Learning rate quyết định bước đi nhỏ, vừa hay quá đà. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_time_series_decomposition",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "Phân rã chuỗi thời gian",
+      "latex": "y_t=T_t+S_t+R_t",
+      "meaning": "Tách trend, seasonality và residual.",
+      "whenToUse": "Khi phân tích dữ liệu theo thời gian.",
+      "example": "Telemetry có xu hướng dài hạn và nhiễu ngắn hạn.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Tách trend, seasonality và residual. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_moving_average",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "Trung bình trượt",
+      "latex": "MA_t=\\frac1k\\sum_{i=0}^{k-1} y_{t-i}",
+      "meaning": "Làm mượt chuỗi bằng trung bình cửa sổ.",
+      "whenToUse": "Khi cần giảm nhiễu nhanh.",
+      "example": "Làm mượt tín hiệu khoảng cách lidar.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Làm mượt chuỗi bằng trung bình cửa sổ. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_autocorrelation",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "Tự tương quan",
+      "latex": "r_k=Corr(y_t,y_{t-k})",
+      "meaning": "Đo chuỗi hiện tại liên hệ với quá khứ ở độ trễ k.",
+      "whenToUse": "Khi tìm seasonality hoặc dependency.",
+      "example": "Phát hiện chu kỳ dao động cảm biến.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đo chuỗi hiện tại liên hệ với quá khứ ở độ trễ k. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_dft",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "DFT",
+      "latex": "X_k=\\sum_{n=0}^{N-1}x_n e^{-j2\\pi kn/N}",
+      "meaning": "Chuyển tín hiệu từ miền thời gian sang miền tần số.",
+      "whenToUse": "Khi cần phân tích dao động hoặc lọc nhiễu.",
+      "example": "Tìm tần số rung của robot.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Chuyển tín hiệu từ miền thời gian sang miền tần số. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_rmse",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "RMSE",
+      "latex": "RMSE=\\sqrt{\\frac1n\\sum_i(y_i-\\hat y_i)^2}",
+      "meaning": "Sai số căn bậc hai, cùng đơn vị với biến dự báo.",
+      "whenToUse": "Khi báo cáo mô hình dự báo.",
+      "example": "RMSE vị trí dự báo UGV.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Sai số căn bậc hai, cùng đơn vị với biến dự báo. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_mae_metric",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "MAE metric",
+      "latex": "MAE=\\frac1n\\sum_i|e_i|",
+      "meaning": "Sai số tuyệt đối trung bình, dễ giải thích.",
+      "whenToUse": "Khi muốn metric ổn định trước outlier.",
+      "example": "Sai số trung bình của cảm biến nhiệt.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Sai số tuyệt đối trung bình, dễ giải thích. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_mape",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "MAPE",
+      "latex": "MAPE=\\frac{100\\%}{n}\\sum_i\\left|\\frac{y_i-\\hat y_i}{y_i}\\right|",
+      "meaning": "Sai số phần trăm, nhưng nguy hiểm khi y gần 0.",
+      "whenToUse": "Khi cần diễn giải tương đối và dữ liệu không gần 0.",
+      "example": "Dự báo tiêu thụ năng lượng.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Sai số phần trăm, nhưng nguy hiểm khi y gần 0. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_anomaly_z",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "Anomaly bằng z-score",
+      "latex": "|z|>\\tau",
+      "meaning": "Đánh dấu điểm quá xa phân phối bình thường.",
+      "whenToUse": "Khi baseline gần Gaussian và cần rule đơn giản.",
+      "example": "Cảnh báo telemetry lệch chuẩn.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đánh dấu điểm quá xa phân phối bình thường. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_precision_recall",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "Precision và Recall",
+      "latex": "Precision=\\frac{TP}{TP+FP},\\ Recall=\\frac{TP}{TP+FN}",
+      "meaning": "Đo chất lượng phân loại khi lớp quan tâm quan trọng.",
+      "whenToUse": "Khi phát hiện anomaly hoặc vật cản.",
+      "example": "Cân bằng báo động giả và bỏ sót lỗi.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đo chất lượng phân loại khi lớp quan tâm quan trọng. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_f1_score",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "F1-score",
+      "latex": "F1=2\\frac{Precision\\cdot Recall}{Precision+Recall}",
+      "meaning": "Trung bình điều hòa của precision và recall.",
+      "whenToUse": "Khi cần một chỉ số cân bằng cho phân loại mất cân bằng.",
+      "example": "Đánh giá mô hình phát hiện lỗi cảm biến.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Trung bình điều hòa của precision và recall. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f_effect_size",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "Effect size",
+      "latex": "d=\\frac{\\bar{x}_1-\\bar{x}_2}{s_p}",
+      "meaning": "Đo mức khác biệt thực tế giữa hai nhóm, không chỉ p-value.",
+      "whenToUse": "Khi so sánh hai mô hình trong báo cáo nghiên cứu.",
+      "example": "Mô hình mới giảm RMSE có ý nghĩa thực tế ra sao.",
+      "linkedConceptIds": [],
+      "proofSketch": "Trực giác: Đo mức khác biệt thực tế giữa hai nhóm, không chỉ p-value. Công thức này được dùng để chuyển bài toán từ lời văn sang phép tính kiểm tra được.",
+      "commonMistakes": [
+        "Dùng công thức khi giả thiết chưa thỏa mãn.",
+        "Quên đơn vị/chiều dữ liệu hoặc chuẩn hóa.",
+        "Tính đúng số nhưng diễn giải sai ý nghĩa kết quả."
+      ]
+    },
+    {
+      "id": "f1",
+      "subjectId": "math",
+      "group": "mẫu/công thức",
+      "name": "Dot product",
+      "latex": "a·b = Σ a_i b_i",
+      "meaning": "Đo mức đồng hướng của hai vector.",
+      "whenToUse": "Khi bài toán chạm tới concept cùng nhóm công thức.",
+      "example": "Cosine similarity trong dữ liệu văn bản/cảm biến.",
+      "linkedConceptIds": [],
+      "proofSketch": "Bổ sung ở lượt 4 nếu công thức là trọng tâm."
+    },
+    {
+      "id": "f2",
+      "subjectId": "math",
+      "group": "mẫu/công thức",
+      "name": "Variance",
+      "latex": "Var(X)=E[(X-μ)^2]",
+      "meaning": "Đo độ phân tán dữ liệu.",
+      "whenToUse": "Khi bài toán chạm tới concept cùng nhóm công thức.",
+      "example": "Dùng khi chuẩn hóa và đánh giá sensor noise.",
+      "linkedConceptIds": [],
+      "proofSketch": "Bổ sung ở lượt 4 nếu công thức là trọng tâm."
+    },
+    {
+      "id": "f3",
+      "subjectId": "math",
+      "group": "mẫu/công thức",
+      "name": "Bayes",
+      "latex": "P(A|B)=P(B|A)P(A)/P(B)",
+      "meaning": "Cập nhật xác suất theo bằng chứng.",
+      "whenToUse": "Khi bài toán chạm tới concept cùng nhóm công thức.",
+      "example": "Dùng cho reasoning và phân loại xác suất.",
+      "linkedConceptIds": [],
+      "proofSketch": "Bổ sung ở lượt 4 nếu công thức là trọng tâm."
+    },
+    {
+      "id": "f4",
+      "subjectId": "math",
+      "group": "mẫu/công thức",
+      "name": "PCA objective",
+      "latex": "maximize variance of projected data",
+      "meaning": "Tìm hướng giữ nhiều phương sai nhất.",
+      "whenToUse": "Khi bài toán chạm tới concept cùng nhóm công thức.",
+      "example": "Giảm chiều dữ liệu telemetry.",
+      "linkedConceptIds": [],
+      "proofSketch": "Bổ sung ở lượt 4 nếu công thức là trọng tâm."
+    },
+    {
+      "id": "math_formula_group_foundations",
+      "subjectId": "math",
+      "group": "foundations",
+      "name": "Toán nền tảng",
+      "latex": "",
+      "meaning": "Ký hiệu, hàm số, biến đổi và giới hạn dùng để đọc đề/giải bài chính xác.",
+      "whenToUse": "Dùng trong các module thuộc khối học thuật tương ứng.",
+      "example": "Lượt 4 sẽ bổ sung công thức cụ thể, ví dụ mẫu và chứng minh/trực giác.",
+      "linkedConceptIds": [],
+      "proofSketch": "planned_l4",
+      "status": "roadmap_group_l3"
+    },
+    {
+      "id": "math_formula_group_multivariable",
+      "subjectId": "math",
+      "group": "multivariable_calculus",
+      "name": "Giải tích nhiều biến",
+      "latex": "",
+      "meaning": "Gradient, Jacobian, Hessian và xấp xỉ tuyến tính.",
+      "whenToUse": "Dùng trong các module thuộc khối học thuật tương ứng.",
+      "example": "Lượt 4 sẽ bổ sung công thức cụ thể, ví dụ mẫu và chứng minh/trực giác.",
+      "linkedConceptIds": [],
+      "proofSketch": "planned_l4",
+      "status": "roadmap_group_l3"
+    },
+    {
+      "id": "math_formula_group_signal_research",
+      "subjectId": "math",
+      "group": "ai_signal_research_math",
+      "name": "Toán AI/Signal/Research",
+      "latex": "",
+      "meaning": "PCA/SVD, chuỗi thời gian, metric và phụ lục luận văn.",
+      "whenToUse": "Dùng trong các module thuộc khối học thuật tương ứng.",
+      "example": "Lượt 4 sẽ bổ sung công thức cụ thể, ví dụ mẫu và chứng minh/trực giác.",
+      "linkedConceptIds": [],
+      "proofSketch": "planned_l4",
+      "status": "roadmap_group_l3"
+    }
+  ],
+  "l4Status": {
+    "status": "expanded",
+    "formulaCount": 61,
+    "updatedAt": "2026-06-11",
+    "note": "Lượt 4 đã mở rộng công thức theo 6 khối học thuật."
+  }
+}

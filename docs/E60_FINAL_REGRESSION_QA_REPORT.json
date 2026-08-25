@@ -1,0 +1,95 @@
+{
+  "json_parse": {
+    "status": "PASS",
+    "files": 45,
+    "errors": []
+  },
+  "js_syntax": {
+    "status": "PASS",
+    "files": 5,
+    "errors": []
+  },
+  "summary_policy": {
+    "status": "PASS",
+    "non_last_summary_hits": 0,
+    "last_summary_missing": 0,
+    "sample_non_last": []
+  },
+  "label_dedup": {
+    "status": "PASS",
+    "duplicate_chapter_labels": 0,
+    "duplicate_lesson_labels": 0
+  },
+  "exercises": {
+    "status": "PASS",
+    "count": 1040,
+    "lessons_with_4_levels": 260,
+    "missing_levels": 0,
+    "bad_refs": 0,
+    "schema_missing": 0
+  },
+  "professor_qa": {
+    "status": "PASS",
+    "count": 260,
+    "errors": 0,
+    "sample": []
+  },
+  "applications": {
+    "status": "PASS",
+    "count": 520,
+    "type_counts": {
+      "engineering": 260,
+      "programming": 260
+    },
+    "errors": 0,
+    "sample": []
+  },
+  "simulations": {
+    "status": "PASS",
+    "count": 260,
+    "profiles": {
+      "linear_vector": 21,
+      "pca_multidim": 41,
+      "optimization_mpc": 25,
+      "probability_bayes": 45,
+      "signal_spectral": 19,
+      "time_series": 32,
+      "russian_math_terms": 16,
+      "state_space_kalman": 32,
+      "research_robustness": 29
+    },
+    "unique_keys": 260,
+    "errors": 0,
+    "bad_lesson_counts": []
+  },
+  "formulas": {
+    "status": "PASS",
+    "count": 678,
+    "metadata_complete": 678,
+    "errors": 0
+  },
+  "core_renderer": {
+    "status": "PASS",
+    "function_count": 74,
+    "duplicate_functions": {},
+    "forbidden_literals": [],
+    "simulation_picker_keeps_tab": true
+  },
+  "global_text": {
+    "status": "PASS",
+    "object_object_files": [],
+    "replacement_char_files": []
+  },
+  "counts": {
+    "chapters": 32,
+    "lessons": 260,
+    "exercises": 1040,
+    "qa_sets": 260,
+    "applications": 520,
+    "simulations": 260,
+    "formulas": 678
+  },
+  "status": "PASS",
+  "name": "E60 Final Regression QA checkpoint/test/snapshot",
+  "note": "Không phải FINAL. Checkpoint kiểm toàn hệ sau E56-E59."
+}

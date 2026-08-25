@@ -1,0 +1,19 @@
+{
+  "frameFile": "application_frame.json",
+  "contentFile": "application_content.json",
+  "recordKey": "applicationId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonId": "MATH-VN-LA-C01-L04",
+    "tags": [
+      "vector",
+      "AI",
+      "điều khiển"
+    ],
+    "applicationId": "MATH-VN-LA-C01-L04-A01",
+    "title": "So sánh hướng hai vector đặc trưng",
+    "scenario": "Hai tín hiệu cảm biến được biểu diễn bằng vector.",
+    "method": "Chuẩn hóa rồi tính cosine similarity.",
+    "auditStatus": "DRAFT"
+  }
+}

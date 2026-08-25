@@ -1,0 +1,45 @@
+{
+  "id":"bauman_math_theory_integration_manifest_v1",
+  "schema":"bauman_math_theory_integration_manifest_v1",
+  "version":"INTEGRATION_MANIFEST_V1_2_22_SLIDES",
+  "sourcePolicy":"Final integration records bind approved core, reference, slideshow, full-view and normalization artifacts to a runtime projection without changing mathematical meaning or compressing approved learning beats.",
+  "pipelinePosition":{"after":"formula_and_layout_normalization","final":true},
+  "rules":[
+    "All five approved artifact layers must be present and version-locked.",
+    "Core has highest semantic precedence.",
+    "Runtime projection must satisfy the active E129 importer contract.",
+    "Merge mode must use lessonId and must not replace the complete content store.",
+    "Sixteen E129 roles are a preferred baseline, not a maximum slide count.",
+    "A user requirement of minimum 16 slides must not be rewritten as exactly 16 slides.",
+    "Every approved slideshow learning beat must remain represented unless an explicit later editorial decision removes it.",
+    "Automatic binding must not mutate localStorage or rewrite a monolithic content file without preserving all records.",
+    "Browser verification is required after explicit runtime import or durable merge.",
+    "Reader Pro, E235 and UI layout remain unchanged during integration."
+  ],
+  "records":[
+    {
+      "chapter":"C01",
+      "lesson":"L04",
+      "lessonId":"MATH-VN-C01-vector_trong_khong_gian_-L04-basis-span-coordinate-e140",
+      "path":"theory_integration_c01_l04.json",
+      "runtimeImportPath":"theory_lecture_content_c01_l04_import.json",
+      "integrationVersion":"INTEGRATION_C01_L04_V2_22_SLIDES_ACCEPTED",
+      "runtimeImportVersion":"C01_L04_E129_IMPORT_V2_22_SLIDES_APPROVED",
+      "coreVersion":"CORE_C01_L04_V1_APPROVED",
+      "referenceVersion":"REFERENCE_C01_L04_V1_APPROVED",
+      "slideshowVersion":"SLIDESHOW_C01_L04_V1_APPROVED",
+      "fullViewVersion":"FULL_VIEW_C01_L04_V1_APPROVED",
+      "normalizationVersion":"NORMALIZATION_C01_L04_V1_APPROVED",
+      "runtimeContract":"E129_THEORY_CONTENT_IMPORTER",
+      "runtimeMode":"merge",
+      "minimumSlideCount":16,
+      "runtimeSlideCount":22,
+      "sourceSlideshowCount":22,
+      "compression":false,
+      "oneToOneSourceMapping":true,
+      "semanticConflictCount":0,
+      "automaticRuntimeBinding":false,
+      "status":"accepted_import_ready_22_slides"
+    }
+  ]
+}

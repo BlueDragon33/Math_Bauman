@@ -1,0 +1,12 @@
+{
+  "version": "V37",
+  "title": "Tab Data UX fix + universal chapter picker for Theory/Exercises/Applications/Dialogue/Simulation/Formulas",
+  "changes": [
+    "Fixed Storage/Data tab layout to prevent vertical squeezed text and content overlap.",
+    "Made Choose Chapter button larger, brighter, and visually dominant.",
+    "Applied Choose Chapter modal picker to Theory, Exercises, Applications, Oral Defense, and Simulation tabs.",
+    "Kept formula/deep formula picker and upgraded its visual emphasis via shared V37 button styling.",
+    "Picker modal uses the same Faculty -> Department -> Chapter -> section tree, keeping content spacious instead of cramped sidebars."
+  ],
+  "cache": "index.html asset versions bumped to ?v=37."
+}

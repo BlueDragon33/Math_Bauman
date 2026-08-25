@@ -1,0 +1,17 @@
+{
+  "checkpoint": "E41_SIMULATION_DEEP_LAB_CHECKPOINT_TEST_SNAPSHOT",
+  "is_final": false,
+  "base": "E40_APPLICATION_SUMMARY_SIM_START",
+  "scope": [
+    "Deepen tab Mô phỏng with interactive lab board",
+    "Enrich all simulations with model/control/scenario/report fields",
+    "Add iframe lab v2 HTML for theory/application",
+    "Keep compact flow and previous regression locks"
+  ],
+  "counts": {
+    "simulations": 520,
+    "theory": 260,
+    "application": 260
+  },
+  "validation_pending": "see E41_VALIDATION_REPORT.json"
+}

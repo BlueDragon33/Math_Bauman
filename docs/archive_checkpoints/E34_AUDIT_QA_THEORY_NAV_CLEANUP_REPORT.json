@@ -1,0 +1,59 @@
+{
+  "checkpoint": "E34_AUDIT_QA_THEORY_NAV_CLEANUP_CHECKPOINT_TEST_SNAPSHOT",
+  "isFinal": false,
+  "jsonParse": {
+    "files": 29,
+    "failures": [],
+    "pass": true
+  },
+  "jsSyntax": {
+    "files": 5,
+    "failures": [],
+    "pass": true
+  },
+  "chapterCount": 32,
+  "lessonCount": 260,
+  "genericInstructionPhraseCounts": {
+    "Bài này làm rõ:": 0,
+    "Định nghĩa được trình bày theo ngôn ngữ toán học": 0,
+    "Ký hiệu chính của mục này được đặt trong khung công thức": 0,
+    "Ví dụ được chọn ở mức nhỏ": 0,
+    "Chốt lại định nghĩa, ký hiệu": 0,
+    "Nội dung bài học hiển thị tại đây": 0,
+    "object_object_render_artifact": 0
+  },
+  "theoryBadBlocks": [],
+  "theoryBadBlockCount": 0,
+  "professorQa": {
+    "count": 260,
+    "missingAnswers": 0,
+    "badTurns": 0,
+    "pass": true
+  },
+  "questionBank": {
+    "count": 1423,
+    "badAnswerOrExplanation": 0,
+    "pass": true
+  },
+  "simulations": {
+    "total": 520,
+    "missingTheoryOrApplicationLessons": 0,
+    "pass": true
+  },
+  "markers": {
+    "objectSafeDialogue": true,
+    "modelAnswerInDialogue": true,
+    "chapterPrevNext": true,
+    "renderFormulaShim": true,
+    "storageIndicator": true,
+    "theoryHorizontalOnly": true,
+    "e34Css": true
+  },
+  "overallPass": true,
+  "zip": {
+    "path": "/mnt/data/A2_Math_Bauman_Elearning_E34_AUDIT_QA_THEORY_NAV_CLEANUP_CHECKPOINT_TEST_SNAPSHOT.zip",
+    "size": 2346969,
+    "testzip": null,
+    "pass": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "episode": "E51_SIM_EVIDENCE_NOTEBOOK_CHECKPOINT_TEST_SNAPSHOT",
+  "final": false,
+  "timestamp": "2026-06-19T00:00:00+07:00",
+  "base": "E50_SIM_EXECUTION_BOARD",
+  "changes": [
+    "Bổ sung Evidence Board cho toàn bộ 520 mô phỏng.",
+    "Thêm lab notebook, answer key, compare matrix baseline/stress/failure/compare.",
+    "Thêm checklist bằng chứng, mẫu vấn đáp 60 giây tiếng Việt/tiếng Nga.",
+    "Renderer E51 hiển thị sổ lab tự kiểm, bảng so sánh, đáp án đọc lab và kết luận có điều kiện.",
+    "Giữ các khóa E43/E44/E50: tóm tắt chỉ slide cuối, ứng dụng phụ thuộc lý thuyết, mô phỏng chống lặp."
+  ],
+  "counts": {
+    "lessons": 260,
+    "chapters": 32,
+    "applications": 469,
+    "simulations": 520,
+    "simulations_e51": 520,
+    "unique_e49_keys": 520
+  },
+  "validation": {
+    "json_parse": "PASS",
+    "json_errors": [],
+    "js_syntax": "PASS",
+    "js_errors": [],
+    "sim_e51_count": 520,
+    "missing_e51_fields": 0,
+    "object_object_literals": 0,
+    "non_last_final_summary": 0,
+    "last_summary_missing": 0,
+    "zip_integrity": "PASS"
+  }
+}

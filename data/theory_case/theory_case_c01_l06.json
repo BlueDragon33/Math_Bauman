@@ -1,0 +1,313 @@
+{
+  "id": "bauman_math_theory_case_c01_l06_v1",
+  "schema": "bauman_math_theory_case_v1",
+  "version": "CASE_C01_L06_V1_LOCKED",
+  "status": "approved_for_downstream_academic_artifacts",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L06-vector-to-data-matrix-e140",
+  "lessonTitle": "§1.6 · Từ vector sang ma trận dữ liệu",
+  "caseId": "UGV_TELEMETRY_8X6",
+  "purpose": "Case số cố định để dạy hợp đồng ma trận dữ liệu, orientation, stacking, indexing, slicing, transpose, mean, centering và kiểm thử schema mà không suy diễn fault, physical mode, PCA component hoặc universal threshold.",
+  "syntheticCase": true,
+  "physicalContract": {
+    "system": "unmanned_ground_vehicle",
+    "scenario": "eight ordered telemetry windows under one acquisition configuration",
+    "observationDefinition": "one synchronized fixed-duration telemetry window summarized by six ordered features",
+    "observationCount": 8,
+    "featureCount": 6,
+    "canonicalOrientation": "observations_as_rows_features_as_columns",
+    "rawShape": [8, 6],
+    "missingValuesAllowed": false,
+    "timestampPolicy": "timestamps are observation metadata and are not appended as a numeric feature",
+    "schemaVersion": "UGV_TELEMETRY_SCHEMA_V1",
+    "acquisitionConfigId": "UGV_ACQ_CFG_V1",
+    "schemaChecksumSha256": "c3c21cda2c9f802300b11e86ff6c08ea2a9b16f99b7b8ad8f9b26a22f112c544"
+  },
+  "notation": {
+    "observation": "x^(i) in R^6",
+    "rawMatrix": "X_raw in R^(8 x 6)",
+    "mean": "mu in R^6",
+    "centeredMatrix": "X_c = X_raw - 1_8 mu^T",
+    "transpose": "X_col = X_raw^T in R^(6 x 8)",
+    "featureGramPreview": "G_f = X_raw^T X_raw in R^(6 x 6)",
+    "observationGramPreview": "G_o = X_raw X_raw^T in R^(8 x 8)"
+  },
+  "featureSchema": [
+    {
+      "index": 0,
+      "id": "omega_left",
+      "labelVi": "tốc độ góc bánh trái",
+      "labelEn": "left wheel angular speed",
+      "labelRu": "угловая скорость левого колеса",
+      "unit": "rad/s"
+    },
+    {
+      "index": 1,
+      "id": "omega_right",
+      "labelVi": "tốc độ góc bánh phải",
+      "labelEn": "right wheel angular speed",
+      "labelRu": "угловая скорость правого колеса",
+      "unit": "rad/s"
+    },
+    {
+      "index": 2,
+      "id": "a_long",
+      "labelVi": "gia tốc dọc thân xe",
+      "labelEn": "longitudinal acceleration",
+      "labelRu": "продольное ускорение",
+      "unit": "m/s^2"
+    },
+    {
+      "index": 3,
+      "id": "a_lat",
+      "labelVi": "gia tốc ngang thân xe",
+      "labelEn": "lateral acceleration",
+      "labelRu": "поперечное ускорение",
+      "unit": "m/s^2"
+    },
+    {
+      "index": 4,
+      "id": "yaw_rate",
+      "labelVi": "tốc độ quay yaw",
+      "labelEn": "yaw rate",
+      "labelRu": "угловая скорость рыскания",
+      "unit": "rad/s"
+    },
+    {
+      "index": 5,
+      "id": "battery_current",
+      "labelVi": "dòng điện pin",
+      "labelEn": "battery current",
+      "labelRu": "ток аккумулятора",
+      "unit": "A"
+    }
+  ],
+  "observationMetadata": [
+    {"row": 0, "observationId": "UGV-W01", "timestamp": "2026-07-09T10:00:00.000Z"},
+    {"row": 1, "observationId": "UGV-W02", "timestamp": "2026-07-09T10:00:00.250Z"},
+    {"row": 2, "observationId": "UGV-W03", "timestamp": "2026-07-09T10:00:00.500Z"},
+    {"row": 3, "observationId": "UGV-W04", "timestamp": "2026-07-09T10:00:00.750Z"},
+    {"row": 4, "observationId": "UGV-W05", "timestamp": "2026-07-09T10:00:01.000Z"},
+    {"row": 5, "observationId": "UGV-W06", "timestamp": "2026-07-09T10:00:01.250Z"},
+    {"row": 6, "observationId": "UGV-W07", "timestamp": "2026-07-09T10:00:01.500Z"},
+    {"row": 7, "observationId": "UGV-W08", "timestamp": "2026-07-09T10:00:01.750Z"}
+  ],
+  "rawMatrix": {
+    "symbol": "X_raw",
+    "shape": [8, 6],
+    "orientation": "observations_as_rows_features_as_columns",
+    "rows": [
+      [8.2, 8.1, 0.12, 0.03, -0.02, 11.8],
+      [8.5, 8.7, 0.18, 0.05, 0.04, 12.1],
+      [9.0, 9.4, 0.25, 0.11, 0.08, 12.9],
+      [9.3, 9.1, 0.1, -0.04, -0.05, 13.2],
+      [8.8, 8.3, -0.08, -0.12, -0.1, 12.4],
+      [8.1, 7.9, -0.22, -0.06, -0.04, 11.6],
+      [7.7, 8.0, -0.15, 0.08, 0.06, 11.3],
+      [8.4, 8.9, 0.05, 0.14, 0.11, 12.0]
+    ],
+    "finiteValueCount": 48,
+    "missingValueCount": 0
+  },
+  "lockedExtractions": {
+    "entry": {
+      "expression": "X_raw[2,4]",
+      "mathematicalIndex": "x_(3,5)",
+      "value": 0.08,
+      "meaning": "yaw_rate of observation UGV-W03",
+      "unit": "rad/s"
+    },
+    "observationRow": {
+      "expression": "X_raw[2,:]",
+      "observationId": "UGV-W03",
+      "shape": [6],
+      "value": [9.0, 9.4, 0.25, 0.11, 0.08, 12.9]
+    },
+    "featureColumn": {
+      "expression": "X_raw[:,4]",
+      "featureId": "yaw_rate",
+      "shape": [8],
+      "unit": "rad/s",
+      "value": [-0.02, 0.04, 0.08, -0.05, -0.1, -0.04, 0.06, 0.11]
+    },
+    "dataBlock": {
+      "expression": "X_raw[2:5,2:5]",
+      "observationIds": ["UGV-W03", "UGV-W04", "UGV-W05"],
+      "featureIds": ["a_long", "a_lat", "yaw_rate"],
+      "shape": [3, 3],
+      "value": [
+        [0.25, 0.11, 0.08],
+        [0.1, -0.04, -0.05],
+        [-0.08, -0.12, -0.1]
+      ]
+    }
+  },
+  "transposeRepresentation": {
+    "symbol": "X_col = X_raw^T",
+    "shape": [6, 8],
+    "orientation": "features_as_rows_observations_as_columns",
+    "rows": [
+      [8.2, 8.5, 9.0, 9.3, 8.8, 8.1, 7.7, 8.4],
+      [8.1, 8.7, 9.4, 9.1, 8.3, 7.9, 8.0, 8.9],
+      [0.12, 0.18, 0.25, 0.1, -0.08, -0.22, -0.15, 0.05],
+      [0.03, 0.05, 0.11, -0.04, -0.12, -0.06, 0.08, 0.14],
+      [-0.02, 0.04, 0.08, -0.05, -0.1, -0.04, 0.06, 0.11],
+      [11.8, 12.1, 12.9, 13.2, 12.4, 11.6, 11.3, 12.0]
+    ],
+    "invariant": "column i of X_col equals observation x^(i)"
+  },
+  "meanVector": {
+    "symbol": "mu",
+    "shape": [6],
+    "value": [8.5, 8.55, 0.03125, 0.02375, 0.01, 12.1625],
+    "unitsByFeature": ["rad/s", "rad/s", "m/s^2", "m/s^2", "rad/s", "A"]
+  },
+  "centeredMatrix": {
+    "symbol": "X_c = X_raw - 1_8 mu^T",
+    "shape": [8, 6],
+    "rows": [
+      [-0.3, -0.45, 0.08875, 0.00625, -0.03, -0.3625],
+      [0.0, 0.15, 0.14875, 0.02625, 0.03, -0.0625],
+      [0.5, 0.85, 0.21875, 0.08625, 0.07, 0.7375],
+      [0.8, 0.55, 0.06875, -0.06375, -0.06, 1.0375],
+      [0.3, -0.25, -0.11125, -0.14375, -0.11, 0.2375],
+      [-0.4, -0.65, -0.25125, -0.08375, -0.05, -0.5625],
+      [-0.8, -0.55, -0.18125, 0.05625, 0.05, -0.8625],
+      [-0.1, 0.35, 0.01875, 0.11625, 0.1, -0.1625]
+    ],
+    "columnSumsFloatingPoint": [8.881784197001252e-16, 8.881784197001252e-15, -5.551115123125783e-17, 2.7755575615628914e-17, -2.7755575615628914e-17, 3.552713678800501e-15],
+    "maxAbsColumnSum": 8.881784197001252e-15,
+    "maxReconstructionError": 2.7755575615628914e-17
+  },
+  "previewOnlyDerivedObjects": {
+    "sampleCovariance": {
+      "status": "preview_only",
+      "formulaId": "F16",
+      "symbol": "C = (1/7) X_c^T X_c",
+      "shape": [6, 6],
+      "value": [
+        [0.268571428571, 0.227142857143, 0.049714285714, -0.010857142857, -0.009571428571, 0.33],
+        [0.227142857143, 0.308571428571, 0.071928571429, 0.019928571429, 0.016, 0.296428571429],
+        [0.049714285714, 0.071928571429, 0.027326785714, 0.006851785714, 0.004371428571, 0.065625],
+        [-0.010857142857, 0.019928571429, 0.006851785714, 0.008083928571, 0.006414285714, -0.008696428571],
+        [-0.009571428571, 0.016, 0.004371428571, 0.006414285714, 0.005342857143, -0.008428571429],
+        [0.33, 0.296428571429, 0.065625, -0.008696428571, -0.008428571429, 0.414107142857]
+      ],
+      "warning": "This object is included only to verify the assumption-scoped F16 bridge. It is not a PCA result, mode estimate, fault score or universal preprocessing recommendation."
+    },
+    "scalePolicy": {
+      "status": "not_locked_in_pass_5",
+      "reason": "The six features use mixed units, but a defensible scale vector depends on the downstream task and reference population. No arbitrary scale vector is invented."
+    },
+    "rankPolicy": {
+      "status": "not_interpreted",
+      "formulaId": "F18",
+      "acceptedStatement": "rank(X) <= min(8,6) = 6",
+      "warning": "No physical mode count, feature usefulness claim or threshold is inferred."
+    }
+  },
+  "invalidVariants": [
+    {
+      "id": "INVALID_SWAP_WHEEL_COLUMNS_STALE_SCHEMA",
+      "mutation": "swap numeric columns 0 and 1 but keep featureSchema unchanged",
+      "columnPermutation": [1, 0, 2, 3, 4, 5],
+      "representativeFirstRow": [8.1, 8.2, 0.12, 0.03, -0.02, 11.8],
+      "shape": [8, 6],
+      "expectedFailures": ["feature_order_mismatch", "schema_checksum_mismatch"],
+      "lessonPoint": "Equal shape does not preserve semantic compatibility."
+    },
+    {
+      "id": "INVALID_OMEGA_LEFT_VALUES_IN_RPM_STALE_UNIT",
+      "mutation": "convert omega_left numeric values from rad/s to rpm while metadata still declares rad/s",
+      "omegaLeftValues": [78.304232001, 81.169020977, 85.94366927, 88.808458245, 84.033809953, 77.349302343, 73.529583708, 80.214091318],
+      "staleDeclaredUnit": "rad/s",
+      "actualUnit": "rpm",
+      "shape": [8, 6],
+      "expectedFailures": ["unit_contract_mismatch", "value_range_shift"],
+      "lessonPoint": "Correct shape and feature name do not prove unit compatibility."
+    },
+    {
+      "id": "INVALID_TRANSPOSED_WITH_ROW_OBSERVATION_LABEL",
+      "mutation": "use X_raw^T but continue labelling rows as observations",
+      "shape": [6, 8],
+      "numericObject": "transposeRepresentation.rows",
+      "staleOrientationLabel": "observations_as_rows_features_as_columns",
+      "expectedFailures": ["orientation_mismatch", "observation_metadata_length_mismatch", "feature_schema_length_mismatch"],
+      "lessonPoint": "Transpose changes both shape and interpretation."
+    },
+    {
+      "id": "INVALID_SCHEMA_VERSION_V2_WITH_V1_PAYLOAD",
+      "mutation": "change schemaVersion without regenerating feature contract and checksum",
+      "declaredSchemaVersion": "UGV_TELEMETRY_SCHEMA_V2",
+      "payloadSchemaVersion": "UGV_TELEMETRY_SCHEMA_V1",
+      "payloadChecksum": "c3c21cda2c9f802300b11e86ff6c08ea2a9b16f99b7b8ad8f9b26a22f112c544",
+      "shape": [8, 6],
+      "expectedFailures": ["schema_version_mismatch", "schema_checksum_mismatch"],
+      "lessonPoint": "Version is part of the interface even when numbers and shape are unchanged."
+    }
+  ],
+  "verificationTolerances": {
+    "meanAtol": 1e-12,
+    "centeringAtol": 1e-12,
+    "reconstructionAtol": 1e-12,
+    "timestampOrderStrict": true,
+    "finiteValuesRequired": true,
+    "schemaChecksumExact": true
+  },
+  "verificationOutputs": {
+    "shapeCheck": true,
+    "observationMetadataCount": 8,
+    "featureSchemaCount": 6,
+    "allValuesFinite": true,
+    "missingValueCount": 0,
+    "timestampsStrictlyIncreasing": true,
+    "featureIndicesContiguous": true,
+    "meanMatchesLockedValue": true,
+    "centeredColumnSumsWithinTolerance": true,
+    "centeredReconstructionWithinTolerance": true,
+    "transposeShape": [6, 8],
+    "entryExtractionMatches": true,
+    "rowExtractionMatches": true,
+    "columnExtractionMatches": true,
+    "blockExtractionMatches": true,
+    "invalidVariantExpectedFailureCount": 4
+  },
+  "lockedInvariants": [
+    "X_raw has shape 8 x 6 with observations as rows.",
+    "Feature order is omega_left, omega_right, a_long, a_lat, yaw_rate, battery_current.",
+    "Feature units are rad/s, rad/s, m/s^2, m/s^2, rad/s, A.",
+    "Observation IDs are UGV-W01 through UGV-W08 in timestamp order.",
+    "No canonical raw value is missing or non-finite.",
+    "mu equals (8.5, 8.55, 0.03125, 0.02375, 0.01, 12.1625).",
+    "Every centred column sum is within 1e-12 of zero.",
+    "X_c + 1_8 mu^T reconstructs X_raw within 1e-12.",
+    "X_raw[2,4] equals 0.08 rad/s and refers to yaw_rate of UGV-W03.",
+    "The locked yaw_rate feature trajectory is (-0.02, 0.04, 0.08, -0.05, -0.10, -0.04, 0.06, 0.11).",
+    "The locked 3 x 3 block uses observations UGV-W03 through UGV-W05 and features a_long, a_lat, yaw_rate.",
+    "X_col has shape 6 x 8 and its columns are observations.",
+    "No scale vector, fault threshold, PCA component or physical mode count is locked in Pass 5."
+  ],
+  "traceCoverage": {
+    "formulaIds": ["F01", "F02", "F03", "F04", "F05", "F06", "F07", "F08", "F09", "F10", "F11", "F12", "F13", "F14", "F15", "F16", "F17", "F18"],
+    "claimIds": ["C01", "C02", "C03", "C04", "C05", "C06", "C07", "C08", "C09", "C10", "C11", "C12", "C13", "C14", "C15", "C16", "C17", "C18", "C19", "C20", "C21", "C22", "C23", "C24"],
+    "learningOutcomes": ["LO1", "LO2", "LO3", "LO4", "LO5", "LO6", "LO7", "LO8", "LO9"],
+    "misconceptionIntercepts": ["M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8"]
+  },
+  "prohibitedClaims": [
+    "The locked matrix contains real field measurements.",
+    "A large or small value proves a UGV fault.",
+    "The covariance preview identifies physical modes.",
+    "The matrix rank equals the number of vehicle modes.",
+    "The raw mixed-unit columns are geometrically comparable without a scale policy.",
+    "The four invalid variants are valid after merely reshaping them.",
+    "Timestamp is feature 7.",
+    "The case-specific numbers define a universal operating threshold."
+  ],
+  "downstreamRules": [
+    "Every numeric downstream artifact must cite CASE_C01_L06_V1_LOCKED.",
+    "No feature value, order, unit, observation ID or timestamp may change without a new case version.",
+    "Display rounding may not replace canonical stored values.",
+    "Invalid variants remain negative tests and must never be mixed into the canonical matrix.",
+    "No downstream artifact may invent a scaling vector, fault threshold, PCA result or physical mode interpretation.",
+    "Runtime integration is forbidden until academic acceptance."
+  ]
+}

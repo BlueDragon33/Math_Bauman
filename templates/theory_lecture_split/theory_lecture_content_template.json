@@ -1,0 +1,39 @@
+{
+  "schema": "bauman_math_theory_lecture_content_v1",
+  "version": "E109_THEORY_FRAME_CONTENT_SPLIT",
+  "purpose": "Nội dung slide/bài giảng lý thuyết được tạo bằng bundle và import riêng. File này không chứa khung giai đoạn/phân môn/chương.",
+  "frameSource": "theory_lecture_frame.json",
+  "records": [],
+  "importPolicy": {
+    "key": "lessonId",
+    "requires": [
+      "lessonId",
+      "chapterId",
+      "lessonTitle",
+      "slides"
+    ],
+    "doNotChange": [
+      "chapterId unless intentionally remapping to a frame chapter"
+    ],
+    "auditBeforeImport": true
+  },
+  "sampleRecord": {
+    "lessonId": "MATH-VN-LA-C01-L04",
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonTitle": "§1.4 · Tích vô hướng: đo tương quan hướng và năng lượng của vector",
+    "orderInChapter": 4,
+    "pureLayer": [
+      "tích vô hướng",
+      "chuẩn vector",
+      "góc giữa hai vector"
+    ],
+    "appliedLayer": [
+      "cosine similarity",
+      "vector đặc trưng",
+      "dữ liệu cảm biến"
+    ],
+    "bridgeQuestion": "Vì sao đo góc giữa hai vector lại giúp so sánh dữ liệu?",
+    "slides": [],
+    "auditStatus": "DRAFT"
+  }
+}

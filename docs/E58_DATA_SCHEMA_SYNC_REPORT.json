@@ -1,0 +1,26 @@
+{
+  "checkpoint": "E58_DATA_SCHEMA_SYNC_CHECKPOINT_TEST_SNAPSHOT",
+  "createdAt": "2026-06-19T09:42:17.431611Z",
+  "status": "PASS",
+  "counts": {
+    "lessons": 260,
+    "chapters": 32,
+    "exercises": 1040,
+    "applications": 520,
+    "professor_qa": 260,
+    "formulas": 678,
+    "simulations": 260,
+    "applications_engineering": 260,
+    "applications_programming": 260
+  },
+  "checks": {
+    "all_lessons_have_4_exercise_levels": true,
+    "qa_has_canonical_answers": true,
+    "applications_all_theory_dependent": true,
+    "applications_two_distinct_types_per_lesson": true,
+    "formulas_have_card_and_deep_audit": true,
+    "json_parse": "PASS",
+    "js_syntax": "PASS"
+  },
+  "errors": []
+}

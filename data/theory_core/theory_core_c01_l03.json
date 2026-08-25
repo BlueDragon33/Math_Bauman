@@ -1,0 +1,800 @@
+{
+  "id": "bauman_math_theory_core_c01_l03_v1",
+  "schema": "bauman_math_theory_core_v1",
+  "version": "CORE_C01_L03_V1_1",
+  "status": "approved_against_gold_standard",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L03-dot-angle-projection-e139",
+  "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+  "lessonTitle": "§1.3 · Tích vô hướng, góc và phép chiếu",
+  "language": "vi",
+  "purpose": "Nguồn nội dung lõi độc lập với trình bày cho bài 1.3, nối tiếp trực tiếp hình học norm và khoảng cách của bài 1.2.",
+  "contentContract": {
+    "sourceOfTruth": true,
+    "presentationIndependent": true,
+    "noUiCopy": true,
+    "noSlideNumbering": true,
+    "notationMustBeSemantic": true,
+    "downstreamOrder": [
+      "reference_table",
+      "slideshow",
+      "full_view",
+      "formula_and_layout_finalization"
+    ]
+  },
+  "lessonThesis": "Tích vô hướng biến quan hệ giữa hai vector thành một đại lượng có dấu: nó đo mức một vector đi theo hướng của vector kia khi đồng thời giữ thông tin về độ lớn. Từ đó, góc, cosine, trực giao, phép chiếu, residual, matched filter, linear score và least squares cùng xuất hiện như các cách đọc một cấu trúc hình học duy nhất.",
+  "prerequisites": [
+    "Từ §1.1: hiểu vector là dữ liệu có thứ tự, cùng dimension chưa đủ nếu khác schema hoặc đơn vị",
+    "Từ §1.1: biết cộng, trừ vector, nhân vector với vô hướng và ký hiệu x_i là phần tử thứ i",
+    "Từ §1.2: biết norm L2, Euclidean distance và điều kiện scale của dữ liệu",
+    "Biết căn bậc hai, bình phương, hàm cosine và arccos ở mức cơ bản",
+    "Biết vector zero không có hướng"
+  ],
+  "learningOutcomes": [
+    {
+      "id": "LO1",
+      "outcome": "Tính và diễn giải được tích vô hướng theo tọa độ và theo norm–góc.",
+      "evidence": "Tính đúng x · y, giải thích đúng dấu và phân biệt ảnh hưởng của hướng với ảnh hưởng của độ lớn."
+    },
+    {
+      "id": "LO2",
+      "outcome": "Xác định được góc giữa hai vector khác zero và kiểm tra miền xác định của cosine.",
+      "evidence": "Kiểm tra norm khác zero, chặn sai số số học về [-1,1] trước arccos và nêu đúng trường hợp không xác định."
+    },
+    {
+      "id": "LO3",
+      "outcome": "Nhận biết và kiểm chứng được trực giao.",
+      "evidence": "Dùng x · y = 0 với tolerance số học phù hợp và không suy diễn trực giao thành độc lập thống kê."
+    },
+    {
+      "id": "LO4",
+      "outcome": "Tính được phép chiếu của x lên một vector y khác zero.",
+      "evidence": "Tính đúng hệ số (x · y)/(y · y), vector chiếu và ý nghĩa thành phần theo hướng y."
+    },
+    {
+      "id": "LO5",
+      "outcome": "Phân rã được x = proj_y(x) + x_perp và kiểm chứng residual vuông góc với y.",
+      "evidence": "Tính đúng x_perp, kiểm tra x_perp · y gần 0 và xác nhận tái tạo lại x."
+    },
+    {
+      "id": "LO6",
+      "outcome": "Giải thích được phép chiếu lên không gian con ở mức nhập môn.",
+      "evidence": "Mô tả được projection theo một cơ sở trực chuẩn và liên hệ với tọa độ, giảm chiều và least squares."
+    },
+    {
+      "id": "LO7",
+      "outcome": "Phân biệt được dot product, cosine similarity và projection trong bài toán dữ liệu.",
+      "evidence": "Chọn đúng đại lượng cho linear score, matching tín hiệu, similarity theo hướng hoặc tách thành phần."
+    },
+    {
+      "id": "LO8",
+      "outcome": "Triển khai được dot, cosine, angle và projection an toàn bằng Python/NumPy.",
+      "evidence": "Có kiểm tra shape, finite value, zero norm, clipping, tolerance và residual invariant."
+    }
+  ],
+  "notationRules": [
+    {
+      "raw": "x = (x_1, x_2, ..., x_n), y = (y_1, y_2, ..., y_n)",
+      "meaning": "x và y là hai vector thực n chiều có các phần tử tương ứng theo cùng schema."
+    },
+    {
+      "raw": "x_i",
+      "meaning": "Phần tử thứ i của vector x; i là chỉ số dưới."
+    },
+    {
+      "raw": "x_i^2",
+      "meaning": "Bình phương phần tử thứ i; i ở dưới và 2 ở trên."
+    },
+    {
+      "raw": "x_i^T",
+      "meaning": "Nếu x_i là vector mẫu thứ i thì T là chuyển vị; i vẫn là chỉ số dưới."
+    },
+    {
+      "raw": "x · y = sum_i x_i y_i",
+      "meaning": "Tích vô hướng theo tọa độ là tổng tích các phần tử tương ứng."
+    },
+    {
+      "raw": "x · y = ||x||_2 ||y||_2 cos(theta)",
+      "meaning": "Tích vô hướng tách thành độ lớn của hai vector và cosine của góc theta giữa chúng."
+    },
+    {
+      "raw": "theta = arccos((x · y)/(||x||_2 ||y||_2))",
+      "meaning": "Góc theta chỉ xác định khi x và y đều khác vector zero."
+    },
+    {
+      "raw": "proj_y(x) = ((x · y)/(y · y)) y",
+      "meaning": "Phép chiếu của x lên đường thẳng sinh bởi y; bắt buộc y != 0."
+    },
+    {
+      "raw": "x_perp = x - proj_y(x)",
+      "meaning": "Residual hoặc thành phần của x vuông góc với y."
+    },
+    {
+      "raw": "x = proj_y(x) + x_perp",
+      "meaning": "Phân rã x thành thành phần song song với y và thành phần vuông góc với y."
+    },
+    {
+      "raw": "proj_S(x) = sum_j (x · q_j) q_j",
+      "meaning": "Phép chiếu lên không gian con S khi {q_j} là một cơ sở trực chuẩn của S."
+    },
+    {
+      "raw": "proj_col(A)(b) = A(A^T A)^{-1}A^T b",
+      "meaning": "Dạng ma trận nhập môn của phép chiếu lên không gian cột của A khi các cột độc lập tuyến tính; A^{-1} giữ -1 là số mũ."
+    }
+  ],
+  "coreConcepts": [
+    {
+      "id": "C1",
+      "name": "Tích vô hướng là phép đo liên kết tuyến tính",
+      "definition": "Tích vô hướng nhân các cặp thành phần tương ứng rồi cộng lại để tạo một score vô hướng.",
+      "deepMeaning": "Nó đo mức hai vector cùng nhấn mạnh các chiều giống nhau, nhưng giá trị còn bị khuếch đại bởi norm của cả hai vector.",
+      "engineeringConsequence": "Dot product phù hợp với linear score và matched filter khi cường độ có ý nghĩa; không nên tự động dùng như similarity thuần hướng."
+    },
+    {
+      "id": "C2",
+      "name": "Góc tách hướng khỏi độ lớn",
+      "definition": "Cosine chuẩn hóa dot product bằng tích hai norm để mô tả quan hệ hướng giữa hai vector khác zero.",
+      "deepMeaning": "Hai vector có thể rất xa theo Euclidean distance nhưng vẫn có cosine gần 1 nếu cùng hướng và khác scale.",
+      "engineeringConsequence": "Similarity embedding thường quan tâm hướng; kiểm soát biên độ tín hiệu hoặc sai số robot thường còn phải theo dõi norm."
+    },
+    {
+      "id": "C3",
+      "name": "Dấu của dot product mã hóa nửa không gian",
+      "definition": "Dot dương ứng với góc nhọn, dot bằng 0 ứng với góc vuông và dot âm ứng với góc tù đối với hai vector khác zero.",
+      "deepMeaning": "Trong score = w · x + b, dấu và độ lớn của score cho biết x nằm về phía nào của siêu phẳng quyết định.",
+      "engineeringConsequence": "Đổi dấu một kênh, sai quy ước trục hoặc sai phase có thể đảo quyết định."
+    },
+    {
+      "id": "C4",
+      "name": "Projection là thành phần gần nhất theo một hướng",
+      "definition": "proj_y(x) là điểm trên đường thẳng span(y) gần x nhất theo norm L2.",
+      "deepMeaning": "Hệ số chiếu cho biết cần lấy y bao nhiêu lần để mô tả phần của x nằm theo hướng y.",
+      "engineeringConsequence": "Projection dùng để tách vận tốc dọc tuyến, thành phần tín hiệu theo mẫu, tọa độ theo basis và phần giải thích được bởi mô hình."
+    },
+    {
+      "id": "C5",
+      "name": "Residual mang thông tin chưa được giải thích",
+      "definition": "x_perp = x - proj_y(x) là phần còn lại và trực giao với y.",
+      "deepMeaning": "Trực giao của residual không chỉ là kết quả hình học; nó là điều kiện tối ưu của bài toán xấp xỉ bình phương tối thiểu.",
+      "engineeringConsequence": "Residual lớn báo rằng hướng hoặc mô hình đang dùng không giải thích đủ dữ liệu, nhưng residual nhỏ chưa chứng minh mô hình đúng về vật lý."
+    },
+    {
+      "id": "C6",
+      "name": "Projection lên không gian con là phép giải thích bằng nhiều hướng",
+      "definition": "Thay vì một vector y, ta dùng một tập hướng sinh ra không gian con S và tìm vector trong S gần x nhất.",
+      "deepMeaning": "Với cơ sở trực chuẩn, mỗi hệ số x · q_j là tọa độ của x theo hướng q_j; tổng các thành phần tạo projection.",
+      "engineeringConsequence": "Đây là cầu nối trực tiếp tới basis, PCA, least squares, lọc tín hiệu và giảm chiều."
+    }
+  ],
+  "mainMechanisms": [
+    {
+      "id": "MECH1",
+      "name": "Đọc dấu của tích vô hướng",
+      "rules": [
+        "x · y > 0: hai vector khác zero tạo góc nhọn và có xu hướng cùng hướng",
+        "x · y = 0: hai vector trực giao; nếu một vector là zero thì dot vẫn bằng 0 nhưng góc không xác định",
+        "x · y < 0: hai vector khác zero tạo góc tù và có xu hướng ngược hướng"
+      ],
+      "warning": "Không suy ra độc lập thống kê hoặc không có quan hệ phi tuyến chỉ từ dot bằng 0."
+    },
+    {
+      "id": "MECH2",
+      "name": "Từ dot sang góc",
+      "steps": [
+        "Kiểm tra x và y cùng shape, cùng schema và có giá trị hữu hạn",
+        "Tính ||x||_2 và ||y||_2",
+        "Nếu một norm nhỏ hơn epsilon, dừng vì góc không xác định",
+        "Tính cosine = (x · y)/(||x||_2 ||y||_2)",
+        "Clip cosine về [-1,1] để chống sai số floating point",
+        "Tính theta = arccos(cosine)"
+      ]
+    },
+    {
+      "id": "MECH3",
+      "name": "Phân rã song song–vuông góc",
+      "steps": [
+        "Kiểm tra y != 0",
+        "Tính alpha = (x · y)/(y · y)",
+        "Tính proj_y(x) = alpha y",
+        "Tính x_perp = x - proj_y(x)",
+        "Kiểm tra x = proj_y(x) + x_perp",
+        "Kiểm tra x_perp · y gần 0 theo tolerance"
+      ]
+    },
+    {
+      "id": "MECH4",
+      "name": "Từ projection tới least squares",
+      "steps": [
+        "Xem các cột của A là các hướng có thể kết hợp để xấp xỉ b",
+        "Tìm Ax_hat trong col(A) gần b nhất theo L2",
+        "Residual r = b - Ax_hat phải trực giao với mọi cột của A",
+        "Điều kiện trực giao viết thành A^T r = 0",
+        "Nếu các cột của A độc lập tuyến tính, nghiệm thỏa A^T A x_hat = A^T b"
+      ],
+      "scope": "Giới thiệu hình học; phép giải hệ và tính ổn định số được học sâu ở chương ma trận và least squares."
+    }
+  ],
+  "mainFormulas": [
+    {
+      "id": "F1",
+      "name": "Tích vô hướng theo tọa độ",
+      "formula": "x · y = sum_i x_i y_i",
+      "questionAnswered": "Hai vector tạo ra score tuyến tính tổng hợp bao nhiêu từ các cặp thành phần tương ứng?",
+      "meaning": "Mỗi x_i y_i là đóng góp của chiều i; tổng các đóng góp tạo một số có dấu.",
+      "conditions": [
+        "x và y cùng dimension",
+        "các vị trí tương ứng cùng schema",
+        "đơn vị của score được hiểu từ tích đơn vị của x và y"
+      ],
+      "undefinedCase": "Không xác định về mặt mô hình nếu khác schema; phép tính số học không hợp lệ nếu khác shape.",
+      "sensitivity": "Tăng tuyến tính theo scale của từng vector và nhạy với chiều có trị tuyệt đối lớn.",
+      "failureMode": "Dot lớn có thể do norm lớn chứ không phải góc nhỏ; broadcasting hoặc reorder feature có thể tạo score sai mà code vẫn chạy.",
+      "engineeringUse": "Linear score, matched filter, correlation-like score, attention score và hệ số projection."
+    },
+    {
+      "id": "F2",
+      "name": "Liên hệ norm–góc",
+      "formula": "x · y = ||x||_2 ||y||_2 cos(theta)",
+      "questionAnswered": "Dot product được tạo bởi độ lớn và quan hệ hướng như thế nào?",
+      "meaning": "Dot là tích hai norm nhân cosine của góc giữa hai vector khác zero.",
+      "conditions": [
+        "x và y thuộc cùng không gian tích vô hướng",
+        "theta được hiểu là góc trong [0, pi] khi x != 0 và y != 0"
+      ],
+      "undefinedCase": "Nếu x = 0 hoặc y = 0 thì dot vẫn bằng 0 nhưng theta không xác định.",
+      "sensitivity": "Dot tăng theo cả norm và cosine; cùng góc nhưng tăng biên độ sẽ làm dot tăng.",
+      "failureMode": "Suy góc từ dot mà không chia norm dẫn tới nhầm cường độ với hướng.",
+      "engineeringUse": "Phân tích score tuyến tính, matching tín hiệu và quyết định có cần normalization hay không."
+    },
+    {
+      "id": "F3",
+      "name": "Cosine similarity",
+      "formula": "cosine(x,y) = (x · y)/(||x||_2 ||y||_2)",
+      "questionAnswered": "Hai vector khác zero giống nhau về hướng tới mức nào?",
+      "meaning": "Giá trị 1 là cùng hướng, 0 là trực giao và -1 là ngược hướng trong không gian thực.",
+      "conditions": [
+        "x và y cùng dimension và schema",
+        "||x||_2 > epsilon",
+        "||y||_2 > epsilon"
+      ],
+      "undefinedCase": "Không xác định khi một vector có norm bằng hoặc gần 0.",
+      "sensitivity": "Bất biến với nhân từng vector bởi hệ số dương, đổi dấu một vector sẽ đổi dấu cosine; vẫn nhạy với feature scaling không đồng đều.",
+      "failureMode": "Gán cosine bằng 0 cho zero vector làm lẫn không xác định với trực giao; dùng cosine trên vector khác pipeline embedding tạo similarity giả.",
+      "engineeringUse": "Vector retrieval, embedding similarity, signal-shape matching và kiểm tra hướng."
+    },
+    {
+      "id": "F4",
+      "name": "Góc giữa hai vector",
+      "formula": "theta = arccos((x · y)/(||x||_2 ||y||_2))",
+      "questionAnswered": "Góc hình học giữa hai vector khác zero là bao nhiêu?",
+      "meaning": "theta nằm trong [0, pi] và tóm tắt quan hệ cùng hướng, vuông góc hoặc ngược hướng.",
+      "conditions": [
+        "x và y khác zero",
+        "cosine phải được clip về [-1,1] trước arccos trong tính toán floating point"
+      ],
+      "undefinedCase": "Không xác định nếu một norm bằng 0.",
+      "sensitivity": "Arccos nhạy gần cosine = 1 hoặc -1; nhiễu nhỏ có thể tạo thay đổi góc đáng kể theo đơn vị radian/độ.",
+      "failureMode": "Không clip có thể tạo NaN khi sai số số học cho cosine = 1 + delta; trộn radian và degree gây sai diễn giải.",
+      "engineeringUse": "Sai lệch hướng robot, orientation comparison, angular threshold và phân tích embedding."
+    },
+    {
+      "id": "F5",
+      "name": "Projection lên một vector",
+      "formula": "proj_y(x) = ((x · y)/(y · y)) y",
+      "questionAnswered": "Phần của x nằm dọc theo hướng y là vector nào?",
+      "meaning": "Hệ số alpha = (x · y)/(y · y) nhân y tạo điểm gần x nhất trên span(y).",
+      "conditions": [
+        "x và y cùng dimension",
+        "y != 0",
+        "schema cho phép diễn giải x và y trong cùng không gian"
+      ],
+      "undefinedCase": "Không xác định khi y = 0 vì y · y = 0 và không tồn tại hướng chiếu.",
+      "sensitivity": "Khi ||y|| rất nhỏ, hệ số có thể mất ổn định số; projection về lý thuyết không đổi nếu thay y bằng c y với c != 0.",
+      "failureMode": "Dùng (x · y)/||y|| thay cho hệ số vector; quên nhân lại y; hoặc chiếu lên vector gần zero.",
+      "engineeringUse": "Vận tốc dọc tuyến, thành phần lực theo trục, matched component và tọa độ theo một hướng."
+    },
+    {
+      "id": "F6",
+      "name": "Phân rã và residual trực giao",
+      "formula": "x = proj_y(x) + x_perp, x_perp = x - proj_y(x), x_perp · y = 0",
+      "questionAnswered": "Phần nào của x được giải thích bởi hướng y và phần nào còn lại?",
+      "meaning": "x được tách duy nhất thành thành phần trong span(y) và thành phần trực giao với span(y) khi y != 0.",
+      "conditions": [
+        "Projection được tính đúng với y != 0",
+        "Dùng cùng tích vô hướng cho projection và kiểm tra trực giao"
+      ],
+      "undefinedCase": "Phân rã theo hướng không xác định khi y = 0.",
+      "sensitivity": "Residual chịu ảnh hưởng của nhiễu trong x và sai hướng của y; tolerance phải theo scale và precision.",
+      "failureMode": "Kiểm tra x_perp · y == 0 bằng equality tuyệt đối trong floating point; residual nhỏ nhưng mô hình vật lý vẫn sai.",
+      "engineeringUse": "Tách sai số dọc/ngang, phân tích phần tín hiệu không khớp mẫu và điều kiện tối ưu least squares."
+    },
+    {
+      "id": "F7",
+      "name": "Projection lên không gian con có cơ sở trực chuẩn",
+      "formula": "proj_S(x) = sum_j (x · q_j) q_j",
+      "questionAnswered": "Phần của x có thể biểu diễn bằng các hướng trực chuẩn q_j trong S là gì?",
+      "meaning": "Mỗi x · q_j là tọa độ theo q_j; tổng các thành phần tạo vector gần x nhất trong S.",
+      "conditions": [
+        "q_j thuộc cùng không gian với x",
+        "q_j · q_k = 0 khi j != k",
+        "||q_j||_2 = 1"
+      ],
+      "undefinedCase": "Công thức hệ số đơn giản này không áp dụng nguyên dạng nếu các q_j không trực chuẩn; cần giải hệ Gram hoặc trực chuẩn hóa.",
+      "sensitivity": "Cơ sở gần phụ thuộc tuyến tính làm tọa độ nhạy; cơ sở trực chuẩn cải thiện diễn giải và ổn định.",
+      "failureMode": "Cộng trực tiếp (x · b_j)b_j với basis không chuẩn hóa hoặc không trực giao sẽ không cho projection đúng.",
+      "engineeringUse": "PCA, Fourier-like decomposition, giảm chiều, lọc theo subspace và biểu diễn tọa độ."
+    },
+    {
+      "id": "F8",
+      "name": "Least squares như projection",
+      "formula": "r = b - A x_hat, A^T r = 0, A^T A x_hat = A^T b",
+      "questionAnswered": "Tổ hợp cột của A nào gần b nhất theo L2?",
+      "meaning": "Ax_hat là projection của b lên col(A); residual trực giao với mọi cột của A.",
+      "conditions": [
+        "A và b có shape tương thích",
+        "Dùng norm L2",
+        "A^T A khả nghịch nếu dùng trực tiếp x_hat = (A^T A)^{-1}A^T b"
+      ],
+      "undefinedCase": "Công thức dùng (A^T A)^{-1} không xác định khi các cột phụ thuộc tuyến tính; nghiệm least squares vẫn có thể xử lý bằng QR hoặc SVD.",
+      "sensitivity": "Normal equations bình phương condition number và có thể kém ổn định khi cột gần phụ thuộc.",
+      "failureMode": "Tính inverse tường minh trong code sản xuất; coi residual nhỏ là chứng minh quan hệ nhân quả; bỏ qua scale và outlier.",
+      "engineeringUse": "Hồi quy tuyến tính, ước lượng tham số, sensor calibration và xấp xỉ tín hiệu."
+    },
+    {
+      "id": "F9",
+      "name": "Matched-filter score",
+      "formula": "score_dot = x · p, score_cos = (x · p)/(||x||_2 ||p||_2)",
+      "questionAnswered": "Tín hiệu x có chứa thành phần giống mẫu p tới mức nào?",
+      "meaning": "Dot score giữ cả mức khớp và biên độ; cosine score tập trung hơn vào hình dạng sau normalization.",
+      "conditions": [
+        "x và p cùng số mẫu và cùng căn chỉnh thời gian",
+        "p != 0 cho normalized score",
+        "mean, scale và phase được xử lý phù hợp với bài toán"
+      ],
+      "undefinedCase": "Normalized score không xác định nếu x hoặc p có norm bằng 0.",
+      "sensitivity": "Dot nhạy với gain và năng lượng; cosine nhạy với lệch phase, căn chỉnh và feature weighting.",
+      "failureMode": "Không trượt mẫu theo thời gian, không loại DC offset hoặc dùng template sai sampling rate làm giảm score dù tín hiệu thật tồn tại.",
+      "engineeringUse": "Radar, sonar, âm thanh, phát hiện xung và template matching."
+    }
+  ],
+  "comparisonLogic": {
+    "measureSelection": [
+      {
+        "objective": "Tạo score tuyến tính có trọng số",
+        "preferred": "Dot product hoặc w · x + b",
+        "reason": "Cả dấu, hướng và cường độ đóng góp đều có ý nghĩa."
+      },
+      {
+        "objective": "So pattern không muốn norm chi phối",
+        "preferred": "Cosine similarity",
+        "reason": "Chuẩn hóa loại phần scale toàn cục nhưng không sửa feature scaling sai."
+      },
+      {
+        "objective": "Tách thành phần theo một hướng",
+        "preferred": "Projection",
+        "reason": "Kết quả là một vector trong span(y), không chỉ là score."
+      },
+      {
+        "objective": "Đo sai khác tuyệt đối giữa hai trạng thái",
+        "preferred": "Distance từ §1.2",
+        "reason": "Angle hoặc cosine không phản ánh đầy đủ độ lệch biên độ."
+      },
+      {
+        "objective": "Xấp xỉ dữ liệu bằng nhiều hướng",
+        "preferred": "Projection lên subspace hoặc least squares",
+        "reason": "Cần tìm phần giải thích được và residual trực giao."
+      }
+    ],
+    "signInterpretation": [
+      {
+        "condition": "x · y > 0",
+        "angle": "0 <= theta < pi/2",
+        "meaning": "Xu hướng cùng hướng"
+      },
+      {
+        "condition": "x · y = 0 với x != 0 và y != 0",
+        "angle": "theta = pi/2",
+        "meaning": "Trực giao"
+      },
+      {
+        "condition": "x · y < 0",
+        "angle": "pi/2 < theta <= pi",
+        "meaning": "Xu hướng ngược hướng"
+      },
+      {
+        "condition": "x = 0 hoặc y = 0",
+        "angle": "không xác định",
+        "meaning": "Dot bằng 0 nhưng không được gọi là góc vuông"
+      }
+    ]
+  },
+  "assumptionGate": [
+    {
+      "check": "sameDimension",
+      "question": "Các vector có cùng số phần tử không?",
+      "actionOnFail": "Dừng phép tính; không dựa vào broadcasting."
+    },
+    {
+      "check": "sameSchema",
+      "question": "Các phần tử tương ứng có cùng ý nghĩa, thứ tự và pipeline tạo dữ liệu không?",
+      "actionOnFail": "Ánh xạ lại schema hoặc từ chối so sánh."
+    },
+    {
+      "check": "compatibleUnits",
+      "question": "Dot score và projection có đơn vị được hiểu rõ không?",
+      "actionOnFail": "Đổi đơn vị hoặc chuẩn hóa theo hợp đồng đo lường."
+    },
+    {
+      "check": "finiteValues",
+      "question": "Có NaN hoặc infinity không?",
+      "actionOnFail": "Làm sạch hoặc trả lỗi dữ liệu trước khi tính."
+    },
+    {
+      "check": "nonZeroDirection",
+      "question": "Vector dùng để xác định hướng có norm lớn hơn epsilon không?",
+      "actionOnFail": "Không tính angle, cosine hoặc projection; trả trạng thái không xác định."
+    },
+    {
+      "check": "scaleIntent",
+      "question": "Mục tiêu là đo hướng hay đo cả hướng và cường độ?",
+      "actionOnFail": "Chọn lại giữa cosine và dot product."
+    },
+    {
+      "check": "featureScaling",
+      "question": "Có feature nào thống trị dot hoặc cosine chỉ do scale không?",
+      "actionOnFail": "Xem lại đơn vị, standardization hoặc weighting trước khi so sánh."
+    },
+    {
+      "check": "alignment",
+      "question": "Tín hiệu hoặc chuỗi mẫu đã cùng sampling rate, timestamp và phase alignment chưa?",
+      "actionOnFail": "Resample, align hoặc dùng cross-correlation theo lag."
+    },
+    {
+      "check": "tolerancePolicy",
+      "question": "Tolerance cho zero norm và trực giao đã gắn với dtype và scale chưa?",
+      "actionOnFail": "Đặt epsilon và atol/rtol có lý do; không dùng equality tuyệt đối."
+    },
+    {
+      "check": "subspaceBasis",
+      "question": "Các vector basis có trực chuẩn hoặc ma trận có full column rank theo công thức đang dùng không?",
+      "actionOnFail": "Trực chuẩn hóa hoặc dùng QR/SVD thay cho công thức đơn giản."
+    }
+  ],
+  "workedCase": {
+    "id": "CASE_UGV_ROUTE_PROJECTION",
+    "title": "Tách vận tốc UGV thành thành phần dọc tuyến và lệch ngang",
+    "problem": "Một UGV có vector vận tốc đo được x và tuyến tham chiếu có vector hướng y. Cần biết vận tốc dọc tuyến, vận tốc lệch ngang và góc sai hướng.",
+    "schema": [
+      {
+        "feature": "v_x",
+        "unit": "m/s",
+        "meaning": "Thành phần vận tốc theo trục x của hệ tọa độ bản đồ"
+      },
+      {
+        "feature": "v_y",
+        "unit": "m/s",
+        "meaning": "Thành phần vận tốc theo trục y của hệ tọa độ bản đồ"
+      }
+    ],
+    "vectors": {
+      "measuredVelocity_x": [3.0, 4.0],
+      "routeDirection_y": [2.0, 1.0]
+    },
+    "unitPolicy": {
+      "x": "m/s",
+      "y": "vector hướng tương đối; có thể chuẩn hóa thành vector đơn vị",
+      "projection": "m/s",
+      "residual": "m/s"
+    },
+    "calculations": {
+      "dot_x_y": 10.0,
+      "dot_y_y": 5.0,
+      "norm_x": 5.0,
+      "norm_y": 2.23606797749979,
+      "cosine": 0.8944271909999159,
+      "angleDegrees": 26.565051177077994,
+      "projectionCoefficient_alpha": 2.0,
+      "projectionVector": [4.0, 2.0],
+      "residualVector_x_perp": [-1.0, 2.0],
+      "projectionNorm": 4.47213595499958,
+      "residualNorm": 2.23606797749979,
+      "residualDotDirection": 0.0
+    },
+    "derivation": [
+      "x · y = 3·2 + 4·1 = 10",
+      "y · y = 2^2 + 1^2 = 5",
+      "alpha = (x · y)/(y · y) = 10/5 = 2",
+      "proj_y(x) = 2[2,1] = [4,2] m/s",
+      "x_perp = [3,4] - [4,2] = [-1,2] m/s",
+      "x_perp · y = (-1)·2 + 2·1 = 0",
+      "cos(theta) = 10/(5 sqrt(5)) = 2/sqrt(5)",
+      "theta = arccos(2/sqrt(5)) ≈ 26.565 degrees"
+    ],
+    "invariants": {
+      "reconstruction": "[4,2] + [-1,2] = [3,4]",
+      "orthogonality": "[-1,2] · [2,1] = 0",
+      "pythagoreanEnergy": "||x||_2^2 = ||proj_y(x)||_2^2 + ||x_perp||_2^2 = 20 + 5 = 25"
+    },
+    "engineeringInterpretation": [
+      "UGV chuyển động chủ yếu theo hướng tuyến vì cosine khoảng 0.894, nhưng vẫn lệch góc khoảng 26.565 độ.",
+      "Thành phần vận tốc dọc tuyến có độ lớn khoảng 4.472 m/s.",
+      "Thành phần lệch ngang có độ lớn khoảng 2.236 m/s; đây là đại lượng cần đưa vào vòng điều khiển bám tuyến.",
+      "Projection vector [4,2] không phải tọa độ dọc tuyến dạng scalar; scalar signed component theo unit direction là (x · y)/||y||_2 ≈ 4.472 m/s.",
+      "Kết luận chỉ đúng khi x và y dùng cùng hệ tọa độ và cùng timestamp."
+    ],
+    "failureScenarios": [
+      {
+        "scenario": "routeDirection_y = [0,0]",
+        "result": "Projection và góc không xác định; không được chia cho y · y = 0."
+      },
+      {
+        "scenario": "x ở hệ tọa độ thân robot nhưng y ở hệ tọa độ bản đồ",
+        "result": "Phép tính có thể ra số nhưng vô nghĩa cho điều khiển cho tới khi biến đổi cùng frame."
+      },
+      {
+        "scenario": "So residualDotDirection bằng equality tuyệt đối sau nhiều phép tính",
+        "result": "Có thể báo sai do floating point; cần dùng tolerance."
+      }
+    ]
+  },
+  "engineeringExamples": [
+    {
+      "domain": "Robot bám tuyến",
+      "vectors": "x = vận tốc đo, y = hướng tuyến",
+      "coreQuestion": "Bao nhiêu vận tốc nằm dọc tuyến và bao nhiêu là lệch ngang?",
+      "guidance": "Dùng projection và residual; xác nhận hai vector cùng coordinate frame và timestamp."
+    },
+    {
+      "domain": "Matched filter tín hiệu",
+      "vectors": "x = cửa sổ tín hiệu, p = template",
+      "coreQuestion": "Tín hiệu có chứa mẫu cần phát hiện không?",
+      "guidance": "Dùng x · p khi biên độ quan trọng; dùng normalized score khi cần so hình dạng; kiểm tra lag và sampling rate."
+    },
+    {
+      "domain": "Linear classifier",
+      "vectors": "x = feature vector, w = weight vector",
+      "coreQuestion": "Mẫu nằm về phía nào của biên quyết định?",
+      "guidance": "Dùng score = w · x + b; feature scale và dấu của w quyết định contribution."
+    },
+    {
+      "domain": "Embedding retrieval",
+      "vectors": "x và y là embedding từ cùng model và preprocessing version",
+      "coreQuestion": "Hai đối tượng giống nhau về hướng biểu diễn tới mức nào?",
+      "guidance": "Dùng cosine sau zero-norm gate; không so embedding từ các không gian khác nhau."
+    },
+    {
+      "domain": "Least squares calibration",
+      "vectors": "b = phép đo, col(A) = các mẫu đáp ứng có thể tạo",
+      "coreQuestion": "Tổ hợp mẫu nào giải thích b tốt nhất theo L2?",
+      "guidance": "Projection lên col(A); residual phải trực giao với các cột, nhưng nên giải bằng QR/SVD thay vì inverse tường minh."
+    },
+    {
+      "domain": "AI attention",
+      "vectors": "q = query, k = key",
+      "coreQuestion": "Query phù hợp với key đến mức nào trong không gian biểu diễn?",
+      "guidance": "Dot score thường được scale; score lớn chưa tự mang xác suất cho tới khi qua normalization như softmax."
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "wrong": "Dot product lớn luôn nghĩa là hai vector rất giống nhau.",
+      "correct": "Dot phụ thuộc cả góc lẫn norm; vector có norm lớn có thể tạo dot lớn dù cosine chỉ trung bình."
+    },
+    {
+      "wrong": "Dot bằng 0 luôn nghĩa là hai vector tạo góc 90 độ.",
+      "correct": "Kết luận góc vuông chỉ dùng khi cả hai vector khác zero; zero vector có dot bằng 0 với mọi vector nhưng không có hướng."
+    },
+    {
+      "wrong": "Trực giao nghĩa là hai biến độc lập.",
+      "correct": "Trực giao là quan hệ đại số theo tích vô hướng; độc lập là khái niệm xác suất mạnh hơn."
+    },
+    {
+      "wrong": "Cosine không bị ảnh hưởng bởi scale nên không cần chuẩn hóa feature.",
+      "correct": "Cosine bất biến với scale toàn vector, nhưng feature scaling khác nhau vẫn làm đổi hướng."
+    },
+    {
+      "wrong": "Projection coefficient và projection vector là một đại lượng.",
+      "correct": "alpha là scalar; proj_y(x) = alpha y là vector."
+    },
+    {
+      "wrong": "Projection lên y dùng công thức ((x · y)/||y||_2) y.",
+      "correct": "Nếu nhân trực tiếp với y thì mẫu số phải là y · y = ||y||_2^2; mẫu số ||y|| chỉ cho scalar component theo unit direction."
+    },
+    {
+      "wrong": "Không thể chiếu zero vector lên một hướng khác zero.",
+      "correct": "proj_y(0) = 0 khi y != 0; chỉ hướng chiếu y bằng hoặc gần zero mới làm phép chiếu không xác định."
+    },
+    {
+      "wrong": "Residual nhỏ chứng minh mô hình đúng.",
+      "correct": "Residual nhỏ chỉ cho biết fit tốt theo metric và dữ liệu đang dùng; mô hình vẫn có thể sai giả định, leakage hoặc thiếu khả năng khái quát."
+    },
+    {
+      "wrong": "Có thể chiếu lên nhiều basis vector bằng cách cộng (x · b_j)b_j cho mọi basis.",
+      "correct": "Công thức đó yêu cầu basis trực chuẩn; basis tổng quát cần giải hệ hoặc trực chuẩn hóa."
+    },
+    {
+      "wrong": "Tính (A^T A)^{-1} luôn là cách chuẩn để làm least squares.",
+      "correct": "Inverse tường minh kém ổn định; QR hoặc SVD thường an toàn hơn, đặc biệt khi cột gần phụ thuộc."
+    }
+  ],
+  "masteryChecks": [
+    {
+      "level": "recall",
+      "question": "Công thức tích vô hướng theo tọa độ là gì?",
+      "expected": "x · y = sum_i x_i y_i, với các phần tử tương ứng theo cùng schema."
+    },
+    {
+      "level": "understand",
+      "question": "Vì sao dot product và cosine trả lời hai câu hỏi khác nhau?",
+      "expected": "Dot giữ cả hướng và độ lớn; cosine chia hai norm để tập trung vào hướng."
+    },
+    {
+      "level": "apply",
+      "question": "Với x=[3,4], y=[2,1], tính proj_y(x) và x_perp.",
+      "expected": "proj_y(x)=[4,2], x_perp=[-1,2]."
+    },
+    {
+      "level": "apply",
+      "question": "Với x=[1,0] và y=[0,1], xác định dot, cosine và góc.",
+      "expected": "Dot=0, cosine=0, góc=90 độ vì cả hai vector khác zero."
+    },
+    {
+      "level": "apply",
+      "question": "Với x=[0,0] và y=[2,1], đại lượng nào xác định?",
+      "expected": "Dot=0, projection=[0,0] và residual=[0,0] xác định; cosine và góc không xác định vì x không có hướng."
+    },
+    {
+      "level": "analyze",
+      "question": "Tại sao dot lớn nhưng cosine thấp có thể xảy ra trong signal matching?",
+      "expected": "Một hoặc cả hai tín hiệu có norm lớn, làm dot tăng dù hướng hoặc hình dạng không khớp tốt."
+    },
+    {
+      "level": "analyze",
+      "question": "Vì sao x_perp · y gần 0 là quality check quan trọng?",
+      "expected": "Nó xác nhận residual thực sự vuông góc với hướng chiếu và công thức decomposition được triển khai đúng."
+    },
+    {
+      "level": "evaluate",
+      "question": "Có nên trả cosine=0 khi x là zero vector không?",
+      "expected": "Không; phải trả trạng thái không xác định vì 0 biểu thị trực giao giữa hai hướng hợp lệ."
+    },
+    {
+      "level": "evaluate",
+      "question": "Khi nào dùng dot thô thay vì cosine trong matched filter?",
+      "expected": "Khi biên độ hoặc năng lượng của tín hiệu là một phần của thông tin cần phát hiện."
+    },
+    {
+      "level": "create",
+      "question": "Thiết kế pipeline tách vận tốc dọc và ngang cho UGV.",
+      "expected": "Có coordinate-frame transform, timestamp alignment, zero-direction gate, projection, residual, angle, tolerance và telemetry."
+    }
+  ],
+  "implementationContract": {
+    "pythonContract": {
+      "inputs": [
+        "x: one-dimensional finite float array of shape (n,)",
+        "y: one-dimensional finite float array of shape (n,)",
+        "eps: positive zero-norm threshold",
+        "atol and rtol: tolerances for invariant checks"
+      ],
+      "algorithm": [
+        "Convert x and y to float arrays without silently flattening higher-rank data",
+        "Require x.ndim == 1, y.ndim == 1 and x.shape == y.shape",
+        "Require every element finite",
+        "Compute dot_xy, norm_x, norm_y and y · y",
+        "Dot product is always defined after shape, schema and finite-value checks",
+        "Projection and residual require only y · y > eps^2; x may be zero",
+        "Cosine and angle require norm_x > eps and norm_y > eps",
+        "If x is zero and y is non-zero, return projection and residual normally but mark cosine and angle undefined",
+        "Clip cosine to [-1,1] before arccos whenever cosine is defined",
+        "Verify reconstruction and residual orthogonality with tolerance whenever projection is defined"
+      ],
+      "referenceImplementation": "import numpy as np\n\ndef dot_angle_projection(x, y, eps=1e-12, atol=1e-10, rtol=1e-10):\n    x = np.asarray(x, dtype=float)\n    y = np.asarray(y, dtype=float)\n    if x.ndim != 1 or y.ndim != 1 or x.shape != y.shape:\n        raise ValueError('x and y must be finite 1-D vectors with identical shape')\n    if not np.all(np.isfinite(x)) or not np.all(np.isfinite(y)):\n        raise ValueError('x and y must contain only finite values')\n\n    dot_xy = float(np.dot(x, y))\n    norm_x = float(np.linalg.norm(x))\n    norm_y = float(np.linalg.norm(y))\n    yy = float(np.dot(y, y))\n\n    if yy <= eps * eps:\n        raise ValueError('projection direction y must be non-zero')\n\n    alpha = dot_xy / yy\n    projection = alpha * y\n    residual = x - projection\n\n    if not np.allclose(projection + residual, x, atol=atol, rtol=rtol):\n        raise ArithmeticError('projection decomposition failed reconstruction check')\n    orthogonality_error = float(np.dot(residual, y))\n    if not np.isclose(orthogonality_error, 0.0, atol=atol, rtol=rtol):\n        raise ArithmeticError('projection residual failed orthogonality check')\n\n    cosine = None\n    angle_rad = None\n    angle_defined = norm_x > eps and norm_y > eps\n    if angle_defined:\n        cosine = float(np.clip(dot_xy / (norm_x * norm_y), -1.0, 1.0))\n        angle_rad = float(np.arccos(cosine))\n\n    return {\n        'dot': dot_xy,\n        'norm_x': norm_x,\n        'norm_y': norm_y,\n        'cosine': cosine,\n        'angle_rad': angle_rad,\n        'angle_defined': angle_defined,\n        'projection_coefficient': alpha,\n        'projection': projection,\n        'residual': residual,\n        'orthogonality_error': orthogonality_error\n    }",
+      "requiredOutputs": [
+        "dot",
+        "norm_x and norm_y",
+        "cosine and angle with explicit defined/undefined status",
+        "projection coefficient",
+        "projection vector",
+        "residual vector",
+        "orthogonality error",
+        "schema and coordinate-frame version"
+      ]
+    },
+    "invariants": [
+      "projection + residual is close to x",
+      "residual · y is close to 0",
+      "cosine lies in [-1,1] after clipping when defined",
+      "for y != 0, projection is unchanged when y is replaced by c y with c != 0",
+      "for x = 0 and y != 0, projection = 0 and residual = 0 while cosine and angle remain undefined",
+      "when projection and residual are orthogonal, ||x||_2^2 is close to ||projection||_2^2 + ||residual||_2^2"
+    ],
+    "requiredTelemetry": [
+      "input shape and dtype",
+      "feature-schema version",
+      "coordinate-frame and unit convention",
+      "timestamp or signal-window alignment",
+      "norm_x and norm_y",
+      "cosine before and after clipping when defined",
+      "angle-defined status",
+      "residual orthogonality error",
+      "epsilon and tolerance policy"
+    ],
+    "doNotDo": [
+      "Không tự flatten ma trận hoặc batch thành một vector.",
+      "Không dùng broadcasting để hợp thức hóa shape khác nhau.",
+      "Không chặn projection chỉ vì x là zero vector; projection chỉ cần y khác zero.",
+      "Không gán cosine hoặc angle bằng 0 khi gặp zero vector.",
+      "Không dùng equality tuyệt đối để kiểm tra trực giao trong floating point.",
+      "Không so embedding từ model hoặc preprocessing version khác nhau.",
+      "Không dùng inverse tường minh cho least squares khi QR hoặc SVD phù hợp hơn.",
+      "Không biến x_i thành x^i trong renderer hoặc bước chuyển đổi ký hiệu."
+    ]
+  },
+  "bridgeToNextLessons": [
+    {
+      "target": "§1.4 · Cơ sở, span và tọa độ",
+      "bridge": "Projection lên một hướng dẫn tới projection lên nhiều hướng; các hệ số theo basis trở thành tọa độ của vector."
+    },
+    {
+      "target": "§1.4 · Độc lập tuyến tính",
+      "bridge": "Công thức projection theo basis đơn giản nhất khi các hướng độc lập và trực chuẩn; phụ thuộc tuyến tính làm biểu diễn dư thừa hoặc không duy nhất."
+    },
+    {
+      "target": "Chương 2 · Ma trận",
+      "bridge": "Gom các hướng thành cột của A biến projection và least squares thành A^T r = 0 và ma trận chiếu."
+    },
+    {
+      "target": "PCA và giảm chiều",
+      "bridge": "PCA chọn một subspace rồi chiếu dữ liệu lên các hướng trực chuẩn giữ nhiều phương sai."
+    },
+    {
+      "target": "Xử lý tín hiệu và AI",
+      "bridge": "Matched filter, attention, linear layer và vector retrieval đều dùng dot hoặc normalized dot trong các hợp đồng dữ liệu khác nhau."
+    }
+  ],
+  "downstreamMapping": {
+    "referenceTable": [
+      "mainFormulas",
+      "comparisonLogic",
+      "assumptionGate",
+      "commonMisconceptions",
+      "engineeringExamples"
+    ],
+    "slideshow": [
+      "lessonThesis",
+      "learningOutcomes",
+      "coreConcepts",
+      "mainMechanisms",
+      "mainFormulas",
+      "workedCase",
+      "masteryChecks"
+    ],
+    "fullView": [
+      "mainFormulas",
+      "comparisonLogic",
+      "assumptionGate",
+      "workedCase",
+      "implementationContract"
+    ],
+    "formulaFinalization": [
+      "notationRules",
+      "mainFormulas.formula",
+      "workedCase.derivation"
+    ]
+  },
+  "qualityGate": {
+    "mustPass": [
+      "Tích vô hướng được trình bày cả theo tọa độ và theo norm–góc.",
+      "Dấu của dot, miền xác định của cosine và trường hợp zero vector được phân biệt rõ.",
+      "Mỗi công thức nêu câu hỏi, ý nghĩa, điều kiện, trường hợp không xác định, độ nhạy, failure mode và ứng dụng.",
+      "Projection bắt buộc y != 0, vẫn xác định khi x = 0 và phân biệt scalar component với projection vector.",
+      "Decomposition có kiểm tra tái tạo, residual trực giao và hệ thức Pythagorean.",
+      "Projection lên subspace nêu rõ điều kiện cơ sở trực chuẩn; least squares nêu rõ full-column-rank và rủi ro normal equations.",
+      "Worked case có schema, đơn vị, số liệu, phép tính, kết quả và diễn giải kỹ thuật đầy đủ.",
+      "Python contract kiểm tra shape, finite value, zero-direction gate, angle-defined status, clipping và tolerance.",
+      "Ký hiệu x_i, x_i^2, x_i^T và A^{-1} giữ đúng nghĩa chỉ số dưới và số mũ.",
+      "Không chứa quyết định trình bày, chỉ dẫn runtime hoặc nội dung giao diện."
+    ],
+    "reviewStatus": "content_review_approved"
+  }
+}

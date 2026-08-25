@@ -1,0 +1,23 @@
+{
+  "checkpoint": "E19_CHECKPOINT_TEST_SNAPSHOT",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapterId": "MATH-PREP-LA-C10",
+  "chapterTitle": "Chương 10 · Đại số tuyến tính bằng tiếng Nga",
+  "stage": "GĐ2 · Dự bị Nga/STANKIN",
+  "lessons": 8,
+  "theorySlides": 160,
+  "formulas": 24,
+  "exercises": 64,
+  "applications": 16,
+  "simulations": 16,
+  "professorQa": 8,
+  "questions": 48,
+  "reviewPacks": 8,
+  "vocabCards": 32,
+  "uiFix": {
+    "target": "Tab Lý thuyết · thanh chọn slide",
+    "problemFromScreenshot": "container nhỏ nhưng xuất hiện thanh trượt dọc thừa",
+    "fix": "slide-strip height 78px, overflow-x auto, overflow-y hidden, vertical webkit scrollbar disabled, pill height locked"
+  },
+  "notFinal": true
+}

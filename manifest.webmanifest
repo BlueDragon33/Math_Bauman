@@ -1,0 +1,14 @@
+{
+  "name": "Toán Bauman · Math Master Web App",
+  "short_name": "Toán Bauman",
+  "description": "Học Toán cho AI, tín hiệu, hệ thống và НИР/ВКР tại Bauman.",
+  "lang": "vi",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#102a43",
+  "icons": [
+    { "src": "assets/app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

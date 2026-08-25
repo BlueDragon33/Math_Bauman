@@ -1,0 +1,13 @@
+{
+  "version": "V21 matrix display fix",
+  "fixed": [
+    "core.js formula renderer now converts LaTeX subscripts/superscripts to Unicode instead of underscores",
+    "bmatrix/pmatrix converted to real bracket-style matrix display",
+    "lessons.json replaced with one Vietnam-stage matrix lesson using display-safe Unicode formula blocks",
+    "CSS prevents formula rows from being separated by code-like dotted rules"
+  ],
+  "lessons": "1 lesson only: GĐ1 Việt Nam · Bài 1 Ma trận",
+  "validation": {
+    "bad_patterns_in_lessons": []
+  }
+}

@@ -1,0 +1,559 @@
+{
+  "id": "bauman_math_theory_core_c01_l02_v1",
+  "schema": "bauman_math_theory_core_v1",
+  "version": "CORE_C01_L02_V1",
+  "status": "draft_against_gold_standard",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L02-norm-distance-metric-e139",
+  "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+  "lessonTitle": "§1.2 · Chuẩn vector và khoảng cách",
+  "language": "vi",
+  "purpose": "Nguồn nội dung lõi độc lập với trình chiếu cho bài 1.2, được xây theo chuẩn vàng của bài 1.1.",
+  "contentContract": {
+    "sourceOfTruth": true,
+    "presentationIndependent": true,
+    "noUiCopy": true,
+    "noSlideNumbering": true,
+    "notationMustBeSemantic": true,
+    "downstreamOrder": [
+      "reference_table",
+      "slideshow",
+      "full_view",
+      "formula_and_layout_finalization"
+    ]
+  },
+  "lessonThesis": "Norm và metric không chỉ là công thức đo lớn–nhỏ; chúng định nghĩa hình học của dữ liệu. Chọn cách đo là chọn điều gì được xem là gần, xa, nguy hiểm hoặc tương tự trong bài toán kỹ thuật.",
+  "prerequisites": [
+    "Hiểu vector như bản ghi dữ liệu có thứ tự",
+    "Biết cộng vector, trừ vector và nhân vô hướng",
+    "Biết ký hiệu x_i là phần tử thứ i",
+    "Biết tổng, trị tuyệt đối, căn bậc hai và giá trị lớn nhất"
+  ],
+  "learningOutcomes": [
+    {
+      "id": "LO1",
+      "outcome": "Phát biểu và diễn giải được bốn tiên đề của một norm.",
+      "evidence": "Giải thích được vì sao không âm, xác định dương, thuần nhất và bất đẳng thức tam giác là cần thiết."
+    },
+    {
+      "id": "LO2",
+      "outcome": "Tính và so sánh được chuẩn L1, L2 và L∞ của một vector sai số.",
+      "evidence": "Nêu được chuẩn nào nhấn mạnh tổng sai số, năng lượng sai số hoặc sai số xấu nhất."
+    },
+    {
+      "id": "LO3",
+      "outcome": "Phát biểu và kiểm tra được bốn tiên đề của metric.",
+      "evidence": "Phân biệt được distance hợp lệ với một hàm loss hoặc similarity không phải metric."
+    },
+    {
+      "id": "LO4",
+      "outcome": "Xây dựng được khoảng cách từ norm và diễn giải đúng Euclidean, Manhattan, Chebyshev và weighted distance.",
+      "evidence": "Chọn metric phù hợp theo mục tiêu và rủi ro kỹ thuật."
+    },
+    {
+      "id": "LO5",
+      "outcome": "Giải thích được chuẩn hóa và standardization làm thay đổi hình học dữ liệu như thế nào.",
+      "evidence": "Dự đoán được chiều nào sẽ chi phối distance trước và sau scale."
+    },
+    {
+      "id": "LO6",
+      "outcome": "Thiết kế được metric an toàn cho một vector trạng thái nhiều đơn vị.",
+      "evidence": "Khai báo scale, trọng số, ngưỡng và điều kiện dữ liệu trước khi tính."
+    }
+  ],
+  "notationRules": [
+    {
+      "raw": "||x||_1 = sum_i |x_i|",
+      "meaning": "Chuẩn L1 là tổng trị tuyệt đối các phần tử. i là chỉ số dưới."
+    },
+    {
+      "raw": "||x||_2 = sqrt(sum_i x_i^2)",
+      "meaning": "Chuẩn L2 là căn tổng bình phương; i ở dưới và 2 ở trên."
+    },
+    {
+      "raw": "||x||_infinity = max_i |x_i|",
+      "meaning": "Chuẩn L∞ là trị tuyệt đối lớn nhất trong các phần tử."
+    },
+    {
+      "raw": "d_p(x,y) = ||x-y||_p",
+      "meaning": "Khoảng cách sinh bởi chuẩn Lp là chuẩn của vector sai khác."
+    },
+    {
+      "raw": "d_W(x,y) = sqrt(sum_i w_i (x_i-y_i)^2)",
+      "meaning": "Weighted Euclidean distance gán trọng số không âm w_i cho từng chiều."
+    },
+    {
+      "raw": "z_i = (x_i-mu_i)/sigma_i",
+      "meaning": "Standardization theo feature i; mu_i và sigma_i là thống kê của đúng feature đó."
+    }
+  ],
+  "coreConcepts": [
+    {
+      "id": "C1",
+      "name": "Norm là quy tắc đo độ lớn",
+      "definition": "Norm ánh xạ một vector thành một số thực không âm và phải bảo toàn các luật cơ bản của độ lớn.",
+      "deepMeaning": "Đổi norm là đổi hình dạng quả cầu đơn vị, từ đó đổi khái niệm hướng nào bị phạt mạnh và điểm nào được xem là gần.",
+      "engineeringConsequence": "Cùng một vector sai số có thể được ưu tiên khác nhau bởi L1, L2 hoặc L∞."
+    },
+    {
+      "id": "C2",
+      "name": "Metric là quy tắc đo khoảng cách",
+      "definition": "Metric ánh xạ một cặp điểm thành khoảng cách không âm, bằng 0 đúng khi hai điểm trùng, đối xứng và thỏa bất đẳng thức tam giác.",
+      "deepMeaning": "Metric tạo cấu trúc hình học cho tập dữ liệu: neighborhood, nearest neighbor, cluster và vùng bất thường đều phụ thuộc metric.",
+      "engineeringConsequence": "Đổi metric có thể đổi thứ tự láng giềng và quyết định phân loại dù dữ liệu không đổi."
+    },
+    {
+      "id": "C3",
+      "name": "Scale là một phần của hình học",
+      "definition": "Đơn vị và độ phân tán của từng feature quyết định mức đóng góp của feature đó vào distance.",
+      "deepMeaning": "Standardization tương đương co giãn các trục trước khi đo khoảng cách.",
+      "engineeringConsequence": "Một feature có số lớn có thể thống trị metric dù không quan trọng hơn về kỹ thuật."
+    },
+    {
+      "id": "C4",
+      "name": "Trọng số mã hóa ưu tiên kỹ thuật",
+      "definition": "Weighted distance dùng w_i để tăng hoặc giảm ảnh hưởng của từng chiều.",
+      "deepMeaning": "Trọng số không chỉ sửa scale mà còn có thể mã hóa độ tin cậy, mức rủi ro hoặc chi phí sai số.",
+      "engineeringConsequence": "Trọng số tùy tiện tạo metric tùy tiện; trọng số phải có nguồn từ domain, dữ liệu hoặc yêu cầu an toàn."
+    }
+  ],
+  "normAxioms": [
+    {
+      "name": "Không âm",
+      "formula": "||x|| >= 0",
+      "meaning": "Độ lớn không thể âm."
+    },
+    {
+      "name": "Xác định dương",
+      "formula": "||x|| = 0 iff x = 0",
+      "meaning": "Chỉ vector zero mới có độ lớn bằng 0."
+    },
+    {
+      "name": "Thuần nhất tuyệt đối",
+      "formula": "||alpha x|| = |alpha| ||x||",
+      "meaning": "Co vector alpha lần làm độ lớn co theo |alpha|."
+    },
+    {
+      "name": "Bất đẳng thức tam giác",
+      "formula": "||x+y|| <= ||x|| + ||y||",
+      "meaning": "Độ lớn của tổng không vượt tổng độ lớn từng phần."
+    }
+  ],
+  "normFamily": [
+    {
+      "id": "N1",
+      "name": "L1 norm",
+      "formula": "||x||_1 = sum_i |x_i|",
+      "questionAnswered": "Tổng mức lệch tuyệt đối là bao nhiêu?",
+      "geometry": "Quả cầu đơn vị có dạng hình thoi trong 2D.",
+      "sensitivity": "Ít khuếch đại một ngoại lệ đơn lẻ hơn L2 vì không bình phương.",
+      "engineeringUse": "Tổng chi phí sai số, robust fitting tương đối, sparsity trong một số bài toán tối ưu.",
+      "limitation": "Không phân biệt việc sai số tập trung ở một chiều hay phân tán nếu tổng trị tuyệt đối bằng nhau."
+    },
+    {
+      "id": "N2",
+      "name": "L2 norm",
+      "formula": "||x||_2 = sqrt(sum_i x_i^2)",
+      "questionAnswered": "Độ lớn Euclid hoặc năng lượng tổng hợp là bao nhiêu?",
+      "geometry": "Quả cầu đơn vị là đường tròn hoặc mặt cầu.",
+      "sensitivity": "Phạt mạnh thành phần lớn do bình phương.",
+      "engineeringUse": "Sai số vị trí, least squares, năng lượng tín hiệu, norm gradient.",
+      "limitation": "Nhạy với outlier và scale giữa các chiều."
+    },
+    {
+      "id": "NINF",
+      "name": "L∞ norm",
+      "formula": "||x||_infinity = max_i |x_i|",
+      "questionAnswered": "Sai số xấu nhất trên một chiều là bao nhiêu?",
+      "geometry": "Quả cầu đơn vị là hình vuông hoặc hypercube.",
+      "sensitivity": "Chỉ thành phần lớn nhất quyết định giá trị.",
+      "engineeringUse": "Giới hạn an toàn, worst-case error, kiểm ngưỡng từng kênh.",
+      "limitation": "Bỏ qua tổng lượng sai số ở các chiều còn lại."
+    },
+    {
+      "id": "NW",
+      "name": "Weighted L2 norm",
+      "formula": "||x||_W = sqrt(sum_i w_i x_i^2)",
+      "questionAnswered": "Độ lớn khi từng chiều có mức quan trọng khác nhau là bao nhiêu?",
+      "conditions": [
+        "w_i >= 0",
+        "Để là norm đúng nghĩa, mọi chiều cần trọng số dương hoặc ma trận trọng số positive definite trong dạng tổng quát"
+      ],
+      "engineeringUse": "Sai số điều khiển nhiều đơn vị, sensor fusion, cost có mức rủi ro khác nhau.",
+      "limitation": "Trọng số sai có thể che khuất hoặc phóng đại rủi ro."
+    }
+  ],
+  "metricAxioms": [
+    {
+      "name": "Không âm",
+      "formula": "d(x,y) >= 0"
+    },
+    {
+      "name": "Phân biệt điểm",
+      "formula": "d(x,y) = 0 iff x = y"
+    },
+    {
+      "name": "Đối xứng",
+      "formula": "d(x,y) = d(y,x)"
+    },
+    {
+      "name": "Bất đẳng thức tam giác",
+      "formula": "d(x,z) <= d(x,y) + d(y,z)"
+    }
+  ],
+  "distanceFamily": [
+    {
+      "id": "D1",
+      "name": "Manhattan distance",
+      "formula": "d_1(x,y) = sum_i |x_i-y_i|",
+      "generatedBy": "L1 norm",
+      "meaning": "Tổng độ lệch tuyệt đối theo từng trục.",
+      "use": "Chi phí cộng dồn hoặc dữ liệu cần giảm ảnh hưởng của sai số cực lớn."
+    },
+    {
+      "id": "D2",
+      "name": "Euclidean distance",
+      "formula": "d_2(x,y) = sqrt(sum_i (x_i-y_i)^2)",
+      "generatedBy": "L2 norm",
+      "meaning": "Độ dài đường thẳng trong hình học Euclid.",
+      "use": "Sai số không gian, nearest neighbor và clustering sau khi scale phù hợp."
+    },
+    {
+      "id": "DINF",
+      "name": "Chebyshev distance",
+      "formula": "d_infinity(x,y) = max_i |x_i-y_i|",
+      "generatedBy": "L∞ norm",
+      "meaning": "Độ lệch lớn nhất trên một chiều.",
+      "use": "Worst-case monitoring và ràng buộc an toàn từng feature."
+    },
+    {
+      "id": "DW",
+      "name": "Weighted Euclidean distance",
+      "formula": "d_W(x,y) = sqrt(sum_i w_i (x_i-y_i)^2)",
+      "generatedBy": "Weighted L2 norm",
+      "meaning": "Euclidean distance sau khi co giãn các trục theo sqrt(w_i).",
+      "use": "Metric có trọng số theo rủi ro, độ tin cậy hoặc độ phân tán."
+    }
+  ],
+  "similarityVsDistance": [
+    {
+      "object": "Distance",
+      "ordering": "Càng nhỏ càng gần",
+      "example": "Euclidean distance"
+    },
+    {
+      "object": "Similarity",
+      "ordering": "Càng lớn càng giống",
+      "example": "Cosine similarity"
+    },
+    {
+      "warning": "Không được đảo nhầm chiều tối ưu khi xếp hạng nearest neighbor hoặc retrieval."
+    }
+  ],
+  "scalingMethods": [
+    {
+      "name": "Đổi đơn vị",
+      "formula": "x'_i = c_i x_i",
+      "useWhen": "Các feature tương ứng đang dùng đơn vị không thống nhất."
+    },
+    {
+      "name": "Z-score standardization",
+      "formula": "z_i = (x_i-mu_i)/sigma_i",
+      "useWhen": "Cần đưa các feature về mean gần 0 và standard deviation gần 1.",
+      "risks": [
+        "Nhạy với outlier",
+        "mu_i và sigma_i phải ước lượng từ tập train, không từ test"
+      ]
+    },
+    {
+      "name": "Robust scaling",
+      "formula": "z_i = (x_i-median_i)/IQR_i",
+      "useWhen": "Feature có outlier mạnh hoặc phân phối lệch.",
+      "risks": [
+        "Không loại bỏ outlier; chỉ giảm ảnh hưởng của chúng lên scale"
+      ]
+    },
+    {
+      "name": "Min-max scaling",
+      "formula": "z_i = (x_i-min_i)/(max_i-min_i)",
+      "useWhen": "Cần miền hữu hạn cố định và dữ liệu vận hành không vượt xa min/max đã học.",
+      "risks": [
+        "Nhạy với outlier và drift ngoài miền"
+      ]
+    }
+  ],
+  "assumptionGate": [
+    {
+      "check": "sameSchema",
+      "question": "Hai vector có cùng feature theo cùng thứ tự không?",
+      "actionOnFail": "Không tính distance; ánh xạ lại schema."
+    },
+    {
+      "check": "compatibleUnits",
+      "question": "Các feature tương ứng có cùng đơn vị không?",
+      "actionOnFail": "Đổi đơn vị trước khi đo."
+    },
+    {
+      "check": "scaleReviewed",
+      "question": "Đã đánh giá feature nào chi phối metric chưa?",
+      "actionOnFail": "Kiểm distribution, standardize hoặc thiết kế trọng số."
+    },
+    {
+      "check": "finiteValues",
+      "question": "Có NaN hoặc infinity không?",
+      "actionOnFail": "Làm sạch hoặc loại mẫu theo quy tắc dữ liệu."
+    },
+    {
+      "check": "outlierPolicy",
+      "question": "Metric có phù hợp với mức outlier không?",
+      "actionOnFail": "Cân nhắc robust scaling, L1 hoặc metric khác."
+    },
+    {
+      "check": "weightProvenance",
+      "question": "Trọng số có nguồn từ domain, uncertainty hoặc dữ liệu không?",
+      "actionOnFail": "Không dùng trọng số tùy ý."
+    },
+    {
+      "check": "metricObjective",
+      "question": "Metric đang trả lời đúng câu hỏi kỹ thuật không?",
+      "actionOnFail": "Định nghĩa lại mục tiêu trước khi chọn metric."
+    }
+  ],
+  "workedCase": {
+    "id": "CASE_UGV_ANOMALY_DISTANCE",
+    "title": "Đo độ lệch trạng thái UGV nhiều đơn vị",
+    "schema": [
+      {
+        "feature": "speed",
+        "unit": "m/s",
+        "normalStd": 0.2
+      },
+      {
+        "feature": "motor_current",
+        "unit": "A",
+        "normalStd": 0.6
+      },
+      {
+        "feature": "temperature",
+        "unit": "°C",
+        "normalStd": 5.0
+      },
+      {
+        "feature": "vibration",
+        "unit": "g",
+        "normalStd": 0.04
+      }
+    ],
+    "reference": [1.2, 3.0, 45.0, 0.05],
+    "current": [1.1, 4.8, 70.0, 0.2],
+    "rawError": [-0.1, 1.8, 25.0, 0.15],
+    "rawNorms": {
+      "L1": 27.05,
+      "L2": 25.06536454951334,
+      "Linf": 25.0
+    },
+    "rawInterpretation": [
+      "Cả L2 và L∞ gần như chỉ phản ánh nhiệt độ vì 25 °C lớn hơn về số học so với các feature khác.",
+      "Kết quả không cho thấy rõ dòng motor và độ rung cũng bất thường theo phân phối bình thường của chúng."
+    ],
+    "standardizedError": [-0.5, 3.0, 5.0, 3.75],
+    "standardizedNorms": {
+      "L1": 12.25,
+      "L2": 6.950719387228922,
+      "Linf": 5.0
+    },
+    "safetyWeights": [1.0, 1.5, 2.0, 2.5],
+    "weightedStandardizedL2": 9.945162140458043,
+    "interpretation": [
+      "Sau standardization, nhiệt độ vẫn là chiều lệch lớn nhất nhưng dòng motor và độ rung không còn bị che khuất.",
+      "Weighted distance tăng vai trò của nhiệt độ và độ rung theo yêu cầu an toàn giả định.",
+      "Ngưỡng cảnh báo phải được hiệu chỉnh trên dữ liệu bình thường và dữ liệu lỗi, không chọn chỉ từ một mẫu."
+    ]
+  },
+  "comparisonExample": {
+    "vectors": {
+      "a": [1.0, 1.0, 1.0],
+      "b": [2.0, 2.0, 2.0],
+      "c": [1.0, 1.0, 10.0]
+    },
+    "distances": {
+      "a_b": {
+        "L1": 3.0,
+        "L2": 1.7320508075688772,
+        "Linf": 1.0
+      },
+      "a_c": {
+        "L1": 9.0,
+        "L2": 9.0,
+        "Linf": 9.0
+      }
+    },
+    "lesson": "L∞ phơi bày trực tiếp sai số xấu nhất, L1 cộng toàn bộ sai số, còn L2 nhấn mạnh sai số lớn nhưng vẫn tổng hợp các chiều."
+  },
+  "engineeringApplications": [
+    {
+      "domain": "Điều khiển robot",
+      "objective": "Đo sai số giữa trạng thái tham chiếu và trạng thái thật.",
+      "guidance": "Dùng standardized hoặc weighted L2; theo dõi thêm L∞ cho giới hạn an toàn từng chiều."
+    },
+    {
+      "domain": "Anomaly detection",
+      "objective": "Đo độ lệch khỏi trạng thái bình thường.",
+      "guidance": "Scale theo phân phối bình thường; threshold phải hiệu chỉnh trên validation."
+    },
+    {
+      "domain": "Nearest neighbor",
+      "objective": "Xếp hạng mẫu gần nhất.",
+      "guidance": "Kiểm tra metric, scaling và feature relevance vì chúng quyết định thứ tự láng giềng."
+    },
+    {
+      "domain": "So sánh tín hiệu",
+      "objective": "Đo sai khác biên độ hoặc hình dạng.",
+      "guidance": "Distance phù hợp cho sai số biên độ; nếu gain không quan trọng cần kết hợp cosine hoặc normalization."
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "wrong": "Euclidean distance là lựa chọn mặc định đúng cho mọi dữ liệu.",
+      "correct": "Metric phải phù hợp với scale, outlier, rủi ro và mục tiêu."
+    },
+    {
+      "wrong": "Chuẩn hóa không làm thay đổi bản chất dữ liệu.",
+      "correct": "Chuẩn hóa thay đổi hình học và thứ tự khoảng cách."
+    },
+    {
+      "wrong": "Weighted distance chỉ là mẹo sửa số.",
+      "correct": "Nó mã hóa độ quan trọng hoặc uncertainty và cần nguồn hợp lý."
+    },
+    {
+      "wrong": "Cosine similarity là một metric distance theo đúng nghĩa.",
+      "correct": "Cosine là similarity; các biến đổi thành cosine distance cần được kiểm tính chất và ngữ cảnh."
+    },
+    {
+      "wrong": "L∞ bỏ qua các chiều khác nên vô dụng.",
+      "correct": "L∞ phù hợp khi một chiều vượt ngưỡng đã đủ gây nguy hiểm."
+    },
+    {
+      "wrong": "Distance bằng 0 sau làm tròn nghĩa là hai mẫu giống hệt.",
+      "correct": "Phải phân biệt giá trị số học, tolerance và equality theo schema."
+    }
+  ],
+  "masteryChecks": [
+    {
+      "level": "recall",
+      "question": "Bốn tiên đề của một norm là gì?",
+      "expected": "Không âm, xác định dương, thuần nhất tuyệt đối và bất đẳng thức tam giác."
+    },
+    {
+      "level": "understand",
+      "question": "Vì sao L1, L2 và L∞ có thể cho ba số khác nhau nhưng đều đúng?",
+      "expected": "Vì chúng đo độ lớn theo ba hình học và ưu tiên sai số khác nhau."
+    },
+    {
+      "level": "apply",
+      "question": "Tính L1, L2 và L∞ của [3,4].",
+      "expected": "L1=7, L2=5, L∞=4."
+    },
+    {
+      "level": "analyze",
+      "question": "Vì sao raw L2 trong case UGV gần như chỉ phản ánh nhiệt độ?",
+      "expected": "Do feature nhiệt độ có độ lệch số học lớn hơn nhiều vì đơn vị và scale."
+    },
+    {
+      "level": "evaluate",
+      "question": "Khi nào nên theo dõi L∞ ngoài weighted L2?",
+      "expected": "Khi bất kỳ chiều nào vượt ngưỡng riêng đều có thể gây nguy hiểm."
+    },
+    {
+      "level": "create",
+      "question": "Thiết kế metric cho vector server [CPU, RAM, latency, error_rate].",
+      "expected": "Có scaling, nguồn trọng số, lý do chọn norm, threshold và chính sách outlier."
+    }
+  ],
+  "implementationContract": {
+    "safeDistanceAlgorithm": [
+      "Chuyển x và y thành vector số thực.",
+      "Kiểm tra cùng shape và schema version.",
+      "Kiểm tra finite values.",
+      "Áp dụng đúng scaler đã fit trên train hoặc baseline.",
+      "Áp dụng trọng số đã được phê duyệt nếu có.",
+      "Tính norm của vector sai khác.",
+      "Trả cả distance tổng hợp và contribution theo feature khi cần giải thích."
+    ],
+    "requiredOutputs": [
+      "distance tổng",
+      "metric name và version",
+      "scaler version",
+      "weight version",
+      "per-feature normalized error",
+      "largest contributing features"
+    ],
+    "doNotDo": [
+      "Không fit scaler trên test hoặc dữ liệu tương lai.",
+      "Không trộn similarity và distance trong cùng chiều xếp hạng.",
+      "Không chọn trọng số chỉ để đạt kết quả mong muốn.",
+      "Không dùng raw Euclidean cho vector khác đơn vị mà không giải thích.",
+      "Không coi distance nhỏ là an toàn nếu một chiều critical vượt ngưỡng."
+    ]
+  },
+  "bridgeToNextLessons": [
+    {
+      "target": "§1.3 · Tích vô hướng, góc và phép chiếu",
+      "bridge": "Từ độ lớn và khoảng cách chuyển sang đo hướng, góc, trực giao và thành phần của vector theo một hướng."
+    },
+    {
+      "target": "§1.4 · Cơ sở, span và độc lập tuyến tính",
+      "bridge": "Hình học của norm và distance phụ thuộc hệ tọa độ và không gian các hướng được chọn."
+    },
+    {
+      "target": "Chương 2 · Ma trận",
+      "bridge": "Weighted norm tổng quát dẫn tới dạng sqrt(x^T W x) và hình học do ma trận xác định."
+    }
+  ],
+  "downstreamMapping": {
+    "referenceTable": [
+      "normAxioms",
+      "normFamily",
+      "metricAxioms",
+      "distanceFamily",
+      "scalingMethods",
+      "assumptionGate",
+      "commonMisconceptions"
+    ],
+    "slideshow": [
+      "lessonThesis",
+      "coreConcepts",
+      "normAxioms",
+      "normFamily",
+      "metricAxioms",
+      "workedCase",
+      "masteryChecks"
+    ],
+    "fullView": [
+      "normFamily",
+      "distanceFamily",
+      "scalingMethods",
+      "assumptionGate",
+      "workedCase",
+      "implementationContract"
+    ],
+    "formulaFinalization": [
+      "notationRules",
+      "normAxioms.formula",
+      "normFamily.formula",
+      "metricAxioms.formula",
+      "distanceFamily.formula",
+      "scalingMethods.formula"
+    ]
+  },
+  "qualityGate": {
+    "mustPass": [
+      "Phân biệt rõ norm, metric, distance và similarity.",
+      "Mỗi norm nêu câu hỏi nó trả lời, độ nhạy, ứng dụng và giới hạn.",
+      "Mỗi metric có điều kiện schema, unit và scale.",
+      "Worked case có raw distance, standardized distance và diễn giải contribution.",
+      "Trọng số có điều kiện và nguồn hợp lý.",
+      "Không chứa quyết định slide, popup hoặc layout."
+    ],
+    "reviewStatus": "needs_local_content_review"
+  }
+}

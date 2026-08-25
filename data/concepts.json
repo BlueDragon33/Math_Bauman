@@ -1,0 +1,3358 @@
+{
+  "items": [
+    {
+      "id": "math_m_p01_core",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": "m_p01",
+      "title": "Vector trong không gian dữ liệu: độ dài, góc và phép chiếu",
+      "definition": "Làm chủ ký hiệu vector, norm, dot product, cosine similarity cho AI.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ1 · Chuẩn bị tại Việt Nam.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_p01_core"
+      ],
+      "formulaIds": [
+        "f_norm_l2",
+        "f_dot_product",
+        "f_cosine_similarity"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_p02_core",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": "m_p02",
+      "title": "Ma trận, hệ tuyến tính và biểu diễn biến đổi dữ liệu",
+      "definition": "Matrix operations, rank, inverse, hệ phương trình và nghiệm gần đúng.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ1 · Chuẩn bị tại Việt Nam.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_p02_core"
+      ],
+      "formulaIds": [
+        "f_matrix_product",
+        "f_rank",
+        "f_inverse"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_p03_core",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 2,
+      "moduleId": "m_p03",
+      "title": "Đạo hàm, gradient và tối ưu hóa mô hình",
+      "definition": "Derivative, gradient, loss surface và gradient descent nhập môn.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ1 · Chuẩn bị tại Việt Nam.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_p03_core"
+      ],
+      "formulaIds": [
+        "f_gradient",
+        "f_jacobian",
+        "f_hessian"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_p04_core",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 2,
+      "moduleId": "m_p04",
+      "title": "Xác suất cơ bản, Bayes và suy luận bất định",
+      "definition": "Event, conditional probability, Bayes, independence cho ML.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ1 · Chuẩn bị tại Việt Nam.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_p04_core"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_p05_core",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 3,
+      "moduleId": "m_p05",
+      "title": "Biến ngẫu nhiên, kỳ vọng và phương sai trong dữ liệu",
+      "definition": "Distribution, expectation, variance, standardization.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ1 · Chuẩn bị tại Việt Nam.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_p05_core"
+      ],
+      "formulaIds": [
+        "f_probability",
+        "f_conditional_probability",
+        "f_bayes"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_p06_core",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 3,
+      "moduleId": "m_p06",
+      "title": "Thống kê mô tả, khoảng tin cậy và đánh giá mẫu",
+      "definition": "Sampling, confidence interval, histogram, boxplot, summary table.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ1 · Chuẩn bị tại Việt Nam.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_p06_core"
+      ],
+      "formulaIds": [
+        "f_expectation",
+        "f_variance",
+        "f_confidence_interval"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_p07_core",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 4,
+      "moduleId": "m_p07",
+      "title": "Hiệp phương sai, tương quan và PCA nhập môn",
+      "definition": "Liên hệ covariance matrix, eigenvector và giảm chiều dữ liệu.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ1 · Chuẩn bị tại Việt Nam.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_p07_core"
+      ],
+      "formulaIds": [
+        "f_cov_matrix",
+        "f_eigen",
+        "f_svd"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_p08_core",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 4,
+      "moduleId": "m_p08",
+      "title": "Chuỗi thời gian nhập môn: xu hướng, mùa vụ và nhiễu",
+      "definition": "Timestamp, trend, seasonality, rolling mean và stationarity concept.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ1 · Chuẩn bị tại Việt Nam.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_p08_core"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_s01_core",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": "m_s01",
+      "title": "Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật",
+      "definition": "Đọc đề toán, ký hiệu, câu lệnh chứng minh/tính toán bằng tiếng Nga.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ2 · Dự bị Nga / STANKIN.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_s01_core"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_s02_core",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 2,
+      "moduleId": "m_s02",
+      "title": "Đại số tuyến tính bằng tiếng Nga: ký hiệu, đề bài và lời giải",
+      "definition": "Vector/matrix/rank/system với từ vựng Nga học thuật.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ2 · Dự bị Nga / STANKIN.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_s02_core"
+      ],
+      "formulaIds": [
+        "f_norm_l2",
+        "f_dot_product",
+        "f_cosine_similarity"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_s03_core",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 3,
+      "moduleId": "m_s03",
+      "title": "Xác suất - thống kê bằng tiếng Nga: đề bài, công thức và diễn giải",
+      "definition": "Вероятность, матожидание, дисперсия, выборка, оценка.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ2 · Dự bị Nga / STANKIN.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_s03_core"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_s04_core",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 4,
+      "moduleId": "m_s04",
+      "title": "Toán cho dữ liệu đa chiều trong hệ thống AI",
+      "definition": "Chuẩn bị cho môn Multivariate Data Analysis HK1.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ2 · Dự bị Nga / STANKIN.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_s04_core"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_s05_core",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 4,
+      "moduleId": "m_s05",
+      "title": "Bài tập tổng hợp dự bị: đại số, xác suất và thống kê",
+      "definition": "Giải bài, trình bày lời giải và ghi glossary cá nhân.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: GĐ2 · Dự bị Nga / STANKIN.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_s05_core"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m101_core",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": "m_m101",
+      "title": "Nền tảng phân tích dữ liệu đa chiều",
+      "definition": "Ma trận dữ liệu, chuẩn hóa, covariance/correlation, khoảng cách.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: HK1 · Bauman.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_m101_core"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m102_core",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 2,
+      "moduleId": "m_m102",
+      "title": "PCA, SVD và trực quan hóa không gian đặc trưng",
+      "definition": "Eigen decomposition, PCA pipeline, variance explained.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: HK1 · Bauman.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_m102_core"
+      ],
+      "formulaIds": [
+        "f_cov_matrix",
+        "f_eigen",
+        "f_svd"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m103_core",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 3,
+      "moduleId": "m_m103",
+      "title": "Clustering, similarity và cấu trúc trong không gian dữ liệu",
+      "definition": "Khoảng cách, scaling, clustering validation.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: HK1 · Bauman.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_m103_core"
+      ],
+      "formulaIds": [
+        "f_norm_l2",
+        "f_dot_product",
+        "f_cosine_similarity"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m104_core",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 4,
+      "moduleId": "m_m104",
+      "title": "Bài tập kỳ thi về phân tích dữ liệu đa chiều",
+      "definition": "Đọc đề Nga, giải bài, lập notebook kiểm chứng.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: HK1 · Bauman.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_m104_core"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m301_core",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 2,
+      "moduleId": "m_m301",
+      "title": "Lý thuyết chuỗi thời gian cho dữ liệu cảm biến",
+      "definition": "Stationarity, autocorrelation, decomposition, lag features.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: HK3 · Bauman.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_m301_core"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m302_core",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 3,
+      "moduleId": "m_m302",
+      "title": "Metric dự báo và đánh giá sai số chuỗi thời gian",
+      "definition": "MAE, RMSE, MAPE, rolling validation cho chuỗi thời gian.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: HK3 · Bauman.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_m302_core"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m303_core",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 4,
+      "moduleId": "m_m303",
+      "title": "Cơ sở toán học của phát hiện bất thường",
+      "definition": "Z-score, residual, threshold, false positive/negative.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: HK3 · Bauman.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_m303_core"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m401_core",
+      "subjectId": "math",
+      "stageId": "m4",
+      "partId": 4,
+      "moduleId": "m_m401",
+      "title": "Toán cho bảng kết quả, metric và diễn giải luận văn",
+      "definition": "Kiểm định, bảng kết quả, interval, significance và reproducibility.",
+      "role": "Khái niệm lõi của module; dùng để nối bài học, ôn tập, kiểm tra và ứng dụng.",
+      "applications": [
+        "Liên hệ học phần Bauman/HK: HK4 · Tốt nghiệp.",
+        "Liên hệ luận văn: UGV/USV, telemetry, AI hoặc hệ thống điều khiển tùy môn.",
+        "Liên hệ tiếng Nga: chuẩn bị cách trình bày khái niệm bằng câu ngắn, dễ nói."
+      ],
+      "examTags": [
+        "math_m_m401_core"
+      ],
+      "formulaIds": [
+        "f_rmse",
+        "f_confidence_interval",
+        "f_effect_size"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p01_l1",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Vector trong không gian dữ liệu: độ dài, góc và phép chiếu",
+      "definition": "Bài e-learning chuyên sâu về Vector trong không gian dữ liệu: độ dài, góc và phép chiếu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Vector trong không gian dữ liệu: độ dài, góc và phép chiếu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Vector biểu diễn một đối tượng bằng dãy số có thứ tự; mỗi mẫu dữ liệu trong AI là một vector đặc trưng. Tích vô hướng đo mức cùng hướng và là lõi của projection, cosine similarity, linear model. Chuẩn L1/L2/L∞ đo độ lớn khác nhau, kéo theo hình học và thuật toán khác nhau. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p01_l1"
+      ],
+      "formulaIds": [
+        "f_norm_l2",
+        "f_dot_product",
+        "f_cosine_similarity"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p01_l2",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Vector trong không gian dữ liệu: độ dài, góc và phép chiếu",
+      "definition": "Bài e-learning chuyên sâu về Vector trong không gian dữ liệu: độ dài, góc và phép chiếu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Vector trong không gian dữ liệu: độ dài, góc và phép chiếu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Vector biểu diễn một đối tượng bằng dãy số có thứ tự; mỗi mẫu dữ liệu trong AI là một vector đặc trưng. Tích vô hướng đo mức cùng hướng và là lõi của projection, cosine similarity, linear model. Chuẩn L1/L2/L∞ đo độ lớn khác nhau, kéo theo hình học và thuật toán khác nhau. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p01_l2"
+      ],
+      "formulaIds": [
+        "f_norm_l2",
+        "f_dot_product",
+        "f_cosine_similarity"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p01_l3",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Vector trong không gian dữ liệu: độ dài, góc và phép chiếu",
+      "definition": "Bài e-learning chuyên sâu về Vector trong không gian dữ liệu: độ dài, góc và phép chiếu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Vector trong không gian dữ liệu: độ dài, góc và phép chiếu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Vector biểu diễn một đối tượng bằng dãy số có thứ tự; mỗi mẫu dữ liệu trong AI là một vector đặc trưng. Tích vô hướng đo mức cùng hướng và là lõi của projection, cosine similarity, linear model. Chuẩn L1/L2/L∞ đo độ lớn khác nhau, kéo theo hình học và thuật toán khác nhau. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p01_l3"
+      ],
+      "formulaIds": [
+        "f_norm_l2",
+        "f_dot_product",
+        "f_cosine_similarity"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p02_l1",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Ma trận, hệ tuyến tính và biểu diễn biến đổi dữ liệu",
+      "definition": "Bài e-learning chuyên sâu về Ma trận, hệ tuyến tính và biểu diễn biến đổi dữ liệu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Ma trận, hệ tuyến tính và biểu diễn biến đổi dữ liệu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Ma trận là phép biến đổi tuyến tính: xoay, kéo, nén, chiếu vector. Hệ Ax=b là mô hình tìm trạng thái ẩn từ phép đo, gặp nhiều trong calibration và state estimation. Condition number cho biết nhiễu đầu vào bị khuếch đại thế nào. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p02_l1"
+      ],
+      "formulaIds": [
+        "f_matrix_product",
+        "f_rank",
+        "f_inverse"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p02_l2",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Ma trận, hệ tuyến tính và biểu diễn biến đổi dữ liệu",
+      "definition": "Bài e-learning chuyên sâu về Ma trận, hệ tuyến tính và biểu diễn biến đổi dữ liệu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Ma trận, hệ tuyến tính và biểu diễn biến đổi dữ liệu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Ma trận là phép biến đổi tuyến tính: xoay, kéo, nén, chiếu vector. Hệ Ax=b là mô hình tìm trạng thái ẩn từ phép đo, gặp nhiều trong calibration và state estimation. Condition number cho biết nhiễu đầu vào bị khuếch đại thế nào. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p02_l2"
+      ],
+      "formulaIds": [
+        "f_matrix_product",
+        "f_rank",
+        "f_inverse"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p02_l3",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Ma trận, hệ tuyến tính và biểu diễn biến đổi dữ liệu",
+      "definition": "Bài e-learning chuyên sâu về Ma trận, hệ tuyến tính và biểu diễn biến đổi dữ liệu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Ma trận, hệ tuyến tính và biểu diễn biến đổi dữ liệu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Ma trận là phép biến đổi tuyến tính: xoay, kéo, nén, chiếu vector. Hệ Ax=b là mô hình tìm trạng thái ẩn từ phép đo, gặp nhiều trong calibration và state estimation. Condition number cho biết nhiễu đầu vào bị khuếch đại thế nào. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p02_l3"
+      ],
+      "formulaIds": [
+        "f_matrix_product",
+        "f_rank",
+        "f_inverse"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p03_l1",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Đạo hàm, gradient và tối ưu hóa mô hình hóa mô hình",
+      "definition": "Bài e-learning chuyên sâu về Đạo hàm, gradient và tối ưu hóa mô hình trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Đạo hàm, gradient và tối ưu hóa mô hình là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Đạo hàm đo thay đổi cục bộ; gradient là hướng tăng nhanh nhất. Gradient descent cập nhật tham số ngược hướng gradient để giảm loss. Learning rate quyết định tốc độ và độ ổn định hội tụ. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p03_l1"
+      ],
+      "formulaIds": [
+        "f_gradient",
+        "f_jacobian",
+        "f_hessian"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p03_l2",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Đạo hàm, gradient và tối ưu hóa mô hình hóa mô hình",
+      "definition": "Bài e-learning chuyên sâu về Đạo hàm, gradient và tối ưu hóa mô hình trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Đạo hàm, gradient và tối ưu hóa mô hình là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Đạo hàm đo thay đổi cục bộ; gradient là hướng tăng nhanh nhất. Gradient descent cập nhật tham số ngược hướng gradient để giảm loss. Learning rate quyết định tốc độ và độ ổn định hội tụ. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p03_l2"
+      ],
+      "formulaIds": [
+        "f_gradient",
+        "f_jacobian",
+        "f_hessian"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p03_l3",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Đạo hàm, gradient và tối ưu hóa mô hình hóa mô hình",
+      "definition": "Bài e-learning chuyên sâu về Đạo hàm, gradient và tối ưu hóa mô hình trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Đạo hàm, gradient và tối ưu hóa mô hình là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Đạo hàm đo thay đổi cục bộ; gradient là hướng tăng nhanh nhất. Gradient descent cập nhật tham số ngược hướng gradient để giảm loss. Learning rate quyết định tốc độ và độ ổn định hội tụ. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p03_l3"
+      ],
+      "formulaIds": [
+        "f_gradient",
+        "f_jacobian",
+        "f_hessian"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p04_l1",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Xác suất cơ bản, Bayes và suy luận bất định",
+      "definition": "Bài e-learning chuyên sâu về Xác suất cơ bản, Bayes và suy luận bất định trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Xác suất cơ bản, Bayes và suy luận bất định là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Xác suất lượng hóa bất định trong dữ liệu cảm biến. Bayes cập nhật niềm tin khi có bằng chứng mới. P(A|B) khác P(B|A), nhầm lẫn này gây lỗi chẩn đoán. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p04_l1"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p04_l2",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Xác suất cơ bản, Bayes và suy luận bất định",
+      "definition": "Bài e-learning chuyên sâu về Xác suất cơ bản, Bayes và suy luận bất định trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Xác suất cơ bản, Bayes và suy luận bất định là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Xác suất lượng hóa bất định trong dữ liệu cảm biến. Bayes cập nhật niềm tin khi có bằng chứng mới. P(A|B) khác P(B|A), nhầm lẫn này gây lỗi chẩn đoán. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p04_l2"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p04_l3",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Xác suất cơ bản, Bayes và suy luận bất định",
+      "definition": "Bài e-learning chuyên sâu về Xác suất cơ bản, Bayes và suy luận bất định trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Xác suất cơ bản, Bayes và suy luận bất định là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Xác suất lượng hóa bất định trong dữ liệu cảm biến. Bayes cập nhật niềm tin khi có bằng chứng mới. P(A|B) khác P(B|A), nhầm lẫn này gây lỗi chẩn đoán. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p04_l3"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p05_l1",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Biến ngẫu nhiên, kỳ vọng và phương sai trong dữ liệu",
+      "definition": "Bài e-learning chuyên sâu về Biến ngẫu nhiên, kỳ vọng và phương sai trong dữ liệu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Biến ngẫu nhiên, kỳ vọng và phương sai trong dữ liệu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p05_l1"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p05_l2",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Biến ngẫu nhiên, kỳ vọng và phương sai trong dữ liệu",
+      "definition": "Bài e-learning chuyên sâu về Biến ngẫu nhiên, kỳ vọng và phương sai trong dữ liệu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Biến ngẫu nhiên, kỳ vọng và phương sai trong dữ liệu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p05_l2"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p05_l3",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Biến ngẫu nhiên, kỳ vọng và phương sai trong dữ liệu",
+      "definition": "Bài e-learning chuyên sâu về Biến ngẫu nhiên, kỳ vọng và phương sai trong dữ liệu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Biến ngẫu nhiên, kỳ vọng và phương sai trong dữ liệu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p05_l3"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p06_l1",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Thống kê mô tả, khoảng tin cậy và đánh giá mẫu",
+      "definition": "Bài e-learning chuyên sâu về Thống kê mô tả, khoảng tin cậy và đánh giá mẫu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Thống kê mô tả, khoảng tin cậy và đánh giá mẫu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p06_l1"
+      ],
+      "formulaIds": [
+        "f_expectation",
+        "f_variance",
+        "f_confidence_interval"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p06_l2",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Thống kê mô tả, khoảng tin cậy và đánh giá mẫu",
+      "definition": "Bài e-learning chuyên sâu về Thống kê mô tả, khoảng tin cậy và đánh giá mẫu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Thống kê mô tả, khoảng tin cậy và đánh giá mẫu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p06_l2"
+      ],
+      "formulaIds": [
+        "f_expectation",
+        "f_variance",
+        "f_confidence_interval"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p06_l3",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Thống kê mô tả, khoảng tin cậy và đánh giá mẫu",
+      "definition": "Bài e-learning chuyên sâu về Thống kê mô tả, khoảng tin cậy và đánh giá mẫu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Thống kê mô tả, khoảng tin cậy và đánh giá mẫu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p06_l3"
+      ],
+      "formulaIds": [
+        "f_expectation",
+        "f_variance",
+        "f_confidence_interval"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p07_l1",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Hiệp phương sai, tương quan và PCA nhập môn",
+      "definition": "Bài e-learning chuyên sâu về Hiệp phương sai, tương quan và PCA nhập môn trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Hiệp phương sai, tương quan và PCA nhập môn là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p07_l1"
+      ],
+      "formulaIds": [
+        "f_cov_matrix",
+        "f_eigen",
+        "f_svd"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p07_l2",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Hiệp phương sai, tương quan và PCA nhập môn",
+      "definition": "Bài e-learning chuyên sâu về Hiệp phương sai, tương quan và PCA nhập môn trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Hiệp phương sai, tương quan và PCA nhập môn là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p07_l2"
+      ],
+      "formulaIds": [
+        "f_cov_matrix",
+        "f_eigen",
+        "f_svd"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p07_l3",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Hiệp phương sai, tương quan và PCA nhập môn",
+      "definition": "Bài e-learning chuyên sâu về Hiệp phương sai, tương quan và PCA nhập môn trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Hiệp phương sai, tương quan và PCA nhập môn là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p07_l3"
+      ],
+      "formulaIds": [
+        "f_cov_matrix",
+        "f_eigen",
+        "f_svd"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p08_l1",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Chuỗi thời gian nhập môn: xu hướng, mùa vụ và nhiễu: xu hướng, mùa vụ và nhiễu",
+      "definition": "Bài e-learning chuyên sâu về Chuỗi thời gian nhập môn: xu hướng, mùa vụ và nhiễu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Chuỗi thời gian nhập môn: xu hướng, mùa vụ và nhiễu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p08_l1"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p08_l2",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Chuỗi thời gian nhập môn: xu hướng, mùa vụ và nhiễu: xu hướng, mùa vụ và nhiễu",
+      "definition": "Bài e-learning chuyên sâu về Chuỗi thời gian nhập môn: xu hướng, mùa vụ và nhiễu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Chuỗi thời gian nhập môn: xu hướng, mùa vụ và nhiễu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p08_l2"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_p08_l3",
+      "subjectId": "math",
+      "stageId": "prepare",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Chuỗi thời gian nhập môn: xu hướng, mùa vụ và nhiễu: xu hướng, mùa vụ và nhiễu",
+      "definition": "Bài e-learning chuyên sâu về Chuỗi thời gian nhập môn: xu hướng, mùa vụ và nhiễu trong GĐ1 · Chuẩn bị tại Việt Nam: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Chuỗi thời gian nhập môn: xu hướng, mùa vụ và nhiễu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_p08_l3"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s01_l1",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật cho lớp dự bị kỹ thuật",
+      "definition": "Bài e-learning chuyên sâu về Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s01_l1"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s01_l2",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật cho lớp dự bị kỹ thuật",
+      "definition": "Bài e-learning chuyên sâu về Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s01_l2"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s01_l3",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật cho lớp dự bị kỹ thuật",
+      "definition": "Bài e-learning chuyên sâu về Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s01_l3"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s02_l1",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Đại số tuyến tính bằng tiếng Nga: ký hiệu, đề bài và lời giải",
+      "definition": "Bài e-learning chuyên sâu về Đại số tuyến tính bằng tiếng Nga: ký hiệu, đề bài và lời giải trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Đại số tuyến tính bằng tiếng Nga: ký hiệu, đề bài và lời giải là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s02_l1"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s02_l2",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Đại số tuyến tính bằng tiếng Nga: ký hiệu, đề bài và lời giải",
+      "definition": "Bài e-learning chuyên sâu về Đại số tuyến tính bằng tiếng Nga: ký hiệu, đề bài và lời giải trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Đại số tuyến tính bằng tiếng Nga: ký hiệu, đề bài và lời giải là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s02_l2"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s02_l3",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Đại số tuyến tính bằng tiếng Nga: ký hiệu, đề bài và lời giải",
+      "definition": "Bài e-learning chuyên sâu về Đại số tuyến tính bằng tiếng Nga: ký hiệu, đề bài và lời giải trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Đại số tuyến tính bằng tiếng Nga: ký hiệu, đề bài và lời giải là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s02_l3"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s03_l1",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Xác suất - thống kê bằng tiếng Nga: đề bài, công thức và diễn giải",
+      "definition": "Bài e-learning chuyên sâu về Xác suất - thống kê bằng tiếng Nga: đề bài, công thức và diễn giải trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Xác suất - thống kê bằng tiếng Nga: đề bài, công thức và diễn giải là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Xác suất lượng hóa bất định trong dữ liệu cảm biến. Bayes cập nhật niềm tin khi có bằng chứng mới. P(A|B) khác P(B|A), nhầm lẫn này gây lỗi chẩn đoán. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s03_l1"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s03_l2",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Xác suất - thống kê bằng tiếng Nga: đề bài, công thức và diễn giải",
+      "definition": "Bài e-learning chuyên sâu về Xác suất - thống kê bằng tiếng Nga: đề bài, công thức và diễn giải trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Xác suất - thống kê bằng tiếng Nga: đề bài, công thức và diễn giải là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Xác suất lượng hóa bất định trong dữ liệu cảm biến. Bayes cập nhật niềm tin khi có bằng chứng mới. P(A|B) khác P(B|A), nhầm lẫn này gây lỗi chẩn đoán. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s03_l2"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s03_l3",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Xác suất - thống kê bằng tiếng Nga: đề bài, công thức và diễn giải",
+      "definition": "Bài e-learning chuyên sâu về Xác suất - thống kê bằng tiếng Nga: đề bài, công thức và diễn giải trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Xác suất - thống kê bằng tiếng Nga: đề bài, công thức và diễn giải là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Xác suất lượng hóa bất định trong dữ liệu cảm biến. Bayes cập nhật niềm tin khi có bằng chứng mới. P(A|B) khác P(B|A), nhầm lẫn này gây lỗi chẩn đoán. Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s03_l3"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s04_l1",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Toán cho dữ liệu đa chiều trong hệ thống AI trong hệ thống AI",
+      "definition": "Bài e-learning chuyên sâu về Toán cho dữ liệu đa chiều trong hệ thống AI trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Toán cho dữ liệu đa chiều trong hệ thống AI là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s04_l1"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s04_l2",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Toán cho dữ liệu đa chiều trong hệ thống AI trong hệ thống AI",
+      "definition": "Bài e-learning chuyên sâu về Toán cho dữ liệu đa chiều trong hệ thống AI trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Toán cho dữ liệu đa chiều trong hệ thống AI là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s04_l2"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s04_l3",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Toán cho dữ liệu đa chiều trong hệ thống AI trong hệ thống AI",
+      "definition": "Bài e-learning chuyên sâu về Toán cho dữ liệu đa chiều trong hệ thống AI trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Toán cho dữ liệu đa chiều trong hệ thống AI là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s04_l3"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s05_l1",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Bài tập tổng hợp dự bị: đại số, xác suất và thống kê: đại số, xác suất và thống kê",
+      "definition": "Bài e-learning chuyên sâu về Bài tập tổng hợp dự bị: đại số, xác suất và thống kê trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Bài tập tổng hợp dự bị: đại số, xác suất và thống kê là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s05_l1"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s05_l2",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Bài tập tổng hợp dự bị: đại số, xác suất và thống kê: đại số, xác suất và thống kê",
+      "definition": "Bài e-learning chuyên sâu về Bài tập tổng hợp dự bị: đại số, xác suất và thống kê trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Bài tập tổng hợp dự bị: đại số, xác suất và thống kê là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s05_l2"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_s05_l3",
+      "subjectId": "math",
+      "stageId": "preparatory",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Bài tập tổng hợp dự bị: đại số, xác suất và thống kê: đại số, xác suất và thống kê",
+      "definition": "Bài e-learning chuyên sâu về Bài tập tổng hợp dự bị: đại số, xác suất và thống kê trong GĐ2 · Dự bị Nga/STANKIN: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Bài tập tổng hợp dự bị: đại số, xác suất và thống kê là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_s05_l3"
+      ],
+      "formulaIds": [
+        "f_conditional_probability",
+        "f_bayes",
+        "f_expectation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m101_l1",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Nền tảng phân tích dữ liệu đa chiều",
+      "definition": "Bài e-learning chuyên sâu về Nền tảng phân tích dữ liệu đa chiều trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Nền tảng phân tích dữ liệu đa chiều là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m101_l1"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m101_l2",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Nền tảng phân tích dữ liệu đa chiều",
+      "definition": "Bài e-learning chuyên sâu về Nền tảng phân tích dữ liệu đa chiều trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Nền tảng phân tích dữ liệu đa chiều là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m101_l2"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m101_l3",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Nền tảng phân tích dữ liệu đa chiều",
+      "definition": "Bài e-learning chuyên sâu về Nền tảng phân tích dữ liệu đa chiều trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Nền tảng phân tích dữ liệu đa chiều là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m101_l3"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m102_l1",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · PCA, SVD và trực quan hóa không gian đặc trưng",
+      "definition": "Bài e-learning chuyên sâu về PCA, SVD và trực quan hóa không gian đặc trưng trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. PCA, SVD và trực quan hóa không gian đặc trưng là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m102_l1"
+      ],
+      "formulaIds": [
+        "f_cov_matrix",
+        "f_eigen",
+        "f_svd"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m102_l2",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · PCA, SVD và trực quan hóa không gian đặc trưng",
+      "definition": "Bài e-learning chuyên sâu về PCA, SVD và trực quan hóa không gian đặc trưng trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. PCA, SVD và trực quan hóa không gian đặc trưng là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m102_l2"
+      ],
+      "formulaIds": [
+        "f_cov_matrix",
+        "f_eigen",
+        "f_svd"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m102_l3",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · PCA, SVD và trực quan hóa không gian đặc trưng",
+      "definition": "Bài e-learning chuyên sâu về PCA, SVD và trực quan hóa không gian đặc trưng trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. PCA, SVD và trực quan hóa không gian đặc trưng là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m102_l3"
+      ],
+      "formulaIds": [
+        "f_cov_matrix",
+        "f_eigen",
+        "f_svd"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m103_l1",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Clustering, similarity và cấu trúc trong không gian dữ liệu",
+      "definition": "Bài e-learning chuyên sâu về Clustering, similarity và cấu trúc trong không gian dữ liệu trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Clustering, similarity và cấu trúc trong không gian dữ liệu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m103_l1"
+      ],
+      "formulaIds": [
+        "f_norm_l2",
+        "f_dot_product",
+        "f_cosine_similarity"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m103_l2",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Clustering, similarity và cấu trúc trong không gian dữ liệu",
+      "definition": "Bài e-learning chuyên sâu về Clustering, similarity và cấu trúc trong không gian dữ liệu trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Clustering, similarity và cấu trúc trong không gian dữ liệu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m103_l2"
+      ],
+      "formulaIds": [
+        "f_norm_l2",
+        "f_dot_product",
+        "f_cosine_similarity"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m103_l3",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Clustering, similarity và cấu trúc trong không gian dữ liệu",
+      "definition": "Bài e-learning chuyên sâu về Clustering, similarity và cấu trúc trong không gian dữ liệu trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Clustering, similarity và cấu trúc trong không gian dữ liệu là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m103_l3"
+      ],
+      "formulaIds": [
+        "f_norm_l2",
+        "f_dot_product",
+        "f_cosine_similarity"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m104_l1",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Bài tập kỳ thi về phân tích dữ liệu đa chiều",
+      "definition": "Bài e-learning chuyên sâu về Bài tập kỳ thi về phân tích dữ liệu đa chiều trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Bài tập kỳ thi về phân tích dữ liệu đa chiều là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m104_l1"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m104_l2",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Bài tập kỳ thi về phân tích dữ liệu đa chiều",
+      "definition": "Bài e-learning chuyên sâu về Bài tập kỳ thi về phân tích dữ liệu đa chiều trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Bài tập kỳ thi về phân tích dữ liệu đa chiều là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m104_l2"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m104_l3",
+      "subjectId": "math",
+      "stageId": "m1",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Bài tập kỳ thi về phân tích dữ liệu đa chiều",
+      "definition": "Bài e-learning chuyên sâu về Bài tập kỳ thi về phân tích dữ liệu đa chiều trong Bauman HK1: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Bài tập kỳ thi về phân tích dữ liệu đa chiều là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m104_l3"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m301_l1",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Lý thuyết chuỗi thời gian cho dữ liệu cảm biến",
+      "definition": "Bài e-learning chuyên sâu về Lý thuyết chuỗi thời gian cho dữ liệu cảm biến trong Bauman HK3: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Lý thuyết chuỗi thời gian cho dữ liệu cảm biến là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m301_l1"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m301_l2",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Lý thuyết chuỗi thời gian cho dữ liệu cảm biến",
+      "definition": "Bài e-learning chuyên sâu về Lý thuyết chuỗi thời gian cho dữ liệu cảm biến trong Bauman HK3: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Lý thuyết chuỗi thời gian cho dữ liệu cảm biến là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m301_l2"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m301_l3",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Lý thuyết chuỗi thời gian cho dữ liệu cảm biến",
+      "definition": "Bài e-learning chuyên sâu về Lý thuyết chuỗi thời gian cho dữ liệu cảm biến trong Bauman HK3: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Lý thuyết chuỗi thời gian cho dữ liệu cảm biến là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m301_l3"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m302_l1",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Metric dự báo và đánh giá sai số chuỗi thời gian",
+      "definition": "Bài e-learning chuyên sâu về Metric dự báo và đánh giá sai số chuỗi thời gian trong Bauman HK3: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Metric dự báo và đánh giá sai số chuỗi thời gian là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m302_l1"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m302_l2",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Metric dự báo và đánh giá sai số chuỗi thời gian",
+      "definition": "Bài e-learning chuyên sâu về Metric dự báo và đánh giá sai số chuỗi thời gian trong Bauman HK3: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Metric dự báo và đánh giá sai số chuỗi thời gian là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m302_l2"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m302_l3",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Metric dự báo và đánh giá sai số chuỗi thời gian",
+      "definition": "Bài e-learning chuyên sâu về Metric dự báo và đánh giá sai số chuỗi thời gian trong Bauman HK3: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Metric dự báo và đánh giá sai số chuỗi thời gian là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m302_l3"
+      ],
+      "formulaIds": [
+        "f_time_series_decomposition",
+        "f_moving_average",
+        "f_autocorrelation"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m303_l1",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Cơ sở toán học của phát hiện bất thường",
+      "definition": "Bài e-learning chuyên sâu về Cơ sở toán học của phát hiện bất thường trong Bauman HK3: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Cơ sở toán học của phát hiện bất thường là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m303_l1"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m303_l2",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Cơ sở toán học của phát hiện bất thường",
+      "definition": "Bài e-learning chuyên sâu về Cơ sở toán học của phát hiện bất thường trong Bauman HK3: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Cơ sở toán học của phát hiện bất thường là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m303_l2"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m303_l3",
+      "subjectId": "math",
+      "stageId": "m3",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Cơ sở toán học của phát hiện bất thường",
+      "definition": "Bài e-learning chuyên sâu về Cơ sở toán học của phát hiện bất thường trong Bauman HK3: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Cơ sở toán học của phát hiện bất thường là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m303_l3"
+      ],
+      "formulaIds": [
+        "f_sum",
+        "f_implication",
+        "f_function"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m401_l1",
+      "subjectId": "math",
+      "stageId": "m4",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Khái niệm cốt lõi · Toán cho bảng kết quả, metric và diễn giải luận văn",
+      "definition": "Bài e-learning chuyên sâu về Toán cho bảng kết quả, metric và diễn giải luận văn trong Bauman HK4/ВКР: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Toán cho bảng kết quả, metric và diễn giải luận văn là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m401_l1"
+      ],
+      "formulaIds": [
+        "f_rmse",
+        "f_confidence_interval",
+        "f_effect_size"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m401_l2",
+      "subjectId": "math",
+      "stageId": "m4",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Bài tập và mô phỏng · Toán cho bảng kết quả, metric và diễn giải luận văn",
+      "definition": "Bài e-learning chuyên sâu về Toán cho bảng kết quả, metric và diễn giải luận văn trong Bauman HK4/ВКР: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Toán cho bảng kết quả, metric và diễn giải luận văn là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m401_l2"
+      ],
+      "formulaIds": [
+        "f_rmse",
+        "f_confidence_interval",
+        "f_effect_size"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_ki_k_m_m401_l3",
+      "subjectId": "math",
+      "stageId": "m4",
+      "partId": 1,
+      "moduleId": null,
+      "title": "Ứng dụng Bauman, НИР/ВКР · Toán cho bảng kết quả, metric và diễn giải luận văn",
+      "definition": "Bài e-learning chuyên sâu về Toán cho bảng kết quả, metric và diễn giải luận văn trong Bauman HK4/ВКР: lý thuyết cốt lõi, dẫn chứng cụ thể, ví dụ có lời giải, mô phỏng, bài tập và kiểm tra. Toán cho bảng kết quả, metric và diễn giải luận văn là mắt xích trong lộ trình Bauman: ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI ký hiệu toán → hình học/thống kê → tính tay → kiểm tra số → ứng dụng AI Liên hệ trực tiếp với Toán cho AI, dữ liệu đa chiều và chuỗi thời gian, dữ liệu đa chiều và chuỗi thời gian, học phần chính khóa, НИР/ВКР và năng lực đọc tài liệu kỹ thuật.",
+      "role": "lesson",
+      "applications": [
+        "Ôn tập có định hướng",
+        "Kiểm tra concept yếu"
+      ],
+      "examTags": [
+        "math_ki_k_m_m401_l3"
+      ],
+      "formulaIds": [
+        "f_rmse",
+        "f_confidence_interval",
+        "f_effect_size"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m402_core",
+      "subjectId": "math",
+      "stageId": "m4",
+      "partId": 2,
+      "moduleId": "m_m402",
+      "title": "Mô hình hóa toán học cho dữ liệu luận văn",
+      "definition": "Chuyển bài toán luận văn thành biến, giả thiết, công thức, metric và phạm vi kiểm chứng rõ ràng.",
+      "role": "Concept lõi HK4 dùng để nối bài học, ôn tập, kiểm tra và phụ lục luận văn.",
+      "applications": [
+        "НИР/ВКР",
+        "bảng kết quả",
+        "phản biện bảo vệ",
+        "AI/Signal/System evaluation"
+      ],
+      "examTags": [
+        "m_m402_core",
+        "thesis_math",
+        "probability_statistics"
+      ],
+      "remediationLessonIds": [
+        "m_m402_l1",
+        "m_m402_l2",
+        "m_m402_l3"
+      ],
+      "formulaIds": [
+        "f_rmse",
+        "f_confidence_interval",
+        "f_effect_size"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m403_core",
+      "subjectId": "math",
+      "stageId": "m4",
+      "partId": 3,
+      "moduleId": "m_m403",
+      "title": "Phân tích kết quả, sai số và độ tin cậy mô hình",
+      "definition": "Biết đọc kết quả, so sánh mô hình, phát hiện sai lệch và biện luận bằng số liệu.",
+      "role": "Concept lõi HK4 dùng để nối bài học, ôn tập, kiểm tra và phụ lục luận văn.",
+      "applications": [
+        "НИР/ВКР",
+        "bảng kết quả",
+        "phản biện bảo vệ",
+        "AI/Signal/System evaluation"
+      ],
+      "examTags": [
+        "m_m403_core",
+        "thesis_math",
+        "optimization"
+      ],
+      "remediationLessonIds": [
+        "m_m403_l1",
+        "m_m403_l2",
+        "m_m403_l3"
+      ],
+      "formulaIds": [
+        "f_expectation",
+        "f_variance",
+        "f_confidence_interval"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    },
+    {
+      "id": "math_m_m404_core",
+      "subjectId": "math",
+      "stageId": "m4",
+      "partId": 4,
+      "moduleId": "m_m404",
+      "title": "Phụ lục công thức và lập luận bảo vệ luận văn",
+      "definition": "Chuẩn bị bộ công thức, sơ đồ lập luận và câu trả lời phản biện liên quan Toán trong bảo vệ.",
+      "role": "Concept lõi HK4 dùng để nối bài học, ôn tập, kiểm tra và phụ lục luận văn.",
+      "applications": [
+        "НИР/ВКР",
+        "bảng kết quả",
+        "phản biện bảo vệ",
+        "AI/Signal/System evaluation"
+      ],
+      "examTags": [
+        "m_m404_core",
+        "thesis_math",
+        "ai_signal_research_math"
+      ],
+      "remediationLessonIds": [
+        "m_m404_l1",
+        "m_m404_l2",
+        "m_m404_l3"
+      ],
+      "formulaIds": [
+        "f_rmse",
+        "f_confidence_interval",
+        "f_effect_size"
+      ],
+      "prerequisites": [
+        "Đọc được ký hiệu cơ bản",
+        "Biết xác định biến, giả thiết và kết luận"
+      ],
+      "commonMisconceptions": [
+        "Nhìn thấy từ khóa là dùng công thức ngay.",
+        "Tính xong nhưng không diễn giải.",
+        "Quên chiều dữ liệu hoặc đơn vị."
+      ],
+      "masteryEvidence": [
+        "Giải thích bằng lời",
+        "Làm được ví dụ số",
+        "Chỉ ra được lỗi sai thường gặp",
+        "Liên hệ với một bài toán ứng dụng"
+      ],
+      "l4Status": "linked_to_formulas_and_mistakes"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "version": "MathContentSystem Final V32",
+  "createdAt": "2026-06-16",
+  "sourceBase": "A2_Math_Bauman_Elearning_INFO_FacultyDeptTheoryNav_V31.zip",
+  "rules": "Step 15-16: tested using Matrix chapter resources and exported final package.",
+  "counts": {
+    "lessons": 159,
+    "slides": 1272,
+    "concepts": 114,
+    "formulas": 159,
+    "exercises": 318,
+    "applications": 159,
+    "simulations": 159,
+    "professorQa": 159,
+    "questions": 477,
+    "testBlueprints": 21,
+    "reviewPacks": 159,
+    "masterySkills": 159,
+    "mindmaps": 5,
+    "contentIndex": 159
+  },
+  "matrixChapterTest": {
+    "chapter": "Chương 2 · Ma trận, hệ tuyến tính và biến đổi dữ liệu",
+    "lessons": 9,
+    "resourceLoop": [
+      "lessons",
+      "formulas",
+      "exercises",
+      "applications",
+      "simulations",
+      "professor_qa",
+      "mindmap",
+      "question_bank",
+      "review_packs",
+      "mastery-map"
+    ]
+  },
+  "notes": [
+    "Dữ liệu tách file nhưng liên kết bằng lessonId, conceptIds, skillIds.",
+    "Tab Lý thuyết chỉ đọc lessons.json; bài tập/ứng dụng/vấn đáp/kiểm tra/ôn tập tách slot riêng.",
+    "Data Manager đã có nền slot import từ V28 và được bổ sung manifest/slot metadata trong V32.",
+    "Nội dung toàn môn ở mức khung + slide PDF-style; chương Ma trận có nội dung kiểm thử chi tiết hơn."
+  ]
+}

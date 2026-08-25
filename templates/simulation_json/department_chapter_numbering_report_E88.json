@@ -1,0 +1,425 @@
+{
+  "type": "bauman_math_department_sequential_chapter_numbering_report",
+  "version": "E88",
+  "policy": "Each faculty/department displays chapters as local Chương 1..n. Stable technical IDs keep their original Cxx codes. Original global numbers are preserved as globalChapterNo/globalChapterTitle.",
+  "summary": {
+    "groups": 27,
+    "chapters": 32,
+    "sequentialErrors": []
+  },
+  "groups": [
+    {
+      "stage": "hk1",
+      "facultyTitle": "Khoa Toán lõi Bauman",
+      "departmentTitle": "Bộ môn Bài toán phân tích dữ liệu đa chiều",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK1-MT-C17",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Bài toán kỳ thi phân tích dữ liệu đa chiều",
+          "globalChapterNo": 17,
+          "globalChapterTitle": "Chương 17 · Bài toán kỳ thi phân tích dữ liệu đa chiều"
+        }
+      ]
+    },
+    {
+      "stage": "hk1",
+      "facultyTitle": "Khoa Toán lõi Bauman",
+      "departmentTitle": "Bộ môn Toán dữ liệu đa chiều & clustering",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK1-MT-C16",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Clustering, similarity và cấu trúc không gian dữ liệu",
+          "globalChapterNo": 16,
+          "globalChapterTitle": "Chương 16 · Clustering, similarity và cấu trúc không gian dữ liệu"
+        }
+      ]
+    },
+    {
+      "stage": "hk1",
+      "facultyTitle": "Khoa Toán lõi Bauman",
+      "departmentTitle": "Bộ môn Toán dữ liệu đa chiều & pipeline AI",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK1-MT-C14",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Nền tảng phân tích dữ liệu đa chiều",
+          "globalChapterNo": 14,
+          "globalChapterTitle": "Chương 14 · Nền tảng phân tích dữ liệu đa chiều"
+        }
+      ]
+    },
+    {
+      "stage": "hk1",
+      "facultyTitle": "Khoa Toán lõi Bauman",
+      "departmentTitle": "Bộ môn Đại số tuyến tính & biểu diễn dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK1-LA-C15",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · PCA, SVD và trực quan hóa không gian đặc trưng",
+          "globalChapterNo": 15,
+          "globalChapterTitle": "Chương 15 · PCA, SVD và trực quan hóa không gian đặc trưng"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Bất định, an toàn và đánh giá rủi ro AI",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-RISK-C29",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Bất định, calibration và đánh giá rủi ro cho hệ AI tự hành",
+          "globalChapterNo": 29,
+          "globalChapterTitle": "Chương 29 · Bất định, calibration và đánh giá rủi ro cho hệ AI tự hành"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Mô hình dự báo chuỗi thời gian",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-TS-C20",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · AR, MA, ARIMA và dự báo chuỗi thời gian",
+          "globalChapterNo": 20,
+          "globalChapterTitle": "Chương 20 · AR, MA, ARIMA và dự báo chuỗi thời gian"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Nhận dạng hệ thống và mô hình dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-ID-C24",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Nhận dạng hệ thống, least squares và mô hình hồi quy động học",
+          "globalChapterNo": 24,
+          "globalChapterTitle": "Chương 24 · Nhận dạng hệ thống, least squares và mô hình hồi quy động học"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Phân tích phổ & lọc tín hiệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-SIG-C21",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Fourier, lọc số và phân tích phổ tín hiệu cảm biến",
+          "globalChapterNo": 21,
+          "globalChapterTitle": "Chương 21 · Fourier, lọc số và phân tích phổ tín hiệu cảm biến"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Robust AI, anomaly detection và an toàn hệ kỹ thuật",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-ROBUST-C30",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Robustness, anomaly detection và kiểm soát rủi ro ngoại lai cho hệ AI kỹ thuật",
+          "globalChapterNo": 30,
+          "globalChapterTitle": "Chương 30 · Robustness, anomaly detection và kiểm soát rủi ro ngoại lai cho hệ AI kỹ thuật"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Thiết kế thí nghiệm và kiểm định kết quả",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-NIR-C26",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Thiết kế thí nghiệm, ablation và độ tin cậy kết quả НИР",
+          "globalChapterNo": 26,
+          "globalChapterTitle": "Chương 26 · Thiết kế thí nghiệm, ablation và độ tin cậy kết quả НИР"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Tín hiệu & chuỗi thời gian",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-TS-C18",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Lý thuyết chuỗi thời gian cho dữ liệu cảm biến",
+          "globalChapterNo": 18,
+          "globalChapterTitle": "Chương 18 · Lý thuyết chuỗi thời gian cho dữ liệu cảm biến"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Tín hiệu, thời-tần và dữ liệu cảm biến",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-SIG-C22",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Wavelet, lọc thích nghi và phân tích thời-tần cho tín hiệu không dừng",
+          "globalChapterNo": 22,
+          "globalChapterTitle": "Chương 22 · Wavelet, lọc thích nghi và phân tích thời-tần cho tín hiệu không dừng"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Tối ưu hóa số và mạng nơ-ron kỹ thuật",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-NNOPT-C28",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Tối ưu hóa số, gradient descent và backpropagation cho mô hình AI kỹ thuật",
+          "globalChapterNo": 28,
+          "globalChapterTitle": "Chương 28 · Tối ưu hóa số, gradient descent và backpropagation cho mô hình AI kỹ thuật"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Tối ưu, ràng buộc và điều khiển dự báo",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-OPT-C25",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Tối ưu có ràng buộc, Lagrange-KKT và MPC nhập môn cho hệ tự hành",
+          "globalChapterNo": 25,
+          "globalChapterTitle": "Chương 25 · Tối ưu có ràng buộc, Lagrange-KKT và MPC nhập môn cho hệ tự hành"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Đánh giá mô hình dự báo",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-TS-C19",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Sai số dự báo, đánh giá mô hình và cross-validation theo thời gian",
+          "globalChapterNo": 19,
+          "globalChapterTitle": "Chương 19 · Sai số dự báo, đánh giá mô hình và cross-validation theo thời gian"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Đồ thị, mạng cảm biến và đa tác tử",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-GRAPH-C27",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Đồ thị, Laplacian và điều phối đa tác tử cho hệ tự hành",
+          "globalChapterNo": 27,
+          "globalChapterTitle": "Chương 27 · Đồ thị, Laplacian và điều phối đa tác tử cho hệ tự hành"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР",
+      "departmentTitle": "Bộ môn Ước lượng trạng thái và sensor fusion",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-EST-C23",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Không gian trạng thái, Kalman filter và sensor fusion nhập môn",
+          "globalChapterNo": 23,
+          "globalChapterTitle": "Chương 23 · Không gian trạng thái, Kalman filter và sensor fusion nhập môn"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Toán nghiên cứu НИР/ВКР",
+      "departmentTitle": "Bộ môn Mô hình hóa toán học, mô phỏng số và báo cáo luận văn",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-VKR-C31",
+          "departmentChapterNo": 2,
+          "chapterTitle": "Chương 1 · Mô hình hóa toán học, mô phỏng số và trình bày kết quả НИР/ВКР",
+          "globalChapterNo": 31,
+          "globalChapterTitle": "Chương 31 · Mô hình hóa toán học, mô phỏng số và trình bày kết quả НИР/ВКР"
+        }
+      ]
+    },
+    {
+      "stage": "hk3",
+      "facultyTitle": "Khoa Tổng hợp Toán ứng dụng cho AI kỹ thuật",
+      "departmentTitle": "Bộ môn Kiểm định mô hình, báo cáo khoa học và bảo vệ ВКР",
+      "chapters": [
+        {
+          "chapterId": "MATH-HK3-FINAL-C32",
+          "departmentChapterNo": 3,
+          "chapterTitle": "Chương 1 · Tổng kết môn Toán: từ mô hình toán đến bảo vệ НИР/ВКР",
+          "globalChapterNo": 32,
+          "globalChapterTitle": "Chương 32 · Tổng kết môn Toán: từ mô hình toán đến bảo vệ НИР/ВКР"
+        }
+      ]
+    },
+    {
+      "stage": "prep",
+      "facultyTitle": "Khoa Toán dự bị Nga/STANKIN",
+      "departmentTitle": "Bộ môn Thuật ngữ Toán Nga & trình bày lời giải",
+      "chapters": [
+        {
+          "chapterId": "MATH-PREP-MT-C09",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật",
+          "globalChapterNo": 9,
+          "globalChapterTitle": "Chương 9 · Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật"
+        }
+      ]
+    },
+    {
+      "stage": "prep",
+      "facultyTitle": "Khoa Toán dự bị Nga/STANKIN",
+      "departmentTitle": "Bộ môn Toán nền tảng",
+      "chapters": [
+        {
+          "chapterId": "MATH-PREP-MT-C12",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Toán cho dữ liệu đa chiều trong hệ thống AI",
+          "globalChapterNo": 12,
+          "globalChapterTitle": "Chương 12 · Toán cho dữ liệu đa chiều trong hệ thống AI"
+        }
+      ]
+    },
+    {
+      "stage": "prep",
+      "facultyTitle": "Khoa Toán dự bị Nga/STANKIN",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-PREP-PS-C11",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Xác suất - thống kê bằng tiếng Nga",
+          "globalChapterNo": 11,
+          "globalChapterTitle": "Chương 11 · Xác suất - thống kê bằng tiếng Nga"
+        },
+        {
+          "chapterId": "MATH-PREP-PS-C13",
+          "departmentChapterNo": 2,
+          "chapterTitle": "Chương 2 · Tổng hợp dự bị: đại số, xác suất và thống kê",
+          "globalChapterNo": 13,
+          "globalChapterTitle": "Chương 13 · Tổng hợp dự bị: đại số, xác suất và thống kê"
+        }
+      ]
+    },
+    {
+      "stage": "prep",
+      "facultyTitle": "Khoa Toán dự bị Nga/STANKIN",
+      "departmentTitle": "Bộ môn Đại số tuyến tính Nga & bài toán kỹ thuật",
+      "chapters": [
+        {
+          "chapterId": "MATH-PREP-LA-C10",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Đại số tuyến tính bằng tiếng Nga",
+          "globalChapterNo": 10,
+          "globalChapterTitle": "Chương 10 · Đại số tuyến tính bằng tiếng Nga"
+        }
+      ]
+    },
+    {
+      "stage": "vn",
+      "facultyTitle": "Khoa Toán nền tảng tại Việt Nam",
+      "departmentTitle": "Bộ môn Giải tích & tối ưu hóa",
+      "chapters": [
+        {
+          "chapterId": "MATH-VN-CA-C03",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Đạo hàm, gradient và tối ưu hóa mô hình",
+          "globalChapterNo": 3,
+          "globalChapterTitle": "Chương 3 · Đạo hàm, gradient và tối ưu hóa mô hình"
+        }
+      ]
+    },
+    {
+      "stage": "vn",
+      "facultyTitle": "Khoa Toán nền tảng tại Việt Nam",
+      "departmentTitle": "Bộ môn Tín hiệu & chuỗi thời gian",
+      "chapters": [
+        {
+          "chapterId": "MATH-VN-TS-C08",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Chuỗi thời gian nhập môn",
+          "globalChapterNo": 8,
+          "globalChapterTitle": "Chương 8 · Chuỗi thời gian nhập môn"
+        }
+      ]
+    },
+    {
+      "stage": "vn",
+      "facultyTitle": "Khoa Toán nền tảng tại Việt Nam",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-VN-PS-C04",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Xác suất cơ bản, Bayes và suy luận bất định",
+          "globalChapterNo": 4,
+          "globalChapterTitle": "Chương 4 · Xác suất cơ bản, Bayes và suy luận bất định"
+        },
+        {
+          "chapterId": "MATH-VN-PS-C05",
+          "departmentChapterNo": 2,
+          "chapterTitle": "Chương 2 · Biến ngẫu nhiên, kỳ vọng và phương sai",
+          "globalChapterNo": 5,
+          "globalChapterTitle": "Chương 5 · Biến ngẫu nhiên, kỳ vọng và phương sai"
+        },
+        {
+          "chapterId": "MATH-VN-PS-C06",
+          "departmentChapterNo": 3,
+          "chapterTitle": "Chương 3 · Thống kê mô tả, khoảng tin cậy và đánh giá mẫu",
+          "globalChapterNo": 6,
+          "globalChapterTitle": "Chương 6 · Thống kê mô tả, khoảng tin cậy và đánh giá mẫu"
+        }
+      ]
+    },
+    {
+      "stage": "vn",
+      "facultyTitle": "Khoa Toán nền tảng tại Việt Nam",
+      "departmentTitle": "Bộ môn Đại số tuyến tính & biểu diễn dữ liệu",
+      "chapters": [
+        {
+          "chapterId": "MATH-VN-LA-C01",
+          "departmentChapterNo": 1,
+          "chapterTitle": "Chương 1 · Vector trong không gian dữ liệu",
+          "globalChapterNo": 1,
+          "globalChapterTitle": "Chương 1 · Vector trong không gian dữ liệu"
+        },
+        {
+          "chapterId": "MATH-VN-LA-C02",
+          "departmentChapterNo": 2,
+          "chapterTitle": "Chương 2 · Ma trận, hệ tuyến tính và biến đổi dữ liệu",
+          "globalChapterNo": 2,
+          "globalChapterTitle": "Chương 2 · Ma trận, hệ tuyến tính và biến đổi dữ liệu"
+        },
+        {
+          "chapterId": "MATH-VN-LA-C07",
+          "departmentChapterNo": 3,
+          "chapterTitle": "Chương 3 · Hiệp phương sai, tương quan và PCA nhập môn",
+          "globalChapterNo": 7,
+          "globalChapterTitle": "Chương 7 · Hiệp phương sai, tương quan và PCA nhập môn"
+        }
+      ]
+    }
+  ]
+}

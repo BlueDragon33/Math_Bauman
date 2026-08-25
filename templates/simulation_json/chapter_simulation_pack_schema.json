@@ -1,0 +1,296 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bauman_math_unified_sim_chapter_pack.schema.json",
+  "title": "Bauman Math Unified Simulation Chapter Pack",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "subject",
+    "runtimeTarget",
+    "mergePolicy",
+    "chapter",
+    "miniLessons"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "BAUMAN_MATH_UNIFIED_SIM_CHAPTER_PACK_V1"
+    },
+    "status": {
+      "type": "string"
+    },
+    "subject": {
+      "const": "math"
+    },
+    "runtimeTarget": {
+      "type": "string"
+    },
+    "mergePolicy": {
+      "type": "object",
+      "required": [
+        "key",
+        "mode",
+        "oneSimulationPerLesson",
+        "noSplitButtons",
+        "requiredRuntimeFile"
+      ],
+      "properties": {
+        "key": {
+          "const": "lessonId"
+        },
+        "mode": {
+          "enum": [
+            "replace_or_insert",
+            "replace_only",
+            "insert_only"
+          ]
+        },
+        "oneSimulationPerLesson": {
+          "const": true
+        },
+        "noSplitButtons": {
+          "const": true
+        },
+        "requiredRuntimeFile": {
+          "const": "simulations/unified_lab.html"
+        }
+      }
+    },
+    "chapter": {
+      "type": "object",
+      "required": [
+        "stage",
+        "chapterNo",
+        "chapterId",
+        "chapterTitle",
+        "chapterLearningGoal",
+        "chapterSimulationTheme"
+      ],
+      "properties": {
+        "stage": {
+          "type": "string"
+        },
+        "chapterNo": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "chapterId": {
+          "type": "string"
+        },
+        "chapterTitle": {
+          "type": "string"
+        },
+        "department": {
+          "type": "string"
+        },
+        "chapterLearningGoal": {
+          "type": "string"
+        },
+        "chapterSimulationTheme": {
+          "type": "string"
+        },
+        "chapterOutputContract": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "miniLessons": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "lessonNo",
+          "lessonId",
+          "lessonTitle",
+          "coreQuestion",
+          "simulation"
+        ],
+        "properties": {
+          "lessonNo": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "lessonId": {
+            "type": "string"
+          },
+          "lessonTitle": {
+            "type": "string"
+          },
+          "coreQuestion": {
+            "type": "string"
+          },
+          "prerequisites": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "coreConcepts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mustUnderstand": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "simulation": {
+            "type": "object",
+            "required": [
+              "id",
+              "type",
+              "simKind",
+              "kind",
+              "mode",
+              "file",
+              "title",
+              "purpose",
+              "realUse",
+              "formula",
+              "visualProfile",
+              "visualBoard",
+              "controls",
+              "computedReadouts",
+              "scenarios",
+              "runProtocol",
+              "expectedOutputs",
+              "decisionRule",
+              "commonMisreadings",
+              "reportTemplate"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "const": "unified"
+              },
+              "simKind": {
+                "const": "unified"
+              },
+              "kind": {
+                "const": "unified"
+              },
+              "mode": {
+                "const": "unified"
+              },
+              "file": {
+                "const": "simulations/unified_lab.html"
+              },
+              "title": {
+                "type": "string"
+              },
+              "purpose": {
+                "type": "string"
+              },
+              "realUse": {
+                "type": "string"
+              },
+              "formula": {
+                "type": "string"
+              },
+              "formulaRole": {
+                "type": "string"
+              },
+              "visualProfile": {
+                "type": "string"
+              },
+              "visualBoard": {
+                "type": "object"
+              },
+              "controls": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "key",
+                    "label",
+                    "min",
+                    "max",
+                    "step",
+                    "default",
+                    "role"
+                  ]
+                }
+              },
+              "computedReadouts": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "key",
+                    "label",
+                    "meaning"
+                  ]
+                }
+              },
+              "scenarios": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "setup",
+                    "task",
+                    "expected"
+                  ]
+                }
+              },
+              "runProtocol": {
+                "type": "array",
+                "minItems": 4,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "expectedOutputs": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "decisionRule": {
+                "type": "object",
+                "required": [
+                  "PASS",
+                  "REVIEW",
+                  "RISK"
+                ]
+              },
+              "commonMisreadings": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reportTemplate": {
+                "type": "array",
+                "minItems": 4,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "integrationHints": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "chapterNumberingPolicy": "chapterNo is local within the selected faculty/department; keep globalChapterNo only as optional reference",
+  "departmentTitle": "[Tên bộ môn/chuyên đề]",
+  "globalChapterNo": "[Tùy chọn: số chương toàn hệ cũ nếu có]"
+}

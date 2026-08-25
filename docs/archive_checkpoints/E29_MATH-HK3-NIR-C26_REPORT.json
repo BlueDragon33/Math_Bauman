@@ -1,0 +1,22 @@
+{
+  "checkpoint": "E29",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "mode": "FAST_BATCH",
+  "chapterId": "MATH-HK3-NIR-C26",
+  "chapterTitle": "Chương 26 · Thiết kế thí nghiệm, ablation và độ tin cậy kết quả НИР",
+  "stage": "hk3",
+  "counts": {
+    "lessons": 8,
+    "slides": 160,
+    "formulas": 24,
+    "exercises": 64,
+    "applications": 16,
+    "simulations": 16,
+    "professorQa": 8,
+    "questions": 48,
+    "reviewPacks": 8,
+    "vocabCards": 32
+  },
+  "focus": "Research question, ablation, uncertainty, significance, repeatability và báo cáo kết quả nghiên cứu",
+  "notFinal": true
+}

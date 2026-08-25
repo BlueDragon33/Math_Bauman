@@ -1,0 +1,19 @@
+{
+  "version": "V34 · Grouped Formula Tabs + Wider Theory Tree + Data Tab UX Fix",
+  "changes": [
+    "Tăng cột cây bài giảng của Tab Lý thuyết khoảng 1/3 kích thước so với V33.",
+    "Tab Công thức dùng formulas.json ưu tiên và gom theo Khoa → Bộ môn → Chương → mục nhỏ.",
+    "Tab Công thức sâu cũng gom theo chương, hiển thị công thức, điều kiện áp dụng, lỗi hay gặp và concept liên quan.",
+    "Sửa Tab Dữ liệu: storage-shelf-top chuyển sang 1 cột, không còn bóp tiêu đề Nguồn dữ liệu thành chữ dọc.",
+    "Giữ Data Import Manager và hệ content V32/V33."
+  ],
+  "patchedFiles": [
+    "subjects/math/assets/core.js",
+    "subjects/math/assets/math.css",
+    "subjects/math/assets/subject-adapter.js",
+    "subjects/_common_new_russian_ui_math_template/assets/core.js",
+    "subjects/_common_new_russian_ui_math_template/assets/math.css",
+    "subjects/_common_new_russian_ui_math_template/assets/subject-adapter.js"
+  ],
+  "createdAt": "2026-06-16"
+}

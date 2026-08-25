@@ -1,0 +1,109 @@
+{
+  "release": "C02_LEVEL_C_MANIFEST_E202",
+  "status": "DATA_READY_NOT_WIRED",
+  "chapterId": "c02",
+  "chapterTitle": "Chương 2 · Ma trận, phép biến đổi tuyến tính và dữ liệu",
+  "level": "C",
+  "runtimePolicy": {
+    "activeRuntime": false,
+    "stableEngine": [
+      "assets/theory_skin/theory-slideshow-E132.js",
+      "assets/theory_skin/theory-slideshow-E132-content-fix-E171.js"
+    ],
+    "doNotUse": [
+      "stacked runtime wrappers",
+      "post-render DOM mutation",
+      "MutationObserver visual decorators",
+      "hard slide cap at 16"
+    ],
+    "futureRendererRule": "Consume these data files through one stable renderer path only. Do not load a chapter pack that overrides E132."
+  },
+  "deckLengthPolicy": {
+    "minimumSlidesPerLesson": 16,
+    "isMinimumNotMaximum": true,
+    "recommendedDenseRange": "18-28",
+    "forbiddenPatterns": ["MAX_SLIDES=16", "slice(0,16)", "truncate to exactly 16 slides"]
+  },
+  "dataFiles": [
+    {
+      "path": "data/theory_slideshow_c02_level_c.json",
+      "lessons": [
+        {
+          "lessonId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L01-matrix-as-data-and-transform-e142",
+          "label": "Bài 2.1 · Ma trận như dữ liệu và phép biến đổi",
+          "slides": 20
+        },
+        {
+          "lessonId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L02-matrix-multiplication-pipeline-e142",
+          "label": "Bài 2.2 · Phép nhân ma trận và pipeline tuyến tính",
+          "slides": 20
+        }
+      ]
+    },
+    {
+      "path": "data/theory_slideshow_c02_level_c_part_2_3_6.json",
+      "lessons": [
+        {
+          "lessonId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L03-rank-column-space-independent-information-e142",
+          "label": "Bài 2.3 · Hạng ma trận, không gian cột và thông tin độc lập",
+          "slides": 18
+        },
+        {
+          "lessonId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L04-inverse-linear-system-solution-e143",
+          "label": "Bài 2.4 · Nghịch đảo, giải hệ và điều kiện tồn tại nghiệm",
+          "slides": 18
+        },
+        {
+          "lessonId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L05-linear-transform-geometry-data-e143",
+          "label": "Bài 2.5 · Phép biến đổi tuyến tính trong hình học và dữ liệu",
+          "slides": 18
+        },
+        {
+          "lessonId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L06-matrix-to-pca-linear-model-e143",
+          "label": "Bài 2.6 · Từ ma trận sang PCA và mô hình tuyến tính",
+          "slides": 18
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "totalLessons": 6,
+    "totalSlides": 112,
+    "visualKeys": [
+      "matrix_2x2_general",
+      "matrix_3x3_general",
+      "data_vs_operator",
+      "matmul_row_column",
+      "matmul_2x2_expanded",
+      "rank_core",
+      "column_space",
+      "null_space",
+      "inverse_2x2_formula",
+      "least_squares_projection",
+      "basis_images",
+      "rotation_geometry",
+      "projection_geometry",
+      "pca_data_matrix",
+      "covariance_matrix",
+      "svd_pca"
+    ],
+    "academicFocus": [
+      "matrix role and shape",
+      "row/column interpretation",
+      "matrix multiplication and pipeline order",
+      "rank and independent information",
+      "inverse, solve, consistency, stability",
+      "linear transform geometry",
+      "PCA, SVD, covariance, linear model"
+    ]
+  },
+  "nextSafeStep": {
+    "task": "Build one stable renderer path for C02 data consumption.",
+    "constraints": [
+      "Do not re-enable E190/E191/E192/E193/E195.",
+      "Do not add multiple overlay packs.",
+      "Do not mutate slide DOM after render.",
+      "Browser smoke is mandatory before PASS."
+    ]
+  }
+}

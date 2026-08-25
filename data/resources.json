@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": "mit_linear_algebra",
+      "title": "MIT Linear Algebra reference",
+      "type": "reference",
+      "note": "Dùng làm nguồn học thuật cho đại số tuyến tính."
+    },
+    {
+      "id": "synthetic_ugv_telemetry_table",
+      "title": "Synthetic UGV telemetry table",
+      "type": "dataset_template",
+      "note": "Bảng giả lập nhỏ cho vector feature, rolling mean, anomaly score và metric dự báo."
+    },
+    {
+      "id": "pca_projection_notebook_template",
+      "title": "PCA/projection notebook template",
+      "type": "notebook_template",
+      "note": "Khung notebook để nhập ma trận, chuẩn hóa dữ liệu, tính PCA/SVD và diễn giải kết quả."
+    },
+    {
+      "id": "bayes_sensor_noise_worksheet",
+      "title": "Bayes sensor noise worksheet",
+      "type": "worksheet",
+      "note": "Mẫu bài tính xác suất hậu nghiệm và khoảng tin cậy cho dữ liệu nhiễu."
+    },
+    {
+      "id": "thesis_metric_table_template",
+      "title": "Thesis metric table template",
+      "type": "report_template",
+      "note": "Bảng RMSE/MAE/F1/confidence interval và câu diễn giải dùng trong báo cáo luận văn."
+    }
+  ]
+}

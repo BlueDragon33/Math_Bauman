@@ -1,0 +1,22 @@
+{
+  "checkpoint": "E32",
+  "status": "FINAL PREP CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "mode": "FINAL_PREP_SINGLE_CHAPTER_PLUS_GLOBAL_QA",
+  "chapterId": "MATH-HK3-FINAL-C32",
+  "chapterTitle": "Chương 32 · Tổng kết môn Toán: từ mô hình toán đến bảo vệ НИР/ВКР",
+  "stage": "hk3",
+  "counts": {
+    "lessons": 8,
+    "slides": 160,
+    "formulas": 24,
+    "exercises": 64,
+    "applications": 16,
+    "simulations": 16,
+    "professorQa": 8,
+    "questions": 48,
+    "reviewPacks": 8,
+    "vocabCards": 32
+  },
+  "focus": "Khép vòng môn Toán bằng năng lực chuyển bài toán kỹ thuật thành mô hình toán, kiểm định giả thiết, báo cáo kết quả và trả lời phản biện bằng tiếng Nga kỹ thuật.",
+  "notFinal": true
+}

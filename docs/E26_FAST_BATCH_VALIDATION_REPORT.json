@@ -1,0 +1,73 @@
+{
+  "checkpoint": "E26",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "source": "A2_Math_Bauman_Elearning_E25_FAST_BATCH_CHECKPOINT_TEST_SNAPSHOT.zip",
+  "result": "FAIL",
+  "checks": {
+    "jsonParse": "PASS",
+    "jsSyntax": {
+      "assets/core.js": "PASS",
+      "assets/subject-adapter.js": "PASS",
+      "assets/math.js": "PASS",
+      "assets/planning-bridge.js": "PASS",
+      "subject-manifest.js": "PASS"
+    },
+    "noReplacementChar": "PASS",
+    "cyrillicPresent": "PASS",
+    "renderFormulaShim": "PASS",
+    "storageIndicator": "PASS",
+    "theoryMicroScrollLock": "PASS",
+    "zipIntegrity": "PASS"
+  },
+  "chapters": {
+    "MATH-HK3-TS-C20": {
+      "title": "Chương 20 · AR, MA, ARIMA và dự báo chuỗi thời gian",
+      "counts": {
+        "lessons": 9,
+        "slides": 180,
+        "formulas": 27,
+        "exercises": 72,
+        "applications": 18,
+        "simulations": 18,
+        "professorQa": 9,
+        "questions": 54,
+        "reviewPacks": 9,
+        "vocabCards": 36
+      },
+      "targetCounts": {
+        "FAIL_EXPECTED": {
+          "lessons": 8,
+          "slides": 160,
+          "formulas": 24,
+          "exercises": 64,
+          "applications": 16,
+          "simulations": 16,
+          "professorQa": 8,
+          "questions": 48,
+          "reviewPacks": 8,
+          "vocabCards": 32
+        }
+      },
+      "simulationsTheoryApplication": "PASS",
+      "questionToReview": "PASS"
+    },
+    "MATH-HK3-SIG-C21": {
+      "title": "Chương 21 · Fourier, lọc số và phân tích phổ tín hiệu cảm biến",
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "targetCounts": "PASS",
+      "simulationsTheoryApplication": "PASS",
+      "questionToReview": "PASS"
+    }
+  }
+}

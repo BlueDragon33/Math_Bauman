@@ -1,0 +1,22 @@
+{
+  "checkpoint": "E30",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "mode": "FAST_BATCH",
+  "chapterId": "MATH-HK3-RISK-C29",
+  "chapterTitle": "Chương 29 · Bất định, calibration và đánh giá rủi ro cho hệ AI tự hành",
+  "stage": "hk3",
+  "counts": {
+    "lessons": 8,
+    "slides": 160,
+    "formulas": 24,
+    "exercises": 64,
+    "applications": 16,
+    "simulations": 16,
+    "professorQa": 8,
+    "questions": 48,
+    "reviewPacks": 8,
+    "vocabCards": 32
+  },
+  "focus": "Aleatoric/epistemic uncertainty, calibration, Bayesian intuition, ensembles, robustness, OOD detection và risk-aware decision thresholds",
+  "notFinal": true
+}

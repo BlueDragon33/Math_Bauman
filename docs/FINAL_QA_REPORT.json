@@ -1,0 +1,36 @@
+{
+  "package": "A2_Math_Bauman_Elearning_FINAL",
+  "status": "FINAL",
+  "createdLocal": "2026-06-19",
+  "counts": {
+    "chapters": 32,
+    "lessons": 260,
+    "theorySlides": 4588,
+    "exercises": 1040,
+    "applications": 520,
+    "simulations": 520,
+    "formulas": 678,
+    "professorQa": 260,
+    "questionBank": 1423,
+    "reviewPacks": 260,
+    "vocab": 852
+  },
+  "audits": {
+    "jsonErrors": [],
+    "lessonsMissingFourExerciseLevels": [],
+    "qaMissingAnswers": [],
+    "appsNotTheoryDependent": [],
+    "appForbiddenExerciseFields": [],
+    "simMissingVisual": [],
+    "simUniqueKeys": 520,
+    "formulaMissingDeepMetadata": [],
+    "duplicateChapterLabels": [],
+    "duplicateLessonLabels": [],
+    "nonLastSlideSummaryBlocks": 0,
+    "lastSlideSummaryMissing": 0,
+    "jsSyntaxErrors": [],
+    "exerciseLevelPolicy": "PASS: each lesson has easy/medium/advanced/hard with Vietnamese labels Dễ/Trung bình/Nâng cao/Khó"
+  },
+  "result": "PASS",
+  "badAuditKeys": []
+}

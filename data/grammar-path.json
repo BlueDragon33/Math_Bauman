@@ -1,0 +1,3458 @@
+[
+  {
+    "id": "formula_M01",
+    "stage": "vn",
+    "lessonId": "M01",
+    "title": "Vector trong không gian dữ liệu",
+    "focus": "công thức/ký hiệu",
+    "rule": "<x,y>=Σxᵢyᵢ; ||x||₂=sqrt(Σxᵢ²); proj_u(x)=<x,u>/<u,u>·u\nÝ nghĩa: Vector trong không gian dữ liệu\nỨng dụng: cosine similarity, chuẩn hóa đặc trưng, cảm biến robot.",
+    "formula": "<x,y>=Σxᵢyᵢ; ||x||₂=sqrt(Σxᵢ²); proj_u(x)=<x,u>/<u,u>·u",
+    "meaning": "Vector trong không gian dữ liệu",
+    "example": "cosine similarity, chuẩn hóa đặc trưng, cảm biến robot",
+    "tags": [
+      "formula",
+      "math",
+      "vn"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "linear",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Vector trong không gian dữ liệu' được xem như một mô-đun kiểm định hệ thống: đo hình dạng không gian dữ liệu: chiều, hướng, khoảng cách, phép chiếu và mức mất thông tin trước khi đưa vào mô hình AI.",
+    "deepAssumptionGates": [
+      "Kích thước vector/ma trận khớp; phân biệt rõ hàng là mẫu hay đặc trưng.",
+      "Đơn vị đo và chuẩn hóa không làm lệch hình học của dữ liệu.",
+      "Rank, điều kiện khả nghịch hoặc tính trực giao được kiểm trước khi kết luận."
+    ],
+    "deepDerivationSketch": [
+      "Viết dữ liệu thành vector/ma trận.",
+      "Xác định phép biến đổi tuyến tính hoặc phép đo hình học.",
+      "Đọc output như tọa độ mới, khoảng cách, năng lượng hoặc sai số chiếu."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi scale từng feature và xem hướng/khoảng cách đổi bao nhiêu.",
+      "Thử nhiễu nhỏ ở input để kiểm độ ổn định của phép chiếu/nghiệm.",
+      "Theo dõi trị riêng, rank hoặc condition number khi dữ liệu gần phụ thuộc tuyến tính."
+    ],
+    "deepFailureModes": [
+      "Nhầm chiều ma trận làm phép nhân vẫn chạy nhưng ý nghĩa sai.",
+      "Dùng khoảng cách khi feature chưa chuẩn hóa.",
+      "Coi tương quan/hướng vector là nguyên nhân."
+    ],
+    "deepSystemPipeline": [
+      "Raw features → chuẩn hóa → vector/matrix.",
+      "Tính similarity/projection/decomposition.",
+      "Đọc metric sai số, độ ổn định và quyết định giữ/bỏ chiều."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Vector trong không gian dữ liệu' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M02",
+    "stage": "vn",
+    "lessonId": "M02",
+    "title": "Ma trận và hệ phương trình tuyến tính",
+    "focus": "công thức/ký hiệu",
+    "rule": "Ax=b; rank(A); A^{-1}A=I\nÝ nghĩa: Ma trận và hệ phương trình tuyến tính\nỨng dụng: giải hệ, dữ liệu đa biến, điều kiện khả nghịch.",
+    "formula": "Ax=b; rank(A); A^{-1}A=I",
+    "meaning": "Ma trận và hệ phương trình tuyến tính",
+    "example": "giải hệ, dữ liệu đa biến, điều kiện khả nghịch",
+    "tags": [
+      "formula",
+      "math",
+      "vn"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "linear",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Ma trận và hệ phương trình tuyến tính' được xem như một mô-đun kiểm định hệ thống: đo hình dạng không gian dữ liệu: chiều, hướng, khoảng cách, phép chiếu và mức mất thông tin trước khi đưa vào mô hình AI.",
+    "deepAssumptionGates": [
+      "Kích thước vector/ma trận khớp; phân biệt rõ hàng là mẫu hay đặc trưng.",
+      "Đơn vị đo và chuẩn hóa không làm lệch hình học của dữ liệu.",
+      "Rank, điều kiện khả nghịch hoặc tính trực giao được kiểm trước khi kết luận."
+    ],
+    "deepDerivationSketch": [
+      "Viết dữ liệu thành vector/ma trận.",
+      "Xác định phép biến đổi tuyến tính hoặc phép đo hình học.",
+      "Đọc output như tọa độ mới, khoảng cách, năng lượng hoặc sai số chiếu."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi scale từng feature và xem hướng/khoảng cách đổi bao nhiêu.",
+      "Thử nhiễu nhỏ ở input để kiểm độ ổn định của phép chiếu/nghiệm.",
+      "Theo dõi trị riêng, rank hoặc condition number khi dữ liệu gần phụ thuộc tuyến tính."
+    ],
+    "deepFailureModes": [
+      "Nhầm chiều ma trận làm phép nhân vẫn chạy nhưng ý nghĩa sai.",
+      "Dùng khoảng cách khi feature chưa chuẩn hóa.",
+      "Coi tương quan/hướng vector là nguyên nhân."
+    ],
+    "deepSystemPipeline": [
+      "Raw features → chuẩn hóa → vector/matrix.",
+      "Tính similarity/projection/decomposition.",
+      "Đọc metric sai số, độ ổn định và quyết định giữ/bỏ chiều."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Ma trận và hệ phương trình tuyến tính' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M03",
+    "stage": "vn",
+    "lessonId": "M03",
+    "title": "Đạo hàm và trực giác gradient",
+    "focus": "công thức/ký hiệu",
+    "rule": "f’(x)=lim(h→0)(f(x+h)-f(x))/h; ∇f=[∂f/∂xᵢ]\nÝ nghĩa: Đạo hàm và trực giác gradient\nỨng dụng: tối ưu loss, độ dốc mặt địa hình dữ liệu.",
+    "formula": "f’(x)=lim(h→0)(f(x+h)-f(x))/h; ∇f=[∂f/∂xᵢ]",
+    "meaning": "Đạo hàm và trực giác gradient",
+    "example": "tối ưu loss, độ dốc mặt địa hình dữ liệu",
+    "tags": [
+      "formula",
+      "math",
+      "vn"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "optimization",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Đạo hàm và trực giác gradient' được xem như một mô-đun kiểm định hệ thống: chọn tham số tốt nhất dưới ràng buộc bằng cách đọc gradient, điều kiện cực trị và cân bằng sai số - ổn định.",
+    "deepAssumptionGates": [
+      "Hàm mục tiêu, biến quyết định và ràng buộc được viết rõ.",
+      "Gradient/đạo hàm có ý nghĩa hoặc có xấp xỉ số ổn định.",
+      "Learning rate/step size không làm thuật toán dao động."
+    ],
+    "deepDerivationSketch": [
+      "Viết loss hoặc mục tiêu.",
+      "Tính gradient/điều kiện KKT/Lagrange nếu có ràng buộc.",
+      "Cập nhật tham số và kiểm hội tụ bằng metric."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay learning rate và quan sát overshoot/slow convergence.",
+      "Thử scale feature để kiểm gradient có lệch không.",
+      "So sánh nghiệm khi ràng buộc bị siết hoặc nới."
+    ],
+    "deepFailureModes": [
+      "Tối ưu loss nhưng phá ràng buộc kỹ thuật.",
+      "Nhầm local optimum với nghiệm toàn cục.",
+      "Không kiểm gradient exploding/vanishing."
+    ],
+    "deepSystemPipeline": [
+      "Define objective → constraints.",
+      "Gradient/update solver.",
+      "Convergence diagnostics → deploy with safety bound."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Đạo hàm và trực giác gradient' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống tối ưu số và điều kiện hội tụ, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M04",
+    "stage": "vn",
+    "lessonId": "M04",
+    "title": "Tích phân và diện tích dưới đường cong",
+    "focus": "công thức/ký hiệu",
+    "rule": "∫_a^b f(x)dx; E[X]=∫x p(x)dx\nÝ nghĩa: Tích phân và diện tích dưới đường cong\nỨng dụng: tổng năng lượng tín hiệu, kỳ vọng liên tục.",
+    "formula": "∫_a^b f(x)dx; E[X]=∫x p(x)dx",
+    "meaning": "Tích phân và diện tích dưới đường cong",
+    "example": "tổng năng lượng tín hiệu, kỳ vọng liên tục",
+    "tags": [
+      "formula",
+      "math",
+      "vn"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Tích phân và diện tích dưới đường cong' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Tích phân và diện tích dưới đường cong' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống phân tích phổ và lọc tín hiệu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M05",
+    "stage": "vn",
+    "lessonId": "M05",
+    "title": "Xác suất cơ bản và Bayes",
+    "focus": "công thức/ký hiệu",
+    "rule": "P(A|B)=P(A∩B)/P(B); P(A|B)=P(B|A)P(A)/P(B)\nÝ nghĩa: Xác suất cơ bản và Bayes\nỨng dụng: phân loại, cảm biến nhiễu, chẩn đoán lỗi.",
+    "formula": "P(A|B)=P(A∩B)/P(B); P(A|B)=P(B|A)P(A)/P(B)",
+    "meaning": "Xác suất cơ bản và Bayes",
+    "example": "phân loại, cảm biến nhiễu, chẩn đoán lỗi",
+    "tags": [
+      "formula",
+      "math",
+      "vn"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "probability",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Xác suất cơ bản và Bayes' được xem như một mô-đun kiểm định hệ thống: biến dữ liệu nhiễu thành phát biểu có độ tin cậy: xác suất, kỳ vọng, phương sai, kiểm định và rủi ro quyết định.",
+    "deepAssumptionGates": [
+      "Không gian mẫu, biến cố và đơn vị quan sát phải rõ.",
+      "Giả thiết độc lập, phân phối hoặc cỡ mẫu không được bỏ qua.",
+      "Không đọc p-value/xác suất như bằng chứng nhân quả tuyệt đối."
+    ],
+    "deepDerivationSketch": [
+      "Đặt biến ngẫu nhiên hoặc biến cố.",
+      "Viết đại lượng cần tính: xác suất, kỳ vọng, phương sai, khoảng tin cậy.",
+      "Diễn giải kết quả bằng ngưỡng quyết định và mức bất định."
+    ],
+    "deepSensitivityChecklist": [
+      "Thử thay đổi cỡ mẫu hoặc prior để xem kết luận có đảo chiều không.",
+      "So sánh metric trung bình với độ phân tán.",
+      "Kiểm tra outlier làm phương sai/độ tin cậy lệch ra sao."
+    ],
+    "deepFailureModes": [
+      "Nhầm độc lập với không tương quan.",
+      "Dùng phân phối không phù hợp với dữ liệu.",
+      "Lấy kết luận thống kê làm kết luận kỹ thuật khi chưa kiểm bối cảnh."
+    ],
+    "deepSystemPipeline": [
+      "Dữ liệu mẫu → thống kê mô tả.",
+      "Mô hình xác suất/kiểm định.",
+      "Kết luận kèm độ tin cậy, sai số và điều kiện."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Xác suất cơ bản và Bayes' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống bất định và quyết định thống kê, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M06",
+    "stage": "vn",
+    "lessonId": "M06",
+    "title": "Thống kê mô tả và sai số đo",
+    "focus": "công thức/ký hiệu",
+    "rule": "μ=Σxᵢ/n; σ²=Σ(xᵢ-μ)²/n\nÝ nghĩa: Thống kê mô tả và sai số đo\nỨng dụng: telemetry, đo lường, lọc nhiễu.",
+    "formula": "μ=Σxᵢ/n; σ²=Σ(xᵢ-μ)²/n",
+    "meaning": "Thống kê mô tả và sai số đo",
+    "example": "telemetry, đo lường, lọc nhiễu",
+    "tags": [
+      "formula",
+      "math",
+      "vn"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "probability",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Thống kê mô tả và sai số đo' được xem như một mô-đun kiểm định hệ thống: biến dữ liệu nhiễu thành phát biểu có độ tin cậy: xác suất, kỳ vọng, phương sai, kiểm định và rủi ro quyết định.",
+    "deepAssumptionGates": [
+      "Không gian mẫu, biến cố và đơn vị quan sát phải rõ.",
+      "Giả thiết độc lập, phân phối hoặc cỡ mẫu không được bỏ qua.",
+      "Không đọc p-value/xác suất như bằng chứng nhân quả tuyệt đối."
+    ],
+    "deepDerivationSketch": [
+      "Đặt biến ngẫu nhiên hoặc biến cố.",
+      "Viết đại lượng cần tính: xác suất, kỳ vọng, phương sai, khoảng tin cậy.",
+      "Diễn giải kết quả bằng ngưỡng quyết định và mức bất định."
+    ],
+    "deepSensitivityChecklist": [
+      "Thử thay đổi cỡ mẫu hoặc prior để xem kết luận có đảo chiều không.",
+      "So sánh metric trung bình với độ phân tán.",
+      "Kiểm tra outlier làm phương sai/độ tin cậy lệch ra sao."
+    ],
+    "deepFailureModes": [
+      "Nhầm độc lập với không tương quan.",
+      "Dùng phân phối không phù hợp với dữ liệu.",
+      "Lấy kết luận thống kê làm kết luận kỹ thuật khi chưa kiểm bối cảnh."
+    ],
+    "deepSystemPipeline": [
+      "Dữ liệu mẫu → thống kê mô tả.",
+      "Mô hình xác suất/kiểm định.",
+      "Kết luận kèm độ tin cậy, sai số và điều kiện."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Thống kê mô tả và sai số đo' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống phân tích phổ và lọc tín hiệu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M07",
+    "stage": "vn",
+    "lessonId": "M07",
+    "title": "Số phức và dao động",
+    "focus": "công thức/ký hiệu",
+    "rule": "e^{jθ}=cosθ+j sinθ; z=a+jb\nÝ nghĩa: Số phức và dao động\nỨng dụng: pha tín hiệu, đáp ứng dao động.",
+    "formula": "e^{jθ}=cosθ+j sinθ; z=a+jb",
+    "meaning": "Số phức và dao động",
+    "example": "pha tín hiệu, đáp ứng dao động",
+    "tags": [
+      "formula",
+      "math",
+      "vn"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Số phức và dao động' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Số phức và dao động' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống phân tích phổ và lọc tín hiệu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M08",
+    "stage": "vn",
+    "lessonId": "M08",
+    "title": "Python tính toán Toán",
+    "focus": "công thức/ký hiệu",
+    "rule": "A @ x; np.linalg.solve(A,b); np.gradient(f)\nÝ nghĩa: Python tính toán Toán\nỨng dụng: kiểm chứng lời giải, notebook học tập.",
+    "formula": "A @ x; np.linalg.solve(A,b); np.gradient(f)",
+    "meaning": "Python tính toán Toán",
+    "example": "kiểm chứng lời giải, notebook học tập",
+    "tags": [
+      "formula",
+      "math",
+      "vn"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "optimization",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Python tính toán Toán' được xem như một mô-đun kiểm định hệ thống: chọn tham số tốt nhất dưới ràng buộc bằng cách đọc gradient, điều kiện cực trị và cân bằng sai số - ổn định.",
+    "deepAssumptionGates": [
+      "Hàm mục tiêu, biến quyết định và ràng buộc được viết rõ.",
+      "Gradient/đạo hàm có ý nghĩa hoặc có xấp xỉ số ổn định.",
+      "Learning rate/step size không làm thuật toán dao động."
+    ],
+    "deepDerivationSketch": [
+      "Viết loss hoặc mục tiêu.",
+      "Tính gradient/điều kiện KKT/Lagrange nếu có ràng buộc.",
+      "Cập nhật tham số và kiểm hội tụ bằng metric."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay learning rate và quan sát overshoot/slow convergence.",
+      "Thử scale feature để kiểm gradient có lệch không.",
+      "So sánh nghiệm khi ràng buộc bị siết hoặc nới."
+    ],
+    "deepFailureModes": [
+      "Tối ưu loss nhưng phá ràng buộc kỹ thuật.",
+      "Nhầm local optimum với nghiệm toàn cục.",
+      "Không kiểm gradient exploding/vanishing."
+    ],
+    "deepSystemPipeline": [
+      "Define objective → constraints.",
+      "Gradient/update solver.",
+      "Convergence diagnostics → deploy with safety bound."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Python tính toán Toán' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống tối ưu số và điều kiện hội tụ, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M09",
+    "stage": "prep",
+    "lessonId": "M09",
+    "title": "Ký hiệu Toán Nga và cách đọc công thức",
+    "focus": "công thức/ký hiệu",
+    "rule": "пусть x∈R; доказать; найти\nÝ nghĩa: Ký hiệu Toán Nga và cách đọc công thức\nỨng dụng: đọc đề Nga, ghi bài và hỏi lại chính xác.",
+    "formula": "пусть x∈R; доказать; найти",
+    "meaning": "Ký hiệu Toán Nga và cách đọc công thức",
+    "example": "đọc đề Nga, ghi bài và hỏi lại chính xác",
+    "tags": [
+      "formula",
+      "math",
+      "prep"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "russian_math",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Ký hiệu Toán Nga và cách đọc công thức' được xem như một mô-đun kiểm định hệ thống: giúp đọc, nói và bảo vệ công thức bằng tiếng Nga: hiểu đề, nêu giả thiết, trình bày phép biến đổi và kết luận.",
+    "deepAssumptionGates": [
+      "Phân biệt дано, найти, доказать, вычислить.",
+      "Ký hiệu toán không bị dịch sai thành câu văn mơ hồ.",
+      "Trả lời được bằng câu ngắn: что означает, при каких условиях, какой результат."
+    ],
+    "deepDerivationSketch": [
+      "Đọc đề và gạch biến.",
+      "Nói công thức bằng cấu trúc tiếng Nga kỹ thuật.",
+      "Kết luận bằng output và điều kiện."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi thứ tự câu hỏi của giáo viên để kiểm hiểu thật.",
+      "Thử giải thích cùng công thức bằng Việt/Nga/Anh.",
+      "Nêu một lỗi sai thường gặp bằng tiếng Nga."
+    ],
+    "deepFailureModes": [
+      "Dịch từng từ nhưng mất vai trò toán học.",
+      "Không nêu điều kiện áp dụng.",
+      "Nhầm yêu cầu chứng minh với yêu cầu tính toán."
+    ],
+    "deepSystemPipeline": [
+      "Read problem → identify variables.",
+      "State formula in Russian.",
+      "Answer condition/output in seminar."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Ký hiệu Toán Nga và cách đọc công thức' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M10",
+    "stage": "prep",
+    "lessonId": "M10",
+    "title": "Hàm số, giới hạn và liên tục",
+    "focus": "công thức/ký hiệu",
+    "rule": "lim_{x→a} f(x)=L; ε-δ\nÝ nghĩa: Hàm số, giới hạn và liên tục\nỨng dụng: nền giải tích dự bị và mô hình hóa.",
+    "formula": "lim_{x→a} f(x)=L; ε-δ",
+    "meaning": "Hàm số, giới hạn và liên tục",
+    "example": "nền giải tích dự bị và mô hình hóa",
+    "tags": [
+      "formula",
+      "math",
+      "prep"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Hàm số, giới hạn và liên tục' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Hàm số, giới hạn và liên tục' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M11",
+    "stage": "prep",
+    "lessonId": "M11",
+    "title": "Chuỗi số và chuỗi hàm",
+    "focus": "công thức/ký hiệu",
+    "rule": "Σ a_n; |r|<1; Taylor\nÝ nghĩa: Chuỗi số và chuỗi hàm\nỨng dụng: xấp xỉ, phân tích sai số.",
+    "formula": "Σ a_n; |r|<1; Taylor",
+    "meaning": "Chuỗi số và chuỗi hàm",
+    "example": "xấp xỉ, phân tích sai số",
+    "tags": [
+      "formula",
+      "math",
+      "prep"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Chuỗi số và chuỗi hàm' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Chuỗi số và chuỗi hàm' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M12",
+    "stage": "prep",
+    "lessonId": "M12",
+    "title": "Phương trình vi phân thường",
+    "focus": "công thức/ký hiệu",
+    "rule": "dx/dt=f(x,t); x(t)=Ce^{at}\nÝ nghĩa: Phương trình vi phân thường\nỨng dụng: mô hình động lực học robot/cảm biến.",
+    "formula": "dx/dt=f(x,t); x(t)=Ce^{at}",
+    "meaning": "Phương trình vi phân thường",
+    "example": "mô hình động lực học robot/cảm biến",
+    "tags": [
+      "formula",
+      "math",
+      "prep"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Phương trình vi phân thường' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Phương trình vi phân thường' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M13",
+    "stage": "prep",
+    "lessonId": "M13",
+    "title": "Hình học giải tích và tọa độ",
+    "focus": "công thức/ký hiệu",
+    "rule": "x²+y²=r²; line: ax+by+c=0\nÝ nghĩa: Hình học giải tích và tọa độ\nỨng dụng: tọa độ, quỹ đạo, đồ thị.",
+    "formula": "x²+y²=r²; line: ax+by+c=0",
+    "meaning": "Hình học giải tích và tọa độ",
+    "example": "tọa độ, quỹ đạo, đồ thị",
+    "tags": [
+      "formula",
+      "math",
+      "prep"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Hình học giải tích và tọa độ' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Hình học giải tích và tọa độ' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hệ động lực, cảm biến và điều khiển, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M14",
+    "stage": "prep",
+    "lessonId": "M14",
+    "title": "Xác suất rời rạc và biến ngẫu nhiên",
+    "focus": "công thức/ký hiệu",
+    "rule": "E[X]; Var(X); Bernoulli, Normal\nÝ nghĩa: Xác suất rời rạc và biến ngẫu nhiên\nỨng dụng: bài toán xác suất trong kiểm tra và dữ liệu.",
+    "formula": "E[X]; Var(X); Bernoulli, Normal",
+    "meaning": "Xác suất rời rạc và biến ngẫu nhiên",
+    "example": "bài toán xác suất trong kiểm tra và dữ liệu",
+    "tags": [
+      "formula",
+      "math",
+      "prep"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "probability",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Xác suất rời rạc và biến ngẫu nhiên' được xem như một mô-đun kiểm định hệ thống: biến dữ liệu nhiễu thành phát biểu có độ tin cậy: xác suất, kỳ vọng, phương sai, kiểm định và rủi ro quyết định.",
+    "deepAssumptionGates": [
+      "Không gian mẫu, biến cố và đơn vị quan sát phải rõ.",
+      "Giả thiết độc lập, phân phối hoặc cỡ mẫu không được bỏ qua.",
+      "Không đọc p-value/xác suất như bằng chứng nhân quả tuyệt đối."
+    ],
+    "deepDerivationSketch": [
+      "Đặt biến ngẫu nhiên hoặc biến cố.",
+      "Viết đại lượng cần tính: xác suất, kỳ vọng, phương sai, khoảng tin cậy.",
+      "Diễn giải kết quả bằng ngưỡng quyết định và mức bất định."
+    ],
+    "deepSensitivityChecklist": [
+      "Thử thay đổi cỡ mẫu hoặc prior để xem kết luận có đảo chiều không.",
+      "So sánh metric trung bình với độ phân tán.",
+      "Kiểm tra outlier làm phương sai/độ tin cậy lệch ra sao."
+    ],
+    "deepFailureModes": [
+      "Nhầm độc lập với không tương quan.",
+      "Dùng phân phối không phù hợp với dữ liệu.",
+      "Lấy kết luận thống kê làm kết luận kỹ thuật khi chưa kiểm bối cảnh."
+    ],
+    "deepSystemPipeline": [
+      "Dữ liệu mẫu → thống kê mô tả.",
+      "Mô hình xác suất/kiểm định.",
+      "Kết luận kèm độ tin cậy, sai số và điều kiện."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Xác suất rời rạc và biến ngẫu nhiên' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống bất định và quyết định thống kê, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M15",
+    "stage": "prep",
+    "lessonId": "M15",
+    "title": "Logic chứng minh và phản ví dụ",
+    "focus": "công thức/ký hiệu",
+    "rule": "A⇒B; ∀x; ∃x\nÝ nghĩa: Logic chứng minh và phản ví dụ\nỨng dụng: trình bày lời giải chặt chẽ.",
+    "formula": "A⇒B; ∀x; ∃x",
+    "meaning": "Logic chứng minh và phản ví dụ",
+    "example": "trình bày lời giải chặt chẽ",
+    "tags": [
+      "formula",
+      "math",
+      "prep"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Logic chứng minh và phản ví dụ' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Logic chứng minh và phản ví dụ' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M16",
+    "stage": "prep",
+    "lessonId": "M16",
+    "title": "Bảng thuật ngữ Toán Nga-Việt-Anh",
+    "focus": "công thức/ký hiệu",
+    "rule": "определение, теорема, следствие\nÝ nghĩa: Bảng thuật ngữ Toán Nga-Việt-Anh\nỨng dụng: hỏi bài, đọc sách, làm bài kiểm tra dự bị.",
+    "formula": "определение, теорема, следствие",
+    "meaning": "Bảng thuật ngữ Toán Nga-Việt-Anh",
+    "example": "hỏi bài, đọc sách, làm bài kiểm tra dự bị",
+    "tags": [
+      "formula",
+      "math",
+      "prep"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "russian_math",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Bảng thuật ngữ Toán Nga-Việt-Anh' được xem như một mô-đun kiểm định hệ thống: giúp đọc, nói và bảo vệ công thức bằng tiếng Nga: hiểu đề, nêu giả thiết, trình bày phép biến đổi và kết luận.",
+    "deepAssumptionGates": [
+      "Phân biệt дано, найти, доказать, вычислить.",
+      "Ký hiệu toán không bị dịch sai thành câu văn mơ hồ.",
+      "Trả lời được bằng câu ngắn: что означает, при каких условиях, какой результат."
+    ],
+    "deepDerivationSketch": [
+      "Đọc đề và gạch biến.",
+      "Nói công thức bằng cấu trúc tiếng Nga kỹ thuật.",
+      "Kết luận bằng output và điều kiện."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi thứ tự câu hỏi của giáo viên để kiểm hiểu thật.",
+      "Thử giải thích cùng công thức bằng Việt/Nga/Anh.",
+      "Nêu một lỗi sai thường gặp bằng tiếng Nga."
+    ],
+    "deepFailureModes": [
+      "Dịch từng từ nhưng mất vai trò toán học.",
+      "Không nêu điều kiện áp dụng.",
+      "Nhầm yêu cầu chứng minh với yêu cầu tính toán."
+    ],
+    "deepSystemPipeline": [
+      "Read problem → identify variables.",
+      "State formula in Russian.",
+      "Answer condition/output in seminar."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Bảng thuật ngữ Toán Nga-Việt-Anh' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống đọc đề, ký hiệu và vấn đáp tiếng Nga, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M17",
+    "stage": "hk1",
+    "lessonId": "M17",
+    "title": "Không gian vector và cơ sở",
+    "focus": "công thức/ký hiệu",
+    "rule": "span(v₁,...,v_k); dim(V)\nÝ nghĩa: Không gian vector và cơ sở\nỨng dụng: giảm chiều, biểu diễn trạng thái.",
+    "formula": "span(v₁,...,v_k); dim(V)",
+    "meaning": "Không gian vector và cơ sở",
+    "example": "giảm chiều, biểu diễn trạng thái",
+    "tags": [
+      "formula",
+      "math",
+      "hk1"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "linear",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Không gian vector và cơ sở' được xem như một mô-đun kiểm định hệ thống: đo hình dạng không gian dữ liệu: chiều, hướng, khoảng cách, phép chiếu và mức mất thông tin trước khi đưa vào mô hình AI.",
+    "deepAssumptionGates": [
+      "Kích thước vector/ma trận khớp; phân biệt rõ hàng là mẫu hay đặc trưng.",
+      "Đơn vị đo và chuẩn hóa không làm lệch hình học của dữ liệu.",
+      "Rank, điều kiện khả nghịch hoặc tính trực giao được kiểm trước khi kết luận."
+    ],
+    "deepDerivationSketch": [
+      "Viết dữ liệu thành vector/ma trận.",
+      "Xác định phép biến đổi tuyến tính hoặc phép đo hình học.",
+      "Đọc output như tọa độ mới, khoảng cách, năng lượng hoặc sai số chiếu."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi scale từng feature và xem hướng/khoảng cách đổi bao nhiêu.",
+      "Thử nhiễu nhỏ ở input để kiểm độ ổn định của phép chiếu/nghiệm.",
+      "Theo dõi trị riêng, rank hoặc condition number khi dữ liệu gần phụ thuộc tuyến tính."
+    ],
+    "deepFailureModes": [
+      "Nhầm chiều ma trận làm phép nhân vẫn chạy nhưng ý nghĩa sai.",
+      "Dùng khoảng cách khi feature chưa chuẩn hóa.",
+      "Coi tương quan/hướng vector là nguyên nhân."
+    ],
+    "deepSystemPipeline": [
+      "Raw features → chuẩn hóa → vector/matrix.",
+      "Tính similarity/projection/decomposition.",
+      "Đọc metric sai số, độ ổn định và quyết định giữ/bỏ chiều."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Không gian vector và cơ sở' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hệ động lực, cảm biến và điều khiển, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M18",
+    "stage": "hk1",
+    "lessonId": "M18",
+    "title": "Trị riêng, vector riêng và chéo hóa",
+    "focus": "công thức/ký hiệu",
+    "rule": "Av=λv; A=PDP^{-1}\nÝ nghĩa: Trị riêng, vector riêng và chéo hóa\nỨng dụng: PCA, ổn định hệ, mode dao động.",
+    "formula": "Av=λv; A=PDP^{-1}",
+    "meaning": "Trị riêng, vector riêng và chéo hóa",
+    "example": "PCA, ổn định hệ, mode dao động",
+    "tags": [
+      "formula",
+      "math",
+      "hk1"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "linear",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Trị riêng, vector riêng và chéo hóa' được xem như một mô-đun kiểm định hệ thống: đo hình dạng không gian dữ liệu: chiều, hướng, khoảng cách, phép chiếu và mức mất thông tin trước khi đưa vào mô hình AI.",
+    "deepAssumptionGates": [
+      "Kích thước vector/ma trận khớp; phân biệt rõ hàng là mẫu hay đặc trưng.",
+      "Đơn vị đo và chuẩn hóa không làm lệch hình học của dữ liệu.",
+      "Rank, điều kiện khả nghịch hoặc tính trực giao được kiểm trước khi kết luận."
+    ],
+    "deepDerivationSketch": [
+      "Viết dữ liệu thành vector/ma trận.",
+      "Xác định phép biến đổi tuyến tính hoặc phép đo hình học.",
+      "Đọc output như tọa độ mới, khoảng cách, năng lượng hoặc sai số chiếu."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi scale từng feature và xem hướng/khoảng cách đổi bao nhiêu.",
+      "Thử nhiễu nhỏ ở input để kiểm độ ổn định của phép chiếu/nghiệm.",
+      "Theo dõi trị riêng, rank hoặc condition number khi dữ liệu gần phụ thuộc tuyến tính."
+    ],
+    "deepFailureModes": [
+      "Nhầm chiều ma trận làm phép nhân vẫn chạy nhưng ý nghĩa sai.",
+      "Dùng khoảng cách khi feature chưa chuẩn hóa.",
+      "Coi tương quan/hướng vector là nguyên nhân."
+    ],
+    "deepSystemPipeline": [
+      "Raw features → chuẩn hóa → vector/matrix.",
+      "Tính similarity/projection/decomposition.",
+      "Đọc metric sai số, độ ổn định và quyết định giữ/bỏ chiều."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Trị riêng, vector riêng và chéo hóa' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học dữ liệu đa chiều, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M19",
+    "stage": "hk1",
+    "lessonId": "M19",
+    "title": "SVD và bình phương tối thiểu",
+    "focus": "công thức/ký hiệu",
+    "rule": "A=UΣVᵀ; x̂=(AᵀA)^{-1}Aᵀb\nÝ nghĩa: SVD và bình phương tối thiểu\nỨng dụng: hồi quy, nén dữ liệu, khử nhiễu.",
+    "formula": "A=UΣVᵀ; x̂=(AᵀA)^{-1}Aᵀb",
+    "meaning": "SVD và bình phương tối thiểu",
+    "example": "hồi quy, nén dữ liệu, khử nhiễu",
+    "tags": [
+      "formula",
+      "math",
+      "hk1"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "linear",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'SVD và bình phương tối thiểu' được xem như một mô-đun kiểm định hệ thống: đo hình dạng không gian dữ liệu: chiều, hướng, khoảng cách, phép chiếu và mức mất thông tin trước khi đưa vào mô hình AI.",
+    "deepAssumptionGates": [
+      "Kích thước vector/ma trận khớp; phân biệt rõ hàng là mẫu hay đặc trưng.",
+      "Đơn vị đo và chuẩn hóa không làm lệch hình học của dữ liệu.",
+      "Rank, điều kiện khả nghịch hoặc tính trực giao được kiểm trước khi kết luận."
+    ],
+    "deepDerivationSketch": [
+      "Viết dữ liệu thành vector/ma trận.",
+      "Xác định phép biến đổi tuyến tính hoặc phép đo hình học.",
+      "Đọc output như tọa độ mới, khoảng cách, năng lượng hoặc sai số chiếu."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi scale từng feature và xem hướng/khoảng cách đổi bao nhiêu.",
+      "Thử nhiễu nhỏ ở input để kiểm độ ổn định của phép chiếu/nghiệm.",
+      "Theo dõi trị riêng, rank hoặc condition number khi dữ liệu gần phụ thuộc tuyến tính."
+    ],
+    "deepFailureModes": [
+      "Nhầm chiều ma trận làm phép nhân vẫn chạy nhưng ý nghĩa sai.",
+      "Dùng khoảng cách khi feature chưa chuẩn hóa.",
+      "Coi tương quan/hướng vector là nguyên nhân."
+    ],
+    "deepSystemPipeline": [
+      "Raw features → chuẩn hóa → vector/matrix.",
+      "Tính similarity/projection/decomposition.",
+      "Đọc metric sai số, độ ổn định và quyết định giữ/bỏ chiều."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'SVD và bình phương tối thiểu' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học dữ liệu đa chiều, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M20",
+    "stage": "hk1",
+    "lessonId": "M20",
+    "title": "Giải tích nhiều biến và Jacobian",
+    "focus": "công thức/ký hiệu",
+    "rule": "J_ij=∂f_i/∂x_j; Hessian H\nÝ nghĩa: Giải tích nhiều biến và Jacobian\nỨng dụng: mô hình robot, tuyến tính hóa.",
+    "formula": "J_ij=∂f_i/∂x_j; Hessian H",
+    "meaning": "Giải tích nhiều biến và Jacobian",
+    "example": "mô hình robot, tuyến tính hóa",
+    "tags": [
+      "formula",
+      "math",
+      "hk1"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Giải tích nhiều biến và Jacobian' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Giải tích nhiều biến và Jacobian' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M21",
+    "stage": "hk1",
+    "lessonId": "M21",
+    "title": "Tối ưu lồi cơ bản",
+    "focus": "công thức/ký hiệu",
+    "rule": "∇f(x*)=0; x_{k+1}=x_k-α∇f\nÝ nghĩa: Tối ưu lồi cơ bản\nỨng dụng: huấn luyện mô hình, fitting.",
+    "formula": "∇f(x*)=0; x_{k+1}=x_k-α∇f",
+    "meaning": "Tối ưu lồi cơ bản",
+    "example": "huấn luyện mô hình, fitting",
+    "tags": [
+      "formula",
+      "math",
+      "hk1"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "optimization",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Tối ưu lồi cơ bản' được xem như một mô-đun kiểm định hệ thống: chọn tham số tốt nhất dưới ràng buộc bằng cách đọc gradient, điều kiện cực trị và cân bằng sai số - ổn định.",
+    "deepAssumptionGates": [
+      "Hàm mục tiêu, biến quyết định và ràng buộc được viết rõ.",
+      "Gradient/đạo hàm có ý nghĩa hoặc có xấp xỉ số ổn định.",
+      "Learning rate/step size không làm thuật toán dao động."
+    ],
+    "deepDerivationSketch": [
+      "Viết loss hoặc mục tiêu.",
+      "Tính gradient/điều kiện KKT/Lagrange nếu có ràng buộc.",
+      "Cập nhật tham số và kiểm hội tụ bằng metric."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay learning rate và quan sát overshoot/slow convergence.",
+      "Thử scale feature để kiểm gradient có lệch không.",
+      "So sánh nghiệm khi ràng buộc bị siết hoặc nới."
+    ],
+    "deepFailureModes": [
+      "Tối ưu loss nhưng phá ràng buộc kỹ thuật.",
+      "Nhầm local optimum với nghiệm toàn cục.",
+      "Không kiểm gradient exploding/vanishing."
+    ],
+    "deepSystemPipeline": [
+      "Define objective → constraints.",
+      "Gradient/update solver.",
+      "Convergence diagnostics → deploy with safety bound."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Tối ưu lồi cơ bản' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống tối ưu số và điều kiện hội tụ, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M22",
+    "stage": "hk1",
+    "lessonId": "M22",
+    "title": "Số trị tuyến tính và conditioning",
+    "focus": "công thức/ký hiệu",
+    "rule": "κ(A)=||A||||A^{-1}||\nÝ nghĩa: Số trị tuyến tính và conditioning\nỨng dụng: ổn định tính toán, tránh nghịch đảo bừa.",
+    "formula": "κ(A)=||A||||A^{-1}||",
+    "meaning": "Số trị tuyến tính và conditioning",
+    "example": "ổn định tính toán, tránh nghịch đảo bừa",
+    "tags": [
+      "formula",
+      "math",
+      "hk1"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Số trị tuyến tính và conditioning' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Số trị tuyến tính và conditioning' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M23",
+    "stage": "hk1",
+    "lessonId": "M23",
+    "title": "Xác suất liên tục và kỳ vọng",
+    "focus": "công thức/ký hiệu",
+    "rule": "E[g(X)]=∫g(x)p(x)dx\nÝ nghĩa: Xác suất liên tục và kỳ vọng\nỨng dụng: ước lượng, nhiễu Gaussian.",
+    "formula": "E[g(X)]=∫g(x)p(x)dx",
+    "meaning": "Xác suất liên tục và kỳ vọng",
+    "example": "ước lượng, nhiễu Gaussian",
+    "tags": [
+      "formula",
+      "math",
+      "hk1"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "probability",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Xác suất liên tục và kỳ vọng' được xem như một mô-đun kiểm định hệ thống: biến dữ liệu nhiễu thành phát biểu có độ tin cậy: xác suất, kỳ vọng, phương sai, kiểm định và rủi ro quyết định.",
+    "deepAssumptionGates": [
+      "Không gian mẫu, biến cố và đơn vị quan sát phải rõ.",
+      "Giả thiết độc lập, phân phối hoặc cỡ mẫu không được bỏ qua.",
+      "Không đọc p-value/xác suất như bằng chứng nhân quả tuyệt đối."
+    ],
+    "deepDerivationSketch": [
+      "Đặt biến ngẫu nhiên hoặc biến cố.",
+      "Viết đại lượng cần tính: xác suất, kỳ vọng, phương sai, khoảng tin cậy.",
+      "Diễn giải kết quả bằng ngưỡng quyết định và mức bất định."
+    ],
+    "deepSensitivityChecklist": [
+      "Thử thay đổi cỡ mẫu hoặc prior để xem kết luận có đảo chiều không.",
+      "So sánh metric trung bình với độ phân tán.",
+      "Kiểm tra outlier làm phương sai/độ tin cậy lệch ra sao."
+    ],
+    "deepFailureModes": [
+      "Nhầm độc lập với không tương quan.",
+      "Dùng phân phối không phù hợp với dữ liệu.",
+      "Lấy kết luận thống kê làm kết luận kỹ thuật khi chưa kiểm bối cảnh."
+    ],
+    "deepSystemPipeline": [
+      "Dữ liệu mẫu → thống kê mô tả.",
+      "Mô hình xác suất/kiểm định.",
+      "Kết luận kèm độ tin cậy, sai số và điều kiện."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Xác suất liên tục và kỳ vọng' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống bất định và quyết định thống kê, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M24",
+    "stage": "hk1",
+    "lessonId": "M24",
+    "title": "Notebook Toán cho học phần Bauman",
+    "focus": "công thức/ký hiệu",
+    "rule": "seed, vectorize, validate\nÝ nghĩa: Notebook Toán cho học phần Bauman\nỨng dụng: báo cáo thực nghiệm tái lập.",
+    "formula": "seed, vectorize, validate",
+    "meaning": "Notebook Toán cho học phần Bauman",
+    "example": "báo cáo thực nghiệm tái lập",
+    "tags": [
+      "formula",
+      "math",
+      "hk1"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "linear",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Notebook Toán cho học phần Bauman' được xem như một mô-đun kiểm định hệ thống: đo hình dạng không gian dữ liệu: chiều, hướng, khoảng cách, phép chiếu và mức mất thông tin trước khi đưa vào mô hình AI.",
+    "deepAssumptionGates": [
+      "Kích thước vector/ma trận khớp; phân biệt rõ hàng là mẫu hay đặc trưng.",
+      "Đơn vị đo và chuẩn hóa không làm lệch hình học của dữ liệu.",
+      "Rank, điều kiện khả nghịch hoặc tính trực giao được kiểm trước khi kết luận."
+    ],
+    "deepDerivationSketch": [
+      "Viết dữ liệu thành vector/ma trận.",
+      "Xác định phép biến đổi tuyến tính hoặc phép đo hình học.",
+      "Đọc output như tọa độ mới, khoảng cách, năng lượng hoặc sai số chiếu."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi scale từng feature và xem hướng/khoảng cách đổi bao nhiêu.",
+      "Thử nhiễu nhỏ ở input để kiểm độ ổn định của phép chiếu/nghiệm.",
+      "Theo dõi trị riêng, rank hoặc condition number khi dữ liệu gần phụ thuộc tuyến tính."
+    ],
+    "deepFailureModes": [
+      "Nhầm chiều ma trận làm phép nhân vẫn chạy nhưng ý nghĩa sai.",
+      "Dùng khoảng cách khi feature chưa chuẩn hóa.",
+      "Coi tương quan/hướng vector là nguyên nhân."
+    ],
+    "deepSystemPipeline": [
+      "Raw features → chuẩn hóa → vector/matrix.",
+      "Tính similarity/projection/decomposition.",
+      "Đọc metric sai số, độ ổn định và quyết định giữ/bỏ chiều."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Notebook Toán cho học phần Bauman' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M25",
+    "stage": "hk2",
+    "lessonId": "M25",
+    "title": "Hồi quy tuyến tính và regularization",
+    "focus": "công thức/ký hiệu",
+    "rule": "min ||Xβ-y||²+λ||β||²\nÝ nghĩa: Hồi quy tuyến tính và regularization\nỨng dụng: dự báo, calibration, cảm biến.",
+    "formula": "min ||Xβ-y||²+λ||β||²",
+    "meaning": "Hồi quy tuyến tính và regularization",
+    "example": "dự báo, calibration, cảm biến",
+    "tags": [
+      "formula",
+      "math",
+      "hk2"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Hồi quy tuyến tính và regularization' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Hồi quy tuyến tính và regularization' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống dữ liệu theo thời gian, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M26",
+    "stage": "hk2",
+    "lessonId": "M26",
+    "title": "Gradient descent và biến thể",
+    "focus": "công thức/ký hiệu",
+    "rule": "x_{k+1}=x_k-α∇f(x_k)\nÝ nghĩa: Gradient descent và biến thể\nỨng dụng: AI training, PID tuning.",
+    "formula": "x_{k+1}=x_k-α∇f(x_k)",
+    "meaning": "Gradient descent và biến thể",
+    "example": "AI training, PID tuning",
+    "tags": [
+      "formula",
+      "math",
+      "hk2"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "optimization",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Gradient descent và biến thể' được xem như một mô-đun kiểm định hệ thống: chọn tham số tốt nhất dưới ràng buộc bằng cách đọc gradient, điều kiện cực trị và cân bằng sai số - ổn định.",
+    "deepAssumptionGates": [
+      "Hàm mục tiêu, biến quyết định và ràng buộc được viết rõ.",
+      "Gradient/đạo hàm có ý nghĩa hoặc có xấp xỉ số ổn định.",
+      "Learning rate/step size không làm thuật toán dao động."
+    ],
+    "deepDerivationSketch": [
+      "Viết loss hoặc mục tiêu.",
+      "Tính gradient/điều kiện KKT/Lagrange nếu có ràng buộc.",
+      "Cập nhật tham số và kiểm hội tụ bằng metric."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay learning rate và quan sát overshoot/slow convergence.",
+      "Thử scale feature để kiểm gradient có lệch không.",
+      "So sánh nghiệm khi ràng buộc bị siết hoặc nới."
+    ],
+    "deepFailureModes": [
+      "Tối ưu loss nhưng phá ràng buộc kỹ thuật.",
+      "Nhầm local optimum với nghiệm toàn cục.",
+      "Không kiểm gradient exploding/vanishing."
+    ],
+    "deepSystemPipeline": [
+      "Define objective → constraints.",
+      "Gradient/update solver.",
+      "Convergence diagnostics → deploy with safety bound."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Gradient descent và biến thể' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống tối ưu số và điều kiện hội tụ, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M27",
+    "stage": "hk2",
+    "lessonId": "M27",
+    "title": "Xác suất Bayes và ước lượng",
+    "focus": "công thức/ký hiệu",
+    "rule": "posterior ∝ likelihood × prior\nÝ nghĩa: Xác suất Bayes và ước lượng\nỨng dụng: lọc, chẩn đoán, ra quyết định.",
+    "formula": "posterior ∝ likelihood × prior",
+    "meaning": "Xác suất Bayes và ước lượng",
+    "example": "lọc, chẩn đoán, ra quyết định",
+    "tags": [
+      "formula",
+      "math",
+      "hk2"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "probability",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Xác suất Bayes và ước lượng' được xem như một mô-đun kiểm định hệ thống: biến dữ liệu nhiễu thành phát biểu có độ tin cậy: xác suất, kỳ vọng, phương sai, kiểm định và rủi ro quyết định.",
+    "deepAssumptionGates": [
+      "Không gian mẫu, biến cố và đơn vị quan sát phải rõ.",
+      "Giả thiết độc lập, phân phối hoặc cỡ mẫu không được bỏ qua.",
+      "Không đọc p-value/xác suất như bằng chứng nhân quả tuyệt đối."
+    ],
+    "deepDerivationSketch": [
+      "Đặt biến ngẫu nhiên hoặc biến cố.",
+      "Viết đại lượng cần tính: xác suất, kỳ vọng, phương sai, khoảng tin cậy.",
+      "Diễn giải kết quả bằng ngưỡng quyết định và mức bất định."
+    ],
+    "deepSensitivityChecklist": [
+      "Thử thay đổi cỡ mẫu hoặc prior để xem kết luận có đảo chiều không.",
+      "So sánh metric trung bình với độ phân tán.",
+      "Kiểm tra outlier làm phương sai/độ tin cậy lệch ra sao."
+    ],
+    "deepFailureModes": [
+      "Nhầm độc lập với không tương quan.",
+      "Dùng phân phối không phù hợp với dữ liệu.",
+      "Lấy kết luận thống kê làm kết luận kỹ thuật khi chưa kiểm bối cảnh."
+    ],
+    "deepSystemPipeline": [
+      "Dữ liệu mẫu → thống kê mô tả.",
+      "Mô hình xác suất/kiểm định.",
+      "Kết luận kèm độ tin cậy, sai số và điều kiện."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Xác suất Bayes và ước lượng' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống phân tích phổ và lọc tín hiệu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M28",
+    "stage": "hk2",
+    "lessonId": "M28",
+    "title": "Quá trình ngẫu nhiên và chuỗi thời gian",
+    "focus": "công thức/ký hiệu",
+    "rule": "autocorr R(τ); AR(p)\nÝ nghĩa: Quá trình ngẫu nhiên và chuỗi thời gian\nỨng dụng: tín hiệu cảm biến, dự báo.",
+    "formula": "autocorr R(τ); AR(p)",
+    "meaning": "Quá trình ngẫu nhiên và chuỗi thời gian",
+    "example": "tín hiệu cảm biến, dự báo",
+    "tags": [
+      "formula",
+      "math",
+      "hk2"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "time_series",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Quá trình ngẫu nhiên và chuỗi thời gian' được xem như một mô-đun kiểm định hệ thống: đọc cấu trúc theo thời gian: xu hướng, mùa vụ, tự tương quan và sai số dự báo để không rò rỉ tương lai vào mô hình.",
+    "deepAssumptionGates": [
+      "Thứ tự thời gian không bị đảo; timestamp và tần số lấy mẫu rõ.",
+      "Train/test phải tách theo thời gian, không shuffle tùy tiện.",
+      "Stationarity hoặc biến đổi làm ổn định chuỗi cần được kiểm."
+    ],
+    "deepDerivationSketch": [
+      "Đặt chỉ số thời gian, lag và cửa sổ.",
+      "Tách trend/seasonality/noise hoặc viết mô hình dự báo.",
+      "Đọc residual và sai số theo horizon."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay độ dài window/lag và quan sát độ trễ phản ứng.",
+      "Tăng nhiễu hoặc drift để xem mô hình vỡ ở đâu.",
+      "So với baseline naive trước khi tin mô hình phức tạp."
+    ],
+    "deepFailureModes": [
+      "Rò rỉ tương lai khi chuẩn hóa hoặc split.",
+      "Nhầm tương quan trễ với quan hệ nhân quả.",
+      "Đánh giá bằng một điểm thời gian quá đẹp."
+    ],
+    "deepSystemPipeline": [
+      "Time index → lag/window features.",
+      "Baseline → mô hình dự báo.",
+      "Residual analysis → cảnh báo drift và báo cáo rủi ro."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Quá trình ngẫu nhiên và chuỗi thời gian' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống phân tích phổ và lọc tín hiệu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M29",
+    "stage": "hk2",
+    "lessonId": "M29",
+    "title": "Fourier và miền tần số",
+    "focus": "công thức/ký hiệu",
+    "rule": "X(ω)=∫x(t)e^{-jωt}dt\nÝ nghĩa: Fourier và miền tần số\nỨng dụng: phổ tín hiệu, lọc nhiễu.",
+    "formula": "X(ω)=∫x(t)e^{-jωt}dt",
+    "meaning": "Fourier và miền tần số",
+    "example": "phổ tín hiệu, lọc nhiễu",
+    "tags": [
+      "formula",
+      "math",
+      "hk2"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "signal",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Fourier và miền tần số' được xem như một mô-đun kiểm định hệ thống: biến tín hiệu thô thành thông tin tần số/thời-tần để lọc nhiễu, phát hiện mẫu và đọc cảm biến ổn định hơn.",
+    "deepAssumptionGates": [
+      "Tần số lấy mẫu đủ, tránh aliasing.",
+      "Biết tín hiệu dừng hay không dừng trước khi chọn Fourier/Wavelet.",
+      "Bộ lọc không được phá pha/biên độ quan trọng cho bài toán điều khiển."
+    ],
+    "deepDerivationSketch": [
+      "Xác định miền thời gian hoặc tần số.",
+      "Chọn phép biến đổi/lọc phù hợp.",
+      "Đọc biên độ, pha, phổ hoặc năng lượng theo dải."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay cutoff, window hoặc scale để xem tín hiệu mất chi tiết nào.",
+      "Tăng nhiễu và kiểm năng lượng còn lại sau lọc.",
+      "So sánh trước/sau lọc trên cùng thước đo."
+    ],
+    "deepFailureModes": [
+      "Dùng cutoff tùy tiện làm mất tín hiệu thật.",
+      "Nhầm peak phổ với tín hiệu có ích.",
+      "Bỏ qua delay của bộ lọc trong hệ thời gian thực."
+    ],
+    "deepSystemPipeline": [
+      "Sensor stream → tiền xử lý.",
+      "Transform/filter.",
+      "Readout phổ/đặc trưng → đưa vào mô hình hoặc điều khiển."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Fourier và miền tần số' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống phân tích phổ và lọc tín hiệu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M30",
+    "stage": "hk2",
+    "lessonId": "M30",
+    "title": "Lọc số và convolution",
+    "focus": "công thức/ký hiệu",
+    "rule": "y[n]=Σ h[k]x[n-k]\nÝ nghĩa: Lọc số và convolution\nỨng dụng: xử lý tín hiệu, smoothing.",
+    "formula": "y[n]=Σ h[k]x[n-k]",
+    "meaning": "Lọc số và convolution",
+    "example": "xử lý tín hiệu, smoothing",
+    "tags": [
+      "formula",
+      "math",
+      "hk2"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "signal",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Lọc số và convolution' được xem như một mô-đun kiểm định hệ thống: biến tín hiệu thô thành thông tin tần số/thời-tần để lọc nhiễu, phát hiện mẫu và đọc cảm biến ổn định hơn.",
+    "deepAssumptionGates": [
+      "Tần số lấy mẫu đủ, tránh aliasing.",
+      "Biết tín hiệu dừng hay không dừng trước khi chọn Fourier/Wavelet.",
+      "Bộ lọc không được phá pha/biên độ quan trọng cho bài toán điều khiển."
+    ],
+    "deepDerivationSketch": [
+      "Xác định miền thời gian hoặc tần số.",
+      "Chọn phép biến đổi/lọc phù hợp.",
+      "Đọc biên độ, pha, phổ hoặc năng lượng theo dải."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay cutoff, window hoặc scale để xem tín hiệu mất chi tiết nào.",
+      "Tăng nhiễu và kiểm năng lượng còn lại sau lọc.",
+      "So sánh trước/sau lọc trên cùng thước đo."
+    ],
+    "deepFailureModes": [
+      "Dùng cutoff tùy tiện làm mất tín hiệu thật.",
+      "Nhầm peak phổ với tín hiệu có ích.",
+      "Bỏ qua delay của bộ lọc trong hệ thời gian thực."
+    ],
+    "deepSystemPipeline": [
+      "Sensor stream → tiền xử lý.",
+      "Transform/filter.",
+      "Readout phổ/đặc trưng → đưa vào mô hình hoặc điều khiển."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Lọc số và convolution' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống phân tích phổ và lọc tín hiệu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M31",
+    "stage": "hk2",
+    "lessonId": "M31",
+    "title": "Entropy, thông tin và phân loại",
+    "focus": "công thức/ký hiệu",
+    "rule": "H(X)=-Σp log p\nÝ nghĩa: Entropy, thông tin và phân loại\nỨng dụng: feature selection, classification.",
+    "formula": "H(X)=-Σp log p",
+    "meaning": "Entropy, thông tin và phân loại",
+    "example": "feature selection, classification",
+    "tags": [
+      "formula",
+      "math",
+      "hk2"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Entropy, thông tin và phân loại' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Entropy, thông tin và phân loại' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M32",
+    "stage": "hk2",
+    "lessonId": "M32",
+    "title": "Đánh giá mô hình và kiểm định",
+    "focus": "công thức/ký hiệu",
+    "rule": "RMSE, F1, p-value, CI\nÝ nghĩa: Đánh giá mô hình và kiểm định\nỨng dụng: báo cáo thực nghiệm đáng tin.",
+    "formula": "RMSE, F1, p-value, CI",
+    "meaning": "Đánh giá mô hình và kiểm định",
+    "example": "báo cáo thực nghiệm đáng tin",
+    "tags": [
+      "formula",
+      "math",
+      "hk2"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "probability",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Đánh giá mô hình và kiểm định' được xem như một mô-đun kiểm định hệ thống: biến dữ liệu nhiễu thành phát biểu có độ tin cậy: xác suất, kỳ vọng, phương sai, kiểm định và rủi ro quyết định.",
+    "deepAssumptionGates": [
+      "Không gian mẫu, biến cố và đơn vị quan sát phải rõ.",
+      "Giả thiết độc lập, phân phối hoặc cỡ mẫu không được bỏ qua.",
+      "Không đọc p-value/xác suất như bằng chứng nhân quả tuyệt đối."
+    ],
+    "deepDerivationSketch": [
+      "Đặt biến ngẫu nhiên hoặc biến cố.",
+      "Viết đại lượng cần tính: xác suất, kỳ vọng, phương sai, khoảng tin cậy.",
+      "Diễn giải kết quả bằng ngưỡng quyết định và mức bất định."
+    ],
+    "deepSensitivityChecklist": [
+      "Thử thay đổi cỡ mẫu hoặc prior để xem kết luận có đảo chiều không.",
+      "So sánh metric trung bình với độ phân tán.",
+      "Kiểm tra outlier làm phương sai/độ tin cậy lệch ra sao."
+    ],
+    "deepFailureModes": [
+      "Nhầm độc lập với không tương quan.",
+      "Dùng phân phối không phù hợp với dữ liệu.",
+      "Lấy kết luận thống kê làm kết luận kỹ thuật khi chưa kiểm bối cảnh."
+    ],
+    "deepSystemPipeline": [
+      "Dữ liệu mẫu → thống kê mô tả.",
+      "Mô hình xác suất/kiểm định.",
+      "Kết luận kèm độ tin cậy, sai số và điều kiện."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Đánh giá mô hình và kiểm định' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống bất định và quyết định thống kê, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M33",
+    "stage": "hk3",
+    "lessonId": "M33",
+    "title": "Mô hình trạng thái cho robot",
+    "focus": "công thức/ký hiệu",
+    "rule": "x_{k+1}=Ax_k+Bu_k+w_k\nÝ nghĩa: Mô hình trạng thái cho robot\nỨng dụng: động lực học UGV/USV.",
+    "formula": "x_{k+1}=Ax_k+Bu_k+w_k",
+    "meaning": "Mô hình trạng thái cho robot",
+    "example": "động lực học UGV/USV",
+    "tags": [
+      "formula",
+      "math",
+      "hk3"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Mô hình trạng thái cho robot' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Mô hình trạng thái cho robot' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hệ động lực, cảm biến và điều khiển, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M34",
+    "stage": "hk3",
+    "lessonId": "M34",
+    "title": "Kalman filter và sensor fusion",
+    "focus": "công thức/ký hiệu",
+    "rule": "K=PHT(HPHT+R)^{-1}\nÝ nghĩa: Kalman filter và sensor fusion\nỨng dụng: hợp nhất GPS/IMU/encoder.",
+    "formula": "K=PHT(HPHT+R)^{-1}",
+    "meaning": "Kalman filter và sensor fusion",
+    "example": "hợp nhất GPS/IMU/encoder",
+    "tags": [
+      "formula",
+      "math",
+      "hk3"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "signal",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Kalman filter và sensor fusion' được xem như một mô-đun kiểm định hệ thống: biến tín hiệu thô thành thông tin tần số/thời-tần để lọc nhiễu, phát hiện mẫu và đọc cảm biến ổn định hơn.",
+    "deepAssumptionGates": [
+      "Tần số lấy mẫu đủ, tránh aliasing.",
+      "Biết tín hiệu dừng hay không dừng trước khi chọn Fourier/Wavelet.",
+      "Bộ lọc không được phá pha/biên độ quan trọng cho bài toán điều khiển."
+    ],
+    "deepDerivationSketch": [
+      "Xác định miền thời gian hoặc tần số.",
+      "Chọn phép biến đổi/lọc phù hợp.",
+      "Đọc biên độ, pha, phổ hoặc năng lượng theo dải."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay cutoff, window hoặc scale để xem tín hiệu mất chi tiết nào.",
+      "Tăng nhiễu và kiểm năng lượng còn lại sau lọc.",
+      "So sánh trước/sau lọc trên cùng thước đo."
+    ],
+    "deepFailureModes": [
+      "Dùng cutoff tùy tiện làm mất tín hiệu thật.",
+      "Nhầm peak phổ với tín hiệu có ích.",
+      "Bỏ qua delay của bộ lọc trong hệ thời gian thực."
+    ],
+    "deepSystemPipeline": [
+      "Sensor stream → tiền xử lý.",
+      "Transform/filter.",
+      "Readout phổ/đặc trưng → đưa vào mô hình hoặc điều khiển."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Kalman filter và sensor fusion' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hệ động lực, cảm biến và điều khiển, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M35",
+    "stage": "hk3",
+    "lessonId": "M35",
+    "title": "Tối ưu quỹ đạo và ràng buộc",
+    "focus": "công thức/ký hiệu",
+    "rule": "min Σ cost(x,u) s.t. dynamics\nÝ nghĩa: Tối ưu quỹ đạo và ràng buộc\nỨng dụng: đường đi robot, tránh vật cản.",
+    "formula": "min Σ cost(x,u) s.t. dynamics",
+    "meaning": "Tối ưu quỹ đạo và ràng buộc",
+    "example": "đường đi robot, tránh vật cản",
+    "tags": [
+      "formula",
+      "math",
+      "hk3"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "optimization",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Tối ưu quỹ đạo và ràng buộc' được xem như một mô-đun kiểm định hệ thống: chọn tham số tốt nhất dưới ràng buộc bằng cách đọc gradient, điều kiện cực trị và cân bằng sai số - ổn định.",
+    "deepAssumptionGates": [
+      "Hàm mục tiêu, biến quyết định và ràng buộc được viết rõ.",
+      "Gradient/đạo hàm có ý nghĩa hoặc có xấp xỉ số ổn định.",
+      "Learning rate/step size không làm thuật toán dao động."
+    ],
+    "deepDerivationSketch": [
+      "Viết loss hoặc mục tiêu.",
+      "Tính gradient/điều kiện KKT/Lagrange nếu có ràng buộc.",
+      "Cập nhật tham số và kiểm hội tụ bằng metric."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay learning rate và quan sát overshoot/slow convergence.",
+      "Thử scale feature để kiểm gradient có lệch không.",
+      "So sánh nghiệm khi ràng buộc bị siết hoặc nới."
+    ],
+    "deepFailureModes": [
+      "Tối ưu loss nhưng phá ràng buộc kỹ thuật.",
+      "Nhầm local optimum với nghiệm toàn cục.",
+      "Không kiểm gradient exploding/vanishing."
+    ],
+    "deepSystemPipeline": [
+      "Define objective → constraints.",
+      "Gradient/update solver.",
+      "Convergence diagnostics → deploy with safety bound."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Tối ưu quỹ đạo và ràng buộc' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống tối ưu số và điều kiện hội tụ, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M36",
+    "stage": "hk3",
+    "lessonId": "M36",
+    "title": "Graph và thuật toán trên mạng",
+    "focus": "công thức/ký hiệu",
+    "rule": "G=(V,E); Laplacian L=D-A\nÝ nghĩa: Graph và thuật toán trên mạng\nỨng dụng: định tuyến, bản đồ, mạng cảm biến.",
+    "formula": "G=(V,E); Laplacian L=D-A",
+    "meaning": "Graph và thuật toán trên mạng",
+    "example": "định tuyến, bản đồ, mạng cảm biến",
+    "tags": [
+      "formula",
+      "math",
+      "hk3"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "system",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Graph và thuật toán trên mạng' được xem như một mô-đun kiểm định hệ thống: đặt công thức vào vòng kín hệ thống: trạng thái, quan sát, nhiễu, rủi ro và quyết định điều khiển.",
+    "deepAssumptionGates": [
+      "State, observation, noise và model mismatch được nêu rõ.",
+      "Độ trễ, tần số cập nhật và sai số cảm biến được kiểm.",
+      "Không dùng công thức tĩnh cho hệ động khi feedback làm đổi trạng thái."
+    ],
+    "deepDerivationSketch": [
+      "Viết state/input/output.",
+      "Cập nhật hoặc hợp nhất thông tin qua mô hình.",
+      "Đọc innovation/residual/risk trước khi ra quyết định."
+    ],
+    "deepSensitivityChecklist": [
+      "Tăng nhiễu đo và xem confidence giảm thế nào.",
+      "Thay model mismatch để kiểm robustness.",
+      "Theo dõi quyết định khi sensor bị mất hoặc drift."
+    ],
+    "deepFailureModes": [
+      "Tin tuyệt đối vào sensor fusion khi noise model sai.",
+      "Bỏ qua delay/feedback.",
+      "Không có cơ chế fail-safe khi uncertainty tăng."
+    ],
+    "deepSystemPipeline": [
+      "State estimate → update/decision.",
+      "Risk/confidence check.",
+      "Action/log/monitoring."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Graph và thuật toán trên mạng' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hệ động lực, cảm biến và điều khiển, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M37",
+    "stage": "hk3",
+    "lessonId": "M37",
+    "title": "Học máy hình học và embedding",
+    "focus": "công thức/ký hiệu",
+    "rule": "z=fθ(x); distance in latent space\nÝ nghĩa: Học máy hình học và embedding\nỨng dụng: biểu diễn dữ liệu đa chiều.",
+    "formula": "z=fθ(x); distance in latent space",
+    "meaning": "Học máy hình học và embedding",
+    "example": "biểu diễn dữ liệu đa chiều",
+    "tags": [
+      "formula",
+      "math",
+      "hk3"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Học máy hình học và embedding' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Học máy hình học và embedding' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học dữ liệu đa chiều, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M38",
+    "stage": "hk3",
+    "lessonId": "M38",
+    "title": "Thiết kế thí nghiệm và ablation",
+    "focus": "công thức/ký hiệu",
+    "rule": "control variable; ablation Δmetric\nÝ nghĩa: Thiết kế thí nghiệm và ablation\nỨng dụng: chứng minh đóng góp nghiên cứu.",
+    "formula": "control variable; ablation Δmetric",
+    "meaning": "Thiết kế thí nghiệm và ablation",
+    "example": "chứng minh đóng góp nghiên cứu",
+    "tags": [
+      "formula",
+      "math",
+      "hk3"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "research",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Thiết kế thí nghiệm và ablation' được xem như một mô-đun kiểm định hệ thống: biến công thức thành bằng chứng nghiên cứu: giả thuyết, metric, ablation, sai số và giới hạn để bảo vệ НИР/ВКР.",
+    "deepAssumptionGates": [
+      "Metric phù hợp câu hỏi nghiên cứu.",
+      "Baseline và ablation được định nghĩa công bằng.",
+      "Kết luận không vượt quá dữ liệu và điều kiện thí nghiệm."
+    ],
+    "deepDerivationSketch": [
+      "Nêu giả thuyết.",
+      "Gắn công thức với metric/bằng chứng.",
+      "Viết kết luận có giới hạn và so sánh baseline."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay seed, tập dữ liệu hoặc tham số chính.",
+      "Kiểm khoảng tin cậy/độ phân tán qua nhiều lần chạy.",
+      "Bóc từng thành phần bằng ablation."
+    ],
+    "deepFailureModes": [
+      "Chỉ báo cáo kết quả đẹp nhất.",
+      "Không có baseline.",
+      "Không ghi giới hạn mô hình/dữ liệu."
+    ],
+    "deepSystemPipeline": [
+      "Research question → formula/metric.",
+      "Experiment → ablation/statistics.",
+      "Report → defense answer."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Thiết kế thí nghiệm và ablation' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống độ tin cậy kết quả nghiên cứu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M39",
+    "stage": "hk3",
+    "lessonId": "M39",
+    "title": "Độ tin cậy, sai số và uncertainty",
+    "focus": "công thức/ký hiệu",
+    "rule": "CI, variance propagation\nÝ nghĩa: Độ tin cậy, sai số và uncertainty\nỨng dụng: phản biện kết quả nghiên cứu.",
+    "formula": "CI, variance propagation",
+    "meaning": "Độ tin cậy, sai số và uncertainty",
+    "example": "phản biện kết quả nghiên cứu",
+    "tags": [
+      "formula",
+      "math",
+      "hk3"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "probability",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Độ tin cậy, sai số và uncertainty' được xem như một mô-đun kiểm định hệ thống: biến dữ liệu nhiễu thành phát biểu có độ tin cậy: xác suất, kỳ vọng, phương sai, kiểm định và rủi ro quyết định.",
+    "deepAssumptionGates": [
+      "Không gian mẫu, biến cố và đơn vị quan sát phải rõ.",
+      "Giả thiết độc lập, phân phối hoặc cỡ mẫu không được bỏ qua.",
+      "Không đọc p-value/xác suất như bằng chứng nhân quả tuyệt đối."
+    ],
+    "deepDerivationSketch": [
+      "Đặt biến ngẫu nhiên hoặc biến cố.",
+      "Viết đại lượng cần tính: xác suất, kỳ vọng, phương sai, khoảng tin cậy.",
+      "Diễn giải kết quả bằng ngưỡng quyết định và mức bất định."
+    ],
+    "deepSensitivityChecklist": [
+      "Thử thay đổi cỡ mẫu hoặc prior để xem kết luận có đảo chiều không.",
+      "So sánh metric trung bình với độ phân tán.",
+      "Kiểm tra outlier làm phương sai/độ tin cậy lệch ra sao."
+    ],
+    "deepFailureModes": [
+      "Nhầm độc lập với không tương quan.",
+      "Dùng phân phối không phù hợp với dữ liệu.",
+      "Lấy kết luận thống kê làm kết luận kỹ thuật khi chưa kiểm bối cảnh."
+    ],
+    "deepSystemPipeline": [
+      "Dữ liệu mẫu → thống kê mô tả.",
+      "Mô hình xác suất/kiểm định.",
+      "Kết luận kèm độ tin cậy, sai số và điều kiện."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Độ tin cậy, sai số và uncertainty' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống bất định và quyết định thống kê, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M40",
+    "stage": "hk3",
+    "lessonId": "M40",
+    "title": "Đọc paper Toán/AI có kiểm chứng",
+    "focus": "công thức/ký hiệu",
+    "rule": "assumption → theorem → experiment\nÝ nghĩa: Đọc paper Toán/AI có kiểm chứng\nỨng dụng: НИР, seminar, journal club.",
+    "formula": "assumption → theorem → experiment",
+    "meaning": "Đọc paper Toán/AI có kiểm chứng",
+    "example": "НИР, seminar, journal club",
+    "tags": [
+      "formula",
+      "math",
+      "hk3"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Đọc paper Toán/AI có kiểm chứng' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Đọc paper Toán/AI có kiểm chứng' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống độ tin cậy kết quả nghiên cứu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M41",
+    "stage": "hk4",
+    "lessonId": "M41",
+    "title": "Khung Toán của luận văn",
+    "focus": "công thức/ký hiệu",
+    "rule": "problem → model → algorithm → proof → validation\nÝ nghĩa: Khung Toán của luận văn\nỨng dụng: viết chương phương pháp.",
+    "formula": "problem → model → algorithm → proof → validation",
+    "meaning": "Khung Toán của luận văn",
+    "example": "viết chương phương pháp",
+    "tags": [
+      "formula",
+      "math",
+      "hk4"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "research",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Khung Toán của luận văn' được xem như một mô-đun kiểm định hệ thống: biến công thức thành bằng chứng nghiên cứu: giả thuyết, metric, ablation, sai số và giới hạn để bảo vệ НИР/ВКР.",
+    "deepAssumptionGates": [
+      "Metric phù hợp câu hỏi nghiên cứu.",
+      "Baseline và ablation được định nghĩa công bằng.",
+      "Kết luận không vượt quá dữ liệu và điều kiện thí nghiệm."
+    ],
+    "deepDerivationSketch": [
+      "Nêu giả thuyết.",
+      "Gắn công thức với metric/bằng chứng.",
+      "Viết kết luận có giới hạn và so sánh baseline."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay seed, tập dữ liệu hoặc tham số chính.",
+      "Kiểm khoảng tin cậy/độ phân tán qua nhiều lần chạy.",
+      "Bóc từng thành phần bằng ablation."
+    ],
+    "deepFailureModes": [
+      "Chỉ báo cáo kết quả đẹp nhất.",
+      "Không có baseline.",
+      "Không ghi giới hạn mô hình/dữ liệu."
+    ],
+    "deepSystemPipeline": [
+      "Research question → formula/metric.",
+      "Experiment → ablation/statistics.",
+      "Report → defense answer."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Khung Toán của luận văn' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống độ tin cậy kết quả nghiên cứu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M42",
+    "stage": "hk4",
+    "lessonId": "M42",
+    "title": "Chứng minh tính đúng và giới hạn",
+    "focus": "công thức/ký hiệu",
+    "rule": "lemma, theorem, counterexample\nÝ nghĩa: Chứng minh tính đúng và giới hạn\nỨng dụng: trả lời hội đồng về giả thiết.",
+    "formula": "lemma, theorem, counterexample",
+    "meaning": "Chứng minh tính đúng và giới hạn",
+    "example": "trả lời hội đồng về giả thiết",
+    "tags": [
+      "formula",
+      "math",
+      "hk4"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Chứng minh tính đúng và giới hạn' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Chứng minh tính đúng và giới hạn' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M43",
+    "stage": "hk4",
+    "lessonId": "M43",
+    "title": "Phân tích độ phức tạp thuật toán",
+    "focus": "công thức/ký hiệu",
+    "rule": "O(n), O(n log n), O(n³)\nÝ nghĩa: Phân tích độ phức tạp thuật toán\nỨng dụng: đánh giá khả thi triển khai.",
+    "formula": "O(n), O(n log n), O(n³)",
+    "meaning": "Phân tích độ phức tạp thuật toán",
+    "example": "đánh giá khả thi triển khai",
+    "tags": [
+      "formula",
+      "math",
+      "hk4"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Phân tích độ phức tạp thuật toán' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Phân tích độ phức tạp thuật toán' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M44",
+    "stage": "hk4",
+    "lessonId": "M44",
+    "title": "So sánh baseline và kiểm định kết quả",
+    "focus": "công thức/ký hiệu",
+    "rule": "paired test; confidence interval\nÝ nghĩa: So sánh baseline và kiểm định kết quả\nỨng dụng: kết quả luận văn có sức nặng.",
+    "formula": "paired test; confidence interval",
+    "meaning": "So sánh baseline và kiểm định kết quả",
+    "example": "kết quả luận văn có sức nặng",
+    "tags": [
+      "formula",
+      "math",
+      "hk4"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "probability",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'So sánh baseline và kiểm định kết quả' được xem như một mô-đun kiểm định hệ thống: biến dữ liệu nhiễu thành phát biểu có độ tin cậy: xác suất, kỳ vọng, phương sai, kiểm định và rủi ro quyết định.",
+    "deepAssumptionGates": [
+      "Không gian mẫu, biến cố và đơn vị quan sát phải rõ.",
+      "Giả thiết độc lập, phân phối hoặc cỡ mẫu không được bỏ qua.",
+      "Không đọc p-value/xác suất như bằng chứng nhân quả tuyệt đối."
+    ],
+    "deepDerivationSketch": [
+      "Đặt biến ngẫu nhiên hoặc biến cố.",
+      "Viết đại lượng cần tính: xác suất, kỳ vọng, phương sai, khoảng tin cậy.",
+      "Diễn giải kết quả bằng ngưỡng quyết định và mức bất định."
+    ],
+    "deepSensitivityChecklist": [
+      "Thử thay đổi cỡ mẫu hoặc prior để xem kết luận có đảo chiều không.",
+      "So sánh metric trung bình với độ phân tán.",
+      "Kiểm tra outlier làm phương sai/độ tin cậy lệch ra sao."
+    ],
+    "deepFailureModes": [
+      "Nhầm độc lập với không tương quan.",
+      "Dùng phân phối không phù hợp với dữ liệu.",
+      "Lấy kết luận thống kê làm kết luận kỹ thuật khi chưa kiểm bối cảnh."
+    ],
+    "deepSystemPipeline": [
+      "Dữ liệu mẫu → thống kê mô tả.",
+      "Mô hình xác suất/kiểm định.",
+      "Kết luận kèm độ tin cậy, sai số và điều kiện."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'So sánh baseline và kiểm định kết quả' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống độ tin cậy kết quả nghiên cứu, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M45",
+    "stage": "hk4",
+    "lessonId": "M45",
+    "title": "Visualization Toán cho bảo vệ",
+    "focus": "công thức/ký hiệu",
+    "rule": "plot, residual, spectrum, trajectory\nÝ nghĩa: Visualization Toán cho bảo vệ\nỨng dụng: slide bảo vệ rõ và thuyết phục.",
+    "formula": "plot, residual, spectrum, trajectory",
+    "meaning": "Visualization Toán cho bảo vệ",
+    "example": "slide bảo vệ rõ và thuyết phục",
+    "tags": [
+      "formula",
+      "math",
+      "hk4"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "signal",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Visualization Toán cho bảo vệ' được xem như một mô-đun kiểm định hệ thống: biến tín hiệu thô thành thông tin tần số/thời-tần để lọc nhiễu, phát hiện mẫu và đọc cảm biến ổn định hơn.",
+    "deepAssumptionGates": [
+      "Tần số lấy mẫu đủ, tránh aliasing.",
+      "Biết tín hiệu dừng hay không dừng trước khi chọn Fourier/Wavelet.",
+      "Bộ lọc không được phá pha/biên độ quan trọng cho bài toán điều khiển."
+    ],
+    "deepDerivationSketch": [
+      "Xác định miền thời gian hoặc tần số.",
+      "Chọn phép biến đổi/lọc phù hợp.",
+      "Đọc biên độ, pha, phổ hoặc năng lượng theo dải."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay cutoff, window hoặc scale để xem tín hiệu mất chi tiết nào.",
+      "Tăng nhiễu và kiểm năng lượng còn lại sau lọc.",
+      "So sánh trước/sau lọc trên cùng thước đo."
+    ],
+    "deepFailureModes": [
+      "Dùng cutoff tùy tiện làm mất tín hiệu thật.",
+      "Nhầm peak phổ với tín hiệu có ích.",
+      "Bỏ qua delay của bộ lọc trong hệ thời gian thực."
+    ],
+    "deepSystemPipeline": [
+      "Sensor stream → tiền xử lý.",
+      "Transform/filter.",
+      "Readout phổ/đặc trưng → đưa vào mô hình hoặc điều khiển."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Visualization Toán cho bảo vệ' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M46",
+    "stage": "hk4",
+    "lessonId": "M46",
+    "title": "Chuẩn hóa phụ lục công thức/code",
+    "focus": "công thức/ký hiệu",
+    "rule": "config, seed, dataset split\nÝ nghĩa: Chuẩn hóa phụ lục công thức/code\nỨng dụng: tái lập kết quả.",
+    "formula": "config, seed, dataset split",
+    "meaning": "Chuẩn hóa phụ lục công thức/code",
+    "example": "tái lập kết quả",
+    "tags": [
+      "formula",
+      "math",
+      "hk4"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Chuẩn hóa phụ lục công thức/code' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Chuẩn hóa phụ lục công thức/code' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M47",
+    "stage": "hk4",
+    "lessonId": "M47",
+    "title": "Kịch bản phản biện Toán",
+    "focus": "công thức/ký hiệu",
+    "rule": "why this model? why this metric?\nÝ nghĩa: Kịch bản phản biện Toán\nỨng dụng: trả lời hội đồng.",
+    "formula": "why this model? why this metric?",
+    "meaning": "Kịch bản phản biện Toán",
+    "example": "trả lời hội đồng",
+    "tags": [
+      "formula",
+      "math",
+      "hk4"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "general",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Kịch bản phản biện Toán' được xem như một mô-đun kiểm định hệ thống: làm cầu nối giữa ký hiệu, phép tính và quyết định học tập: biết công thức dùng để biến input thành output nào.",
+    "deepAssumptionGates": [
+      "Biến, đơn vị, miền giá trị và mục tiêu tính toán rõ.",
+      "Không bỏ qua điều kiện áp dụng.",
+      "Có cách kiểm kết quả sau khi tính."
+    ],
+    "deepDerivationSketch": [
+      "Đọc input.",
+      "Chọn công thức.",
+      "Tính output và diễn giải."
+    ],
+    "deepSensitivityChecklist": [
+      "Đổi một tham số và quan sát output.",
+      "So với ví dụ đơn giản hoặc baseline.",
+      "Kiểm kết quả có đúng đơn vị/miền giá trị không."
+    ],
+    "deepFailureModes": [
+      "Thay số máy móc.",
+      "Không kiểm điều kiện.",
+      "Không diễn giải kết quả."
+    ],
+    "deepSystemPipeline": [
+      "Input → formula.",
+      "Computation → output.",
+      "Interpretation → next decision."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Kịch bản phản biện Toán' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  },
+  {
+    "id": "formula_M48",
+    "stage": "hk4",
+    "lessonId": "M48",
+    "title": "Tổng ôn Toán Bauman Master AI",
+    "focus": "công thức/ký hiệu",
+    "rule": "integrated notebook + report\nÝ nghĩa: Tổng ôn Toán Bauman Master AI\nỨng dụng: đóng gói hồ sơ tốt nghiệp.",
+    "formula": "integrated notebook + report",
+    "meaning": "Tổng ôn Toán Bauman Master AI",
+    "example": "đóng gói hồ sơ tốt nghiệp",
+    "tags": [
+      "formula",
+      "math",
+      "hk4"
+    ],
+    "e48DeepFormulaSpecialization": "formula_deep_system_audit_v1",
+    "deepProfile": "research",
+    "deepRoleStatement": "Trong tab Công thức sâu, 'Tổng ôn Toán Bauman Master AI' được xem như một mô-đun kiểm định hệ thống: biến công thức thành bằng chứng nghiên cứu: giả thuyết, metric, ablation, sai số và giới hạn để bảo vệ НИР/ВКР.",
+    "deepAssumptionGates": [
+      "Metric phù hợp câu hỏi nghiên cứu.",
+      "Baseline và ablation được định nghĩa công bằng.",
+      "Kết luận không vượt quá dữ liệu và điều kiện thí nghiệm."
+    ],
+    "deepDerivationSketch": [
+      "Nêu giả thuyết.",
+      "Gắn công thức với metric/bằng chứng.",
+      "Viết kết luận có giới hạn và so sánh baseline."
+    ],
+    "deepSensitivityChecklist": [
+      "Thay seed, tập dữ liệu hoặc tham số chính.",
+      "Kiểm khoảng tin cậy/độ phân tán qua nhiều lần chạy.",
+      "Bóc từng thành phần bằng ablation."
+    ],
+    "deepFailureModes": [
+      "Chỉ báo cáo kết quả đẹp nhất.",
+      "Không có baseline.",
+      "Không ghi giới hạn mô hình/dữ liệu."
+    ],
+    "deepSystemPipeline": [
+      "Research question → formula/metric.",
+      "Experiment → ablation/statistics.",
+      "Report → defense answer."
+    ],
+    "deepDebugQuestions": [
+      "Input đang là gì, output cần đọc là gì?",
+      "Giả thiết nào nếu sai sẽ làm công thức cho kết luận nguy hiểm?",
+      "Có baseline hoặc mô phỏng nào để kiểm kết quả không?",
+      "Kết quả này dùng để quyết định gì trong bài toán thật?"
+    ],
+    "deepDefensePoints": [
+      "Nêu được công thức không đủ; phải nêu điều kiện áp dụng.",
+      "Giải thích được từng biến đóng vai trò gì trong pipeline.",
+      "Chỉ ra được trường hợp công thức không nên dùng.",
+      "Liên hệ được với mô phỏng hoặc ứng dụng cùng bài."
+    ],
+    "deepMiniExperiment": {
+      "goal": "Kiểm xem công thức có ổn khi đưa vào mô phỏng hoặc code hay không.",
+      "input": "Chọn một ví dụ nhỏ cùng đơn vị và một trường hợp stress.",
+      "operation": "Tính công thức, đổi một tham số, rồi so sánh output với baseline.",
+      "readout": "Nếu output đổi mạnh, phải nêu nguyên nhân: scale, nhiễu, giả thiết, hay mô hình sai.",
+      "report": "Viết 2 câu: công thức dùng được trong điều kiện nào và rủi ro khi dùng sai."
+    },
+    "deepFormulaTakeaway": "Không học 'Tổng ôn Toán Bauman Master AI' như một dòng ký hiệu riêng lẻ. Hãy đọc nó như cổng kiểm giả thiết → tính output → kiểm độ nhạy → quyết định dùng/không dùng.",
+    "e54FormulaDeepRole": "system_audit_not_formula_repeat",
+    "deepSystemRole": "Mục này dùng để kiểm công thức trong hệ thống hình học vector/ma trận, không chỉ nhắc lại ý nghĩa.",
+    "deepImplementationAudit": [
+      "Map ký hiệu sang biến code.",
+      "Kiểm giả thiết.",
+      "Chạy mô phỏng failure.",
+      "Ghi kết luận có điều kiện."
+    ]
+  }
+]

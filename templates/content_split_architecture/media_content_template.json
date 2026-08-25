@@ -1,0 +1,12 @@
+{
+  "frameFile": "media_frame.json",
+  "contentFile": "media_content.json",
+  "recordKey": "mediaId",
+  "contentTemplate": {
+    "ownerId": "MATH-VN-LA-C01-L04",
+    "mediaId": "MATH-VN-LA-C01-L04-COVER",
+    "type": "canva_cover",
+    "path": "assets/slides/MATH-VN-LA-C01-L04_cover.png",
+    "auditStatus": "DRAFT"
+  }
+}

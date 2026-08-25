@@ -1,0 +1,33 @@
+{
+  "id": "E33_AUDIT_CLEANUP_CHECKPOINT_REPORT",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "source": "E32_FINAL_PREP_CHECKPOINT_TEST_SNAPSHOT",
+  "fixed": {
+    "removedLegacyDuplicateChapterIds": [
+      "MATH-HK3-MT-C20",
+      "MATH-HK4-RM-C21"
+    ],
+    "reason": "Tránh trùng số Chương 20/21 và giảm rác phôi cũ; nội dung còn lại giữ đúng mục tiêu 32 chương.",
+    "addedApplicationSimulations": 51,
+    "theoryMicroScrollLock": "preserved + E33 marker"
+  },
+  "removedSummary": {
+    "data/lessons.json": 16,
+    "data/formulas.json": 16,
+    "data/exercises.json": 32,
+    "data/applications.json": 16,
+    "data/simulations.json": 16,
+    "data/professor_qa.json": 16,
+    "data/question_bank.json": 48,
+    "data/review_packs.json": 16,
+    "data/content-index.json": 16,
+    "data/knowledge-index.json": 16,
+    "data/mastery-map.json": 16,
+    "data/test_blueprints.json": 2,
+    "data/tests.json/questions": 48
+  },
+  "notes": [
+    "Không xuất FINAL trong lượt này.",
+    "Các chương 2,3,5 và 20 ARIMA vẫn có 9 bài vì đó là nội dung học thuật thật, không phải rác trùng."
+  ]
+}

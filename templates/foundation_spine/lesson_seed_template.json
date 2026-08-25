@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "BAUMAN_MATH_LESSON_SEED_V1",
+  "lessonId": "[LESSON_ID]",
+  "chapterId": "[CHAPTER_ID]",
+  "stage": "[STAGE_ID]",
+  "facultyId": "[FACULTY_ID]",
+  "departmentId": "[DEPARTMENT_ID]",
+  "lessonNo": 1,
+  "title": "[Tên bài]",
+  "displayTitle": "[§x.y · Tên bài]",
+  "kind": "theory",
+  "contentStatus": "draft_seed",
+  "slides": []
+}

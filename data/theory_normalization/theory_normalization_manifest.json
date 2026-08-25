@@ -1,0 +1,40 @@
+{
+  "id":"bauman_math_theory_normalization_manifest_v1",
+  "schema":"bauman_math_theory_normalization_manifest_v1",
+  "version":"NORMALIZATION_MANIFEST_V1_1",
+  "sourcePolicy":"Normalization artifacts define canonical semantic display forms across approved core, reference, slideshow and full-view layers without changing mathematical meaning.",
+  "pipelinePosition":{"after":"full_view","before":"final_integration_acceptance"},
+  "requiredSections":["sources","normalizationContract","auditSummary","canonicalNotation","canonicalFormulaRegistry","unitAndQuantityRules","semanticStyleRules","layoutDensityContract","artifactMappings","resolvedDisplayVariants","verification","downstreamMapping","qualityGate"],
+  "rules":[
+    "All four approved lesson layers and versions must be recorded.",
+    "Core meaning has highest precedence.",
+    "Lexical and spacing variants may map to one canonical display form.",
+    "Semantic conflicts must block final integration.",
+    "Formula IDs must remain stable and no new mathematics may be introduced.",
+    "Ordered family, column matrix, coordinate column and transform direction must remain distinct.",
+    "Units and norm-versus-norm-squared labels must remain unambiguous.",
+    "Layout rules must be semantic and may not contain CSS, pixels, JavaScript or animation directives.",
+    "Approved source artifacts must not be rewritten solely for cosmetic spacing differences.",
+    "Reader Pro and E235 remain unchanged during normalization."
+  ],
+  "records":[
+    {
+      "chapter":"C01",
+      "lesson":"L04",
+      "lessonId":"MATH-VN-C01-vector_trong_khong_gian_-L04-basis-span-coordinate-e140",
+      "path":"theory_normalization_c01_l04.json",
+      "sourceCoreVersion":"CORE_C01_L04_V1_APPROVED",
+      "sourceReferenceVersion":"REFERENCE_C01_L04_V1_APPROVED",
+      "sourceSlideshowVersion":"SLIDESHOW_C01_L04_V1_APPROVED",
+      "sourceFullViewVersion":"FULL_VIEW_C01_L04_V1_APPROVED",
+      "canonicalFormulaCount":12,
+      "canonicalNotationCount":11,
+      "displayVariantCount":11,
+      "unitRuleCount":5,
+      "semanticConflictCount":0,
+      "sourceArtifactsRewritten":0,
+      "visualBaseline":"E235_READER_PRO_FORMULA_STANDARD_R2",
+      "status":"approved_across_core_reference_slideshow_full_view"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "json": {
+    "applications.json": "PASS",
+    "concept-map.json": "PASS",
+    "content-index.json": "PASS",
+    "content-manifest.json": "PASS",
+    "curriculum.json": "PASS",
+    "deep-speaking-bauman.json": "PASS",
+    "dialogue-bauman-az.json": "PASS",
+    "exercises.json": "PASS",
+    "formulas.json": "PASS",
+    "grammar-path.json": "PASS",
+    "grammar.json": "PASS",
+    "handwriting.json": "PASS",
+    "knowledge-index.json": "PASS",
+    "learning_rules.json": "PASS",
+    "lessons.json": "PASS",
+    "mastery-map.json": "PASS",
+    "mindmap.json": "PASS",
+    "professor_qa.json": "PASS",
+    "question_bank.json": "PASS",
+    "review_packs.json": "PASS",
+    "simulations.json": "PASS",
+    "speaking-link-index.json": "PASS",
+    "speaking.json": "PASS",
+    "test_blueprints.json": "PASS",
+    "tests.json": "PASS",
+    "theory-framework.json": "PASS",
+    "videos.json": "PASS",
+    "vocab.json": "PASS",
+    "writing.json": "PASS"
+  },
+  "js": {
+    "assets/core.js": "PASS",
+    "assets/subject-adapter.js": "PASS",
+    "assets/math.js": "PASS",
+    "assets/planning-bridge.js": "PASS",
+    "subject-manifest.js": "PASS"
+  },
+  "chapterChecks": {
+    "MATH-HK1-MT-C14": {
+      "lessons": 8,
+      "slides": 160,
+      "formulas": 24,
+      "exercises": 64,
+      "applications": 16,
+      "simulations": 16,
+      "professor_qa": 8,
+      "speaking": 8,
+      "question_bank": 48,
+      "review_packs": 8,
+      "mastery-map": 8,
+      "content-index": 8,
+      "vocab": 32,
+      "lesson_sim_pairs_ok": true,
+      "question_review_links_ok": true,
+      "lesson_has_20_slides": true
+    },
+    "MATH-HK1-LA-C15": {
+      "lessons": 8,
+      "slides": 160,
+      "formulas": 24,
+      "exercises": 64,
+      "applications": 16,
+      "simulations": 16,
+      "professor_qa": 8,
+      "speaking": 8,
+      "question_bank": 48,
+      "review_packs": 8,
+      "mastery-map": 8,
+      "content-index": 8,
+      "vocab": 32,
+      "lesson_sim_pairs_ok": true,
+      "question_review_links_ok": true,
+      "lesson_has_20_slides": true
+    }
+  },
+  "uiFixChecks": {
+    "E19_lock_or_marker_present": true,
+    "E20_lock_or_marker_present": true,
+    "E21_lock_or_marker_present": true,
+    "E22_lock_or_marker_present": true,
+    "e23FastBatchLockPresent": true,
+    "overflowYHiddenRule": true,
+    "verticalScrollbarDisabled": true,
+    "storageIndicatorV38": true,
+    "renderFormulaShim": true
+  },
+  "fontChecks": {
+    "replacementCharFiles": [],
+    "cyrillicTermsPresent": true
+  },
+  "integrity": {
+    "allJsonPass": true,
+    "allJsPass": true,
+    "chapterTargetsOk": true,
+    "zipStatus": "PASS",
+    "zipFile": "A2_Math_Bauman_Elearning_E23_FAST_BATCH_CHECKPOINT_TEST_SNAPSHOT.zip",
+    "zipEntries": 157,
+    "zipSizeBytes": 1603384,
+    "sha256": "b6b9a8b49a69e5041816344d81dd4743727cca01c7e2ce407a893f03e8f7fe69"
+  }
+}

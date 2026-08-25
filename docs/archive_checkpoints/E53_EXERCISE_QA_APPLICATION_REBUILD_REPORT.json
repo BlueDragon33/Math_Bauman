@@ -1,0 +1,19 @@
+{
+  "version": "E53_EXERCISE_QA_APPLICATION_REBUILD_CHECKPOINT_TEST_SNAPSHOT",
+  "status": "CHECKPOINT / TEST / SNAPSHOT, NOT FINAL",
+  "base": "E52_THEORY_STRUCTURE_DEDUP",
+  "changes": [
+    "Bài tập rebuilt: exactly four real levels per lesson: Dễ, Trung bình, Nâng cao, Khó.",
+    "Exercise tasks differ by purpose: recognition, multi-step calculation, sensitivity/debug, pipeline/failure case.",
+    "Vấn đáp rebuilt: every professor question has short answer, full model answer, correctness criteria, wrong answer, scoring guide.",
+    "Dialogue route now uses professor_qa instead of application cases.",
+    "Ứng dụng rebuilt: direct theory dependency, no exercise dependency, compact real-use/code/input/output structure.",
+    "UI override for exercises, QA, and applications with compact premium view."
+  ],
+  "counts": {
+    "lessons": 260,
+    "exercises": 1040,
+    "professor_qa": 260,
+    "applications": 520
+  }
+}

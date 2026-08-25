@@ -1,0 +1,31 @@
+{
+  "id": "FINAL_VALIDATION_REPORT",
+  "status": "PASS",
+  "counts": {
+    "chapters": 32,
+    "lessons": 260,
+    "exercises": 1040,
+    "applications": 520,
+    "simulationsUnified": 260,
+    "formulas": 678,
+    "professorQa": 260,
+    "questionBank": 1423,
+    "reviewPacks": 260,
+    "testBlueprints": 32
+  },
+  "checks": {
+    "jsonParse": "PASS",
+    "nodeSyntax": "PASS",
+    "manifestFinal": true,
+    "contentManifestFinal": true,
+    "exerciseFourLevelsIssues": 0,
+    "blueprintIssues": 0,
+    "badUnifiedSimulations": 0,
+    "objectObjectHits": [],
+    "activeLegacyStatusHits": []
+  },
+  "hashes": {
+    "coreJsSha256": "d3e555f5658984a0885096de9ac4f87125cbe233f61138e2481250063c886038",
+    "coreCssSha256": "5ebc3523fbbfbb7378866998d3c51b3da96d76f16febe6d1b977e29f2f8d7429"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "items": [
+    {
+      "id": "ugv_feature_pipeline",
+      "title": "UGV Feature Pipeline: vector, projection, PCA",
+      "type": "UGV/AI mini-project",
+      "linkedSubjects": [
+        "ai",
+        "signal",
+        "programming",
+        "systems"
+      ],
+      "mathBlocks": [
+        "linear_algebra",
+        "ai_signal_research_math"
+      ],
+      "outputs": [
+        "notebook PCA nhỏ",
+        "bảng feature",
+        "giải thích vector/projection"
+      ],
+      "stageFit": [
+        "prepare",
+        "m1"
+      ],
+      "researchUse": "Dùng làm nền cho feature extraction và giảm chiều dữ liệu telemetry."
+    },
+    {
+      "id": "usv_signal_monitoring",
+      "title": "USV/Signal Monitoring: chuỗi thời gian và anomaly score",
+      "type": "Signal mini-project",
+      "linkedSubjects": [
+        "signal",
+        "ai",
+        "systems"
+      ],
+      "mathBlocks": [
+        "probability_statistics",
+        "ai_signal_research_math"
+      ],
+      "outputs": [
+        "bảng rolling mean",
+        "autocorrelation note",
+        "anomaly score report"
+      ],
+      "stageFit": [
+        "m3",
+        "m4"
+      ],
+      "researchUse": "Dùng để nối môn Signal với phát hiện bất thường và báo cáo kết quả luận văn."
+    },
+    {
+      "id": "sensor_noise_bayes_lab",
+      "title": "Bayes và nhiễu cảm biến: đánh giá độ tin cậy",
+      "type": "Probability/statistics lab",
+      "linkedSubjects": [
+        "signal",
+        "systems",
+        "ai"
+      ],
+      "mathBlocks": [
+        "probability_statistics"
+      ],
+      "outputs": [
+        "bảng xác suất hậu nghiệm",
+        "confidence interval",
+        "kết luận độ tin cậy cảm biến"
+      ],
+      "stageFit": [
+        "prepare",
+        "preparatory"
+      ],
+      "researchUse": "Chuẩn bị lập luận về dữ liệu nhiễu và độ tin cậy đo đạc."
+    },
+    {
+      "id": "optimization_loss_lab",
+      "title": "Loss surface và gradient descent cho mô hình nhỏ",
+      "type": "Optimization/AI lab",
+      "linkedSubjects": [
+        "ai",
+        "programming"
+      ],
+      "mathBlocks": [
+        "multivariable_calculus",
+        "optimization"
+      ],
+      "outputs": [
+        "ảnh mặt lỗi",
+        "bảng learning rate",
+        "ghi chú overfit/underfit"
+      ],
+      "stageFit": [
+        "prepare",
+        "m1",
+        "m3"
+      ],
+      "researchUse": "Dùng để hiểu huấn luyện mô hình, regularization và lựa chọn tham số."
+    },
+    {
+      "id": "regularized_model_selection",
+      "title": "Regularization và lựa chọn nghiệm thực dụng",
+      "type": "AI/Systems application",
+      "linkedSubjects": [
+        "ai",
+        "systems",
+        "programming"
+      ],
+      "mathBlocks": [
+        "optimization"
+      ],
+      "outputs": [
+        "bảng so sánh nghiệm",
+        "metric before/after regularization",
+        "nhận xét bias-variance"
+      ],
+      "stageFit": [
+        "m1",
+        "m3"
+      ],
+      "researchUse": "Phục vụ lập luận vì sao chọn mô hình/siêu tham số trong НИР/ВКР."
+    },
+    {
+      "id": "thesis_metric_argument_pack",
+      "title": "Gói metric và lập luận bảo vệ luận văn",
+      "type": "НИР/ВКР artifact",
+      "linkedSubjects": [
+        "research",
+        "ai",
+        "signal",
+        "systems"
+      ],
+      "mathBlocks": [
+        "ai_signal_research_math",
+        "probability_statistics",
+        "optimization"
+      ],
+      "outputs": [
+        "bảng metric",
+        "phụ lục công thức",
+        "câu trả lời phản biện theo số liệu"
+      ],
+      "stageFit": [
+        "m4"
+      ],
+      "researchUse": "Dùng trực tiếp cho báo cáo, phụ lục và phần bảo vệ luận văn."
+    },
+    {
+      "id": "engineering_notation_pack",
+      "title": "Bộ ký hiệu và lời giải kỹ thuật bằng tiếng Nga/Anh",
+      "type": "Foundation artifact",
+      "linkedSubjects": [
+        "russian",
+        "research"
+      ],
+      "mathBlocks": [
+        "foundations"
+      ],
+      "outputs": [
+        "sổ ký hiệu",
+        "mẫu lời giải",
+        "glossary toán kỹ thuật"
+      ],
+      "stageFit": [
+        "prepare",
+        "preparatory"
+      ],
+      "researchUse": "Giảm lỗi đọc đề, viết lời giải và trình bày công thức trong môi trường Nga."
+    }
+  ]
+}

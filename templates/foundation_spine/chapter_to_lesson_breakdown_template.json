@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "BAUMAN_MATH_CHAPTER_BREAKDOWN_V1",
+  "chapterId": "[CHAPTER_ID_FROM_CHAPTER_SPINE]",
+  "chapterTitle": "[CHAPTER_TITLE]",
+  "targetLessonCount": 6,
+  "lessons": [
+    {
+      "lessonNo": 1,
+      "lessonId": "[AUTO_OR_MANUAL_LESSON_ID]",
+      "lessonTitle": "[Tên bài]",
+      "coreQuestion": "[Câu hỏi trung tâm]",
+      "whyItMatters": "[Vì sao cần học]",
+      "dependsOn": [],
+      "willUnlock": [],
+      "contentTargets": [
+        "theory_slides",
+        "formulas",
+        "simulation_unified",
+        "exercises",
+        "applications",
+        "professor_qa",
+        "review_questions"
+      ]
+    }
+  ]
+}

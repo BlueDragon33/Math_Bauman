@@ -1,0 +1,234 @@
+{
+  "id": "bauman_math_theory_case_c01_l05_v1",
+  "schema": "bauman_math_theory_case_v1",
+  "version": "CASE_C01_L05_V1_LOCKED",
+  "status": "approved_for_downstream_academic_artifacts",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L05-subspace-data-representation-e140",
+  "lessonTitle": "§1.5 · Không gian con và biểu diễn dữ liệu",
+  "caseId": "ROTATING_MACHINE_4CH_2MODE",
+  "purpose": "Case số cố định cho subspace, affine centering, orthogonal projection, residual, numerical rank và diagnostic interpretation.",
+  "physicalContract": {
+    "system": "rotating_machine",
+    "operatingRegime": "single_normal_operating_regime",
+    "observation": "fixed-window calibrated vibration-feature vector",
+    "ambientDimension": 4,
+    "subspaceDimension": 2,
+    "featureOrder": [
+      "sensor_A_rms_acceleration",
+      "sensor_B_rms_acceleration",
+      "sensor_C_rms_acceleration",
+      "sensor_D_rms_acceleration"
+    ],
+    "units": "m/s^2 RMS",
+    "sampleOrientationForCalibrationMatrix": "samples_as_rows",
+    "preprocessing": [
+      "same fixed window",
+      "same calibration version",
+      "same feature order",
+      "subtract locked mean mu",
+      "no per-sample unit-norm normalization"
+    ]
+  },
+  "notation": {
+    "rawObservation": "x in R^4",
+    "mean": "mu in R^4",
+    "centeredObservation": "y = x - mu",
+    "orthonormalBasis": "Q in R^(4 x 2)",
+    "coordinates": "z = Q^T y in R^2",
+    "projection": "y_hat = QQ^T y",
+    "residual": "r = y - y_hat",
+    "score": "||r||_2"
+  },
+  "mean": {
+    "symbol": "mu",
+    "value": [0.4, 0.35, 0.45, 0.3],
+    "units": "m/s^2 RMS"
+  },
+  "orthonormalBasis": {
+    "symbol": "Q",
+    "columns": [
+      {
+        "id": "q1_common_mode",
+        "value": [0.5, 0.5, 0.5, 0.5],
+        "interpretation": "common in-phase vibration mode"
+      },
+      {
+        "id": "q2_alternating_mode",
+        "value": [0.5, -0.5, 0.5, -0.5],
+        "interpretation": "alternating A/C versus B/D mode"
+      }
+    ],
+    "matrixByRows": [
+      [0.5, 0.5],
+      [0.5, -0.5],
+      [0.5, 0.5],
+      [0.5, -0.5]
+    ],
+    "gram": [
+      [1.0, 0.0],
+      [0.0, 1.0]
+    ]
+  },
+  "orthogonalComplementBasis": {
+    "symbol": "R",
+    "purpose": "Construct deterministic residuals orthogonal to col(Q).",
+    "columns": [
+      {
+        "id": "q3_pair_difference",
+        "value": [0.5, 0.5, -0.5, -0.5]
+      },
+      {
+        "id": "q4_cross_difference",
+        "value": [0.5, -0.5, -0.5, 0.5]
+      }
+    ],
+    "invariants": [
+      "R^T R = I_2",
+      "Q^T R = 0"
+    ]
+  },
+  "orthogonalProjector": {
+    "symbol": "P_U = QQ^T",
+    "value": [
+      [0.5, 0.0, 0.5, 0.0],
+      [0.0, 0.5, 0.0, 0.5],
+      [0.5, 0.0, 0.5, 0.0],
+      [0.0, 0.5, 0.0, 0.5]
+    ],
+    "complementProjector": [
+      [0.5, 0.0, -0.5, 0.0],
+      [0.0, 0.5, 0.0, -0.5],
+      [-0.5, 0.0, 0.5, 0.0],
+      [0.0, -0.5, 0.0, 0.5]
+    ],
+    "invariants": [
+      "P_U^T = P_U",
+      "P_U^2 = P_U",
+      "P_U Q = Q",
+      "(I-P_U)Q = 0"
+    ]
+  },
+  "generalBasisEquivalent": {
+    "purpose": "Demonstrate that a non-orthonormal full-column-rank basis needs the general projector formula.",
+    "symbol": "B",
+    "matrixByRows": [
+      [1.0, 1.0],
+      [1.0, 0.0],
+      [1.0, 1.0],
+      [1.0, 0.0]
+    ],
+    "columnRelations": [
+      "b1 = 2 q1",
+      "b2 = q1 + q2"
+    ],
+    "gram": [
+      [4.0, 2.0],
+      [2.0, 2.0]
+    ],
+    "gramInverse": [
+      [0.5, -0.5],
+      [-0.5, 1.0]
+    ],
+    "projectorFormula": "B(B^T B)^(-1)B^T",
+    "projectorEqualsQQT": true,
+    "prohibitedShortcut": "BB^T"
+  },
+  "normalSample": {
+    "id": "X_NORMAL_01",
+    "raw": [0.62, 0.74, 0.63, 0.71],
+    "centered": [0.22, 0.39, 0.18, 0.41],
+    "orthonormalCoordinates": [0.6, -0.2],
+    "generalBasisCoordinates": [0.4, -0.2],
+    "projected": [0.2, 0.4, 0.2, 0.4],
+    "residual": [0.02, -0.01, -0.02, 0.01],
+    "score": 0.0316227766016838,
+    "units": "m/s^2 RMS",
+    "interpretation": "Well represented by the current two-mode model. This does not prove sensor health."
+  },
+  "mismatchSample": {
+    "id": "X_MISMATCH_01",
+    "raw": [0.9, 0.6, 0.55, 0.85],
+    "centered": [0.5, 0.25, 0.1, 0.55],
+    "orthonormalCoordinates": [0.7, -0.1],
+    "projected": [0.3, 0.4, 0.3, 0.4],
+    "residual": [0.2, -0.15, -0.2, 0.15],
+    "score": 0.3535533905932738,
+    "units": "m/s^2 RMS",
+    "interpretation": "Poorly represented by the current normal-operation model. Cause remains undetermined."
+  },
+  "demonstrationThreshold": {
+    "symbol": "gamma_demo",
+    "value": 0.1,
+    "units": "m/s^2 RMS",
+    "status": "teaching_case_only",
+    "normalSampleDecision": "below_threshold",
+    "mismatchSampleDecision": "above_threshold",
+    "warning": "This threshold is locked only for the synthetic teaching case and must never be presented as a universal machine-fault threshold."
+  },
+  "calibrationMatrix": {
+    "symbol": "X_c",
+    "shape": [8, 4],
+    "orientation": "samples_as_rows_features_as_columns",
+    "columnMean": [0.0, 0.0, 0.0, 0.0],
+    "rows": [
+      [0.205, 0.415, 0.195, 0.385],
+      [-0.205, -0.415, -0.195, -0.385],
+      [0.3525, 0.0375, 0.3475, 0.0625],
+      [-0.3525, -0.0375, -0.3475, -0.0625],
+      [-0.09, 0.305, -0.11, 0.295],
+      [0.09, -0.305, 0.11, -0.295],
+      [0.395, 0.315, 0.405, 0.285],
+      [-0.395, -0.315, -0.405, -0.285]
+    ],
+    "singularValues": [1.44955817, 0.77504298, 0.03505112, 0.00330126],
+    "exactFloatingPointRank": 4,
+    "numericalRankContract": {
+      "tolerance": 0.05,
+      "units": "m/s^2 RMS",
+      "rank": 2,
+      "rule": "count singular values strictly greater than tolerance",
+      "warning": "The tolerance is a case-specific engineering teaching rule, not NumPy's default and not a universal physical threshold."
+    },
+    "retainedEnergyK2": 0.9995414686511285,
+    "retainedEnergyPercentK2": 99.95414686511285
+  },
+  "verificationTolerances": {
+    "orthonormalityAtol": 1e-12,
+    "projectorAtol": 1e-12,
+    "reconstructionAtol": 1e-12,
+    "residualOrthogonalityAtol": 1e-12,
+    "svdReconstructionAtol": 1e-10
+  },
+  "lockedInvariants": [
+    "Q has shape 4 x 2",
+    "Q^T Q = I_2",
+    "P_U = QQ^T",
+    "P_U is symmetric and idempotent",
+    "general-basis projector equals QQ^T",
+    "normal coordinates in Q are (0.6, -0.2)",
+    "normal coordinates in B are (0.4, -0.2)",
+    "normal score is 0.0316227766016838",
+    "mismatch coordinates in Q are (0.7, -0.1)",
+    "mismatch score is 0.3535533905932738",
+    "calibration matrix shape is 8 x 4 with zero column mean",
+    "calibration singular values remain ordered as locked",
+    "numerical rank is 2 only under tau = 0.05",
+    "retained energy for k = 2 is approximately 99.9541 percent"
+  ],
+  "prohibitedClaims": [
+    "A score above gamma_demo proves a bearing fault.",
+    "The exact rank of the noisy calibration matrix is 2.",
+    "NumPy default matrix_rank must return 2.",
+    "Retaining 99.9541 percent energy guarantees downstream prediction accuracy.",
+    "The four channels may be reordered without updating mu, Q and the model contract.",
+    "BB^T is the orthogonal projector for the locked general basis B.",
+    "A low residual proves all sensors and the machine are healthy."
+  ],
+  "downstreamRules": [
+    "Every numeric slide must cite this case version.",
+    "No downstream artifact may round values in a way that changes invariant checks.",
+    "Display values may be shortened, but canonical values remain those in this file.",
+    "Any replacement case requires a new version and complete downstream regeneration.",
+    "Runtime integration is forbidden until academic acceptance."
+  ]
+}

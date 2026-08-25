@@ -1,0 +1,242 @@
+{
+  "gate": "MATH-V2-L1-L2-STATIC",
+  "status": "PASS",
+  "source": {
+    "repository": "BlueDragon33/Bauman-master-ai-system",
+    "branch": "migration/webapp-l1-audit-storage",
+    "package": "subjects/math",
+    "destinationRepository": "BlueDragon33/Math_Bauman",
+    "destinationBranch": "migration/full-webapp-v2"
+  },
+  "inventory": {
+    "lessons": 347,
+    "theoryOverlays": 18,
+    "chapters": 56,
+    "familyCounts": {
+      "formulas": 0,
+      "exercises": 0,
+      "applications": 0,
+      "simulations": 0,
+      "question_bank": 0,
+      "review_packs": 0,
+      "test_blueprints": 0,
+      "professor_qa": 0,
+      "mindmap": 0
+    },
+    "lessonDigest": "5554fc9265d640a99831763e073c8e42ccf756a1f7f0a9f92a8df9a376b0a086",
+    "overlayDigest": "b20a903463b9c24575b6666377c2549e295ba1ff2d56796b94c16de4564643eb"
+  },
+  "checks": [
+    {
+      "id": "LESSONS-347",
+      "title": "preserve all 347 legacy Mathematics lessons",
+      "ok": true,
+      "evidence": 347
+    },
+    {
+      "id": "LESSON-ID-UNIQUE",
+      "title": "legacy lesson IDs are complete and unique",
+      "ok": true,
+      "evidence": 347
+    },
+    {
+      "id": "OVERLAYS-18",
+      "title": "preserve all 18 authoritative theory overlays",
+      "ok": true,
+      "evidence": 18
+    },
+    {
+      "id": "OVERLAY-ID-UNIQUE",
+      "title": "overlay lesson IDs are complete and unique",
+      "ok": true,
+      "evidence": 18
+    },
+    {
+      "id": "OVERLAY-ANCHORS-RESOLVE",
+      "title": "every overlay has a stable chapter anchor in the 56-chapter frame",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "OVERLAY-ID-BOUNDARY",
+      "title": "overlay IDs stay distinct and are never silently rewritten as legacy IDs",
+      "ok": true,
+      "evidence": [
+        "MATH-VN-C01-vector_trong_khong_gian_-L01-vector-as-engineering-data-e130",
+        "MATH-VN-C01-vector_trong_khong_gian_-L02-norm-distance-metric-e139",
+        "MATH-VN-C01-vector_trong_khong_gian_-L03-dot-angle-projection-e139",
+        "MATH-VN-C01-vector_trong_khong_gian_-L04-basis-span-coordinate-e140",
+        "MATH-VN-C01-vector_trong_khong_gian_-L05-subspace-data-representation-e140",
+        "MATH-VN-C01-vector_trong_khong_gian_-L06-vector-to-data-matrix-e140",
+        "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L01-matrix-as-data-and-transform-e142",
+        "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L02-matrix-multiplication-pipeline-e142",
+        "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L03-rank-column-space-independent-information-e142",
+        "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L04-inverse-linear-system-solution-e143",
+        "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L05-linear-transform-geometry-data-e143",
+        "MATH-VN-C02-ma_tran_va_phep_bien_oi_-L06-matrix-to-pca-linear-model-e143",
+        "MATH-VN-C03-giai_tich_dao_ham_gradient-L01-function-as-input-output-model-e145",
+        "MATH-VN-C03-giai_tich_dao_ham_gradient-L02-derivative-system-sensitivity-e145",
+        "MATH-VN-C03-giai_tich_dao_ham_gradient-L03-gradient-direction-fastest-change-e145",
+        "MATH-VN-C03-giai_tich_dao_ham_gradient-L04-gradient-descent-learning-rate-e146",
+        "MATH-VN-C03-giai_tich_dao_ham_gradient-L05-loss-extrema-optimality-e146",
+        "MATH-VN-C03-giai_tich_dao_ham_gradient-L06-gradient-backprop-ml-optimization-e146"
+      ]
+    },
+    {
+      "id": "FRAME-56",
+      "title": "preserve the 56-chapter theory frame",
+      "ok": true,
+      "evidence": 56
+    },
+    {
+      "id": "STAGES",
+      "title": "learner stages vn/prep/hk1-hk4 remain represented through reviewed aliases",
+      "ok": true,
+      "evidence": {
+        "source": [
+          "vn",
+          "prep",
+          "master_y1_s1",
+          "master_y1_s2",
+          "nir",
+          "vkr"
+        ],
+        "canonical": [
+          "vn",
+          "prep",
+          "hk1",
+          "hk2",
+          "hk3",
+          "hk4"
+        ]
+      }
+    },
+    {
+      "id": "STANDALONE-PATHS",
+      "title": "index has no parent-repository dependency",
+      "ok": true,
+      "evidence": [
+        "manifest.webmanifest",
+        "assets/app-icon.svg",
+        "assets/core.css",
+        "assets/math.css",
+        "assets/webapp.css",
+        "assets/theory_skin/theory-tab-E129.css",
+        "assets/theory_skin/theory-title-clean-E183.css",
+        "assets/theory_skin/theory-ui-tokens-E132.css",
+        "assets/theory_skin/theory-slideshow-E132.css",
+        "assets/platform/storage-adapter.js",
+        "assets/platform/subject-storage.js",
+        "subject-manifest.js",
+        "assets/subject-adapter.js",
+        "assets/planning-bridge.js",
+        "assets/core.js",
+        "assets/theory_skin/theory-presenter-route-lock-E243.js",
+        "assets/program_frame/program-frame-E130.js",
+        "assets/theory_skin/theory-tab-E129.js",
+        "assets/theory_skin/theory-legacy-route-E246.js",
+        "assets/theory_skin/theory-min-slide-contract-E239.js",
+        "assets/theory_skin/theory-content-source-E240.js",
+        "assets/theory_skin/theory-learning-path-E186.js",
+        "assets/theory_skin/theory-title-clean-E183.js",
+        "assets/theory_skin/theory-learning-final-labels-E187.js",
+        "assets/theory_skin/theory-slideshow-E202.js",
+        "assets/theory_skin/theory-slideshow-identity-E210.js",
+        "assets/theory_skin/theory-slideshow-reader-content-E211.js",
+        "assets/theory_skin/theory-artifact-registry-E244.js",
+        "assets/theory_skin/theory-artifact-authoritative-route-E245.js",
+        "assets/theory_skin/theory-artifact-reader-E241.js",
+        "assets/theory_skin/theory-slideshow-richness-E242.js",
+        "assets/theory_skin/theory-slideshow-reader-formula-accuracy-E224.js",
+        "assets/theory_skin/theory-formula-typeset-E234.js",
+        "assets/theory_skin/theory-formula-fraction-align-E235.js",
+        "assets/theory_skin/theory-slideshow-reader-fit-E212.js",
+        "assets/webapp-bootstrap.js"
+      ]
+    },
+    {
+      "id": "LOCAL-ASSETS",
+      "title": "all index local assets exist",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "WEBAPP-SHELL",
+      "title": "single Web App shell retains legacy core and new theory runtime",
+      "ok": true,
+      "evidence": null
+    },
+    {
+      "id": "PWA",
+      "title": "manifest and versioned Service Worker are present",
+      "ok": true,
+      "evidence": null
+    },
+    {
+      "id": "PWA-SHELL-COVERAGE",
+      "title": "every local asset referenced by index is precached for first offline reload",
+      "ok": true,
+      "evidence": []
+    },
+    {
+      "id": "NO-HUTECH-UI",
+      "title": "learner-facing shell does not expose HUTECH",
+      "ok": true,
+      "evidence": null
+    },
+    {
+      "id": "EMPTY-FAMILIES-DISCLOSED",
+      "title": "empty content families are disclosed instead of overstated as complete",
+      "ok": true,
+      "evidence": {
+        "formulas": 0,
+        "exercises": 0,
+        "applications": 0,
+        "simulations": 0,
+        "question_bank": 0,
+        "review_packs": 0,
+        "test_blueprints": 0,
+        "professor_qa": 0,
+        "mindmap": 0
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "id": "EMPTY-FORMULAS",
+      "message": "formulas.json is an empty source shell and must be completed in planned content rounds."
+    },
+    {
+      "id": "EMPTY-EXERCISES",
+      "message": "exercises.json is an empty source shell and must be completed in planned content rounds."
+    },
+    {
+      "id": "EMPTY-APPLICATIONS",
+      "message": "applications.json is an empty source shell and must be completed in planned content rounds."
+    },
+    {
+      "id": "EMPTY-SIMULATIONS",
+      "message": "simulations.json is an empty source shell and must be completed in planned content rounds."
+    },
+    {
+      "id": "EMPTY-QUESTION_BANK",
+      "message": "question_bank.json is an empty source shell and must be completed in planned content rounds."
+    },
+    {
+      "id": "EMPTY-REVIEW_PACKS",
+      "message": "review_packs.json is an empty source shell and must be completed in planned content rounds."
+    },
+    {
+      "id": "EMPTY-TEST_BLUEPRINTS",
+      "message": "test_blueprints.json is an empty source shell and must be completed in planned content rounds."
+    },
+    {
+      "id": "EMPTY-PROFESSOR_QA",
+      "message": "professor_qa.json is an empty source shell and must be completed in planned content rounds."
+    },
+    {
+      "id": "EMPTY-MINDMAP",
+      "message": "mindmap.json is an empty source shell and must be completed in planned content rounds."
+    }
+  ]
+}

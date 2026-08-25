@@ -1,0 +1,23 @@
+{
+  "checkpoint": "E20_CHECKPOINT_TEST_SNAPSHOT",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapterId": "MATH-PREP-PS-C11",
+  "chapterTitle": "Chương 11 · Xác suất - thống kê bằng tiếng Nga",
+  "stage": "GĐ2 · Dự bị Nga/STANKIN",
+  "lessons": 8,
+  "theorySlides": 160,
+  "formulas": 24,
+  "exercises": 64,
+  "applications": 16,
+  "simulations": 16,
+  "professorQa": 8,
+  "questions": 48,
+  "reviewPacks": 8,
+  "vocabCards": 32,
+  "preservedFix": {
+    "target": "Tab Lý thuyết · thanh chọn slide",
+    "source": "E19 screenshot fix",
+    "guarantee": "horizontal-only rail; overflow-y hidden; vertical scrollbar disabled"
+  },
+  "notFinal": true
+}

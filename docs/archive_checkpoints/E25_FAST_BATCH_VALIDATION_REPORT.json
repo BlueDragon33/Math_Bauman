@@ -1,0 +1,60 @@
+{
+  "checkpoint": "E25",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "source": "A2_Math_Bauman_Elearning_E24_FAST_BATCH_CHECKPOINT_TEST_SNAPSHOT.zip",
+  "result": "PASS",
+  "checks": {
+    "jsonParse": "PASS",
+    "jsSyntax": {
+      "assets/core.js": "PASS",
+      "assets/subject-adapter.js": "PASS",
+      "assets/math.js": "PASS",
+      "assets/planning-bridge.js": "PASS",
+      "subject-manifest.js": "PASS"
+    },
+    "noReplacementChar": "PASS",
+    "cyrillicPresent": "PASS",
+    "renderFormulaShim": "PASS",
+    "storageIndicator": "PASS",
+    "theoryMicroScrollLock": "PASS",
+    "zipIntegrity": "PASS"
+  },
+  "chapters": {
+    "MATH-HK3-TS-C18": {
+      "title": "Chương 18 · Lý thuyết chuỗi thời gian cho dữ liệu cảm biến",
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "targetCounts": "PASS",
+      "simulationsTheoryApplication": "PASS",
+      "questionToReview": "PASS"
+    },
+    "MATH-HK3-TS-C19": {
+      "title": "Chương 19 · Sai số dự báo, đánh giá mô hình và cross-validation theo thời gian",
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "targetCounts": "PASS",
+      "simulationsTheoryApplication": "PASS",
+      "questionToReview": "PASS"
+    }
+  }
+}

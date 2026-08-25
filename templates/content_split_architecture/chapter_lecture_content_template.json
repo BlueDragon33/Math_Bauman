@@ -1,0 +1,12 @@
+{
+  "frameFile": "chapter_lecture_frame.json",
+  "contentFile": "chapter_lecture_content.json",
+  "recordKey": "chapterLectureId",
+  "contentTemplate": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "chapterLectureId": "MATH-VN-C01-CL01",
+    "chapterTitle": "Vector trong không gian dữ liệu",
+    "slides": [],
+    "auditStatus": "DRAFT"
+  }
+}

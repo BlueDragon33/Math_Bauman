@@ -1,0 +1,31 @@
+{
+  "version": "MathRoadmap V6",
+  "date": "2026-06-12",
+  "sourceUiRoot": "/mnt/data/A1_Russian_Bauman_Exam_Stable_Final.zip",
+  "copiedUiFiles": [
+    "index.html",
+    "assets/core.css",
+    "assets/core.js",
+    "assets/planning-bridge.js",
+    "assets/russian.css -> assets/math.css base"
+  ],
+  "counts": {
+    "lessons": 48,
+    "exercises": 144,
+    "tests": 384,
+    "formulas": 48,
+    "formulaCards": 80,
+    "oralDefense": 48,
+    "writing": 48,
+    "simulations": 8
+  },
+  "stages": [
+    "vn",
+    "prep",
+    "hk1",
+    "hk2",
+    "hk3",
+    "hk4"
+  ],
+  "qa": []
+}

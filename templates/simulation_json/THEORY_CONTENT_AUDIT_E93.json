@@ -1,0 +1,33 @@
+{
+  "id": "THEORY_CONTENT_AUDIT_E93",
+  "status": "REVIEW_FIXED_SYSTEMIC_LAYER",
+  "summary": {
+    "lessons": 260,
+    "slideCountDistribution": {
+      "12": 51,
+      "20": 209
+    },
+    "oldGenericMismatchAfterFix": 0,
+    "duplicateOpeningBodiesAfterFix": 0,
+    "note": "E93 fixes systemic theory generic/misnumbering layer. Full expert-authored deep rewriting should continue by department in later passes."
+  },
+  "fixed": [
+    "Recomputed chapter numbering per faculty + department across full module.",
+    "Updated lesson titles to local §chapter.lesson format.",
+    "Rebuilt all theory slides from lessonId, department, chapter, formula anchor and simulation anchor.",
+    "Removed cross-domain generic slide bodies detected in probability/control lessons.",
+    "Raised early lessons to minimum 12 slides; kept Bauman/prep lessons at 20 slides."
+  ],
+  "remainingRisks": [
+    "Some formula anchors in formulas.json are still generic for early lessons and need a formula-specialist pass.",
+    "Chapter-level slide packs/teacher guide are not yet authored as separate chapter introductions.",
+    "Deep worked examples should be expanded by department rather than generated in one global pass."
+  ],
+  "recommendedNextPasses": [
+    "E94: formula-specialist pass for all weak/generic formulas.",
+    "E95: department-by-department chapter lecture packs and prerequisite map.",
+    "E96: worked-example expansion and exercise-simulation-theory alignment.",
+    "E97: Cốc Cốc UI smoke + content navigation review."
+  ],
+  "badAfterFix": []
+}

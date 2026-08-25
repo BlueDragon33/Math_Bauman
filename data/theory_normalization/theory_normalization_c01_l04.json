@@ -1,0 +1,201 @@
+{
+  "id": "bauman_math_theory_normalization_c01_l04_v1",
+  "schema": "bauman_math_theory_normalization_v1",
+  "version": "NORMALIZATION_C01_L04_V1_APPROVED",
+  "status": "approved_across_core_reference_slideshow_full_view",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L04-basis-span-coordinate-e140",
+  "lessonTitle": "§1.4 · Cơ sở, span và tọa độ",
+  "language": "vi",
+  "sources": {
+    "core": {"path":"../theory_core/theory_core_c01_l04.json","version":"CORE_C01_L04_V1_APPROVED"},
+    "reference": {"path":"../theory_reference/theory_reference_c01_l04.json","version":"REFERENCE_C01_L04_V1_APPROVED"},
+    "slideshow": {"path":"../theory_slideshow/theory_slideshow_c01_l04.json","version":"SLIDESHOW_C01_L04_V1_APPROVED"},
+    "fullView": {"path":"../theory_full_view/theory_full_view_c01_l04.json","version":"FULL_VIEW_C01_L04_V1_APPROVED"}
+  },
+  "normalizationContract": {
+    "canonicalOverlayOnly": true,
+    "coreMeaningHasPrecedence": true,
+    "sourceArtifactsRemainApproved": true,
+    "lexicalVariantsMayMapToOneCanonicalForm": true,
+    "semanticConflictsMustBlockIntegration": true,
+    "mustNotAddNewMathematics": true,
+    "mustNotChangeWorkedCaseValues": true,
+    "mustNotIntroduceRuntimeInstructions": true,
+    "mustNotModifyReaderPro": true,
+    "mustNotModifyE235": true
+  },
+  "auditSummary": {
+    "semanticConflicts": 0,
+    "workedCaseConflicts": 0,
+    "formulaIdConflicts": 0,
+    "notationMeaningConflicts": 0,
+    "displayVariantsFound": 11,
+    "normalizationCategories": [
+      "operator spacing",
+      "existence and implication wording",
+      "vector-versus-component zero notation",
+      "source-target transform arrow",
+      "ordered-family versus matrix notation",
+      "subscripts and superscripts",
+      "dot-product spacing",
+      "norm and residual wording",
+      "SI units",
+      "degree and millisecond notation",
+      "density and block integrity"
+    ],
+    "sourceRewriteRequired": false,
+    "reason": "All differences are lexical or display-level. Canonical rendering can be applied downstream without altering approved mathematical content."
+  },
+  "canonicalNotation": [
+    {"id":"N01","semanticKey":"target_space","sourceAliases":["V"],"canonicalText":"V","displayLatex":"V","meaning":"Target vector space; must be declared before basis claims."},
+    {"id":"N02","semanticKey":"basis_vector","sourceAliases":["b_i"],"canonicalText":"b_i","displayLatex":"\\mathbf{b}_i","meaning":"The i-th vector in an ordered generating family or basis."},
+    {"id":"N03","semanticKey":"ordered_family","sourceAliases":["B=(b_1,...,b_k)","B = (b_1, ..., b_k)"],"canonicalText":"B=(b_1,…,b_k)","displayLatex":"B=(\\mathbf{b}_1,\\ldots,\\mathbf{b}_k)","meaning":"Ordered family; order is semantic data."},
+    {"id":"N04","semanticKey":"coefficient_column","sourceAliases":["c=(c_1,...,c_k)^T","c = (c_1, ..., c_k)^T"],"canonicalText":"c=(c_1,…,c_k)^T","displayLatex":"\\mathbf{c}=(c_1,\\ldots,c_k)^{\\mathsf T}","meaning":"Coefficient column aligned to ordered family B."},
+    {"id":"N05","semanticKey":"coordinate_column","sourceAliases":["[v]_B"],"canonicalText":"[v]_B","displayLatex":"[\\mathbf{v}]_B","meaning":"Coordinates of vector v in ordered basis B."},
+    {"id":"N06","semanticKey":"basis_matrix","sourceAliases":["B_mat","B_mat=[b_1 ... b_k]","B_mat = [b_1 ... b_k]"],"canonicalText":"B_mat=[b_1 … b_k]","displayLatex":"\\mathbf{B}=[\\mathbf{b}_1\\;\\cdots\\;\\mathbf{b}_k]","meaning":"Column matrix whose order matches B."},
+    {"id":"N07","semanticKey":"residual","sourceAliases":["r","r=v-B_mat c","r = v - B_mat c"],"canonicalText":"r=v−B_mat c","displayLatex":"\\mathbf{r}=\\mathbf{v}-\\mathbf{B}\\mathbf{c}","meaning":"Reconstruction residual in a compatible representation."},
+    {"id":"N08","semanticKey":"standard_basis","sourceAliases":["E=(e_1,...,e_n)","E = (e_1, ..., e_n)"],"canonicalText":"E=(e_1,…,e_n)","displayLatex":"E=(\\mathbf{e}_1,\\ldots,\\mathbf{e}_n)","meaning":"Standard ordered basis of R^n."},
+    {"id":"N09","semanticKey":"coordinate_transform","sourceAliases":["P_{E<-B}","P_{W<-R}"],"canonicalText":"P_{E←B}","displayLatex":"P_{E\\leftarrow B}","meaning":"Map from source-basis coordinates B to target-basis coordinates E."},
+    {"id":"N10","semanticKey":"kronecker_delta","sourceAliases":["delta_ij"],"canonicalText":"δ_ij","displayLatex":"\\delta_{ij}","meaning":"Kronecker delta used in orthonormality conditions."},
+    {"id":"N11","semanticKey":"euclidean_norm","sourceAliases":["norm","||v||","||[v]_W||^2"],"canonicalText":"‖v‖₂","displayLatex":"\\lVert\\mathbf{v}\\rVert_2","meaning":"Euclidean norm when the metric is the standard inner product."}
+  ],
+  "canonicalFormulaRegistry": [
+    {
+      "id":"F1","name":"Linear combination","canonicalText":"v=Σ_{i=1}^k c_i b_i","displayLatex":"\\mathbf{v}=\\sum_{i=1}^{k} c_i\\mathbf{b}_i","sourceAliases":["v = sum_{i=1}^k c_i b_i","v=sum_{i=1}^k c_i b_i"],"meaning":"Build v from ordered directional contributions.","condition":"All vectors belong to the same compatible vector space."
+    },
+    {
+      "id":"F2","name":"Span","canonicalText":"span(b_1,…,b_k)={Σ_i c_i b_i | c_i∈R}","displayLatex":"\\operatorname{span}(\\mathbf{b}_1,\\ldots,\\mathbf{b}_k)=\\left\\{\\sum_i c_i\\mathbf{b}_i\\mid c_i\\in\\mathbb{R}\\right\\}","sourceAliases":["span(b_1,...,b_k) = {sum_i c_i b_i | c_i in R}","span(b_1,...,b_k)={sum_i c_i b_i}"],"meaning":"Exact representable set.","condition":"The family belongs to one vector space."
+    },
+    {
+      "id":"F3","name":"Span membership","canonicalText":"v∈span(B) ⇔ ∃c: B_mat c=v","displayLatex":"\\mathbf{v}\\in\\operatorname{span}(B)\\iff\\exists\\,\\mathbf{c}:\\mathbf{B}\\mathbf{c}=\\mathbf{v}","sourceAliases":["v in span(B) iff exists c such that B_mat c = v","v in span(B) iff exists c: B_mat c=v"],"meaning":"Existence of an exact representation.","condition":"Ambient coordinates and metadata are compatible."
+    },
+    {
+      "id":"F4","name":"Linear independence","canonicalText":"Σ_i z_i b_i=0 ⇒ z=0","displayLatex":"\\sum_i z_i\\mathbf{b}_i=\\mathbf{0}\\;\\Longrightarrow\\;\\mathbf{z}=\\mathbf{0}","sourceAliases":["sum_i z_i b_i = 0 implies z_i = 0 for all i","sum_i z_i b_i=0 implies z=0"],"meaning":"No nontrivial zero relation.","condition":"Numerical checks require scale-aware tolerance."
+    },
+    {
+      "id":"F5","name":"Basis condition","canonicalText":"B basis of V ⇔ span(B)=V and B independent","displayLatex":"B\\text{ is a basis of }V\\iff\\operatorname{span}(B)=V\\text{ and }B\\text{ is linearly independent}","sourceAliases":["B is a basis of V iff span(B)=V and B is linearly independent","B basis of V iff span(B)=V and B independent"],"meaning":"Spanning gives existence; independence gives uniqueness.","condition":"Target space V is declared."
+    },
+    {
+      "id":"F6","name":"Coordinates","canonicalText":"[v]_B=(c_1,…,c_n)^T, where v=Σ_i c_i b_i","displayLatex":"[\\mathbf{v}]_B=(c_1,\\ldots,c_n)^{\\mathsf T},\\qquad\\mathbf{v}=\\sum_i c_i\\mathbf{b}_i","sourceAliases":["[v]_B=(c_1,...,c_n)^T where v=sum_i c_i b_i"],"meaning":"Ordered coordinate encoding of v.","condition":"B is an ordered basis of the target space."
+    },
+    {
+      "id":"F7","name":"Reconstruction","canonicalText":"v=B_mat[v]_B","displayLatex":"\\mathbf{v}=\\mathbf{B}[\\mathbf{v}]_B","sourceAliases":["v = B_mat [v]_B","v=B_mat[v]_B"],"meaning":"Decode coordinates into the vector.","condition":"Matrix columns, basis order and version match."
+    },
+    {
+      "id":"F8","name":"Uniqueness","canonicalText":"B_mat c=B_mat d and B independent ⇒ c=d","displayLatex":"\\mathbf{B}\\mathbf{c}=\\mathbf{B}\\mathbf{d},\\;B\\text{ independent}\\;\\Longrightarrow\\;\\mathbf{c}=\\mathbf{d}","sourceAliases":["B_mat c = B_mat d and B independent imply c=d","B_mat c=B_mat d and B independent imply c=d"],"meaning":"Independent columns give unique coordinates.","condition":"c and d refer to the same ordered family."
+    },
+    {
+      "id":"F9","name":"Orthonormal shortcut","canonicalText":"c_i=v·b_i when b_i·b_j=δ_ij","displayLatex":"c_i=\\mathbf{v}\\cdot\\mathbf{b}_i\\quad\\text{when}\\quad\\mathbf{b}_i\\cdot\\mathbf{b}_j=\\delta_{ij}","sourceAliases":["c_i = v · b_i when b_i · b_j = delta_ij","c_i=v·b_i when b_i·b_j=delta_ij"],"meaning":"Dot product isolates one coordinate.","condition":"The basis is verified orthonormal in the same inner-product space.","methodNote":"For orthogonal non-unit vectors use c_i=(v·b_i)/(b_i·b_i); this is a method condition, not a new formula ID."
+    },
+    {
+      "id":"F10","name":"Coordinate change","canonicalText":"[v]_E=P_{E←B}[v]_B","displayLatex":"[\\mathbf{v}]_E=P_{E\\leftarrow B}[\\mathbf{v}]_B","sourceAliases":["[v]_E=P_{E<-B}[v]_B","[v]_E = P_{E<-B}[v]_B"],"meaning":"Convert source-basis coordinates B to target-basis coordinates E.","condition":"Both are ordered bases of the same space and direction is explicit."
+    },
+    {
+      "id":"F11","name":"Residual","canonicalText":"r=v−B_mat c","displayLatex":"\\mathbf{r}=\\mathbf{v}-\\mathbf{B}\\mathbf{c}","sourceAliases":["r = v - B_mat c","r=v-B_mat c"],"meaning":"Reconstruction mismatch.","condition":"Vector and reconstruction share schema, units, frame and metric."
+    },
+    {
+      "id":"F12","name":"Dependent-family non-uniqueness","canonicalText":"B_mat z=0, z≠0, B_mat c=v ⇒ B_mat(c+t z)=v","displayLatex":"\\mathbf{B}\\mathbf{z}=\\mathbf{0},\\;\\mathbf{z}\\neq\\mathbf{0},\\;\\mathbf{B}\\mathbf{c}=\\mathbf{v}\\;\\Longrightarrow\\;\\mathbf{B}(\\mathbf{c}+t\\mathbf{z})=\\mathbf{v}","sourceAliases":["if B_mat z=0, z!=0 and B_mat c=v, then B_mat(c+t z)=v","B_mat(c+t z)=v when B_mat z=0"],"meaning":"A nonzero null relation creates infinitely many coefficient vectors.","condition":"The generating family is dependent."
+    }
+  ],
+  "unitAndQuantityRules": [
+    {"id":"U01","quantity":"velocity","canonicalText":"m/s","displayLatex":"\\mathrm{m\\,s^{-1}}","rule":"Attach the unit to the complete scalar or coordinate result, not to basis directions when they are dimensionless."},
+    {"id":"U02","quantity":"angle","canonicalText":"°","displayLatex":"{}^{\\circ}","rule":"Keep route heading and robot yaw labels distinct."},
+    {"id":"U03","quantity":"time","canonicalText":"ms","displayLatex":"\\mathrm{ms}","rule":"Keep timestamp alignment and transform-age statements in prose or metadata, not inside coordinate formulas."},
+    {"id":"U04","quantity":"squared_norm","canonicalText":"(m/s)^2 when the vector is velocity","displayLatex":"\\mathrm{m^2\\,s^{-2}}","rule":"State when a reported value is norm squared rather than norm."},
+    {"id":"U05","quantity":"dimensionless","canonicalText":"dimensionless","displayLatex":"1","rule":"Basis directions may be dimensionless only when the physical model explicitly defines them that way."}
+  ],
+  "semanticStyleRules": [
+    "Use lowercase bold symbols for vectors in display math when renderer support is available.",
+    "Use B for an ordered family and B_mat or bold B for its column matrix; do not silently merge the two meanings in prose.",
+    "Use the zero vector symbol in vector equations and component zero only when referring to one scalar component.",
+    "Use ∈, ∃, ⇔ and ⇒ in display math; use Vietnamese prose around the formula for explanation.",
+    "Use P_{target←source}; never infer direction from nearby prose alone.",
+    "Keep coordinate brackets [v]_B intact as one semantic token.",
+    "Keep transpose attached to the whole coordinate tuple.",
+    "Use dot product · rather than an asterisk.",
+    "Keep residual and norm claims separate from physical-validity claims.",
+    "Do not introduce a fixed numerical tolerance without a documented scale and source."
+  ],
+  "layoutDensityContract": {
+    "baseline": "E235_READER_PRO_FORMULA_STANDARD_R2",
+    "semanticOnly": true,
+    "globalRules": [
+      "One primary mathematical claim per formula block.",
+      "Meaning and conditions must stay adjacent to the formula they qualify.",
+      "A warning must not be visually detached from the formula or example it constrains.",
+      "Do not split a coordinate token, matrix row or transform subscript across semantic blocks.",
+      "Examples must separate setup, calculation, result and interpretation.",
+      "Long worked cases may use numbered steps; ordinary sections should not imitate slide numbering.",
+      "Do not repeat the same full formula in consecutive blocks unless the second occurrence performs a new derivation or check."
+    ],
+    "layerProfiles": {
+      "core": {"role":"source of truth","density":"complete semantic contract","formulaDisplay":"formula plus question, meaning, conditions, warning and use"},
+      "reference": {"role":"lookup","density":"one formula per row","formulaDisplay":"formula plus compact condition and warning"},
+      "slideshow": {"role":"guided presentation","density":"one learning beat per slide","formulaDisplay":"normally one primary displayed formula, at most two when directly compared"},
+      "fullView": {"role":"continuous reading","density":"three to six semantic blocks per ordinary section","formulaDisplay":"formula, meaning and conditions in the same block; worked-case section may exceed ordinary block count"}
+    },
+    "workedCaseException": {
+      "section":"FV08",
+      "reason":"The UGV case requires object declaration, frame contract, basis verification, calculation, interpretation, reconstruction and invariants.",
+      "allowedPattern":"numbered worked_step blocks with one action per step"
+    }
+  },
+  "artifactMappings": {
+    "core": {"formulaSource":"mainFormulas F1-F12","notationSource":"notationRules","normalizationAction":"Preserve source strings; canonicalize only when rendered or integrated."},
+    "reference": {"formulaSource":"formulaTable RF1-RF12","mapping":"RF1→F1, RF2→F2, RF3→F3, RF4→F4, RF5→F5, RF6→F6, RF7→F7, RF8→F8, RF9→F9, RF10→F10, RF11→F11, RF12→F12","normalizationAction":"Render through canonical formula IDs."},
+    "slideshow": {"formulaSource":"slides.formulaRefs and formula-bearing contentBlocks","normalizationAction":"Use formulaRefs as authority; content strings are explanatory aliases."},
+    "fullView": {"formulaSource":"formulaRegistry and formula-bearing readingFlow blocks","normalizationAction":"Use canonical formula registry for display; retain section-specific conditions and warnings."}
+  },
+  "resolvedDisplayVariants": [
+    {"id":"DV01","issue":"Spaces around operators vary.","resolution":"Canonical display owns spacing; source text remains valid alias."},
+    {"id":"DV02","issue":"F3 uses both 'such that' and colon notation.","resolution":"Display uses ∃c: B_mat c=v; prose explains existence."},
+    {"id":"DV03","issue":"F4 alternates between z_i=0 for all i and z=0.","resolution":"Display uses vector statement z=0; prose may expand to all components."},
+    {"id":"DV04","issue":"Transform arrows use ASCII <-.","resolution":"Display uses target←source and LaTeX \\leftarrow."},
+    {"id":"DV05","issue":"B and B_mat may appear close together.","resolution":"B names ordered family; B_mat or bold B names its column matrix."},
+    {"id":"DV06","issue":"delta_ij appears as text.","resolution":"Display uses δ_ij or \\delta_{ij}."},
+    {"id":"DV07","issue":"Dot products have inconsistent spacing.","resolution":"Display uses centered dot with stable operand grouping."},
+    {"id":"DV08","issue":"Orthogonal non-unit quotient appears as a warning rather than formula ID.","resolution":"Keep it as F9 method note; do not create F13."},
+    {"id":"DV09","issue":"Residual norm and norm squared can be conflated.","resolution":"Always label residual norm separately from squared vector norm."},
+    {"id":"DV10","issue":"Velocity units appear in prose and tuples.","resolution":"Attach m/s to complete scalar or coordinate result consistently."},
+    {"id":"DV11","issue":"Section density varies by artifact role.","resolution":"Apply layer-specific density profiles rather than one universal word or block quota."}
+  ],
+  "verification": {
+    "sourceVersionsMatch": true,
+    "formulaIdsVerified": ["F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12"],
+    "notationKeysVerified": ["target_space","basis_vector","ordered_family","coefficient_column","coordinate_column","basis_matrix","residual","standard_basis","coordinate_transform","kronecker_delta","euclidean_norm"],
+    "ugvValuesUnchanged": true,
+    "ugvTransformDirection":"W←R",
+    "ugvCoordinateOrder":"(parallel,left)",
+    "ugvResidualNorm":0,
+    "ugvNormSquared":26,
+    "newFormulaIdsAdded":0,
+    "sourceArtifactsRewritten":0,
+    "readerRuntimeFilesChanged":0
+  },
+  "downstreamMapping": {
+    "integrationUse": ["canonicalNotation","canonicalFormulaRegistry","unitAndQuantityRules","semanticStyleRules","layoutDensityContract","artifactMappings"],
+    "rendererBoundary": "Pass 14 may bind canonical display forms to existing Reader Pro behavior, but may not alter mathematical meaning.",
+    "fallback": "If a renderer cannot support displayLatex, use canonicalText while preserving semantic IDs and transform direction."
+  },
+  "qualityGate": {
+    "mustPass": [
+      "All four approved source layers and versions are recorded.",
+      "No semantic or worked-case conflict exists.",
+      "F1-F12 each have one canonical text and one display form.",
+      "Ordered family, column matrix, coordinate column and transform direction remain distinct.",
+      "Vector zero and scalar component zero are not conflated.",
+      "Orthogonal non-unit handling remains a condition of F9 and does not create new mathematics.",
+      "Velocity, angle, time and squared-norm units are unambiguous.",
+      "Layout rules are semantic and contain no pixel, CSS, JavaScript or animation instructions.",
+      "No approved source artifact is rewritten solely for lexical spacing differences.",
+      "E235 remains unchanged and is referenced only as a compatibility baseline.",
+      "No Reader Pro or runtime file is changed."
+    ],
+    "reviewStatus": "formula_layout_normalization_approved",
+    "canonicalFormulaCount": 12,
+    "canonicalNotationCount": 11,
+    "displayVariantCount": 11,
+    "unitRuleCount": 5,
+    "nextPass": "PASS_14_FINAL_INTEGRATION_ACCEPTANCE"
+  }
+}

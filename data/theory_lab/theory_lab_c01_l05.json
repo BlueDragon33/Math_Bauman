@@ -1,0 +1,295 @@
+{
+  "id": "bauman_math_theory_lab_c01_l05_v1",
+  "schema": "bauman_math_theory_lab_v1",
+  "version": "LAB_C01_L05_V1_PASS09",
+  "status": "pass09_complete_pending_assessment_design",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L05-subspace-data-representation-e140",
+  "lessonTitle": "§1.5 · Không gian con và biểu diễn dữ liệu",
+  "language": "vi",
+  "purpose": "Phòng lab deterministic cho centering, orthogonal projection, residual, general-basis projector, numerical rank, reduced SVD và code audit.",
+  "sourceContracts": {
+    "core": "subjects/math/data/theory_core/theory_core_c01_l05.json",
+    "workedExamples": "subjects/math/data/theory_worked_examples/theory_worked_examples_c01_l05.json",
+    "formulaRegistry": "subjects/math/THEORY_C01_L05_FORMULA_REGISTRY.md",
+    "engineeringCase": "subjects/math/data/theory_case/theory_case_c01_l05.json",
+    "caseVersion": "CASE_C01_L05_V1_LOCKED"
+  },
+  "runtimeContract": {
+    "language": "python",
+    "minimumPython": "3.10",
+    "requiredPackages": ["numpy"],
+    "randomness": "none",
+    "network": "not_required",
+    "fileInput": "not_required",
+    "deterministic": true,
+    "expectedExecutionMode": "local_notebook_or_script",
+    "runtimeIntegrationAllowed": false
+  },
+  "learningObjectives": [
+    "Kiểm tra shape và feature contract trước phép toán.",
+    "Tâm hóa đúng một observation bằng locked mean.",
+    "Kiểm Q trực chuẩn trước khi dùng QQ^T và Q^Ty.",
+    "Xác minh symmetry, idempotence và action của projector.",
+    "So sánh orthonormal-basis và general-basis coordinates.",
+    "Tính residual score cho normal và mismatch samples.",
+    "Phân biệt floating-point rank và numerical rank under tau.",
+    "Kiểm reduced-SVD reconstruction và retained energy.",
+    "Phát hiện các lỗi centering, transpose, projector và threshold bị ẩn."
+  ],
+  "canonicalCode": {
+    "id": "LAB_CANONICAL",
+    "title": "Pipeline chuẩn có assertion",
+    "code": "import numpy as np\n\n# Locked case data\nmu = np.array([0.4, 0.35, 0.45, 0.3], dtype=float)\nQ = np.array([\n    [0.5,  0.5],\n    [0.5, -0.5],\n    [0.5,  0.5],\n    [0.5, -0.5],\n], dtype=float)\nB = np.array([\n    [1.0, 1.0],\n    [1.0, 0.0],\n    [1.0, 1.0],\n    [1.0, 0.0],\n], dtype=float)\nx_normal = np.array([0.62, 0.74, 0.63, 0.71], dtype=float)\nx_mismatch = np.array([0.9, 0.6, 0.55, 0.85], dtype=float)\nXc = np.array([\n    [ 0.205,   0.415,   0.195,   0.385],\n    [-0.205,  -0.415,  -0.195,  -0.385],\n    [ 0.3525,  0.0375,  0.3475,  0.0625],\n    [-0.3525, -0.0375, -0.3475, -0.0625],\n    [-0.09,    0.305,  -0.11,    0.295],\n    [ 0.09,   -0.305,   0.11,   -0.295],\n    [ 0.395,   0.315,   0.405,   0.285],\n    [-0.395,  -0.315,  -0.405,  -0.285],\n], dtype=float)\n\nATOL = 1e-12\nSVD_ATOL = 1e-10\nTAU = 0.05\nGAMMA_DEMO = 0.1\n\nassert mu.shape == (4,)\nassert Q.shape == (4, 2)\nassert B.shape == (4, 2)\nassert x_normal.shape == x_mismatch.shape == (4,)\nassert Xc.shape == (8, 4)  # samples as rows\nassert np.allclose(Xc.mean(axis=0), np.zeros(4), atol=ATOL)\n\n# Orthonormal-basis checks\nI2 = np.eye(2)\nassert np.allclose(Q.T @ Q, I2, atol=ATOL)\nP = Q @ Q.T\nassert P.shape == (4, 4)\nassert np.allclose(P.T, P, atol=ATOL)\nassert np.allclose(P @ P, P, atol=ATOL)\nassert np.allclose(P @ Q, Q, atol=ATOL)\n\ndef project_affine(x: np.ndarray) -> dict:\n    assert x.shape == mu.shape\n    y = x - mu\n    z = Q.T @ y\n    y_hat = P @ y\n    r = y - y_hat\n    score = float(np.linalg.norm(r, ord=2))\n    assert np.allclose(y, y_hat + r, atol=ATOL)\n    assert np.allclose(Q.T @ r, np.zeros(2), atol=ATOL)\n    return {\n        'y': y,\n        'z': z,\n        'y_hat': y_hat,\n        'r': r,\n        'score': score,\n    }\n\nnormal = project_affine(x_normal)\nmismatch = project_affine(x_mismatch)\n\nassert np.allclose(normal['y'], [0.22, 0.39, 0.18, 0.41], atol=ATOL)\nassert np.allclose(normal['z'], [0.6, -0.2], atol=ATOL)\nassert np.allclose(normal['y_hat'], [0.2, 0.4, 0.2, 0.4], atol=ATOL)\nassert np.allclose(normal['r'], [0.02, -0.01, -0.02, 0.01], atol=ATOL)\nassert np.isclose(normal['score'], 0.0316227766016838, atol=ATOL)\n\nassert np.allclose(mismatch['y'], [0.5, 0.25, 0.1, 0.55], atol=ATOL)\nassert np.allclose(mismatch['z'], [0.7, -0.1], atol=ATOL)\nassert np.allclose(mismatch['y_hat'], [0.3, 0.4, 0.3, 0.4], atol=ATOL)\nassert np.allclose(mismatch['r'], [0.2, -0.15, -0.2, 0.15], atol=ATOL)\nassert np.isclose(mismatch['score'], 0.3535533905932738, atol=ATOL)\n\nassert normal['score'] < GAMMA_DEMO\nassert mismatch['score'] > GAMMA_DEMO\n\n# General full-column-rank basis: solve, do not explicitly invert by default\ngram = B.T @ B\nassert np.linalg.matrix_rank(B) == 2\nnormal_c = np.linalg.solve(gram, B.T @ normal['y'])\nP_general = B @ np.linalg.solve(gram, B.T)\nassert np.allclose(normal_c, [0.4, -0.2], atol=ATOL)\nassert np.allclose(P_general, P, atol=ATOL)\nassert not np.allclose(B @ B.T, P, atol=ATOL)\n\n# Reduced SVD and rank language\nU, s, Vh = np.linalg.svd(Xc, full_matrices=False)\nassert U.shape == (8, 4)\nassert s.shape == (4,)\nassert Vh.shape == (4, 4)\nassert np.all(s[:-1] >= s[1:])\nassert np.allclose(U @ np.diag(s) @ Vh, Xc, atol=SVD_ATOL)\nassert np.allclose(s, [1.44955817, 0.77504298, 0.03505112, 0.00330126], atol=5e-9)\n\nfloating_rank = int(np.linalg.matrix_rank(Xc))\nnumerical_rank_tau = int(np.sum(s > TAU))\nrho2 = float(np.sum(s[:2] ** 2) / np.sum(s ** 2))\n\nassert floating_rank == 4\nassert numerical_rank_tau == 2\nassert np.isclose(rho2, 0.9995414686511285, atol=5e-10)\n\nprint({\n    'normal_score': normal['score'],\n    'mismatch_score': mismatch['score'],\n    'floating_rank': floating_rank,\n    'numerical_rank_tau_0_05': numerical_rank_tau,\n    'retained_energy_k2': rho2,\n})",
+    "expectedOutput": {
+      "normal_score": 0.0316227766016838,
+      "mismatch_score": 0.3535533905932738,
+      "floating_rank": 4,
+      "numerical_rank_tau_0_05": 2,
+      "retained_energy_k2": 0.9995414686511285
+    }
+  },
+  "labSequence": [
+    {
+      "id": "LAB01",
+      "title": "Load and validate the locked data contract",
+      "learningOutcomeRefs": ["LO7"],
+      "misconceptionRefs": ["M13", "M14", "M25"],
+      "tasks": [
+        "Create mu, Q, B, x_normal, x_mismatch and Xc exactly as locked.",
+        "Assert Q shape 4x2 and Xc shape 8x4.",
+        "State that rows of Xc are observations and columns are sensor features.",
+        "Verify Xc column mean is zero."
+      ],
+      "passConditions": [
+        "No transpose is inserted to make an error disappear.",
+        "Feature order is kept unchanged.",
+        "x vectors are identified as RMS feature vectors, not raw waveforms."
+      ]
+    },
+    {
+      "id": "LAB02",
+      "title": "Verify Q before using the shortcut",
+      "learningOutcomeRefs": ["LO3", "LO7"],
+      "formulaRefs": ["F05", "F06", "F07"],
+      "misconceptionRefs": ["M08"],
+      "tasks": [
+        "Compute Q.T @ Q.",
+        "Compare with I2 under ATOL.",
+        "Only after this check, compute P=Q@Q.T."
+      ],
+      "expectedValues": {
+        "gram": [[1.0, 0.0], [0.0, 1.0]]
+      }
+    },
+    {
+      "id": "LAB03",
+      "title": "Verify projector invariants",
+      "learningOutcomeRefs": ["LO3", "LO7"],
+      "formulaRefs": ["F10"],
+      "misconceptionRefs": ["M09"],
+      "tasks": [
+        "Check P.T equals P.",
+        "Check P@P equals P.",
+        "Check P@Q equals Q.",
+        "Explain why symmetry and idempotence answer different questions."
+      ],
+      "expectedProjector": [
+        [0.5, 0.0, 0.5, 0.0],
+        [0.0, 0.5, 0.0, 0.5],
+        [0.5, 0.0, 0.5, 0.0],
+        [0.0, 0.5, 0.0, 0.5]
+      ]
+    },
+    {
+      "id": "LAB04",
+      "title": "Project the normal sample",
+      "learningOutcomeRefs": ["LO4", "LO6", "LO7"],
+      "formulaRefs": ["F02", "F06", "F11", "F12", "F16"],
+      "misconceptionRefs": ["M12", "M22"],
+      "tasks": [
+        "Compute y=x_normal-mu.",
+        "Compute z, y_hat, r and score.",
+        "Assert reconstruction and Q.T@r=0.",
+        "Write a one-sentence bounded interpretation."
+      ],
+      "expectedValues": {
+        "y": [0.22, 0.39, 0.18, 0.41],
+        "z": [0.6, -0.2],
+        "y_hat": [0.2, 0.4, 0.2, 0.4],
+        "r": [0.02, -0.01, -0.02, 0.01],
+        "score": 0.0316227766016838
+      },
+      "requiredInterpretation": "The observation is well represented by the current teaching model; health is not proven."
+    },
+    {
+      "id": "LAB05",
+      "title": "Project the mismatch sample",
+      "learningOutcomeRefs": ["LO4", "LO6", "LO7"],
+      "formulaRefs": ["F11", "F12", "F16"],
+      "misconceptionRefs": ["M21", "M23", "M24"],
+      "tasks": [
+        "Compute the same pipeline for x_mismatch.",
+        "Compare score with gamma_demo.",
+        "List at least four possible causes without choosing one."
+      ],
+      "expectedValues": {
+        "y": [0.5, 0.25, 0.1, 0.55],
+        "z": [0.7, -0.1],
+        "y_hat": [0.3, 0.4, 0.3, 0.4],
+        "r": [0.2, -0.15, -0.2, 0.15],
+        "score": 0.3535533905932738
+      },
+      "requiredInterpretation": "The observation is poorly represented by the current normal-operation model; the cause is undetermined."
+    },
+    {
+      "id": "LAB06",
+      "title": "Compare Q coordinates and B coordinates",
+      "learningOutcomeRefs": ["LO3", "LO4", "LO7"],
+      "formulaRefs": ["F06", "F08", "F09"],
+      "misconceptionRefs": ["M07", "M08", "M10", "M20"],
+      "tasks": [
+        "Solve B.T@B c=B.T@y for the normal sample.",
+        "Compare c with z=Q.T@y.",
+        "Verify Bc=Qz.",
+        "Construct P_general with solve and verify it equals P.",
+        "Verify B@B.T does not equal P."
+      ],
+      "expectedValues": {
+        "QCoordinates": [0.6, -0.2],
+        "BCoordinates": [0.4, -0.2],
+        "commonProjection": [0.2, 0.4, 0.2, 0.4]
+      }
+    },
+    {
+      "id": "LAB07",
+      "title": "Compute SVD with explicit shape checks",
+      "learningOutcomeRefs": ["LO5", "LO7", "LO8"],
+      "formulaRefs": ["F14"],
+      "misconceptionRefs": ["M13", "M16", "M17"],
+      "tasks": [
+        "Run np.linalg.svd(Xc, full_matrices=False).",
+        "Assert U, s and Vh shapes.",
+        "Reconstruct Xc.",
+        "Explain why Vh rows correspond to feature-space directions for samples-as-rows."
+      ],
+      "expectedValues": {
+        "UShape": [8, 4],
+        "sShape": [4],
+        "VhShape": [4, 4],
+        "singularValues": [1.44955817, 0.77504298, 0.03505112, 0.00330126]
+      }
+    },
+    {
+      "id": "LAB08",
+      "title": "Separate floating rank, numerical rank and retained dimension",
+      "learningOutcomeRefs": ["LO5", "LO7"],
+      "formulaRefs": ["F13", "F15"],
+      "misconceptionRefs": ["M16", "M17", "M18", "M19"],
+      "tasks": [
+        "Compute np.linalg.matrix_rank(Xc).",
+        "Compute count(s>0.05).",
+        "Compute rho2.",
+        "Write three separate statements: floating rank, numerical rank and retained-energy result."
+      ],
+      "expectedValues": {
+        "floatingRank": 4,
+        "numericalRankTau005": 2,
+        "retainedEnergyK2": 0.9995414686511285
+      },
+      "prohibitedStatement": "The true physical rank is universally two."
+    }
+  ],
+  "brokenCodeAudits": [
+    {
+      "id": "BUG01",
+      "title": "Missing centering",
+      "code": "y_hat = Q @ Q.T @ x_normal\nr = x_normal - y_hat",
+      "defects": [
+        "Projects raw x instead of x-mu.",
+        "Residual is mixed between affine and linear coordinates."
+      ],
+      "requiredRepair": "Compute y=x_normal-mu, then project y. Reconstruct raw space as mu+y_hat if needed.",
+      "misconceptionRefs": ["M11", "M12"]
+    },
+    {
+      "id": "BUG02",
+      "title": "Using BB^T as a general projector",
+      "code": "P_bad = B @ B.T\ny_hat = P_bad @ y",
+      "defects": [
+        "B columns are not orthonormal.",
+        "P_bad is not the locked orthogonal projector.",
+        "P_bad is not idempotent."
+      ],
+      "requiredRepair": "Use B @ solve(B.T@B, B.T), or orthonormalize the columns and use QQ^T.",
+      "misconceptionRefs": ["M07", "M08", "M20"]
+    },
+    {
+      "id": "BUG03",
+      "title": "Hidden sample orientation error",
+      "code": "U, s, Vh = np.linalg.svd(Xc.T, full_matrices=False)\nfeature_directions = Vh.T",
+      "defects": [
+        "Transposes the 8x4 samples-as-rows matrix without declaring the new orientation.",
+        "The factor interpreted as feature directions now refers to a different space."
+      ],
+      "requiredRepair": "Use Xc directly under the locked orientation, or restate every shape and semantic role after transposition.",
+      "misconceptionRefs": ["M13"]
+    },
+    {
+      "id": "BUG04",
+      "title": "Undeclared rank threshold",
+      "code": "rank = int(np.sum(s > 0.05))\nprint('rank=', rank)",
+      "defects": [
+        "Does not identify this as numerical rank.",
+        "Does not name Xc or the samples-as-rows orientation.",
+        "Does not state that 0.05 is teaching-case-specific."
+      ],
+      "requiredRepair": "Report rank_tau(Xc)=2 under tau=0.05 for CASE_C01_L05_V1_LOCKED, alongside floating rank 4.",
+      "misconceptionRefs": ["M16", "M17", "M18"]
+    },
+    {
+      "id": "BUG05",
+      "title": "Shape-correct channel permutation",
+      "code": "x = x_normal[[2, 1, 0, 3]]\nscore = np.linalg.norm((np.eye(4)-P) @ (x-mu))",
+      "defects": [
+        "Permutes x but not mu, Q and the model contract.",
+        "Shape checks pass while sensor semantics are wrong."
+      ],
+      "requiredRepair": "Keep the locked order or apply the same declared permutation to every model artifact and version it.",
+      "misconceptionRefs": ["M14", "M15"]
+    },
+    {
+      "id": "BUG06",
+      "title": "Overclaiming from a threshold",
+      "code": "fault = score > 0.1\nprint('bearing fault' if fault else 'healthy')",
+      "defects": [
+        "Turns a model-mismatch threshold into fault classification.",
+        "Declares health from a low residual.",
+        "Ignores operating regime and unmeasured faults."
+      ],
+      "requiredRepair": "Return a bounded model-fit label and preserve the residual vector for investigation.",
+      "misconceptionRefs": ["M21", "M22", "M24"]
+    }
+  ],
+  "completionChecklist": [
+    "All canonical assertions pass.",
+    "No random data are used.",
+    "All arrays use the locked feature order.",
+    "Q orthonormality is checked before QQ^T or Q^Ty.",
+    "General-basis projection uses solve or an equivalent stable routine.",
+    "Normal and mismatch values reproduce the locked case.",
+    "Floating rank and numerical rank are reported separately.",
+    "Tau=0.05 and gamma_demo=0.1 are labelled teaching-case-specific.",
+    "Retained energy is not called prediction accuracy.",
+    "Residual score is not used as a unique fault classifier."
+  ],
+  "pass09Acceptance": {
+    "status": "PASS_09_DETERMINISTIC_COMPUTATIONAL_LAB_COMPLETE",
+    "labCount": 8,
+    "brokenCodeAuditCount": 6,
+    "deterministic": true,
+    "canonicalAssertionsIncluded": true,
+    "allLockedCaseValuesCovered": true,
+    "runtimeFilesModified": false,
+    "nextTask": "THEORY_C01_L05_RETRIEVAL_PROFESSOR_QA_PASS_10"
+  }
+}

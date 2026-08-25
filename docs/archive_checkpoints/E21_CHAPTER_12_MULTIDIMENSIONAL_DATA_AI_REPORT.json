@@ -1,0 +1,32 @@
+{
+  "checkpoint": "E21_CHECKPOINT_TEST_SNAPSHOT",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapterId": "MATH-PREP-MT-C12",
+  "chapterTitle": "Chương 12 · Toán cho dữ liệu đa chiều trong hệ thống AI",
+  "stage": "GĐ2 · Dự bị Nga/STANKIN",
+  "lessons": 8,
+  "theorySlides": 160,
+  "formulas": 24,
+  "exercises": 64,
+  "applications": 16,
+  "simulations": 16,
+  "professorQa": 8,
+  "questions": 48,
+  "reviewPacks": 8,
+  "vocabCards": 32,
+  "focus": [
+    "shape dữ liệu",
+    "scale/normalization",
+    "distance/similarity",
+    "Gram/kernel",
+    "PCA/projection",
+    "AI data pipeline",
+    "technical data report"
+  ],
+  "preservedFix": {
+    "target": "Tab Lý thuyết · thanh chọn slide",
+    "source": "E19/E20 screenshot fix",
+    "guarantee": "horizontal-only rail; overflow-y hidden; vertical scrollbar disabled"
+  },
+  "notFinal": true
+}

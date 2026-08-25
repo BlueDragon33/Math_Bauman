@@ -1,0 +1,14 @@
+{
+  "version": "MATH_V11_PREMIUM_BALANCED_UI",
+  "source": "Based on V10 SimulationUX module only, no main package attached.",
+  "changes": [
+    "Global premium balanced design tokens added in math.css.",
+    "Sidebar/topbar/panel/button rhythm refined for a formal academic look.",
+    "Learning tab spacing, structure menu, lesson reader and slide strip balanced.",
+    "Simulation lab redesigned for a more polished MATLAB-like workspace.",
+    "Classification button, indicator, workspace list, Canva board, frame and parameter cards refined.",
+    "Responsive safeguards strengthened for zoom and smaller screens."
+  ],
+  "mainPackage": "not generated per user preference",
+  "updated": "2026-06-13"
+}

@@ -1,0 +1,13 @@
+{
+  "version": "V9 Simulation Tabs Lab",
+  "changes": [
+    "Tab Mô phỏng tách thành 2 tab con: Mô phỏng lý thuyết và Mô phỏng ứng dụng.",
+    "Học tập > Lý thuyết có nút Mở: Mô phỏng, mở đúng mô phỏng lý thuyết theo lessonId.",
+    "Học tập > Ứng dụng có nút Mở: Mô phỏng, mở đúng mô phỏng ứng dụng theo applicationId.",
+    "simulations.json mở rộng thành 96 mục: 48 theory + 48 application, bám 6 giai đoạn lộ trình.",
+    "Bổ sung Canva-style visual board, SVG nền và 2 lab HTML tương tác nhẹ.",
+    "Kho dữ liệu có indicator luôn hiển thị dưới nút Kho môn học, không bị ẩn khi dropdown đóng.",
+    "Flashcard bỏ chữ hướng dẫn thô, dùng ký hiệu/chip ↺ Lật thẻ."
+  ],
+  "validation": {}
+}

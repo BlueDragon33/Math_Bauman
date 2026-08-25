@@ -1,0 +1,20 @@
+{
+  "checkpoint": "E46_SIM_ACTIVE_READOUT_QA_CHECKPOINT_TEST_SNAPSHOT",
+  "final": false,
+  "createdAt": "2026-06-19T04:06:30",
+  "base": "A2_Math_Bauman_Elearning_E45_SIM_LAB_SPECIALIZATION_FLOW_CHECKPOINT_TEST_SNAPSHOT.zip",
+  "changes": [
+    "Made simulation tab active rather than descriptive: live readouts update from sliders.",
+    "Added normalized control variables, liveComputationSpec, lessonBridge, stressPresets to all simulations.",
+    "Fixed application-to-simulation bridge so it targets the current lesson lab, not an application id.",
+    "Added compact premium simulation layout with score/stability/confidence/decision.",
+    "Added report draft textarea and one-click sample conclusion.",
+    "Kept E44 final-slide-only summary and theory-dependent applications."
+  ],
+  "counts": {
+    "lessons": 260,
+    "applications": 469,
+    "simulations": 520,
+    "sim_e46_active": 520
+  }
+}

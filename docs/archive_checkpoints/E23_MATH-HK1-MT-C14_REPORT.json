@@ -1,0 +1,19 @@
+{
+  "checkpoint": "E23_FAST_BATCH_CHECKPOINT_TEST_SNAPSHOT",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapterId": "MATH-HK1-MT-C14",
+  "chapterTitle": "Chương 14 · Nền tảng phân tích dữ liệu đa chiều",
+  "stage": "Bauman · HK1",
+  "lessons": 8,
+  "theorySlides": 160,
+  "formulas": 24,
+  "exercises": 64,
+  "applications": 16,
+  "simulations": 16,
+  "professorQa": 8,
+  "questions": 48,
+  "reviewPacks": 8,
+  "vocabCards": 32,
+  "focus": "chuẩn hóa Chương 14 từ 7 bài lên 8 bài, đóng khung sample-feature, metric, similarity, covariance, pipeline dữ liệu AI",
+  "notFinal": true
+}

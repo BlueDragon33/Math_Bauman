@@ -1,0 +1,492 @@
+{
+  "id": "bauman_math_theory_assessment_c01_l05_v1",
+  "schema": "bauman_math_theory_assessment_v1",
+  "version": "ASSESSMENT_C01_L05_V1_PASS10",
+  "status": "pass10_complete_pending_reference_artifact",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L05-subspace-data-representation-e140",
+  "lessonTitle": "§1.5 · Không gian con và biểu diễn dữ liệu",
+  "language": "vi",
+  "purpose": "Retrieval checks, professor Q&A and mastery gates for subspace, projection, residual, rank and engineering interpretation.",
+  "sourceContracts": {
+    "learningContract": "subjects/math/THEORY_C01_L05_LEARNING_CONTRACT.md",
+    "core": "subjects/math/data/theory_core/theory_core_c01_l05.json",
+    "workedExamples": "subjects/math/data/theory_worked_examples/theory_worked_examples_c01_l05.json",
+    "lab": "subjects/math/data/theory_lab/theory_lab_c01_l05.json",
+    "case": "subjects/math/data/theory_case/theory_case_c01_l05.json",
+    "misconceptions": "subjects/math/THEORY_C01_L05_MISCONCEPTION_MAP.md"
+  },
+  "assessmentPolicy": {
+    "answerInitiallyHidden": true,
+    "evidenceBeforeReveal": true,
+    "calculationRequiresUnitsAndContract": true,
+    "rankAnswerRequiresMatrixAndCriterion": true,
+    "diagnosticAnswerMustAvoidFaultOverclaim": true,
+    "minimumMasteryPercent": 80,
+    "criticalItemsMustPass": ["RC02", "RC05", "RC07", "RC10", "RC12", "PQ06", "PQ09", "PQ11"]
+  },
+  "retrievalChecks": [
+    {
+      "id": "RC01",
+      "cluster": "classification",
+      "prompt": "Một mặt phẳng trong R^4 có dạng mu+U và không đi qua origin. Gọi nó là linear subspace đúng hay sai?",
+      "expectedEvidence": [
+        "Nêu linear subspace phải chứa zero.",
+        "Phân loại đối tượng là affine set.",
+        "Giải thích centering x-mu đưa bài toán về U."
+      ],
+      "answer": "Sai. Mu+U là affine set; chỉ sau khi trừ mu, phần y=x-mu mới được xét trong linear subspace U.",
+      "learningOutcomeRefs": ["LO1"],
+      "formulaRefs": ["F01", "F02"],
+      "misconceptionRefs": ["M01", "M12"]
+    },
+    {
+      "id": "RC02",
+      "cluster": "classification",
+      "critical": true,
+      "prompt": "Một file gồm 100 observations nằm gần một mặt phẳng. File đó có phải chính là subspace không?",
+      "expectedEvidence": [
+        "Phân biệt finite sample set với model set.",
+        "Nêu finite set thường không đóng dưới mọi linear combinations.",
+        "Dùng near-subspace language."
+      ],
+      "answer": "Không. File là finite dataset; ta có thể fit một affine/near-subspace model để mô tả nó.",
+      "learningOutcomeRefs": ["LO1"],
+      "formulaRefs": ["F01", "F02"],
+      "misconceptionRefs": ["M02"]
+    },
+    {
+      "id": "RC03",
+      "cluster": "dimension_rank",
+      "prompt": "B có 5 columns nhưng rank(B)=3. dim(col(B)) bằng bao nhiêu và hai columns dư có làm span lớn hơn không?",
+      "expectedEvidence": [
+        "Nêu dim(col(B))=rank(B)=3.",
+        "Phân biệt generator count với independent directions.",
+        "Giải thích redundant columns không mở rộng span."
+      ],
+      "answer": "Dimension bằng 3. Các columns dư nằm trong span hiện có nên không tạo thêm independent directions.",
+      "learningOutcomeRefs": ["LO2"],
+      "formulaRefs": ["F03", "F04"],
+      "misconceptionRefs": ["M06"]
+    },
+    {
+      "id": "RC04",
+      "cluster": "orthonormal_gate",
+      "prompt": "Trước khi dùng z=Q^Ty, phải kiểm điều gì?",
+      "expectedEvidence": [
+        "Q có shape n x k.",
+        "Q^TQ approximately I_k under declared tolerance.",
+        "y và Q dùng cùng feature contract và inner product."
+      ],
+      "answer": "Phải kiểm Q trực chuẩn và representation contract tương thích; nếu không, Q^Ty không phải general-basis coordinates.",
+      "learningOutcomeRefs": ["LO3", "LO7"],
+      "formulaRefs": ["F05", "F06"],
+      "misconceptionRefs": ["M08", "M10"]
+    },
+    {
+      "id": "RC05",
+      "cluster": "projector_choice",
+      "critical": true,
+      "prompt": "Cho B full column rank nhưng B^TB không bằng I. Projector nào đúng: BB^T hay B(B^TB)^(-1)B^T?",
+      "expectedEvidence": [
+        "Chọn general-basis projector.",
+        "Nêu BB^T chỉ đúng khi columns orthonormal.",
+        "Nêu code nên solve thay vì mặc định tạo inverse."
+      ],
+      "answer": "P=B(B^TB)^(-1)B^T. BB^T không phải general orthogonal projector.",
+      "learningOutcomeRefs": ["LO3", "LO7"],
+      "formulaRefs": ["F08", "F09"],
+      "misconceptionRefs": ["M07", "M20"]
+    },
+    {
+      "id": "RC06",
+      "cluster": "projector_invariants",
+      "prompt": "P^2=P nhưng P^T khác P. Có thể gọi P là orthogonal projector không?",
+      "expectedEvidence": [
+        "Idempotence cho biết projector nói chung.",
+        "Symmetry cần cho orthogonal projector trong Euclidean setting.",
+        "Kết luận đây có thể là oblique projector."
+      ],
+      "answer": "Không. Idempotence chưa đủ; orthogonal projector còn phải symmetric.",
+      "learningOutcomeRefs": ["LO3"],
+      "formulaRefs": ["F10"],
+      "misconceptionRefs": ["M09"]
+    },
+    {
+      "id": "RC07",
+      "cluster": "affine_projection",
+      "critical": true,
+      "prompt": "Với model mu+col(Q), vì sao QQ^Tx là pipeline sai?",
+      "expectedEvidence": [
+        "Model directions áp dụng cho centred observation y=x-mu.",
+        "Pipeline đúng là y_hat=QQ^T(x-mu).",
+        "Raw reconstruction là mu+y_hat."
+      ],
+      "answer": "QQ^Tx bỏ qua affine offset. Phải center trước rồi mới chiếu.",
+      "learningOutcomeRefs": ["LO4", "LO7"],
+      "formulaRefs": ["F02", "F07", "F11"],
+      "misconceptionRefs": ["M11", "M12"]
+    },
+    {
+      "id": "RC08",
+      "cluster": "normal_case",
+      "prompt": "Không nhìn đáp án: với X_NORMAL_01, z, residual và score khóa là gì?",
+      "expectedEvidence": [
+        "z=(0.6,-0.2).",
+        "r=(0.02,-0.01,-0.02,0.01).",
+        "score=0.0316227766016838.",
+        "Interpretation chỉ là well represented."
+      ],
+      "answer": "z=(0.6,-0.2), r=(0.02,-0.01,-0.02,0.01), score≈0.0316228; sample được model hiện tại giải thích tốt nhưng không chứng minh healthy.",
+      "learningOutcomeRefs": ["LO4", "LO6"],
+      "formulaRefs": ["F06", "F11", "F16"],
+      "misconceptionRefs": ["M22"]
+    },
+    {
+      "id": "RC09",
+      "cluster": "basis_coordinates",
+      "prompt": "Cùng normal projected vector có Q-coordinates (0.6,-0.2) và B-coordinates (0.4,-0.2). Có mâu thuẫn không?",
+      "expectedEvidence": [
+        "Coordinates phụ thuộc basis.",
+        "Qz=Bc cùng reconstruct một vector.",
+        "Không so component-wise coordinates khác basis."
+      ],
+      "answer": "Không. Hai coordinate columns thuộc hai basis khác nhau nhưng reconstruct cùng projected vector.",
+      "learningOutcomeRefs": ["LO3", "LO4"],
+      "formulaRefs": ["F06", "F08"],
+      "misconceptionRefs": ["M10"]
+    },
+    {
+      "id": "RC10",
+      "cluster": "engineering_interpretation",
+      "critical": true,
+      "prompt": "X_MISMATCH_01 có score≈0.3535534>0.1. Kết luận mạnh nhất được phép là gì?",
+      "expectedEvidence": [
+        "Sample poorly represented by current normal-operation teaching model.",
+        "Threshold is case-specific.",
+        "Cause remains undetermined."
+      ],
+      "answer": "Sample không phù hợp tốt với model hiện tại. Không được kết luận một bearing fault hay fault type cụ thể.",
+      "learningOutcomeRefs": ["LO6"],
+      "formulaRefs": ["F16"],
+      "misconceptionRefs": ["M21", "M24"]
+    },
+    {
+      "id": "RC11",
+      "cluster": "residual_direction",
+      "prompt": "Hai residuals có cùng norm 0.1 có thể mang thông tin khác nhau không?",
+      "expectedEvidence": [
+        "Norm chỉ giữ magnitude.",
+        "Residual direction giữ channel pattern.",
+        "Equal score không chứng minh equal cause."
+      ],
+      "answer": "Có. r_a=0.1q3 và r_b=0.1q4 có cùng score nhưng sign/channel pattern khác nhau.",
+      "learningOutcomeRefs": ["LO6"],
+      "formulaRefs": ["F16"],
+      "misconceptionRefs": ["M05"]
+    },
+    {
+      "id": "RC12",
+      "cluster": "rank_tolerance",
+      "critical": true,
+      "prompt": "Locked X_c có floating-point rank 4 nhưng rank_tau=2 dưới tau=0.05. Hai phát biểu này có mâu thuẫn không?",
+      "expectedEvidence": [
+        "Cả bốn singular values đều nonzero.",
+        "Chỉ hai singular values vượt 0.05.",
+        "Numerical rank phải nêu tolerance."
+      ],
+      "answer": "Không. Rank 4 là floating-point/algebraic result của stored matrix; numerical rank 2 là criterion-dependent result dưới tau=0.05.",
+      "learningOutcomeRefs": ["LO5"],
+      "formulaRefs": ["F13", "F14"],
+      "misconceptionRefs": ["M16", "M17", "M18"]
+    },
+    {
+      "id": "RC13",
+      "cluster": "svd_shapes",
+      "prompt": "Với X_c shape 8x4 và reduced SVD, shapes của U, s, Vh là gì?",
+      "expectedEvidence": [
+        "p=min(8,4)=4.",
+        "U shape 8x4.",
+        "s shape 4.",
+        "Vh shape 4x4."
+      ],
+      "answer": "U:(8,4), s:(4,), Vh:(4,4).",
+      "learningOutcomeRefs": ["LO5", "LO7", "LO8"],
+      "formulaRefs": ["F14"],
+      "misconceptionRefs": ["M13"]
+    },
+    {
+      "id": "RC14",
+      "cluster": "retained_energy",
+      "prompt": "rho_2≈99.9541% cho phép nói gì và không cho phép nói gì?",
+      "expectedEvidence": [
+        "Cho phép nói hai directions giữ gần hết squared singular-value energy của locked centred matrix.",
+        "Không chứng minh prediction accuracy.",
+        "Không chứng minh fault coverage hoặc physical causality."
+      ],
+      "answer": "Đây là reconstruction-energy evidence dưới preprocessing đã khóa, không phải chứng nhận mọi downstream task.",
+      "learningOutcomeRefs": ["LO5", "LO6", "LO8"],
+      "formulaRefs": ["F15"],
+      "misconceptionRefs": ["M19", "M23"]
+    },
+    {
+      "id": "RC15",
+      "cluster": "data_contract",
+      "prompt": "Permute x từ [A,B,C,D] thành [C,B,A,D] nhưng giữ nguyên mu và Q. Tại sao score mới vô nghĩa dù shape vẫn đúng?",
+      "expectedEvidence": [
+        "Feature semantics changed.",
+        "Mu and Q remain in old order.",
+        "Shape validation cannot detect semantic mismatch."
+      ],
+      "answer": "Channel order là một phần của model contract. Phải permute toàn bộ artifacts đồng bộ và version model, hoặc giữ nguyên order.",
+      "learningOutcomeRefs": ["LO6", "LO7"],
+      "formulaRefs": ["F02", "F16"],
+      "misconceptionRefs": ["M14", "M15"]
+    },
+    {
+      "id": "RC16",
+      "cluster": "bridge",
+      "prompt": "Tại sao §1.6 cần xếp observations thành X_c thay vì xử lý từng vector riêng?",
+      "expectedEvidence": [
+        "Matrix organizes compatible samples.",
+        "Rank and singular directions describe shared structure.",
+        "Samples-as-rows orientation must be declared."
+      ],
+      "answer": "Data matrix cho phép đọc cấu trúc chung giữa nhiều observations bằng rank, row/column relations và SVD, thay vì chỉ phân tích từng vector tách rời.",
+      "learningOutcomeRefs": ["LO8"],
+      "formulaRefs": ["F14", "F15"],
+      "misconceptionRefs": ["M13"]
+    }
+  ],
+  "professorQuestions": [
+    {
+      "id": "PQ01",
+      "level": "foundation",
+      "question": "Hãy chứng minh U={(a,b,a,b)} là subspace của R^4 mà không dùng câu 'nhìn rõ ràng'.",
+      "expectedAnswerElements": [
+        "Show zero membership.",
+        "Show closure under addition.",
+        "Show closure under scalar multiplication."
+      ],
+      "followUp": "A=mu+U có phải subspace không, và điều kiện nào trên mu sẽ làm A=U?",
+      "learningOutcomeRefs": ["LO1"]
+    },
+    {
+      "id": "PQ02",
+      "level": "foundation",
+      "question": "Vì sao một finite dataset nằm trên U vẫn không phải chính U?",
+      "expectedAnswerElements": [
+        "Finite set lacks all real linear combinations.",
+        "Dataset and model set are different objects.",
+        "Near-subspace is an approximation claim."
+      ],
+      "followUp": "Khi nào finite set có thể là a subspace?",
+      "learningOutcomeRefs": ["LO1"]
+    },
+    {
+      "id": "PQ03",
+      "level": "conceptual",
+      "question": "Spanning, independence, dimension và rank liên hệ ra sao trong B?",
+      "expectedAnswerElements": [
+        "col(B) is the span.",
+        "Independent columns form a basis for col(B).",
+        "dim(col(B))=rank(B).",
+        "Column count may exceed rank."
+      ],
+      "followUp": "Thêm một redundant sensor feature có thể thay đổi noise behavior dù không tăng rank không?",
+      "learningOutcomeRefs": ["LO2"]
+    },
+    {
+      "id": "PQ04",
+      "level": "derivation",
+      "question": "Dẫn xuất z=Q^Ty từ điều kiện residual orthogonal với col(Q).",
+      "expectedAnswerElements": [
+        "Set r=y-Qz.",
+        "Require Q^Tr=0.",
+        "Use Q^TQ=I.",
+        "Conclude z=Q^Ty."
+      ],
+      "followUp": "Nếu Q^TQ gần I nhưng không đúng I, bạn xử lý thế nào?",
+      "learningOutcomeRefs": ["LO3", "LO4"]
+    },
+    {
+      "id": "PQ05",
+      "level": "derivation",
+      "question": "Dẫn xuất P=B(B^TB)^(-1)B^T và nêu chính xác điều kiện tồn tại.",
+      "expectedAnswerElements": [
+        "Set residual y-Bc orthogonal to col(B).",
+        "Obtain B^TBc=B^Ty.",
+        "Require full column rank.",
+        "Substitute c into Bc."
+      ],
+      "followUp": "Tại sao code nên solve thay vì tạo inverse?",
+      "learningOutcomeRefs": ["LO3", "LO7"]
+    },
+    {
+      "id": "PQ06",
+      "level": "critical",
+      "critical": true,
+      "question": "Cho một idempotent matrix không symmetric. Nó là projector loại gì và vì sao không phải orthogonal projector?",
+      "expectedAnswerElements": [
+        "Idempotence defines a projection operator broadly.",
+        "Lack of symmetry permits oblique projection.",
+        "Orthogonal projection in Euclidean space requires symmetry."
+      ],
+      "followUp": "Hãy đề xuất một invariant test suite cho projector implementation.",
+      "learningOutcomeRefs": ["LO3", "LO7"]
+    },
+    {
+      "id": "PQ07",
+      "level": "case_calculation",
+      "question": "Không nhìn artifact, hãy tái tạo normal sample từ mu, Q và z, rồi tính residual.",
+      "expectedAnswerElements": [
+        "Use y=x-mu.",
+        "Compute z=(0.6,-0.2).",
+        "Compute y_hat=(0.2,0.4,0.2,0.4).",
+        "Compute r=(0.02,-0.01,-0.02,0.01)."
+      ],
+      "followUp": "Một low residual có thể bỏ sót loại problem nào?",
+      "learningOutcomeRefs": ["LO4", "LO6"]
+    },
+    {
+      "id": "PQ08",
+      "level": "representation",
+      "question": "Vì sao z_Q=(0.6,-0.2) và c_B=(0.4,-0.2) đều đúng?",
+      "expectedAnswerElements": [
+        "Coordinates depend on basis.",
+        "Q and B span the same subspace.",
+        "Qz=Bc gives the same projected vector."
+      ],
+      "followUp": "Khi nào component-wise comparison giữa coordinate vectors là meaningful?",
+      "learningOutcomeRefs": ["LO3", "LO4"]
+    },
+    {
+      "id": "PQ09",
+      "level": "critical",
+      "critical": true,
+      "question": "Tại sao X_c có physical two-mode story nhưng floating-point rank 4?",
+      "expectedAnswerElements": [
+        "Noise/perturbations make small singular values nonzero.",
+        "All four locked singular values are nonzero.",
+        "Two-mode statement is numerical/model criterion under tau=0.05."
+      ],
+      "followUp": "Nếu đổi units của một feature, tau và singular values sẽ thay đổi thế nào về ý nghĩa?",
+      "learningOutcomeRefs": ["LO5", "LO7"]
+    },
+    {
+      "id": "PQ10",
+      "level": "numerical",
+      "question": "NumPy default matrix_rank trả 4 nhưng nhóm kỹ thuật báo rank_tau=2. Ai đúng?",
+      "expectedAnswerElements": [
+        "Both can be correct under different criteria.",
+        "Default tolerance is a numerical convention.",
+        "Engineering tolerance must be declared and justified."
+      ],
+      "followUp": "Bạn sẽ log những metadata nào cùng rank result?",
+      "learningOutcomeRefs": ["LO5", "LO7"]
+    },
+    {
+      "id": "PQ11",
+      "level": "critical",
+      "critical": true,
+      "question": "Mismatch score vượt threshold. Hãy đưa ra câu kết luận đạt chuẩn kỹ thuật và ba câu kết luận bị cấm.",
+      "expectedAnswerElements": [
+        "Permitted: poorly represented by current model.",
+        "Forbidden: proven bearing fault.",
+        "Forbidden: sensor definitely broken.",
+        "Forbidden: machine unsafe or healthy solely from score."
+      ],
+      "followUp": "Cần thêm dữ liệu nào để phân loại nguyên nhân?",
+      "learningOutcomeRefs": ["LO6"]
+    },
+    {
+      "id": "PQ12",
+      "level": "transfer",
+      "question": "99.9541% retained energy cao nhưng một rare fault direction có thể vẫn bị mất vì sao?",
+      "expectedAnswerElements": [
+        "Energy is dominated by common variation.",
+        "Rare but task-critical direction may carry low total energy.",
+        "Reconstruction objective differs from detection objective."
+      ],
+      "followUp": "Bạn sẽ đánh giá k bằng tiêu chí downstream nào ngoài rho_k?",
+      "learningOutcomeRefs": ["LO5", "LO6", "LO8"]
+    },
+    {
+      "id": "PQ13",
+      "level": "code_audit",
+      "question": "Một script cho score đúng số nhưng không assert feature order. Có được chấp nhận không?",
+      "expectedAnswerElements": [
+        "No, shape-correct semantic mismatch remains possible.",
+        "Model artifact must include feature schema/version.",
+        "Inputs must be validated before scoring."
+      ],
+      "followUp": "Thiết kế một schema checksum hoặc version check tối thiểu.",
+      "learningOutcomeRefs": ["LO7"]
+    },
+    {
+      "id": "PQ14",
+      "level": "transfer",
+      "question": "§1.5 dừng ở đâu để không dạy trước §1.6 và chương ma trận?",
+      "expectedAnswerElements": [
+        "Use data matrix only as a bridge.",
+        "Preview reduced SVD shapes and singular values.",
+        "Defer full PCA, covariance eigendecomposition and fundamental subspaces."
+      ],
+      "followUp": "Nêu câu hỏi trung tâm mà §1.6 phải tiếp nhận.",
+      "learningOutcomeRefs": ["LO8"]
+    }
+  ],
+  "masteryGates": [
+    {
+      "id": "MG1",
+      "name": "Model classification",
+      "requiredItems": ["RC01", "RC02", "PQ01", "PQ02"],
+      "passRule": "All critical classification errors corrected."
+    },
+    {
+      "id": "MG2",
+      "name": "Projection mathematics",
+      "requiredItems": ["RC04", "RC05", "RC06", "RC07", "PQ04", "PQ05", "PQ06"],
+      "passRule": "Correct formula selected with conditions and invariants."
+    },
+    {
+      "id": "MG3",
+      "name": "Locked case calculation",
+      "requiredItems": ["RC08", "RC09", "RC10", "RC11", "PQ07", "PQ08", "PQ11"],
+      "passRule": "Normal and mismatch calculations correct; interpretation remains bounded."
+    },
+    {
+      "id": "MG4",
+      "name": "Numerical rank and SVD",
+      "requiredItems": ["RC12", "RC13", "RC14", "PQ09", "PQ10", "PQ12"],
+      "passRule": "Matrix, orientation, tolerance and objective are stated."
+    },
+    {
+      "id": "MG5",
+      "name": "Data contract and transfer",
+      "requiredItems": ["RC15", "RC16", "PQ13", "PQ14"],
+      "passRule": "Feature semantics and next-lesson boundary are explicit."
+    }
+  ],
+  "coverage": {
+    "retrievalCheckCount": 16,
+    "professorQuestionCount": 14,
+    "masteryGateCount": 5,
+    "learningOutcomesCovered": ["LO1", "LO2", "LO3", "LO4", "LO5", "LO6", "LO7", "LO8"],
+    "misconceptionGroupsCovered": [
+      "conceptual_geometry",
+      "algebra_projection",
+      "centering_scaling_data_contract",
+      "numerical_rank_svd",
+      "engineering_interpretation"
+    ]
+  },
+  "pass10Acceptance": {
+    "status": "PASS_10_RETRIEVAL_PROFESSOR_QA_COMPLETE",
+    "retrievalAnswersHiddenByDefault": true,
+    "criticalItemsDefined": true,
+    "allLearningOutcomesCovered": true,
+    "allFiveMisconceptionGroupsCovered": true,
+    "runtimeFilesModified": false,
+    "nextTask": "THEORY_C01_L05_REFERENCE_ARTIFACT_PASS_11"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "json_files": 150,
+  "json_errors": [],
+  "js_files": 5,
+  "js_errors": [],
+  "has_e42_final_summary_override": true,
+  "has_e42_app_refocus": true,
+  "e42_app_depends_on_theory_count": 469,
+  "application_count": 469,
+  "lesson_count": 260,
+  "chapter_count": 32,
+  "object_object_hits": 0,
+  "renderFormula_shim": true,
+  "theory_scroll_lock": true,
+  "zip_integrity": "PASS",
+  "e42_no_summary_every_slide": true,
+  "e42_app_has_no_review_exercise_button": true
+}

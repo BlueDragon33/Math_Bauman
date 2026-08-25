@@ -1,0 +1,53 @@
+{
+  "checkpoint": "E63_UI_REALITY_AUDIT_CHECKPOINT_TEST_SNAPSHOT",
+  "notFinal": true,
+  "testerRole": [
+    "technical tester",
+    "application tester"
+  ],
+  "source": "E62_FAST_UI_STABILITY_CHECKPOINT_TEST_SNAPSHOT",
+  "fixesApplied": [
+    "Cập nhật title/topbar/manifest đang hiển thị, bỏ mô tả cũ V39 và mô phỏng tách đôi.",
+    "Đồng bộ counts thật trong subject-manifest.json/js.",
+    "Sửa DEFAULT/sanitize simulationKind sang unified thay vì tự kéo về theory.",
+    "Thêm UI stability layer E63 để dọn label lặp và ép mọi luồng mở mô phỏng về unified.",
+    "Ghi nhận các lỗi còn lại cho E64-E67, không gọi FINAL."
+  ],
+  "counts": {
+    "lessons": 260,
+    "exercises": 1040,
+    "applications": 520,
+    "simulations": 260,
+    "formulas": 678,
+    "professor_qa": 260,
+    "question_bank": 1423,
+    "review_packs": 260
+  },
+  "audit": {
+    "badExerciseLevelLessons": 0,
+    "duplicateChapterLabelsInLessonData": 0,
+    "duplicateLessonLabelsInLessonData": 0,
+    "splitSimulationKindsInData": 0,
+    "oldSplitSimulationTextInActiveCore": false,
+    "staleTopbarTextAfterFix": false,
+    "rendererDuplicateRisk": "HIGH in UI-rich core: legacy renderer blocks remain by design; E64 must consolidate layout without destroying UI."
+  },
+  "passNow": [
+    "JSON parse",
+    "JS syntax",
+    "260 lessons",
+    "32 chapters",
+    "1040 exercises",
+    "520 applications",
+    "260 unified simulations",
+    "678 formulas",
+    "manifest counts sync"
+  ],
+  "knownRemainingRisksForNextSteps": [
+    "Core UI-rich còn nhiều renderer lịch sử; không phá ngay ở E63 để tránh lỗi lớn kiểu FINAL_REBUILD.",
+    "E64 cần kiểm và chỉnh layout thật từng tab: vị trí Chọn chương, header trùng, độ phình view.",
+    "E65 cần rà nội dung hiển thị thật: ứng dụng, vấn đáp, bài tập, công thức, công thức sâu.",
+    "E66 cần kiểm nút bấm bằng thao tác người học: trình chiếu, lịch hôm nay, chuyển tab, chọn chương.",
+    "E67 mới được coi là final candidate nếu UI thật ổn."
+  ]
+}

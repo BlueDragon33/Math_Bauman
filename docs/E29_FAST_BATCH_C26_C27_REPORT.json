@@ -1,0 +1,67 @@
+{
+  "checkpoint": "E29",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapters": [
+    {
+      "checkpoint": "E29",
+      "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+      "mode": "FAST_BATCH",
+      "chapterId": "MATH-HK3-NIR-C26",
+      "chapterTitle": "Chương 26 · Thiết kế thí nghiệm, ablation và độ tin cậy kết quả НИР",
+      "stage": "hk3",
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "focus": "Research question, ablation, uncertainty, significance, repeatability và báo cáo kết quả nghiên cứu",
+      "notFinal": true
+    },
+    {
+      "checkpoint": "E29",
+      "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+      "mode": "FAST_BATCH",
+      "chapterId": "MATH-HK3-GRAPH-C27",
+      "chapterTitle": "Chương 27 · Đồ thị, Laplacian và điều phối đa tác tử cho hệ tự hành",
+      "stage": "hk3",
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "focus": "Graph theory, graph Laplacian, consensus, routing, connectivity và mạng robot/cảm biến",
+      "notFinal": true
+    }
+  ],
+  "finishRoadmap": {
+    "targetTotalChapters": 32,
+    "doneThroughChapter": 27,
+    "remainingChapters": [
+      "C28",
+      "C29",
+      "C30",
+      "C31",
+      "C32"
+    ],
+    "plannedCheckpoints": [
+      "E30: C28-C29",
+      "E31: C30-C31",
+      "E32: C32 + toàn cục QA/hardening"
+    ],
+    "finalRule": "Only create official FINAL when user says FINAL or xuất bản cuối."
+  }
+}

@@ -1,0 +1,1 @@
+const fs=require('fs'), path=require('path'); const root=path.resolve(__dirname,'..'); const manifest=JSON.parse(fs.readFileSync(path.join(root,'subject-manifest.json'),'utf8')); let ok=true; for(const f of manifest.dataFiles){const p=path.join(root,f.path); if(!fs.existsSync(p)){ok=false; console.error('Missing',f.path)}else console.log('OK',f.path)} process.exit(ok?0:1);

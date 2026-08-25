@@ -1,0 +1,24 @@
+{
+  "id": "E37_FLOW_COMPACT_REGRESSION_POLISH",
+  "type": "CHECKPOINT / TEST / SNAPSHOT",
+  "not_final": true,
+  "base": "E36_VIEW_NAV_POLISH_CHECKPOINT_TEST_SNAPSHOT",
+  "changes": [
+    "Bổ sung flow footer gọn cho Bài tập, Mô phỏng, Công thức, Công thức sâu để người học không bị cụt đường học.",
+    "Lý thuyết giữ CTA Bài tập ở cuối và thêm lối tắt Mô phỏng nhanh.",
+    "Bài tập giữ view tối giản: không picker chương đầu tab, không bảng Luyện tập, không khóa mức độ; thêm footer điều hướng học tiếp.",
+    "Mô phỏng được nén layout điều hướng ngang, chống chảy dọc nội dung.",
+    "Công thức/Công thức sâu được nén topbar và thêm flow quay lại Lý thuyết/Bài tập/Mô phỏng.",
+    "Giữ khóa scrollbar dọc mẩu trong slide strip."
+  ],
+  "qa_targets": [
+    "JSON parse",
+    "JS syntax",
+    "chapter_count",
+    "lesson_count",
+    "object object scan",
+    "theory micro scroll lock",
+    "E37 markers",
+    "zip integrity"
+  ]
+}

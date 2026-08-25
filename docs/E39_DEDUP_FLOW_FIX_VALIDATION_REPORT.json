@@ -1,0 +1,23 @@
+{
+  "checkpoint": "E39_DEDUP_FLOW_FIX_CHECKPOINT_TEST_SNAPSHOT",
+  "final": false,
+  "fixes": [
+    "presentation CTA closes modal then routes to matching tab/content",
+    "dedupe headers in application/dialogue/simulation/formula/formula deep",
+    "replace theory duplicate summary with useful quick check",
+    "compact premium picker bars"
+  ],
+  "validation": {
+    "json_parse": "PASS",
+    "js_syntax": "PASS",
+    "lesson_count": 260,
+    "chapter_count": 32,
+    "presentation_actions": "PASS",
+    "quick_check_override": "PASS",
+    "compact_picker_override": "PASS",
+    "formula_top_dedupe": "PASS",
+    "simulation_dedupe": "PASS",
+    "object_safe_no_literals": "PASS",
+    "errors": []
+  }
+}

@@ -1,0 +1,1394 @@
+[
+  {
+    "id": "deep_M01",
+    "stage": "vn",
+    "lessonId": "M01",
+    "title": "Phản biện sâu · Vector trong không gian dữ liệu",
+    "domain": "AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "vn"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M01",
+        "app_M01"
+      ],
+      "lessonId": "M01"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M02",
+    "stage": "vn",
+    "lessonId": "M02",
+    "title": "Phản biện sâu · Ma trận và hệ phương trình tuyến tính",
+    "domain": "AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "vn"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M02",
+        "app_M02"
+      ],
+      "lessonId": "M02"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M03",
+    "stage": "vn",
+    "lessonId": "M03",
+    "title": "Phản biện sâu · Đạo hàm và trực giác gradient",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "vn"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M03",
+        "app_M03"
+      ],
+      "lessonId": "M03"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M04",
+    "stage": "vn",
+    "lessonId": "M04",
+    "title": "Phản biện sâu · Tích phân và diện tích dưới đường cong",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "vn"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M04",
+        "app_M04"
+      ],
+      "lessonId": "M04"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M05",
+    "stage": "vn",
+    "lessonId": "M05",
+    "title": "Phản biện sâu · Xác suất cơ bản và Bayes",
+    "domain": "AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "vn"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M05",
+        "app_M05"
+      ],
+      "lessonId": "M05"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M06",
+    "stage": "vn",
+    "lessonId": "M06",
+    "title": "Phản biện sâu · Thống kê mô tả và sai số đo",
+    "domain": "AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "vn"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M06",
+        "app_M06"
+      ],
+      "lessonId": "M06"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M07",
+    "stage": "vn",
+    "lessonId": "M07",
+    "title": "Phản biện sâu · Số phức và dao động",
+    "domain": "Xử lý tín hiệu: lọc nhiễu, miền tần số, cảm biến và chuỗi đo.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "vn"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M07",
+        "app_M07"
+      ],
+      "lessonId": "M07"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M08",
+    "stage": "vn",
+    "lessonId": "M08",
+    "title": "Phản biện sâu · Python tính toán Toán",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "vn"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M08",
+        "app_M08"
+      ],
+      "lessonId": "M08"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M09",
+    "stage": "prep",
+    "lessonId": "M09",
+    "title": "Phản biện sâu · Ký hiệu Toán Nga và cách đọc công thức",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "prep"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M09",
+        "app_M09"
+      ],
+      "lessonId": "M09"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M10",
+    "stage": "prep",
+    "lessonId": "M10",
+    "title": "Phản biện sâu · Hàm số, giới hạn và liên tục",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "prep"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M10",
+        "app_M10"
+      ],
+      "lessonId": "M10"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M11",
+    "stage": "prep",
+    "lessonId": "M11",
+    "title": "Phản biện sâu · Chuỗi số và chuỗi hàm",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "prep"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M11",
+        "app_M11"
+      ],
+      "lessonId": "M11"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M12",
+    "stage": "prep",
+    "lessonId": "M12",
+    "title": "Phản biện sâu · Phương trình vi phân thường",
+    "domain": "Robot/điều khiển: mô hình trạng thái, ước lượng, sensor fusion và điều hướng.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "prep"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M12",
+        "app_M12"
+      ],
+      "lessonId": "M12"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M13",
+    "stage": "prep",
+    "lessonId": "M13",
+    "title": "Phản biện sâu · Hình học giải tích và tọa độ",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "prep"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M13",
+        "app_M13"
+      ],
+      "lessonId": "M13"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M14",
+    "stage": "prep",
+    "lessonId": "M14",
+    "title": "Phản biện sâu · Xác suất rời rạc và biến ngẫu nhiên",
+    "domain": "AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "prep"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M14",
+        "app_M14"
+      ],
+      "lessonId": "M14"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M15",
+    "stage": "prep",
+    "lessonId": "M15",
+    "title": "Phản biện sâu · Logic chứng minh và phản ví dụ",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "prep"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M15",
+        "app_M15"
+      ],
+      "lessonId": "M15"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M16",
+    "stage": "prep",
+    "lessonId": "M16",
+    "title": "Phản biện sâu · Bảng thuật ngữ Toán Nga-Việt-Anh",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "prep"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M16",
+        "app_M16"
+      ],
+      "lessonId": "M16"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M17",
+    "stage": "hk1",
+    "lessonId": "M17",
+    "title": "Phản biện sâu · Không gian vector và cơ sở",
+    "domain": "AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk1"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M17",
+        "app_M17"
+      ],
+      "lessonId": "M17"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M18",
+    "stage": "hk1",
+    "lessonId": "M18",
+    "title": "Phản biện sâu · Trị riêng, vector riêng và chéo hóa",
+    "domain": "AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk1"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M18",
+        "app_M18"
+      ],
+      "lessonId": "M18"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M19",
+    "stage": "hk1",
+    "lessonId": "M19",
+    "title": "Phản biện sâu · SVD và bình phương tối thiểu",
+    "domain": "AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk1"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M19",
+        "app_M19"
+      ],
+      "lessonId": "M19"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M20",
+    "stage": "hk1",
+    "lessonId": "M20",
+    "title": "Phản biện sâu · Giải tích nhiều biến và Jacobian",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk1"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M20",
+        "app_M20"
+      ],
+      "lessonId": "M20"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M21",
+    "stage": "hk1",
+    "lessonId": "M21",
+    "title": "Phản biện sâu · Tối ưu lồi cơ bản",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk1"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M21",
+        "app_M21"
+      ],
+      "lessonId": "M21"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M22",
+    "stage": "hk1",
+    "lessonId": "M22",
+    "title": "Phản biện sâu · Số trị tuyến tính và conditioning",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk1"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M22",
+        "app_M22"
+      ],
+      "lessonId": "M22"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M23",
+    "stage": "hk1",
+    "lessonId": "M23",
+    "title": "Phản biện sâu · Xác suất liên tục và kỳ vọng",
+    "domain": "AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk1"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M23",
+        "app_M23"
+      ],
+      "lessonId": "M23"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M24",
+    "stage": "hk1",
+    "lessonId": "M24",
+    "title": "Phản biện sâu · Notebook Toán cho học phần Bauman",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk1"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M24",
+        "app_M24"
+      ],
+      "lessonId": "M24"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M25",
+    "stage": "hk2",
+    "lessonId": "M25",
+    "title": "Phản biện sâu · Hồi quy tuyến tính và regularization",
+    "domain": "AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk2"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M25",
+        "app_M25"
+      ],
+      "lessonId": "M25"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M26",
+    "stage": "hk2",
+    "lessonId": "M26",
+    "title": "Phản biện sâu · Gradient descent và biến thể",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk2"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M26",
+        "app_M26"
+      ],
+      "lessonId": "M26"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M27",
+    "stage": "hk2",
+    "lessonId": "M27",
+    "title": "Phản biện sâu · Xác suất Bayes và ước lượng",
+    "domain": "AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk2"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M27",
+        "app_M27"
+      ],
+      "lessonId": "M27"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M28",
+    "stage": "hk2",
+    "lessonId": "M28",
+    "title": "Phản biện sâu · Quá trình ngẫu nhiên và chuỗi thời gian",
+    "domain": "Nền kỹ thuật: đọc công thức, kiểm chứng số và trình bày lời giải trong môi trường Bauman.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk2"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M28",
+        "app_M28"
+      ],
+      "lessonId": "M28"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M29",
+    "stage": "hk2",
+    "lessonId": "M29",
+    "title": "Phản biện sâu · Fourier và miền tần số",
+    "domain": "Xử lý tín hiệu: lọc nhiễu, miền tần số, cảm biến và chuỗi đo.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk2"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M29",
+        "app_M29"
+      ],
+      "lessonId": "M29"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M30",
+    "stage": "hk2",
+    "lessonId": "M30",
+    "title": "Phản biện sâu · Lọc số và convolution",
+    "domain": "Xử lý tín hiệu: lọc nhiễu, miền tần số, cảm biến và chuỗi đo.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk2"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M30",
+        "app_M30"
+      ],
+      "lessonId": "M30"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M31",
+    "stage": "hk2",
+    "lessonId": "M31",
+    "title": "Phản biện sâu · Entropy, thông tin và phân loại",
+    "domain": "AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk2"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M31",
+        "app_M31"
+      ],
+      "lessonId": "M31"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M32",
+    "stage": "hk2",
+    "lessonId": "M32",
+    "title": "Phản biện sâu · Đánh giá mô hình và kiểm định",
+    "domain": "AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk2"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M32",
+        "app_M32"
+      ],
+      "lessonId": "M32"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M33",
+    "stage": "hk3",
+    "lessonId": "M33",
+    "title": "Phản biện sâu · Mô hình trạng thái cho robot",
+    "domain": "Robot/điều khiển: mô hình trạng thái, ước lượng, sensor fusion và điều hướng.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk3"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M33",
+        "app_M33"
+      ],
+      "lessonId": "M33"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M34",
+    "stage": "hk3",
+    "lessonId": "M34",
+    "title": "Phản biện sâu · Kalman filter và sensor fusion",
+    "domain": "Robot/điều khiển: mô hình trạng thái, ước lượng, sensor fusion và điều hướng.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk3"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M34",
+        "app_M34"
+      ],
+      "lessonId": "M34"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M35",
+    "stage": "hk3",
+    "lessonId": "M35",
+    "title": "Phản biện sâu · Tối ưu quỹ đạo và ràng buộc",
+    "domain": "Robot/điều khiển: mô hình trạng thái, ước lượng, sensor fusion và điều hướng.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk3"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M35",
+        "app_M35"
+      ],
+      "lessonId": "M35"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M36",
+    "stage": "hk3",
+    "lessonId": "M36",
+    "title": "Phản biện sâu · Graph và thuật toán trên mạng",
+    "domain": "НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk3"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M36",
+        "app_M36"
+      ],
+      "lessonId": "M36"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M37",
+    "stage": "hk3",
+    "lessonId": "M37",
+    "title": "Phản biện sâu · Học máy hình học và embedding",
+    "domain": "AI dữ liệu: biểu diễn đặc trưng, similarity, giảm chiều và mô hình tuyến tính.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk3"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M37",
+        "app_M37"
+      ],
+      "lessonId": "M37"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M38",
+    "stage": "hk3",
+    "lessonId": "M38",
+    "title": "Phản biện sâu · Thiết kế thí nghiệm và ablation",
+    "domain": "НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk3"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M38",
+        "app_M38"
+      ],
+      "lessonId": "M38"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M39",
+    "stage": "hk3",
+    "lessonId": "M39",
+    "title": "Phản biện sâu · Độ tin cậy, sai số và uncertainty",
+    "domain": "AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk3"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M39",
+        "app_M39"
+      ],
+      "lessonId": "M39"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M40",
+    "stage": "hk3",
+    "lessonId": "M40",
+    "title": "Phản biện sâu · Đọc paper Toán/AI có kiểm chứng",
+    "domain": "НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk3"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M40",
+        "app_M40"
+      ],
+      "lessonId": "M40"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M41",
+    "stage": "hk4",
+    "lessonId": "M41",
+    "title": "Phản biện sâu · Khung Toán của luận văn",
+    "domain": "НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk4"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M41",
+        "app_M41"
+      ],
+      "lessonId": "M41"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M42",
+    "stage": "hk4",
+    "lessonId": "M42",
+    "title": "Phản biện sâu · Chứng minh tính đúng và giới hạn",
+    "domain": "НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk4"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M42",
+        "app_M42"
+      ],
+      "lessonId": "M42"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M43",
+    "stage": "hk4",
+    "lessonId": "M43",
+    "title": "Phản biện sâu · Phân tích độ phức tạp thuật toán",
+    "domain": "НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk4"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M43",
+        "app_M43"
+      ],
+      "lessonId": "M43"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M44",
+    "stage": "hk4",
+    "lessonId": "M44",
+    "title": "Phản biện sâu · So sánh baseline và kiểm định kết quả",
+    "domain": "AI tin cậy: đánh giá bất định, kiểm định mô hình, phân loại và ra quyết định.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk4"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M44",
+        "app_M44"
+      ],
+      "lessonId": "M44"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M45",
+    "stage": "hk4",
+    "lessonId": "M45",
+    "title": "Phản biện sâu · Visualization Toán cho bảo vệ",
+    "domain": "НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk4"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M45",
+        "app_M45"
+      ],
+      "lessonId": "M45"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M46",
+    "stage": "hk4",
+    "lessonId": "M46",
+    "title": "Phản biện sâu · Chuẩn hóa phụ lục công thức/code",
+    "domain": "НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk4"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M46",
+        "app_M46"
+      ],
+      "lessonId": "M46"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M47",
+    "stage": "hk4",
+    "lessonId": "M47",
+    "title": "Phản biện sâu · Kịch bản phản biện Toán",
+    "domain": "НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk4"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M47",
+        "app_M47"
+      ],
+      "lessonId": "M47"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  },
+  {
+    "id": "deep_M48",
+    "stage": "hk4",
+    "lessonId": "M48",
+    "title": "Phản biện sâu · Tổng ôn Toán Bauman Master AI",
+    "domain": "НИР/ВКР: chứng minh giả thiết, thiết kế thí nghiệm và bảo vệ kết quả nghiên cứu.",
+    "integration_tags": [
+      "application",
+      "oral-defense",
+      "hk4"
+    ],
+    "linked_speaking": {
+      "base_item_ids": [
+        "oral_M48",
+        "app_M48"
+      ],
+      "lessonId": "M48"
+    },
+    "qa": [
+      {
+        "q": "Điểm yếu của mô hình toán trong case này là gì?",
+        "a": "Nêu giả thiết, nhiễu, điều kiện biên và cách kiểm chứng bằng mô phỏng/ablation."
+      },
+      {
+        "q": "Nếu giáo sư đổi tham số, em dự đoán gì trước khi tính?",
+        "a": "Dự đoán chiều biến đổi, độ nhạy và ngưỡng bất ổn, sau đó kiểm bằng số."
+      }
+    ]
+  }
+]

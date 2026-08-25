@@ -1,0 +1,780 @@
+{
+  "id": "bauman_math_theory_core_c01_l05_v1",
+  "schema": "bauman_math_theory_core_v1",
+  "version": "CORE_C01_L05_V1_PASS07_ARCHITECTURE",
+  "status": "architecture_locked_not_academically_accepted",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L05-subspace-data-representation-e140",
+  "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+  "lessonTitle": "§1.5 · Không gian con và biểu diễn dữ liệu",
+  "language": "vi",
+  "purpose": "Nguồn lõi độc lập với trình bày cho bài 1.5. Kiến trúc này nối basis/span của §1.4 với ma trận dữ liệu của §1.6 bằng subspace, affine centering, orthogonal projection, residual, numerical rank và một case máy quay bốn cảm biến cố định.",
+  "contentContract": {
+    "sourceOfTruthCandidate": true,
+    "presentationIndependent": true,
+    "noUiCopy": true,
+    "noSlideNumbering": true,
+    "notationMustBeSemantic": true,
+    "approvalBlockedUntilPass09": true,
+    "completedAcademicPasses": [1, 2, 3, 4, 5, 6, 7],
+    "runtimeMergeAllowed": false,
+    "minimumSlides": 16,
+    "maximumSlides": null,
+    "oneSourceSlidePerRuntimeSlide": true,
+    "protectedRuntime": ["E235"],
+    "disabledRuntime": ["E236", "E237", "E238"],
+    "downstreamOrder": [
+      "worked_examples_and_derivations",
+      "deterministic_computational_lab",
+      "retrieval_and_professor_qa",
+      "reference_artifact",
+      "full_view_and_normalization",
+      "slideshow_and_runtime_import",
+      "academic_acceptance",
+      "runtime_integration"
+    ]
+  },
+  "sourceFiles": {
+    "baselineAudit": "subjects/math/THEORY_C01_L05_BASELINE_AUDIT.md",
+    "learningContract": "subjects/math/THEORY_C01_L05_LEARNING_CONTRACT.md",
+    "sourceMapTerminology": "subjects/math/THEORY_C01_L05_SOURCE_MAP_TERMINOLOGY.md",
+    "formulaRegistry": "subjects/math/THEORY_C01_L05_FORMULA_REGISTRY.md",
+    "engineeringCase": "subjects/math/data/theory_case/theory_case_c01_l05.json",
+    "misconceptionMap": "subjects/math/THEORY_C01_L05_MISCONCEPTION_MAP.md"
+  },
+  "lessonThesis": "Dữ liệu nhiều chiều có thể được biểu diễn bởi một cấu trúc tuyến tính thấp chiều khi các quan sát, sau khi áp dụng đúng hợp đồng feature và tâm hóa, nằm trong hoặc gần một không gian con. Phép chiếu tách phần được mô hình giải thích khỏi phần dư; rank và singular values mô tả số hướng độc lập dưới tiêu chí đã khai báo; nhưng residual và retained energy chỉ đánh giá mức phù hợp với mô hình, không tự xác định nguyên nhân vật lý hay chất lượng của mọi nhiệm vụ downstream.",
+  "governingQuestion": "Khi nào dữ liệu nhiều chiều có thể được giải thích bằng một cấu trúc tuyến tính thấp chiều, và ta kiểm tra chất lượng biểu diễn đó như thế nào?",
+  "prerequisiteGates": [
+    {
+      "id": "P1",
+      "name": "Vector contract",
+      "requiredEvidence": "Nêu đúng feature order, units và vector operations."
+    },
+    {
+      "id": "P2",
+      "name": "Dot product and orthogonality",
+      "requiredEvidence": "Tính dot product và kiểm orthogonality dưới inner product đã nêu."
+    },
+    {
+      "id": "P3",
+      "name": "Basis, span and coordinates",
+      "requiredEvidence": "Phân biệt spanning/independence và reconstruct từ coordinates."
+    },
+    {
+      "id": "P4",
+      "name": "Matrix shape literacy",
+      "requiredEvidence": "Đọc B in R^(n x k) theo columns và kiểm phép nhân Bc."
+    }
+  ],
+  "learningOutcomes": [
+    {
+      "id": "LO1",
+      "outcome": "Phân loại được linear subspace, affine set, near-subspace model và non-subspace.",
+      "evidence": "Kiểm zero/closure và phân biệt exact với approximate membership."
+    },
+    {
+      "id": "LO2",
+      "outcome": "Kết nối span, basis, dimension và rank cho một basis/generator matrix đã nêu.",
+      "evidence": "Nêu col(B), redundancy và rank object đúng orientation."
+    },
+    {
+      "id": "LO3",
+      "outcome": "Chọn đúng orthogonal projector cho orthonormal hoặc general full-column-rank basis.",
+      "evidence": "Dùng đúng QQ^T hoặc B(B^TB)^(-1)B^T và kiểm symmetry/idempotence."
+    },
+    {
+      "id": "LO4",
+      "outcome": "Tâm hóa, chiếu và tách explained component/residual cho một observation.",
+      "evidence": "Kiểm reconstruction và residual orthogonality."
+    },
+    {
+      "id": "LO5",
+      "outcome": "Phân biệt algebraic rank, numerical rank và retained dimension.",
+      "evidence": "Nêu matrix, orientation, tolerance hoặc energy rule."
+    },
+    {
+      "id": "LO6",
+      "outcome": "Diễn giải residual như model-mismatch evidence mà không overclaim fault cause.",
+      "evidence": "Nêu được nhiều nguyên nhân khả dĩ và giới hạn của score."
+    },
+    {
+      "id": "LO7",
+      "outcome": "Triển khai hoặc audit pipeline projection/rank có shape checks và deterministic verification.",
+      "evidence": "Code kiểm centering, orthonormality, reconstruction, residual và tolerance."
+    },
+    {
+      "id": "LO8",
+      "outcome": "Giải thích được vì sao nhiều observations phải được tổ chức thành data matrix ở §1.6.",
+      "evidence": "Nêu samples-as-rows và vai trò của singular directions mà không dạy trước toàn bộ PCA/SVD."
+    }
+  ],
+  "notationRules": [
+    {
+      "raw": "U subset R^n",
+      "meaning": "Target linear subspace; ambient space must be named."
+    },
+    {
+      "raw": "mu in R^n",
+      "meaning": "Affine reference mean; model version and feature contract are part of its meaning."
+    },
+    {
+      "raw": "y = x - mu",
+      "meaning": "Centred observation; do not call this feature scaling or vector normalization."
+    },
+    {
+      "raw": "B = [b_1 ... b_k] in R^(n x k)",
+      "meaning": "General basis/generator matrix with vectors as columns."
+    },
+    {
+      "raw": "Q in R^(n x k), Q^TQ=I_k",
+      "meaning": "Orthonormal basis matrix for U."
+    },
+    {
+      "raw": "P_U",
+      "meaning": "Orthogonal projector onto U under the declared inner product."
+    },
+    {
+      "raw": "y_hat = P_U y",
+      "meaning": "Explained component in centred coordinates."
+    },
+    {
+      "raw": "r = y - y_hat",
+      "meaning": "Residual/model-mismatch vector; not automatically measurement noise."
+    },
+    {
+      "raw": "rank_tau(A)",
+      "meaning": "Numerical rank of named matrix A under declared tolerance tau."
+    },
+    {
+      "raw": "X_c in R^(m x n)",
+      "meaning": "Centred data matrix with samples as rows and features as columns for this lesson."
+    }
+  ],
+  "coreConcepts": [
+    {
+      "id": "C1",
+      "name": "Linear subspace is an algebraic closure contract",
+      "definition": "U contains zero and is closed under vector addition and scalar multiplication.",
+      "deepMeaning": "A linear subspace is not merely a shape; it remains a vector space under inherited operations.",
+      "engineeringConsequence": "A finite cloud or shifted operating region is not itself a linear subspace.",
+      "counterexample": "A plane not passing through the origin is affine, not linear.",
+      "claimRefs": ["C01"],
+      "misconceptionRefs": ["M01", "M02"]
+    },
+    {
+      "id": "C2",
+      "name": "Affine model becomes linear after correct centering",
+      "definition": "x=mu+y with y near U separates offset from directions of variation.",
+      "deepMeaning": "The same low-dimensional directions may be meaningful only relative to a reference operating point.",
+      "engineeringConsequence": "Projecting raw x by QQ^T is wrong for the locked affine case.",
+      "claimRefs": ["C11"],
+      "misconceptionRefs": ["M11", "M12"]
+    },
+    {
+      "id": "C3",
+      "name": "Span defines the exact representable set",
+      "definition": "col(B)=span(b_1,...,b_k) contains all linear combinations of the columns.",
+      "deepMeaning": "Generators describe a model space, while observations may be inside, outside or near it.",
+      "engineeringConsequence": "A basis cannot explain components outside its column space.",
+      "claimRefs": ["C01", "C02"],
+      "misconceptionRefs": ["M06"]
+    },
+    {
+      "id": "C4",
+      "name": "Dimension counts independent directions",
+      "definition": "dim(col(B))=rank(B), not necessarily the number of columns.",
+      "deepMeaning": "Redundancy increases representation size without adding linear degrees of freedom.",
+      "engineeringConsequence": "More sensors/features do not guarantee more independent information.",
+      "claimRefs": ["C02", "C07"],
+      "misconceptionRefs": ["M06", "M16"]
+    },
+    {
+      "id": "C5",
+      "name": "Orthogonal projection is best approximation in the declared metric",
+      "definition": "P_U y is the point in U minimizing Euclidean distance to y.",
+      "deepMeaning": "The residual is orthogonal to every direction in U.",
+      "engineeringConsequence": "Projection provides an explained component and a mismatch component.",
+      "claimRefs": ["C03", "C04"],
+      "misconceptionRefs": ["M09"]
+    },
+    {
+      "id": "C6",
+      "name": "Projector formula depends on basis geometry",
+      "definition": "QQ^T requires orthonormal Q; a general full-rank B requires B(B^TB)^(-1)B^T.",
+      "deepMeaning": "A subspace is basis-independent, but coordinate and computational formulas depend on the chosen basis.",
+      "engineeringConsequence": "Using BB^T with a non-orthonormal B distorts the model projection.",
+      "claimRefs": ["C05", "C06"],
+      "misconceptionRefs": ["M07", "M08"]
+    },
+    {
+      "id": "C7",
+      "name": "Residual is evidence of model mismatch",
+      "definition": "r=(I-P_U)(x-mu) is the component not represented by the current affine-subspace model.",
+      "deepMeaning": "The scalar score loses residual direction and causal information.",
+      "engineeringConsequence": "Large residual requires investigation, not automatic diagnosis.",
+      "claimRefs": ["C12"],
+      "misconceptionRefs": ["M04", "M05", "M21", "M22"]
+    },
+    {
+      "id": "C8",
+      "name": "Numerical rank is criterion-dependent",
+      "definition": "rank_tau(A) counts singular values above a declared tolerance.",
+      "deepMeaning": "Exact algebra, floating-point deficiency and engineering significance answer different questions.",
+      "engineeringConsequence": "The locked noisy matrix has exact floating-point rank 4 but numerical rank 2 under tau=0.05.",
+      "claimRefs": ["C07", "C08"],
+      "misconceptionRefs": ["M16", "M17", "M18"]
+    },
+    {
+      "id": "C9",
+      "name": "Retained energy is reconstruction evidence, not universal task evidence",
+      "definition": "rho_k summarizes squared singular-value energy captured by the first k directions.",
+      "deepMeaning": "A high percentage can coexist with missed rare events or weak downstream prediction.",
+      "engineeringConsequence": "99.9541% retained energy does not certify fault coverage or classification quality.",
+      "claimRefs": ["C10"],
+      "misconceptionRefs": ["M03", "M19"]
+    },
+    {
+      "id": "C10",
+      "name": "Representation is a versioned data contract",
+      "definition": "mu, Q, channel order, units, preprocessing, norm and regime define the score meaning.",
+      "deepMeaning": "A vector or scalar result is not portable across incompatible coordinate contracts.",
+      "engineeringConsequence": "Shape-correct reordered channels can produce semantically invalid scores.",
+      "claimRefs": ["C08", "C12"],
+      "misconceptionRefs": ["M10", "M13", "M14", "M15", "M24", "M25"]
+    }
+  ],
+  "mainMechanisms": [
+    {
+      "id": "MECH1",
+      "name": "Classify a proposed model set",
+      "steps": [
+        "Name ambient space",
+        "Test zero membership",
+        "Test addition closure",
+        "Test scalar closure",
+        "If shifted, rewrite as mu+U",
+        "If noisy, state near-subspace rather than exact membership"
+      ],
+      "qualityCheck": "Conclusion labels exact, affine or approximate status."
+    },
+    {
+      "id": "MECH2",
+      "name": "Build and inspect a basis matrix",
+      "steps": [
+        "Place generators as columns",
+        "Check shape n x k",
+        "Check feature contract",
+        "Determine column independence",
+        "State col(B) and rank(B)",
+        "Separate generator count from dimension"
+      ],
+      "qualityCheck": "Matrix and orientation are named in every rank statement."
+    },
+    {
+      "id": "MECH3",
+      "name": "Verify an orthonormal model basis",
+      "steps": [
+        "Compute Q^TQ",
+        "Compare with I_k under tolerance",
+        "Check basis version and channel order",
+        "Reject dot-coordinate shortcut if the test fails"
+      ],
+      "qualityCheck": "Both orthogonality and unit norms are checked."
+    },
+    {
+      "id": "MECH4",
+      "name": "Construct an orthogonal projector",
+      "steps": [
+        "Choose QQ^T for orthonormal Q",
+        "Choose B(B^TB)^(-1)B^T for full-rank general B",
+        "Prefer solve/QR over explicit inverse in code",
+        "Check symmetry",
+        "Check idempotence",
+        "Check action on basis columns"
+      ],
+      "qualityCheck": "BB^T is rejected for the locked general basis."
+    },
+    {
+      "id": "MECH5",
+      "name": "Project an affine-model observation",
+      "steps": [
+        "Validate feature order and units",
+        "Compute y=x-mu",
+        "Compute coordinates",
+        "Compute y_hat=P_U y",
+        "Compute r=y-y_hat",
+        "Check y=y_hat+r",
+        "Check Q^Tr approximately zero"
+      ],
+      "qualityCheck": "Raw and centred spaces are not mixed."
+    },
+    {
+      "id": "MECH6",
+      "name": "Interpret a residual score",
+      "steps": [
+        "Confirm model/regime version",
+        "Compute ||r||_2",
+        "Compare only with compatible reference distribution or case threshold",
+        "Inspect residual direction and sensor pattern",
+        "State possible causes without diagnosing"
+      ],
+      "qualityCheck": "Conclusion says model mismatch, not fault identity."
+    },
+    {
+      "id": "MECH7",
+      "name": "Report numerical rank",
+      "steps": [
+        "Name matrix and orientation",
+        "Compute ordered singular values",
+        "Declare tolerance tau",
+        "Count sigma_i>tau",
+        "Report exact/default result separately",
+        "Explain engineering reason for tau"
+      ],
+      "qualityCheck": "No rank number appears without its object and criterion."
+    },
+    {
+      "id": "MECH8",
+      "name": "Preview retained dimension",
+      "steps": [
+        "Compute squared singular values",
+        "Compute rho_k",
+        "State preprocessing and k",
+        "Interpret as reconstruction energy",
+        "Defer downstream-task validation"
+      ],
+      "qualityCheck": "No universal retention percentage is asserted."
+    },
+    {
+      "id": "MECH9",
+      "name": "Audit projection code",
+      "steps": [
+        "Make inputs deterministic",
+        "Assert shapes",
+        "Assert centering convention",
+        "Assert Q^TQ",
+        "Avoid hidden transpose/broadcasting",
+        "Assert reconstruction",
+        "Assert residual orthogonality",
+        "Expose tolerance and model version"
+      ],
+      "qualityCheck": "A deliberately broken snippet is corrected."
+    },
+    {
+      "id": "MECH10",
+      "name": "Transfer from one observation to a data matrix",
+      "steps": [
+        "Stack compatible observations",
+        "Declare samples as rows",
+        "Center with the same feature mean",
+        "Read rank and singular directions",
+        "Carry feature semantics into §1.6"
+      ],
+      "qualityCheck": "The lesson stops before full PCA/SVD derivation."
+    }
+  ],
+  "formulaRegistry": {
+    "source": "subjects/math/THEORY_C01_L05_FORMULA_REGISTRY.md",
+    "formulaIds": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "F13",
+      "F14",
+      "F15",
+      "F16"
+    ]
+  },
+  "fixedCase": {
+    "source": "subjects/math/data/theory_case/theory_case_c01_l05.json",
+    "caseId": "ROTATING_MACHINE_4CH_2MODE",
+    "version": "CASE_C01_L05_V1_LOCKED",
+    "requiredAcrossCore": true,
+    "numericSubstitutionForbidden": true
+  },
+  "misconceptionMap": {
+    "source": "subjects/math/THEORY_C01_L05_MISCONCEPTION_MAP.md",
+    "ids": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M05",
+      "M06",
+      "M07",
+      "M08",
+      "M09",
+      "M10",
+      "M11",
+      "M12",
+      "M13",
+      "M14",
+      "M15",
+      "M16",
+      "M17",
+      "M18",
+      "M19",
+      "M20",
+      "M21",
+      "M22",
+      "M23",
+      "M24",
+      "M25"
+    ]
+  },
+  "learningBeats": [
+    {
+      "id": "B01",
+      "role": "problem_framing",
+      "question": "Vì sao bốn kênh dữ liệu có thể chỉ cần hai hướng mô hình?",
+      "thesis": "Số feature không bằng số hướng thông tin độc lập.",
+      "learningOutcomeRefs": ["LO2", "LO6"],
+      "claimRefs": ["C02", "C08"],
+      "formulaRefs": ["F04"],
+      "misconceptionRefs": ["M03", "M06"],
+      "caseRefs": ["caseId", "physicalContract"],
+      "statementType": "conceptual",
+      "evidence": "Người học phân biệt ambient dimension 4 với model dimension 2."
+    },
+    {
+      "id": "B02",
+      "role": "definition_gate",
+      "question": "Một tập phải thỏa gì để là linear subspace?",
+      "thesis": "Hình dạng không đủ; cần zero và closure.",
+      "learningOutcomeRefs": ["LO1"],
+      "claimRefs": ["C01"],
+      "formulaRefs": ["F01"],
+      "misconceptionRefs": ["M01", "M02"],
+      "caseRefs": [],
+      "statementType": "exact",
+      "evidence": "Phân loại đúng line through origin, shifted line và finite cloud."
+    },
+    {
+      "id": "B03",
+      "role": "model_distinction",
+      "question": "Linear, affine và near-subspace khác nhau ở đâu?",
+      "thesis": "Offset và noise phải được ghi rõ trong model equation.",
+      "learningOutcomeRefs": ["LO1", "LO4"],
+      "claimRefs": ["C11"],
+      "formulaRefs": ["F02"],
+      "misconceptionRefs": ["M04", "M11", "M12"],
+      "caseRefs": ["mean", "notation"],
+      "statementType": "exact_and_approximate",
+      "evidence": "Viết x=mu+Qz+epsilon và nêu meaning từng term."
+    },
+    {
+      "id": "B04",
+      "role": "span_dimension",
+      "question": "Generators tạo được gì và có bao nhiêu hướng thật?",
+      "thesis": "Span xác định representable set; rank xác định independent dimension.",
+      "learningOutcomeRefs": ["LO2"],
+      "claimRefs": ["C01", "C02"],
+      "formulaRefs": ["F03", "F04"],
+      "misconceptionRefs": ["M06"],
+      "caseRefs": [],
+      "statementType": "exact",
+      "evidence": "Nêu col(B), rank(B) và redundancy cho một matrix nhỏ."
+    },
+    {
+      "id": "B05",
+      "role": "representation_contract",
+      "question": "Basis matrix đang sống trong không gian nào?",
+      "thesis": "Columns, feature order, units và ambient coordinates là một hợp đồng.",
+      "learningOutcomeRefs": ["LO2", "LO7"],
+      "claimRefs": ["C02", "C08"],
+      "formulaRefs": ["F03"],
+      "misconceptionRefs": ["M10", "M14"],
+      "caseRefs": ["physicalContract", "orthonormalBasis"],
+      "statementType": "contract",
+      "evidence": "Đọc đúng Q shape 4x2 và channel order."
+    },
+    {
+      "id": "B06",
+      "role": "orthonormal_gate",
+      "question": "Khi nào dot products cho coordinates?",
+      "thesis": "Shortcut z=Q^Ty chỉ hợp lệ sau Q^TQ=I.",
+      "learningOutcomeRefs": ["LO3", "LO7"],
+      "claimRefs": ["C05"],
+      "formulaRefs": ["F05", "F06"],
+      "misconceptionRefs": ["M08"],
+      "caseRefs": ["orthonormalBasis"],
+      "statementType": "conditional_exact",
+      "evidence": "Kiểm Gram matrix trước khi tính coordinates."
+    },
+    {
+      "id": "B07",
+      "role": "orthonormal_projection",
+      "question": "QQ^T chiếu một vector như thế nào?",
+      "thesis": "QQ^T giữ components trong U và loại components trực giao.",
+      "learningOutcomeRefs": ["LO3", "LO4"],
+      "claimRefs": ["C03", "C04", "C05"],
+      "formulaRefs": ["F07", "F10"],
+      "misconceptionRefs": ["M09"],
+      "caseRefs": ["orthogonalProjector"],
+      "statementType": "exact",
+      "evidence": "Kiểm symmetry, idempotence và P_UQ=Q."
+    },
+    {
+      "id": "B08",
+      "role": "general_basis_projection",
+      "question": "Tại sao BB^T sai cho basis tổng quát?",
+      "thesis": "Non-orthonormal coordinates phải bù Gram geometry bằng (B^TB)^(-1).",
+      "learningOutcomeRefs": ["LO3", "LO7"],
+      "claimRefs": ["C06"],
+      "formulaRefs": ["F08", "F09"],
+      "misconceptionRefs": ["M07", "M08", "M20"],
+      "caseRefs": ["generalBasisEquivalent"],
+      "statementType": "conditional_exact",
+      "evidence": "General projector bằng locked QQ^T nhưng BB^T không bằng."
+    },
+    {
+      "id": "B09",
+      "role": "projector_invariants",
+      "question": "Làm sao biết một matrix thật sự là orthogonal projector?",
+      "thesis": "Symmetry và idempotence là hai cổng khác nhau.",
+      "learningOutcomeRefs": ["LO3", "LO7"],
+      "claimRefs": ["C03", "C04"],
+      "formulaRefs": ["F10"],
+      "misconceptionRefs": ["M09"],
+      "caseRefs": ["orthogonalProjector"],
+      "statementType": "exact_and_numerical_check",
+      "evidence": "Tính hoặc kiểm P^T-P và P^2-P."
+    },
+    {
+      "id": "B10",
+      "role": "decomposition",
+      "question": "Phần nào của observation được mô hình giải thích?",
+      "thesis": "Centred observation tách duy nhất thành projected component và orthogonal residual.",
+      "learningOutcomeRefs": ["LO4"],
+      "claimRefs": ["C03", "C04", "C11"],
+      "formulaRefs": ["F11", "F12"],
+      "misconceptionRefs": ["M04", "M12"],
+      "caseRefs": ["notation", "orthogonalProjector"],
+      "statementType": "exact_model_decomposition",
+      "evidence": "Kiểm y=y_hat+r và Q^Tr=0."
+    },
+    {
+      "id": "B11",
+      "role": "preprocessing_gate",
+      "question": "Centering, scaling và normalization trả lời các câu hỏi nào?",
+      "thesis": "Ba operations khác nhau và thay đổi model geometry theo các cách khác nhau.",
+      "learningOutcomeRefs": ["LO4", "LO7"],
+      "claimRefs": ["C11"],
+      "formulaRefs": ["F02", "F11"],
+      "misconceptionRefs": ["M11", "M15"],
+      "caseRefs": ["physicalContract", "mean"],
+      "statementType": "contract",
+      "evidence": "Mô tả đúng operation nào tạo zero mean, unit variance hoặc unit norm."
+    },
+    {
+      "id": "B12",
+      "role": "case_setup",
+      "question": "Case bốn cảm biến định nghĩa observation và model ra sao?",
+      "thesis": "Feature semantics, mean, Q, units và regime phải được khóa trước scoring.",
+      "learningOutcomeRefs": ["LO4", "LO6", "LO7"],
+      "claimRefs": ["C08", "C11", "C12"],
+      "formulaRefs": ["F02"],
+      "misconceptionRefs": ["M14", "M24", "M25"],
+      "caseRefs": ["physicalContract", "mean", "orthonormalBasis"],
+      "statementType": "case_contract",
+      "evidence": "Nêu đúng bốn RMS features và single normal regime."
+    },
+    {
+      "id": "B13",
+      "role": "worked_normal_sample",
+      "question": "X_NORMAL_01 được tách thành coordinates, projection và residual thế nào?",
+      "thesis": "Low score means well represented by the current model, not proven healthy.",
+      "learningOutcomeRefs": ["LO4", "LO6"],
+      "claimRefs": ["C04", "C12"],
+      "formulaRefs": ["F06", "F07", "F11", "F12", "F16"],
+      "misconceptionRefs": ["M10", "M22"],
+      "caseRefs": ["normalSample"],
+      "statementType": "numeric_exact_with_interpretive_limit",
+      "evidence": "Recover z=(0.6,-0.2), r and score 0.0316227766."
+    },
+    {
+      "id": "B14",
+      "role": "worked_mismatch_sample",
+      "question": "X_MISMATCH_01 cho biết điều gì và không cho biết điều gì?",
+      "thesis": "Large score indicates mismatch with this model, not a unique fault cause.",
+      "learningOutcomeRefs": ["LO4", "LO6"],
+      "claimRefs": ["C12"],
+      "formulaRefs": ["F11", "F12", "F16"],
+      "misconceptionRefs": ["M21", "M23", "M24"],
+      "caseRefs": ["mismatchSample", "demonstrationThreshold"],
+      "statementType": "numeric_exact_with_interpretive_limit",
+      "evidence": "Recover score 0.3535533906 and use only model-mismatch language."
+    },
+    {
+      "id": "B15",
+      "role": "residual_limits",
+      "question": "Một scalar score đã làm mất thông tin gì?",
+      "thesis": "Norm hides residual direction, cause and unseen variables.",
+      "learningOutcomeRefs": ["LO6"],
+      "claimRefs": ["C12"],
+      "formulaRefs": ["F16"],
+      "misconceptionRefs": ["M05", "M21", "M22"],
+      "caseRefs": ["orthogonalComplementBasis", "prohibitedClaims"],
+      "statementType": "interpretation",
+      "evidence": "Nêu hai residual directions có cùng norm và khác sensor pattern."
+    },
+    {
+      "id": "B16",
+      "role": "rank_distinction",
+      "question": "Tại sao physical two-mode model vẫn có matrix rank 4?",
+      "thesis": "Noise makes small singular values nonzero; numerical rank needs a criterion.",
+      "learningOutcomeRefs": ["LO5"],
+      "claimRefs": ["C07", "C08"],
+      "formulaRefs": ["F13"],
+      "misconceptionRefs": ["M16", "M17", "M18"],
+      "caseRefs": ["calibrationMatrix"],
+      "statementType": "numerical",
+      "evidence": "Report exact rank 4 and rank_tau 2 under tau=0.05."
+    },
+    {
+      "id": "B17",
+      "role": "svd_preview",
+      "question": "Singular values cho thấy cấu trúc thấp chiều như thế nào?",
+      "thesis": "Two dominant singular values and two small values support a two-direction approximation under the locked criterion.",
+      "learningOutcomeRefs": ["LO5", "LO8"],
+      "claimRefs": ["C09", "C10"],
+      "formulaRefs": ["F14"],
+      "misconceptionRefs": ["M13", "M16", "M17"],
+      "caseRefs": ["calibrationMatrix"],
+      "statementType": "computational_preview",
+      "evidence": "Read X_c shape 8x4 and all four singular values in order."
+    },
+    {
+      "id": "B18",
+      "role": "energy_interpretation",
+      "question": "99.9541% retained energy chứng minh được gì?",
+      "thesis": "It supports reconstruction compression only under this matrix and preprocessing.",
+      "learningOutcomeRefs": ["LO5", "LO6", "LO8"],
+      "claimRefs": ["C10"],
+      "formulaRefs": ["F15"],
+      "misconceptionRefs": ["M03", "M19"],
+      "caseRefs": ["calibrationMatrix", "prohibitedClaims"],
+      "statementType": "bounded_interpretation",
+      "evidence": "State at least two conclusions that retained energy cannot justify."
+    },
+    {
+      "id": "B19",
+      "role": "code_audit",
+      "question": "Một pipeline projection/rank đáng tin phải kiểm gì?",
+      "thesis": "Correct formula without shape, centering, tolerance and invariant checks is not a reliable implementation.",
+      "learningOutcomeRefs": ["LO7"],
+      "claimRefs": ["C08", "C09"],
+      "formulaRefs": ["F05", "F07", "F10", "F11", "F12", "F13", "F14"],
+      "misconceptionRefs": ["M13", "M14", "M17", "M20", "M25"],
+      "caseRefs": ["verificationTolerances", "calibrationMatrix"],
+      "statementType": "verification",
+      "evidence": "Fix a deliberately broken snippet and pass all locked invariants."
+    },
+    {
+      "id": "B20",
+      "role": "bridge_to_next_lesson",
+      "question": "Tại sao §1.6 cần data matrix?",
+      "thesis": "A matrix organizes compatible observations so rank, column/row spaces and SVD can expose shared structure.",
+      "learningOutcomeRefs": ["LO8"],
+      "claimRefs": ["C09", "C10"],
+      "formulaRefs": ["F14", "F15"],
+      "misconceptionRefs": ["M13"],
+      "caseRefs": ["calibrationMatrix"],
+      "statementType": "bridge",
+      "evidence": "Explain samples-as-rows and stop before full PCA derivation."
+    }
+  ],
+  "assessmentBlueprint": [
+    {
+      "id": "A01",
+      "type": "classification",
+      "targets": ["LO1", "M01", "M02"],
+      "evidence": "Classify four sets with justification."
+    },
+    {
+      "id": "A02",
+      "type": "rank_dimension",
+      "targets": ["LO2", "M06"],
+      "evidence": "Find rank and dimension for a redundant generator matrix."
+    },
+    {
+      "id": "A03",
+      "type": "projector_choice",
+      "targets": ["LO3", "M07", "M08"],
+      "evidence": "Select formula from basis conditions."
+    },
+    {
+      "id": "A04",
+      "type": "projector_invariants",
+      "targets": ["LO3", "M09"],
+      "evidence": "Check symmetry and idempotence."
+    },
+    {
+      "id": "A05",
+      "type": "normal_case_calculation",
+      "targets": ["LO4", "LO6", "M22"],
+      "evidence": "Reproduce locked normal coordinates, residual and bounded interpretation."
+    },
+    {
+      "id": "A06",
+      "type": "mismatch_case_calculation",
+      "targets": ["LO4", "LO6", "M21"],
+      "evidence": "Reproduce mismatch score without fault diagnosis."
+    },
+    {
+      "id": "A07",
+      "type": "rank_tolerance",
+      "targets": ["LO5", "M16", "M17", "M18"],
+      "evidence": "Explain exact rank 4 versus rank_tau 2."
+    },
+    {
+      "id": "A08",
+      "type": "energy_interpretation",
+      "targets": ["LO5", "LO6", "M19"],
+      "evidence": "State permitted and prohibited conclusions from rho_2."
+    },
+    {
+      "id": "A09",
+      "type": "code_audit",
+      "targets": ["LO7", "M11", "M13", "M14", "M20"],
+      "evidence": "Repair centering, orientation, projector and tolerance defects."
+    },
+    {
+      "id": "A10",
+      "type": "transfer",
+      "targets": ["LO8", "M13"],
+      "evidence": "Design the samples-as-rows data matrix contract for §1.6."
+    }
+  ],
+  "scopeDeferrals": [
+    "full four fundamental subspaces theory",
+    "rank-nullity proof",
+    "complete least-squares derivation",
+    "pseudoinverse theory beyond projection context",
+    "covariance eigendecomposition",
+    "full PCA derivation and model selection",
+    "robust PCA algorithms",
+    "nonlinear manifold learning",
+    "kernel PCA",
+    "probabilistic PCA",
+    "fault classification"
+  ],
+  "pass07Acceptance": {
+    "learningBeatCount": 20,
+    "allLearningOutcomesCovered": true,
+    "allFormulaIdsReachable": true,
+    "allFiveMisconceptionGroupsCovered": true,
+    "fixedCaseUsedAcrossCore": true,
+    "runtimeFilesModified": false,
+    "academicAcceptance": false,
+    "nextTask": "THEORY_C01_L05_WORKED_EXAMPLES_DERIVATIONS_PASS_08"
+  }
+}

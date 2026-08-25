@@ -1,0 +1,18 @@
+{
+  "version": "E104",
+  "scope": "front-end e-learning framework only",
+  "changed": [
+    "modern overview dashboard",
+    "learning studio layout",
+    "right learning dock",
+    "unified simulation reader",
+    "storage content backend pipeline",
+    "route modal streamlined"
+  ],
+  "notChanged": [
+    "academic datasets counts",
+    "authoring workflow",
+    "simulation data schema"
+  ],
+  "selfCheck": "BAUMAN_MATH_E104_SELF_CHECK()"
+}

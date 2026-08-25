@@ -1,0 +1,191 @@
+{
+  "id": "bauman_math_formula_academic_c01_e237a",
+  "schema": "bauman_math_formula_academic_registry_v1",
+  "version": "E237A_C01_FORMULA_ACADEMIC_REGISTRY",
+  "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+  "profiles": [
+    {
+      "id": "c01_core_metrics",
+      "priority": 120,
+      "matchAll": ["cos(", "d(x,y)", "x · y"],
+      "analysis": [
+        {"title": "Bốn đại lượng trả lời bốn câu hỏi", "body": "Chuẩn L2 đo độ lớn của một vector; dot product đo mức cùng hướng có tính đến biên độ; khoảng cách Euclid đo độ lệch tuyệt đối; cosine tách riêng độ giống về hướng. Không nên thay thế lẫn nhau chỉ vì các công thức cùng dùng tích và chuẩn."},
+        {"title": "Điều kiện toán học", "body": "Các vector phải cùng số chiều và cùng schema. Distance và dot product nhạy với scale; cosine chỉ xác định khi cả hai vector khác zero. Nếu feature có đơn vị khác nhau, cần chuẩn hóa hoặc dùng metric có trọng số."}
+      ],
+      "application": [
+        {"title": "Chọn metric theo mục tiêu", "body": "Dùng distance cho sai số vị trí, vận tốc hoặc trạng thái khi độ lệch tuyệt đối quan trọng. Dùng cosine cho embedding, phổ tín hiệu hoặc pattern khi hướng quan trọng hơn biên độ."},
+        {"title": "Kiểm chứng kỹ thuật", "body": "Một kết quả cosine cao nhưng distance lớn nghĩa là hai mẫu cùng pattern nhưng khác scale. Đây là tín hiệu cần kiểm tra biên độ, gain cảm biến hoặc bước chuẩn hóa."}
+      ],
+      "python": "import numpy as np\n\ndef vector_metrics(x, y, eps=1e-12):\n    x = np.asarray(x, dtype=float)\n    y = np.asarray(y, dtype=float)\n    if x.shape != y.shape:\n        raise ValueError('same shape required')\n    nx, ny = np.linalg.norm(x), np.linalg.norm(y)\n    if nx < eps or ny < eps:\n        cosine = np.nan\n    else:\n        cosine = float((x @ y) / (nx * ny))\n    return {\n        'norm_x': float(nx),\n        'dot': float(x @ y),\n        'distance': float(np.linalg.norm(x - y)),\n        'cosine': cosine,\n    }"
+    },
+    {
+      "id": "c01_cosine_guard",
+      "priority": 115,
+      "matchAll": ["cos(", "mẫu số bằng 0"],
+      "analysis": [
+        {"title": "Cosine là phép đo hướng", "body": "Cosine được chuẩn hóa bởi tích hai chuẩn, nên loại bớt ảnh hưởng của độ lớn và giữ thông tin góc. Giá trị gần 1 biểu thị cùng hướng, gần 0 biểu thị trực giao, gần -1 biểu thị ngược hướng."},
+        {"title": "Zero vector không có hướng", "body": "Nếu một vector có norm bằng 0, mẫu số bằng 0 và góc không xác định. Không được tự thay trường hợp này bằng cosine bằng 0, vì 0 mang nghĩa trực giao chứ không phải không xác định."}
+      ],
+      "application": [
+        {"title": "Embedding và matching", "body": "Cosine phù hợp khi cần so pattern của embedding, phổ hoặc cửa sổ tín hiệu. Pipeline phải tách zero-vector, NaN và record rỗng trước khi xếp hạng tương đồng."}
+      ],
+      "python": "import numpy as np\n\ndef safe_cosine(x, y, eps=1e-12):\n    x = np.asarray(x, dtype=float)\n    y = np.asarray(y, dtype=float)\n    if x.shape != y.shape:\n        raise ValueError('same shape required')\n    nx, ny = np.linalg.norm(x), np.linalg.norm(y)\n    if nx < eps or ny < eps:\n        raise ValueError('cosine is undefined for a zero vector')\n    return float((x @ y) / (nx * ny))"
+    },
+    {
+      "id": "c01_vector_schema",
+      "priority": 95,
+      "matchAny": ["x = (x_1, x_2", "x in r^n"],
+      "analysis": [
+        {"title": "Vector là bản ghi có thứ tự", "body": "Mỗi thành phần x_i phải gắn với một đại lượng, đơn vị và vị trí cố định trong schema. Hai vector cùng chiều nhưng khác thứ tự feature vẫn không thể so sánh có nghĩa."},
+        {"title": "Không gian R^n", "body": "Ký hiệu R^n chỉ cho biết vector có n tọa độ thực. Nó chưa nói các tọa độ đại diện cho gì; ý nghĩa vật lý và quy ước dữ liệu phải được định nghĩa bên ngoài công thức."}
+      ],
+      "application": [
+        {"title": "Thiết kế feature", "body": "Trong AI, điều khiển và cảm biến, vector là hợp đồng giữa hệ thật và thuật toán. Thay đổi thứ tự, đơn vị hoặc tần suất cập nhật mà không đổi schema sẽ tạo lỗi dữ liệu khó phát hiện."}
+      ],
+      "python": "import numpy as np\n\nfeature_names = ['temperature', 'pressure', 'velocity']\nx = np.array([42.0, 101.3, 3.5], dtype=float)\nassert x.ndim == 1\nassert x.size == len(feature_names)"
+    },
+    {
+      "id": "c01_state_vectors",
+      "priority": 100,
+      "matchAny": ["x_robot", "x_server"],
+      "analysis": [
+        {"title": "Vector trạng thái là mô hình rút gọn", "body": "Vector trạng thái giữ những đại lượng đủ để dự đoán hoặc điều khiển hệ trong phạm vi bài toán. Nó không phải bản sao đầy đủ của hệ thật; bỏ sót biến quan trọng sẽ tạo trạng thái không quan sát được."},
+        {"title": "Đơn vị và thời gian", "body": "Mỗi thành phần cần đơn vị, miền hợp lệ và timestamp. Ghép dữ liệu lấy ở các thời điểm khác nhau vào cùng một vector có thể tạo trạng thái vật lý không tồn tại."}
+      ],
+      "application": [
+        {"title": "Robot và giám sát hệ thống", "body": "Robot dùng vector vị trí, vận tốc, góc và tốc độ quay; server dùng CPU, RAM, latency và error rate. Cùng cấu trúc vector nhưng điều kiện lấy mẫu và scale hoàn toàn khác nhau."}
+      ],
+      "python": "from dataclasses import dataclass\n\n@dataclass\nclass RobotState:\n    px: float\n    py: float\n    vx: float\n    vy: float\n    theta: float\n    omega: float"
+    },
+    {
+      "id": "c01_vector_operations",
+      "priority": 90,
+      "matchAll": ["x + y", "alpha x"],
+      "analysis": [
+        {"title": "Phép toán theo từng tọa độ", "body": "Cộng vector kết hợp hai trạng thái cùng schema theo từng chiều. Nhân vô hướng co giãn hoặc đảo hướng toàn bộ vector bằng cùng một hệ số, nên giữ quan hệ tỷ lệ giữa các thành phần."},
+        {"title": "Điều kiện cùng không gian", "body": "Hai vector chỉ cộng được khi cùng số chiều và cùng ý nghĩa tọa độ. Broadcasting trong thư viện số có thể chạy được nhưng không bảo đảm phép toán có nghĩa về mặt mô hình."}
+      ],
+      "application": [
+        {"title": "Cập nhật trạng thái", "body": "Các bước tích phân rời rạc, trộn tín hiệu và cập nhật tham số đều dựa trên cộng vector và nhân hệ số. Sai shape hoặc sai đơn vị sẽ lan truyền qua toàn bộ pipeline."}
+      ],
+      "python": "import numpy as np\n\nx = np.array([1.0, 2.0, 3.0])\ny = np.array([4.0, 5.0, 6.0])\nalpha = 0.25\nif x.shape != y.shape:\n    raise ValueError('same shape required')\nz = x + y\nscaled = alpha * x"
+    },
+    {
+      "id": "c01_vector_examples",
+      "priority": 105,
+      "matchAll": ["a = [", "b = [", "c = ["],
+      "analysis": [
+        {"title": "So sánh chỉ hợp lệ sau khi thống nhất scale", "body": "Ba vector có cùng số chiều nhưng các feature throughput, latency và packet loss khác đơn vị. Khoảng cách thô có thể bị latency thống trị, nên kết luận A gần B phải được kiểm lại sau chuẩn hóa."},
+        {"title": "Pattern và độ lớn là hai khái niệm", "body": "Cosine kiểm tra hướng biến thiên tương đối; distance kiểm tra mức lệch tuyệt đối. C có thể khác A ở cả hướng lẫn biên độ, còn B có thể giữ pattern gần A dù giá trị tăng nhẹ."}
+      ],
+      "application": [
+        {"title": "Phát hiện bất thường", "body": "Trong giám sát mạng hoặc cảm biến, nên lưu cả distance chuẩn hóa và cosine. Hai metric bổ sung nhau: một metric bắt thay đổi biên độ, metric kia bắt thay đổi cấu trúc."}
+      ],
+      "python": "import numpy as np\n\nX = np.array([[100, 40, .01], [110, 44, .012], [20, 300, .20]], dtype=float)\nscale = X.std(axis=0)\nscale[scale == 0] = 1.0\nXz = (X - X.mean(axis=0)) / scale\nprint(np.linalg.norm(Xz[0] - Xz[1]))\nprint(np.linalg.norm(Xz[0] - Xz[2]))"
+    },
+    {
+      "id": "c01_norm_family",
+      "priority": 110,
+      "matchAny": ["||x||_1", "||x||_2", "||x||_inf", "l∞"],
+      "analysis": [
+        {"title": "Mỗi chuẩn nhấn mạnh một kiểu sai số", "body": "L1 cộng độ lệch tuyệt đối và ít khuếch đại outlier hơn L2. L2 liên hệ với năng lượng và phạt mạnh sai số lớn. L∞ chỉ nhìn thành phần có độ lệch lớn nhất, phù hợp với ràng buộc an toàn theo ngưỡng."},
+        {"title": "Norm tạo hình học của dữ liệu", "body": "Đổi norm sẽ đổi khái niệm gần và xa, từ đó đổi nearest neighbor, clustering và vùng an toàn. Chọn norm là một quyết định mô hình hóa chứ không chỉ là thay công thức."}
+      ],
+      "application": [
+        {"title": "Điều khiển và an toàn", "body": "L2 phù hợp cho năng lượng sai số hoặc least squares; L1 hữu ích khi cần độ bền với ngoại lệ; L∞ phù hợp khi bất kỳ chiều nào vượt ngưỡng đều nguy hiểm."}
+      ],
+      "python": "import numpy as np\n\ne = np.asarray([1.0, -2.0, 5.0])\nmetrics = {\n    'L1': float(np.linalg.norm(e, 1)),\n    'L2': float(np.linalg.norm(e, 2)),\n    'Linf': float(np.linalg.norm(e, np.inf)),\n}\nprint(metrics)"
+    },
+    {
+      "id": "c01_weighted_distance",
+      "priority": 108,
+      "matchAll": ["d_w(", "w_i"],
+      "analysis": [
+        {"title": "Trọng số thay đổi hình học", "body": "Weighted distance nhân độ lệch bình phương của mỗi chiều với w_i. Trọng số lớn làm chiều đó đóng góp mạnh hơn, tương đương co giãn trục dữ liệu trước khi đo Euclid."},
+        {"title": "Điều kiện của trọng số", "body": "Để giữ ý nghĩa khoảng cách Euclid có trọng số, thường yêu cầu w_i không âm. Trọng số nên đến từ độ tin cậy cảm biến, đơn vị đã chuẩn hóa hoặc mức rủi ro kỹ thuật."}
+      ],
+      "application": [
+        {"title": "Metric theo rủi ro", "body": "Trong chẩn đoán hệ thống, nhiệt độ motor có thể được gán trọng số lớn hơn tốc độ quạt nếu vượt nhiệt gây hậu quả nghiêm trọng hơn. Trọng số phải được kiểm định bằng dữ liệu và chuyên gia miền."}
+      ],
+      "python": "import numpy as np\n\ndef weighted_distance(x, y, w):\n    x, y, w = map(lambda a: np.asarray(a, dtype=float), (x, y, w))\n    if x.shape != y.shape or x.shape != w.shape:\n        raise ValueError('x, y, w must have the same shape')\n    if np.any(w < 0):\n        raise ValueError('weights must be non-negative')\n    return float(np.sqrt(np.sum(w * (x - y) ** 2)))"
+    },
+    {
+      "id": "c01_dot_projection",
+      "priority": 118,
+      "matchAny": ["proj_y(x)", "x_perp", "x · y = ||x||"],
+      "analysis": [
+        {"title": "Dot product nối đại số với góc", "body": "Dạng tổng theo tọa độ cho phép tính trực tiếp; dạng chuẩn-góc cho biết ý nghĩa hình học. Dot product dương, bằng 0 hoặc âm lần lượt biểu thị xu hướng cùng hướng, trực giao hoặc ngược hướng."},
+        {"title": "Projection là nghiệm gần nhất trên một hướng", "body": "proj_y(x) là thành phần của x nằm trên span(y). Phần dư x_perp trực giao với y, và x = proj_y(x) + x_perp. Điều kiện bắt buộc là y khác zero."}
+      ],
+      "application": [
+        {"title": "Matched filter và least squares", "body": "Projection đo lượng tín hiệu nằm theo một mẫu hoặc basis. Nó là hạt nhân của matched filter, phân rã trực giao, least squares, PCA và nhiều bước tiền xử lý tín hiệu."}
+      ],
+      "python": "import numpy as np\n\ndef project(x, y, eps=1e-12):\n    x = np.asarray(x, dtype=float)\n    y = np.asarray(y, dtype=float)\n    yy = float(y @ y)\n    if yy < eps:\n        raise ValueError('projection direction must be non-zero')\n    proj = (float(x @ y) / yy) * y\n    return proj, x - proj"
+    },
+    {
+      "id": "c01_basis_span",
+      "priority": 112,
+      "matchAny": ["span(b_1", "a_1 b_1", "là cơ sở của v"],
+      "analysis": [
+        {"title": "Span là tập mọi tổ hợp tuyến tính", "body": "Một bộ vector sinh tạo ra toàn bộ các vector có thể viết dưới dạng tổng có trọng số của chúng. Span mô tả vùng biểu diễn được; vector nằm ngoài span tạo reconstruction residual khác zero."},
+        {"title": "Cơ sở phải vừa đủ", "body": "Một cơ sở vừa sinh toàn bộ không gian cần xét, vừa độc lập tuyến tính. Thiếu vector làm mất hướng; thừa vector làm tọa độ không duy nhất và có thể gây ma trận suy biến."}
+      ],
+      "application": [
+        {"title": "Feature và hệ biểu diễn", "body": "Feature, Fourier basis, wavelet và principal components đều đóng vai trò hệ hướng. Một hệ biểu diễn tốt làm cấu trúc dữ liệu cô đọng, residual nhỏ và mô hình dễ diễn giải."}
+      ],
+      "python": "import numpy as np\n\nB = np.array([[1., 0.], [0., 1.], [1., 1.]])\nv = np.array([2., 3., 5.])\ncoef, *_ = np.linalg.lstsq(B, v, rcond=None)\nrecon = B @ coef\nresidual = np.linalg.norm(v - recon)\nprint(coef, residual)"
+    },
+    {
+      "id": "c01_linear_independence",
+      "priority": 114,
+      "matchAll": ["a_1 b_1", "chỉ có nghiệm"],
+      "analysis": [
+        {"title": "Độc lập tuyến tính nghĩa là không có hướng thừa", "body": "Nếu tổ hợp tuyến tính bằng zero chỉ có nghiệm mọi hệ số bằng zero, không vector nào được tạo từ các vector còn lại. Khi có nghiệm khác zero, bộ vector chứa thông tin tuyến tính lặp."},
+        {"title": "Liên hệ với rank", "body": "Gom các vector thành cột của ma trận B. Bộ cột độc lập khi rank(B) bằng số cột. Trong dữ liệu nhiễu, nên xem singular values và ngưỡng số học thay vì kiểm định thức một cách máy móc."}
+      ],
+      "application": [
+        {"title": "Kiểm feature dư thừa", "body": "Phụ thuộc tuyến tính gây đa cộng tuyến, nghiệm không duy nhất và mô hình kém ổn định. Rank và SVD giúp phát hiện số hướng thông tin thực sự."}
+      ],
+      "python": "import numpy as np\n\nB = np.asarray([[1., 0., 1.], [0., 1., 1.], [1., 1., 2.]])\nrank = np.linalg.matrix_rank(B)\nindependent = rank == B.shape[1]\nprint(rank, independent)"
+    },
+    {
+      "id": "c01_subspace_conditions",
+      "priority": 116,
+      "matchAll": ["0 thuộc u", "u + v thuộc u", "alpha u thuộc u"],
+      "analysis": [
+        {"title": "Ba điều kiện bảo toàn cấu trúc tuyến tính", "body": "Không gian con phải chứa zero, đóng dưới phép cộng và đóng dưới nhân vô hướng. Ba điều kiện bảo đảm mọi tổ hợp tuyến tính hữu hạn của các vector trong U vẫn nằm trong U."},
+        {"title": "Đi qua gốc là bắt buộc", "body": "Một đường hoặc mặt phẳng dịch khỏi gốc không phải không gian con, dù hình dạng giống hệt. Nhân một điểm với 0 phải cho vector zero và zero phải thuộc tập."}
+      ],
+      "application": [
+        {"title": "Mô hình chiều thấp", "body": "Không gian con mô tả các trạng thái có thể sinh từ một số hướng nền. Dữ liệu lệch xa không gian con có thể là nhiễu, lỗi cảm biến hoặc trạng thái bất thường."}
+      ],
+      "python": "import numpy as np\n\nB = np.array([[1., 0.], [0., 1.], [1., 1.]])\nu = B @ np.array([2., -1.])\nv = B @ np.array([.5, 3.])\nalpha = -2.0\n# u + v and alpha*u remain in Col(B)\nprint(np.linalg.lstsq(B, u + v, rcond=None)[1])"
+    },
+    {
+      "id": "c01_rank_dimension",
+      "priority": 113,
+      "matchAny": ["rank(b)", "dim(col(b))", "dim(row(b))"],
+      "analysis": [
+        {"title": "Rank là số hướng độc lập", "body": "Rank bằng dimension của column space và row space. Nó không đếm số cột hay số hàng đơn thuần, mà đếm số hướng thông tin tuyến tính độc lập mà ma trận mang."},
+        {"title": "Rank hiệu dụng trong dữ liệu nhiễu", "body": "Dữ liệu thực thường có singular values nhỏ nhưng khác zero do nhiễu. Vì vậy dimension hữu ích thường được chọn bằng ngưỡng singular value hoặc explained variance, không chỉ bằng rank số học tuyệt đối."}
+      ],
+      "application": [
+        {"title": "Giảm chiều và cảm biến", "body": "Rank thấp cho thấy feature hoặc cảm biến dư thừa. SVD/PCA dùng cấu trúc này để nén dữ liệu, lọc nhiễu và xác định số hướng chính cần giữ."}
+      ],
+      "python": "import numpy as np\n\nB = np.asarray([[1., 2., 3.], [2., 4., 6.], [1., 1., 0.]])\ns = np.linalg.svd(B, compute_uv=False)\ntol = s.max() * max(B.shape) * np.finfo(float).eps\neffective_rank = int(np.sum(s > tol))\nprint(s, effective_rank)"
+    },
+    {
+      "id": "c01_data_matrix",
+      "priority": 102,
+      "matchAny": ["x = [x_1^t", "shape (m, n)", "x in r^{m x n}"],
+      "analysis": [
+        {"title": "Ma trận dữ liệu là tập các vector cùng schema", "body": "Theo quy ước hàng-mẫu, mỗi hàng x_i^T là một mẫu và mỗi cột là một feature. Khi đổi sang quy ước cột-mẫu, toàn bộ phép nhân và shape phải đổi nhất quán."},
+        {"title": "Shape mang ý nghĩa toán học", "body": "X thuộc R^{m×n} cho biết m mẫu và n feature. Shape không chỉ là metadata của code; nó quyết định phép nhân nào hợp lệ và trục nào dùng để lấy mean, covariance hoặc chuẩn hóa."}
+      ],
+      "application": [
+        {"title": "Pipeline ML và xử lý tín hiệu", "body": "Batch dữ liệu, PCA, hồi quy và neural network đều bắt đầu từ quy ước shape rõ ràng. Sai hàng/cột có thể cho code vẫn chạy nhưng học trên trục sai."}
+      ],
+      "python": "import numpy as np\n\nX = np.asarray([[1., 2., 3.], [4., 5., 6.]])\nm, n = X.shape\nfeature_mean = X.mean(axis=0)\nX_centered = X - feature_mean\nprint({'samples': m, 'features': n})"
+    }
+  ]
+}

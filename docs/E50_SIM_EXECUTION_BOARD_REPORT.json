@@ -1,0 +1,46 @@
+{
+  "checkpoint": "E50_SIM_EXECUTION_BOARD_CHECKPOINT_TEST_SNAPSHOT",
+  "final": false,
+  "base": "E49_SIM_DEDUP_SPECIALIZATION",
+  "scope": "Tab Mô phỏng: chuyển từ khác biệt nội dung sang quy trình chạy lab thật, có protocol, trend, visual board, code lens, rubric, decision rule.",
+  "counts": {
+    "lessons": 260,
+    "chapters": 32,
+    "simulations": 520,
+    "e50_simulations": 520,
+    "profiles": {
+      "general": 114,
+      "linear": 82,
+      "optimization": 50,
+      "probability": 80,
+      "research": 48,
+      "russian_math": 32,
+      "signal": 32,
+      "system": 16,
+      "time_series": 66
+    }
+  },
+  "validations": {
+    "jsonParse": "PASS",
+    "jsSyntax": "PASS",
+    "simulationsE50": "520/520",
+    "missingE50Fields": 0,
+    "uniqueE49NoRepeatKeys": "520/520",
+    "profiles": [
+      "general",
+      "linear",
+      "optimization",
+      "probability",
+      "research",
+      "russian_math",
+      "signal",
+      "system",
+      "time_series"
+    ],
+    "nonLastFinalSummaryBlocks": 0,
+    "lastSummaryMissing": 0,
+    "objectObjectLiterals": 0,
+    "appsTheoryDependent": "469/469",
+    "zipIntegrity": "PASS"
+  }
+}

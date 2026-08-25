@@ -1,0 +1,21 @@
+{
+  "checkpoint": "E43_APPLICATION_FINAL_SUMMARY_HARD_FIX",
+  "final": false,
+  "validation": "PASS",
+  "nonLastSummaryBlocks": 0,
+  "apps": 469,
+  "lessons": 260,
+  "appDependsTheory": 469,
+  "forbiddenExerciseFields": 0,
+  "visibleOldReviewExercise": false,
+  "e43Overrides": true,
+  "objectObjectLiterals": 0,
+  "renderFormulaShim": true,
+  "theoryScrollLock": false,
+  "rules": {
+    "summaryOnlyOnFinalSlide": true,
+    "applicationDependsOnTheoryOnly": true,
+    "applicationReviewExerciseButtonRemoved": true,
+    "simulationDeepLabPreserved": true
+  }
+}

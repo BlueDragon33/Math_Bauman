@@ -1,0 +1,34 @@
+{
+  "episode": "E48",
+  "type": "FORMULA_DEEP_SYSTEM_AUDIT_CHECKPOINT_TEST_SNAPSHOT",
+  "isFinal": false,
+  "formulas": 678,
+  "profiles": {
+    "linear": 80,
+    "general": 205,
+    "optimization": 30,
+    "probability": 90,
+    "signal": 51,
+    "time_series": 76,
+    "system": 92,
+    "russian_math": 27,
+    "research": 27
+  },
+  "updates": [
+    "deepAssumptionGates",
+    "deepDerivationSketch",
+    "deepSensitivityChecklist",
+    "deepFailureModes",
+    "deepSystemPipeline",
+    "deepDebugQuestions",
+    "deepDefensePoints",
+    "deepMiniExperiment",
+    "deepFormulaTakeaway"
+  ],
+  "ui": [
+    "renderGrammar override E48",
+    "audit board for formula deep",
+    "mini lab flow",
+    "formula deep footer to theory/simulation/chapter next"
+  ]
+}

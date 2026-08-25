@@ -1,0 +1,20 @@
+{
+  "version": "MathRoadmap V7",
+  "updated": "2026-06-13",
+  "changes": [
+    "Học tập/practice: Giải mẫu -> Vấn đáp giáo sư, có chuyển đổi thuật ngữ VI-RU-EN.",
+    "Route dialogue: Vấn đáp -> Ứng dụng, dữ liệu là case ứng dụng Toán vào AI/Bauman.",
+    "Route writing: Trình bày -> Mô phỏng, core render workspace mô phỏng tham số riêng cho Toán.",
+    "simulations.json mở rộng từ 8 lab thành 48 case gắn lessonId.",
+    "writing.json đổi vai thành báo cáo sau mô phỏng."
+  ],
+  "validation": {
+    "lessons": 48,
+    "speaking": 48,
+    "dialogue-bauman-az": 48,
+    "simulations": 48,
+    "writing": 48,
+    "tests": 384,
+    "exercises": 144
+  }
+}

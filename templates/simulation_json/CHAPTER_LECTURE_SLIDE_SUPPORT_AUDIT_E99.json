@@ -1,0 +1,273 @@
+{
+  "id": "CHAPTER_LECTURE_SLIDE_SUPPORT_AUDIT_E99",
+  "status": "PASS",
+  "createdAt": "2026-06-21",
+  "chapters": 32,
+  "chapterSlides": 320,
+  "firstLessonPrependedSlides": 192,
+  "lessonCount": 260,
+  "checks": {
+    "allChaptersHaveLecturePack": true,
+    "allPacksHave10Slides": true,
+    "allLessonsLinked": true,
+    "firstLessonsHaveOpeningSlides": 32
+  },
+  "chapterSummary": [
+    {
+      "chapterId": "MATH-HK1-LA-C15",
+      "chapterTitle": "Chương 1 · PCA, SVD và trực quan hóa không gian đặc trưng",
+      "departmentTitle": "Bộ môn Đại số tuyến tính & biểu diễn dữ liệu",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "linear_data"
+    },
+    {
+      "chapterId": "MATH-HK1-MT-C14",
+      "chapterTitle": "Chương 1 · Nền tảng phân tích dữ liệu đa chiều",
+      "departmentTitle": "Bộ môn Toán nền tảng tích hợp",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "integrated_math"
+    },
+    {
+      "chapterId": "MATH-HK1-MT-C16",
+      "chapterTitle": "Chương 2 · Clustering, similarity và cấu trúc không gian dữ liệu",
+      "departmentTitle": "Bộ môn Toán nền tảng tích hợp",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "linear_data"
+    },
+    {
+      "chapterId": "MATH-HK1-MT-C17",
+      "chapterTitle": "Chương 3 · Bài toán kỳ thi phân tích dữ liệu đa chiều",
+      "departmentTitle": "Bộ môn Toán nền tảng tích hợp",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "integrated_math"
+    },
+    {
+      "chapterId": "MATH-HK3-RISK-C29",
+      "chapterTitle": "Chương 1 · Bất định, calibration và đánh giá rủi ro cho hệ AI tự hành",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "prob_stats"
+    },
+    {
+      "chapterId": "MATH-HK3-TS-C18",
+      "chapterTitle": "Chương 1 · Lý thuyết chuỗi thời gian cho dữ liệu cảm biến",
+      "departmentTitle": "Bộ môn Tín hiệu & chuỗi thời gian",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "signal_ts"
+    },
+    {
+      "chapterId": "MATH-HK3-TS-C19",
+      "chapterTitle": "Chương 2 · Sai số dự báo, đánh giá mô hình và cross-validation theo thời gian",
+      "departmentTitle": "Bộ môn Tín hiệu & chuỗi thời gian",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "signal_ts"
+    },
+    {
+      "chapterId": "MATH-HK3-TS-C20",
+      "chapterTitle": "Chương 3 · AR, MA, ARIMA và dự báo chuỗi thời gian",
+      "departmentTitle": "Bộ môn Tín hiệu & chuỗi thời gian",
+      "lessonCount": 9,
+      "slides": 10,
+      "domainProfile": "signal_ts"
+    },
+    {
+      "chapterId": "MATH-HK3-SIG-C21",
+      "chapterTitle": "Chương 4 · Fourier, lọc số và phân tích phổ tín hiệu cảm biến",
+      "departmentTitle": "Bộ môn Tín hiệu & chuỗi thời gian",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "signal_ts"
+    },
+    {
+      "chapterId": "MATH-HK3-SIG-C22",
+      "chapterTitle": "Chương 5 · Wavelet, lọc thích nghi và phân tích thời-tần cho tín hiệu không dừng",
+      "departmentTitle": "Bộ môn Tín hiệu & chuỗi thời gian",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "signal_ts"
+    },
+    {
+      "chapterId": "MATH-HK3-EST-C23",
+      "chapterTitle": "Chương 1 · Không gian trạng thái, Kalman filter và sensor fusion nhập môn",
+      "departmentTitle": "Bộ môn Mô hình động lực & điều khiển",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "control_robotics"
+    },
+    {
+      "chapterId": "MATH-HK3-ID-C24",
+      "chapterTitle": "Chương 2 · Nhận dạng hệ thống, least squares và mô hình hồi quy động học",
+      "departmentTitle": "Bộ môn Mô hình động lực & điều khiển",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "control_robotics"
+    },
+    {
+      "chapterId": "MATH-HK3-OPT-C25",
+      "chapterTitle": "Chương 3 · Tối ưu có ràng buộc, Lagrange-KKT và MPC nhập môn cho hệ tự hành",
+      "departmentTitle": "Bộ môn Mô hình động lực & điều khiển",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "optimization"
+    },
+    {
+      "chapterId": "MATH-HK3-NNOPT-C28",
+      "chapterTitle": "Chương 1 · Tối ưu hóa số, gradient descent và backpropagation cho mô hình AI kỹ thuật",
+      "departmentTitle": "Bộ môn Tính toán số & tối ưu thuật toán",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "optimization"
+    },
+    {
+      "chapterId": "MATH-HK3-NIR-C26",
+      "chapterTitle": "Chương 1 · Thiết kế thí nghiệm, ablation và độ tin cậy kết quả НИР",
+      "departmentTitle": "Bộ môn Toán nghiên cứu, robot & luận văn",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "control_robotics"
+    },
+    {
+      "chapterId": "MATH-HK3-GRAPH-C27",
+      "chapterTitle": "Chương 2 · Đồ thị, Laplacian và điều phối đa tác tử cho hệ tự hành",
+      "departmentTitle": "Bộ môn Toán nghiên cứu, robot & luận văn",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "control_robotics"
+    },
+    {
+      "chapterId": "MATH-HK3-ROBUST-C30",
+      "chapterTitle": "Chương 3 · Robustness, anomaly detection và kiểm soát rủi ro ngoại lai cho hệ AI kỹ thuật",
+      "departmentTitle": "Bộ môn Toán nghiên cứu, robot & luận văn",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "prob_stats"
+    },
+    {
+      "chapterId": "MATH-HK3-VKR-C31",
+      "chapterTitle": "Chương 4 · Mô hình hóa toán học, mô phỏng số và trình bày kết quả НИР/ВКР",
+      "departmentTitle": "Bộ môn Toán nghiên cứu, robot & luận văn",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "control_robotics"
+    },
+    {
+      "chapterId": "MATH-HK3-FINAL-C32",
+      "chapterTitle": "Chương 5 · Tổng kết môn Toán: từ mô hình toán đến bảo vệ НИР/ВКР",
+      "departmentTitle": "Bộ môn Toán nghiên cứu, robot & luận văn",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "control_robotics"
+    },
+    {
+      "chapterId": "MATH-PREP-LA-C10",
+      "chapterTitle": "Chương 1 · Đại số tuyến tính bằng tiếng Nga",
+      "departmentTitle": "Bộ môn Đại số tuyến tính & biểu diễn dữ liệu",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "linear_data"
+    },
+    {
+      "chapterId": "MATH-PREP-PS-C11",
+      "chapterTitle": "Chương 1 · Xác suất - thống kê bằng tiếng Nga",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "prob_stats"
+    },
+    {
+      "chapterId": "MATH-PREP-PS-C13",
+      "chapterTitle": "Chương 2 · Tổng hợp dự bị: đại số, xác suất và thống kê",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "linear_data"
+    },
+    {
+      "chapterId": "MATH-PREP-MT-C09",
+      "chapterTitle": "Chương 1 · Thuật ngữ toán tiếng Nga cho lớp dự bị kỹ thuật",
+      "departmentTitle": "Bộ môn Toán nền tảng tích hợp",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "prep_language"
+    },
+    {
+      "chapterId": "MATH-PREP-MT-C12",
+      "chapterTitle": "Chương 2 · Toán cho dữ liệu đa chiều trong hệ thống AI",
+      "departmentTitle": "Bộ môn Toán nền tảng tích hợp",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "control_robotics"
+    },
+    {
+      "chapterId": "MATH-VN-LA-C01",
+      "chapterTitle": "Chương 1 · Vector trong không gian dữ liệu",
+      "departmentTitle": "Bộ môn Đại số tuyến tính & biểu diễn dữ liệu",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "linear_data"
+    },
+    {
+      "chapterId": "MATH-VN-LA-C02",
+      "chapterTitle": "Chương 2 · Ma trận, hệ tuyến tính và biến đổi dữ liệu",
+      "departmentTitle": "Bộ môn Đại số tuyến tính & biểu diễn dữ liệu",
+      "lessonCount": 9,
+      "slides": 10,
+      "domainProfile": "linear_data"
+    },
+    {
+      "chapterId": "MATH-VN-LA-C07",
+      "chapterTitle": "Chương 3 · Hiệp phương sai, tương quan và PCA nhập môn",
+      "departmentTitle": "Bộ môn Đại số tuyến tính & biểu diễn dữ liệu",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "linear_data"
+    },
+    {
+      "chapterId": "MATH-VN-CA-C03",
+      "chapterTitle": "Chương 1 · Đạo hàm, gradient và tối ưu hóa mô hình",
+      "departmentTitle": "Bộ môn Giải tích & tối ưu hóa",
+      "lessonCount": 9,
+      "slides": 10,
+      "domainProfile": "optimization"
+    },
+    {
+      "chapterId": "MATH-VN-PS-C04",
+      "chapterTitle": "Chương 1 · Xác suất cơ bản, Bayes và suy luận bất định",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "prob_stats"
+    },
+    {
+      "chapterId": "MATH-VN-PS-C05",
+      "chapterTitle": "Chương 2 · Biến ngẫu nhiên, kỳ vọng và phương sai",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "lessonCount": 9,
+      "slides": 10,
+      "domainProfile": "prob_stats"
+    },
+    {
+      "chapterId": "MATH-VN-PS-C06",
+      "chapterTitle": "Chương 3 · Thống kê mô tả, khoảng tin cậy và đánh giá mẫu",
+      "departmentTitle": "Bộ môn Xác suất, thống kê & suy luận dữ liệu",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "prob_stats"
+    },
+    {
+      "chapterId": "MATH-VN-TS-C08",
+      "chapterTitle": "Chương 1 · Chuỗi thời gian nhập môn",
+      "departmentTitle": "Bộ môn Tín hiệu & chuỗi thời gian",
+      "lessonCount": 8,
+      "slides": 10,
+      "domainProfile": "signal_ts"
+    }
+  ]
+}

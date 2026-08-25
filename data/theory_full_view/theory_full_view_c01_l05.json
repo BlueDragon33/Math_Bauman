@@ -1,0 +1,252 @@
+{
+  "id": "bauman_math_theory_full_view_c01_l05_v1",
+  "schema": "bauman_math_theory_full_view_v1",
+  "version": "FULL_VIEW_C01_L05_V1_PASS12",
+  "status": "pass12_full_view_complete_pending_normalization",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L05-subspace-data-representation-e140",
+  "lessonTitle": "§1.5 · Không gian con và biểu diễn dữ liệu",
+  "displayTitle": "Xem đầy đủ · Không gian con và biểu diễn dữ liệu",
+  "language": "vi",
+  "sources": {
+    "core": {"path":"../theory_core/theory_core_c01_l05.json","version":"CORE_C01_L05_V1_PASS07_ARCHITECTURE","precedence":1},
+    "reference": {"path":"../theory_reference/theory_reference_c01_l05.json","version":"REFERENCE_C01_L05_V1_PASS11","precedence":2},
+    "workedExamples": {"path":"../theory_worked_examples/theory_worked_examples_c01_l05.json","version":"WORKED_EXAMPLES_C01_L05_V1_PASS08","precedence":3},
+    "assessment": {"path":"../theory_assessment/theory_assessment_c01_l05.json","version":"ASSESSMENT_C01_L05_V1_PASS10","precedence":4},
+    "case": {"path":"../theory_case/theory_case_c01_l05.json","version":"CASE_C01_L05_V1_LOCKED","precedence":5}
+  },
+  "fullViewContract": {
+    "completeReadingFlow": true,
+    "presentationDataOnly": true,
+    "runtimeIndependent": true,
+    "coreIsSourceOfTruthCandidate": true,
+    "referenceIsLookupLayer": true,
+    "workedExamplesProvideVerifiedDerivations": true,
+    "mustNotAddNewMathematics": true,
+    "mustNotContradictSources": true,
+    "mustNotCopyAssessmentAnswersAsPrimaryTeaching": true,
+    "mustNotEmbedImplementationCode": true,
+    "formulasRequireMeaningConditionsAndWarnings": true,
+    "workedCaseRequiresReconstruction": true,
+    "sourceTraceRequired": true,
+    "noCss": true,
+    "noJavascript": true,
+    "noRuntimeWiring": true,
+    "noReaderProPatch": true
+  },
+  "readerCompatibility": {
+    "visualBaseline": "E235_READER_PRO_FORMULA_STANDARD_R2",
+    "compatibilityMode": "semantic_content_only",
+    "contentBlockVocabulary": ["lead","explanation","definition","formula","derivation","example","comparison","condition","warning","worked_step","check","transfer","summary"],
+    "forbiddenContent": ["CSS selectors","pixel dimensions","animation instructions","JavaScript hooks","runtime event names","collapsed source code"]
+  },
+  "informationArchitecture": [
+    {"id":"FV01","title":"Luận đề và bản đồ mô hình","purpose":"Khóa distinction linear, affine, near-subspace và finite dataset."},
+    {"id":"FV02","title":"Span, basis, dimension và rank","purpose":"Kết nối representation set với independent directions."},
+    {"id":"FV03","title":"Centering và affine model","purpose":"Giải thích vì sao projection phải diễn ra trong centred coordinates."},
+    {"id":"FV04","title":"Projector từ orthonormal basis","purpose":"Dẫn xuất z=Q^Ty và P=QQ^T."},
+    {"id":"FV05","title":"Projector từ general basis","purpose":"Dẫn xuất general formula và chặn BB^T."},
+    {"id":"FV06","title":"Projector invariants và residual","purpose":"Kiểm symmetry, idempotence, reconstruction và orthogonality."},
+    {"id":"FV07","title":"Hợp đồng case bốn cảm biến","purpose":"Khóa feature semantics, mean, basis, regime và units."},
+    {"id":"FV08","title":"Worked normal sample","purpose":"Tính đầy đủ coordinates, projection, residual và bounded interpretation."},
+    {"id":"FV09","title":"Worked mismatch sample và giới hạn score","purpose":"Tính mẫu mismatch và ngăn fault overclaim."},
+    {"id":"FV10","title":"Numerical rank, SVD và retained energy","purpose":"Phân biệt ba loại dimension/rank statements."},
+    {"id":"FV11","title":"Implementation contract và troubleshooting","purpose":"Chuyển toán học thành pipeline có assertions và metadata."},
+    {"id":"FV12","title":"Bridge sang data matrix và mastery close","purpose":"Khóa câu hỏi chuyển tiếp sang §1.6."}
+  ],
+  "readingFlow": [
+    {
+      "id": "FV01",
+      "title": "Luận đề và bản đồ mô hình",
+      "lead": "Dữ liệu nhiều chiều có thể có cấu trúc thấp chiều, nhưng phải nói rõ ta đang mô tả một linear subspace, một affine model hay một cloud chỉ nằm gần model đó.",
+      "blocks": [
+        {"type":"lead","text":"Linear subspace là một closure contract. Affine model thêm offset mu. Near-subspace model thêm residual epsilon. Finite dataset chỉ là tập observations, không tự động là bất kỳ model set nào."},
+        {"type":"comparison","items":[{"label":"Linear subspace U","meaning":"Contains zero and is closed under addition/scalar multiplication."},{"label":"Affine model mu+U","meaning":"Shifted model; need not contain origin."},{"label":"Near-subspace x=mu+Qz+epsilon","meaning":"Approximate/noisy observation model."},{"label":"Finite dataset D","meaning":"Recorded observations; generally not closed under all linear combinations."}]},
+        {"type":"formula","formula":"x=mu+Qz+epsilon","meaning":"Separate reference point, represented component and unexplained component.","conditions":["Feature order, units and model version are fixed","Q^TQ=I for the stated coordinates"],"warning":"epsilon is not automatically a fault label or Gaussian noise."},
+        {"type":"check","items":["Does the set contain zero?","Is the offset declared?","Is membership exact or approximate?","Are observations being confused with the model set?"]}
+      ],
+      "formulaRefs": ["F01","F02"],
+      "cautionRefs": ["M01","M02","M04"],
+      "retrievalAnchorRefs": ["RC01","RC02"],
+      "sourceTrace": ["core.C1","core.C2","reference.MC1-MC4","WE01"]
+    },
+    {
+      "id": "FV02",
+      "title": "Span, basis, dimension và rank",
+      "lead": "Generators mô tả một set có thể biểu diễn. Rank nói trong số generators đó có bao nhiêu directions thực sự độc lập.",
+      "blocks": [
+        {"type":"formula","formula":"U=span(b_1,...,b_k)=col(B)","meaning":"Column space is the exact representable set.","conditions":["Columns share one ambient coordinate system","Feature semantics are aligned"],"warning":"k columns do not imply k-dimensional subspace."},
+        {"type":"formula","formula":"dim(col(B))=rank(B)","meaning":"Dimension equals the number of independent column directions.","conditions":["The matrix B is named","Exact or numerical rank is stated"],"warning":"Do not equate sensor count or feature count with independent information."},
+        {"type":"example","title":"Redundant generators","text":"For g3=g1+g2, the three-column matrix still has rank 2 and spans the same space as (g1,g2)."},
+        {"type":"transfer","text":"In engineering data, an additional sensor may increase columns without increasing rank if it repeats an existing linear direction."}
+      ],
+      "formulaRefs": ["F03","F04"],
+      "cautionRefs": ["M06","M16"],
+      "retrievalAnchorRefs": ["RC03"],
+      "sourceTrace": ["core.C3","core.C4","WE02","reference.rankReporting"]
+    },
+    {
+      "id": "FV03",
+      "title": "Centering và affine model",
+      "lead": "Projection onto U is meaningful for the centred vector y=x-mu, not blindly for the raw observation x when the model is affine.",
+      "blocks": [
+        {"type":"definition","term":"Centering","text":"Subtract the locked reference mean: y=x-mu."},
+        {"type":"comparison","items":[{"label":"Centering","meaning":"Subtract mean/reference."},{"label":"Feature scaling","meaning":"Change per-feature scale."},{"label":"Vector normalization","meaning":"Rescale one observation, often to unit norm."}]},
+        {"type":"formula","formula":"x=mu+y; y_hat=P_Uy; x_hat=mu+y_hat","meaning":"Project in centred coordinates, then add the affine offset back for raw-space reconstruction.","conditions":["mu and P_U belong to the same model version"],"warning":"QQ^Tx silently ignores the affine offset."},
+        {"type":"check","items":["Was x centred?","Was the same mu used at training and scoring?","Did units or scale change?","Is the operating regime compatible?"]}
+      ],
+      "formulaRefs": ["F02","F11","F16"],
+      "cautionRefs": ["M11","M12","M15"],
+      "retrievalAnchorRefs": ["RC07"],
+      "sourceTrace": ["core.C2","core.B11","reference.preprocessingGate","lab.BUG01"]
+    },
+    {
+      "id": "FV04",
+      "title": "Projector từ orthonormal basis",
+      "lead": "When Q has orthonormal columns, dot products isolate coordinates and the projector takes the compact form QQ^T.",
+      "blocks": [
+        {"type":"condition","text":"Verify Q^TQ=I_k under a declared tolerance before using the shortcut."},
+        {"type":"derivation","steps":["Set y_hat=Qz and residual r=y-Qz","Require Q^Tr=0","Then Q^Ty-Q^TQz=0","Use Q^TQ=I to get z=Q^Ty","Substitute into y_hat to get y_hat=QQ^Ty"],"conclusion":"P_U=QQ^T."},
+        {"type":"formula","formula":"z=Q^Ty","meaning":"Coordinates in the orthonormal basis Q.","conditions":["Q^TQ=I","Matching feature contract"],"warning":"Do not reuse this formula for arbitrary B."},
+        {"type":"formula","formula":"P_U=QQ^T","meaning":"Orthogonal projector onto col(Q).","conditions":["Q has orthonormal columns"],"warning":"P_U is usually singular when k<n; that is expected."}
+      ],
+      "formulaRefs": ["F05","F06","F07"],
+      "cautionRefs": ["M08"],
+      "retrievalAnchorRefs": ["RC04"],
+      "sourceTrace": ["core.C5","core.C6","WE03","reference.projectorSelection"]
+    },
+    {
+      "id": "FV05",
+      "title": "Projector từ general basis",
+      "lead": "A basis may span the correct subspace without being orthonormal. In that case the Gram matrix corrects for basis geometry.",
+      "blocks": [
+        {"type":"derivation","steps":["Set y_hat=Bc and r=y-Bc","Require B^Tr=0","Obtain B^TBc=B^Ty","If rank(B)=k, solve for c","Substitute into Bc"],"conclusion":"c=(B^TB)^(-1)B^Ty and P_U=B(B^TB)^(-1)B^T."},
+        {"type":"warning","text":"BB^T is not the general orthogonal projector. It is valid only when the columns are orthonormal."},
+        {"type":"condition","text":"B must have full column rank for B^TB to be invertible."},
+        {"type":"check","items":["Use solve/QR/lstsq in code","Check symmetry and idempotence","Check P_UB=B","Reject hidden rank deficiency"]},
+        {"type":"example","text":"The locked general basis B spans the same U as Q. Its coordinates (0.4,-0.2) differ from Q-coordinates (0.6,-0.2), while both reconstruct the same projected vector."}
+      ],
+      "formulaRefs": ["F08","F09","F10"],
+      "cautionRefs": ["M07","M08","M20"],
+      "retrievalAnchorRefs": ["RC05","PQ05"],
+      "sourceTrace": ["core.C6","WE04","WE05","WE06","lab.LAB06"]
+    },
+    {
+      "id": "FV06",
+      "title": "Projector invariants và residual",
+      "lead": "A projection result is trustworthy only when the operator and the decomposition pass their invariants.",
+      "blocks": [
+        {"type":"formula","formula":"P_U^T=P_U; P_U^2=P_U","meaning":"Symmetry distinguishes orthogonal projection; idempotence means projecting twice changes nothing.","conditions":["Real Euclidean setting","Tolerance for numerical checks"],"warning":"Idempotence alone permits oblique projection."},
+        {"type":"formula","formula":"y_hat=P_Uy; r=y-y_hat; y=y_hat+r","meaning":"Split centred observation into explained and unexplained components.","conditions":["P_U belongs to the same model contract"],"warning":"r is not automatically sensor noise."},
+        {"type":"formula","formula":"Q^Tr=0","meaning":"Residual is orthogonal to the model subspace.","conditions":["Orthogonal projection"],"warning":"Numerical zero needs tolerance."},
+        {"type":"check","items":["P^T≈P","P^2≈P","P Q≈Q","y≈y_hat+r","Q^Tr≈0"]}
+      ],
+      "formulaRefs": ["F10","F11","F12"],
+      "cautionRefs": ["M04","M09"],
+      "retrievalAnchorRefs": ["RC06"],
+      "sourceTrace": ["core.C5","core.C7","WE03","lab.LAB03"]
+    },
+    {
+      "id": "FV07",
+      "title": "Hợp đồng case bốn cảm biến",
+      "lead": "The locked case is not just a matrix exercise. It is a versioned feature and operating-regime contract.",
+      "blocks": [
+        {"type":"definition","term":"Observation","text":"x in R^4 contains four calibrated fixed-window RMS acceleration features in order A,B,C,D."},
+        {"type":"condition","text":"Units are m/s^2 RMS; the model covers one normal operating regime; channel order and preprocessing are fixed."},
+        {"type":"formula","formula":"mu=(0.4,0.35,0.45,0.3)^T","meaning":"Locked affine reference mean."},
+        {"type":"formula","formula":"Q=[[0.5,0.5],[0.5,-0.5],[0.5,0.5],[0.5,-0.5]]","meaning":"Two locked orthonormal model directions.","conditions":["Rows correspond to A,B,C,D"],"warning":"Direction labels are teaching interpretations, not proven causal physical modes."},
+        {"type":"warning","text":"Reordering x without reordering mu, Q and all model artifacts produces shape-correct but semantically invalid scores."}
+      ],
+      "formulaRefs": ["F02","F05","F16"],
+      "cautionRefs": ["M14","M23","M24","M25"],
+      "retrievalAnchorRefs": ["RC15"],
+      "sourceTrace": ["case.physicalContract","case.mean","case.orthonormalBasis","reference.caseLookup"]
+    },
+    {
+      "id": "FV08",
+      "title": "Worked normal sample",
+      "lead": "The normal sample demonstrates the complete affine-projection pipeline and its interpretation boundary.",
+      "blocks": [
+        {"type":"worked_step","label":"Raw and centred","calculation":"x=(0.62,0.74,0.63,0.71)^T; y=x-mu=(0.22,0.39,0.18,0.41)^T"},
+        {"type":"worked_step","label":"Coordinates","calculation":"z=Q^Ty=(0.6,-0.2)^T"},
+        {"type":"worked_step","label":"Projection","calculation":"y_hat=Qz=(0.2,0.4,0.2,0.4)^T"},
+        {"type":"worked_step","label":"Residual","calculation":"r=(0.02,-0.01,-0.02,0.01)^T"},
+        {"type":"worked_step","label":"Score","calculation":"||r||_2=0.0316227766016838"},
+        {"type":"check","items":["Q^Tr=(0,0)^T","y_hat+r=y","score<gamma_demo=0.1"]},
+        {"type":"warning","text":"Permitted: well represented by the current teaching model. Prohibited: proven healthy."}
+      ],
+      "formulaRefs": ["F02","F06","F07","F11","F12","F16"],
+      "cautionRefs": ["M10","M12","M22"],
+      "retrievalAnchorRefs": ["RC08","PQ07"],
+      "sourceTrace": ["case.normalSample","WE07","lab.LAB04"]
+    },
+    {
+      "id": "FV09",
+      "title": "Worked mismatch sample và giới hạn score",
+      "lead": "A high residual score is evidence that the current model explains the observation poorly. It is not a diagnosis engine.",
+      "blocks": [
+        {"type":"worked_step","label":"Raw and centred","calculation":"x=(0.9,0.6,0.55,0.85)^T; y=(0.5,0.25,0.1,0.55)^T"},
+        {"type":"worked_step","label":"Coordinates","calculation":"z=(0.7,-0.1)^T"},
+        {"type":"worked_step","label":"Projection and residual","calculation":"y_hat=(0.3,0.4,0.3,0.4)^T; r=(0.2,-0.15,-0.2,0.15)^T"},
+        {"type":"worked_step","label":"Score","calculation":"||r||_2=0.3535533905932738>gamma_demo=0.1"},
+        {"type":"warning","text":"Possible explanations include a new regime, transient, calibration drift, sensor issue, outlier or underspecified model. The score alone selects none of them."},
+        {"type":"comparison","items":[{"label":"Residual vector","meaning":"Keeps direction and channel pattern."},{"label":"Residual norm","meaning":"Compresses mismatch to one magnitude and loses direction."}]}
+      ],
+      "formulaRefs": ["F11","F12","F16"],
+      "cautionRefs": ["M05","M21","M22","M24"],
+      "retrievalAnchorRefs": ["RC10","RC11","PQ11"],
+      "sourceTrace": ["case.mismatchSample","case.orthogonalComplementBasis","WE08","WE09"]
+    },
+    {
+      "id": "FV10",
+      "title": "Numerical rank, SVD và retained energy",
+      "lead": "Rank statements answer different questions depending on exact algebra, numerical tolerance and representation objective.",
+      "blocks": [
+        {"type":"formula","formula":"rank_tau(A)=#{i:sigma_i(A)>tau}","meaning":"Count singular values above a declared tolerance.","conditions":["Matrix and orientation named","tau declared"],"warning":"Software default is not a physical mode detector."},
+        {"type":"example","text":"Locked X_c has singular values (1.44955817,0.77504298,0.03505112,0.00330126). All are nonzero, so the stored matrix has floating-point rank 4. Under tau=0.05, numerical rank is 2."},
+        {"type":"formula","formula":"X_c=U diag(sigma) V^T","meaning":"Reduced SVD organizes matrix directions and magnitudes.","conditions":["X_c is 8x4 with samples as rows","Data are centred"],"warning":"Transposing changes factor roles."},
+        {"type":"formula","formula":"rho_2=0.9995414686511285≈99.9541%","meaning":"Two directions retain nearly all squared singular-value energy of this locked centred matrix.","conditions":["Same preprocessing and scale"],"warning":"This is not prediction accuracy, fault coverage or causal validation."}
+      ],
+      "formulaRefs": ["F13","F14","F15"],
+      "cautionRefs": ["M16","M17","M18","M19"],
+      "retrievalAnchorRefs": ["RC12","RC13","RC14","PQ09","PQ10","PQ12"],
+      "sourceTrace": ["case.calibrationMatrix","WE10","WE11","lab.LAB07","lab.LAB08"]
+    },
+    {
+      "id": "FV11",
+      "title": "Implementation contract và troubleshooting",
+      "lead": "A correct formula can still produce an invalid engineering result when shape, feature semantics, centering or tolerance are hidden.",
+      "blocks": [
+        {"type":"check","items":["Assert shapes","Assert feature order/version","Center with locked mu","Verify Q^TQ","Verify projector invariants","Verify reconstruction and Q^Tr","Expose tau and gamma_demo","Keep residual vector with score"]},
+        {"type":"comparison","items":[{"label":"Mathematical error","meaning":"Wrong formula or invalid assumptions."},{"label":"Numerical error","meaning":"Unstable computation, hidden tolerance or conditioning."},{"label":"Data-contract error","meaning":"Wrong channel order, units, regime or preprocessing."},{"label":"Interpretation error","meaning":"Model-fit evidence turned into causal claim."}]},
+        {"type":"warning","text":"A script that reproduces one expected scalar can still be wrong if it silently permutes features or projects uncentred data."},
+        {"type":"transfer","text":"Production code should version mu, Q, feature schema, scale, regime and threshold together rather than shipping naked arrays."}
+      ],
+      "formulaRefs": ["F05","F10","F11","F12","F13","F16"],
+      "cautionRefs": ["M13","M14","M15","M17","M20","M25"],
+      "retrievalAnchorRefs": ["RC15","PQ13"],
+      "sourceTrace": ["lab.canonicalCode","lab.BUG01-BUG06","reference.troubleshootingMatrix"]
+    },
+    {
+      "id": "FV12",
+      "title": "Bridge sang data matrix và mastery close",
+      "lead": "One observation can be projected against a model. Many compatible observations require a data matrix to expose shared structure.",
+      "blocks": [
+        {"type":"formula","formula":"X_c in R^(8 x 4)","meaning":"Eight centred observations as rows, four sensor features as columns.","conditions":["Same feature order, units and preprocessing"],"warning":"X_c^T answers questions in a different space."},
+        {"type":"transfer","text":"§1.6 takes over the matrix-level questions: how rows and columns encode observations/features, how transformations act, and how rank and SVD connect to matrix structure."},
+        {"type":"summary","items":["Classify model before calculating","Center affine observations","Choose projector from basis geometry","Verify invariants","Report rank with criterion","Interpret residual and energy within limits","Preserve the full data contract"]},
+        {"type":"check","items":["Can you classify linear/affine/near-subspace?","Can you derive both projectors?","Can you reproduce both locked samples?","Can you explain rank 4 versus rank_tau 2?","Can you state what score and rho_k do not prove?"]}
+      ],
+      "formulaRefs": ["F14","F15"],
+      "cautionRefs": ["M13","M19"],
+      "retrievalAnchorRefs": ["RC16","PQ14"],
+      "sourceTrace": ["core.B20","WE12","assessment.MG1-MG5"]
+    }
+  ],
+  "pass12FullViewAcceptance": {
+    "status": "PASS_12_FULL_VIEW_COMPLETE",
+    "sectionCount": 12,
+    "formulaIdsCovered": ["F01","F02","F03","F04","F05","F06","F07","F08","F09","F10","F11","F12","F13","F14","F15","F16"],
+    "fixedCaseNumericIntegrity": true,
+    "runtimeFilesModified": false
+  }
+}

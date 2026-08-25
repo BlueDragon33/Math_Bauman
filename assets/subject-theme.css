@@ -1,0 +1,335 @@
+/* ===== Math Add-on V3 · Lượt 3: Background Toán riêng, giữ khung UX/UI chung =====
+   Mục tiêu: khác biệt bằng "khí chất Toán" chứ không tách hệ bố cục.
+   Không đổi stage gate, không đổi cấu trúc tab, không khóa chiều cao nội dung.
+*/
+:root{
+  --math-bg:#f6f9ff;
+  --math-bg-2:#fbf7ff;
+  --math-ink:#172033;
+  --math-blue:#2563eb;
+  --math-indigo:#4f46e5;
+  --math-violet:#7c3aed;
+  --math-cyan:#0891b2;
+  --math-grid:rgba(37,99,235,.055);
+  --math-grid-strong:rgba(37,99,235,.095);
+  --math-glass:rgba(255,255,255,.88);
+  --math-font:"Cambria Math","STIX Two Math","Latin Modern Math","Times New Roman",serif;
+}
+
+html{background:var(--math-bg)}
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 9% 8%, rgba(37,99,235,.145), transparent 26%),
+    radial-gradient(circle at 92% 12%, rgba(124,58,237,.115), transparent 27%),
+    radial-gradient(circle at 76% 92%, rgba(8,145,178,.090), transparent 30%),
+    linear-gradient(135deg,#f7fbff 0%,#f4f7ff 45%,#fbf8ff 100%);
+}
+
+/* Nền toán: lưới tọa độ + ký hiệu mờ, đặt phía sau toàn bộ app */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-3;
+  background:
+    linear-gradient(var(--math-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--math-grid) 1px, transparent 1px),
+    linear-gradient(rgba(79,70,229,.045) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(79,70,229,.045) 2px, transparent 2px);
+  background-size:42px 42px,42px 42px,168px 168px,168px 168px;
+  mask-image:linear-gradient(180deg,rgba(0,0,0,.88),rgba(0,0,0,.58) 54%,rgba(0,0,0,.36));
+}
+body::after{
+  content:"∇f(x)   ·   AᵀA   ·   det(A)   ·   λ   ·   Σxᵢ   ·   P(A|B)   ·   ∫f(t)dt";
+  position:fixed;
+  left:52%;
+  top:18px;
+  transform:translateX(-50%);
+  width:min(1120px,88vw);
+  pointer-events:none;
+  z-index:-2;
+  color:rgba(37,99,235,.105);
+  font-family:var(--math-font);
+  font-size:clamp(22px,2.55vw,40px);
+  font-weight:800;
+  letter-spacing:.035em;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+/* Giữ khung chung, chỉ phủ sắc thái Toán */
+.math-app .sidebar.math-sidebar{
+  background:
+    linear-gradient(180deg,rgba(15,23,42,.98) 0%,rgba(19,29,51,.98) 58%,rgba(15,23,42,.98) 100%),
+    radial-gradient(circle at 22% 10%,rgba(37,99,235,.28),transparent 34%);
+}
+.math-app .sidebar.math-sidebar::after{
+  content:"Σ  ∇  π  λ  ∫";
+  display:block;
+  margin:18px 8px 0;
+  padding:12px 10px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:16px;
+  color:rgba(226,232,240,.28);
+  font-family:var(--math-font);
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-align:center;
+}
+.math-logo{
+  font-family:var(--math-font)!important;
+  background:linear-gradient(145deg,#fff,#edf4ff)!important;
+  box-shadow:inset 0 0 0 1px rgba(37,99,235,.12),0 8px 18px rgba(37,99,235,.18);
+}
+.math-app .topbar{
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.93),rgba(247,251,255,.88) 58%,rgba(250,247,255,.86));
+  border-color:rgba(203,213,225,.92);
+}
+.math-app .view{position:relative;z-index:1}
+.math-app .panel,
+.math-app .card,
+.math-app .bst-card,
+.math-app .content-block,
+.math-app .example-card,
+.math-app .exercise-card,
+.math-app .review-card,
+.math-app .app-card,
+.math-app .resource-card{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(1.05) blur(8px);
+}
+.math-app .panel.card{
+  box-shadow:0 16px 36px rgba(15,23,42,.075);
+}
+
+/* Card nội dung Toán: sang nhưng gọn, không chiếm chiều cao vô ích */
+.math-app .content-block,
+.math-app .exercise-card,
+.math-app .review-card,
+.math-app .app-card,
+.math-app .resource-card{
+  border-color:rgba(211,222,239,.95);
+}
+.math-app .formula-block{
+  position:relative;
+  overflow:hidden;
+  border-color:rgba(37,99,235,.20);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.98),rgba(247,251,255,.96)),
+    linear-gradient(90deg,rgba(37,99,235,.04) 1px,transparent 1px);
+  background-size:auto,24px 24px;
+}
+.math-app .formula-block::after{
+  content:"f(x)";
+  position:absolute;
+  right:12px;
+  top:3px;
+  font-family:var(--math-font);
+  font-size:38px;
+  font-weight:900;
+  color:rgba(37,99,235,.055);
+}
+.math-app .math-latex,
+.math-app .math-formula,
+.math-app .math-symbol{
+  font-family:var(--math-font)!important;
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.math-app .math-latex{
+  background:
+    linear-gradient(135deg,#f9fbff,#eef5ff),
+    linear-gradient(90deg,rgba(37,99,235,.055) 1px,transparent 1px);
+  border-color:#dbe7ff;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.65),0 8px 20px rgba(37,99,235,.055);
+}
+
+/* Nhấn nhẹ từng loại block Toán, không phá layout chung */
+.math-app .proof-block{border-left-color:var(--math-violet)!important;background:linear-gradient(180deg,#fff,#fbf8ff)}
+.math-app .worked-example-block{border-left-color:var(--math-blue)!important;background:linear-gradient(180deg,#fff,#f8fbff)}
+.math-app .mistake-block{border-left-color:#dc2626!important;background:linear-gradient(180deg,#fff,#fff8f8)}
+.math-app .application-block{border-left-color:#15803d!important;background:linear-gradient(180deg,#fff,#f7fff9)}
+.math-app .math-chip{font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+.math-app .formula-block .math-chip{background:#eff6ff;color:#1d4ed8}
+.math-app .proof-block .math-chip{background:#f4efff;color:#6d28d9}
+.math-app .application-block .math-chip{background:#ecfdf5;color:#047857}
+.math-app .mistake-block .math-chip{background:#fef2f2;color:#b91c1c}
+
+/* Bảng flag giữ quy tắc đã chốt, thêm cảm giác gọn và sạch */
+.math-app .flag{
+  padding:10px;
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(248,251,255,.95),rgba(244,248,255,.88));
+  border:1px solid rgba(219,231,255,.9);
+}
+.math-app .flag button{
+  background:#fff;
+  box-shadow:0 5px 12px rgba(15,23,42,.045);
+}
+
+/* Tab dữ liệu và ứng dụng có nền kính nhẹ, không tách style */
+.math-app .data-group,
+.math-app .kpi,
+.math-app .gate-reqs article,
+.math-app .data-files article{
+  background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,251,255,.92));
+}
+
+@media(max-width:1020px){
+  body::after{top:auto;bottom:12px;font-size:22px;opacity:.65}
+}
+@media(max-width:720px){
+  body::after,.math-app .sidebar.math-sidebar::after{display:none}
+  body::before{background-size:34px 34px,34px 34px,136px 136px,136px 136px}
+}
+
+/* ===== Math Add-on V3 · Lượt 5: Font và render công thức an toàn =====
+   Không nhúng/chia sẻ font file. Dùng font hệ thống + fallback để công thức luôn hiển thị.
+   Mục tiêu: công thức dài không vỡ layout, không phụ thuộc MathJax/KaTeX/renderFormula bên ngoài.
+*/
+@font-face{
+  font-family:"Bauman Math Stack";
+  src:local("Cambria Math"),local("STIX Two Math"),local("Latin Modern Math"),local("Times New Roman");
+  font-display:swap;
+}
+:root{
+  --math-font:"Bauman Math Stack","Cambria Math","STIX Two Math","Latin Modern Math","Noto Serif Math","Times New Roman",serif;
+  --math-code-font:"Cascadia Mono","JetBrains Mono","Consolas","Courier New",monospace;
+}
+.math-app .math-latex,
+.math-app .math-safe-formula,
+.math-app .math-display-line,
+.math-app .math-formula,
+.math-app .math-symbol,
+.math-app .formula-block strong{
+  font-family:var(--math-font)!important;
+  font-synthesis:weight style;
+  text-rendering:geometricPrecision;
+}
+.math-app .math-safe-formula{
+  display:block;
+  max-width:100%;
+  overflow-x:auto;
+  overflow-y:visible;
+  white-space:normal;
+  word-break:normal;
+  overflow-wrap:anywhere;
+  line-height:1.48;
+  unicode-bidi:isolate;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+}
+.math-app .math-display-line{
+  display:block;
+  min-width:0;
+  font-size:clamp(21px,2.15vw,29px);
+  color:#0f172a;
+}
+.math-app .math-source-line{
+  display:block;
+  margin-top:6px;
+  padding-top:6px;
+  border-top:1px dashed rgba(37,99,235,.16);
+  font-family:var(--math-code-font)!important;
+  font-size:12px;
+  line-height:1.35;
+  color:#64748b;
+  opacity:.68;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+.math-app .formula-grid{
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  align-items:stretch;
+}
+.math-app .formula-block{
+  min-width:0;
+  isolation:isolate;
+}
+.math-app .proof-block,
+.math-app .worked-example-block,
+.math-app .mistake-block,
+.math-app .application-block,
+.math-app .content-block{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+.math-app .steps li,
+.math-app .objective-list li,
+.math-app .rubric-list li{
+  overflow-wrap:anywhere;
+}
+.math-app .math-inline{
+  font-family:var(--math-font)!important;
+  padding:.05em .28em;
+  border-radius:.45em;
+  background:rgba(37,99,235,.06);
+  color:#1e3a8a;
+}
+.math-app .math-render-warning{
+  margin-top:8px;
+  padding:8px 10px;
+  border-radius:12px;
+  background:#fff7ed;
+  color:#9a3412;
+  border:1px solid #fed7aa;
+  font-size:13px;
+}
+@media(max-width:720px){
+  .math-app .math-display-line{font-size:20px}
+  .math-app .math-source-line{font-size:11px}
+  .math-app .formula-grid{grid-template-columns:1fr}
+}
+
+
+/* ===== Math Add-on V3 FINAL · Compact UX/UI polish before release =====
+   Quy tắc: cùng bố cục hệ thống, nền Toán riêng, không fixed-height cắt nội dung.
+*/
+.math-app .main{padding:18px 22px 28px;}
+.math-app .view{max-width:1420px;}
+.math-app .topbar{padding:12px 16px;margin-bottom:14px;border-radius:18px;}
+.math-app .topbar h2{font-size:clamp(20px,2vw,25px);}
+.math-app .topbar p{max-width:760px;}
+.math-app .sidebar{padding:16px 14px;}
+.math-app .brand{padding:12px;border-radius:18px;}
+.math-app .logo,.math-logo{width:42px;height:42px;font-size:23px;}
+.math-app .nav{gap:5px;}
+.math-app .nav button{min-height:42px;padding:10px 11px;border-radius:12px;}
+.math-app .stage-pill{padding:10px;border-radius:14px;}
+.math-app .panel,.math-app .card,.math-app .bst-card{border-radius:20px;}
+.math-app .panel.card,.math-app .card,.math-app .bst-card{padding:16px;}
+.math-app .section-stack{gap:12px;}
+.math-app .grid.two{grid-template-columns:minmax(0,1fr) minmax(300px,.38fr);gap:14px;}
+.math-app .page-layout{grid-template-columns:300px minmax(0,1fr);gap:14px;}
+.math-app .lesson-sidebar{top:84px;max-height:calc(100vh - 104px);}
+.math-app .lesson-article{gap:12px;}
+.math-app .content-block{padding:14px;border-radius:16px;}
+.math-app .content-block h3,.math-app .exercise-card h3,.math-app .review-card h3,.math-app .app-card h3,.math-app .video-card h3{margin:.2rem 0 .45rem;line-height:1.22;}
+.math-app .cards-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+.math-app .formula-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px;}
+.math-app .formula-block{padding:14px;border-radius:16px;}
+.math-app .math-safe-formula,.math-app .math-latex{font-size:clamp(18px,1.8vw,25px);padding:11px 12px;border-radius:13px;}
+.math-app .steps{padding-left:1.25rem;}
+.math-app .choice-list{display:grid;gap:8px;margin-top:10px;}
+.math-app .choice{border:1px solid var(--line);border-radius:12px;background:#fff;padding:10px 12px;}
+.math-app .flag{gap:7px;padding:9px;}
+.math-app .flag button{width:40px;height:40px;border-radius:12px;}
+.math-app .grid-4x5{grid-template-columns:repeat(4,40px);}
+.math-app .grid-5x5{grid-template-columns:repeat(5,40px);}
+.math-app .video-hero{grid-template-columns:minmax(0,1fr) 230px;gap:14px;}
+.math-app .video-grid,.math-app .simulation-board{grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:12px;}
+.math-app .video-card,.math-app .sim-card,.math-app .exercise-card,.math-app .review-card,.math-app .app-card,.math-app .resource-card{padding:14px;border-radius:18px;}
+.math-app .video-placeholder{min-height:106px;border-radius:15px;}
+.math-app .kpi-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;}
+.math-app .kpi{padding:12px;border-radius:15px;}
+.math-app .data-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:14px 0;}
+.math-app .data-group{border:1px solid var(--line);border-radius:16px;padding:13px;}
+.math-app .data-files{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;}
+.math-app .data-files article{padding:12px;border-radius:15px;}
+.math-app .math-chip,.math-app .tag,.math-app .chip{padding:4px 8px;font-size:10px;}
+.math-app .btn{padding:8px 11px;border-radius:11px;}
+@media(max-width:1120px){.math-app .grid.two,.math-app .page-layout{grid-template-columns:1fr}.math-app .lesson-sidebar{position:relative;top:auto;max-height:none}.math-app .video-hero{grid-template-columns:1fr}}
+@media(max-width:640px){.math-app .main{padding:12px}.math-app .panel.card,.math-app .card,.math-app .bst-card{padding:13px}.math-app .grid-4x5{grid-template-columns:repeat(4,36px)}.math-app .grid-5x5{grid-template-columns:repeat(5,35px)}.math-app .flag button{width:35px;height:35px}.math-app .math-safe-formula,.math-app .math-latex{font-size:18px}.math-app .video-kpis{grid-template-columns:1fr 1fr}}

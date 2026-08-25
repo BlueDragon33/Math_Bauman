@@ -1,0 +1,88 @@
+{
+  "release": "C03_LEVEL_C_DECK_DATA_E204_PART_3_4_6",
+  "chapterId": "c03",
+  "level": "C",
+  "policy": {
+    "minimumSlidesPerLesson": 16,
+    "slideCountIsFloorNotCap": true,
+    "runtime": "data_only_not_wired",
+    "notes": "Continuation data for C03 Level C. Wire only after E202 C02 smoke is confirmed stable."
+  },
+  "lessons": [
+    {
+      "id": "MATH-VN-C03-giai_tich_dao_ham_gradient-L04-gradient-descent-learning-rate-e146",
+      "label": "Bài 3.4 · Gradient descent và learning rate",
+      "targetSlideCount": 18,
+      "slides": [
+        {"title":"Gradient descent là vòng lặp sửa sai","formula":"θ_{k+1}=θ_k-η∇J(θ_k)","visual":"descent_update","core":"Mỗi bước dùng gradient để kéo tham số theo hướng giảm loss.","application":"Training linear model, neural network, system identification.","check":"Dấu cập nhật có phải dấu trừ không?"},
+        {"title":"Learning rate là độ dài bước","formula":"η>0","visual":"learning_rate_steps","core":"η quá nhỏ học chậm, η quá lớn làm loss dao động hoặc nổ.","application":"Tuning optimizer, training stability.","check":"Loss đang giảm mượt hay nhảy loạn?"},
+        {"title":"Loss history là đồng hồ sức khỏe","formula":"J_0,J_1,...,J_k","visual":"loss_history","core":"Đường loss theo epoch cho biết training ổn, chậm, kẹt hay nổ.","application":"Debug training loop trước khi đổi model.","check":"Bạn có plot loss theo thời gian không?"},
+        {"title":"Bề mặt convex dễ đi hơn","formula":"J(θ)=1/2||Xθ-y||^2","visual":"convex_bowl","core":"Loss convex có một vùng tối ưu toàn cục, giúp descent dễ phân tích.","application":"Linear regression, quadratic optimization.","check":"Bài toán hiện tại có convex không?"},
+        {"title":"Nonconvex có local minima và saddle","formula":"J nonconvex","visual":"nonconvex_surface","core":"Mạng neural và nhiều mô hình thực tế có bề mặt loss không lồi.","application":"Deep learning, trajectory planning.","check":"Điểm kẹt là local min hay saddle?"},
+        {"title":"Chuẩn hóa làm thung lũng bớt méo","formula":"x_scaled=(x-μ)/σ","visual":"normalized_valley","core":"Feature lệch scale làm gradient descent zigzag trong thung lũng hẹp.","application":"Preprocessing before training.","check":"Feature scale ratio lớn bao nhiêu?"},
+        {"title":"Batch gradient descent","formula":"g=1/m Σ_i ∇J_i","visual":"batch_descent","core":"Dùng toàn bộ dữ liệu để tính gradient chính xác nhưng tốn.","application":"Dataset nhỏ, convex optimization.","check":"Mỗi bước có quá đắt không?"},
+        {"title":"Stochastic gradient descent","formula":"g≈∇J_i","visual":"sgd_noise","core":"SGD dùng một mẫu nên rẻ nhưng nhiễu.","application":"Large-scale ML, online learning.","check":"Nhiễu giúp thoát kẹt hay làm không hội tụ?"},
+        {"title":"Mini-batch cân bằng chi phí và nhiễu","formula":"g≈1/B Σ_{i∈batch}∇J_i","visual":"mini_batch","core":"Mini-batch là lựa chọn thực tế phổ biến nhất.","application":"Deep learning training loop.","check":"Batch size hiện tại quá nhỏ hay quá lớn?"},
+        {"title":"Momentum nhớ hướng cũ","formula":"v_t=βv_{t-1}+g_t","visual":"momentum","core":"Momentum làm đường đi bớt rung và giữ quán tính theo hướng tốt.","application":"SGD with momentum, optimizer tuning.","check":"Momentum có làm overshoot không?"},
+        {"title":"Adaptive learning rate","formula":"Adam, RMSProp","visual":"adaptive_optimizer","core":"Optimizer adaptive đổi bước theo lịch sử gradient từng tham số.","application":"Neural network training.","check":"Adam có che lỗi scale dữ liệu không?"},
+        {"title":"Learning rate schedule","formula":"η_t decreases over time","visual":"lr_schedule","core":"Giảm η theo thời gian giúp vừa khám phá vừa hội tụ tinh.","application":"Training long models, fine-tuning.","check":"Schedule có giảm quá sớm không?"},
+        {"title":"Gradient clipping","formula":"g ← g·min(1,c/||g||)","visual":"gradient_clipping","core":"Clipping giới hạn gradient quá lớn để tránh nổ cập nhật.","application":"RNN, unstable training, deep nets.","check":"Gradient norm bị clip bao nhiêu lần?"},
+        {"title":"Stopping criteria","formula":"|J_k-J_{k-1}|<ε hoặc ||∇J||<ε","visual":"stopping_criteria","core":"Dừng khi loss, gradient hoặc validation không còn cải thiện đáng kể.","application":"Training automation, compute budget.","check":"Dừng do hội tụ hay do kẹt?"},
+        {"title":"Overfitting qua validation loss","formula":"train↓, val↑","visual":"overfitting_curve","core":"Train loss giảm nhưng validation tăng nghĩa là mô hình học thuộc dữ liệu train.","application":"Early stopping, regularization.","check":"Bạn có theo dõi validation không?"},
+        {"title":"Mini-case fit đường thẳng","formula":"ŷ=w x+b","visual":"line_fit_descent","core":"Gradient descent chỉnh w,b để đường dự đoán gần dữ liệu hơn.","application":"Regression baseline, calibration.","check":"w và b đang cập nhật theo đúng gradient không?"},
+        {"title":"Checklist training loop","formula":"zero_grad + forward + loss + backward + step + log","visual":"training_loop_checklist","core":"Training loop sai thứ tự là nguồn lỗi âm thầm rất thường gặp.","application":"PyTorch/TensorFlow workflow.","check":"Bạn có quên zero_grad không?"},
+        {"title":"Chốt 3.4","formula":"descent = direction + step + feedback","visual":"descent_summary","core":"Gradient cho hướng, learning rate cho bước, loss history cho phản hồi.","application":"Cầu sang loss landscape và điều kiện tối ưu.","check":"Khi loss không giảm, bạn kiểm gì trước?"}
+      ]
+    },
+    {
+      "id": "MATH-VN-C03-giai_tich_dao_ham_gradient-L05-loss-extrema-optimality-e146",
+      "label": "Bài 3.5 · Hàm mất mát, cực trị và điều kiện tối ưu",
+      "targetSlideCount": 18,
+      "slides": [
+        {"title":"Loss biến mục tiêu thành số","formula":"J(θ)","visual":"loss_as_objective","core":"Loss đo mô hình sai bao nhiêu theo một tiêu chí cụ thể.","application":"Regression, classification, calibration.","check":"Loss có đo đúng mục tiêu kỹ thuật không?"},
+        {"title":"Residual là sai số từng mẫu","formula":"e_i=ŷ_i-y_i","visual":"residuals","core":"Residual cho biết mô hình sai ở đâu và kiểu sai như thế nào.","application":"Regression diagnostics, sensor model.","check":"Residual có bias hay pattern không?"},
+        {"title":"MSE phạt lỗi lớn mạnh","formula":"MSE=1/m Σ e_i^2","visual":"mse_loss","core":"Bình phương làm lỗi lớn bị phạt rất mạnh.","application":"Regression, Gaussian noise assumption.","check":"Outlier có đang thống trị loss không?"},
+        {"title":"MAE bền hơn với outlier","formula":"MAE=1/m Σ |e_i|","visual":"mae_loss","core":"MAE phạt tuyến tính nên ít bị outlier kéo hơn MSE.","application":"Robust regression.","check":"Outlier là nhiễu hay sự kiện quan trọng?"},
+        {"title":"Cross entropy cho classification","formula":"CE=-Σ y_i log(p_i)","visual":"cross_entropy","core":"Cross entropy phạt mô hình tự tin sai rất mạnh.","application":"Classification, neural networks.","check":"Mô hình sai nhưng quá tự tin ở đâu?"},
+        {"title":"Regularization là phạt độ phức tạp","formula":"J_total=J_data+λΩ(θ)","visual":"regularized_loss","core":"Regularization ngăn mô hình fit quá mức dữ liệu train.","application":"Ridge, Lasso, weight decay.","check":"λ đang quá yếu hay quá mạnh?"},
+        {"title":"Cực tiểu cục bộ","formula":"J(θ*)≤J(θ) gần θ*","visual":"local_minimum","core":"Local minimum tốt trong vùng nhỏ nhưng chưa chắc tốt toàn cục.","application":"Nonconvex optimization, deep learning.","check":"Có điểm tốt hơn xa hơn không?"},
+        {"title":"Cực tiểu toàn cục","formula":"J(θ*)≤J(θ) mọi θ","visual":"global_minimum","core":"Global minimum là giá trị loss thấp nhất trên toàn miền.","application":"Convex optimization, guarantee analysis.","check":"Bài toán có chứng minh global được không?"},
+        {"title":"Saddle point đánh lừa gradient","formula":"∇J=0, H indefinite","visual":"saddle_point","core":"Saddle có gradient 0 nhưng không phải cực tiểu.","application":"Deep learning, high-dimensional loss.","check":"Hessian có trị riêng âm không?"},
+        {"title":"Điều kiện bậc nhất","formula":"∇J(θ*)=0","visual":"first_order_condition","core":"Điểm tối ưu nội miền thường cần gradient bằng 0.","application":"Optimization theory, solve analytic.","check":"Điều kiện này đủ hay chỉ cần?"},
+        {"title":"Điều kiện bậc hai","formula":"H(θ*) ⪰ 0","visual":"second_order_condition","core":"Hessian semi-positive giúp nhận diện cực tiểu cục bộ.","application":"Newton method, curvature analysis.","check":"H có positive definite không?"},
+        {"title":"Convex loss dễ kiểm soát","formula":"J(αx+(1-α)y)≤αJ(x)+(1-α)J(y)","visual":"convex_loss","core":"Convexity giúp local minimum cũng là global minimum.","application":"Linear regression, logistic regression convex setup.","check":"Loss và miền có convex không?"},
+        {"title":"Bias-variance tradeoff","formula":"error = bias^2 + variance + noise","visual":"bias_variance","core":"Model quá đơn giản bị bias, quá phức tạp bị variance.","application":"Model selection, regularization.","check":"Sai số chính đến từ bias hay variance?"},
+        {"title":"Train loss và validation loss","formula":"J_train, J_val","visual":"train_val_loss","core":"Validation loss cho biết mô hình có tổng quát tốt không.","application":"Early stopping, hyperparameter tuning.","check":"Khoảng cách train-val đang tăng không?"},
+        {"title":"Metric khác loss","formula":"loss ≠ metric","visual":"loss_vs_metric","core":"Loss dùng để tối ưu; metric dùng để đánh giá mục tiêu cuối.","application":"Classification accuracy, F1, MAE, RMSE.","check":"Loss giảm nhưng metric có tốt hơn không?"},
+        {"title":"Mini-case anomaly detection","formula":"score=||x-\\hat{x}||","visual":"anomaly_loss","core":"Reconstruction loss có thể làm điểm bất thường hiện ra.","application":"Sensor fault, predictive maintenance.","check":"Ngưỡng anomaly chọn theo gì?"},
+        {"title":"Checklist thiết kế loss","formula":"objective + scale + outlier + regularization + metric","visual":"loss_checklist","core":"Loss tốt phải khớp mục tiêu, scale, outlier, regularization và metric đánh giá.","application":"Trước mọi training pipeline.","check":"Loss có khớp rủi ro thật không?"},
+        {"title":"Chốt 3.5","formula":"loss = objective geometry","visual":"loss_summary","core":"Loss tạo địa hình để optimizer đi, nên thiết kế loss là thiết kế đường đi học.","application":"Cầu sang backpropagation và tối ưu ML.","check":"Địa hình loss của bạn đang dẫn model đi đâu?"}
+      ]
+    },
+    {
+      "id": "MATH-VN-C03-giai_tich_dao_ham_gradient-L06-gradient-backprop-ml-optimization-e146",
+      "label": "Bài 3.6 · Từ gradient sang backpropagation và tối ưu ML",
+      "targetSlideCount": 18,
+      "slides": [
+        {"title":"Backprop là chain rule có tổ chức","formula":"dJ/dw=dJ/da · da/dz · dz/dw","visual":"backprop_chain_rule","core":"Backprop tính gradient loss theo tham số sâu trong mô hình nhiều tầng.","application":"Neural network training.","check":"Gradient phải đi qua những phép toán nào?"},
+        {"title":"Forward pass tạo dự đoán","formula":"x → z_1 → a_1 → ... → ŷ → J","visual":"forward_pass","core":"Forward pass tính output và lưu intermediate values.","application":"Autograd graph, model inference.","check":"Giá trị nào cần lưu cho backward?"},
+        {"title":"Backward pass truyền gradient","formula":"dJ/dŷ → ... → dJ/dW_l","visual":"backward_pass","core":"Backward truyền trách nhiệm của loss ngược qua từng layer.","application":"Training neural networks.","check":"Layer nào gradient gần 0?"},
+        {"title":"Chain rule trong composite function","formula":"d(g∘f)/dx = g'(f(x))f'(x)","visual":"chain_rule_composition","core":"Mạng nhiều tầng là nhiều hàm lồng nhau, nên chain rule là xương sống.","application":"Manual derivation, autodiff.","check":"Thứ tự nhân đạo hàm có đúng không?"},
+        {"title":"Linear layer gradient","formula":"z=Wx+b","visual":"linear_layer_gradient","core":"Gradient theo W phụ thuộc input x và gradient đi từ trên xuống.","application":"Dense layer, regression, neural net.","check":"dJ/dW có shape giống W không?"},
+        {"title":"Activation function ảnh hưởng gradient","formula":"a=σ(z)","visual":"activation_gradient","core":"Activation quyết định gradient đi qua mạnh, yếu hoặc bị chặn.","application":"ReLU, sigmoid, tanh.","check":"Activation có vùng bão hòa không?"},
+        {"title":"Vanishing gradient","formula":"∏ small derivatives → 0","visual":"vanishing_gradient","core":"Gradient quá nhỏ làm layer đầu gần như không học.","application":"Deep networks, RNNs.","check":"Gradient norm layer đầu có gần 0 không?"},
+        {"title":"Exploding gradient","formula":"∏ large derivatives → ∞","visual":"exploding_gradient","core":"Gradient quá lớn làm cập nhật nổ và loss bất ổn.","application":"RNN, deep nets, bad initialization.","check":"Có cần gradient clipping không?"},
+        {"title":"Initialization ảnh hưởng dòng gradient","formula":"Var(W) matters","visual":"weight_initialization","core":"Khởi tạo trọng số tốt giúp signal và gradient không tắt/nổ.","application":"Xavier, He initialization.","check":"Initialization có phù hợp activation không?"},
+        {"title":"Optimizer dùng gradient để cập nhật","formula":"θ←optimizer(θ,∇J)","visual":"optimizer_update","core":"Backprop chỉ tính gradient; optimizer quyết định cách bước.","application":"SGD, Adam, RMSProp.","check":"Bạn đang debug backprop hay optimizer?"},
+        {"title":"Autograd graph","formula":"operations form computational graph","visual":"autograd_graph","core":"Framework lưu graph phép toán để tự tính backward.","application":"PyTorch, TensorFlow, JAX.","check":"Có detach/no_grad sai chỗ không?"},
+        {"title":"Zero grad rất quan trọng","formula":"optimizer.zero_grad()","visual":"zero_grad","core":"Không xóa gradient cũ sẽ làm gradient cộng dồn ngoài ý muốn.","application":"PyTorch training loop.","check":"Bạn gọi zero_grad trước backward chưa?"},
+        {"title":"Training loop chuẩn","formula":"zero → forward → loss → backward → step","visual":"training_loop","core":"Sai thứ tự loop là lỗi nhỏ nhưng phá toàn bộ training.","application":"ML engineering workflow.","check":"Step có chạy sau backward không?"},
+        {"title":"Gradient norm logging","formula":"log ||∇W_l||","visual":"gradient_norm_layers","core":"Log gradient từng layer giúp thấy layer nào không học.","application":"Debug deep learning.","check":"Layer nào có norm bất thường?"},
+        {"title":"Gradient checking thủ công","formula":"finite diff ≈ autograd","visual":"gradient_check","core":"So finite difference với backprop để phát hiện lỗi implementation.","application":"Custom layer, research code.","check":"Relative error có nhỏ không?"},
+        {"title":"Mini-case fault classifier","formula":"x_sensor → NN → p_fault","visual":"fault_classifier","core":"Backprop học feature từ dữ liệu cảm biến để phân loại lỗi.","application":"Predictive maintenance, anomaly classification.","check":"Model học tín hiệu hay học nhiễu dataset?"},
+        {"title":"Checklist backprop","formula":"graph + loss + grad + optimizer + log","visual":"backprop_checklist","core":"Backprop ổn cần graph đúng, loss đúng, gradient có dòng chảy, optimizer hợp lý và log đầy đủ.","application":"Trước khi tin bất kỳ training result nào.","check":"Bạn có thể truy vết gradient từ loss về layer đầu không?"},
+        {"title":"Chốt 3.6","formula":"function → derivative → gradient → descent → loss → backprop","visual":"c03_summary","core":"C03 nối giải tích với học máy: đạo hàm không chỉ để tính, mà để học.","application":"Nền cho optimization, neural networks, control learning.","check":"Nếu model không học, bạn kiểm mắt xích nào đầu tiên?"}
+      ]
+    }
+  ]
+}

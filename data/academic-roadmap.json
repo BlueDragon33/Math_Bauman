@@ -1,0 +1,491 @@
+{
+  "id": "math_academic_roadmap_v3",
+  "subjectId": "math",
+  "title": "Lộ trình học thuật Toán Bauman cho AI, tín hiệu và hệ thống tự động",
+  "createdInRound": "L3",
+  "purpose": "Sắp xếp môn Toán thành lộ trình học sâu, tránh học cưỡi ngựa xem hoa và chuẩn bị cho các lượt phình nội dung.",
+  "learningPhilosophy": [
+    "Mỗi khái niệm phải có trực giác, công thức, ví dụ mẫu, bài tập, lỗi sai và ứng dụng.",
+    "Kiểm tra chỉ là cổng sát hạch sau học/ôn, không phải hoạt động mở tự do.",
+    "Toán phải liên kết trực tiếp với AI, Signal, Systems, UGV/USV và НИР/ВКР.",
+    "Không chuyển phần nếu chưa có bằng chứng học tập: ghi chú, bài mẫu, lỗi sai và artifact ứng dụng."
+  ],
+  "academicBlocks": [
+    {
+      "id": "foundations",
+      "title": "Toán nền tảng",
+      "role": "Làm sạch ký hiệu, logic, hàm số, biến đổi, giới hạn và tư duy đọc đề để không vỡ khi vào đại số tuyến tính/giải tích.",
+      "mainStages": [
+        "prepare"
+      ],
+      "coreCompetencies": [
+        "đọc ký hiệu",
+        "biến đổi đại số",
+        "hiểu hàm số",
+        "giải thích kết quả bằng lời"
+      ],
+      "deliverables": [
+        "sổ ký hiệu cá nhân",
+        "bảng lỗi biến đổi",
+        "bài giải mẫu có diễn giải"
+      ]
+    },
+    {
+      "id": "linear_algebra",
+      "title": "Đại số tuyến tính",
+      "role": "Biến vector/ma trận thành ngôn ngữ chung cho dữ liệu nhiều chiều, PCA/SVD, similarity, clustering và mô hình tuyến tính.",
+      "mainStages": [
+        "prepare",
+        "preparatory",
+        "m1"
+      ],
+      "coreCompetencies": [
+        "vector/norm/dot product",
+        "rank/nullspace",
+        "projection",
+        "eigen/SVD/PCA"
+      ],
+      "deliverables": [
+        "notebook tính toán ma trận",
+        "bản đồ công thức PCA/SVD",
+        "mini-report dữ liệu đặc trưng"
+      ]
+    },
+    {
+      "id": "multivariable_calculus",
+      "title": "Giải tích nhiều biến",
+      "role": "Nắm gradient, Jacobian, Hessian và trực giác mặt lỗi để học tối ưu hóa, AI và mô hình động.",
+      "mainStages": [
+        "prepare",
+        "m1"
+      ],
+      "coreCompetencies": [
+        "đạo hàm riêng",
+        "gradient",
+        "Jacobian",
+        "Hessian",
+        "xấp xỉ tuyến tính"
+      ],
+      "deliverables": [
+        "bài giải gradient",
+        "mô phỏng mặt lỗi",
+        "ghi chú lỗi sai đạo hàm"
+      ]
+    },
+    {
+      "id": "probability_statistics",
+      "title": "Xác suất - thống kê",
+      "role": "Xử lý bất định, nhiễu cảm biến, đánh giá mẫu, khoảng tin cậy và suy luận xác suất trong AI/Signal.",
+      "mainStages": [
+        "prepare",
+        "preparatory"
+      ],
+      "coreCompetencies": [
+        "Bayes",
+        "random variables",
+        "expectation/variance",
+        "confidence interval",
+        "correlation/covariance"
+      ],
+      "deliverables": [
+        "bảng phân phối thường gặp",
+        "notebook thống kê mẫu",
+        "báo cáo noise sensor nhỏ"
+      ]
+    },
+    {
+      "id": "optimization",
+      "title": "Tối ưu hóa",
+      "role": "Nối giải tích với huấn luyện mô hình, loss function, ràng buộc, regularization và lựa chọn nghiệm thực dụng.",
+      "mainStages": [
+        "prepare",
+        "m1",
+        "m3"
+      ],
+      "coreCompetencies": [
+        "loss function",
+        "gradient descent",
+        "convexity",
+        "regularization",
+        "constrained optimization"
+      ],
+      "deliverables": [
+        "mô phỏng gradient descent",
+        "bảng so sánh nghiệm",
+        "mini-ablation tham số"
+      ]
+    },
+    {
+      "id": "ai_signal_research_math",
+      "title": "Toán cho AI, tín hiệu và luận văn",
+      "role": "Đưa Toán vào PCA, chuỗi thời gian, metric dự báo, phát hiện bất thường, bảng kết quả và lập luận bảo vệ.",
+      "mainStages": [
+        "m1",
+        "m3",
+        "m4"
+      ],
+      "coreCompetencies": [
+        "PCA/SVD ứng dụng",
+        "time-series features",
+        "forecast metrics",
+        "anomaly scores",
+        "thesis metrics"
+      ],
+      "deliverables": [
+        "pipeline metric",
+        "bảng kết quả luận văn",
+        "phụ lục công thức bảo vệ"
+      ]
+    }
+  ],
+  "stageStrategies": {
+    "prepare": {
+      "academicGoal": "Tạo nền Toán đủ rộng trước khi sang Nga: vector/ma trận, đạo hàm-gradient, xác suất-thống kê, PCA và chuỗi thời gian nhập môn.",
+      "deepLearningRule": "Mỗi module phải có ghi chú ký hiệu, ví dụ tự giải lại, bài tập phân tầng và lỗi sai được ghi vào ôn tập.",
+      "dominantBlocks": [
+        "foundations",
+        "linear_algebra",
+        "multivariable_calculus",
+        "probability_statistics",
+        "optimization"
+      ],
+      "applicationAnchor": "AI nhập môn, telemetry nhỏ, dữ liệu bảng và chuỗi cảm biến giả lập."
+    },
+    "preparatory": {
+      "academicGoal": "Chuyển kiến thức Toán sang môi trường tiếng Nga: đọc đề, hiểu ký hiệu, trình bày lời giải và làm bài tổng hợp dự bị.",
+      "deepLearningRule": "Không học lại hời hợt; mỗi khái niệm phải có tên tiếng Nga, công thức, lời giải mẫu và câu diễn giải bằng tiếng Nga kỹ thuật.",
+      "dominantBlocks": [
+        "linear_algebra",
+        "probability_statistics",
+        "ai_signal_research_math"
+      ],
+      "applicationAnchor": "Bài toán dự bị kỹ thuật, đề Nga, thuật ngữ lớp học, chuẩn bị vào Bauman."
+    },
+    "m1": {
+      "academicGoal": "Dùng đại số tuyến tính, PCA/SVD, similarity và clustering để hiểu dữ liệu đa chiều trong học kỳ đầu Bauman.",
+      "deepLearningRule": "Mỗi bài phải sinh notebook hoặc bảng phân tích nhỏ, không dừng ở thuộc công thức.",
+      "dominantBlocks": [
+        "linear_algebra",
+        "multivariable_calculus",
+        "optimization",
+        "ai_signal_research_math"
+      ],
+      "applicationAnchor": "Dữ liệu nhiều chiều, feature space, clustering, PCA/SVD cho AI."
+    },
+    "m3": {
+      "academicGoal": "Tập trung Toán cho chuỗi thời gian, metric dự báo, dữ liệu cảm biến và phát hiện bất thường.",
+      "deepLearningRule": "Mỗi module phải có liên hệ signal/telemetry, metric, lỗi mô hình và cách diễn giải kết quả.",
+      "dominantBlocks": [
+        "probability_statistics",
+        "optimization",
+        "ai_signal_research_math"
+      ],
+      "applicationAnchor": "Sensor stream, chuỗi thời gian, anomaly detection, forecast evaluation."
+    },
+    "m4": {
+      "academicGoal": "Dùng Toán để hoàn thiện luận văn: mô hình hóa, metric, phân tích kết quả, biện luận và bảo vệ.",
+      "deepLearningRule": "Toán trong HK4 không học mới tràn lan; chỉ học những gì trực tiếp giúp chứng minh, đánh giá, trình bày luận văn.",
+      "dominantBlocks": [
+        "ai_signal_research_math",
+        "optimization",
+        "probability_statistics"
+      ],
+      "applicationAnchor": "НИР/ВКР, bảng kết quả, metric, error analysis, defense argument."
+    }
+  },
+  "moduleToBlockMap": {
+    "m_p01": "linear_algebra",
+    "m_p02": "linear_algebra",
+    "m_p03": "multivariable_calculus",
+    "m_p04": "probability_statistics",
+    "m_p05": "probability_statistics",
+    "m_p06": "probability_statistics",
+    "m_p07": "linear_algebra",
+    "m_p08": "ai_signal_research_math",
+    "m_s01": "foundations",
+    "m_s02": "linear_algebra",
+    "m_s03": "probability_statistics",
+    "m_s04": "ai_signal_research_math",
+    "m_s05": "ai_signal_research_math",
+    "m_m101": "ai_signal_research_math",
+    "m_m102": "linear_algebra",
+    "m_m103": "linear_algebra",
+    "m_m104": "ai_signal_research_math",
+    "m_m301": "ai_signal_research_math",
+    "m_m302": "ai_signal_research_math",
+    "m_m303": "ai_signal_research_math",
+    "m_m401": "ai_signal_research_math",
+    "m_m402": "probability_statistics",
+    "m_m403": "optimization",
+    "m_m404": "ai_signal_research_math"
+  },
+  "stagePartSummary": [
+    {
+      "stageId": "prepare",
+      "title": "GĐ1 · Chuẩn bị tại Việt Nam",
+      "parts": [
+        {
+          "partId": 1,
+          "title": "Nền vector-ma trận",
+          "moduleIds": [
+            "m_p01",
+            "m_p02"
+          ],
+          "academicBlockIds": [
+            "linear_algebra"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 2,
+          "title": "Gradient và xác suất",
+          "moduleIds": [
+            "m_p03",
+            "m_p04"
+          ],
+          "academicBlockIds": [
+            "multivariable_calculus",
+            "probability_statistics"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 3,
+          "title": "Thống kê dữ liệu",
+          "moduleIds": [
+            "m_p05",
+            "m_p06"
+          ],
+          "academicBlockIds": [
+            "probability_statistics"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 4,
+          "title": "PCA và chuỗi thời gian nhập môn",
+          "moduleIds": [
+            "m_p07",
+            "m_p08"
+          ],
+          "academicBlockIds": [
+            "ai_signal_research_math",
+            "linear_algebra"
+          ],
+          "unlockOnPass": "next_stage"
+        }
+      ]
+    },
+    {
+      "stageId": "preparatory",
+      "title": "GĐ2 · Dự bị Nga / STANKIN",
+      "parts": [
+        {
+          "partId": 1,
+          "title": "Thuật ngữ Toán tiếng Nga",
+          "moduleIds": [
+            "m_s01"
+          ],
+          "academicBlockIds": [
+            "foundations"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 2,
+          "title": "Đại số tuyến tính bằng tiếng Nga",
+          "moduleIds": [
+            "m_s02"
+          ],
+          "academicBlockIds": [
+            "linear_algebra"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 3,
+          "title": "Xác suất-thống kê bằng tiếng Nga",
+          "moduleIds": [
+            "m_s03"
+          ],
+          "academicBlockIds": [
+            "probability_statistics"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 4,
+          "title": "Tổng hợp dự bị và dữ liệu đa chiều",
+          "moduleIds": [
+            "m_s04",
+            "m_s05"
+          ],
+          "academicBlockIds": [
+            "ai_signal_research_math"
+          ],
+          "unlockOnPass": "next_stage"
+        }
+      ]
+    },
+    {
+      "stageId": "m1",
+      "title": "Bauman HK1",
+      "parts": [
+        {
+          "partId": 1,
+          "title": "Dữ liệu đa chiều",
+          "moduleIds": [
+            "m_m101"
+          ],
+          "academicBlockIds": [
+            "ai_signal_research_math"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 2,
+          "title": "PCA/SVD",
+          "moduleIds": [
+            "m_m102"
+          ],
+          "academicBlockIds": [
+            "linear_algebra"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 3,
+          "title": "Similarity và clustering",
+          "moduleIds": [
+            "m_m103"
+          ],
+          "academicBlockIds": [
+            "linear_algebra"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 4,
+          "title": "Sát hạch học kỳ 1",
+          "moduleIds": [
+            "m_m104"
+          ],
+          "academicBlockIds": [
+            "ai_signal_research_math"
+          ],
+          "unlockOnPass": "next_stage"
+        }
+      ]
+    },
+    {
+      "stageId": "m3",
+      "title": "Bauman HK3",
+      "parts": [
+        {
+          "partId": 1,
+          "title": "Chuỗi thời gian cảm biến",
+          "moduleIds": [
+            "m_m301"
+          ],
+          "academicBlockIds": [
+            "ai_signal_research_math"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 2,
+          "title": "Metric dự báo",
+          "moduleIds": [
+            "m_m302"
+          ],
+          "academicBlockIds": [
+            "ai_signal_research_math"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 3,
+          "title": "Phát hiện bất thường",
+          "moduleIds": [
+            "m_m303"
+          ],
+          "academicBlockIds": [
+            "ai_signal_research_math"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 4,
+          "title": "Tổng hợp signal/AI",
+          "moduleIds": [
+            "m_m301",
+            "m_m302",
+            "m_m303"
+          ],
+          "academicBlockIds": [
+            "ai_signal_research_math"
+          ],
+          "unlockOnPass": "next_stage"
+        }
+      ]
+    },
+    {
+      "stageId": "m4",
+      "title": "Bauman HK4 & bảo vệ",
+      "parts": [
+        {
+          "partId": 1,
+          "title": "Metric và diễn giải luận văn",
+          "moduleIds": [
+            "m_m401"
+          ],
+          "academicBlockIds": [
+            "ai_signal_research_math"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 2,
+          "title": "Mô hình hóa dữ liệu luận văn",
+          "moduleIds": [
+            "m_m402"
+          ],
+          "academicBlockIds": [
+            "probability_statistics"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 3,
+          "title": "Sai số và độ tin cậy",
+          "moduleIds": [
+            "m_m403"
+          ],
+          "academicBlockIds": [
+            "optimization"
+          ],
+          "unlockOnPass": "next_part"
+        },
+        {
+          "partId": 4,
+          "title": "Phụ lục công thức và bảo vệ",
+          "moduleIds": [
+            "m_m404"
+          ],
+          "academicBlockIds": [
+            "ai_signal_research_math"
+          ],
+          "unlockOnPass": "next_stage"
+        }
+      ]
+    }
+  ],
+  "nextRounds": {
+    "L4": "Phình sâu bài học, công thức, chứng minh, ví dụ mẫu và lỗi sai thường gặp.",
+    "L5": "Tạo ngân hàng bài tập, ôn tập và kiểm tra 20/40/60/100 bám concept.",
+    "L6": "Mô phỏng và ứng dụng thực tế cho AI/Signal/UGV/USV.",
+    "L7": "UX/UI, render công thức và bố cục học Toán.",
+    "L8": "Kiểm thử toàn diện.",
+    "L9": "Sửa cuối và xuất file."
+  }
+}

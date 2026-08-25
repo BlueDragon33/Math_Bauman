@@ -1,0 +1,18 @@
+/* E183 · Clean lesson title display
+ * Removes old pseudo-title hack that produced text like `ài Bài 1.2` after JS already converted § to Bài.
+ */
+body:not(.e129-presenting):not(.e129-theory-storage) .e169-reader-title h2::before{
+  content:none!important;
+  display:none!important;
+}
+body:not(.e129-presenting):not(.e129-theory-storage) .e169-reader-title h2::first-letter{
+  font-size:inherit!important;
+  color:inherit!important;
+  letter-spacing:normal!important;
+}
+.e169-reader-title h2,
+.e169-breadcrumb button,
+.e169-choice b,
+.e129-slide h3{
+  text-transform:none!important;
+}

@@ -1,0 +1,216 @@
+{
+  "id": "bauman_math_formula_academic_c02_e237b",
+  "schema": "bauman_math_formula_academic_registry_v1",
+  "version": "E237B_C02_FORMULA_ACADEMIC_REGISTRY",
+  "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+  "profiles": [
+    {
+      "id": "c02_matrix_shape",
+      "priority": 130,
+      "matchAll": ["a in r^{m x n}", "a_ij"],
+      "analysis": [
+        {"title": "Shape xác định miền và đối miền", "body": "A thuộc R^{m×n} nghĩa là A nhận vector n chiều và tạo vector m chiều. Chỉ số a_ij chỉ phần tử ở hàng i, cột j; hàng thường gắn với đầu ra, cột gắn với đầu vào."},
+        {"title": "Không được tách shape khỏi ý nghĩa", "body": "Hai ma trận cùng kích thước chưa chắc cùng vai trò. Một ma trận có thể là bảng dữ liệu, ma trận khác là toán tử. Cần ghi rõ quy ước hàng, cột, đơn vị và không gian của từng trục."}
+      ],
+      "application": [
+        {"title": "Kiểm tra pipeline", "body": "Trong AI, điều khiển và xử lý tín hiệu, shape là hợp đồng giữa các bước. Kiểm shape sớm giúp phát hiện feature thiếu, nhầm batch axis hoặc phép biến đổi đặt ngược chiều."}
+      ],
+      "python": "import numpy as np\n\nA = np.asarray([[1., 2., 3.], [4., 5., 6.]])\nm, n = A.shape\nprint({'output_dim': m, 'input_dim': n})"
+    },
+    {
+      "id": "c02_matrix_vector_map",
+      "priority": 128,
+      "matchAll": ["y = a x", "x in r^n"],
+      "analysis": [
+        {"title": "Ma trận như toán tử tuyến tính", "body": "Phép y=Ax biến vector đầu vào x trong R^n thành vector đầu ra y trong R^m. Mỗi hàng của A tạo một thành phần y_i bằng dot product với x."},
+        {"title": "Điều kiện đúng chiều", "body": "Số cột của A phải bằng số thành phần của x. Đúng shape là điều kiện cần; để diễn giải đúng còn phải biết từng hàng và cột đại diện cho đại lượng nào."}
+      ],
+      "application": [
+        {"title": "Mô hình trạng thái và lớp tuyến tính", "body": "Ax xuất hiện trong cập nhật trạng thái, hiệu chuẩn cảm biến, lớp tuyến tính của neural network và đổi hệ tọa độ. Các cột cho biết từng input đóng góp vào toàn bộ output."}
+      ],
+      "python": "import numpy as np\n\ndef apply_linear_map(A, x):\n    A = np.asarray(A, dtype=float)\n    x = np.asarray(x, dtype=float)\n    if A.ndim != 2 or x.ndim != 1 or A.shape[1] != x.size:\n        raise ValueError('A.shape[1] must equal x.size')\n    return A @ x"
+    },
+    {
+      "id": "c02_matrix_row_dot",
+      "priority": 118,
+      "matchAll": ["y_i", "a_i · x"],
+      "analysis": [
+        {"title": "Mỗi đầu ra là một phép đo tuyến tính", "body": "Hàng a_i chứa các trọng số dùng để gom toàn bộ thành phần của x thành y_i. Vì vậy thay đổi một hàng chỉ thay đổi một kênh đầu ra, còn thay đổi một cột tác động tới mọi đầu ra liên quan input đó."},
+        {"title": "Đơn vị của hệ số", "body": "Để y_i có đúng đơn vị, hệ số trong hàng a_i phải chuyển đổi đơn vị của từng x_j sang đơn vị đầu ra. Ma trận không chỉ trộn số, nó còn mã hóa quan hệ vật lý hoặc thống kê."}
+      ],
+      "application": [
+        {"title": "Score tuyến tính", "body": "Classifier tuyến tính, bộ lọc và sensor fusion đều dùng các hàng ma trận như những bộ trọng số đo các hướng khác nhau của vector đầu vào."}
+      ],
+      "python": "import numpy as np\n\nA = np.array([[1., 2.], [-1., .5]])\nx = np.array([3., 4.])\ny = A @ x\nrow_scores = np.array([row @ x for row in A])\nassert np.allclose(y, row_scores)"
+    },
+    {
+      "id": "c02_matrix_product_shape",
+      "priority": 135,
+      "matchAll": ["a in r^{m x n}", "b in r^{n x p}", "ab in r^{m x p}"],
+      "analysis": [
+        {"title": "Kích thước giữa phải khớp", "body": "A có n cột và B có n hàng để mỗi hàng của A dot với mỗi cột của B. Kết quả giữ kích thước ngoài: m hàng từ A và p cột từ B."},
+        {"title": "AB nghĩa là B trước, A sau", "body": "Với vector cột, (AB)x=A(Bx). Vì vậy đổi thứ tự thường đổi cả shape lẫn ý nghĩa. Nhân ma trận không giao hoán và không được xem như phép nhân từng phần tử."}
+      ],
+      "application": [
+        {"title": "Ghép pipeline tuyến tính", "body": "Nếu B giảm 100 feature xuống 20 và A tạo 5 score từ 20 feature, AB là phép biến đổi trực tiếp từ 100 chiều sang 5 chiều. Có thể gộp khi các bước đều tuyến tính và không cần quan sát trung gian."}
+      ],
+      "python": "import numpy as np\n\ndef compose(A, B):\n    A = np.asarray(A, dtype=float)\n    B = np.asarray(B, dtype=float)\n    if A.ndim != 2 or B.ndim != 2 or A.shape[1] != B.shape[0]:\n        raise ValueError('inner dimensions must match')\n    return A @ B"
+    },
+    {
+      "id": "c02_matrix_product_element",
+      "priority": 132,
+      "matchAll": ["(ab)_{ij}", "a_{ik}", "b_{kj}"],
+      "analysis": [
+        {"title": "Một ô là một dot product", "body": "Phần tử (AB)_ij cộng các tích A_ik B_kj trên chỉ số trung gian k. Nó đo tương tác giữa hàng i của A và cột j của B."},
+        {"title": "Chỉ số k bị co lại", "body": "Chỉ số k xuất hiện trong A và B nhưng không xuất hiện ở kết quả, vì nó được cộng qua toàn bộ chiều chung. Hai chỉ số còn lại i và j xác định vị trí trong ma trận đầu ra."}
+      ],
+      "application": [
+        {"title": "Lõi tính toán của mô hình", "body": "Dense layer, attention, đồ họa và mô phỏng tuyến tính đều dựa trên hàng triệu dot product được tổ chức thành phép nhân ma trận."}
+      ],
+      "python": "import numpy as np\n\nA = np.random.randn(3, 4)\nB = np.random.randn(4, 2)\nC = A @ B\ni, j = 1, 0\nassert np.allclose(C[i, j], A[i, :] @ B[:, j])"
+    },
+    {
+      "id": "c02_column_space_rank",
+      "priority": 134,
+      "matchAny": ["col(a) = span", "rank(a) = dim col(a)"],
+      "analysis": [
+        {"title": "Column space là mọi đầu ra có thể đạt", "body": "Col(A) là span của các cột A. Mọi vector Ax đều là tổ hợp tuyến tính các cột, nên Col(A) mô tả toàn bộ tập đầu ra mà phép biến đổi có thể tạo."},
+        {"title": "Rank đếm hướng thông tin độc lập", "body": "rank(A) bằng dimension của column space và row space. Nhiều cột không đồng nghĩa nhiều thông tin nếu các cột phụ thuộc hoặc gần phụ thuộc tuyến tính."}
+      ],
+      "application": [
+        {"title": "Feature và cảm biến dư thừa", "body": "Rank thấp có thể cho thấy feature lặp, cảm biến đo cùng hiện tượng hoặc dữ liệu nằm trên cấu trúc chiều thấp. Cần phân biệt cấu trúc hữu ích với lỗi thu thập dữ liệu."}
+      ],
+      "python": "import numpy as np\n\nA = np.asarray([[1., 2., 3.], [2., 4., 6.], [1., 1., 0.]])\nrank = np.linalg.matrix_rank(A)\ns = np.linalg.svd(A, compute_uv=False)\nprint({'rank': int(rank), 'singular_values': s})"
+    },
+    {
+      "id": "c02_system_consistency",
+      "priority": 136,
+      "matchAll": ["ax=b", "b thuộc col(a)"],
+      "analysis": [
+        {"title": "Tính nhất quán là bài toán không gian cột", "body": "Ax=b có nghiệm khi b nằm trong Col(A), vì Ax chỉ tạo được các tổ hợp tuyến tính của cột A. Nếu b nằm ngoài không gian này, không tồn tại nghiệm chính xác."},
+        {"title": "Least squares khi hệ không nhất quán", "body": "Khi b không thuộc Col(A), least squares tìm Ax gần b nhất bằng cách chiếu b lên Col(A). Residual b-Ax trực giao với không gian cột tại nghiệm tối ưu."}
+      ],
+      "application": [
+        {"title": "Ước lượng từ dữ liệu đo", "body": "Trong hiệu chuẩn và sensor fusion, hệ thường dư phương trình hoặc có nhiễu. Kiểm residual và rank quan trọng hơn việc cố ép một nghiệm chính xác không tồn tại."}
+      ],
+      "python": "import numpy as np\n\nA = np.asarray([[1., 0.], [0., 1.], [1., 1.]])\nb = np.asarray([1., 2., 4.])\nx, residuals, rank, _ = np.linalg.lstsq(A, b, rcond=None)\nr = b - A @ x\nprint({'x': x, 'rank': int(rank), 'residual_norm': float(np.linalg.norm(r))})"
+    },
+    {
+      "id": "c02_inverse_identity",
+      "priority": 133,
+      "matchAny": ["a^{-1}a = i", "aa^{-1}=i", "x = a^{-1}b"],
+      "analysis": [
+        {"title": "Nghịch đảo hoàn tác phép biến đổi", "body": "A^{-1} tồn tại khi A vuông và full rank. Khi đó A là song ánh: không làm mất hướng, mỗi đầu ra có đúng một đầu vào và A^{-1} đưa đầu ra về lại đầu vào."},
+        {"title": "Có nghịch đảo chưa chắc ổn định", "body": "Ma trận gần suy biến có thể vẫn có nghịch đảo về đại số nhưng condition number rất lớn. Nhiễu nhỏ trong b khi ấy tạo sai số lớn trong nghiệm x."}
+      ],
+      "application": [
+        {"title": "Ưu tiên solve thay vì inverse", "body": "Trong tính toán số, dùng solve(A,b) thay vì tính A^{-1} rồi nhân b. Solve ít phép tính hơn, ổn định hơn và thể hiện đúng mục tiêu là giải hệ."}
+      ],
+      "python": "import numpy as np\n\nA = np.array([[3., 1.], [1., 2.]])\nb = np.array([9., 8.])\nif np.linalg.matrix_rank(A) != A.shape[0]:\n    raise ValueError('A is singular')\ncondition = np.linalg.cond(A)\nx = np.linalg.solve(A, b)\nprint(x, condition)"
+    },
+    {
+      "id": "c02_linear_map_axioms",
+      "priority": 129,
+      "matchAll": ["a(u+v)=au+av", "a(alpha u)=alpha au"],
+      "analysis": [
+        {"title": "Tuyến tính bảo toàn tổ hợp tuyến tính", "body": "Hai đẳng thức cho thấy A bảo toàn phép cộng và nhân vô hướng. Từ đó A cũng bảo toàn mọi tổ hợp tuyến tính hữu hạn: A(Σ α_i u_i)=Σ α_i A u_i."},
+        {"title": "Tuyến tính không đồng nghĩa giữ hình học", "body": "Một phép biến đổi tuyến tính có thể thay đổi độ dài, góc và dimension. Chỉ các lớp đặc biệt như ma trận trực giao mới giữ norm và góc."}
+      ],
+      "application": [
+        {"title": "Kiểm thử toán tử", "body": "Có thể dùng hai tính chất này để kiểm implementation của một biến đổi tuyến tính, hoặc phát hiện bước phi tuyến đã chen vào pipeline."}
+      ],
+      "python": "import numpy as np\n\nA = np.random.randn(3, 3)\nu, v = np.random.randn(3), np.random.randn(3)\nalpha = 2.5\nassert np.allclose(A @ (u + v), A @ u + A @ v)\nassert np.allclose(A @ (alpha * u), alpha * (A @ u))"
+    },
+    {
+      "id": "c02_scale_matrix",
+      "priority": 120,
+      "matchAll": ["s = [[s_x,0],[0,s_y]]"],
+      "analysis": [
+        {"title": "Scale tác động theo từng trục", "body": "Ma trận chéo S nhân tọa độ x với s_x và tọa độ y với s_y. Nếu hai hệ số khác nhau, hình học bị kéo không đều và góc thường không được bảo toàn."},
+        {"title": "Hệ số zero làm mất dimension", "body": "Nếu một hệ số scale bằng 0, toàn bộ thông tin theo trục đó bị xóa và ma trận mất rank. Phép biến đổi khi ấy không thể nghịch đảo."}
+      ],
+      "application": [
+        {"title": "Chuẩn hóa và đổi đơn vị", "body": "Scale matrix mô tả chuẩn hóa feature, đổi đơn vị hoặc gain theo từng kênh. Hệ số phải gắn với mục tiêu vật lý hoặc thống kê rõ ràng."}
+      ],
+      "python": "import numpy as np\n\nS = np.diag([2.0, 0.5])\nx = np.array([3.0, 4.0])\ny = S @ x\nprint(y, np.linalg.matrix_rank(S))"
+    },
+    {
+      "id": "c02_rotation_matrix",
+      "priority": 126,
+      "matchAll": ["cos(theta)", "-sin(theta)", "sin(theta)"],
+      "analysis": [
+        {"title": "Rotation 2D là biến đổi trực giao", "body": "Ma trận quay xoay vector một góc theta mà giữ norm, góc và orientation khi det(R)=1. Các cột của R tạo một cơ sở trực chuẩn."},
+        {"title": "Dấu và thứ tự quyết định chiều quay", "body": "Với vector cột và hệ tọa độ chuẩn, mẫu dấu trong công thức tạo quay ngược chiều kim đồng hồ. Đổi quy ước hàng/cột hoặc hệ trục có thể làm chiều quay đổi."}
+      ],
+      "application": [
+        {"title": "Đổi hệ robot và bản đồ", "body": "Ma trận quay chuyển vận tốc, lực hoặc tọa độ giữa hệ thân robot và hệ thế giới. Phải ghi rõ chiều biến đổi để tránh quay ngược."}
+      ],
+      "python": "import numpy as np\n\ndef rotation(theta):\n    c, s = np.cos(theta), np.sin(theta)\n    return np.array([[c, -s], [s, c]])\n\nR = rotation(np.pi / 2)\nassert np.allclose(R.T @ R, np.eye(2))"
+    },
+    {
+      "id": "c02_projection_matrix",
+      "priority": 124,
+      "matchAll": ["p = [[1,0],[0,0]]"],
+      "analysis": [
+        {"title": "Projection giữ một thành phần và xóa phần còn lại", "body": "P giữ tọa độ theo trục x và đưa tọa độ y về 0. Đây là biến đổi idempotent: P²=P, vì chiếu lần hai không thay đổi kết quả đã chiếu."},
+        {"title": "Chiếu làm mất thông tin", "body": "Rank(P)=1 nên một dimension bị loại bỏ. Không thể khôi phục tọa độ y chỉ từ Px; projection không khả nghịch."}
+      ],
+      "application": [
+        {"title": "Giảm chiều và lọc", "body": "Projection dùng để giữ thành phần nằm trong không gian quan tâm, loại phần vuông góc, giảm chiều hoặc lọc nhiễu. Cần kiểm phần thông tin bị loại có thực sự không cần thiết."}
+      ],
+      "python": "import numpy as np\n\nP = np.array([[1., 0.], [0., 0.]])\nx = np.array([3., 4.])\ny = P @ x\nassert np.allclose(P @ P, P)\nprint(y, np.linalg.matrix_rank(P))"
+    },
+    {
+      "id": "c02_basis_change",
+      "priority": 127,
+      "matchAll": ["x = b c"],
+      "analysis": [
+        {"title": "B biến tọa độ thành vector trong hệ gốc", "body": "Các cột của B là vector cơ sở. Vector c chứa tọa độ theo cơ sở đó, còn x là vector hình học trong hệ chuẩn. Đổi c làm thay đổi vector; đổi B làm thay đổi hệ biểu diễn."},
+        {"title": "Muốn tìm tọa độ phải giải hệ", "body": "Nếu B vuông và khả nghịch, c=B^{-1}x về mặt đại số, nhưng trong code nên dùng solve(B,x). Nếu B không vuông, dùng least squares hoặc pseudoinverse tùy bài toán."}
+      ],
+      "application": [
+        {"title": "Hệ tọa độ và feature basis", "body": "Đổi cơ sở xuất hiện trong robot, Fourier, wavelet và PCA. Vector thật có thể không đổi nhưng tọa độ thay đổi để cấu trúc dễ nhìn hoặc dễ tính hơn."}
+      ],
+      "python": "import numpy as np\n\nB = np.array([[1., 1.], [0., 1.]])\nc = np.array([2., 3.])\nx = B @ c\nc_recovered = np.linalg.solve(B, x)\nassert np.allclose(c, c_recovered)"
+    },
+    {
+      "id": "c02_pca_projection",
+      "priority": 138,
+      "matchAll": ["z = x_c w_k"],
+      "analysis": [
+        {"title": "PCA đổi cơ sở rồi giữ k hướng", "body": "X_c là dữ liệu đã center, W_k chứa k principal directions làm cột, và Z là tọa độ dữ liệu trong cơ sở mới. Mỗi cột Z là score theo một thành phần chính."},
+        {"title": "Center và scale quyết định kết quả", "body": "Không center sẽ trộn vị trí trung bình với hướng biến thiên. Nếu feature khác đơn vị, cần cân nhắc scale; nếu không, feature có phương sai số lớn có thể chi phối PCA."}
+      ],
+      "application": [
+        {"title": "Giảm chiều và lọc nhiễu", "body": "PCA dùng để nén dữ liệu cảm biến, trực quan hóa, phát hiện outlier và lọc hướng phương sai nhỏ. Số k phải xét cả explained variance lẫn mục tiêu kỹ thuật."}
+      ],
+      "python": "import numpy as np\n\nX = np.random.randn(100, 6)\nXc = X - X.mean(axis=0)\nU, S, Vt = np.linalg.svd(Xc, full_matrices=False)\nk = 2\nWk = Vt[:k].T\nZ = Xc @ Wk\nexplained = (S[:k] ** 2).sum() / (S ** 2).sum()\nprint(Z.shape, explained)"
+    },
+    {
+      "id": "c02_linear_model",
+      "priority": 125,
+      "matchAll": ["y = x w + b"],
+      "analysis": [
+        {"title": "Mô hình tuyến tính gom feature thành đầu ra", "body": "Xw tạo tổ hợp tuyến tính của các feature cho từng mẫu; b là intercept dịch toàn bộ dự đoán. Mỗi hệ số w_j biểu thị mức thay đổi đầu ra theo feature j khi các feature khác giữ cố định."},
+        {"title": "Diễn giải phụ thuộc vào scale", "body": "Độ lớn trọng số không thể so trực tiếp nếu feature khác đơn vị hoặc tương quan mạnh. Center/scale và kiểm đa cộng tuyến giúp trọng số có ý nghĩa ổn định hơn."}
+      ],
+      "application": [
+        {"title": "Hồi quy và score tuyến tính", "body": "Công thức này là lõi của linear regression, logistic score trước activation và nhiều lớp dự đoán đơn giản. Residual và validation mới quyết định mô hình có dùng được hay không."}
+      ],
+      "python": "import numpy as np\n\nX = np.asarray([[1., 2.], [2., 1.], [3., 4.]])\nw = np.array([0.5, -0.2])\nb = 1.0\ny = X @ w + b\nprint(y)"
+    },
+    {
+      "id": "c02_state_transition",
+      "priority": 119,
+      "matchAny": ["x_{t+1}=a x_t", "x_t+1=a x_t"],
+      "analysis": [
+        {"title": "A mô tả động lực một bước", "body": "x_{t+1}=Ax_t giả định trạng thái kế tiếp là hàm tuyến tính của trạng thái hiện tại. Các trị riêng của A quyết định mode nào tăng, giảm hoặc dao động theo thời gian."},
+        {"title": "Mô hình chỉ đúng trong phạm vi giả định", "body": "Hệ thật có thể cần input, nhiễu hoặc phi tuyến: x_{t+1}=Ax_t+Bu_t+w_t. Bỏ các thành phần này khiến A gánh sai phần động lực không được mô hình hóa."}
+      ],
+      "application": [
+        {"title": "Điều khiển và dự báo trạng thái", "body": "State transition matrix dùng trong mô hình trạng thái, Kalman filter và mô phỏng tuyến tính. Ổn định số học và spectral radius cần được kiểm tra khi lặp nhiều bước."}
+      ],
+      "python": "import numpy as np\n\nA = np.array([[1.0, 0.1], [0.0, 0.98]])\nx = np.array([0.0, 1.0])\ntrajectory = [x.copy()]\nfor _ in range(20):\n    x = A @ x\n    trajectory.append(x.copy())\ntrajectory = np.asarray(trajectory)"
+    }
+  ]
+}

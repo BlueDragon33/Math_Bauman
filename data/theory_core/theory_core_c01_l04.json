@@ -1,0 +1,428 @@
+{
+  "id": "bauman_math_theory_core_c01_l04_v1",
+  "schema": "bauman_math_theory_core_v1",
+  "version": "CORE_C01_L04_V1_APPROVED",
+  "status": "approved_against_gold_standard",
+  "lessonId": "MATH-VN-C01-vector_trong_khong_gian_-L04-basis-span-coordinate-e140",
+  "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+  "lessonTitle": "§1.4 · Cơ sở, span và tọa độ",
+  "language": "vi",
+  "purpose": "Nguồn nội dung lõi độc lập với trình bày cho bài 1.4. Nội dung đã qua scope lock, academic map, pedagogical spine, review toán học, review mô hình kỹ thuật, worked case, misconception review, assessment và implementation contract.",
+  "contentContract": {
+    "sourceOfTruth": true,
+    "presentationIndependent": true,
+    "noUiCopy": true,
+    "noSlideNumbering": true,
+    "notationMustBeSemantic": true,
+    "approvalBlockedUntilPass09": false,
+    "approvedCorePasses": [1,2,3,4,5,6,7,8,9],
+    "downstreamOrder": ["reference_table","slideshow","full_view","formula_and_layout_finalization","final_integration"]
+  },
+  "lessonThesis": "Cơ sở là một hợp đồng biểu diễn có thứ tự: nó chọn đủ các hướng độc lập để mọi vector trong không gian đang xét có đúng một bộ tọa độ. Span cho biết biểu diễn tạo được những gì; tọa độ cho biết cần bao nhiêu ở mỗi hướng; đổi cơ sở làm thay đổi các con số mô tả nhưng không làm thay đổi vector vật lý hoặc đối tượng trừu tượng đang được mô tả.",
+  "prerequisites": [
+    "Từ §1.1: vector là đối tượng đại số đồng thời là dữ liệu có thứ tự, schema, đơn vị và timestamp",
+    "Từ §1.1: cộng vector và nhân vector với vô hướng",
+    "Từ §1.2: norm, distance và reconstruction error",
+    "Từ §1.3: dot product, orthogonality, projection và residual",
+    "Giải được hệ hai phương trình tuyến tính nhỏ bằng thế hoặc khử ở mức thao tác",
+    "Phân biệt vector zero với vector có hướng"
+  ],
+  "learningOutcomes": [
+    {"id":"LO1","outcome":"Tính và diễn giải được một tổ hợp tuyến tính.","evidence":"Tính đúng vector kết quả và nêu ý nghĩa, đơn vị của coefficients."},
+    {"id":"LO2","outcome":"Quyết định được một vector có thuộc span của một họ vector đơn giản hay không.","evidence":"Tìm coefficients và kiểm reconstruction, hoặc chỉ ra hệ không nhất quán."},
+    {"id":"LO3","outcome":"Phân biệt được họ sinh, họ độc lập tuyến tính và cơ sở của một không gian đã nêu.","evidence":"Kết luận riêng spanning và independence trước khi kết luận basis."},
+    {"id":"LO4","outcome":"Giải thích được vì sao spanning tạo sự tồn tại và independence tạo tính duy nhất của tọa độ.","evidence":"Phân tích đúng một ví dụ thiếu hướng và một ví dụ dư thừa."},
+    {"id":"LO5","outcome":"Tính được tọa độ [v]_B trong một cơ sở có thứ tự không chuẩn ở R^2.","evidence":"Giải đúng, ghi đúng order và tái tạo lại v."},
+    {"id":"LO6","outcome":"Phân biệt được vector trừu tượng hoặc vật lý với cột tọa độ của nó.","evidence":"Mô tả cùng một vector trong hai basis hoặc frames."},
+    {"id":"LO7","outcome":"Dùng đúng shortcut lấy hệ số bằng dot product cho cơ sở trực chuẩn.","evidence":"Kiểm orthogonality và unit norm trước khi dùng c_i=v·b_i."},
+    {"id":"LO8","outcome":"Phân biệt được biểu diễn chính xác, dư thừa và xấp xỉ.","evidence":"Dùng reconstruction, uniqueness và residual để phân loại."},
+    {"id":"LO9","outcome":"Nhận diện được rủi ro từ basis gần phụ thuộc, sai thứ tự, sai đơn vị và trộn frame.","evidence":"Dự đoán hậu quả và hành động sửa."},
+    {"id":"LO10","outcome":"Lựa chọn và bảo vệ được một hệ biểu diễn cho robot, tín hiệu hoặc dữ liệu.","evidence":"So sánh theo validity, reconstruction, sensitivity, interpretability và downstream use."}
+  ],
+  "notationRules": [
+    {"raw":"V","meaning":"Không gian vector đang xét; phải nêu rõ trước khi gọi một họ là basis."},
+    {"raw":"b_i","meaning":"Vector thứ i trong họ sinh hoặc basis."},
+    {"raw":"B = (b_1, ..., b_k)","meaning":"Họ vector có thứ tự; order là một phần của coordinate contract."},
+    {"raw":"c = (c_1, ..., c_k)^T","meaning":"Cột coefficients theo order của B."},
+    {"raw":"v = sum_i c_i b_i","meaning":"Tổ hợp tuyến tính tạo vector v."},
+    {"raw":"span(b_1, ..., b_k)","meaning":"Tập mọi tổ hợp tuyến tính của họ."},
+    {"raw":"v in span(B)","meaning":"Tồn tại ít nhất một c sao cho v=sum_i c_i b_i."},
+    {"raw":"sum_i z_i b_i = 0","meaning":"Quan hệ tuyến tính; độc lập khi chỉ có z=0."},
+    {"raw":"[v]_B","meaning":"Cột tọa độ của v theo ordered basis B, không phải bản thân v."},
+    {"raw":"B_mat = [b_1 ... b_k]","meaning":"Ma trận cột theo đúng order của B."},
+    {"raw":"B_mat c = v","meaning":"Phương trình reconstruction trong ambient coordinates."},
+    {"raw":"r = v - B_mat c","meaning":"Residual của biểu diễn."},
+    {"raw":"E = (e_1, ..., e_n)","meaning":"Standard basis của R^n."},
+    {"raw":"P_{E<-B}","meaning":"Ma trận chuyển B-coordinates sang E-coordinates; cột i là [b_i]_E."},
+    {"raw":"[v]_E = P_{E<-B}[v]_B","meaning":"Tái biểu diễn cùng vector từ B sang E."},
+    {"raw":"c_i = v · b_i","meaning":"Shortcut chỉ đúng cho orthonormal basis trong cùng inner-product space."}
+  ],
+  "coreConcepts": [
+    {"id":"C1","name":"Tọa độ là mã theo basis","definition":"Một vector có thể có nhiều coordinate columns; mỗi cột chỉ có nghĩa cùng ordered basis.","deepMeaning":"Vector là đối tượng, tọa độ là representation data.","engineeringConsequence":"Mảng số thiếu frame, order và units có thể đúng shape nhưng sai nghĩa.","counterexample":"[1,0]^T trong (e_1,e_2) và trong (e_2,e_1) biểu diễn hai hướng khác nhau."},
+    {"id":"C2","name":"Tổ hợp tuyến tính tạo vector","definition":"Co giãn b_i bằng c_i rồi cộng.","deepMeaning":"Coefficient meaning phụ thuộc basis semantics và scaling.","engineeringConsequence":"Có thể là vận tốc dọc/ngang, mode amplitudes hoặc latent coordinates."},
+    {"id":"C3","name":"Span là miền biểu diễn chính xác","definition":"Span là tập mọi vector tạo được từ họ.","deepMeaning":"Span trả lời existence, không trả lời uniqueness.","engineeringConsequence":"Ngoài span thì không thể exact-reconstruct dù solver chạy tốt."},
+    {"id":"C4","name":"Independence loại hướng thừa","definition":"Không vector nào được tạo từ các vector còn lại.","deepMeaning":"Mỗi vector thêm một linear degree of freedom.","engineeringConsequence":"Redundancy gây non-unique coefficients và diễn giải sai contribution."},
+    {"id":"C5","name":"Basis = spanning + independence","definition":"Basis của V vừa sinh V vừa độc lập.","deepMeaning":"Spanning cho existence, independence cho uniqueness.","engineeringConsequence":"Basis là coordinate contract tối thiểu cho exact representation."},
+    {"id":"C6","name":"Basis order là dữ liệu","definition":"Đổi order làm đổi coordinate tuple.","deepMeaning":"Basis dùng cho coordinates là ordered family.","engineeringConsequence":"Sai axis/feature order có thể đổi reconstructed object."},
+    {"id":"C7","name":"Orthonormal basis đơn giản hóa coefficient recovery","definition":"Trực giao đôi một và norm 1 cho phép c_i=v·b_i.","deepMeaning":"Các directions không trộn contribution.","engineeringConsequence":"Hữu ích trong projections và signal transforms."},
+    {"id":"C8","name":"Basis hợp lệ chưa chắc ổn định số","definition":"Exact independence có thể đi cùng near dependence.","deepMeaning":"Uniqueness không bảo đảm robustness.","engineeringConsequence":"Nhiễu nhỏ có thể làm coefficients đổi lớn."},
+    {"id":"C9","name":"Feature set và dictionary không đồng nghĩa basis","definition":"Feature axes là schema; dictionary có thể redundant; basis phải spanning và independent cho target space.","deepMeaning":"Các representation objects có điều kiện toán học khác nhau.","engineeringConsequence":"Gọi nhầm che giấu non-uniqueness và space mismatch."}
+  ],
+  "mainMechanisms": [
+    {"id":"MECH1","name":"Tạo vector bằng tổ hợp tuyến tính","steps":["Nêu ambient space và B","Kiểm units/frame","Nhân c_i b_i","Cộng contributions","Diễn giải coefficients"],"qualityCheck":"Kiểm từng component."},
+    {"id":"MECH2","name":"Kiểm span membership","steps":["Viết v=sum_i c_i b_i","Tách equations","Tìm nghiệm hoặc inconsistency","Reconstruct và kiểm residual","Không suy uniqueness từ existence"],"qualityCheck":"Exact residual zero hoặc floating tolerance có lý do."},
+    {"id":"MECH3","name":"Kiểm independence","steps":["Đặt sum_i z_i b_i=0","Giải homogeneous relation","Chỉ z=0 thì independent","Có z!=0 thì redundant","Tách exact và near dependence"],"qualityCheck":"Không kết luận bằng hình vẽ alone."},
+    {"id":"MECH4","name":"Xác nhận basis","steps":["Nêu target V","Kiểm spanning","Kiểm independence","Kết luận khi cả hai đúng","Khóa order"],"qualityCheck":"Có thể là basis của span(B) nhưng không phải ambient space."},
+    {"id":"MECH5","name":"Tìm coordinates trong basis tổng quát","steps":["Nêu ordered B","Viết B_mat c=v","Giải c","Ghi [v]_B đúng order","Reconstruct"],"qualityCheck":"Không dùng dot shortcut nếu chưa orthonormal."},
+    {"id":"MECH6","name":"Tìm coordinates trong orthonormal basis","steps":["Kiểm pairwise orthogonality","Kiểm unit norm","Tính c_i=v·b_i","Reconstruct","Kiểm residual"],"qualityCheck":"Orthogonal non-unit phải chia b_i·b_i."},
+    {"id":"MECH7","name":"Đổi representation giữ nguyên vector","steps":["Xác định source/target basis","Giữ v cố định","Reconstruct từ source","Tìm target coordinates","Kiểm cùng v"],"qualityCheck":"Không so component-wise khác basis."},
+    {"id":"MECH8","name":"Chẩn đoán redundancy","steps":["Tìm z!=0 với B_mat z=0","Suy c+tz cùng reconstruct","Kết luận non-unique","Không gọi basis coordinates","Để selection criterion cho bài sau"],"qualityCheck":"Non-uniqueness không chỉ là solver bug."},
+    {"id":"MECH9","name":"Phân biệt exact và approximate","steps":["Tính r=v-B_mat c","r=0 thì exact membership","r!=0 thì approximate hoặc contract error","Kiểm frame/units/order","Để optimal approximation cho least squares"],"qualityCheck":"Residual nhỏ không chứng minh physical truth."}
+  ],
+  "mainFormulas": [
+    {"id":"F1","name":"Tổ hợp tuyến tính","formula":"v = sum_{i=1}^k c_i b_i","questionAnswered":"Vector nào được tạo?","meaning":"Tổng contributions theo directions.","conditions":["Cùng vector space","Scalars trong R","Units/frame cho phép cộng"],"undefinedCase":"Khác quantity hoặc frame.","sensitivity":"Basis scaling đổi coefficients.","failureMode":"Trộn units/frame.","engineeringUse":"State, signal và actuator reconstruction."},
+    {"id":"F2","name":"Span","formula":"span(b_1,...,b_k) = {sum_i c_i b_i | c_i in R}","questionAnswered":"Họ biểu diễn được những gì?","meaning":"Exact representable set.","conditions":["Cùng vector space","Chứa zero"],"undefinedCase":"Physical coverage chưa có nghĩa khi semantics chưa rõ.","sensitivity":"Thêm vector redundant không đổi span.","failureMode":"Nhầm số vectors với independent directions.","engineeringUse":"Model subspace và reachable directions."},
+    {"id":"F3","name":"Điều kiện thuộc span","formula":"v in span(B) iff exists c such that B_mat c = v","questionAnswered":"Có exact representation không?","meaning":"Existence, không tự bảo đảm uniqueness.","conditions":["Columns đúng order","Cùng ambient coordinates"],"undefinedCase":"Khác frame/schema.","sensitivity":"Floating point cần tolerance.","failureMode":"Một nghiệm không chứng minh basis.","engineeringUse":"Capability và reconstruction checks."},
+    {"id":"F4","name":"Độc lập tuyến tính","formula":"sum_i z_i b_i = 0 implies z_i = 0 for all i","questionAnswered":"Mỗi direction có thêm freedom không?","meaning":"Không có nontrivial zero relation.","conditions":["Cùng vector space"],"undefinedCase":"Tolerance tùy tiện khi scale chưa kiểm.","sensitivity":"Near dependence vẫn exact-independent.","failureMode":"Dùng correlation thay algebraic dependence.","engineeringUse":"Unique coordinates."},
+    {"id":"F5","name":"Cơ sở","formula":"B is a basis of V iff span(B)=V and B is linearly independent","questionAnswered":"Đủ và không dư không?","meaning":"Representation family tối thiểu.","conditions":["Nêu V","Ordered khi dùng coordinates"],"undefinedCase":"Thiếu target space.","sensitivity":"Có thể poorly conditioned.","failureMode":"Independent subset bị gọi basis của ambient space.","engineeringUse":"Coordinate systems."},
+    {"id":"F6","name":"Tọa độ theo basis","formula":"[v]_B=(c_1,...,c_n)^T where v=sum_i c_i b_i","questionAnswered":"Mã của v trong B là gì?","meaning":"Coefficients theo order.","conditions":["B là ordered basis","v thuộc target space"],"undefinedCase":"Không spanning hoặc dependent.","sensitivity":"Đổi scale/order/basis làm đổi coordinates.","failureMode":"Bỏ basis label.","engineeringUse":"Frames và modal coordinates."},
+    {"id":"F7","name":"Reconstruction","formula":"v = B_mat [v]_B","questionAnswered":"Tọa độ có tái tạo đúng v không?","meaning":"Decode coordinates.","conditions":["Columns đúng order","Basis version khớp"],"undefinedCase":"Metadata mismatch.","sensitivity":"Sai order tạo vector khác.","failureMode":"Không kiểm reconstruction.","engineeringUse":"State/signal decoding."},
+    {"id":"F8","name":"Uniqueness","formula":"B_mat c = B_mat d and B independent imply c=d","questionAnswered":"Vì sao coordinates duy nhất?","meaning":"B_mat(c-d)=0 và independence buộc c-d=0.","conditions":["B independent","Cùng ordered family"],"undefinedCase":"Redundant dictionary.","sensitivity":"Exact unique vẫn có thể unstable.","failureMode":"Solver trả một nghiệm bị nhầm thành unique.","engineeringUse":"Unambiguous encoding."},
+    {"id":"F9","name":"Orthonormal shortcut","formula":"c_i = v · b_i when b_i · b_j = delta_ij","questionAnswered":"Khi nào lấy coordinate bằng dot product?","meaning":"Dot product cô lập component.","conditions":["Orthonormal basis","Cùng inner product"],"undefinedCase":"Orthogonal non-unit cần chia b_i·b_i.","sensitivity":"Floating checks cần tolerance.","failureMode":"Dùng cho arbitrary basis.","engineeringUse":"Projection và signal modes."},
+    {"id":"F10","name":"Đổi B sang E","formula":"[v]_E=P_{E<-B}[v]_B","questionAnswered":"Tái biểu diễn v trong standard basis thế nào?","meaning":"Columns của P là basis B trong E.","conditions":["B và E là bases cùng space","Đúng order/direction"],"undefinedCase":"Không suy ngược unique nếu columns dependent.","sensitivity":"Near dependence làm inverse direction nhạy.","failureMode":"Đảo source/target hoặc dùng transpose bừa.","engineeringUse":"Frame reconstruction."},
+    {"id":"F11","name":"Residual","formula":"r = v - B_mat c","questionAnswered":"Phần nào chưa được tái tạo?","meaning":"Reconstruction mismatch.","conditions":["Cùng schema/units/frame","Metric đã chọn"],"undefinedCase":"Khác units/frame.","sensitivity":"Scale dimensions ảnh hưởng norm.","failureMode":"Residual nhỏ bị gọi model đúng.","engineeringUse":"Representation quality."},
+    {"id":"F12","name":"Non-uniqueness trong họ dư thừa","formula":"if B_mat z=0, z!=0 and B_mat c=v, then B_mat(c+t z)=v","questionAnswered":"Vì sao có vô số coefficient vectors?","meaning":"Null relation dịch coefficients mà không đổi vector.","conditions":["Có nonzero dependence z"],"undefinedCase":"Không áp dụng khi independent.","sensitivity":"Solver/regularizer chọn nghiệm khác nhau.","failureMode":"Một nghiệm bị diễn giải là physical contribution duy nhất.","engineeringUse":"Dictionaries và redundant actuators."}
+  ],
+  "comparisonLogic": {
+    "familyTypes": [
+      {"type":"spanning_family","spansTarget":true,"independent":"not_required","coordinateExistence":"yes","coordinateUniqueness":"not_guaranteed"},
+      {"type":"independent_family","spansTarget":"not_guaranteed","independent":true,"coordinateExistence":"within_span","coordinateUniqueness":"yes_within_span"},
+      {"type":"basis","spansTarget":true,"independent":true,"coordinateExistence":"yes","coordinateUniqueness":"yes"},
+      {"type":"orthonormal_basis","spansTarget":true,"independent":true,"coordinateExistence":"yes","coordinateUniqueness":"yes"},
+      {"type":"overcomplete_dictionary","spansTarget":"possibly","independent":false,"coordinateExistence":"possibly","coordinateUniqueness":"no_without_extra_constraints"},
+      {"type":"feature_set","spansTarget":"model_dependent","independent":"must_be_checked","coordinateExistence":"schema_defined","coordinateUniqueness":"not_a_basis_theorem"}
+    ],
+    "methodSelection": [
+      {"situation":"general basis","method":"Solve B_mat c=v","doNotUse":"Raw dots as coordinates"},
+      {"situation":"orthonormal basis","method":"Use c_i=v·b_i and reconstruct","doNotUse":"Assume orthonormality"},
+      {"situation":"redundant family","method":"Report non-uniqueness","doNotUse":"Call one solution basis coordinates"},
+      {"situation":"v outside span","method":"Report exact failure and residual","doNotUse":"Call approximation exact"},
+      {"situation":"different frames/models","method":"Transform or align first","doNotUse":"Compare components directly"}
+    ],
+    "invariantVsCoordinateDependent": [
+      {"quantity":"abstract physical vector","underBasisChange":"unchanged"},
+      {"quantity":"coordinate tuple","underBasisChange":"generally changes"},
+      {"quantity":"basis order","underBasisChange":"part of contract"},
+      {"quantity":"Euclidean norm under orthonormal change","underBasisChange":"unchanged"},
+      {"quantity":"raw components under general change","underBasisChange":"change"}
+    ]
+  },
+  "assumptionGate": [
+    {"check":"declaredTargetSpace","question":"Basis của V nào?","actionOnFail":"Không kết luận basis."},
+    {"check":"sameAmbientSpace","question":"v và b_i cùng space không?","actionOnFail":"Transform hoặc từ chối."},
+    {"check":"orderedFamily","question":"Order/version B đã khóa chưa?","actionOnFail":"Khóa trước khi đọc coordinates."},
+    {"check":"schemaUnitsFrame","question":"Schema, units, frame và time có tương thích không?","actionOnFail":"Align representation."},
+    {"check":"spanningTarget","question":"B có sinh target hoặc chứa v không?","actionOnFail":"Báo missing direction/out-of-span."},
+    {"check":"linearIndependence","question":"B có unique không?","actionOnFail":"Gọi generating family/dictionary."},
+    {"check":"orthonormality","question":"Đã kiểm orthogonal và unit norm chưa?","actionOnFail":"Dùng general solve."},
+    {"check":"basisScaling","question":"Scaling có làm coefficients khó diễn giải không?","actionOnFail":"Review normalization/units."},
+    {"check":"nearDependence","question":"Directions có gần song song không?","actionOnFail":"Báo numerical risk."},
+    {"check":"exactVsApproximate","question":"Mục tiêu exact hay approximate?","actionOnFail":"Không trộn hai chế độ."},
+    {"check":"reconstruction","question":"B_mat c có tái tạo v không?","actionOnFail":"Không chấp nhận result."},
+    {"check":"representationCompatibility","question":"Hai coordinates cùng basis/frame/model version không?","actionOnFail":"Transform hoặc align trước."}
+  ],
+  "workedCase": {
+    "status":"verified_pass_07",
+    "caseId":"CASE_UGV_WORLD_ROUTE_BASIS",
+    "title":"Biểu diễn cùng vận tốc UGV trong world basis và route-aligned basis",
+    "scenario":{"task":"Tách vận tốc UGV thành thành phần dọc tuyến và lệch ngang.","vectorType":"planar free velocity vector","eventTime":"2026-07-08T08:30:00+07:00","matchedRouteArcLengthM":42.0,"worldFrameId":"W_ENU_2D","routeFrameId":"R_ROUTE_LEFT_NORMAL_S42","bodyFrameId":"B_ROBOT_NOT_USED_AS_ROUTE_BASIS","routeHeadingDeg":53.13010235415598,"robotYawDeg":50.0,"units":"m/s","worldComponentOrder":["v_x_W","v_y_W"],"routeComponentOrder":["v_parallel","v_left"],"scopeBoundary":"Chỉ đổi coordinates của cùng velocity vector; không tính relative moving-frame velocity và không dùng position point."},
+    "representationContract":{"worldBasis":{"symbol":"W=(e_x,e_y)","orderedVectorsInWorld":[[1,0],[0,1]],"dimensionlessDirections":true},"routeBasis":{"symbol":"R=(t,n)","construction":"t=(3/5,4/5), n=(-4/5,3/5)","orderedVectorsInWorld":[[0.6,0.8],[-0.8,0.6]],"normalConvention":"left normal","dimensionlessDirections":true,"orthonormalChecks":{"tDotT":1,"nDotN":1,"tDotN":0,"determinant":1}},"transform":{"symbol":"P_{W<-R}","matrix":[[0.6,-0.8],[0.8,0.6]],"sourceCoordinates":"R","targetCoordinates":"W"},"timestampPolicy":{"vectorTimestamp":"2026-07-08T08:30:00+07:00","basisTimestamp":"2026-07-08T08:30:00+07:00","transformAgeMs":0,"maxAcceptedTransformAgeMs":20,"status":"matched"}},
+    "given":{"velocityWorld":[5,1],"units":"m/s"},
+    "coordinateCalculation":{"method":"R orthonormal nên dùng dot products.","longitudinal":{"calculation":"5(0.6)+1(0.8)","value":3.8,"units":"m/s"},"lateralLeft":{"calculation":"5(-0.8)+1(0.6)","value":-3.4,"units":"m/s"},"velocityRoute":[3.8,-3.4],"interpretation":"3.8 m/s dọc tuyến và 3.4 m/s sang phải theo left-normal convention."},
+    "reconstruction":{"formula":"[v]_W=P_{W<-R}[v]_R","contributions":[[2.28,3.04],[2.72,-2.04]],"reconstructedVelocityWorld":[5,1],"residualWorld":[0,0],"residualNorm":0,"status":"exact_pass"},
+    "invariantChecks":{"worldNormSquared":26,"routeNormSquared":26,"speed":5.0990195135927845,"normPreserved":true},
+    "basisOrderTest":{"swappedBasis":"(n,t)","swappedCoordinates":[-3.4,3.8],"reconstructedVelocityWorld":[5,1]},
+    "normalConventionTest":{"rightNormal":[0.8,-0.6],"rightNormalCoordinates":[3.8,3.4],"reconstructedVelocityWorld":[5,1]},
+    "failureTests":[
+      {"id":"FAIL_MIXED_FRAME","mistake":"Đọc [3.8,-3.4] như world coordinates.","wrongWorldVector":[3.8,-3.4],"errorNorm":4.560701700396552,"requiredAction":"Gắn frame ID và transform."},
+      {"id":"FAIL_REVERSED_TRANSFORM","mistake":"Dùng transform ngược chiều.","wrongWorldVector":[-0.44,-5.08],"errorNorm":8.158431221748456,"requiredAction":"Log source/target direction."},
+      {"id":"FAIL_NON_UNIT_DIRECTIONS","mistake":"Dùng (3,4),(-4,3) như unit basis.","rawDotCoefficients":[19,-17],"wrongReconstruction":[125,25],"correctCoefficients":[0.76,-0.68],"correctReconstruction":[5,1]},
+      {"id":"FAIL_STALE_BASIS","mistake":"Dùng basis khác time/route point.","requiredAction":"Kiểm timestamps, transform age và matched s."}
+    ],
+    "nearDependenceContrast":{"basis":[[1,0],[1,0.001]],"targetVector":[5,1],"exactCoordinates":[-995,1000],"perturbedTargetVector":[5,1.001],"perturbedCoordinates":[-996,1001],"coordinateChange":[-1,1],"residuals":[0,0],"lesson":"Residual zero và uniqueness không bảo đảm stable coefficients."},
+    "decisionLogic":["Chỉ dùng khi basis/frame/time hợp lệ.","Diễn giải lateral sign sau khi nêu convention.","Route coordinates không tự chứng minh controller stability.","Khi reconstruction fail, kiểm contract trước out-of-span.","Flag large canceling coefficients."],
+    "qualityGate":{"samePhysicalVector":true,"orderedBasisDeclared":true,"unitsDeclared":true,"framesDeclared":true,"timestampsMatched":true,"orthonormalityVerified":true,"reconstructionVerified":true,"normInvariantVerified":true,"basisOrderTestVerified":true,"signConventionTestVerified":true,"mixedFrameFailureVerified":true,"nearDependenceKeptSeparate":true,"affinePointConfusionAvoided":true,"status":"pass_07_verified"}
+  },
+  "engineeringExamples": [
+    {"domain":"UGV route tracking","representation":"World versus route velocity coordinates","coreQuestion":"Basis nào làm chuyển động dọc/ngang dễ diễn giải?","contract":"Cùng vector, frame, units, orientation và timestamp."},
+    {"domain":"IMU sensor frame","representation":"Specific-force/acceleration components theo sensor axes","coreQuestion":"Processing state nào cần trước khi gọi inertial acceleration?","contract":"Axis order, handedness, calibration, gravity state và timestamp."},
+    {"domain":"Signal basis","representation":"Signal reconstructed from orthonormal modes","coreQuestion":"Khi nào inner products là coefficients?","contract":"Cùng sampling grid, inner product và normalization."},
+    {"domain":"Feature engineering","representation":"Original và derived features","coreQuestion":"Linear dependence khác information redundancy thế nào?","contract":"Không gọi nonlinear relation là linear dependence."},
+    {"domain":"Sparse dictionary","representation":"Nhiều atoms hơn ambient dimension","coreQuestion":"Vì sao coefficients non-unique?","contract":"Không gọi dictionary coefficients là basis coordinates."},
+    {"domain":"Embedding systems","representation":"Learned coordinates từ model versions","coreQuestion":"Có so trực tiếp được không?","contract":"Model, encoder, pooling, normalization và alignment phải tương thích."}
+  ],
+  "commonMisconceptions": {
+    "status":"verified_pass_08",
+    "classification":["object_vs_representation","span_basis_uniqueness","method_and_numerics","engineering_and_ai_contracts"],
+    "items":[
+      {"id":"M01","category":"object_vs_representation","severity":"critical","wrong":"Coordinate tuple chính là vector.","whyWrong":"Tuple chỉ có nghĩa trong một ordered basis.","counterexample":"[1,0]^T trong hai basis hoán đổi biểu diễn hai vectors khác nhau.","observableSymptom":"Bỏ basis label.","rootCause":"Đồng nhất object với encoding.","diagnosticQuestions":["Basis nào?","Reconstruction ra gì?"],"correctiveAction":"Luôn ghi [v]_B và reconstruct."},
+      {"id":"M02","category":"object_vs_representation","severity":"critical","wrong":"Hai tuples bằng nhau thì hai vectors bằng nhau.","whyWrong":"Chỉ đúng khi cùng representation contract.","counterexample":"[1,0]^T_E=e_1 nhưng [1,0]^T_(e_2,e_1)=e_2.","observableSymptom":"So trực tiếp world và route arrays.","rootCause":"Thiếu compatibility gate.","diagnosticQuestions":["Cùng basis/frame/version không?"],"correctiveAction":"Transform về common basis."},
+      {"id":"M03","category":"object_vs_representation","severity":"major","wrong":"Basis order chỉ là trình bày.","whyWrong":"Order xác định coefficient position.","counterexample":"(t,n) cho (3.8,-3.4), (n,t) cho (-3.4,3.8).","observableSymptom":"Reorder columns nhưng giữ tuple.","rootCause":"Xem basis như set.","diagnosticQuestions":["Column hash có khớp không?"],"correctiveAction":"Version ordered columns."},
+      {"id":"M04","category":"object_vs_representation","severity":"major","wrong":"Đổi basis làm vector vật lý đổi.","whyWrong":"Chỉ encoding đổi.","counterexample":"(5,1)_W và (3.8,-3.4)_R reconstruct cùng velocity.","observableSymptom":"Gọi coordinate change là state change.","rootCause":"Không kiểm invariant.","diagnosticQuestions":["Có reconstruct cùng v không?"],"correctiveAction":"Tách object và representation."},
+      {"id":"M05","category":"span_basis_uniqueness","severity":"critical","wrong":"Mọi họ vector khác zero đều là basis.","whyWrong":"Phải spanning target và independent.","counterexample":"Hai vectors song song trong R^2.","observableSymptom":"Không nêu V.","rootCause":"Quên hai điều kiện.","diagnosticQuestions":["Span=V?","Có zero relation không?"],"correctiveAction":"Dùng spanning plus independence gates."},
+      {"id":"M06","category":"span_basis_uniqueness","severity":"critical","wrong":"Thuộc span thì coefficients unique.","whyWrong":"Existence khác uniqueness.","counterexample":"e_1,e_2,e_1+e_2.","observableSymptom":"Gọi solver output là unique.","rootCause":"Trộn existence và uniqueness.","diagnosticQuestions":["Có z!=0 với Bz=0 không?"],"correctiveAction":"Kiểm independence."},
+      {"id":"M07","category":"span_basis_uniqueness","severity":"major","wrong":"Càng nhiều vectors càng tốt.","whyWrong":"Redundancy không mở rộng span và phá uniqueness.","counterexample":"Thêm e_1+e_2 vào standard basis.","observableSymptom":"Coefficient count tăng nhưng dimension không tăng.","rootCause":"Nhầm số phần tử với số directions.","diagnosticQuestions":["Vector mới nằm trong span cũ không?"],"correctiveAction":"Tách coverage và redundancy."},
+      {"id":"M08","category":"span_basis_uniqueness","severity":"major","wrong":"Zero vector là basis direction hợp lệ.","whyWrong":"Họ chứa zero luôn dependent.","counterexample":"1·0=0 là nontrivial relation.","observableSymptom":"Zero column.","rootCause":"Chỉ kiểm column count.","diagnosticQuestions":["Có zero column không?"],"correctiveAction":"Reject zero direction."},
+      {"id":"M09","category":"method_and_numerics","severity":"critical","wrong":"Dot product luôn cho coordinates.","whyWrong":"Cần orthonormality.","counterexample":"b_1=(1,0), b_2=(1,1), v=(3,2): true c=(1,2), dots=(3,5).","observableSymptom":"Reconstruction fail.","rootCause":"Overgeneralize projection.","diagnosticQuestions":["Gram có bằng I không?"],"correctiveAction":"Check orthonormality hoặc solve."},
+      {"id":"M10","category":"method_and_numerics","severity":"major","wrong":"Orthogonal đủ cho raw dots.","whyWrong":"Non-unit vectors cần chia norm squared.","counterexample":"(3,4),(-4,3) cho raw dots (19,-17).","observableSymptom":"Magnitude phóng đại.","rootCause":"Bỏ unit-norm check.","diagnosticQuestions":["Norm có bằng 1 không?"],"correctiveAction":"Normalize hoặc dùng quotient."},
+      {"id":"M11","category":"method_and_numerics","severity":"critical","wrong":"Residual zero bảo đảm stable coordinates.","whyWrong":"Near dependence khuếch đại nhiễu.","counterexample":"(1,0),(1,0.001) cho (-995,1000).","observableSymptom":"Large canceling coefficients.","rootCause":"Nhầm exactness với robustness.","diagnosticQuestions":["Perturbation test?","Coefficient norm?"],"correctiveAction":"Warn hoặc đổi basis."},
+      {"id":"M12","category":"method_and_numerics","severity":"critical","wrong":"Residual nhỏ chứng minh model đúng.","whyWrong":"Chỉ đo fit trong contract hiện tại.","counterexample":"Frame sai vẫn có thể cho internal residual nhỏ.","observableSymptom":"Bỏ metadata checks.","rootCause":"Một metric thay model validation.","diagnosticQuestions":["Contract có valid không?"],"correctiveAction":"Validate contract trước residual."},
+      {"id":"M13","category":"engineering_and_ai_contracts","severity":"critical","wrong":"Route frame là body frame.","whyWrong":"Route heading và robot yaw có thể khác.","counterexample":"53.13° versus 50°.","observableSymptom":"Dùng route coefficients làm body commands.","rootCause":"Gộp orientations.","diagnosticQuestions":["Frame IDs?","Headings?"],"correctiveAction":"Giữ frames riêng."},
+      {"id":"M14","category":"engineering_and_ai_contracts","severity":"critical","wrong":"Point đổi frame giống free vector.","whyWrong":"Khác origins cần translation.","counterexample":"World point sang body point không chỉ rotation.","observableSymptom":"Offset cố định.","rootCause":"Nhầm affine với vector space.","diagnosticQuestions":["Vector hay point?","Origins?"],"correctiveAction":"Không dùng pure basis change cho point."},
+      {"id":"M15","category":"engineering_and_ai_contracts","severity":"major","wrong":"Lateral sign là tuyệt đối.","whyWrong":"Phụ thuộc normal convention.","counterexample":"Left -3.4, right +3.4.","observableSymptom":"Sign flip sau update.","rootCause":"Không version convention.","diagnosticQuestions":["Left hay right normal?"],"correctiveAction":"Log convention."},
+      {"id":"M16","category":"engineering_and_ai_contracts","severity":"critical","wrong":"Raw accelerometer là inertial acceleration hoàn chỉnh.","whyWrong":"Đo specific force và chịu bias/gravity/orientation.","counterexample":"Sensor đứng yên vẫn có gravity-related reading.","observableSymptom":"Estimate sai dù array hợp lệ.","rootCause":"Bỏ processing metadata.","diagnosticQuestions":["Gravity compensated?","Calibration?"],"correctiveAction":"Ghi processing state."},
+      {"id":"M17","category":"engineering_and_ai_contracts","severity":"critical","wrong":"Nonlinear derived feature chứng minh linear dependence.","whyWrong":"Information redundancy khác algebraic linear dependence.","counterexample":"speed=sqrt(v_x^2+v_y^2).","observableSymptom":"Gọi mọi deterministic feature là linear combination.","rootCause":"Trộn dependence types.","diagnosticQuestions":["Có global constant coefficients không?"],"correctiveAction":"Nêu đúng loại dependence."},
+      {"id":"M18","category":"engineering_and_ai_contracts","severity":"critical","wrong":"Feature set hoặc dictionary tự động là basis.","whyWrong":"Có thể redundant hoặc không spanning target.","counterexample":"Overcomplete dictionary.","observableSymptom":"Gọi sparse coefficients là basis coordinates.","rootCause":"Dùng từ basis theo nghĩa đời thường.","diagnosticQuestions":["Target space?","Spanning?","Independent?"],"correctiveAction":"Phân loại representation family."},
+      {"id":"M19","category":"engineering_and_ai_contracts","severity":"critical","wrong":"Embedding cùng dimension thì so cosine được.","whyWrong":"Pipeline xác định coordinate space.","counterexample":"Hai model 768-D không aligned.","observableSymptom":"Similarity drift sau upgrade.","rootCause":"Đồng nhất shape với compatibility.","diagnosticQuestions":["Cùng model/encoder/pooling?","Alignment?"],"correctiveAction":"Version và align spaces."},
+      {"id":"M20","category":"engineering_and_ai_contracts","severity":"critical","wrong":"Cùng shape và units là đủ để so arrays.","whyWrong":"Frame, time, order và preprocessing có thể khác.","counterexample":"World và route velocities đều (2,) m/s.","observableSymptom":"Plausible numbers nhưng action sai.","rootCause":"Schema validation nông.","diagnosticQuestions":["Frame/order/time/version?"],"correctiveAction":"Dùng full contract."}
+    ],
+    "diagnosticProtocol":["Xác định object type.","Nêu target space và ordered basis/schema.","Kiểm spanning, independence, orthonormality.","Kiểm units, frame, order, timestamp, version.","Reconstruct và kiểm invariants.","Perturb input hoặc inspect coefficient scale.","Không dùng solver success, equal shape hay small residual làm bằng chứng duy nhất."],
+    "coverage":{"pass03MisconceptionTargets":10,"pass05MathematicalEdgeCasesCovered":true,"pass06EngineeringFailuresCovered":true,"pass07WorkedCaseFailuresCovered":true,"criticalMisconceptions":14,"totalMisconceptions":20}
+  },
+  "failureModeAtlas": {
+    "status":"verified_pass_08",
+    "items":[
+      {"id":"FM01","failure":"Swapped basis-column order","symptom":"Reconstruction sai.","rootCause":"Order metadata drift.","diagnostic":"Compare ordered-column hash.","correction":"Reorder tuple hoặc columns consistently.","telemetry":["basis_id","basis_version","column_hash"]},
+      {"id":"FM02","failure":"Transform direction reversed","symptom":"Large conversion error.","rootCause":"Source/target missing.","diagnostic":"Check P_{target<-source}.","correction":"Apply correct direction.","telemetry":["source_frame","target_frame","transform_direction"]},
+      {"id":"FM03","failure":"Stale timestamps","symptom":"Arithmetic valid, geometry wrong.","rootCause":"Old basis.","diagnostic":"Inspect transform age.","correction":"Interpolate or reject.","telemetry":["vector_time","basis_time","transform_age_ms"]},
+      {"id":"FM04","failure":"Normal convention changed","symptom":"Lateral sign flips.","rootCause":"Convention mismatch.","diagnostic":"Check normal orientation.","correction":"Version convention.","telemetry":["normal_convention"]},
+      {"id":"FM05","failure":"Non-unit direction with dot shortcut","symptom":"Magnitude explodes.","rootCause":"Orthogonal confused with orthonormal.","diagnostic":"Check norms.","correction":"Normalize or divide norm squared.","telemetry":["basis_norms","orthonormality_error"]},
+      {"id":"FM06","failure":"Route tangent undefined","symptom":"NaN basis.","rootCause":"Cusp or duplicate points.","diagnostic":"Check tangent norm.","correction":"Reject or fallback.","telemetry":["route_s","tangent_norm"]},
+      {"id":"FM07","failure":"Body confused with route frame","symptom":"Wrong control meaning.","rootCause":"Yaw and route heading merged.","diagnostic":"Compare IDs/headings.","correction":"Transform explicitly.","telemetry":["body_frame","route_frame","robot_yaw","route_heading"]},
+      {"id":"FM08","failure":"Point treated as vector","symptom":"Constant offset.","rootCause":"Translation omitted.","diagnostic":"Classify object/origins.","correction":"Use affine transform later.","telemetry":["object_type","source_origin","target_origin"]},
+      {"id":"FM09","failure":"Mixed units/scaling","symptom":"One block dominates.","rootCause":"No metric/scaling.","diagnostic":"Inspect units/scales.","correction":"Declare scaling.","telemetry":["units","scaling_version"]},
+      {"id":"FM10","failure":"Dot shortcut on non-orthogonal basis","symptom":"Residual nonzero.","rootCause":"Formula overgeneralized.","diagnostic":"Check Gram off-diagonal.","correction":"Solve Bc=v.","telemetry":["solver_mode","orthogonality_error"]},
+      {"id":"FM11","failure":"Near-dependent basis","symptom":"Huge canceling coefficients.","rootCause":"Nearly parallel directions.","diagnostic":"Perturbation and coefficient norm.","correction":"Change basis or warn.","telemetry":["condition_estimate","coefficient_norm","sensitivity_flag"]},
+      {"id":"FM12","failure":"Residual before contract validation","symptom":"False confidence/alarm.","rootCause":"Metadata mismatch.","diagnostic":"Validate operands.","correction":"Align then recompute.","telemetry":["residual_norm","contract_valid"]},
+      {"id":"FM13","failure":"Raw IMU mislabeled","symptom":"Gravity/bias error.","rootCause":"Processing state omitted.","diagnostic":"Check compensation/calibration.","correction":"Label and process explicitly.","telemetry":["imu_calibration_version","gravity_compensated","sensor_frame"]},
+      {"id":"FM14","failure":"Signal basis under changed sampling contract","symptom":"Coefficients lose meaning.","rootCause":"Grid/window drift.","diagnostic":"Compare signal metadata.","correction":"Rebuild/resample.","telemetry":["sample_rate","window_length","inner_product","normalization"]},
+      {"id":"FM15","failure":"Nonlinear feature called linear dependence","symptom":"Wrong rank reasoning.","rootCause":"Dependence types conflated.","diagnostic":"Test global constant coefficients.","correction":"Classify separately.","telemetry":["feature_schema_version"]},
+      {"id":"FM16","failure":"Dictionary coefficients labeled unique","symptom":"Solvers disagree.","rootCause":"Redundancy ignored.","diagnostic":"Check null relation/criterion.","correction":"Report selection rule.","telemetry":["solver_mode","regularization","uniqueness_status"]},
+      {"id":"FM17","failure":"Incompatible embeddings compared","symptom":"Similarity drift.","rootCause":"Spaces unaligned.","diagnostic":"Compare pipeline versions.","correction":"Same pipeline or alignment.","telemetry":["model_version","encoder_version","pooling_version","normalization_state","alignment_version"]},
+      {"id":"FM18","failure":"NaN, infinity or silent broadcasting","symptom":"Corrupted semantics.","rootCause":"Weak validation.","diagnostic":"Check finite values and exact shapes.","correction":"Reject invalid data.","telemetry":["input_shape","finite_status","broadcast_status"]}
+    ],
+    "triageOrder":["shape_and_finite_values","schema_units_frame_time","basis_order_and_direction","spanning_independence_orthonormality","reconstruction_and_invariants","numerical_sensitivity","domain_specific_semantics"]
+  },
+  "assessmentBlueprint": {
+    "status":"verified_pass_09",
+    "principles":["Mỗi learning outcome có ít nhất hai evidence points.","Arithmetic không đủ nếu thiếu basis, condition hoặc reconstruction.","Engineering answers phải nêu units, frame, order và time/version khi liên quan.","Critical conceptual failures override raw score."],
+    "phases":[
+      {"phase":"diagnostic","scoreWeight":0,"purpose":"Phát hiện prerequisite gaps trước bài.","itemIds":["D01","D02","D03","D04"]},
+      {"phase":"formative","scoreWeight":40,"purpose":"Feedback theo từng concept và mechanism.","itemIds":["F01","F02","F03","F04","F05","F06","F07","F08"]},
+      {"phase":"summative","scoreWeight":60,"purpose":"Chứng minh mastery tích hợp và transfer.","itemIds":["S01","S02","S03","S04","S05","S06"]}
+    ],
+    "learningOutcomeMap": {
+      "LO1":["D02","F01"],"LO2":["F02","S01"],"LO3":["D03","F03","S02"],"LO4":["F03","F04","S02"],"LO5":["F05","S01"],"LO6":["D01","F06","S03"],"LO7":["D04","F07","S01"],"LO8":["F04","F08","S02"],"LO9":["F06","F08","S04","S05"],"LO10":["S03","S04","S05","S06"]
+    },
+    "items": [
+      {"id":"D01","phase":"diagnostic","type":"concept_check","prompt":"Cùng tuple [1,0]^T trong hai ordered bases khác nhau có nhất thiết là cùng vector không?","answerEvidence":["Không","Phải nêu basis","Có reconstruction hoặc counterexample swapped basis"],"criticalConcepts":["object_vs_representation"]},
+      {"id":"D02","phase":"diagnostic","type":"calculation","prompt":"Tính 2(1,0)-3(0,1) và nêu đơn vị nếu hai basis directions dimensionless còn target là velocity.","answerEvidence":["(2,-3)","Coefficients và vector có đơn vị velocity"],"criticalConcepts":["linear_combination","units"]},
+      {"id":"D03","phase":"diagnostic","type":"classification","prompt":"Một họ hai vectors song song khác zero trong R^2 là spanning, independent hay basis?","answerEvidence":["Dependent","Không spanning R^2","Không là basis R^2"],"criticalConcepts":["target_space","basis_conditions"]},
+      {"id":"D04","phase":"diagnostic","type":"method_gate","prompt":"Khi nào c_i=v·b_i cho đúng coordinates?","answerEvidence":["B orthonormal","Cùng inner product","v thuộc relevant space"],"criticalConcepts":["orthonormal_shortcut"]},
+      {"id":"F01","phase":"formative","points":5,"type":"calculation_interpretation","prompt":"Cho b_1=(1,1), b_2=(1,-1), c=(3,1). Tính v và diễn giải contributions.","answerEvidence":["v=(4,2)","3b_1 và 1b_2","Không gọi c invariant khi basis đổi"]},
+      {"id":"F02","phase":"formative","points":5,"type":"span_membership","prompt":"Vector (2,3,1) có thuộc span((1,0,0),(0,1,0)) không?","answerEvidence":["Không","z component không thể tái tạo","Nêu inconsistency hoặc residual direction"]},
+      {"id":"F03","phase":"formative","points":5,"type":"classification_proof","prompt":"Phân loại (e_1,e_2,e_1+e_2) trong R^2.","answerEvidence":["Spans R^2","Dependent","Không là basis","Nêu relation e_1+e_2-(e_1+e_2)=0"]},
+      {"id":"F04","phase":"formative","points":5,"type":"existence_uniqueness","prompt":"Giải thích spanning và independence đóng góp gì cho coordinates.","answerEvidence":["Spanning gives existence","Independence gives uniqueness","Basis gives both"]},
+      {"id":"F05","phase":"formative","points":5,"type":"coordinate_solve","prompt":"Với B=((1,0),(1,1)), tìm [(3,2)]_B và reconstruct.","answerEvidence":["c=(1,2)","1(1,0)+2(1,1)=(3,2)","Order declared"]},
+      {"id":"F06","phase":"formative","points":5,"type":"representation_diagnosis","prompt":"Vì sao không được đọc route tuple (3.8,-3.4) như world tuple?","answerEvidence":["Different bases/frames","Same shape and units insufficient","Need transform and metadata"]},
+      {"id":"F07","phase":"formative","points":5,"type":"method_comparison","prompt":"Với q=(3,4), m=(-4,3), v=(5,1), vì sao raw dots không là coordinates?","answerEvidence":["Directions orthogonal but norm 5","Need divide by 25","Correct c=(0.76,-0.68)"]},
+      {"id":"F08","phase":"formative","points":5,"type":"numerical_reasoning","prompt":"Residual zero nhưng coefficients (-995,1000) nói lên điều gì?","answerEvidence":["Exact representation and uniqueness may coexist with instability","Near dependence","Large cancellation and sensitivity warning"]},
+      {"id":"S01","phase":"summative","points":12,"type":"worked_case_reconstruction","prompt":"Từ t=(0.6,0.8), n=(-0.8,0.6), v_W=(5,1), tính v_R, reconstruct và kiểm invariant.","answerEvidence":["v_R=(3.8,-3.4)","Reconstruction=(5,1)","Residual=0","Norm squared=26 in both","Units and ordered basis stated"],"criticalGate":true},
+      {"id":"S02","phase":"summative","points":10,"type":"family_analysis","prompt":"So sánh basis, spanning family và overcomplete dictionary về existence, uniqueness và solver output.","answerEvidence":["Basis spans and independent","Spanning family may be nonunique","Dictionary may need extra selection criterion","One solver result is not automatically basis coordinates"],"criticalGate":true},
+      {"id":"S03","phase":"summative","points":10,"type":"frame_contract","prompt":"Thiết kế representation contract cho world, route và body velocity của UGV.","answerEvidence":["Separate frame IDs","Ordered components","Units","timestamps/transform age","transform direction","normal convention","reconstruction check"],"criticalGate":true},
+      {"id":"S04","phase":"summative","points":10,"type":"failure_diagnosis","prompt":"Chẩn đoán một pipeline có residual nhỏ nhưng transform cũ và basis order mismatch.","answerEvidence":["Residual not trustworthy before contract validation","Identify stale time and order mismatch","Reject/realign then recompute","Telemetry named"],"criticalGate":true},
+      {"id":"S05","phase":"summative","points":10,"type":"ai_signal_transfer","prompt":"Khi nào signal coefficients hoặc embedding similarities được so trực tiếp?","answerEvidence":["Same sampling/inner-product/normalization for signals","Same model/encoder/pooling/preprocessing or explicit alignment for embeddings","Equal dimension alone insufficient"],"criticalGate":true},
+      {"id":"S06","phase":"summative","points":8,"type":"representation_design","prompt":"Chọn giữa standard basis, route-aligned basis và redundant dictionary cho một task và bảo vệ lựa chọn.","answerEvidence":["Task-specific interpretability","Validity and uniqueness","Sensitivity","Metadata and downstream use","Benefit and risk stated"]}
+    ]
+  },
+  "masteryChecks": [
+    {"id":"MC01","level":"recall","question":"Định nghĩa span là gì?","expected":"Tập mọi tổ hợp tuyến tính của generating family."},
+    {"id":"MC02","level":"understand","question":"Vì sao basis phải vừa spanning vừa independent?","expected":"Spanning cho existence, independence cho uniqueness."},
+    {"id":"MC03","level":"apply","question":"Tìm coordinates trong một basis không chuẩn và reconstruct.","expected":"Solve Bc=v, label [v]_B và residual zero."},
+    {"id":"MC04","level":"analyze","question":"Phân loại một redundant family.","expected":"Spanning có thể đúng, independence sai, coefficients nonunique."},
+    {"id":"MC05","level":"evaluate","question":"Có dùng raw dot products không?","expected":"Chỉ cho orthonormal basis; orthogonal non-unit cần quotient."},
+    {"id":"MC06","level":"evaluate","question":"Residual nhỏ có đủ không?","expected":"Không; phải kiểm contract và sensitivity."},
+    {"id":"MC07","level":"analyze","question":"Đổi basis order ảnh hưởng gì?","expected":"Tuple phải reorder tương ứng, vector giữ nguyên nếu reconstruction consistent."},
+    {"id":"MC08","level":"analyze","question":"Near dependence biểu hiện thế nào?","expected":"Large canceling coefficients và perturbation amplification."},
+    {"id":"MC09","level":"create","question":"Thiết kế UGV representation contract.","expected":"Basis/order, units, frames, time, transform direction, reconstruction và telemetry."},
+    {"id":"MC10","level":"create","question":"Thiết kế signal hoặc embedding compatibility gate.","expected":"Sampling/inner product hoặc model pipeline/version/alignment được khai báo."}
+  ],
+  "scoringPolicy": {
+    "status":"verified_pass_09",
+    "totalPoints":100,
+    "formativePoints":40,
+    "summativePoints":60,
+    "passThreshold":80,
+    "minimumSummativePercent":75,
+    "minimumPerLearningOutcomeEvidencePercent":70,
+    "diagnosticScored":false,
+    "criticalFailureOverride":true,
+    "criticalFailures":[
+      "Không nêu basis hoặc target space khi trả coordinate question",
+      "Gọi redundant family là basis hoặc gọi coefficients nonunique là unique",
+      "Dùng c_i=v·b_i mà không kiểm orthonormality",
+      "Không reconstruct một coordinate answer",
+      "So hoặc cộng vectors khác frame/basis/time mà không transform",
+      "Đảo transform direction",
+      "Xử lý position point như free vector khi origins khác nhau",
+      "Gọi nonlinear derived feature là linear dependence",
+      "So embeddings khác pipeline mà không alignment",
+      "Bỏ qua NaN, infinity hoặc silent broadcasting"
+    ],
+    "partialCreditRules":[
+      "Arithmetic đúng nhưng thiếu condition hoặc basis label nhận tối đa 50% item.",
+      "Coordinate đúng nhưng không reconstruction nhận tối đa 60% item.",
+      "Engineering answer thiếu units/frame/time nhận tối đa 50% item.",
+      "Nhận diện đúng failure nhưng không có corrective action nhận tối đa 70% item."
+    ],
+    "progressionRules":[
+      "Muốn mở downstream presentation phải core assessment blueprint hoàn chỉnh, không cần người học thực thi assessment tại thời điểm authoring.",
+      "Người học chỉ đạt mastery khi tổng điểm và mọi critical gate đều đạt.",
+      "Critical failure yêu cầu targeted remediation rồi làm item tương đương mới.",
+      "Không cho điểm bù để che lỗi representation contract nghiêm trọng."
+    ]
+  },
+  "implementationContract": {
+    "status":"verified_pass_09",
+    "apiContract": {
+      "functionName":"analyze_linear_representation",
+      "inputs":[
+        "B: finite float array shape (n,k), columns in declared order",
+        "v: finite float array shape (n,)",
+        "mode: one of auto, basis_exact, orthonormal, analyze_family, approximate",
+        "metadata: representation contract containing target space, basis ID/version/order, units, frames and timestamps when applicable",
+        "atol and rtol: positive tolerances for invariants",
+        "rank_tol: explicit nonnegative numerical-rank tolerance or null for a scale-aware default",
+        "condition_warning: positive threshold for sensitivity warning"
+      ],
+      "solverModes": {
+        "orthonormal":"Require B^T B close to I; compute c=B^T v; classify exact only if residual passes.",
+        "basis_exact":"Require square full-rank B; compute c with a linear solve; reject non-basis input.",
+        "analyze_family":"Report shape, rank, spanning-for-v, uniqueness, residual and sensitivity without pretending every family is a basis.",
+        "approximate":"Use least-squares approximation, label result approximate, and never call coefficients exact basis coordinates.",
+        "auto":"Choose orthonormal shortcut only after verification; otherwise use exact square solve or family analysis with explicit status."
+      },
+      "algorithm":[
+        "Convert B and v to float arrays without silent flattening or broadcasting.",
+        "Require B.ndim==2, v.ndim==1 and B.shape[0]==v.shape[0].",
+        "Require all values finite and at least one column.",
+        "Validate metadata compatibility before arithmetic when engineering metadata is supplied.",
+        "Compute scale-aware rank tolerance and numerical rank.",
+        "Compute Gram matrix B^T B, basis norms and orthonormality error.",
+        "Select solver mode according to explicit mode and verified conditions.",
+        "Compute coefficients, reconstruction and residual.",
+        "Verify reconstruction according to requested exact or approximate mode.",
+        "Report uniqueness from rank and column count, not from solver success alone.",
+        "Compute condition estimate for square full-rank B and raise a sensitivity warning above the configured threshold.",
+        "Return statuses and telemetry rather than silently coercing invalid representations."
+      ],
+      "referenceImplementation": "import numpy as np\n\ndef analyze_linear_representation(B, v, mode='auto', metadata=None, atol=1e-10, rtol=1e-10, rank_tol=None, condition_warning=1e8):\n    B = np.asarray(B, dtype=float)\n    v = np.asarray(v, dtype=float)\n    if B.ndim != 2 or v.ndim != 1 or B.shape[0] != v.shape[0] or B.shape[1] == 0:\n        raise ValueError('B must have shape (n,k) and v must have shape (n,) with matching n')\n    if not np.all(np.isfinite(B)) or not np.all(np.isfinite(v)):\n        raise ValueError('B and v must contain only finite values')\n    if atol < 0 or rtol < 0 or condition_warning <= 0:\n        raise ValueError('invalid tolerance or condition threshold')\n\n    n, k = B.shape\n    spectral_scale = max(1.0, float(np.linalg.norm(B, ord=2)))\n    if rank_tol is None:\n        rank_tol = max(n, k) * np.finfo(float).eps * spectral_scale\n    if rank_tol < 0:\n        raise ValueError('rank_tol must be nonnegative')\n\n    rank = int(np.linalg.matrix_rank(B, tol=rank_tol))\n    gram = B.T @ B\n    identity = np.eye(k)\n    orthonormal = bool(np.allclose(gram, identity, atol=atol, rtol=rtol))\n    square_full_rank = n == k and rank == n\n    unique_for_columns = rank == k\n\n    selected_mode = mode\n    if mode == 'auto':\n        if orthonormal and k == n:\n            selected_mode = 'orthonormal'\n        elif square_full_rank:\n            selected_mode = 'basis_exact'\n        else:\n            selected_mode = 'analyze_family'\n\n    if selected_mode == 'orthonormal':\n        if not orthonormal:\n            raise ValueError('orthonormal mode requires B.T @ B close to identity')\n        coefficients = B.T @ v\n        solver_status = 'orthonormal_coordinates'\n    elif selected_mode == 'basis_exact':\n        if not square_full_rank:\n            raise ValueError('basis_exact requires a square full-rank basis matrix')\n        coefficients = np.linalg.solve(B, v)\n        solver_status = 'exact_basis_coordinates'\n    elif selected_mode in ('analyze_family', 'approximate'):\n        coefficients, _, _, _ = np.linalg.lstsq(B, v, rcond=rank_tol / spectral_scale)\n        solver_status = 'family_analysis' if selected_mode == 'analyze_family' else 'approximate_least_squares'\n    else:\n        raise ValueError('unsupported mode')\n\n    reconstruction = B @ coefficients\n    residual = v - reconstruction\n    residual_norm = float(np.linalg.norm(residual))\n    exact_reconstruction = bool(np.allclose(reconstruction, v, atol=atol, rtol=rtol))\n\n    if selected_mode in ('orthonormal', 'basis_exact') and not exact_reconstruction:\n        raise ArithmeticError('exact coordinate mode failed reconstruction check')\n\n    condition_estimate = None\n    sensitivity_warning = False\n    if square_full_rank:\n        condition_estimate = float(np.linalg.cond(B))\n        sensitivity_warning = bool((not np.isfinite(condition_estimate)) or condition_estimate > condition_warning)\n\n    representation_class = 'basis' if square_full_rank else ('independent_family' if unique_for_columns else 'redundant_or_incomplete_family')\n    if selected_mode == 'approximate' and not exact_reconstruction:\n        representation_class = 'approximate_representation'\n\n    return {\n        'coefficients': coefficients,\n        'reconstruction': reconstruction,\n        'residual': residual,\n        'residual_norm': residual_norm,\n        'exact_reconstruction': exact_reconstruction,\n        'rank': rank,\n        'rank_tol': float(rank_tol),\n        'orthonormal': orthonormal,\n        'orthonormality_error': float(np.linalg.norm(gram - identity)),\n        'unique_coefficients_for_span': unique_for_columns,\n        'representation_class': representation_class,\n        'solver_mode': selected_mode,\n        'solver_status': solver_status,\n        'condition_estimate': condition_estimate,\n        'sensitivity_warning': sensitivity_warning,\n        'metadata': metadata\n    }",
+      "requiredOutputs":["coefficients","reconstruction","residual and residual norm","exact/approximate status","rank and rank tolerance","orthonormality status/error","uniqueness status","representation classification","solver mode","condition estimate and sensitivity warning","metadata echo or normalized metadata"]
+    },
+    "metadataContract": {
+      "generalRequired":["target_space_id","basis_id","basis_version","ordered_component_names","ordered_column_hash","units","schema_version"],
+      "engineeringRequiredWhenApplicable":["object_type","source_frame_id","target_frame_id","vector_timestamp","basis_timestamp","transform_direction","transform_age_ms","normal_convention","calibration_version","preprocessing_version"],
+      "signalRequiredWhenApplicable":["sample_rate","window_length","sample_grid_or_interval","inner_product_definition","window_or_weighting","normalization"],
+      "aiRequiredWhenApplicable":["model_version","encoder_or_tokenizer_version","pooling_version","normalization_state","alignment_version"]
+    },
+    "tolerancePolicy": {
+      "principles":["Không dùng equality tuyệt đối trong floating point.","Rank tolerance phải scale theo matrix norm và dimensions.","Reconstruction tolerance phải dùng atol và rtol được log.","Orthonormality được kiểm trên Gram matrix với cùng tolerance policy.","Condition warning là cảnh báo sensitivity, không phải định nghĩa exact dependence."],
+      "defaultAtol":1e-10,
+      "defaultRtol":1e-10,
+      "defaultConditionWarning":100000000.0
+    },
+    "invariants":[
+      "B @ coefficients is close to v for exact coordinate modes.",
+      "residual equals v minus reconstruction.",
+      "For orthonormal square B, ||coefficients||_2 is close to ||v||_2.",
+      "Reordering columns together with coefficients preserves reconstruction.",
+      "Reordering columns without reordering coefficients must fail the expected-vector check unless the case is accidentally symmetric.",
+      "A redundant family must not report unique basis coordinates.",
+      "Approximate mode must label nonzero residual as approximate.",
+      "Metadata mismatch blocks physical interpretation before numerical success is accepted."
+    ],
+    "requiredTelemetry":[
+      "input shapes, dtype and finite status",
+      "target space, schema and units",
+      "basis ID, version, ordered-column hash and norms",
+      "source/target frames and transform direction",
+      "vector/basis timestamps and transform age",
+      "rank, rank tolerance and uniqueness status",
+      "Gram/orthonormality error",
+      "solver mode and representation class",
+      "coefficient norm and maximum absolute coefficient",
+      "reconstruction residual norm and tolerance",
+      "condition estimate and sensitivity warning",
+      "domain-specific signal, IMU, feature or embedding versions"
+    ],
+    "doNotDo":[
+      "Không silent flatten, reshape hoặc broadcast để hợp thức hóa input.",
+      "Không dùng raw dot products trước khi kiểm orthonormality.",
+      "Không gọi least-squares output là exact basis coordinates.",
+      "Không suy uniqueness từ việc solver trả một nghiệm.",
+      "Không dùng inverse tường minh làm phương pháp mặc định.",
+      "Không diễn giải residual trước khi metadata contract hợp lệ.",
+      "Không so coordinates khác basis/frame/model version trực tiếp.",
+      "Không bỏ qua position-versus-vector distinction.",
+      "Không chấp nhận NaN, infinity hoặc transform quá hạn."
+    ],
+    "testVectors":[
+      {"id":"T01_STANDARD","B":[[1,0],[0,1]],"v":[5,1],"expectedCoefficients":[5,1],"expectedStatus":"exact_basis_coordinates"},
+      {"id":"T02_ROUTE_ORTHONORMAL","B":[[0.6,-0.8],[0.8,0.6]],"v":[5,1],"expectedCoefficients":[3.8,-3.4],"expectedResidualNorm":0},
+      {"id":"T03_GENERAL_BASIS","B":[[1,1],[0,1]],"v":[3,2],"expectedCoefficients":[1,2]},
+      {"id":"T04_REDUNDANT","B":[[1,0,1],[0,1,1]],"v":[1,1],"expectedUnique":false},
+      {"id":"T05_NEAR_DEPENDENT","B":[[1,1],[0,0.001]],"v":[5,1],"expectedSensitivityWarning":true},
+      {"id":"T06_INVALID_NAN","B":[[1,"NaN"],[0,1]],"v":[1,1],"expected":"reject_nonfinite"}
+    ]
+  },
+  "bridgeToNextLessons": [
+    {"target":"§1.5 · Không gian con và biểu diễn dữ liệu","bridge":"Span thành subspace; basis xác định dimension; residual mở ra near-subspace data."},
+    {"target":"Chương 2 · Ma trận và ánh xạ tuyến tính","bridge":"B_mat c=v dẫn tới matrix representations và change-of-basis operators."},
+    {"target":"Least squares và ước lượng","bridge":"Ngoài span cần optimal approximation."},
+    {"target":"PCA và SVD","bridge":"Orthonormal directions và low-dimensional coordinates."},
+    {"target":"Xử lý tín hiệu","bridge":"Basis functions và coefficients dẫn tới transforms."},
+    {"target":"Robot, điều khiển và estimation","bridge":"Frames dẫn tới rotations, rigid transforms, state-space và Jacobians."}
+  ],
+  "downstreamMapping": {
+    "referenceTable":["notationRules","coreConcepts","mainFormulas","comparisonLogic","assumptionGate","commonMisconceptions","assessmentBlueprint"],
+    "slideshow":["lessonThesis","learningOutcomes","coreConcepts","mainMechanisms","mainFormulas","workedCase","commonMisconceptions","masteryChecks"],
+    "fullView":["notationRules","mainFormulas","comparisonLogic","assumptionGate","workedCase","commonMisconceptions","failureModeAtlas","assessmentBlueprint","implementationContract"],
+    "formulaFinalization":["notationRules.raw","mainFormulas.formula","workedCase","assessmentBlueprint.items"]
+  },
+  "qualityGate": {
+    "mustPass":[
+      "Tổ hợp tuyến tính, span, independence, basis, coordinates, uniqueness và change of basis tạo thành chuỗi logic nhất quán.",
+      "Mỗi coordinate answer bắt buộc nêu ordered basis và reconstruction.",
+      "Dot-product shortcut chỉ xuất hiện với orthonormality gate; orthogonal non-unit dùng quotient.",
+      "Exact algebraic validity và numerical sensitivity được phân biệt.",
+      "Worked case UGV có schema, units, frames, timestamps, calculations, reconstruction, invariants và failure tests.",
+      "Misconception system bao phủ object/representation, basis logic, numerics và engineering/AI contracts.",
+      "Assessment map bao phủ toàn bộ LO1–LO10 với diagnostic, formative và summative evidence.",
+      "Scoring policy có critical-failure override và progression rules.",
+      "Implementation contract kiểm shape, finite values, metadata, mode, rank tolerance, reconstruction, uniqueness và sensitivity.",
+      "Không chứa UI, slide numbering, CSS, animation hoặc runtime layout decisions.",
+      "Không dạy sâu determinant, rank-nullity, inverse algorithms, least-squares derivation, PCA hoặc SVD trong lesson core."
+    ],
+    "reviewStatus":"content_review_approved",
+    "corePassesComplete":9,
+    "nextPass":"PASS_10_REFERENCE_TABLE"
+  },
+  "acceptanceRecord": {
+    "status":"approved_core_content",
+    "approvedOn":"2026-07-08",
+    "approvedAgainst":"theory_core_c01_l01.json",
+    "completedPasses":["scope_lock","academic_map","pedagogical_spine","core_draft","mathematics_review","engineering_review","worked_case","misconceptions_and_failures","assessment_and_implementation"],
+    "remainingPresentationPasses":["reference_table","slideshow","full_view","formula_and_layout_normalization","final_integration_and_acceptance"],
+    "manifestRegistrationRequired":true
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "checkpoint": "E24",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "sourceZip": "/mnt/data/A2_Math_Bauman_Elearning_E23_FAST_BATCH_CHECKPOINT_TEST_SNAPSHOT.zip",
+  "targetZip": "/mnt/data/A2_Math_Bauman_Elearning_E24_FAST_BATCH_CHECKPOINT_TEST_SNAPSHOT.zip",
+  "checks": {
+    "jsonParse": "PASS",
+    "jsSyntax": "PASS",
+    "replacementChar": "PASS",
+    "cyrillicPresent": "PASS",
+    "renderFormulaShim": "PASS",
+    "storageIndicatorV38": "PASS",
+    "theoryMicroScrollLock": "PASS",
+    "zipIntegrity": "PASS"
+  },
+  "chapters": {
+    "MATH-HK1-MT-C16": {
+      "title": "Chương 16 · Clustering, similarity và cấu trúc không gian dữ liệu",
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "expected": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "targetCounts": "PASS",
+      "simulationsPerLesson": "PASS",
+      "questionsPerLesson": "PASS",
+      "questionReviewLinks": "PASS"
+    },
+    "MATH-HK1-MT-C17": {
+      "title": "Chương 17 · Bài toán kỳ thi phân tích dữ liệu đa chiều",
+      "counts": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "expected": {
+        "lessons": 8,
+        "slides": 160,
+        "formulas": 24,
+        "exercises": 64,
+        "applications": 16,
+        "simulations": 16,
+        "professorQa": 8,
+        "questions": 48,
+        "reviewPacks": 8,
+        "vocabCards": 32
+      },
+      "targetCounts": "PASS",
+      "simulationsPerLesson": "PASS",
+      "questionsPerLesson": "PASS",
+      "questionReviewLinks": "PASS"
+    }
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,83 @@
+{
+  "checkpoint": "E27",
+  "status": "CHECKPOINT / TEST / SNAPSHOT · NOT FINAL",
+  "chapters": [
+    {
+      "chapterId": "MATH-HK3-SIG-C22",
+      "title": "Chương 22 · Wavelet, lọc thích nghi và phân tích thời-tần cho tín hiệu không dừng",
+      "targetPass": true,
+      "counts": {
+        "lessons.json": 8,
+        "formulas.json": 24,
+        "exercises.json": 64,
+        "applications.json": 16,
+        "simulations.json": 16,
+        "professor_qa.json": 8,
+        "question_bank.json": 48,
+        "review_packs.json": 8,
+        "mastery-map.json": 8,
+        "content-index.json": 8,
+        "vocab.json": 32
+      }
+    },
+    {
+      "chapterId": "MATH-HK3-EST-C23",
+      "title": "Chương 23 · Không gian trạng thái, Kalman filter và sensor fusion nhập môn",
+      "targetPass": true,
+      "counts": {
+        "lessons.json": 8,
+        "formulas.json": 24,
+        "exercises.json": 64,
+        "applications.json": 16,
+        "simulations.json": 16,
+        "professor_qa.json": 8,
+        "question_bank.json": 48,
+        "review_packs.json": 8,
+        "mastery-map.json": 8,
+        "content-index.json": 8,
+        "vocab.json": 32
+      }
+    }
+  ],
+  "jsonParse": "PASS",
+  "jsSyntax": {
+    "subjects/math/assets/core.js": "PASS",
+    "subjects/math/assets/subject-adapter.js": "PASS",
+    "subjects/math/assets/math.js": "PASS",
+    "subjects/math/assets/planning-bridge.js": "PASS",
+    "subjects/math/subject-manifest.js": "PASS"
+  },
+  "targets": {
+    "MATH-HK3-SIG-C22": {
+      "lessons.json": 8,
+      "formulas.json": 24,
+      "exercises.json": 64,
+      "applications.json": 16,
+      "simulations.json": 16,
+      "professor_qa.json": 8,
+      "question_bank.json": 48,
+      "review_packs.json": 8,
+      "mastery-map.json": 8,
+      "content-index.json": 8,
+      "vocab.json": 32
+    },
+    "MATH-HK3-EST-C23": {
+      "lessons.json": 8,
+      "formulas.json": 24,
+      "exercises.json": 64,
+      "applications.json": 16,
+      "simulations.json": 16,
+      "professor_qa.json": 8,
+      "question_bank.json": 48,
+      "review_packs.json": 8,
+      "mastery-map.json": 8,
+      "content-index.json": 8,
+      "vocab.json": 32
+    }
+  },
+  "renderFormulaShim": "PASS",
+  "storageIndicator": "PASS",
+  "theoryMicroScrollLock": "PASS",
+  "replacementChar": "PASS",
+  "zipIntegrity": "PENDING"
+}
