@@ -1,0 +1,76 @@
+{
+  "schema": "bauman.math.theory.visual.tokens.v1",
+  "version": "E125_theory_tab_visual_skin",
+  "designLanguage": "Bauman Glass Lab · premium academic dashboard",
+  "canvaReady": true,
+  "colors": {
+    "bg": "#0B1020",
+    "panel": "rgba(255,255,255,.075)",
+    "panelStrong": "rgba(255,255,255,.12)",
+    "text": "#F7FAFF",
+    "muted": "#AAB6D3",
+    "line": "rgba(255,255,255,.14)",
+    "gold": "#F5C542",
+    "formulaBg": "rgba(4,12,26,.72)",
+    "success": "#42D392",
+    "danger": "#FF5C7A"
+  },
+  "stageAccents": {
+    "0": {
+      "accent": "#6D5DF6",
+      "glow": "rgba(109,93,246,.35)"
+    },
+    "1": {
+      "accent": "#00A7A7",
+      "glow": "rgba(0,167,167,.32)"
+    },
+    "2": {
+      "accent": "#2F80ED",
+      "glow": "rgba(47,128,237,.32)"
+    },
+    "3": {
+      "accent": "#E27A2E",
+      "glow": "rgba(226,122,46,.32)"
+    },
+    "4": {
+      "accent": "#10A37F",
+      "glow": "rgba(16,163,127,.32)"
+    },
+    "5": {
+      "accent": "#9B51E0",
+      "glow": "rgba(155,81,224,.32)"
+    }
+  },
+  "radius": {
+    "xl": "28px",
+    "lg": "22px",
+    "md": "16px",
+    "sm": "12px"
+  },
+  "shadow": {
+    "card": "0 24px 70px rgba(0,0,0,.28)",
+    "button": "0 10px 24px rgba(0,0,0,.25)"
+  },
+  "typography": {
+    "ui": "Inter, Segoe UI, system-ui, sans-serif",
+    "math": "Cambria Math, STIX Two Math, serif"
+  },
+  "roleStyle": {
+    "problem_framing": "hero",
+    "deep_essence": "concept",
+    "counter_intuition": "warning",
+    "real_bridge": "bridge",
+    "notation": "notation",
+    "core_formula": "formula",
+    "assumption_gate": "gate",
+    "mini_case": "case",
+    "interpretation": "analysis",
+    "simulation": "lab",
+    "common_mistakes": "warning",
+    "application": "application",
+    "practice": "practice",
+    "professor_qa": "qa",
+    "bridge": "bridge",
+    "takeaway": "summary"
+  }
+}

@@ -1,0 +1,1955 @@
+{
+  "schema": "bauman.math.chapter_spine.v2.1",
+  "version": "E110_bauman_core_with_phd_framework_only",
+  "createdAt": "2026-06-22",
+  "scope": {
+    "subject": "Math for Bauman Master AI / 09.04.01/11",
+    "operation": "keep Bauman core active spine and add locked PhD framework only",
+    "mainTimeline": "August 2026 to Bauman graduation / VKR",
+    "activeLearningPath": "stage_0_to_stage_5_only",
+    "lessonGeneration": "none",
+    "exportZip": "not_created",
+    "principle": "stage_based_spiral_core_first; PhD remains future framework only",
+    "phdExtensionStatus": "locked_framework_only_not_learning_content"
+  },
+  "disciplines": [
+    "Ngôn ngữ toán học và logic nền tảng",
+    "Đại số tuyến tính và không gian dữ liệu",
+    "Giải tích một biến và nhiều biến",
+    "Phương trình vi phân và hệ động lực",
+    "Xác suất, thống kê và suy luận dữ liệu",
+    "Tối ưu hóa và quy hoạch toán học",
+    "Phương pháp số và toán học tính toán",
+    "Xử lý tín hiệu và chuỗi thời gian",
+    "Lý thuyết điều khiển tự động",
+    "Ước lượng trạng thái, lọc và sensor fusion",
+    "Toán rời rạc, đồ thị, CSDL và biểu diễn tri thức",
+    "Độ tin cậy, kiểm chứng và vòng đời hệ thống"
+  ],
+  "stages": [
+    {
+      "stageId": "stage_0_vietnam_preparatory",
+      "stageNo": 0,
+      "stageTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "timeframe": "08/2026 – 10/2026 hoặc 11/2026",
+      "goal": "Khôi phục nền toán, làm quen công cụ tính toán, chuẩn bị chuyển sang học toán bằng tiếng Nga.",
+      "status": "active_bauman_core",
+      "chapterRange": [
+        1,
+        6
+      ],
+      "primaryDisciplines": [
+        "Đại số tuyến tính và không gian dữ liệu",
+        "Giải tích một biến và nhiều biến",
+        "Xác suất, thống kê và suy luận dữ liệu"
+      ],
+      "secondaryDisciplines": [
+        "Ngôn ngữ toán học và logic nền tảng",
+        "Phương pháp số và toán học tính toán",
+        "Tối ưu hóa và quy hoạch toán học"
+      ],
+      "scopeNote": "Đây là đoạn khởi động từ tháng 8, không nhồi toán nghiên cứu sâu.",
+      "priority": "main_bauman_path"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageNo": 1,
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "timeframe": "Khoảng 11/2026 – 08/2027 hoặc 09/2027",
+      "goal": "Chuyển nền toán sang tiếng Nga, học cách trình bày bài giải theo kiểu Nga, củng cố nền đại học.",
+      "status": "active_bauman_core",
+      "chapterRange": [
+        7,
+        18
+      ],
+      "primaryDisciplines": [
+        "Ngôn ngữ toán học và logic nền tảng",
+        "Đại số tuyến tính và không gian dữ liệu",
+        "Giải tích một biến và nhiều biến",
+        "Phương trình vi phân và hệ động lực",
+        "Xác suất, thống kê và suy luận dữ liệu"
+      ],
+      "secondaryDisciplines": [
+        "Phương pháp số và toán học tính toán",
+        "Tối ưu hóa và quy hoạch toán học"
+      ],
+      "priority": "main_bauman_path",
+      "scopeNote": "Lộ trình chính từ tháng 8/2026 đến tốt nghiệp Bauman."
+    },
+    {
+      "stageId": "stage_2_master_year1_sem1",
+      "stageNo": 2,
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 kỳ 1",
+      "timeframe": "Năm 1 kỳ 1 tại Bauman",
+      "goal": "Đưa toán nền vào AI, xử lý thông tin, mô hình trạng thái và điều khiển.",
+      "status": "active_bauman_core",
+      "chapterRange": [
+        19,
+        24
+      ],
+      "primaryDisciplines": [
+        "Đại số tuyến tính và không gian dữ liệu",
+        "Tối ưu hóa và quy hoạch toán học",
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Xử lý tín hiệu và chuỗi thời gian"
+      ],
+      "secondaryDisciplines": [
+        "Phương pháp số và toán học tính toán",
+        "Phương trình vi phân và hệ động lực",
+        "Lý thuyết điều khiển tự động"
+      ],
+      "priority": "main_bauman_path",
+      "scopeNote": "Lộ trình chính từ tháng 8/2026 đến tốt nghiệp Bauman."
+    },
+    {
+      "stageId": "stage_3_master_year1_sem2",
+      "stageNo": 3,
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 kỳ 2",
+      "timeframe": "Năm 1 kỳ 2 tại Bauman",
+      "goal": "Nối toán với machine learning, neural network, điều khiển tự động và sensor fusion.",
+      "status": "active_bauman_core",
+      "chapterRange": [
+        25,
+        30
+      ],
+      "primaryDisciplines": [
+        "Tối ưu hóa và quy hoạch toán học",
+        "Lý thuyết điều khiển tự động",
+        "Ước lượng trạng thái, lọc và sensor fusion"
+      ],
+      "secondaryDisciplines": [
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Xử lý tín hiệu và chuỗi thời gian",
+        "Đại số tuyến tính và không gian dữ liệu"
+      ],
+      "priority": "main_bauman_path",
+      "scopeNote": "Lộ trình chính từ tháng 8/2026 đến tốt nghiệp Bauman."
+    },
+    {
+      "stageId": "stage_4_master_year2_sem3",
+      "stageNo": 4,
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 kỳ 3 / NIR",
+      "timeframe": "Năm 2 kỳ 3 tại Bauman",
+      "goal": "Chuẩn bị nghiên cứu, mô hình hóa hệ thống, dữ liệu thực nghiệm, kiểm chứng và độ tin cậy.",
+      "status": "active_bauman_core",
+      "chapterRange": [
+        31,
+        36
+      ],
+      "primaryDisciplines": [
+        "Xử lý tín hiệu và chuỗi thời gian",
+        "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+        "Toán rời rạc, đồ thị, CSDL và biểu diễn tri thức",
+        "Phương pháp số và toán học tính toán"
+      ],
+      "secondaryDisciplines": [
+        "Tối ưu hóa và quy hoạch toán học",
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Lý thuyết điều khiển tự động"
+      ],
+      "priority": "main_bauman_path",
+      "scopeNote": "Lộ trình chính từ tháng 8/2026 đến tốt nghiệp Bauman."
+    },
+    {
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "stageNo": 5,
+      "stageTitle": "Giai đoạn 5 · Thạc sĩ năm 2 kỳ 4 / VKR",
+      "timeframe": "Năm 2 kỳ 4 tại Bauman",
+      "goal": "Biến toán thành lập luận bảo vệ luận văn: mô hình, thực nghiệm, kiểm chứng, trình bày kết quả.",
+      "status": "active_bauman_core",
+      "chapterRange": [
+        37,
+        40
+      ],
+      "primaryDisciplines": [
+        "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Tối ưu hóa và quy hoạch toán học",
+        "Lý thuyết điều khiển tự động"
+      ],
+      "secondaryDisciplines": [
+        "Trực quan hóa dữ liệu",
+        "Ước lượng trạng thái, lọc và sensor fusion",
+        "Xử lý tín hiệu và chuỗi thời gian"
+      ],
+      "priority": "main_bauman_path",
+      "scopeNote": "Lộ trình chính từ tháng 8/2026 đến tốt nghiệp Bauman."
+    }
+  ],
+  "chapters": [
+    {
+      "stageId": "stage_0_vietnam_preparatory",
+      "stageTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "stageNo": 0,
+      "chapterNo": 1,
+      "chapterId": "math_chapter_01",
+      "chapterTitle": "Vector trong không gian dữ liệu",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Đại số tuyến tính và không gian dữ liệu",
+      "secondaryDisciplines": [
+        "Ngôn ngữ toán học và logic nền tảng",
+        "Phương pháp số và toán học tính toán"
+      ],
+      "pureLayer": [
+        "vector",
+        "không gian vector",
+        "chuẩn vector",
+        "tích vô hướng"
+      ],
+      "appliedLayer": [
+        "vector đặc trưng",
+        "cosine similarity",
+        "dữ liệu cảm biến",
+        "vector trạng thái"
+      ],
+      "bridgeQuestion": "Một vector toán học trở thành dữ liệu kỹ thuật như thế nào?",
+      "targetOutcome": "Người học hiểu vector vừa là đối tượng đại số vừa là cách biểu diễn dữ liệu trong AI và điều khiển.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_0_vietnam_preparatory",
+      "stageTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "stageNo": 0,
+      "chapterNo": 2,
+      "chapterId": "math_chapter_02",
+      "chapterTitle": "Ma trận và phép biến đổi tuyến tính",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Đại số tuyến tính và không gian dữ liệu",
+      "secondaryDisciplines": [
+        "Phương pháp số và toán học tính toán",
+        "Giải tích một biến và nhiều biến"
+      ],
+      "pureLayer": [
+        "ma trận",
+        "hạng ma trận",
+        "phép biến đổi tuyến tính",
+        "định thức"
+      ],
+      "appliedLayer": [
+        "biến đổi dữ liệu",
+        "pipeline tuyến tính",
+        "mô hình cảm biến",
+        "ma trận trọng số"
+      ],
+      "bridgeQuestion": "Khi nào một bảng số trở thành phép biến đổi dữ liệu?",
+      "targetOutcome": "Người học dùng ma trận để mô tả biến đổi, hệ phương trình và cấu trúc dữ liệu.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_0_vietnam_preparatory",
+      "stageTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "stageNo": 0,
+      "chapterNo": 3,
+      "chapterId": "math_chapter_03",
+      "chapterTitle": "Hàm số, đạo hàm và gradient cơ bản",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Giải tích một biến và nhiều biến",
+      "secondaryDisciplines": [
+        "Tối ưu hóa và quy hoạch toán học",
+        "Đại số tuyến tính và không gian dữ liệu"
+      ],
+      "pureLayer": [
+        "hàm số",
+        "đạo hàm",
+        "gradient",
+        "đường mức"
+      ],
+      "appliedLayer": [
+        "loss function",
+        "hướng giảm nhanh nhất",
+        "đồ thị sai số",
+        "gradient descent nhập môn"
+      ],
+      "bridgeQuestion": "Vì sao gradient chỉ đường cho máy học?",
+      "targetOutcome": "Người học nắm đạo hàm và gradient như ngôn ngữ đầu tiên của tối ưu hóa.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_0_vietnam_preparatory",
+      "stageTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "stageNo": 0,
+      "chapterNo": 4,
+      "chapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Xác suất, thống kê và suy luận dữ liệu",
+      "secondaryDisciplines": [
+        "Ngôn ngữ toán học và logic nền tảng",
+        "Xử lý tín hiệu và chuỗi thời gian"
+      ],
+      "pureLayer": [
+        "không gian mẫu",
+        "biến ngẫu nhiên",
+        "phân phối",
+        "kỳ vọng"
+      ],
+      "appliedLayer": [
+        "nhiễu đo",
+        "dữ liệu thiếu chắc chắn",
+        "mô hình rủi ro",
+        "mẫu ngẫu nhiên"
+      ],
+      "bridgeQuestion": "Nhiễu trong dữ liệu được mô tả bằng toán như thế nào?",
+      "targetOutcome": "Người học đọc được xác suất như công cụ định lượng bất định.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_0_vietnam_preparatory",
+      "stageTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "stageNo": 0,
+      "chapterNo": 5,
+      "chapterId": "math_chapter_05",
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Xác suất, thống kê và suy luận dữ liệu",
+      "secondaryDisciplines": [
+        "Phương pháp số và toán học tính toán",
+        "Trực quan hóa dữ liệu"
+      ],
+      "pureLayer": [
+        "trung bình",
+        "phương sai",
+        "độ lệch chuẩn",
+        "phân vị"
+      ],
+      "appliedLayer": [
+        "EDA",
+        "dữ liệu thực nghiệm",
+        "biểu đồ phân bố",
+        "phát hiện giá trị lạ"
+      ],
+      "bridgeQuestion": "Một bảng dữ liệu nói gì trước khi huấn luyện mô hình?",
+      "targetOutcome": "Người học biết mô tả dữ liệu và phát hiện tín hiệu thống kê ban đầu.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_0_vietnam_preparatory",
+      "stageTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "stageNo": 0,
+      "chapterNo": 6,
+      "chapterId": "math_chapter_06",
+      "chapterTitle": "Python/Numpy cho tính toán toán học",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Phương pháp số và toán học tính toán",
+      "secondaryDisciplines": [
+        "Đại số tuyến tính và không gian dữ liệu",
+        "Xác suất, thống kê và suy luận dữ liệu"
+      ],
+      "pureLayer": [
+        "mảng số",
+        "vector hóa",
+        "sai số làm tròn",
+        "hàm số rời rạc"
+      ],
+      "appliedLayer": [
+        "NumPy array",
+        "mô phỏng mini",
+        "tính ma trận",
+        "kiểm tra công thức bằng code"
+      ],
+      "bridgeQuestion": "Làm thế nào để công thức không nằm chết trên giấy?",
+      "targetOutcome": "Người học biết dùng Python/Numpy để kiểm chứng và mô phỏng toán cơ bản.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 7,
+      "chapterId": "math_chapter_07",
+      "chapterTitle": "Ngôn ngữ toán kỹ thuật Nga",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Ngôn ngữ toán học và logic nền tảng",
+      "secondaryDisciplines": [
+        "Đại số tuyến tính và không gian dữ liệu",
+        "Giải tích một biến và nhiều biến"
+      ],
+      "pureLayer": [
+        "ký hiệu toán Nga",
+        "định nghĩa",
+        "định lý",
+        "chứng minh"
+      ],
+      "appliedLayer": [
+        "đọc đề tiếng Nga",
+        "trình bày lời giải",
+        "hỏi thi vấn đáp",
+        "dịch thuật ngữ kỹ thuật"
+      ],
+      "bridgeQuestion": "Khi đổi ngôn ngữ, cấu trúc tư duy toán có đổi không?",
+      "targetOutcome": "Người học đọc và trình bày toán kỹ thuật bằng tiếng Nga ở mức dự bị.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 8,
+      "chapterId": "math_chapter_08",
+      "chapterTitle": "Logic, tập hợp, ánh xạ và cách trình bày lời giải",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Ngôn ngữ toán học và logic nền tảng",
+      "secondaryDisciplines": [
+        "Toán rời rạc, đồ thị, CSDL và biểu diễn tri thức",
+        "Đại số tuyến tính và không gian dữ liệu"
+      ],
+      "pureLayer": [
+        "mệnh đề",
+        "lượng từ",
+        "tập hợp",
+        "ánh xạ"
+      ],
+      "appliedLayer": [
+        "đặc tả hệ thống",
+        "logic điều kiện",
+        "schema dữ liệu",
+        "lập luận chứng minh"
+      ],
+      "bridgeQuestion": "Một lời giải đúng khác gì một lời giải có vẻ đúng?",
+      "targetOutcome": "Người học biết dùng logic và ký hiệu để viết lời giải chặt chẽ.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 9,
+      "chapterId": "math_chapter_09",
+      "chapterTitle": "Đại số tuyến tính I: vector, ma trận, hệ phương trình",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Đại số tuyến tính và không gian dữ liệu",
+      "secondaryDisciplines": [
+        "Phương pháp số và toán học tính toán",
+        "Ngôn ngữ toán học và logic nền tảng"
+      ],
+      "pureLayer": [
+        "hệ phương trình tuyến tính",
+        "khử Gauss",
+        "không gian nghiệm",
+        "hạng"
+      ],
+      "appliedLayer": [
+        "mô hình tuyến tính",
+        "giải hệ trong mô phỏng",
+        "ràng buộc tuyến tính",
+        "fit tham số"
+      ],
+      "bridgeQuestion": "Hệ phương trình nói gì về một hệ kỹ thuật?",
+      "targetOutcome": "Người học giải và diễn giải hệ tuyến tính trong bài toán kỹ thuật.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 10,
+      "chapterId": "math_chapter_10",
+      "chapterTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD, PCA",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Đại số tuyến tính và không gian dữ liệu",
+      "secondaryDisciplines": [
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Phương pháp số và toán học tính toán"
+      ],
+      "pureLayer": [
+        "trị riêng",
+        "vector riêng",
+        "trực giao",
+        "SVD"
+      ],
+      "appliedLayer": [
+        "PCA",
+        "giảm chiều",
+        "nén dữ liệu",
+        "phân tích mode"
+      ],
+      "bridgeQuestion": "Vì sao trị riêng tiết lộ hướng quan trọng của dữ liệu?",
+      "targetOutcome": "Người học kết nối trị riêng, SVD và PCA với biểu diễn dữ liệu đa chiều.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 11,
+      "chapterId": "math_chapter_11",
+      "chapterTitle": "Giải tích I: giới hạn, liên tục, đạo hàm một biến",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Giải tích một biến và nhiều biến",
+      "secondaryDisciplines": [
+        "Tối ưu hóa và quy hoạch toán học",
+        "Xử lý tín hiệu và chuỗi thời gian"
+      ],
+      "pureLayer": [
+        "giới hạn",
+        "liên tục",
+        "đạo hàm",
+        "khảo sát hàm"
+      ],
+      "appliedLayer": [
+        "tốc độ biến thiên",
+        "đường cong tín hiệu",
+        "mô hình lỗi",
+        "độ nhạy"
+      ],
+      "bridgeQuestion": "Đạo hàm đo điều gì trong một hệ biến thiên?",
+      "targetOutcome": "Người học hiểu đạo hàm một biến như công cụ đo thay đổi và độ nhạy.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 12,
+      "chapterId": "math_chapter_12",
+      "chapterTitle": "Giải tích II: nhiều biến, gradient, cực trị, ràng buộc",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Giải tích một biến và nhiều biến",
+      "secondaryDisciplines": [
+        "Tối ưu hóa và quy hoạch toán học",
+        "Đại số tuyến tính và không gian dữ liệu"
+      ],
+      "pureLayer": [
+        "đạo hàm riêng",
+        "gradient",
+        "Hessian",
+        "Lagrange"
+      ],
+      "appliedLayer": [
+        "tối ưu ràng buộc",
+        "loss landscape",
+        "tham số mô hình",
+        "calibration"
+      ],
+      "bridgeQuestion": "Cực trị nhiều biến xuất hiện ở đâu trong AI và điều khiển?",
+      "targetOutcome": "Người học giải bài toán cực trị nhiều biến và đọc ý nghĩa kỹ thuật.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 13,
+      "chapterId": "math_chapter_13",
+      "chapterTitle": "Chuỗi, Taylor, xấp xỉ và sai số",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Giải tích một biến và nhiều biến",
+      "secondaryDisciplines": [
+        "Phương pháp số và toán học tính toán",
+        "Xử lý tín hiệu và chuỗi thời gian"
+      ],
+      "pureLayer": [
+        "chuỗi số",
+        "chuỗi hàm",
+        "Taylor",
+        "sai số xấp xỉ"
+      ],
+      "appliedLayer": [
+        "tuyến tính hóa",
+        "xấp xỉ mô hình",
+        "sai số tính toán",
+        "mô phỏng cục bộ"
+      ],
+      "bridgeQuestion": "Khi nào có thể thay một hàm khó bằng một đa thức dễ?",
+      "targetOutcome": "Người học biết dùng Taylor và sai số để xấp xỉ mô hình có kiểm soát.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 14,
+      "chapterId": "math_chapter_14",
+      "chapterTitle": "Phương trình vi phân và mô hình động lực cơ bản",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Phương trình vi phân và hệ động lực",
+      "secondaryDisciplines": [
+        "Lý thuyết điều khiển tự động",
+        "Phương pháp số và toán học tính toán"
+      ],
+      "pureLayer": [
+        "ODE",
+        "nghiệm tổng quát",
+        "điều kiện đầu",
+        "hệ phương trình vi phân"
+      ],
+      "appliedLayer": [
+        "mô hình trạng thái",
+        "chuyển động cơ bản",
+        "mô phỏng động lực",
+        "đáp ứng hệ"
+      ],
+      "bridgeQuestion": "Một hiện tượng biến đổi theo thời gian được biến thành phương trình ra sao?",
+      "targetOutcome": "Người học mô hình hóa hệ động lực cơ bản bằng phương trình vi phân.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 15,
+      "chapterId": "math_chapter_15",
+      "chapterTitle": "Xác suất: phân phối, kỳ vọng, phương sai, luật giới hạn",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Xác suất, thống kê và suy luận dữ liệu",
+      "secondaryDisciplines": [
+        "Ước lượng trạng thái, lọc và sensor fusion",
+        "Xử lý tín hiệu và chuỗi thời gian"
+      ],
+      "pureLayer": [
+        "phân phối",
+        "kỳ vọng",
+        "phương sai",
+        "luật số lớn"
+      ],
+      "appliedLayer": [
+        "mô hình nhiễu",
+        "độ tin cậy mẫu",
+        "uncertainty",
+        "sensor noise"
+      ],
+      "bridgeQuestion": "Vì sao lấy mẫu nhiều hơn giúp kết luận ổn hơn?",
+      "targetOutcome": "Người học hiểu các đại lượng xác suất nền cho ML và lọc trạng thái.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 16,
+      "chapterId": "math_chapter_16",
+      "chapterTitle": "Thống kê: ước lượng, kiểm định, khoảng tin cậy",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Xác suất, thống kê và suy luận dữ liệu",
+      "secondaryDisciplines": [
+        "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+        "Phương pháp số và toán học tính toán"
+      ],
+      "pureLayer": [
+        "ước lượng điểm",
+        "khoảng tin cậy",
+        "kiểm định giả thuyết",
+        "p-value"
+      ],
+      "appliedLayer": [
+        "đánh giá mô hình",
+        "thực nghiệm lặp lại",
+        "so sánh thuật toán",
+        "báo cáo định lượng"
+      ],
+      "bridgeQuestion": "Một kết quả thực nghiệm đáng tin đến mức nào?",
+      "targetOutcome": "Người học biết ước lượng và kiểm định để đọc kết quả thực nghiệm.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 17,
+      "chapterId": "math_chapter_17",
+      "chapterTitle": "Phương pháp số: nghiệm gần đúng, sai số, ổn định tính toán",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Phương pháp số và toán học tính toán",
+      "secondaryDisciplines": [
+        "Đại số tuyến tính và không gian dữ liệu",
+        "Phương trình vi phân và hệ động lực"
+      ],
+      "pureLayer": [
+        "nghiệm gần đúng",
+        "sai số tuyệt đối",
+        "sai số tương đối",
+        "ổn định số"
+      ],
+      "appliedLayer": [
+        "giải phương trình bằng code",
+        "mô phỏng số",
+        "tích phân số",
+        "kiểm soát sai số"
+      ],
+      "bridgeQuestion": "Máy tính tính sai vì toán sai hay vì số học sai?",
+      "targetOutcome": "Người học biết phân biệt nghiệm đúng, nghiệm gần đúng và rủi ro tính toán.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_1_russian_preparatory",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền đại học Nga",
+      "stageNo": 1,
+      "chapterNo": 18,
+      "chapterId": "math_chapter_18",
+      "chapterTitle": "Lab mô hình toán: tín hiệu, điều khiển, dữ liệu, mô phỏng mini",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Phương pháp số và toán học tính toán",
+      "secondaryDisciplines": [
+        "Xử lý tín hiệu và chuỗi thời gian",
+        "Lý thuyết điều khiển tự động",
+        "Xác suất, thống kê và suy luận dữ liệu"
+      ],
+      "pureLayer": [
+        "mô hình toán",
+        "biến trạng thái",
+        "tham số",
+        "đánh giá sai số"
+      ],
+      "appliedLayer": [
+        "mini lab",
+        "tín hiệu mẫu",
+        "mô phỏng điều khiển",
+        "dữ liệu thực nghiệm nhỏ"
+      ],
+      "bridgeQuestion": "Làm sao nối công thức, dữ liệu và mô phỏng thành một bài lab?",
+      "targetOutcome": "Người học dựng được lab toán nhỏ phục vụ dự bị và học phần kỹ thuật.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_2_master_year1_sem1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 kỳ 1",
+      "stageNo": 2,
+      "chapterNo": 19,
+      "chapterId": "math_chapter_19",
+      "chapterTitle": "Đại số tuyến tính số và ổn định tính toán",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Đại số tuyến tính và không gian dữ liệu",
+      "secondaryDisciplines": [
+        "Phương pháp số và toán học tính toán",
+        "Tối ưu hóa và quy hoạch toán học"
+      ],
+      "pureLayer": [
+        "condition number",
+        "norm ma trận",
+        "phân rã QR",
+        "sai số số"
+      ],
+      "appliedLayer": [
+        "least squares ổn định",
+        "tính PCA an toàn",
+        "mô hình tuyến tính lớn",
+        "ma trận thưa"
+      ],
+      "bridgeQuestion": "Vì sao cùng một công thức nhưng máy tính có thể cho kết quả khác nhau?",
+      "targetOutcome": "Người học hiểu đại số tuyến tính dưới góc nhìn tính toán ổn định.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_2_master_year1_sem1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 kỳ 1",
+      "stageNo": 2,
+      "chapterNo": 20,
+      "chapterId": "math_chapter_20",
+      "chapterTitle": "Tối ưu hóa lồi và tối ưu có ràng buộc",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Tối ưu hóa và quy hoạch toán học",
+      "secondaryDisciplines": [
+        "Giải tích một biến và nhiều biến",
+        "Đại số tuyến tính và không gian dữ liệu"
+      ],
+      "pureLayer": [
+        "tập lồi",
+        "hàm lồi",
+        "KKT",
+        "dual problem"
+      ],
+      "appliedLayer": [
+        "training objective",
+        "regularization",
+        "ràng buộc kỹ thuật",
+        "phân bổ tài nguyên"
+      ],
+      "bridgeQuestion": "Bài toán huấn luyện mô hình là cực trị hay quyết định kỹ thuật?",
+      "targetOutcome": "Người học mô hình hóa và giải bài toán tối ưu lồi/ràng buộc nền.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_2_master_year1_sem1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 kỳ 1",
+      "stageNo": 2,
+      "chapterNo": 21,
+      "chapterId": "math_chapter_21",
+      "chapterTitle": "Entropy, thông tin và phân phối xác suất",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Xác suất, thống kê và suy luận dữ liệu",
+      "secondaryDisciplines": [
+        "Xử lý tín hiệu và chuỗi thời gian",
+        "Toán rời rạc, đồ thị, CSDL và biểu diễn tri thức"
+      ],
+      "pureLayer": [
+        "entropy",
+        "cross-entropy",
+        "KL divergence",
+        "phân phối rời rạc/liên tục"
+      ],
+      "appliedLayer": [
+        "loss phân loại",
+        "đo thông tin",
+        "nén dữ liệu",
+        "độ bất định dự đoán"
+      ],
+      "bridgeQuestion": "Thông tin được đo bằng số như thế nào?",
+      "targetOutcome": "Người học dùng entropy và phân phối để hiểu loss, thông tin và bất định.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_2_master_year1_sem1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 kỳ 1",
+      "stageNo": 2,
+      "chapterNo": 22,
+      "chapterId": "math_chapter_22",
+      "chapterTitle": "Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Xử lý tín hiệu và chuỗi thời gian",
+      "secondaryDisciplines": [
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Ước lượng trạng thái, lọc và sensor fusion"
+      ],
+      "pureLayer": [
+        "quá trình ngẫu nhiên",
+        "stationarity",
+        "autocorrelation",
+        "AR/MA nhập môn"
+      ],
+      "appliedLayer": [
+        "dữ liệu cảm biến theo thời gian",
+        "dự báo ngắn hạn",
+        "nhiễu chuỗi",
+        "giám sát hệ thống"
+      ],
+      "bridgeQuestion": "Dữ liệu theo thời gian khác gì dữ liệu bảng thường?",
+      "targetOutcome": "Người học đọc được chuỗi thời gian cơ bản và đặc trưng thống kê của nó.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_2_master_year1_sem1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 kỳ 1",
+      "stageNo": 2,
+      "chapterNo": 23,
+      "chapterId": "math_chapter_23",
+      "chapterTitle": "Fourier, Laplace, Z-transform và xử lý tín hiệu",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Xử lý tín hiệu và chuỗi thời gian",
+      "secondaryDisciplines": [
+        "Phương trình vi phân và hệ động lực",
+        "Lý thuyết điều khiển tự động"
+      ],
+      "pureLayer": [
+        "Fourier transform",
+        "Laplace transform",
+        "Z-transform",
+        "convolution"
+      ],
+      "appliedLayer": [
+        "lọc tín hiệu",
+        "miền tần số",
+        "hệ rời rạc",
+        "đáp ứng xung"
+      ],
+      "bridgeQuestion": "Tín hiệu biến đổi khi ta nhìn nó trong miền tần số ra sao?",
+      "targetOutcome": "Người học kết nối biến đổi tín hiệu với xử lý thông tin và hệ điều khiển.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_2_master_year1_sem1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 kỳ 1",
+      "stageNo": 2,
+      "chapterNo": 24,
+      "chapterId": "math_chapter_24",
+      "chapterTitle": "Mô hình trạng thái và mô phỏng hệ thống",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Phương trình vi phân và hệ động lực",
+      "secondaryDisciplines": [
+        "Lý thuyết điều khiển tự động",
+        "Phương pháp số và toán học tính toán"
+      ],
+      "pureLayer": [
+        "state-space",
+        "ma trận A/B/C/D",
+        "rời rạc hóa",
+        "mô phỏng ODE"
+      ],
+      "appliedLayer": [
+        "plant model",
+        "đáp ứng hệ thống",
+        "mô phỏng vòng kín",
+        "digital prototype"
+      ],
+      "bridgeQuestion": "Trạng thái của hệ thống nằm ở đâu trong phương trình?",
+      "targetOutcome": "Người học biểu diễn hệ kỹ thuật bằng mô hình trạng thái và mô phỏng được.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_3_master_year1_sem2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 kỳ 2",
+      "stageNo": 3,
+      "chapterNo": 25,
+      "chapterId": "math_chapter_25",
+      "chapterTitle": "Hồi quy, phân loại và regularization",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Tối ưu hóa và quy hoạch toán học",
+      "secondaryDisciplines": [
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Đại số tuyến tính và không gian dữ liệu"
+      ],
+      "pureLayer": [
+        "hồi quy tuyến tính",
+        "logistic regression",
+        "regularization",
+        "bias-variance"
+      ],
+      "appliedLayer": [
+        "dự đoán nhãn",
+        "fit mô hình",
+        "chống overfit",
+        "đánh giá baseline"
+      ],
+      "bridgeQuestion": "Một mô hình đơn giản có thể dạy ta gì trước deep learning?",
+      "targetOutcome": "Người học hiểu nền toán của hồi quy, phân loại và regularization.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_3_master_year1_sem2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 kỳ 2",
+      "stageNo": 3,
+      "chapterNo": 26,
+      "chapterId": "math_chapter_26",
+      "chapterTitle": "Machine Learning và đánh giá mô hình",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Xác suất, thống kê và suy luận dữ liệu",
+      "secondaryDisciplines": [
+        "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+        "Tối ưu hóa và quy hoạch toán học"
+      ],
+      "pureLayer": [
+        "train/validation/test",
+        "metric",
+        "cross-validation",
+        "generalization"
+      ],
+      "appliedLayer": [
+        "so sánh mô hình",
+        "leakage control",
+        "confusion matrix",
+        "pipeline đánh giá"
+      ],
+      "bridgeQuestion": "Mô hình tốt trên dữ liệu thử có thật sự tốt ngoài đời không?",
+      "targetOutcome": "Người học thiết kế quy trình đánh giá ML đúng và tránh rò rỉ dữ liệu.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_3_master_year1_sem2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 kỳ 2",
+      "stageNo": 3,
+      "chapterNo": 27,
+      "chapterId": "math_chapter_27",
+      "chapterTitle": "Toán của mạng neural và deep learning",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Tối ưu hóa và quy hoạch toán học",
+      "secondaryDisciplines": [
+        "Đại số tuyến tính và không gian dữ liệu",
+        "Giải tích một biến và nhiều biến"
+      ],
+      "pureLayer": [
+        "backpropagation",
+        "chain rule",
+        "activation",
+        "loss landscape"
+      ],
+      "appliedLayer": [
+        "neural training",
+        "gradient flow",
+        "vanishing gradient",
+        "deep representation"
+      ],
+      "bridgeQuestion": "Mạng neural học bằng phép toán nào ở bên trong?",
+      "targetOutcome": "Người học hiểu gradient, backprop và cấu trúc toán của mạng neural.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_3_master_year1_sem2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 kỳ 2",
+      "stageNo": 3,
+      "chapterNo": 28,
+      "chapterId": "math_chapter_28",
+      "chapterTitle": "Điều khiển tự động: ổn định, quan sát, điều khiển được",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Lý thuyết điều khiển tự động",
+      "secondaryDisciplines": [
+        "Phương trình vi phân và hệ động lực",
+        "Đại số tuyến tính và không gian dữ liệu"
+      ],
+      "pureLayer": [
+        "stability",
+        "controllability",
+        "observability",
+        "feedback"
+      ],
+      "appliedLayer": [
+        "thiết kế bộ điều khiển",
+        "mô hình vòng kín",
+        "ổn định hệ",
+        "giám sát trạng thái"
+      ],
+      "bridgeQuestion": "Một hệ thống có thể điều khiển được nghĩa là gì?",
+      "targetOutcome": "Người học nắm các tiêu chuẩn nền để phân tích và thiết kế điều khiển.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_3_master_year1_sem2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 kỳ 2",
+      "stageNo": 3,
+      "chapterNo": 29,
+      "chapterId": "math_chapter_29",
+      "chapterTitle": "Kalman filter, Bayesian filtering và sensor fusion",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Ước lượng trạng thái, lọc và sensor fusion",
+      "secondaryDisciplines": [
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Lý thuyết điều khiển tự động"
+      ],
+      "pureLayer": [
+        "Bayes rule",
+        "Gaussian state",
+        "prediction-update",
+        "covariance propagation"
+      ],
+      "appliedLayer": [
+        "Kalman filter",
+        "IMU/GPS fusion",
+        "tracking",
+        "lọc nhiễu cảm biến"
+      ],
+      "bridgeQuestion": "Làm sao ước lượng trạng thái khi cảm biến luôn có nhiễu?",
+      "targetOutcome": "Người học hiểu bộ lọc Bayes/Kalman và cách hợp nhất cảm biến.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_3_master_year1_sem2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 kỳ 2",
+      "stageNo": 3,
+      "chapterNo": 30,
+      "chapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Lý thuyết điều khiển tự động",
+      "secondaryDisciplines": [
+        "Tối ưu hóa và quy hoạch toán học",
+        "Xử lý tín hiệu và chuỗi thời gian",
+        "Ước lượng trạng thái, lọc và sensor fusion"
+      ],
+      "pureLayer": [
+        "closed-loop learning",
+        "state estimation",
+        "decision function",
+        "control objective"
+      ],
+      "appliedLayer": [
+        "AI controller",
+        "adaptive pipeline",
+        "signal-to-decision",
+        "hệ xử lý thông tin"
+      ],
+      "bridgeQuestion": "AI bước vào vòng điều khiển ở điểm nào là an toàn?",
+      "targetOutcome": "Người học kết nối AI, xử lý thông tin và điều khiển trong một khung hệ thống.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_4_master_year2_sem3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 kỳ 3 / NIR",
+      "stageNo": 4,
+      "chapterNo": 31,
+      "chapterId": "math_chapter_31",
+      "chapterTitle": "Chuỗi thời gian nâng cao và dự báo",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Xử lý tín hiệu và chuỗi thời gian",
+      "secondaryDisciplines": [
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Tối ưu hóa và quy hoạch toán học"
+      ],
+      "pureLayer": [
+        "ARIMA",
+        "state-space forecasting",
+        "spectral features",
+        "nonstationarity"
+      ],
+      "appliedLayer": [
+        "dự báo tín hiệu",
+        "giám sát thiết bị",
+        "forecast validation",
+        "feature theo thời gian"
+      ],
+      "bridgeQuestion": "Dự báo khác gì khớp đường cong quá khứ?",
+      "targetOutcome": "Người học biết thiết kế và kiểm tra mô hình dự báo theo chuỗi thời gian.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_4_master_year2_sem3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 kỳ 3 / NIR",
+      "stageNo": 4,
+      "chapterNo": 32,
+      "chapterId": "math_chapter_32",
+      "chapterTitle": "Robustness, anomaly detection và độ tin cậy mô hình",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "secondaryDisciplines": [
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Xử lý tín hiệu và chuỗi thời gian"
+      ],
+      "pureLayer": [
+        "robust statistics",
+        "outlier model",
+        "failure rate",
+        "uncertainty"
+      ],
+      "appliedLayer": [
+        "phát hiện bất thường",
+        "giám sát mô hình",
+        "độ bền dữ liệu nhiễu",
+        "cảnh báo hệ thống"
+      ],
+      "bridgeQuestion": "Khi mô hình gặp dữ liệu lạ, nó hỏng thầm hay báo động?",
+      "targetOutcome": "Người học đánh giá robustness, anomaly và độ tin cậy vận hành của mô hình.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_4_master_year2_sem3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 kỳ 3 / NIR",
+      "stageNo": 4,
+      "chapterNo": 33,
+      "chapterId": "math_chapter_33",
+      "chapterTitle": "Đồ thị, multi-agent systems và robotics planning",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Toán rời rạc, đồ thị, CSDL và biểu diễn tri thức",
+      "secondaryDisciplines": [
+        "Lý thuyết điều khiển tự động",
+        "Tối ưu hóa và quy hoạch toán học"
+      ],
+      "pureLayer": [
+        "graph",
+        "path planning",
+        "connectivity",
+        "multi-agent model"
+      ],
+      "appliedLayer": [
+        "robotics planning",
+        "điều phối tác nhân",
+        "bản đồ trạng thái",
+        "tối ưu đường đi"
+      ],
+      "bridgeQuestion": "Một bài toán robot có thể trở thành bài toán đồ thị như thế nào?",
+      "targetOutcome": "Người học dùng đồ thị để mô hình hóa planning và hệ nhiều tác nhân.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_4_master_year2_sem3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 kỳ 3 / NIR",
+      "stageNo": 4,
+      "chapterNo": 34,
+      "chapterId": "math_chapter_34",
+      "chapterTitle": "System identification và thiết kế thực nghiệm",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Phương pháp số và toán học tính toán",
+      "secondaryDisciplines": [
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Lý thuyết điều khiển tự động"
+      ],
+      "pureLayer": [
+        "parameter estimation",
+        "least squares",
+        "experiment design",
+        "model residual"
+      ],
+      "appliedLayer": [
+        "nhận dạng hệ thống",
+        "thu thập dữ liệu",
+        "fit mô hình động lực",
+        "kiểm tra residual"
+      ],
+      "bridgeQuestion": "Ta có thể học mô hình hệ thống từ dữ liệu đo như thế nào?",
+      "targetOutcome": "Người học biết thiết kế thí nghiệm và nhận dạng hệ thống từ dữ liệu.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_4_master_year2_sem3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 kỳ 3 / NIR",
+      "stageNo": 4,
+      "chapterNo": 35,
+      "chapterId": "math_chapter_35",
+      "chapterTitle": "Mô phỏng số, digital twin và surrogate model",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Phương pháp số và toán học tính toán",
+      "secondaryDisciplines": [
+        "Tối ưu hóa và quy hoạch toán học",
+        "Độ tin cậy, kiểm chứng và vòng đời hệ thống"
+      ],
+      "pureLayer": [
+        "numerical simulation",
+        "surrogate model",
+        "interpolation",
+        "sensitivity"
+      ],
+      "appliedLayer": [
+        "digital twin",
+        "mô phỏng nhanh",
+        "tối ưu thiết kế",
+        "phân tích what-if"
+      ],
+      "bridgeQuestion": "Khi mô phỏng thật quá nặng, mô hình thay thế đáng tin đến đâu?",
+      "targetOutcome": "Người học hiểu mô phỏng số, digital twin và surrogate để nghiên cứu hệ thống.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_4_master_year2_sem3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 kỳ 3 / NIR",
+      "stageNo": 4,
+      "chapterNo": 36,
+      "chapterId": "math_chapter_36",
+      "chapterTitle": "NIR: ablation, reproducibility, báo cáo kết quả",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "secondaryDisciplines": [
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Trực quan hóa dữ liệu"
+      ],
+      "pureLayer": [
+        "ablation",
+        "reproducibility",
+        "statistical reporting",
+        "error analysis"
+      ],
+      "appliedLayer": [
+        "báo cáo NIR",
+        "so sánh thực nghiệm",
+        "gói tái lập",
+        "bảng kết quả"
+      ],
+      "bridgeQuestion": "Một kết quả nghiên cứu cần chứng minh bằng những lớp bằng chứng nào?",
+      "targetOutcome": "Người học biết đóng gói kết quả NIR có kiểm chứng, tái lập và lập luận định lượng.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "stageTitle": "Giai đoạn 5 · Thạc sĩ năm 2 kỳ 4 / VKR",
+      "stageNo": 5,
+      "chapterNo": 37,
+      "chapterId": "math_chapter_37",
+      "chapterTitle": "Pipeline toán học cho luận văn thạc sĩ",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Tối ưu hóa và quy hoạch toán học",
+      "secondaryDisciplines": [
+        "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+        "Xác suất, thống kê và suy luận dữ liệu"
+      ],
+      "pureLayer": [
+        "problem formulation",
+        "objective function",
+        "constraints",
+        "assumptions"
+      ],
+      "appliedLayer": [
+        "khung luận văn",
+        "pipeline thực nghiệm",
+        "mô hình lõi",
+        "bảng giả thiết"
+      ],
+      "bridgeQuestion": "Luận văn cần công thức lõi hay cần hệ lập luận toán học?",
+      "targetOutcome": "Người học dựng được pipeline toán học xuyên suốt đề tài VKR.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "stageTitle": "Giai đoạn 5 · Thạc sĩ năm 2 kỳ 4 / VKR",
+      "stageNo": 5,
+      "chapterNo": 38,
+      "chapterId": "math_chapter_38",
+      "chapterTitle": "Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "secondaryDisciplines": [
+        "Xác suất, thống kê và suy luận dữ liệu",
+        "Ước lượng trạng thái, lọc và sensor fusion"
+      ],
+      "pureLayer": [
+        "uncertainty",
+        "confidence interval",
+        "validation protocol",
+        "error budget"
+      ],
+      "appliedLayer": [
+        "bảng đánh giá",
+        "kiểm chứng hệ thống",
+        "báo cáo định lượng",
+        "phân tích sai số"
+      ],
+      "bridgeQuestion": "Một kết quả bảo vệ được cần báo cáo sai số như thế nào?",
+      "targetOutcome": "Người học biết đánh giá và kiểm chứng kết quả để đủ sức bảo vệ.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "stageTitle": "Giai đoạn 5 · Thạc sĩ năm 2 kỳ 4 / VKR",
+      "stageNo": 5,
+      "chapterNo": 39,
+      "chapterId": "math_chapter_39",
+      "chapterTitle": "Viết, trình bày và bảo vệ VKR",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Ngôn ngữ toán học và logic nền tảng",
+      "secondaryDisciplines": [
+        "Trực quan hóa dữ liệu",
+        "Độ tin cậy, kiểm chứng và vòng đời hệ thống"
+      ],
+      "pureLayer": [
+        "argument structure",
+        "definition theorem result",
+        "notation consistency",
+        "evidence chain"
+      ],
+      "appliedLayer": [
+        "slide bảo vệ",
+        "trình bày kết quả",
+        "hỏi đáp hội đồng",
+        "tường minh giả thiết"
+      ],
+      "bridgeQuestion": "Làm sao biến kết quả kỹ thuật thành lập luận bảo vệ rõ ràng?",
+      "targetOutcome": "Người học biết trình bày toán, kết quả và giới hạn đề tài theo chuẩn bảo vệ.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    },
+    {
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "stageTitle": "Giai đoạn 5 · Thạc sĩ năm 2 kỳ 4 / VKR",
+      "stageNo": 5,
+      "chapterNo": 40,
+      "chapterId": "math_chapter_40",
+      "chapterTitle": "Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "status": "bauman_core_active",
+      "primaryDiscipline": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "secondaryDisciplines": [
+        "Tối ưu hóa và quy hoạch toán học",
+        "Lý thuyết điều khiển tự động",
+        "Xác suất, thống kê và suy luận dữ liệu"
+      ],
+      "pureLayer": [
+        "model-to-claim mapping",
+        "validation chain",
+        "technical conclusion",
+        "limitations"
+      ],
+      "appliedLayer": [
+        "kết luận VKR",
+        "bản đồ đóng góp",
+        "khuyến nghị kỹ thuật",
+        "gói phụ lục"
+      ],
+      "bridgeQuestion": "Kết luận kỹ thuật có được kéo thẳng từ mô hình toán không?",
+      "targetOutcome": "Người học tổng hợp mô hình, thí nghiệm và kết luận thành một khối bảo vệ được.",
+      "lessonPolicy": "not_generated_in_E110",
+      "spiralPolicy": {
+        "mode": "stage_based_spiral",
+        "rule": "Không học hết toán thuần túy rồi mới học ứng dụng; mỗi chương có gốc thuần túy, cầu nối ứng dụng và đầu ra phục vụ giai đoạn học thật."
+      },
+      "timelineRole": "main_path_august_to_bauman_graduation"
+    }
+  ],
+  "disciplineStageDistribution": {
+    "Ngôn ngữ toán học và logic nền tảng": "mạnh ở GĐ0–GĐ1, quay lại ở logic AI/GĐ4 và viết bảo vệ",
+    "Đại số tuyến tính và không gian dữ liệu": "mạnh ở GĐ0–GĐ2, dùng xuyên suốt AI/điều khiển",
+    "Giải tích một biến và nhiều biến": "mạnh ở GĐ0–GĐ2, dùng lại trong tối ưu/neural",
+    "Phương trình vi phân và hệ động lực": "mạnh ở GĐ1–GĐ3",
+    "Xác suất, thống kê và suy luận dữ liệu": "mạnh ở GĐ0–GĐ5",
+    "Tối ưu hóa và quy hoạch toán học": "từ GĐ0 nhẹ, mạnh ở GĐ2–GĐ5",
+    "Phương pháp số và toán học tính toán": "từ GĐ1, mạnh ở GĐ2–GĐ4",
+    "Xử lý tín hiệu và chuỗi thời gian": "bắt đầu GĐ2, mạnh GĐ3–GĐ4",
+    "Lý thuyết điều khiển tự động": "bắt đầu GĐ2, mạnh GĐ3–GĐ5",
+    "Ước lượng trạng thái, lọc và sensor fusion": "mạnh GĐ3–GĐ5",
+    "Toán rời rạc, đồ thị, CSDL và biểu diễn tri thức": "nền GĐ1, mạnh GĐ4",
+    "Độ tin cậy, kiểm chứng và vòng đời hệ thống": "bắt đầu GĐ4, mạnh GĐ5"
+  },
+  "futureResearchHints": {
+    "status": "replaced_by_phdExtensionFramework",
+    "policy": "Khung tiến sĩ được giữ ở dạng framework locked, không có ruột học liệu."
+  },
+  "migrationNotes": [
+    {
+      "from": "E15 · Chương 7 cũ · Hiệp phương sai, tương quan và PCA nhập môn",
+      "to": [
+        "math_chapter_10",
+        "math_chapter_19",
+        "math_chapter_26"
+      ],
+      "action": "Không xóa ruột đã làm; đổi ray. PCA/SVD đưa vào Chương 10, phần ổn định số đưa sang Chương 19, lỗi đánh giá dữ liệu đưa sang Chương 26."
+    },
+    {
+      "from": "E108 · active chapters 1–56 including GĐ6–GĐ9 PhD extension",
+      "to": "E109 · active chapters 1–40 only, GĐ6–GĐ9 converted to futureResearchHints",
+      "action": "Thu gọn đúng trọng tâm từ tháng 8/2026 đến tốt nghiệp Bauman; tiến sĩ chỉ là gợi mở khóa sau."
+    },
+    {
+      "from": "E109",
+      "to": "E110",
+      "change": "Khôi phục khung GĐ6–GĐ9 dưới dạng phdExtensionFramework locked, nhưng không đưa vào chapters active và không sinh nội dung tiến sĩ.",
+      "reason": "Người dùng muốn có khung gợi mở tiến sĩ nhưng trọng tâm học thật vẫn là từ tháng 8/2026 đến tốt nghiệp Bauman."
+    },
+    {
+      "from": "E108",
+      "to": "E110",
+      "change": "Chỉ giữ stage title và chapter title cho Chương 41–56; loại bỏ pureLayer, appliedLayer, bridgeQuestion, targetOutcome khỏi phần tiến sĩ để tránh biến framework thành nội dung học."
+    }
+  ],
+  "validation": {
+    "expectedActiveStageCount": 6,
+    "actualActiveStageCount": 6,
+    "expectedActiveChapterCount": 40,
+    "actualActiveChapterCount": 40,
+    "expectedPhdFrameworkStageCount": 4,
+    "actualPhdFrameworkStageCount": 4,
+    "expectedPhdFrameworkOutlineCount": 16,
+    "actualPhdFrameworkOutlineCount": 16,
+    "phdStagesInActiveSpine": 0,
+    "phdChaptersInActiveChapters": 0,
+    "phdLearningContentGenerated": false,
+    "activeChapterNoContinuous1To40": true,
+    "phdOutlineChapterNoContinuous41To56": true,
+    "checks": [
+      "JSON parse PASS",
+      "Active Bauman core remains 40 chapters",
+      "PhD framework is locked and separated from active chapters",
+      "No PhD lessons/slides/exercises/simulations/question bank generated",
+      "UI can render PhD as collapsed future section if needed"
+    ]
+  },
+  "phdExtensionFramework": {
+    "status": "locked_framework_only",
+    "role": "future_research_map_after_bauman_graduation",
+    "activeInCurrentCurriculum": false,
+    "notIncludedInLearningGeneration": true,
+    "contentGenerationPolicy": {
+      "generateLessons": false,
+      "generateSlides": false,
+      "generateExercises": false,
+      "generateSimulations": false,
+      "generateProfessorQA": false,
+      "generateQuestionBank": false,
+      "generateReviewPacks": false,
+      "generateMindMapContent": false
+    },
+    "stages": [
+      {
+        "stageId": "stage_6_phd_bridge",
+        "stageNo": 6,
+        "stageTitle": "Giai đoạn 6 · Cầu nối sau thạc sĩ",
+        "timeframe": "Sau tốt nghiệp Bauman / mở khóa khi cần nghiên cứu tiếp",
+        "goal": "Tăng độ chín toán học để bước vào nghiên cứu sâu.",
+        "status": "locked_framework_only",
+        "chapterRange": [
+          41,
+          44
+        ],
+        "primaryDisciplines": [
+          "Tối ưu hóa và quy hoạch toán học",
+          "Xác suất, thống kê và suy luận dữ liệu",
+          "Lý thuyết điều khiển tự động"
+        ],
+        "secondaryDisciplines": [
+          "Ngôn ngữ toán học và logic nền tảng",
+          "Độ tin cậy, kiểm chứng và vòng đời hệ thống"
+        ],
+        "scopeNote": "Chỉ giữ khung định hướng sau thạc sĩ; không sinh bài học, slide, bài tập, mô phỏng, vấn đáp, kiểm tra hoặc học liệu tiến sĩ.",
+        "priority": "future_hint"
+      },
+      {
+        "stageId": "stage_7_phd_year1",
+        "stageNo": 7,
+        "stageTitle": "Giai đoạn 7 · Tiến sĩ năm 1",
+        "timeframe": "Sau tốt nghiệp Bauman / mở khóa khi cần nghiên cứu tiếp",
+        "goal": "Đào sâu hệ động lực, xử lý tín hiệu, learning theory và tính toán lớn.",
+        "status": "locked_framework_only",
+        "chapterRange": [
+          45,
+          48
+        ],
+        "primaryDisciplines": [
+          "Phương trình vi phân và hệ động lực",
+          "Xử lý tín hiệu và chuỗi thời gian",
+          "Xác suất, thống kê và suy luận dữ liệu",
+          "Phương pháp số và toán học tính toán"
+        ],
+        "secondaryDisciplines": [
+          "Lý thuyết điều khiển tự động",
+          "Tối ưu hóa và quy hoạch toán học"
+        ],
+        "scopeNote": "Chỉ giữ khung định hướng sau thạc sĩ; không sinh bài học, slide, bài tập, mô phỏng, vấn đáp, kiểm tra hoặc học liệu tiến sĩ.",
+        "priority": "future_hint"
+      },
+      {
+        "stageId": "stage_8_phd_year2",
+        "stageNo": 8,
+        "stageTitle": "Giai đoạn 8 · Tiến sĩ năm 2",
+        "timeframe": "Sau tốt nghiệp Bauman / mở khóa khi cần nghiên cứu tiếp",
+        "goal": "Mở rộng sang multi-agent, robust AI, digital twin và thiết kế thực nghiệm công bố được.",
+        "status": "locked_framework_only",
+        "chapterRange": [
+          49,
+          52
+        ],
+        "primaryDisciplines": [
+          "Toán rời rạc, đồ thị, CSDL và biểu diễn tri thức",
+          "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+          "Phương pháp số và toán học tính toán",
+          "Xác suất, thống kê và suy luận dữ liệu"
+        ],
+        "secondaryDisciplines": [
+          "Lý thuyết điều khiển tự động",
+          "Tối ưu hóa và quy hoạch toán học"
+        ],
+        "scopeNote": "Chỉ giữ khung định hướng sau thạc sĩ; không sinh bài học, slide, bài tập, mô phỏng, vấn đáp, kiểm tra hoặc học liệu tiến sĩ.",
+        "priority": "future_hint"
+      },
+      {
+        "stageId": "stage_9_phd_dissertation",
+        "stageNo": 9,
+        "stageTitle": "Giai đoạn 9 · Tiến sĩ năm 3 / luận án",
+        "timeframe": "Sau tốt nghiệp Bauman / mở khóa khi cần nghiên cứu tiếp",
+        "goal": "Tổng hợp đóng góp toán học, bài báo, gói kiểm chứng và bảo vệ luận án.",
+        "status": "locked_framework_only",
+        "chapterRange": [
+          53,
+          56
+        ],
+        "primaryDisciplines": [
+          "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+          "Ngôn ngữ toán học và logic nền tảng",
+          "Xác suất, thống kê và suy luận dữ liệu"
+        ],
+        "secondaryDisciplines": [
+          "Tối ưu hóa và quy hoạch toán học",
+          "Phương pháp số và toán học tính toán"
+        ],
+        "scopeNote": "Chỉ giữ khung định hướng sau thạc sĩ; không sinh bài học, slide, bài tập, mô phỏng, vấn đáp, kiểm tra hoặc học liệu tiến sĩ.",
+        "priority": "future_hint"
+      }
+    ],
+    "chapterOutlines": [
+      {
+        "stageId": "stage_6_phd_bridge",
+        "stageTitle": "Giai đoạn 6 · Cầu nối sau thạc sĩ",
+        "stageNo": 6,
+        "chapterNo": 41,
+        "chapterId": "math_chapter_41",
+        "chapterTitle": "Mathematical maturity for research",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_6_phd_bridge",
+        "stageTitle": "Giai đoạn 6 · Cầu nối sau thạc sĩ",
+        "stageNo": 6,
+        "chapterNo": 42,
+        "chapterId": "math_chapter_42",
+        "chapterTitle": "Advanced optimization: non-convex, stochastic, constrained systems",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_6_phd_bridge",
+        "stageTitle": "Giai đoạn 6 · Cầu nối sau thạc sĩ",
+        "stageNo": 6,
+        "chapterNo": 43,
+        "chapterId": "math_chapter_43",
+        "chapterTitle": "Advanced stochastic processes and stochastic control",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_6_phd_bridge",
+        "stageTitle": "Giai đoạn 6 · Cầu nối sau thạc sĩ",
+        "stageNo": 6,
+        "chapterNo": 44,
+        "chapterId": "math_chapter_44",
+        "chapterTitle": "Information theory and statistical decision theory",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_7_phd_year1",
+        "stageTitle": "Giai đoạn 7 · Tiến sĩ năm 1",
+        "stageNo": 7,
+        "chapterNo": 45,
+        "chapterId": "math_chapter_45",
+        "chapterTitle": "Dynamical systems, stability and nonlinear control",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_7_phd_year1",
+        "stageTitle": "Giai đoạn 7 · Tiến sĩ năm 1",
+        "stageNo": 7,
+        "chapterNo": 46,
+        "chapterId": "math_chapter_46",
+        "chapterTitle": "Advanced signal processing and inverse problems",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_7_phd_year1",
+        "stageTitle": "Giai đoạn 7 · Tiến sĩ năm 1",
+        "stageNo": 7,
+        "chapterNo": 47,
+        "chapterId": "math_chapter_47",
+        "chapterTitle": "Learning theory, generalization and uncertainty",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_7_phd_year1",
+        "stageTitle": "Giai đoạn 7 · Tiến sĩ năm 1",
+        "stageNo": 7,
+        "chapterNo": 48,
+        "chapterId": "math_chapter_48",
+        "chapterTitle": "Numerical methods for large-scale scientific computing",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_8_phd_year2",
+        "stageTitle": "Giai đoạn 8 · Tiến sĩ năm 2",
+        "stageNo": 8,
+        "chapterNo": 49,
+        "chapterId": "math_chapter_49",
+        "chapterTitle": "Multi-agent systems, graph learning and distributed control",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_8_phd_year2",
+        "stageTitle": "Giai đoạn 8 · Tiến sĩ năm 2",
+        "stageNo": 8,
+        "chapterNo": 50,
+        "chapterId": "math_chapter_50",
+        "chapterTitle": "Robust AI systems and safety-critical decision making",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_8_phd_year2",
+        "stageTitle": "Giai đoạn 8 · Tiến sĩ năm 2",
+        "stageNo": 8,
+        "chapterNo": 51,
+        "chapterId": "math_chapter_51",
+        "chapterTitle": "Digital twins, simulation-based inference and surrogate models",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_8_phd_year2",
+        "stageTitle": "Giai đoạn 8 · Tiến sĩ năm 2",
+        "stageNo": 8,
+        "chapterNo": 52,
+        "chapterId": "math_chapter_52",
+        "chapterTitle": "Experimental design for publishable research",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_9_phd_dissertation",
+        "stageTitle": "Giai đoạn 9 · Tiến sĩ năm 3 / luận án",
+        "stageNo": 9,
+        "chapterNo": 53,
+        "chapterId": "math_chapter_53",
+        "chapterTitle": "Thesis architecture and mathematical contribution",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_9_phd_dissertation",
+        "stageTitle": "Giai đoạn 9 · Tiến sĩ năm 3 / luận án",
+        "stageNo": 9,
+        "chapterNo": 54,
+        "chapterId": "math_chapter_54",
+        "chapterTitle": "Paper pipeline: theorem, experiment, result, rebuttal",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_9_phd_dissertation",
+        "stageTitle": "Giai đoạn 9 · Tiến sĩ năm 3 / luận án",
+        "stageNo": 9,
+        "chapterNo": 55,
+        "chapterId": "math_chapter_55",
+        "chapterTitle": "Dissertation validation and reproducibility package",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      },
+      {
+        "stageId": "stage_9_phd_dissertation",
+        "stageTitle": "Giai đoạn 9 · Tiến sĩ năm 3 / luận án",
+        "stageNo": 9,
+        "chapterNo": 56,
+        "chapterId": "math_chapter_56",
+        "chapterTitle": "Defense-level synthesis: model, proof, experiment, contribution",
+        "status": "locked_framework_only",
+        "outlineLevel": "title_only",
+        "contentPolicy": "no_phd_learning_content_generated",
+        "lessonPolicy": "not_generated_in_E110",
+        "activeInBaumanCore": false,
+        "unlockCondition": "Chỉ mở sau khi hoàn tất VKR/thạc sĩ hoặc khi người dùng yêu cầu mở rộng nghiên cứu."
+      }
+    ],
+    "uiPolicy": {
+      "defaultVisibility": "collapsed_locked_section_after_VKR",
+      "label": "Mở rộng nghiên cứu sau Bauman",
+      "warning": "Không phải lộ trình học chính hiện tại.",
+      "recommendedPlacement": "below Stage 5, separate from active curriculum tree"
+    }
+  }
+}

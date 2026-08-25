@@ -1,0 +1,3489 @@
+{
+  "schema": "bauman.math.theory_tab.import_manifest.v1",
+  "version": "E124_final",
+  "targetSource": "lessons.json",
+  "summary": {
+    "totalLessons": 347,
+    "totalSlides": 5552,
+    "originalReferenceIdsUsed": 59,
+    "extensionLessonIdsCreated": 288
+  },
+  "roleCompatibilityMap": {
+    "definition": [
+      "deep_essence",
+      "notation"
+    ]
+  },
+  "items": [
+    {
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "sourceChapterNo": 1,
+      "sourceChapterId": "math_chapter_01",
+      "chapterTitle": "Vector trong không gian dữ liệu",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "sourceChapterNo": 1,
+      "sourceChapterId": "math_chapter_01",
+      "chapterTitle": "Vector trong không gian dữ liệu",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "sourceChapterNo": 1,
+      "sourceChapterId": "math_chapter_01",
+      "chapterTitle": "Vector trong không gian dữ liệu",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "sourceChapterNo": 1,
+      "sourceChapterId": "math_chapter_01",
+      "chapterTitle": "Vector trong không gian dữ liệu",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "sourceChapterNo": 1,
+      "sourceChapterId": "math_chapter_01",
+      "chapterTitle": "Vector trong không gian dữ liệu",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "sourceChapterNo": 1,
+      "sourceChapterId": "math_chapter_01",
+      "chapterTitle": "Vector trong không gian dữ liệu",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "sourceChapterNo": 1,
+      "sourceChapterId": "math_chapter_01",
+      "chapterTitle": "Vector trong không gian dữ liệu",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "sourceChapterNo": 1,
+      "sourceChapterId": "math_chapter_01",
+      "chapterTitle": "Vector trong không gian dữ liệu",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "sourceChapterNo": 2,
+      "sourceChapterId": "math_chapter_02",
+      "chapterTitle": "Ma trận và phép biến đổi tuyến tính",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "sourceChapterNo": 2,
+      "sourceChapterId": "math_chapter_02",
+      "chapterTitle": "Ma trận và phép biến đổi tuyến tính",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "sourceChapterNo": 2,
+      "sourceChapterId": "math_chapter_02",
+      "chapterTitle": "Ma trận và phép biến đổi tuyến tính",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "sourceChapterNo": 2,
+      "sourceChapterId": "math_chapter_02",
+      "chapterTitle": "Ma trận và phép biến đổi tuyến tính",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "sourceChapterNo": 2,
+      "sourceChapterId": "math_chapter_02",
+      "chapterTitle": "Ma trận và phép biến đổi tuyến tính",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "sourceChapterNo": 2,
+      "sourceChapterId": "math_chapter_02",
+      "chapterTitle": "Ma trận và phép biến đổi tuyến tính",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "sourceChapterNo": 2,
+      "sourceChapterId": "math_chapter_02",
+      "chapterTitle": "Ma trận và phép biến đổi tuyến tính",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "sourceChapterNo": 2,
+      "sourceChapterId": "math_chapter_02",
+      "chapterTitle": "Ma trận và phép biến đổi tuyến tính",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "sourceChapterNo": 2,
+      "sourceChapterId": "math_chapter_02",
+      "chapterTitle": "Ma trận và phép biến đổi tuyến tính",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "sourceChapterNo": 3,
+      "sourceChapterId": "math_chapter_03",
+      "chapterTitle": "Hàm số, đạo hàm và gradient cơ bản",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "sourceChapterNo": 3,
+      "sourceChapterId": "math_chapter_03",
+      "chapterTitle": "Hàm số, đạo hàm và gradient cơ bản",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "sourceChapterNo": 3,
+      "sourceChapterId": "math_chapter_03",
+      "chapterTitle": "Hàm số, đạo hàm và gradient cơ bản",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "sourceChapterNo": 3,
+      "sourceChapterId": "math_chapter_03",
+      "chapterTitle": "Hàm số, đạo hàm và gradient cơ bản",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "sourceChapterNo": 3,
+      "sourceChapterId": "math_chapter_03",
+      "chapterTitle": "Hàm số, đạo hàm và gradient cơ bản",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "sourceChapterNo": 3,
+      "sourceChapterId": "math_chapter_03",
+      "chapterTitle": "Hàm số, đạo hàm và gradient cơ bản",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "sourceChapterNo": 3,
+      "sourceChapterId": "math_chapter_03",
+      "chapterTitle": "Hàm số, đạo hàm và gradient cơ bản",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "sourceChapterNo": 3,
+      "sourceChapterId": "math_chapter_03",
+      "chapterTitle": "Hàm số, đạo hàm và gradient cơ bản",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "sourceChapterNo": 3,
+      "sourceChapterId": "math_chapter_03",
+      "chapterTitle": "Hàm số, đạo hàm và gradient cơ bản",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L02",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L03",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L04",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L05",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L06",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L07",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L08",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C05-L01",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C05-L02",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C05-L03",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C05-L04",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C05-L06",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C05-L07",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C05-L08",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C05-L09",
+      "sourceChapterNo": 4,
+      "sourceChapterId": "math_chapter_04",
+      "chapterTitle": "Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C06-L01",
+      "sourceChapterNo": 5,
+      "sourceChapterId": "math_chapter_05",
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C06-L02",
+      "sourceChapterNo": 5,
+      "sourceChapterId": "math_chapter_05",
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C06-L03",
+      "sourceChapterNo": 5,
+      "sourceChapterId": "math_chapter_05",
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C06-L04",
+      "sourceChapterNo": 5,
+      "sourceChapterId": "math_chapter_05",
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C06-L05",
+      "sourceChapterNo": 5,
+      "sourceChapterId": "math_chapter_05",
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C06-L06",
+      "sourceChapterNo": 5,
+      "sourceChapterId": "math_chapter_05",
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C06-L07",
+      "sourceChapterNo": 5,
+      "sourceChapterId": "math_chapter_05",
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C06-L08",
+      "sourceChapterNo": 5,
+      "sourceChapterId": "math_chapter_05",
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-VN-NP-C06-L01",
+      "sourceChapterNo": 6,
+      "sourceChapterId": "math_chapter_06",
+      "chapterTitle": "Python/Numpy cho tính toán toán học",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VN-NP-C06-L02",
+      "sourceChapterNo": 6,
+      "sourceChapterId": "math_chapter_06",
+      "chapterTitle": "Python/Numpy cho tính toán toán học",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VN-NP-C06-L03",
+      "sourceChapterNo": 6,
+      "sourceChapterId": "math_chapter_06",
+      "chapterTitle": "Python/Numpy cho tính toán toán học",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VN-NP-C06-L04",
+      "sourceChapterNo": 6,
+      "sourceChapterId": "math_chapter_06",
+      "chapterTitle": "Python/Numpy cho tính toán toán học",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VN-NP-C06-L05",
+      "sourceChapterNo": 6,
+      "sourceChapterId": "math_chapter_06",
+      "chapterTitle": "Python/Numpy cho tính toán toán học",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VN-NP-C06-L06",
+      "sourceChapterNo": 6,
+      "sourceChapterId": "math_chapter_06",
+      "chapterTitle": "Python/Numpy cho tính toán toán học",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VN-NP-C06-L07",
+      "sourceChapterNo": 6,
+      "sourceChapterId": "math_chapter_06",
+      "chapterTitle": "Python/Numpy cho tính toán toán học",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VN-NP-C06-L08",
+      "sourceChapterNo": 6,
+      "sourceChapterId": "math_chapter_06",
+      "chapterTitle": "Python/Numpy cho tính toán toán học",
+      "stageId": "stage_0_vietnam_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-MT-C09-L01",
+      "sourceChapterNo": 7,
+      "sourceChapterId": "math_chapter_07",
+      "chapterTitle": "Ngôn ngữ toán kỹ thuật Nga",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-PREP-MT-C09-L02",
+      "sourceChapterNo": 7,
+      "sourceChapterId": "math_chapter_07",
+      "chapterTitle": "Ngôn ngữ toán kỹ thuật Nga",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-PREP-MT-C09-L03",
+      "sourceChapterNo": 7,
+      "sourceChapterId": "math_chapter_07",
+      "chapterTitle": "Ngôn ngữ toán kỹ thuật Nga",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-PREP-MT-C09-L04",
+      "sourceChapterNo": 7,
+      "sourceChapterId": "math_chapter_07",
+      "chapterTitle": "Ngôn ngữ toán kỹ thuật Nga",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-PREP-MT-C09-L05",
+      "sourceChapterNo": 7,
+      "sourceChapterId": "math_chapter_07",
+      "chapterTitle": "Ngôn ngữ toán kỹ thuật Nga",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-PREP-MT-C09-L06",
+      "sourceChapterNo": 7,
+      "sourceChapterId": "math_chapter_07",
+      "chapterTitle": "Ngôn ngữ toán kỹ thuật Nga",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-PREP-MT-C09-L07",
+      "sourceChapterNo": 7,
+      "sourceChapterId": "math_chapter_07",
+      "chapterTitle": "Ngôn ngữ toán kỹ thuật Nga",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-PREP-MT-C09-L08",
+      "sourceChapterNo": 7,
+      "sourceChapterId": "math_chapter_07",
+      "chapterTitle": "Ngôn ngữ toán kỹ thuật Nga",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": true,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "original_reference"
+    },
+    {
+      "lessonId": "MATH-PREP-LOG-C08-L01",
+      "sourceChapterNo": 8,
+      "sourceChapterId": "math_chapter_08",
+      "chapterTitle": "Logic, tập hợp, ánh xạ và cách trình bày lời giải",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LOG-C08-L02",
+      "sourceChapterNo": 8,
+      "sourceChapterId": "math_chapter_08",
+      "chapterTitle": "Logic, tập hợp, ánh xạ và cách trình bày lời giải",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LOG-C08-L03",
+      "sourceChapterNo": 8,
+      "sourceChapterId": "math_chapter_08",
+      "chapterTitle": "Logic, tập hợp, ánh xạ và cách trình bày lời giải",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LOG-C08-L04",
+      "sourceChapterNo": 8,
+      "sourceChapterId": "math_chapter_08",
+      "chapterTitle": "Logic, tập hợp, ánh xạ và cách trình bày lời giải",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LOG-C08-L05",
+      "sourceChapterNo": 8,
+      "sourceChapterId": "math_chapter_08",
+      "chapterTitle": "Logic, tập hợp, ánh xạ và cách trình bày lời giải",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LOG-C08-L06",
+      "sourceChapterNo": 8,
+      "sourceChapterId": "math_chapter_08",
+      "chapterTitle": "Logic, tập hợp, ánh xạ và cách trình bày lời giải",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LOG-C08-L07",
+      "sourceChapterNo": 8,
+      "sourceChapterId": "math_chapter_08",
+      "chapterTitle": "Logic, tập hợp, ánh xạ và cách trình bày lời giải",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LOG-C08-L08",
+      "sourceChapterNo": 8,
+      "sourceChapterId": "math_chapter_08",
+      "chapterTitle": "Logic, tập hợp, ánh xạ và cách trình bày lời giải",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA1-C09-L01",
+      "sourceChapterNo": 9,
+      "sourceChapterId": "math_chapter_09",
+      "chapterTitle": "Đại số tuyến tính I: vector, ma trận, hệ phương trình",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA1-C09-L02",
+      "sourceChapterNo": 9,
+      "sourceChapterId": "math_chapter_09",
+      "chapterTitle": "Đại số tuyến tính I: vector, ma trận, hệ phương trình",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA1-C09-L03",
+      "sourceChapterNo": 9,
+      "sourceChapterId": "math_chapter_09",
+      "chapterTitle": "Đại số tuyến tính I: vector, ma trận, hệ phương trình",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA1-C09-L04",
+      "sourceChapterNo": 9,
+      "sourceChapterId": "math_chapter_09",
+      "chapterTitle": "Đại số tuyến tính I: vector, ma trận, hệ phương trình",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA1-C09-L05",
+      "sourceChapterNo": 9,
+      "sourceChapterId": "math_chapter_09",
+      "chapterTitle": "Đại số tuyến tính I: vector, ma trận, hệ phương trình",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA1-C09-L06",
+      "sourceChapterNo": 9,
+      "sourceChapterId": "math_chapter_09",
+      "chapterTitle": "Đại số tuyến tính I: vector, ma trận, hệ phương trình",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA1-C09-L07",
+      "sourceChapterNo": 9,
+      "sourceChapterId": "math_chapter_09",
+      "chapterTitle": "Đại số tuyến tính I: vector, ma trận, hệ phương trình",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA1-C09-L08",
+      "sourceChapterNo": 9,
+      "sourceChapterId": "math_chapter_09",
+      "chapterTitle": "Đại số tuyến tính I: vector, ma trận, hệ phương trình",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "sourceChapterNo": 10,
+      "sourceChapterId": "math_chapter_10",
+      "chapterTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD, PCA",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA2-C10-L02",
+      "sourceChapterNo": 10,
+      "sourceChapterId": "math_chapter_10",
+      "chapterTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD, PCA",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA2-C10-L03",
+      "sourceChapterNo": 10,
+      "sourceChapterId": "math_chapter_10",
+      "chapterTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD, PCA",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA2-C10-L04",
+      "sourceChapterNo": 10,
+      "sourceChapterId": "math_chapter_10",
+      "chapterTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD, PCA",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "sourceChapterNo": 10,
+      "sourceChapterId": "math_chapter_10",
+      "chapterTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD, PCA",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "sourceChapterNo": 10,
+      "sourceChapterId": "math_chapter_10",
+      "chapterTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD, PCA",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA2-C10-L07",
+      "sourceChapterNo": 10,
+      "sourceChapterId": "math_chapter_10",
+      "chapterTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD, PCA",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "sourceChapterNo": 10,
+      "sourceChapterId": "math_chapter_10",
+      "chapterTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD, PCA",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LA2-C10-L09",
+      "sourceChapterNo": 10,
+      "sourceChapterId": "math_chapter_10",
+      "chapterTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD, PCA",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA1-C11-L01",
+      "sourceChapterNo": 11,
+      "sourceChapterId": "math_chapter_11",
+      "chapterTitle": "Giải tích I: giới hạn, liên tục, đạo hàm một biến",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA1-C11-L02",
+      "sourceChapterNo": 11,
+      "sourceChapterId": "math_chapter_11",
+      "chapterTitle": "Giải tích I: giới hạn, liên tục, đạo hàm một biến",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA1-C11-L03",
+      "sourceChapterNo": 11,
+      "sourceChapterId": "math_chapter_11",
+      "chapterTitle": "Giải tích I: giới hạn, liên tục, đạo hàm một biến",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA1-C11-L04",
+      "sourceChapterNo": 11,
+      "sourceChapterId": "math_chapter_11",
+      "chapterTitle": "Giải tích I: giới hạn, liên tục, đạo hàm một biến",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA1-C11-L05",
+      "sourceChapterNo": 11,
+      "sourceChapterId": "math_chapter_11",
+      "chapterTitle": "Giải tích I: giới hạn, liên tục, đạo hàm một biến",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA1-C11-L06",
+      "sourceChapterNo": 11,
+      "sourceChapterId": "math_chapter_11",
+      "chapterTitle": "Giải tích I: giới hạn, liên tục, đạo hàm một biến",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA1-C11-L07",
+      "sourceChapterNo": 11,
+      "sourceChapterId": "math_chapter_11",
+      "chapterTitle": "Giải tích I: giới hạn, liên tục, đạo hàm một biến",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA1-C11-L08",
+      "sourceChapterNo": 11,
+      "sourceChapterId": "math_chapter_11",
+      "chapterTitle": "Giải tích I: giới hạn, liên tục, đạo hàm một biến",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA2-C12-L01",
+      "sourceChapterNo": 12,
+      "sourceChapterId": "math_chapter_12",
+      "chapterTitle": "Giải tích II: nhiều biến, gradient, cực trị, ràng buộc",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA2-C12-L02",
+      "sourceChapterNo": 12,
+      "sourceChapterId": "math_chapter_12",
+      "chapterTitle": "Giải tích II: nhiều biến, gradient, cực trị, ràng buộc",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA2-C12-L03",
+      "sourceChapterNo": 12,
+      "sourceChapterId": "math_chapter_12",
+      "chapterTitle": "Giải tích II: nhiều biến, gradient, cực trị, ràng buộc",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA2-C12-L04",
+      "sourceChapterNo": 12,
+      "sourceChapterId": "math_chapter_12",
+      "chapterTitle": "Giải tích II: nhiều biến, gradient, cực trị, ràng buộc",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA2-C12-L05",
+      "sourceChapterNo": 12,
+      "sourceChapterId": "math_chapter_12",
+      "chapterTitle": "Giải tích II: nhiều biến, gradient, cực trị, ràng buộc",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA2-C12-L06",
+      "sourceChapterNo": 12,
+      "sourceChapterId": "math_chapter_12",
+      "chapterTitle": "Giải tích II: nhiều biến, gradient, cực trị, ràng buộc",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA2-C12-L07",
+      "sourceChapterNo": 12,
+      "sourceChapterId": "math_chapter_12",
+      "chapterTitle": "Giải tích II: nhiều biến, gradient, cực trị, ràng buộc",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA2-C12-L08",
+      "sourceChapterNo": 12,
+      "sourceChapterId": "math_chapter_12",
+      "chapterTitle": "Giải tích II: nhiều biến, gradient, cực trị, ràng buộc",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA2-C12-L09",
+      "sourceChapterNo": 12,
+      "sourceChapterId": "math_chapter_12",
+      "chapterTitle": "Giải tích II: nhiều biến, gradient, cực trị, ràng buộc",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA3-C13-L01",
+      "sourceChapterNo": 13,
+      "sourceChapterId": "math_chapter_13",
+      "chapterTitle": "Chuỗi, Taylor, xấp xỉ và sai số",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA3-C13-L02",
+      "sourceChapterNo": 13,
+      "sourceChapterId": "math_chapter_13",
+      "chapterTitle": "Chuỗi, Taylor, xấp xỉ và sai số",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA3-C13-L03",
+      "sourceChapterNo": 13,
+      "sourceChapterId": "math_chapter_13",
+      "chapterTitle": "Chuỗi, Taylor, xấp xỉ và sai số",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA3-C13-L04",
+      "sourceChapterNo": 13,
+      "sourceChapterId": "math_chapter_13",
+      "chapterTitle": "Chuỗi, Taylor, xấp xỉ và sai số",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA3-C13-L05",
+      "sourceChapterNo": 13,
+      "sourceChapterId": "math_chapter_13",
+      "chapterTitle": "Chuỗi, Taylor, xấp xỉ và sai số",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA3-C13-L06",
+      "sourceChapterNo": 13,
+      "sourceChapterId": "math_chapter_13",
+      "chapterTitle": "Chuỗi, Taylor, xấp xỉ và sai số",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA3-C13-L07",
+      "sourceChapterNo": 13,
+      "sourceChapterId": "math_chapter_13",
+      "chapterTitle": "Chuỗi, Taylor, xấp xỉ và sai số",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-CA3-C13-L08",
+      "sourceChapterNo": 13,
+      "sourceChapterId": "math_chapter_13",
+      "chapterTitle": "Chuỗi, Taylor, xấp xỉ và sai số",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ODE-C14-L01",
+      "sourceChapterNo": 14,
+      "sourceChapterId": "math_chapter_14",
+      "chapterTitle": "Phương trình vi phân và mô hình động lực cơ bản",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ODE-C14-L02",
+      "sourceChapterNo": 14,
+      "sourceChapterId": "math_chapter_14",
+      "chapterTitle": "Phương trình vi phân và mô hình động lực cơ bản",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ODE-C14-L03",
+      "sourceChapterNo": 14,
+      "sourceChapterId": "math_chapter_14",
+      "chapterTitle": "Phương trình vi phân và mô hình động lực cơ bản",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ODE-C14-L04",
+      "sourceChapterNo": 14,
+      "sourceChapterId": "math_chapter_14",
+      "chapterTitle": "Phương trình vi phân và mô hình động lực cơ bản",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ODE-C14-L05",
+      "sourceChapterNo": 14,
+      "sourceChapterId": "math_chapter_14",
+      "chapterTitle": "Phương trình vi phân và mô hình động lực cơ bản",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ODE-C14-L06",
+      "sourceChapterNo": 14,
+      "sourceChapterId": "math_chapter_14",
+      "chapterTitle": "Phương trình vi phân và mô hình động lực cơ bản",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ODE-C14-L07",
+      "sourceChapterNo": 14,
+      "sourceChapterId": "math_chapter_14",
+      "chapterTitle": "Phương trình vi phân và mô hình động lực cơ bản",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ODE-C14-L08",
+      "sourceChapterNo": 14,
+      "sourceChapterId": "math_chapter_14",
+      "chapterTitle": "Phương trình vi phân và mô hình động lực cơ bản",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-PS2-C15-L01",
+      "sourceChapterNo": 15,
+      "sourceChapterId": "math_chapter_15",
+      "chapterTitle": "Xác suất: phân phối, kỳ vọng, phương sai, luật giới hạn",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-PS2-C15-L02",
+      "sourceChapterNo": 15,
+      "sourceChapterId": "math_chapter_15",
+      "chapterTitle": "Xác suất: phân phối, kỳ vọng, phương sai, luật giới hạn",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-PS2-C15-L03",
+      "sourceChapterNo": 15,
+      "sourceChapterId": "math_chapter_15",
+      "chapterTitle": "Xác suất: phân phối, kỳ vọng, phương sai, luật giới hạn",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-PS2-C15-L04",
+      "sourceChapterNo": 15,
+      "sourceChapterId": "math_chapter_15",
+      "chapterTitle": "Xác suất: phân phối, kỳ vọng, phương sai, luật giới hạn",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-PS2-C15-L05",
+      "sourceChapterNo": 15,
+      "sourceChapterId": "math_chapter_15",
+      "chapterTitle": "Xác suất: phân phối, kỳ vọng, phương sai, luật giới hạn",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-PS2-C15-L06",
+      "sourceChapterNo": 15,
+      "sourceChapterId": "math_chapter_15",
+      "chapterTitle": "Xác suất: phân phối, kỳ vọng, phương sai, luật giới hạn",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-PS2-C15-L07",
+      "sourceChapterNo": 15,
+      "sourceChapterId": "math_chapter_15",
+      "chapterTitle": "Xác suất: phân phối, kỳ vọng, phương sai, luật giới hạn",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-PS2-C15-L08",
+      "sourceChapterNo": 15,
+      "sourceChapterId": "math_chapter_15",
+      "chapterTitle": "Xác suất: phân phối, kỳ vọng, phương sai, luật giới hạn",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ST1-C16-L01",
+      "sourceChapterNo": 16,
+      "sourceChapterId": "math_chapter_16",
+      "chapterTitle": "Thống kê: ước lượng, kiểm định, khoảng tin cậy",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ST1-C16-L02",
+      "sourceChapterNo": 16,
+      "sourceChapterId": "math_chapter_16",
+      "chapterTitle": "Thống kê: ước lượng, kiểm định, khoảng tin cậy",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ST1-C16-L03",
+      "sourceChapterNo": 16,
+      "sourceChapterId": "math_chapter_16",
+      "chapterTitle": "Thống kê: ước lượng, kiểm định, khoảng tin cậy",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ST1-C16-L04",
+      "sourceChapterNo": 16,
+      "sourceChapterId": "math_chapter_16",
+      "chapterTitle": "Thống kê: ước lượng, kiểm định, khoảng tin cậy",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ST1-C16-L05",
+      "sourceChapterNo": 16,
+      "sourceChapterId": "math_chapter_16",
+      "chapterTitle": "Thống kê: ước lượng, kiểm định, khoảng tin cậy",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ST1-C16-L06",
+      "sourceChapterNo": 16,
+      "sourceChapterId": "math_chapter_16",
+      "chapterTitle": "Thống kê: ước lượng, kiểm định, khoảng tin cậy",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ST1-C16-L07",
+      "sourceChapterNo": 16,
+      "sourceChapterId": "math_chapter_16",
+      "chapterTitle": "Thống kê: ước lượng, kiểm định, khoảng tin cậy",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-ST1-C16-L08",
+      "sourceChapterNo": 16,
+      "sourceChapterId": "math_chapter_16",
+      "chapterTitle": "Thống kê: ước lượng, kiểm định, khoảng tin cậy",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-NM-C17-L01",
+      "sourceChapterNo": 17,
+      "sourceChapterId": "math_chapter_17",
+      "chapterTitle": "Phương pháp số: nghiệm gần đúng, sai số, ổn định tính toán",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-NM-C17-L02",
+      "sourceChapterNo": 17,
+      "sourceChapterId": "math_chapter_17",
+      "chapterTitle": "Phương pháp số: nghiệm gần đúng, sai số, ổn định tính toán",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-NM-C17-L03",
+      "sourceChapterNo": 17,
+      "sourceChapterId": "math_chapter_17",
+      "chapterTitle": "Phương pháp số: nghiệm gần đúng, sai số, ổn định tính toán",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-NM-C17-L04",
+      "sourceChapterNo": 17,
+      "sourceChapterId": "math_chapter_17",
+      "chapterTitle": "Phương pháp số: nghiệm gần đúng, sai số, ổn định tính toán",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-NM-C17-L05",
+      "sourceChapterNo": 17,
+      "sourceChapterId": "math_chapter_17",
+      "chapterTitle": "Phương pháp số: nghiệm gần đúng, sai số, ổn định tính toán",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-NM-C17-L06",
+      "sourceChapterNo": 17,
+      "sourceChapterId": "math_chapter_17",
+      "chapterTitle": "Phương pháp số: nghiệm gần đúng, sai số, ổn định tính toán",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-NM-C17-L07",
+      "sourceChapterNo": 17,
+      "sourceChapterId": "math_chapter_17",
+      "chapterTitle": "Phương pháp số: nghiệm gần đúng, sai số, ổn định tính toán",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-NM-C17-L08",
+      "sourceChapterNo": 17,
+      "sourceChapterId": "math_chapter_17",
+      "chapterTitle": "Phương pháp số: nghiệm gần đúng, sai số, ổn định tính toán",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LAB-C18-L01",
+      "sourceChapterNo": 18,
+      "sourceChapterId": "math_chapter_18",
+      "chapterTitle": "Lab mô hình toán: tín hiệu, điều khiển, dữ liệu, mô phỏng mini",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LAB-C18-L02",
+      "sourceChapterNo": 18,
+      "sourceChapterId": "math_chapter_18",
+      "chapterTitle": "Lab mô hình toán: tín hiệu, điều khiển, dữ liệu, mô phỏng mini",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LAB-C18-L03",
+      "sourceChapterNo": 18,
+      "sourceChapterId": "math_chapter_18",
+      "chapterTitle": "Lab mô hình toán: tín hiệu, điều khiển, dữ liệu, mô phỏng mini",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LAB-C18-L04",
+      "sourceChapterNo": 18,
+      "sourceChapterId": "math_chapter_18",
+      "chapterTitle": "Lab mô hình toán: tín hiệu, điều khiển, dữ liệu, mô phỏng mini",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LAB-C18-L05",
+      "sourceChapterNo": 18,
+      "sourceChapterId": "math_chapter_18",
+      "chapterTitle": "Lab mô hình toán: tín hiệu, điều khiển, dữ liệu, mô phỏng mini",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LAB-C18-L06",
+      "sourceChapterNo": 18,
+      "sourceChapterId": "math_chapter_18",
+      "chapterTitle": "Lab mô hình toán: tín hiệu, điều khiển, dữ liệu, mô phỏng mini",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LAB-C18-L07",
+      "sourceChapterNo": 18,
+      "sourceChapterId": "math_chapter_18",
+      "chapterTitle": "Lab mô hình toán: tín hiệu, điều khiển, dữ liệu, mô phỏng mini",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-PREP-LAB-C18-L08",
+      "sourceChapterNo": 18,
+      "sourceChapterId": "math_chapter_18",
+      "chapterTitle": "Lab mô hình toán: tín hiệu, điều khiển, dữ liệu, mô phỏng mini",
+      "stageId": "stage_1_russian_preparatory",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-NLA-C19-L01",
+      "sourceChapterNo": 19,
+      "sourceChapterId": "math_chapter_19",
+      "chapterTitle": "Đại số tuyến tính số và ổn định tính toán",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-NLA-C19-L02",
+      "sourceChapterNo": 19,
+      "sourceChapterId": "math_chapter_19",
+      "chapterTitle": "Đại số tuyến tính số và ổn định tính toán",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-NLA-C19-L03",
+      "sourceChapterNo": 19,
+      "sourceChapterId": "math_chapter_19",
+      "chapterTitle": "Đại số tuyến tính số và ổn định tính toán",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-NLA-C19-L04",
+      "sourceChapterNo": 19,
+      "sourceChapterId": "math_chapter_19",
+      "chapterTitle": "Đại số tuyến tính số và ổn định tính toán",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-NLA-C19-L05",
+      "sourceChapterNo": 19,
+      "sourceChapterId": "math_chapter_19",
+      "chapterTitle": "Đại số tuyến tính số và ổn định tính toán",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-NLA-C19-L06",
+      "sourceChapterNo": 19,
+      "sourceChapterId": "math_chapter_19",
+      "chapterTitle": "Đại số tuyến tính số và ổn định tính toán",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-NLA-C19-L07",
+      "sourceChapterNo": 19,
+      "sourceChapterId": "math_chapter_19",
+      "chapterTitle": "Đại số tuyến tính số và ổn định tính toán",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-NLA-C19-L08",
+      "sourceChapterNo": 19,
+      "sourceChapterId": "math_chapter_19",
+      "chapterTitle": "Đại số tuyến tính số và ổn định tính toán",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-OPT-C20-L01",
+      "sourceChapterNo": 20,
+      "sourceChapterId": "math_chapter_20",
+      "chapterTitle": "Tối ưu hóa lồi và tối ưu có ràng buộc",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-OPT-C20-L02",
+      "sourceChapterNo": 20,
+      "sourceChapterId": "math_chapter_20",
+      "chapterTitle": "Tối ưu hóa lồi và tối ưu có ràng buộc",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-OPT-C20-L03",
+      "sourceChapterNo": 20,
+      "sourceChapterId": "math_chapter_20",
+      "chapterTitle": "Tối ưu hóa lồi và tối ưu có ràng buộc",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-OPT-C20-L04",
+      "sourceChapterNo": 20,
+      "sourceChapterId": "math_chapter_20",
+      "chapterTitle": "Tối ưu hóa lồi và tối ưu có ràng buộc",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-OPT-C20-L05",
+      "sourceChapterNo": 20,
+      "sourceChapterId": "math_chapter_20",
+      "chapterTitle": "Tối ưu hóa lồi và tối ưu có ràng buộc",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-OPT-C20-L06",
+      "sourceChapterNo": 20,
+      "sourceChapterId": "math_chapter_20",
+      "chapterTitle": "Tối ưu hóa lồi và tối ưu có ràng buộc",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-OPT-C20-L07",
+      "sourceChapterNo": 20,
+      "sourceChapterId": "math_chapter_20",
+      "chapterTitle": "Tối ưu hóa lồi và tối ưu có ràng buộc",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-OPT-C20-L08",
+      "sourceChapterNo": 20,
+      "sourceChapterId": "math_chapter_20",
+      "chapterTitle": "Tối ưu hóa lồi và tối ưu có ràng buộc",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-INFO-C21-L01",
+      "sourceChapterNo": 21,
+      "sourceChapterId": "math_chapter_21",
+      "chapterTitle": "Entropy, thông tin và phân phối xác suất",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-INFO-C21-L02",
+      "sourceChapterNo": 21,
+      "sourceChapterId": "math_chapter_21",
+      "chapterTitle": "Entropy, thông tin và phân phối xác suất",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-INFO-C21-L03",
+      "sourceChapterNo": 21,
+      "sourceChapterId": "math_chapter_21",
+      "chapterTitle": "Entropy, thông tin và phân phối xác suất",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-INFO-C21-L04",
+      "sourceChapterNo": 21,
+      "sourceChapterId": "math_chapter_21",
+      "chapterTitle": "Entropy, thông tin và phân phối xác suất",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-INFO-C21-L05",
+      "sourceChapterNo": 21,
+      "sourceChapterId": "math_chapter_21",
+      "chapterTitle": "Entropy, thông tin và phân phối xác suất",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-INFO-C21-L06",
+      "sourceChapterNo": 21,
+      "sourceChapterId": "math_chapter_21",
+      "chapterTitle": "Entropy, thông tin và phân phối xác suất",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-INFO-C21-L07",
+      "sourceChapterNo": 21,
+      "sourceChapterId": "math_chapter_21",
+      "chapterTitle": "Entropy, thông tin và phân phối xác suất",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-INFO-C21-L08",
+      "sourceChapterNo": 21,
+      "sourceChapterId": "math_chapter_21",
+      "chapterTitle": "Entropy, thông tin và phân phối xác suất",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "sourceChapterNo": 22,
+      "sourceChapterId": "math_chapter_22",
+      "chapterTitle": "Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "sourceChapterNo": 22,
+      "sourceChapterId": "math_chapter_22",
+      "chapterTitle": "Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "sourceChapterNo": 22,
+      "sourceChapterId": "math_chapter_22",
+      "chapterTitle": "Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "sourceChapterNo": 22,
+      "sourceChapterId": "math_chapter_22",
+      "chapterTitle": "Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "sourceChapterNo": 22,
+      "sourceChapterId": "math_chapter_22",
+      "chapterTitle": "Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "sourceChapterNo": 22,
+      "sourceChapterId": "math_chapter_22",
+      "chapterTitle": "Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-TS-C22-L07",
+      "sourceChapterNo": 22,
+      "sourceChapterId": "math_chapter_22",
+      "chapterTitle": "Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-TS-C22-L08",
+      "sourceChapterNo": 22,
+      "sourceChapterId": "math_chapter_22",
+      "chapterTitle": "Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SIG-C23-L01",
+      "sourceChapterNo": 23,
+      "sourceChapterId": "math_chapter_23",
+      "chapterTitle": "Fourier, Laplace, Z-transform và xử lý tín hiệu",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SIG-C23-L02",
+      "sourceChapterNo": 23,
+      "sourceChapterId": "math_chapter_23",
+      "chapterTitle": "Fourier, Laplace, Z-transform và xử lý tín hiệu",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SIG-C23-L03",
+      "sourceChapterNo": 23,
+      "sourceChapterId": "math_chapter_23",
+      "chapterTitle": "Fourier, Laplace, Z-transform và xử lý tín hiệu",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SIG-C23-L04",
+      "sourceChapterNo": 23,
+      "sourceChapterId": "math_chapter_23",
+      "chapterTitle": "Fourier, Laplace, Z-transform và xử lý tín hiệu",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SIG-C23-L05",
+      "sourceChapterNo": 23,
+      "sourceChapterId": "math_chapter_23",
+      "chapterTitle": "Fourier, Laplace, Z-transform và xử lý tín hiệu",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SIG-C23-L06",
+      "sourceChapterNo": 23,
+      "sourceChapterId": "math_chapter_23",
+      "chapterTitle": "Fourier, Laplace, Z-transform và xử lý tín hiệu",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SIG-C23-L07",
+      "sourceChapterNo": 23,
+      "sourceChapterId": "math_chapter_23",
+      "chapterTitle": "Fourier, Laplace, Z-transform và xử lý tín hiệu",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SIG-C23-L08",
+      "sourceChapterNo": 23,
+      "sourceChapterId": "math_chapter_23",
+      "chapterTitle": "Fourier, Laplace, Z-transform và xử lý tín hiệu",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SSM-C24-L01",
+      "sourceChapterNo": 24,
+      "sourceChapterId": "math_chapter_24",
+      "chapterTitle": "Mô hình trạng thái và mô phỏng hệ thống",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SSM-C24-L02",
+      "sourceChapterNo": 24,
+      "sourceChapterId": "math_chapter_24",
+      "chapterTitle": "Mô hình trạng thái và mô phỏng hệ thống",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SSM-C24-L03",
+      "sourceChapterNo": 24,
+      "sourceChapterId": "math_chapter_24",
+      "chapterTitle": "Mô hình trạng thái và mô phỏng hệ thống",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SSM-C24-L04",
+      "sourceChapterNo": 24,
+      "sourceChapterId": "math_chapter_24",
+      "chapterTitle": "Mô hình trạng thái và mô phỏng hệ thống",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SSM-C24-L05",
+      "sourceChapterNo": 24,
+      "sourceChapterId": "math_chapter_24",
+      "chapterTitle": "Mô hình trạng thái và mô phỏng hệ thống",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SSM-C24-L06",
+      "sourceChapterNo": 24,
+      "sourceChapterId": "math_chapter_24",
+      "chapterTitle": "Mô hình trạng thái và mô phỏng hệ thống",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SSM-C24-L07",
+      "sourceChapterNo": 24,
+      "sourceChapterId": "math_chapter_24",
+      "chapterTitle": "Mô hình trạng thái và mô phỏng hệ thống",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK1-SSM-C24-L08",
+      "sourceChapterNo": 24,
+      "sourceChapterId": "math_chapter_24",
+      "chapterTitle": "Mô hình trạng thái và mô phỏng hệ thống",
+      "stageId": "stage_2_master_year1_sem1",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLB-C25-L01",
+      "sourceChapterNo": 25,
+      "sourceChapterId": "math_chapter_25",
+      "chapterTitle": "Hồi quy, phân loại và regularization",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLB-C25-L02",
+      "sourceChapterNo": 25,
+      "sourceChapterId": "math_chapter_25",
+      "chapterTitle": "Hồi quy, phân loại và regularization",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLB-C25-L03",
+      "sourceChapterNo": 25,
+      "sourceChapterId": "math_chapter_25",
+      "chapterTitle": "Hồi quy, phân loại và regularization",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLB-C25-L04",
+      "sourceChapterNo": 25,
+      "sourceChapterId": "math_chapter_25",
+      "chapterTitle": "Hồi quy, phân loại và regularization",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLB-C25-L05",
+      "sourceChapterNo": 25,
+      "sourceChapterId": "math_chapter_25",
+      "chapterTitle": "Hồi quy, phân loại và regularization",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLB-C25-L06",
+      "sourceChapterNo": 25,
+      "sourceChapterId": "math_chapter_25",
+      "chapterTitle": "Hồi quy, phân loại và regularization",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLB-C25-L07",
+      "sourceChapterNo": 25,
+      "sourceChapterId": "math_chapter_25",
+      "chapterTitle": "Hồi quy, phân loại và regularization",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLB-C25-L08",
+      "sourceChapterNo": 25,
+      "sourceChapterId": "math_chapter_25",
+      "chapterTitle": "Hồi quy, phân loại và regularization",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLEVAL-C26-L01",
+      "sourceChapterNo": 26,
+      "sourceChapterId": "math_chapter_26",
+      "chapterTitle": "Machine Learning và đánh giá mô hình",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLEVAL-C26-L02",
+      "sourceChapterNo": 26,
+      "sourceChapterId": "math_chapter_26",
+      "chapterTitle": "Machine Learning và đánh giá mô hình",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLEVAL-C26-L03",
+      "sourceChapterNo": 26,
+      "sourceChapterId": "math_chapter_26",
+      "chapterTitle": "Machine Learning và đánh giá mô hình",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLEVAL-C26-L04",
+      "sourceChapterNo": 26,
+      "sourceChapterId": "math_chapter_26",
+      "chapterTitle": "Machine Learning và đánh giá mô hình",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLEVAL-C26-L05",
+      "sourceChapterNo": 26,
+      "sourceChapterId": "math_chapter_26",
+      "chapterTitle": "Machine Learning và đánh giá mô hình",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLEVAL-C26-L06",
+      "sourceChapterNo": 26,
+      "sourceChapterId": "math_chapter_26",
+      "chapterTitle": "Machine Learning và đánh giá mô hình",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLEVAL-C26-L07",
+      "sourceChapterNo": 26,
+      "sourceChapterId": "math_chapter_26",
+      "chapterTitle": "Machine Learning và đánh giá mô hình",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-MLEVAL-C26-L08",
+      "sourceChapterNo": 26,
+      "sourceChapterId": "math_chapter_26",
+      "chapterTitle": "Machine Learning và đánh giá mô hình",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-NN-C27-L01",
+      "sourceChapterNo": 27,
+      "sourceChapterId": "math_chapter_27",
+      "chapterTitle": "Toán của mạng neural và deep learning",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-NN-C27-L02",
+      "sourceChapterNo": 27,
+      "sourceChapterId": "math_chapter_27",
+      "chapterTitle": "Toán của mạng neural và deep learning",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-NN-C27-L03",
+      "sourceChapterNo": 27,
+      "sourceChapterId": "math_chapter_27",
+      "chapterTitle": "Toán của mạng neural và deep learning",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-NN-C27-L04",
+      "sourceChapterNo": 27,
+      "sourceChapterId": "math_chapter_27",
+      "chapterTitle": "Toán của mạng neural và deep learning",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-NN-C27-L05",
+      "sourceChapterNo": 27,
+      "sourceChapterId": "math_chapter_27",
+      "chapterTitle": "Toán của mạng neural và deep learning",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-NN-C27-L06",
+      "sourceChapterNo": 27,
+      "sourceChapterId": "math_chapter_27",
+      "chapterTitle": "Toán của mạng neural và deep learning",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-NN-C27-L07",
+      "sourceChapterNo": 27,
+      "sourceChapterId": "math_chapter_27",
+      "chapterTitle": "Toán của mạng neural và deep learning",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-NN-C27-L08",
+      "sourceChapterNo": 27,
+      "sourceChapterId": "math_chapter_27",
+      "chapterTitle": "Toán của mạng neural và deep learning",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-NN-C27-L09",
+      "sourceChapterNo": 27,
+      "sourceChapterId": "math_chapter_27",
+      "chapterTitle": "Toán của mạng neural và deep learning",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-CTRL-C28-L01",
+      "sourceChapterNo": 28,
+      "sourceChapterId": "math_chapter_28",
+      "chapterTitle": "Điều khiển tự động: ổn định, quan sát, điều khiển được",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-CTRL-C28-L02",
+      "sourceChapterNo": 28,
+      "sourceChapterId": "math_chapter_28",
+      "chapterTitle": "Điều khiển tự động: ổn định, quan sát, điều khiển được",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-CTRL-C28-L03",
+      "sourceChapterNo": 28,
+      "sourceChapterId": "math_chapter_28",
+      "chapterTitle": "Điều khiển tự động: ổn định, quan sát, điều khiển được",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-CTRL-C28-L04",
+      "sourceChapterNo": 28,
+      "sourceChapterId": "math_chapter_28",
+      "chapterTitle": "Điều khiển tự động: ổn định, quan sát, điều khiển được",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-CTRL-C28-L05",
+      "sourceChapterNo": 28,
+      "sourceChapterId": "math_chapter_28",
+      "chapterTitle": "Điều khiển tự động: ổn định, quan sát, điều khiển được",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-CTRL-C28-L06",
+      "sourceChapterNo": 28,
+      "sourceChapterId": "math_chapter_28",
+      "chapterTitle": "Điều khiển tự động: ổn định, quan sát, điều khiển được",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-CTRL-C28-L07",
+      "sourceChapterNo": 28,
+      "sourceChapterId": "math_chapter_28",
+      "chapterTitle": "Điều khiển tự động: ổn định, quan sát, điều khiển được",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-CTRL-C28-L08",
+      "sourceChapterNo": 28,
+      "sourceChapterId": "math_chapter_28",
+      "chapterTitle": "Điều khiển tự động: ổn định, quan sát, điều khiển được",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-CTRL-C28-L09",
+      "sourceChapterNo": 28,
+      "sourceChapterId": "math_chapter_28",
+      "chapterTitle": "Điều khiển tự động: ổn định, quan sát, điều khiển được",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-KF-C29-L01",
+      "sourceChapterNo": 29,
+      "sourceChapterId": "math_chapter_29",
+      "chapterTitle": "Kalman filter, Bayesian filtering và sensor fusion",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-KF-C29-L02",
+      "sourceChapterNo": 29,
+      "sourceChapterId": "math_chapter_29",
+      "chapterTitle": "Kalman filter, Bayesian filtering và sensor fusion",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-KF-C29-L03",
+      "sourceChapterNo": 29,
+      "sourceChapterId": "math_chapter_29",
+      "chapterTitle": "Kalman filter, Bayesian filtering và sensor fusion",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-KF-C29-L04",
+      "sourceChapterNo": 29,
+      "sourceChapterId": "math_chapter_29",
+      "chapterTitle": "Kalman filter, Bayesian filtering và sensor fusion",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-KF-C29-L05",
+      "sourceChapterNo": 29,
+      "sourceChapterId": "math_chapter_29",
+      "chapterTitle": "Kalman filter, Bayesian filtering và sensor fusion",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-KF-C29-L06",
+      "sourceChapterNo": 29,
+      "sourceChapterId": "math_chapter_29",
+      "chapterTitle": "Kalman filter, Bayesian filtering và sensor fusion",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-KF-C29-L07",
+      "sourceChapterNo": 29,
+      "sourceChapterId": "math_chapter_29",
+      "chapterTitle": "Kalman filter, Bayesian filtering và sensor fusion",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-KF-C29-L08",
+      "sourceChapterNo": 29,
+      "sourceChapterId": "math_chapter_29",
+      "chapterTitle": "Kalman filter, Bayesian filtering và sensor fusion",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-KF-C29-L09",
+      "sourceChapterNo": 29,
+      "sourceChapterId": "math_chapter_29",
+      "chapterTitle": "Kalman filter, Bayesian filtering và sensor fusion",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-AICTRL-C30-L01",
+      "sourceChapterNo": 30,
+      "sourceChapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-AICTRL-C30-L02",
+      "sourceChapterNo": 30,
+      "sourceChapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-AICTRL-C30-L03",
+      "sourceChapterNo": 30,
+      "sourceChapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-AICTRL-C30-L04",
+      "sourceChapterNo": 30,
+      "sourceChapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-AICTRL-C30-L05",
+      "sourceChapterNo": 30,
+      "sourceChapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-AICTRL-C30-L06",
+      "sourceChapterNo": 30,
+      "sourceChapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-AICTRL-C30-L07",
+      "sourceChapterNo": 30,
+      "sourceChapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-AICTRL-C30-L08",
+      "sourceChapterNo": 30,
+      "sourceChapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-HK2-AICTRL-C30-L09",
+      "sourceChapterNo": 30,
+      "sourceChapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "stageId": "stage_3_master_year1_sem2",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-TSADV-C31-L01",
+      "sourceChapterNo": 31,
+      "sourceChapterId": "math_chapter_31",
+      "chapterTitle": "Chuỗi thời gian nâng cao và dự báo",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-TSADV-C31-L02",
+      "sourceChapterNo": 31,
+      "sourceChapterId": "math_chapter_31",
+      "chapterTitle": "Chuỗi thời gian nâng cao và dự báo",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-TSADV-C31-L03",
+      "sourceChapterNo": 31,
+      "sourceChapterId": "math_chapter_31",
+      "chapterTitle": "Chuỗi thời gian nâng cao và dự báo",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-TSADV-C31-L04",
+      "sourceChapterNo": 31,
+      "sourceChapterId": "math_chapter_31",
+      "chapterTitle": "Chuỗi thời gian nâng cao và dự báo",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-TSADV-C31-L05",
+      "sourceChapterNo": 31,
+      "sourceChapterId": "math_chapter_31",
+      "chapterTitle": "Chuỗi thời gian nâng cao và dự báo",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-TSADV-C31-L06",
+      "sourceChapterNo": 31,
+      "sourceChapterId": "math_chapter_31",
+      "chapterTitle": "Chuỗi thời gian nâng cao và dự báo",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-TSADV-C31-L07",
+      "sourceChapterNo": 31,
+      "sourceChapterId": "math_chapter_31",
+      "chapterTitle": "Chuỗi thời gian nâng cao và dự báo",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-TSADV-C31-L08",
+      "sourceChapterNo": 31,
+      "sourceChapterId": "math_chapter_31",
+      "chapterTitle": "Chuỗi thời gian nâng cao và dự báo",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-TSADV-C31-L09",
+      "sourceChapterNo": 31,
+      "sourceChapterId": "math_chapter_31",
+      "chapterTitle": "Chuỗi thời gian nâng cao và dự báo",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-ROBUST-C32-L01",
+      "sourceChapterNo": 32,
+      "sourceChapterId": "math_chapter_32",
+      "chapterTitle": "Robustness, anomaly detection và độ tin cậy mô hình",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-ROBUST-C32-L02",
+      "sourceChapterNo": 32,
+      "sourceChapterId": "math_chapter_32",
+      "chapterTitle": "Robustness, anomaly detection và độ tin cậy mô hình",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-ROBUST-C32-L03",
+      "sourceChapterNo": 32,
+      "sourceChapterId": "math_chapter_32",
+      "chapterTitle": "Robustness, anomaly detection và độ tin cậy mô hình",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-ROBUST-C32-L04",
+      "sourceChapterNo": 32,
+      "sourceChapterId": "math_chapter_32",
+      "chapterTitle": "Robustness, anomaly detection và độ tin cậy mô hình",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-ROBUST-C32-L05",
+      "sourceChapterNo": 32,
+      "sourceChapterId": "math_chapter_32",
+      "chapterTitle": "Robustness, anomaly detection và độ tin cậy mô hình",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-ROBUST-C32-L06",
+      "sourceChapterNo": 32,
+      "sourceChapterId": "math_chapter_32",
+      "chapterTitle": "Robustness, anomaly detection và độ tin cậy mô hình",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-ROBUST-C32-L07",
+      "sourceChapterNo": 32,
+      "sourceChapterId": "math_chapter_32",
+      "chapterTitle": "Robustness, anomaly detection và độ tin cậy mô hình",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-ROBUST-C32-L08",
+      "sourceChapterNo": 32,
+      "sourceChapterId": "math_chapter_32",
+      "chapterTitle": "Robustness, anomaly detection và độ tin cậy mô hình",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-ROBUST-C32-L09",
+      "sourceChapterNo": 32,
+      "sourceChapterId": "math_chapter_32",
+      "chapterTitle": "Robustness, anomaly detection và độ tin cậy mô hình",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-GRAPH-C33-L01",
+      "sourceChapterNo": 33,
+      "sourceChapterId": "math_chapter_33",
+      "chapterTitle": "Đồ thị, multi-agent systems và robotics planning",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-GRAPH-C33-L02",
+      "sourceChapterNo": 33,
+      "sourceChapterId": "math_chapter_33",
+      "chapterTitle": "Đồ thị, multi-agent systems và robotics planning",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-GRAPH-C33-L03",
+      "sourceChapterNo": 33,
+      "sourceChapterId": "math_chapter_33",
+      "chapterTitle": "Đồ thị, multi-agent systems và robotics planning",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-GRAPH-C33-L04",
+      "sourceChapterNo": 33,
+      "sourceChapterId": "math_chapter_33",
+      "chapterTitle": "Đồ thị, multi-agent systems và robotics planning",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-GRAPH-C33-L05",
+      "sourceChapterNo": 33,
+      "sourceChapterId": "math_chapter_33",
+      "chapterTitle": "Đồ thị, multi-agent systems và robotics planning",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-GRAPH-C33-L06",
+      "sourceChapterNo": 33,
+      "sourceChapterId": "math_chapter_33",
+      "chapterTitle": "Đồ thị, multi-agent systems và robotics planning",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-GRAPH-C33-L07",
+      "sourceChapterNo": 33,
+      "sourceChapterId": "math_chapter_33",
+      "chapterTitle": "Đồ thị, multi-agent systems và robotics planning",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-GRAPH-C33-L08",
+      "sourceChapterNo": 33,
+      "sourceChapterId": "math_chapter_33",
+      "chapterTitle": "Đồ thị, multi-agent systems và robotics planning",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-GRAPH-C33-L09",
+      "sourceChapterNo": 33,
+      "sourceChapterId": "math_chapter_33",
+      "chapterTitle": "Đồ thị, multi-agent systems và robotics planning",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-SYSID-C34-L01",
+      "sourceChapterNo": 34,
+      "sourceChapterId": "math_chapter_34",
+      "chapterTitle": "System identification và thiết kế thực nghiệm",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-SYSID-C34-L02",
+      "sourceChapterNo": 34,
+      "sourceChapterId": "math_chapter_34",
+      "chapterTitle": "System identification và thiết kế thực nghiệm",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-SYSID-C34-L03",
+      "sourceChapterNo": 34,
+      "sourceChapterId": "math_chapter_34",
+      "chapterTitle": "System identification và thiết kế thực nghiệm",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-SYSID-C34-L04",
+      "sourceChapterNo": 34,
+      "sourceChapterId": "math_chapter_34",
+      "chapterTitle": "System identification và thiết kế thực nghiệm",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-SYSID-C34-L05",
+      "sourceChapterNo": 34,
+      "sourceChapterId": "math_chapter_34",
+      "chapterTitle": "System identification và thiết kế thực nghiệm",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-SYSID-C34-L06",
+      "sourceChapterNo": 34,
+      "sourceChapterId": "math_chapter_34",
+      "chapterTitle": "System identification và thiết kế thực nghiệm",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-SYSID-C34-L07",
+      "sourceChapterNo": 34,
+      "sourceChapterId": "math_chapter_34",
+      "chapterTitle": "System identification và thiết kế thực nghiệm",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-SYSID-C34-L08",
+      "sourceChapterNo": 34,
+      "sourceChapterId": "math_chapter_34",
+      "chapterTitle": "System identification và thiết kế thực nghiệm",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-SYSID-C34-L09",
+      "sourceChapterNo": 34,
+      "sourceChapterId": "math_chapter_34",
+      "chapterTitle": "System identification và thiết kế thực nghiệm",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-DTWIN-C35-L01",
+      "sourceChapterNo": 35,
+      "sourceChapterId": "math_chapter_35",
+      "chapterTitle": "Mô phỏng số, digital twin và surrogate model",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-DTWIN-C35-L02",
+      "sourceChapterNo": 35,
+      "sourceChapterId": "math_chapter_35",
+      "chapterTitle": "Mô phỏng số, digital twin và surrogate model",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-DTWIN-C35-L03",
+      "sourceChapterNo": 35,
+      "sourceChapterId": "math_chapter_35",
+      "chapterTitle": "Mô phỏng số, digital twin và surrogate model",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-DTWIN-C35-L04",
+      "sourceChapterNo": 35,
+      "sourceChapterId": "math_chapter_35",
+      "chapterTitle": "Mô phỏng số, digital twin và surrogate model",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-DTWIN-C35-L05",
+      "sourceChapterNo": 35,
+      "sourceChapterId": "math_chapter_35",
+      "chapterTitle": "Mô phỏng số, digital twin và surrogate model",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-DTWIN-C35-L06",
+      "sourceChapterNo": 35,
+      "sourceChapterId": "math_chapter_35",
+      "chapterTitle": "Mô phỏng số, digital twin và surrogate model",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-DTWIN-C35-L07",
+      "sourceChapterNo": 35,
+      "sourceChapterId": "math_chapter_35",
+      "chapterTitle": "Mô phỏng số, digital twin và surrogate model",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-DTWIN-C35-L08",
+      "sourceChapterNo": 35,
+      "sourceChapterId": "math_chapter_35",
+      "chapterTitle": "Mô phỏng số, digital twin và surrogate model",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-DTWIN-C35-L09",
+      "sourceChapterNo": 35,
+      "sourceChapterId": "math_chapter_35",
+      "chapterTitle": "Mô phỏng số, digital twin và surrogate model",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-REPORT-C36-L01",
+      "sourceChapterNo": 36,
+      "sourceChapterId": "math_chapter_36",
+      "chapterTitle": "NIR: ablation, reproducibility, báo cáo kết quả",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-REPORT-C36-L02",
+      "sourceChapterNo": 36,
+      "sourceChapterId": "math_chapter_36",
+      "chapterTitle": "NIR: ablation, reproducibility, báo cáo kết quả",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-REPORT-C36-L03",
+      "sourceChapterNo": 36,
+      "sourceChapterId": "math_chapter_36",
+      "chapterTitle": "NIR: ablation, reproducibility, báo cáo kết quả",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-REPORT-C36-L04",
+      "sourceChapterNo": 36,
+      "sourceChapterId": "math_chapter_36",
+      "chapterTitle": "NIR: ablation, reproducibility, báo cáo kết quả",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-REPORT-C36-L05",
+      "sourceChapterNo": 36,
+      "sourceChapterId": "math_chapter_36",
+      "chapterTitle": "NIR: ablation, reproducibility, báo cáo kết quả",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-REPORT-C36-L06",
+      "sourceChapterNo": 36,
+      "sourceChapterId": "math_chapter_36",
+      "chapterTitle": "NIR: ablation, reproducibility, báo cáo kết quả",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-REPORT-C36-L07",
+      "sourceChapterNo": 36,
+      "sourceChapterId": "math_chapter_36",
+      "chapterTitle": "NIR: ablation, reproducibility, báo cáo kết quả",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-REPORT-C36-L08",
+      "sourceChapterNo": 36,
+      "sourceChapterId": "math_chapter_36",
+      "chapterTitle": "NIR: ablation, reproducibility, báo cáo kết quả",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-NIR-REPORT-C36-L09",
+      "sourceChapterNo": 36,
+      "sourceChapterId": "math_chapter_36",
+      "chapterTitle": "NIR: ablation, reproducibility, báo cáo kết quả",
+      "stageId": "stage_4_master_year2_sem3",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-PIPE-C37-L01",
+      "sourceChapterNo": 37,
+      "sourceChapterId": "math_chapter_37",
+      "chapterTitle": "Pipeline toán học cho luận văn thạc sĩ",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-PIPE-C37-L02",
+      "sourceChapterNo": 37,
+      "sourceChapterId": "math_chapter_37",
+      "chapterTitle": "Pipeline toán học cho luận văn thạc sĩ",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-PIPE-C37-L03",
+      "sourceChapterNo": 37,
+      "sourceChapterId": "math_chapter_37",
+      "chapterTitle": "Pipeline toán học cho luận văn thạc sĩ",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-PIPE-C37-L04",
+      "sourceChapterNo": 37,
+      "sourceChapterId": "math_chapter_37",
+      "chapterTitle": "Pipeline toán học cho luận văn thạc sĩ",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-PIPE-C37-L05",
+      "sourceChapterNo": 37,
+      "sourceChapterId": "math_chapter_37",
+      "chapterTitle": "Pipeline toán học cho luận văn thạc sĩ",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-PIPE-C37-L06",
+      "sourceChapterNo": 37,
+      "sourceChapterId": "math_chapter_37",
+      "chapterTitle": "Pipeline toán học cho luận văn thạc sĩ",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-PIPE-C37-L07",
+      "sourceChapterNo": 37,
+      "sourceChapterId": "math_chapter_37",
+      "chapterTitle": "Pipeline toán học cho luận văn thạc sĩ",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-PIPE-C37-L08",
+      "sourceChapterNo": 37,
+      "sourceChapterId": "math_chapter_37",
+      "chapterTitle": "Pipeline toán học cho luận văn thạc sĩ",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-PIPE-C37-L09",
+      "sourceChapterNo": 37,
+      "sourceChapterId": "math_chapter_37",
+      "chapterTitle": "Pipeline toán học cho luận văn thạc sĩ",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-VALID-C38-L01",
+      "sourceChapterNo": 38,
+      "sourceChapterId": "math_chapter_38",
+      "chapterTitle": "Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-VALID-C38-L02",
+      "sourceChapterNo": 38,
+      "sourceChapterId": "math_chapter_38",
+      "chapterTitle": "Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-VALID-C38-L03",
+      "sourceChapterNo": 38,
+      "sourceChapterId": "math_chapter_38",
+      "chapterTitle": "Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-VALID-C38-L04",
+      "sourceChapterNo": 38,
+      "sourceChapterId": "math_chapter_38",
+      "chapterTitle": "Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-VALID-C38-L05",
+      "sourceChapterNo": 38,
+      "sourceChapterId": "math_chapter_38",
+      "chapterTitle": "Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-VALID-C38-L06",
+      "sourceChapterNo": 38,
+      "sourceChapterId": "math_chapter_38",
+      "chapterTitle": "Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-VALID-C38-L07",
+      "sourceChapterNo": 38,
+      "sourceChapterId": "math_chapter_38",
+      "chapterTitle": "Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-VALID-C38-L08",
+      "sourceChapterNo": 38,
+      "sourceChapterId": "math_chapter_38",
+      "chapterTitle": "Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-VALID-C38-L09",
+      "sourceChapterNo": 38,
+      "sourceChapterId": "math_chapter_38",
+      "chapterTitle": "Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-DEFENSE-C39-L01",
+      "sourceChapterNo": 39,
+      "sourceChapterId": "math_chapter_39",
+      "chapterTitle": "Viết, trình bày và bảo vệ VKR",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-DEFENSE-C39-L02",
+      "sourceChapterNo": 39,
+      "sourceChapterId": "math_chapter_39",
+      "chapterTitle": "Viết, trình bày và bảo vệ VKR",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-DEFENSE-C39-L03",
+      "sourceChapterNo": 39,
+      "sourceChapterId": "math_chapter_39",
+      "chapterTitle": "Viết, trình bày và bảo vệ VKR",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-DEFENSE-C39-L04",
+      "sourceChapterNo": 39,
+      "sourceChapterId": "math_chapter_39",
+      "chapterTitle": "Viết, trình bày và bảo vệ VKR",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-DEFENSE-C39-L05",
+      "sourceChapterNo": 39,
+      "sourceChapterId": "math_chapter_39",
+      "chapterTitle": "Viết, trình bày và bảo vệ VKR",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-DEFENSE-C39-L06",
+      "sourceChapterNo": 39,
+      "sourceChapterId": "math_chapter_39",
+      "chapterTitle": "Viết, trình bày và bảo vệ VKR",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-DEFENSE-C39-L07",
+      "sourceChapterNo": 39,
+      "sourceChapterId": "math_chapter_39",
+      "chapterTitle": "Viết, trình bày và bảo vệ VKR",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-DEFENSE-C39-L08",
+      "sourceChapterNo": 39,
+      "sourceChapterId": "math_chapter_39",
+      "chapterTitle": "Viết, trình bày và bảo vệ VKR",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-DEFENSE-C39-L09",
+      "sourceChapterNo": 39,
+      "sourceChapterId": "math_chapter_39",
+      "chapterTitle": "Viết, trình bày và bảo vệ VKR",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-SYNTH-C40-L01",
+      "sourceChapterNo": 40,
+      "sourceChapterId": "math_chapter_40",
+      "chapterTitle": "Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-SYNTH-C40-L02",
+      "sourceChapterNo": 40,
+      "sourceChapterId": "math_chapter_40",
+      "chapterTitle": "Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-SYNTH-C40-L03",
+      "sourceChapterNo": 40,
+      "sourceChapterId": "math_chapter_40",
+      "chapterTitle": "Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-SYNTH-C40-L04",
+      "sourceChapterNo": 40,
+      "sourceChapterId": "math_chapter_40",
+      "chapterTitle": "Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-SYNTH-C40-L05",
+      "sourceChapterNo": 40,
+      "sourceChapterId": "math_chapter_40",
+      "chapterTitle": "Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-SYNTH-C40-L06",
+      "sourceChapterNo": 40,
+      "sourceChapterId": "math_chapter_40",
+      "chapterTitle": "Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-SYNTH-C40-L07",
+      "sourceChapterNo": 40,
+      "sourceChapterId": "math_chapter_40",
+      "chapterTitle": "Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-SYNTH-C40-L08",
+      "sourceChapterNo": 40,
+      "sourceChapterId": "math_chapter_40",
+      "chapterTitle": "Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    },
+    {
+      "lessonId": "MATH-VKR-SYNTH-C40-L09",
+      "sourceChapterNo": 40,
+      "sourceChapterId": "math_chapter_40",
+      "chapterTitle": "Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "stageId": "stage_5_master_year2_sem4_vkr",
+      "isOriginalReferenceId": false,
+      "importPolicy": "replace/add lesson in lessons.json by lessonId",
+      "reason": "extension_for_E110_active_spine_mapping"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": "E127_DATAVAULT_THEORY_IMPORTER",
+  "createdAt": "2026-06-26",
+  "checks": {
+    "lessonsJsonParse": true,
+    "lessonCount": 347,
+    "slideCount": 5552,
+    "allLessonsHaveIds": true,
+    "allLessonsHaveSlides": true,
+    "phdGenerated": 0,
+    "e127JsExists": true,
+    "e127CssExists": true,
+    "templateExists": true,
+    "indexLinkedCss": true,
+    "indexLinkedJs": true
+  },
+  "storageKeys": [
+    "bauman_math_e127_saved_lessons_v1",
+    "bauman_math_e127_backup_lessons_v1",
+    "bauman_math_e127_last_report_v1"
+  ],
+  "targetOnly": "lessons.json",
+  "doesNotModify": [
+    "formulas.json",
+    "exercises.json",
+    "simulations.json",
+    "question_bank.json",
+    "mindmap.json"
+  ]
+}

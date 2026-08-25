@@ -1,0 +1,15 @@
+{
+  "contract": "bauman_math_tests_empty_e107",
+  "version": "E107_EMPTY",
+  "levels": [
+    "easy",
+    "medium",
+    "hard",
+    "expert"
+  ],
+  "questions": [],
+  "policy": {
+    "status": "empty_by_design",
+    "importTarget": "question_bank.json/tests.json"
+  }
+}

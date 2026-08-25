@@ -1,0 +1,63 @@
+{
+  "id": "bauman_math_test_blueprint_content_e110",
+  "schema": "bauman_math_content_records_v1",
+  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "subject": "math",
+  "title": "Blueprint kiểm tra · Nội dung",
+  "contentVaultRole": "content",
+  "group": "Blueprint kiểm tra",
+  "purpose": "Nội dung chi tiết được tạo bằng bundle riêng và import vào nguồn này. File này không chứa khung giai đoạn/phân môn/chương.",
+  "frameSource": "test_blueprint_frame.json",
+  "legacyExportTarget": "test_blueprints.json",
+  "recordKey": "blueprintId",
+  "records": [],
+  "importPolicy": {
+    "key": "blueprintId",
+    "requires": [
+      "blueprintId",
+      "chapterId",
+      "distribution",
+      "questionRefs"
+    ],
+    "auditBeforeImport": true,
+    "appendOrReplace": "replace_by_key_then_append",
+    "doNotChange": [
+      "chapterId unless intentionally remapping",
+      "lessonId unless intentionally remapping"
+    ]
+  },
+  "searchIndexHint": {
+    "primary": [
+      "chapterId",
+      "lessonId",
+      "blueprintId"
+    ],
+    "semantic": [
+      "title",
+      "tags",
+      "pureLayer",
+      "appliedLayer",
+      "bridgeQuestion"
+    ]
+  },
+  "sampleRecord": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "blueprintId": "MATH-VN-C01-BP01",
+    "distribution": {
+      "easy": 8,
+      "medium": 6,
+      "hard": 4,
+      "expert": 2
+    },
+    "questionRefs": [],
+    "auditStatus": "DRAFT"
+  },
+  "updatedAt": "2026-06-22",
+  "emoji": "🧾",
+  "cleanArchitecturePolicy": {
+    "contentMustNotStoreStageTree": true,
+    "recordsMustUseStableIds": true,
+    "defaultImportMode": "replace_by_key_then_append",
+    "auditBeforeImport": true
+  }
+}

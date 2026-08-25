@@ -1,0 +1,58 @@
+{
+  "id": "bauman_math_media_content_e110",
+  "schema": "bauman_math_content_records_v1",
+  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "subject": "math",
+  "title": "Media và Canva · Nội dung",
+  "contentVaultRole": "content",
+  "group": "Media / Canva",
+  "purpose": "Nội dung chi tiết được tạo bằng bundle riêng và import vào nguồn này. File này không chứa khung giai đoạn/phân môn/chương.",
+  "frameSource": "media_frame.json",
+  "legacyExportTarget": "videos.json",
+  "recordKey": "mediaId",
+  "records": [],
+  "importPolicy": {
+    "key": "mediaId",
+    "requires": [
+      "mediaId",
+      "ownerId",
+      "type",
+      "path"
+    ],
+    "auditBeforeImport": true,
+    "appendOrReplace": "replace_by_key_then_append",
+    "doNotChange": [
+      "chapterId unless intentionally remapping",
+      "lessonId unless intentionally remapping"
+    ]
+  },
+  "searchIndexHint": {
+    "primary": [
+      "chapterId",
+      "lessonId",
+      "mediaId"
+    ],
+    "semantic": [
+      "title",
+      "tags",
+      "pureLayer",
+      "appliedLayer",
+      "bridgeQuestion"
+    ]
+  },
+  "sampleRecord": {
+    "ownerId": "MATH-VN-LA-C01-L04",
+    "mediaId": "MATH-VN-LA-C01-L04-COVER",
+    "type": "canva_cover",
+    "path": "assets/slides/MATH-VN-LA-C01-L04_cover.png",
+    "auditStatus": "DRAFT"
+  },
+  "updatedAt": "2026-06-22",
+  "emoji": "🎨",
+  "cleanArchitecturePolicy": {
+    "contentMustNotStoreStageTree": true,
+    "recordsMustUseStableIds": true,
+    "defaultImportMode": "replace_by_key_then_append",
+    "auditBeforeImport": true
+  }
+}

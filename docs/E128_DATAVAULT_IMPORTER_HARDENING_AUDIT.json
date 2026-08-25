@@ -1,0 +1,22 @@
+{
+  "version": "E128_DATAVAULT_IMPORTER_HARDENED",
+  "status": "PASS",
+  "checks": {
+    "jsonParseAll": "PASS",
+    "lessons": 347,
+    "slides": 5552,
+    "slidesPerLesson16": "PASS",
+    "uniqueLessonId": "PASS",
+    "uniqueSlideId": "PASS",
+    "activeChapters": 40,
+    "phdLeak": "PASS",
+    "indexedDBStorage": "PASS",
+    "mergeReplaceStrict16": "PASS",
+    "sourceMetadataRequired": "PASS",
+    "e126SelfCheckFlexible": "PASS",
+    "e128SelfCheckPanelReal": "PASS",
+    "rollbackBeforeCountFixed": "PASS"
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,22 @@
+{
+  "renderLearning_assignments": 10,
+  "renderTheory_assignments": 8,
+  "renderExercises_assignments": 7,
+  "renderPractice_assignments": 12,
+  "renderReview_assignments": 1,
+  "renderExam_assignments": 2,
+  "data_learn_occurrences": 49,
+  "learnTab_references": 212,
+  "renderFormula_refs": 5,
+  "css_learning_legacy_hits": {
+    "learn-canva": 231,
+    "v1261": 232,
+    "v1283": 38,
+    "e36": 95,
+    "e37": 39,
+    "e104": 107,
+    "e109": 56,
+    "lesson-reader": 42,
+    "exercise-nine": 31
+  }
+}

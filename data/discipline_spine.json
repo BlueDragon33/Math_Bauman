@@ -1,0 +1,302 @@
+{
+  "schema": "bauman_math_discipline_spine_v1",
+  "version": "E108_STAGE_DISCIPLINE_SPINE",
+  "subject": "math",
+  "program": "09.04.01/11 · Trí tuệ nhân tạo trong hệ thống xử lý thông tin và điều khiển tự động",
+  "architecture": "stage → discipline → chapter → pureLayer/appliedLayer → lesson content via DataVault",
+  "disciplines": [
+    {
+      "id": "math_language_logic",
+      "order": 1,
+      "title": "Ngôn ngữ toán học và logic nền tảng",
+      "icon": "∀",
+      "pureLayer": [
+        "ký hiệu toán học",
+        "mệnh đề và lượng từ",
+        "tập hợp và ánh xạ",
+        "điều kiện cần/đủ",
+        "chứng minh cơ bản"
+      ],
+      "appliedLayer": [
+        "đọc đề toán tiếng Nga",
+        "trình bày lời giải kỹ thuật",
+        "logic rule-based",
+        "mivar logical AI",
+        "kiểm tra giả thiết mô hình"
+      ],
+      "role": "Mở khóa khả năng đọc, viết và bảo vệ lập luận toán học bằng tiếng Nga."
+    },
+    {
+      "id": "linear_algebra_data_space",
+      "order": 2,
+      "title": "Đại số tuyến tính và không gian dữ liệu",
+      "icon": "▦",
+      "pureLayer": [
+        "vector",
+        "không gian vector",
+        "ma trận",
+        "định thức và hạng",
+        "cơ sở và tọa độ",
+        "trị riêng",
+        "SVD"
+      ],
+      "appliedLayer": [
+        "vector đặc trưng",
+        "PCA/embedding",
+        "ma trận trạng thái",
+        "ma trận trọng số neural network",
+        "sensor fusion"
+      ],
+      "role": "Xương sống cho AI, biểu diễn dữ liệu, điều khiển và xử lý tín hiệu."
+    },
+    {
+      "id": "calculus_multivariable",
+      "order": 3,
+      "title": "Giải tích một biến và nhiều biến",
+      "icon": "∇",
+      "pureLayer": [
+        "hàm số",
+        "giới hạn",
+        "đạo hàm",
+        "tích phân",
+        "đạo hàm riêng",
+        "gradient",
+        "Jacobian",
+        "Hessian"
+      ],
+      "appliedLayer": [
+        "gradient descent",
+        "backpropagation",
+        "hàm mất mát",
+        "độ nhạy hệ thống",
+        "tuyến tính hóa mô hình"
+      ],
+      "role": "Nền cho tối ưu, mạng neural và phân tích biến thiên của hệ thống."
+    },
+    {
+      "id": "ode_dynamical_systems",
+      "order": 4,
+      "title": "Phương trình vi phân và hệ động lực",
+      "icon": "ẋ",
+      "pureLayer": [
+        "ODE cấp một/cấp hai",
+        "hệ phương trình vi phân",
+        "điểm cân bằng",
+        "ổn định nghiệm",
+        "tuyến tính hóa quanh điểm cân bằng"
+      ],
+      "appliedLayer": [
+        "mô hình chuyển động robot/UAV",
+        "mô hình trạng thái liên tục",
+        "mô phỏng cơ điện",
+        "hệ biến thiên theo thời gian"
+      ],
+      "role": "Nối toán với vật thể chuyển động và hệ điều khiển."
+    },
+    {
+      "id": "probability_statistics_inference",
+      "order": 5,
+      "title": "Xác suất, thống kê và suy luận dữ liệu",
+      "icon": "σ",
+      "pureLayer": [
+        "biến ngẫu nhiên",
+        "phân phối",
+        "kỳ vọng/phương sai",
+        "hiệp phương sai",
+        "ước lượng",
+        "kiểm định",
+        "khoảng tin cậy"
+      ],
+      "appliedLayer": [
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML",
+        "uncertainty",
+        "A/B test",
+        "validation kết quả NIR/VKR"
+      ],
+      "role": "Biến dữ liệu nhiễu thành kết luận có độ tin cậy."
+    },
+    {
+      "id": "optimization_programming",
+      "order": 6,
+      "title": "Tối ưu hóa và quy hoạch toán học",
+      "icon": "⛰",
+      "pureLayer": [
+        "cực trị",
+        "hàm lồi",
+        "ràng buộc",
+        "nhân tử Lagrange",
+        "quy hoạch tuyến tính",
+        "quy hoạch động",
+        "điều kiện tối ưu"
+      ],
+      "appliedLayer": [
+        "huấn luyện mô hình AI",
+        "tối ưu quỹ đạo",
+        "tối ưu tham số điều khiển",
+        "regularization",
+        "reinforcement learning cơ bản"
+      ],
+      "role": "Dạy hệ thống chọn phương án tốt nhất dưới ràng buộc."
+    },
+    {
+      "id": "numerical_computational_math",
+      "order": 7,
+      "title": "Phương pháp số và toán học tính toán",
+      "icon": "≈",
+      "pureLayer": [
+        "sai số số học",
+        "điều kiện bài toán",
+        "nội suy",
+        "xấp xỉ",
+        "giải hệ tuyến tính số",
+        "Runge-Kutta",
+        "Newton-Raphson",
+        "least squares"
+      ],
+      "appliedLayer": [
+        "Python/MATLAB simulation",
+        "fitting dữ liệu cảm biến",
+        "digital twin",
+        "surrogate model",
+        "kiểm tra ổn định thuật toán"
+      ],
+      "role": "Cầu nối từ công thức trên bảng sang mô phỏng chạy được."
+    },
+    {
+      "id": "signal_processing_time_series",
+      "order": 8,
+      "title": "Xử lý tín hiệu và chuỗi thời gian",
+      "icon": "∿",
+      "pureLayer": [
+        "hàm theo thời gian",
+        "chuỗi",
+        "Fourier",
+        "Laplace",
+        "Z-transform",
+        "Wavelet",
+        "tương quan tín hiệu"
+      ],
+      "appliedLayer": [
+        "lọc nhiễu",
+        "phân tích cảm biến",
+        "nhận dạng tín hiệu",
+        "dự báo chuỗi thời gian",
+        "xử lý thông tin thời gian thực"
+      ],
+      "role": "Trục toán cho xử lý thông tin từ cảm biến và dữ liệu thời gian."
+    },
+    {
+      "id": "automatic_control_theory",
+      "order": 9,
+      "title": "Lý thuyết điều khiển tự động",
+      "icon": "⟳",
+      "pureLayer": [
+        "hàm truyền",
+        "không gian trạng thái",
+        "ổn định",
+        "điều khiển được",
+        "quan sát được",
+        "Lyapunov",
+        "feedback"
+      ],
+      "appliedLayer": [
+        "PID/LQR",
+        "điều khiển robot/UAV",
+        "AI trong vòng điều khiển",
+        "kiểm tra mất ổn định",
+        "hệ tự động ra quyết định"
+      ],
+      "role": "Xương sống của cụm điều khiển tự động trong 09.04.01/11."
+    },
+    {
+      "id": "state_estimation_sensor_fusion",
+      "order": 10,
+      "title": "Ước lượng trạng thái, lọc và sensor fusion",
+      "icon": "⌖",
+      "pureLayer": [
+        "mô hình trạng thái",
+        "nhiễu đo",
+        "nhiễu quá trình",
+        "ước lượng Bayes",
+        "Kalman filter",
+        "Extended Kalman",
+        "Particle filter nhập môn"
+      ],
+      "appliedLayer": [
+        "định vị robot",
+        "GPS/IMU/camera fusion",
+        "theo dõi trạng thái hệ",
+        "dự báo khi thiếu dữ liệu",
+        "điều khiển trong môi trường nhiễu"
+      ],
+      "role": "Cầu nối giữa xác suất và điều khiển trong hệ cảm biến."
+    },
+    {
+      "id": "discrete_graph_db_knowledge",
+      "order": 11,
+      "title": "Toán rời rạc, đồ thị, CSDL và biểu diễn tri thức",
+      "icon": "◇",
+      "pureLayer": [
+        "logic rời rạc",
+        "đồ thị",
+        "quan hệ",
+        "cây",
+        "đường đi",
+        "đại số quan hệ",
+        "độ phức tạp thuật toán"
+      ],
+      "appliedLayer": [
+        "graph planning",
+        "knowledge graph",
+        "mivar logical AI",
+        "CSDL cho hệ ML",
+        "query optimization",
+        "Big Data structure"
+      ],
+      "role": "Bổ sung logic, tri thức và dữ liệu có cấu trúc cho AI."
+    },
+    {
+      "id": "reliability_verification_lifecycle",
+      "order": 12,
+      "title": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "icon": "✓",
+      "pureLayer": [
+        "Markov chain cơ bản",
+        "failure rate",
+        "reliability function",
+        "queueing cơ bản",
+        "risk metrics",
+        "verification/validation",
+        "metrics"
+      ],
+      "appliedLayer": [
+        "reliability models",
+        "availability",
+        "robust AI system",
+        "kiểm chứng hệ xử lý thông tin",
+        "VKR metrics",
+        "traceability"
+      ],
+      "role": "Giúp luận văn chứng minh hệ thống đáng tin, đo được và bảo vệ được."
+    }
+  ],
+  "policy": {
+    "frameFiles": [
+      "data/discipline_spine.json",
+      "data/chapter_spine.json"
+    ],
+    "contentFiles": [
+      "data/lessons.json",
+      "data/formulas.json",
+      "data/exercises.json",
+      "data/applications.json",
+      "data/simulations.json",
+      "data/professor_qa.json",
+      "data/question_bank.json",
+      "data/review_packs.json"
+    ],
+    "rule": "Không hard-code cây học thuật trong UI. Muốn đổi khung thì thay discipline_spine/chapter_spine, không sửa core nếu schema giữ nguyên.",
+    "linking": "Nội dung mới phải tham chiếu stageId, disciplineId, chapterId, lessonId."
+  }
+}

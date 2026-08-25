@@ -1,0 +1,28 @@
+{
+  "schema": "bauman.math.theory.visual.audit.v1",
+  "version": "E125_theory_tab_visual_skin",
+  "createdAt": "2026-06-24",
+  "basePackage": "E124_FINAL",
+  "contentLessonModified": false,
+  "uiCoreModified": false,
+  "visualSkinAdded": true,
+  "canvaStyleGuideAdded": true,
+  "counts": {
+    "lessons": 347,
+    "slides": 5552,
+    "activeChapters": 40
+  },
+  "checks": {
+    "jsonParse": true,
+    "uniqueLessonId": true,
+    "uniqueSlideId": true,
+    "slidesPerLesson16": true,
+    "visualAssetsPresent": true,
+    "noPhdContent": true,
+    "noOtherDataSourcesGenerated": true,
+    "demoHtmlPresent": true,
+    "rendererPresent": true,
+    "cssPresent": true
+  },
+  "errors": []
+}

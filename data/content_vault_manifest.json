@@ -1,0 +1,440 @@
+{
+  "id": "bauman_math_content_vault_manifest_e113_subjects_only_clean",
+  "schema": "bauman_math_content_vault_manifest_v2",
+  "version": "E114_SPECIALIZED_DATA_VAULT_ROUTER",
+  "subject": "math",
+  "title": "Content Vault · Specialized Data Router",
+  "purpose": "Kho môn học chuyên biệt: Kho môn học → Học tập → tab nội dung → Khung môn học/Dữ liệu môn học, mỗi slot có Chèn/Sửa/Xóa/Xuất/Form.",
+  "rules": [
+    "Mỗi nguồn chính có 2 file: *_frame.json và *_content.json.",
+    "Frame chứa cấu trúc, phân loại, search/replace policy, liên kết chương/phân môn; không chứa nội dung bài giảng dài.",
+    "Content chứa records import/export; không chứa cây giai đoạn/phân môn/chương.",
+    "Legacy files được giữ để tương thích và xuất ngược khi cần, không phải đường nhập chính.",
+    "UI Kho môn học phải mở được Khung và Nội dung tách biệt, có import/export/replace rõ ràng.",
+    "Lịch trình hôm nay chỉ dùng bảng lịch làm trọng tâm, không chen bảng cổng phụ."
+  ],
+  "domains": [
+    {
+      "group": "Bài giảng lý thuyết",
+      "emoji": "📘",
+      "frame": "theory_lecture_frame",
+      "content": "theory_lecture_content",
+      "legacy": "lessons",
+      "title": "Bài giảng lý thuyết",
+      "level": "chapter_lesson",
+      "key": "lessonId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/theory_lecture_frame.json",
+      "contentPath": "subjects/math/data/theory_lecture_content.json",
+      "importTarget": "theory_lecture_content",
+      "replacePolicy": {
+        "key": "lessonId",
+        "requires": [
+          "lessonId",
+          "chapterId",
+          "lessonTitle",
+          "slides"
+        ],
+        "doNotChange": [
+          "chapterId unless intentionally remapping to a frame chapter"
+        ],
+        "auditBeforeImport": true
+      }
+    },
+    {
+      "group": "Công thức",
+      "emoji": "∑",
+      "frame": "formula_frame",
+      "content": "formula_content",
+      "legacy": "formulas",
+      "title": "Công thức",
+      "level": "lesson",
+      "key": "formulaId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/formula_frame.json",
+      "contentPath": "subjects/math/data/formula_content.json",
+      "importTarget": "formula_content",
+      "replacePolicy": {
+        "key": "formulaId",
+        "requires": [
+          "formulaId",
+          "lessonId",
+          "chapterId",
+          "title",
+          "formula"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Mô phỏng",
+      "emoji": "🔬",
+      "frame": "simulation_frame",
+      "content": "simulation_content",
+      "legacy": "simulations",
+      "title": "Mô phỏng",
+      "level": "lesson",
+      "key": "simulationId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/simulation_frame.json",
+      "contentPath": "subjects/math/data/simulation_content.json",
+      "importTarget": "simulation_content",
+      "replacePolicy": {
+        "key": "simulationId",
+        "requires": [
+          "simulationId",
+          "lessonId",
+          "chapterId",
+          "title",
+          "purpose",
+          "controls",
+          "computedReadouts"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Bài tập",
+      "emoji": "📝",
+      "frame": "exercise_frame",
+      "content": "exercise_content",
+      "legacy": "exercises",
+      "title": "Bài tập",
+      "level": "lesson",
+      "key": "exerciseId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/exercise_frame.json",
+      "contentPath": "subjects/math/data/exercise_content.json",
+      "importTarget": "exercise_content",
+      "replacePolicy": {
+        "key": "exerciseId",
+        "requires": [
+          "exerciseId",
+          "lessonId",
+          "chapterId",
+          "level",
+          "prompt",
+          "solution"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Ứng dụng",
+      "emoji": "🧩",
+      "frame": "application_frame",
+      "content": "application_content",
+      "legacy": "applications",
+      "title": "Ứng dụng",
+      "level": "lesson",
+      "key": "applicationId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/application_frame.json",
+      "contentPath": "subjects/math/data/application_content.json",
+      "importTarget": "application_content",
+      "replacePolicy": {
+        "key": "applicationId",
+        "requires": [
+          "applicationId",
+          "lessonId",
+          "chapterId",
+          "title",
+          "scenario",
+          "method"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Vấn đáp",
+      "emoji": "🎓",
+      "frame": "professor_qa_frame",
+      "content": "professor_qa_content",
+      "legacy": "professor_qa",
+      "title": "Vấn đáp",
+      "level": "lesson",
+      "key": "qaId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/professor_qa_frame.json",
+      "contentPath": "subjects/math/data/professor_qa_content.json",
+      "importTarget": "professor_qa_content",
+      "replacePolicy": {
+        "key": "qaId",
+        "requires": [
+          "qaId",
+          "lessonId",
+          "chapterId",
+          "question",
+          "answer"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Ôn tập",
+      "emoji": "🧪",
+      "frame": "review_pack_frame",
+      "content": "review_pack_content",
+      "legacy": "review_packs",
+      "title": "Ôn tập",
+      "level": "lesson",
+      "key": "reviewPackId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/review_pack_frame.json",
+      "contentPath": "subjects/math/data/review_pack_content.json",
+      "importTarget": "review_pack_content",
+      "replacePolicy": {
+        "key": "reviewPackId",
+        "requires": [
+          "reviewPackId",
+          "lessonId",
+          "chapterId",
+          "items"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Ngân hàng câu hỏi",
+      "emoji": "❓",
+      "frame": "question_bank_frame",
+      "content": "question_bank_content",
+      "legacy": "question_bank",
+      "title": "Ngân hàng câu hỏi",
+      "level": "lesson_chapter",
+      "key": "questionId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/question_bank_frame.json",
+      "contentPath": "subjects/math/data/question_bank_content.json",
+      "importTarget": "question_bank_content",
+      "replacePolicy": {
+        "key": "questionId",
+        "requires": [
+          "questionId",
+          "lessonId",
+          "chapterId",
+          "level",
+          "question",
+          "answer"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Blueprint kiểm tra",
+      "emoji": "🧾",
+      "frame": "test_blueprint_frame",
+      "content": "test_blueprint_content",
+      "legacy": "test_blueprints",
+      "title": "Blueprint kiểm tra",
+      "level": "chapter",
+      "key": "blueprintId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/test_blueprint_frame.json",
+      "contentPath": "subjects/math/data/test_blueprint_content.json",
+      "importTarget": "test_blueprint_content",
+      "replacePolicy": {
+        "key": "blueprintId",
+        "requires": [
+          "blueprintId",
+          "chapterId",
+          "distribution",
+          "questionRefs"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Slide bổ trợ cấp chương",
+      "emoji": "🖼️",
+      "frame": "chapter_lecture_frame",
+      "content": "chapter_lecture_content",
+      "legacy": "chapter_lectures",
+      "title": "Slide bổ trợ cấp chương",
+      "level": "chapter",
+      "key": "chapterLectureId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/chapter_lecture_frame.json",
+      "contentPath": "subjects/math/data/chapter_lecture_content.json",
+      "importTarget": "chapter_lecture_content",
+      "replacePolicy": {
+        "key": "chapterLectureId",
+        "requires": [
+          "chapterLectureId",
+          "chapterId",
+          "slides"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Mind map",
+      "emoji": "🧠",
+      "frame": "mindmap_frame",
+      "content": "mindmap_content",
+      "legacy": "mindmap",
+      "title": "Mind map",
+      "level": "chapter_lesson",
+      "key": "mindmapId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/mindmap_frame.json",
+      "contentPath": "subjects/math/data/mindmap_content.json",
+      "importTarget": "mindmap_content",
+      "replacePolicy": {
+        "key": "mindmapId",
+        "requires": [
+          "mindmapId",
+          "chapterId",
+          "nodes",
+          "edges"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Concept map",
+      "emoji": "🕸️",
+      "frame": "concept_map_frame",
+      "content": "concept_map_content",
+      "legacy": "concept-map",
+      "title": "Concept map",
+      "level": "chapter_lesson",
+      "key": "conceptMapId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/concept_map_frame.json",
+      "contentPath": "subjects/math/data/concept_map_content.json",
+      "importTarget": "concept_map_content",
+      "replacePolicy": {
+        "key": "conceptMapId",
+        "requires": [
+          "conceptMapId",
+          "chapterId",
+          "concepts",
+          "relations"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    },
+    {
+      "group": "Media / Canva",
+      "emoji": "🎨",
+      "frame": "media_frame",
+      "content": "media_content",
+      "legacy": "videos",
+      "title": "Media / Canva",
+      "level": "lesson_chapter",
+      "key": "mediaId",
+      "frameCount": 56,
+      "contentCount": 0,
+      "framePath": "subjects/math/data/media_frame.json",
+      "contentPath": "subjects/math/data/media_content.json",
+      "importTarget": "media_content",
+      "replacePolicy": {
+        "key": "mediaId",
+        "requires": [
+          "mediaId",
+          "ownerId",
+          "type",
+          "path"
+        ],
+        "auditBeforeImport": true,
+        "appendOrReplace": "replace_by_key_then_append",
+        "doNotChange": [
+          "chapterId unless intentionally remapping",
+          "lessonId unless intentionally remapping"
+        ]
+      }
+    }
+  ],
+  "uiContract": {
+    "storageView": "E112 clean vault dashboard only, no old storage UI stacked below",
+    "routeModal": "today schedule table first, no academic gate panel",
+    "cta": "Lịch trình hôm nay must be visually dominant on overview",
+    "openSourceAction": "data-e112-open-storage"
+  },
+  "e114NavigationContract": {
+    "pathExample": [
+      "Kho môn học",
+      "Học tập",
+      "Lý thuyết",
+      "Khung môn học / Dữ liệu môn học"
+    ],
+    "slotActions": [
+      "Chèn (thay thế nội dung cũ)",
+      "Sửa",
+      "Xóa",
+      "Xuất file đã chèn vào",
+      "Form dữ liệu mẫu"
+    ],
+    "mainRule": "Không sửa main để mở rộng học liệu; mở rộng bằng JSON qua slot frame/content.",
+    "baumanCore": "active chapters 1-40 from August 2026 to VKR",
+    "phdExtension": "chapters 41-56 locked framework only; no content generation"
+  }
+}

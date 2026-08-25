@@ -1,0 +1,65 @@
+{
+  "id": "bauman_math_professor_qa_content_e110",
+  "schema": "bauman_math_content_records_v1",
+  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "subject": "math",
+  "title": "Vấn đáp giáo sư · Nội dung",
+  "contentVaultRole": "content",
+  "group": "Vấn đáp",
+  "purpose": "Nội dung chi tiết được tạo bằng bundle riêng và import vào nguồn này. File này không chứa khung giai đoạn/phân môn/chương.",
+  "frameSource": "professor_qa_frame.json",
+  "legacyExportTarget": "professor_qa.json",
+  "recordKey": "qaId",
+  "records": [],
+  "importPolicy": {
+    "key": "qaId",
+    "requires": [
+      "qaId",
+      "lessonId",
+      "chapterId",
+      "question",
+      "answer"
+    ],
+    "auditBeforeImport": true,
+    "appendOrReplace": "replace_by_key_then_append",
+    "doNotChange": [
+      "chapterId unless intentionally remapping",
+      "lessonId unless intentionally remapping"
+    ]
+  },
+  "searchIndexHint": {
+    "primary": [
+      "chapterId",
+      "lessonId",
+      "qaId"
+    ],
+    "semantic": [
+      "title",
+      "tags",
+      "pureLayer",
+      "appliedLayer",
+      "bridgeQuestion"
+    ]
+  },
+  "sampleRecord": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonId": "MATH-VN-LA-C01-L04",
+    "tags": [
+      "vector",
+      "AI",
+      "điều khiển"
+    ],
+    "qaId": "MATH-VN-LA-C01-L04-QA01",
+    "question": "Vì sao tích vô hướng lớn chưa chắc hai vector giống nhau?",
+    "answer": "Vì tích vô hướng bị ảnh hưởng bởi độ dài; cần chuẩn hóa để xét hướng.",
+    "auditStatus": "DRAFT"
+  },
+  "updatedAt": "2026-06-22",
+  "emoji": "🎓",
+  "cleanArchitecturePolicy": {
+    "contentMustNotStoreStageTree": true,
+    "recordsMustUseStableIds": true,
+    "defaultImportMode": "replace_by_key_then_append",
+    "auditBeforeImport": true
+  }
+}

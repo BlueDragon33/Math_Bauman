@@ -1,0 +1,57 @@
+{
+  "id": "bauman_math_chapter_lecture_content_e110",
+  "schema": "bauman_math_content_records_v1",
+  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "subject": "math",
+  "title": "Slide bổ trợ cấp chương · Nội dung",
+  "contentVaultRole": "content",
+  "group": "Slide bổ trợ cấp chương",
+  "purpose": "Nội dung chi tiết được tạo bằng bundle riêng và import vào nguồn này. File này không chứa khung giai đoạn/phân môn/chương.",
+  "frameSource": "chapter_lecture_frame.json",
+  "legacyExportTarget": "chapter_lectures.json",
+  "recordKey": "chapterLectureId",
+  "records": [],
+  "importPolicy": {
+    "key": "chapterLectureId",
+    "requires": [
+      "chapterLectureId",
+      "chapterId",
+      "slides"
+    ],
+    "auditBeforeImport": true,
+    "appendOrReplace": "replace_by_key_then_append",
+    "doNotChange": [
+      "chapterId unless intentionally remapping",
+      "lessonId unless intentionally remapping"
+    ]
+  },
+  "searchIndexHint": {
+    "primary": [
+      "chapterId",
+      "lessonId",
+      "chapterLectureId"
+    ],
+    "semantic": [
+      "title",
+      "tags",
+      "pureLayer",
+      "appliedLayer",
+      "bridgeQuestion"
+    ]
+  },
+  "sampleRecord": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "chapterLectureId": "MATH-VN-C01-CL01",
+    "chapterTitle": "Vector trong không gian dữ liệu",
+    "slides": [],
+    "auditStatus": "DRAFT"
+  },
+  "updatedAt": "2026-06-22",
+  "emoji": "🖼️",
+  "cleanArchitecturePolicy": {
+    "contentMustNotStoreStageTree": true,
+    "recordsMustUseStableIds": true,
+    "defaultImportMode": "replace_by_key_then_append",
+    "auditBeforeImport": true
+  }
+}

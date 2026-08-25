@@ -1,0 +1,1569 @@
+{
+  "id": "bauman_math_simulation_frame_e110",
+  "schema": "bauman_math_content_frame_v1",
+  "version": "E114_SPECIALIZED_DATA_VAULT_ROUTER",
+  "subject": "math",
+  "title": "Mô phỏng unified · Khung",
+  "contentVaultRole": "frame",
+  "group": "Mô phỏng",
+  "emoji": "🔬",
+  "purpose": "Khung mô phỏng và nội dung lab unified theo bài. File này chỉ chứa khung, phân loại, chuẩn tìm kiếm và luật thay thế; không chứa nội dung chi tiết.",
+  "contentSource": "simulation_content.json",
+  "legacySource": "simulations.json",
+  "level": "lesson",
+  "recordKey": "simulationId",
+  "searchKeys": [
+    "stageId",
+    "disciplineId",
+    "chapterId",
+    "lessonId",
+    "simulationId",
+    "title",
+    "tags"
+  ],
+  "replacePolicy": {
+    "key": "simulationId",
+    "matchFallback": [
+      "lessonId",
+      "chapterId",
+      "title"
+    ],
+    "allowAppend": true,
+    "allowReplace": true,
+    "auditBeforeReplace": true,
+    "doNotChange": [
+      "stageId",
+      "disciplineId",
+      "chapterId",
+      "lessonId unless intentionally remapping"
+    ]
+  },
+  "frameLinks": {
+    "disciplineSource": "discipline_spine.json",
+    "chapterSource": "chapter_spine.json",
+    "theoryFrameSource": "theory_lecture_frame.json"
+  },
+  "chapters": [
+    {
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "chapterTitle": "Chương 1 · Vector trong không gian dữ liệu",
+      "stageId": "vn",
+      "stageTitle": "Giai đoạn 0 · Việt Nam trước dự bị",
+      "disciplineId": "linear_algebra_data_space",
+      "disciplineTitle": "Đại số tuyến tính và không gian dữ liệu",
+      "localChapterNo": 1,
+      "pureLayer": [
+        "vector",
+        "chuẩn vector",
+        "tích vô hướng",
+        "cơ sở",
+        "không gian vector",
+        "ma trận"
+      ],
+      "appliedLayer": [
+        "vector đặc trưng",
+        "cosine similarity",
+        "vector trạng thái",
+        "dữ liệu cảm biến",
+        "PCA/embedding",
+        "ma trận trạng thái"
+      ],
+      "bridgeQuestion": "Một vector toán học trở thành dữ liệu kỹ thuật như thế nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "chapterTitle": "Chương 2 · Ma trận và phép biến đổi tuyến tính",
+      "stageId": "vn",
+      "stageTitle": "Giai đoạn 0 · Việt Nam trước dự bị",
+      "disciplineId": "linear_algebra_data_space",
+      "disciplineTitle": "Đại số tuyến tính và không gian dữ liệu",
+      "localChapterNo": 2,
+      "pureLayer": [
+        "ma trận",
+        "phép biến đổi tuyến tính",
+        "hạng",
+        "nghịch đảo",
+        "vector",
+        "không gian vector"
+      ],
+      "appliedLayer": [
+        "ma trận biến đổi dữ liệu",
+        "ma trận trạng thái",
+        "pipeline PCA",
+        "tính toán ổn định",
+        "vector đặc trưng",
+        "PCA/embedding"
+      ],
+      "bridgeQuestion": "Khi nào ma trận là phép biến đổi, khi nào là dữ liệu?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "chapterTitle": "Chương 3 · Hàm số, đạo hàm và gradient cơ bản",
+      "stageId": "vn",
+      "stageTitle": "Giai đoạn 0 · Việt Nam trước dự bị",
+      "disciplineId": "calculus_multivariable",
+      "disciplineTitle": "Giải tích một biến và nhiều biến",
+      "localChapterNo": 3,
+      "pureLayer": [
+        "hàm số",
+        "đạo hàm",
+        "gradient",
+        "đạo hàm riêng",
+        "giới hạn",
+        "tích phân"
+      ],
+      "appliedLayer": [
+        "gradient descent",
+        "hàm mất mát",
+        "độ nhạy mô hình",
+        "tuyến tính hóa",
+        "backpropagation",
+        "độ nhạy hệ thống"
+      ],
+      "bridgeQuestion": "Gradient nói gì về hướng thay đổi của sai số?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "chapterTitle": "Chương 4 · Xác suất cơ bản và biến ngẫu nhiên",
+      "stageId": "vn",
+      "stageTitle": "Giai đoạn 0 · Việt Nam trước dự bị",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 4,
+      "pureLayer": [
+        "biến ngẫu nhiên",
+        "phân phối",
+        "kỳ vọng",
+        "phương sai",
+        "kỳ vọng/phương sai",
+        "hiệp phương sai"
+      ],
+      "appliedLayer": [
+        "nhiễu cảm biến",
+        "uncertainty",
+        "đánh giá rủi ro",
+        "mô hình hóa sai số",
+        "đánh giá mô hình ML",
+        "A/B test"
+      ],
+      "bridgeQuestion": "Tại sao dữ liệu đo luôn cần xác suất đi kèm?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "chapterTitle": "Chương 5 · Thống kê mô tả và dữ liệu thực nghiệm",
+      "stageId": "vn",
+      "stageTitle": "Giai đoạn 0 · Việt Nam trước dự bị",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 5,
+      "pureLayer": [
+        "mẫu dữ liệu",
+        "trung bình",
+        "phương sai",
+        "tương quan",
+        "biến ngẫu nhiên",
+        "phân phối"
+      ],
+      "appliedLayer": [
+        "EDA",
+        "validation thực nghiệm",
+        "báo cáo định lượng",
+        "A/B test nhập môn",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Số liệu mô tả điều gì và che giấu điều gì?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-VN-C06-python_numpy_cho_tinh_to",
+      "chapterTitle": "Chương 6 · Python/Numpy cho tính toán toán học",
+      "stageId": "vn",
+      "stageTitle": "Giai đoạn 0 · Việt Nam trước dự bị",
+      "disciplineId": "numerical_computational_math",
+      "disciplineTitle": "Phương pháp số và toán học tính toán",
+      "localChapterNo": 6,
+      "pureLayer": [
+        "mảng số",
+        "vector hóa",
+        "sai số số học",
+        "ma trận số",
+        "điều kiện bài toán",
+        "nội suy"
+      ],
+      "appliedLayer": [
+        "NumPy",
+        "mô phỏng nhỏ",
+        "tính toán tái lập",
+        "kiểm tra công thức bằng code",
+        "Python/MATLAB simulation",
+        "fitting dữ liệu cảm biến"
+      ],
+      "bridgeQuestion": "Làm sao biến công thức thành phép tính có thể kiểm chứng?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C07-ngon_ngu_toan_ky_thuat_n",
+      "chapterTitle": "Chương 1 · Ngôn ngữ toán kỹ thuật Nga: ký hiệu, câu lệnh và cách đọc công thức",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "math_language_logic",
+      "disciplineTitle": "Ngôn ngữ toán học và logic nền tảng",
+      "localChapterNo": 1,
+      "pureLayer": [
+        "ký hiệu Nga",
+        "lượng từ",
+        "câu lệnh toán học",
+        "đọc công thức",
+        "ký hiệu toán học",
+        "mệnh đề và lượng từ"
+      ],
+      "appliedLayer": [
+        "đọc giáo trình Nga",
+        "ghi lời giải",
+        "dịch thuật ngữ",
+        "thi vấn đáp",
+        "đọc đề toán tiếng Nga",
+        "trình bày lời giải kỹ thuật"
+      ],
+      "bridgeQuestion": "Khi giáo viên Nga viết một dòng ký hiệu, ta phải đọc thành mệnh đề nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C08-logic_tap_hop_ham_so_va_",
+      "chapterTitle": "Chương 2 · Logic, tập hợp, hàm số và cách trình bày lời giải",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "math_language_logic",
+      "disciplineTitle": "Ngôn ngữ toán học và logic nền tảng",
+      "localChapterNo": 2,
+      "pureLayer": [
+        "logic mệnh đề",
+        "tập hợp",
+        "ánh xạ",
+        "chứng minh",
+        "ký hiệu toán học",
+        "mệnh đề và lượng từ"
+      ],
+      "appliedLayer": [
+        "logic AI",
+        "rule-based reasoning",
+        "mivar nền",
+        "trình bày thuật toán",
+        "đọc đề toán tiếng Nga",
+        "trình bày lời giải kỹ thuật"
+      ],
+      "bridgeQuestion": "Một lời giải đúng cần cấu trúc logic như thế nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C09-ai_so_tuyen_tinh_i_vecto",
+      "chapterTitle": "Chương 3 · Đại số tuyến tính I: vector, ma trận và hệ phương trình",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "linear_algebra_data_space",
+      "disciplineTitle": "Đại số tuyến tính và không gian dữ liệu",
+      "localChapterNo": 3,
+      "pureLayer": [
+        "hệ phương trình",
+        "ma trận",
+        "định thức",
+        "khử Gauss",
+        "vector",
+        "không gian vector"
+      ],
+      "appliedLayer": [
+        "giải hệ trạng thái",
+        "biểu diễn dữ liệu",
+        "pipeline tính toán",
+        "kiểm tra hạng",
+        "vector đặc trưng",
+        "PCA/embedding"
+      ],
+      "bridgeQuestion": "Hệ phương trình tuyến tính mô tả ràng buộc dữ liệu ra sao?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "chapterTitle": "Chương 4 · Đại số tuyến tính II: trị riêng, trực giao, SVD và PCA",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "linear_algebra_data_space",
+      "disciplineTitle": "Đại số tuyến tính và không gian dữ liệu",
+      "localChapterNo": 4,
+      "pureLayer": [
+        "trị riêng",
+        "trực giao",
+        "SVD",
+        "PCA",
+        "vector",
+        "không gian vector"
+      ],
+      "appliedLayer": [
+        "nén dữ liệu",
+        "giảm chiều",
+        "phân tích mode",
+        "ổn định ma trận",
+        "vector đặc trưng",
+        "PCA/embedding"
+      ],
+      "bridgeQuestion": "Vì sao trị riêng cho thấy hướng quan trọng của hệ?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C11-giai_tich_i_gioi_han_lie",
+      "chapterTitle": "Chương 5 · Giải tích I: giới hạn, liên tục và đạo hàm một biến",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "calculus_multivariable",
+      "disciplineTitle": "Giải tích một biến và nhiều biến",
+      "localChapterNo": 5,
+      "pureLayer": [
+        "giới hạn",
+        "liên tục",
+        "đạo hàm một biến",
+        "quy tắc đạo hàm",
+        "hàm số",
+        "đạo hàm"
+      ],
+      "appliedLayer": [
+        "độ nhạy",
+        "tốc độ thay đổi",
+        "hàm mất mát đơn biến",
+        "kiểm tra cực trị",
+        "gradient descent",
+        "backpropagation"
+      ],
+      "bridgeQuestion": "Đạo hàm đo thay đổi cục bộ như thế nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C12-giai_tich_ii_nhieu_bien_",
+      "chapterTitle": "Chương 6 · Giải tích II: nhiều biến, gradient, cực trị và ràng buộc",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "calculus_multivariable",
+      "disciplineTitle": "Giải tích một biến và nhiều biến",
+      "localChapterNo": 6,
+      "pureLayer": [
+        "đạo hàm riêng",
+        "gradient",
+        "cực trị",
+        "ràng buộc",
+        "hàm số",
+        "giới hạn"
+      ],
+      "appliedLayer": [
+        "tối ưu tham số",
+        "Lagrange",
+        "tuyến tính hóa",
+        "backprop nền",
+        "gradient descent",
+        "backpropagation"
+      ],
+      "bridgeQuestion": "Cực trị nhiều biến khác cực trị một biến ở điểm nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C13-chuoi_khai_trien_taylor_",
+      "chapterTitle": "Chương 7 · Chuỗi, khai triển Taylor, xấp xỉ và sai số",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "numerical_computational_math",
+      "disciplineTitle": "Phương pháp số và toán học tính toán",
+      "localChapterNo": 7,
+      "pureLayer": [
+        "chuỗi",
+        "Taylor",
+        "xấp xỉ",
+        "sai số",
+        "sai số số học",
+        "điều kiện bài toán"
+      ],
+      "appliedLayer": [
+        "xấp xỉ hàm",
+        "kiểm soát sai số",
+        "mô phỏng số",
+        "linearization",
+        "Python/MATLAB simulation",
+        "fitting dữ liệu cảm biến"
+      ],
+      "bridgeQuestion": "Khi không tính chính xác được, xấp xỉ sai bao nhiêu là chấp nhận được?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C14-phuong_trinh_vi_phan_va_",
+      "chapterTitle": "Chương 8 · Phương trình vi phân và mô hình động lực cơ bản",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "ode_dynamical_systems",
+      "disciplineTitle": "Phương trình vi phân và hệ động lực",
+      "localChapterNo": 8,
+      "pureLayer": [
+        "ODE cấp 1",
+        "ODE cấp 2",
+        "nghiệm cân bằng",
+        "mô hình động lực",
+        "ODE cấp một/cấp hai",
+        "hệ phương trình vi phân"
+      ],
+      "appliedLayer": [
+        "robot/UAV dynamics",
+        "mô phỏng trạng thái",
+        "hệ thời gian liên tục",
+        "chuẩn bị điều khiển",
+        "mô hình chuyển động robot/UAV",
+        "mô hình trạng thái liên tục"
+      ],
+      "bridgeQuestion": "Một phương trình vi phân mô tả chuyển động như thế nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C15-xac_suat_phan_phoi_ky_vo",
+      "chapterTitle": "Chương 9 · Xác suất: phân phối, kỳ vọng, phương sai và luật giới hạn",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 9,
+      "pureLayer": [
+        "phân phối",
+        "kỳ vọng",
+        "phương sai",
+        "luật giới hạn",
+        "biến ngẫu nhiên",
+        "kỳ vọng/phương sai"
+      ],
+      "appliedLayer": [
+        "nhiễu Gaussian",
+        "ước lượng",
+        "lọc tín hiệu",
+        "uncertainty",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Khi dữ liệu dao động quanh sự thật, ta mô tả sự thật bằng gì?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C16-thong_ke_uoc_luong_kiem_",
+      "chapterTitle": "Chương 10 · Thống kê: ước lượng, kiểm định và khoảng tin cậy",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 10,
+      "pureLayer": [
+        "ước lượng",
+        "kiểm định",
+        "khoảng tin cậy",
+        "p-value",
+        "biến ngẫu nhiên",
+        "phân phối"
+      ],
+      "appliedLayer": [
+        "đánh giá mô hình",
+        "validation",
+        "thiết kế thực nghiệm",
+        "báo cáo NIR",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Kết quả thực nghiệm có đáng tin hay chỉ là may mắn?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C17-phuong_phap_so_nghiem_ga",
+      "chapterTitle": "Chương 11 · Phương pháp số: nghiệm gần đúng, sai số và ổn định tính toán",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "numerical_computational_math",
+      "disciplineTitle": "Phương pháp số và toán học tính toán",
+      "localChapterNo": 11,
+      "pureLayer": [
+        "nghiệm gần đúng",
+        "Newton-Raphson",
+        "Runge-Kutta",
+        "độ ổn định",
+        "sai số số học",
+        "điều kiện bài toán"
+      ],
+      "appliedLayer": [
+        "mô phỏng quỹ đạo",
+        "giải ODE số",
+        "kiểm tra sai số",
+        "MATLAB/Python",
+        "Python/MATLAB simulation",
+        "fitting dữ liệu cảm biến"
+      ],
+      "bridgeQuestion": "Vì sao nghiệm số có thể đúng về hình nhưng sai về vật lý?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PREP-C18-lab_mo_hinh_toan_tin_hie",
+      "chapterTitle": "Chương 12 · Lab mô hình toán: tín hiệu, điều khiển, dữ liệu và mô phỏng mini",
+      "stageId": "prep",
+      "stageTitle": "Giai đoạn 1 · Dự bị tiếng Nga / nền Nga",
+      "disciplineId": "numerical_computational_math",
+      "disciplineTitle": "Phương pháp số và toán học tính toán",
+      "localChapterNo": 12,
+      "pureLayer": [
+        "mô hình mini",
+        "dữ liệu mẫu",
+        "tín hiệu đơn giản",
+        "sai số",
+        "sai số số học",
+        "điều kiện bài toán"
+      ],
+      "appliedLayer": [
+        "mini lab",
+        "mô phỏng tín hiệu",
+        "mô phỏng điều khiển",
+        "pipeline dữ liệu",
+        "Python/MATLAB simulation",
+        "fitting dữ liệu cảm biến"
+      ],
+      "bridgeQuestion": "Một lab nhỏ cần đo gì để nối toán với hệ thật?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK1-C19-ai_so_tuyen_tinh_so_va_t",
+      "chapterTitle": "Chương 1 · Đại số tuyến tính số và tính toán ổn định",
+      "stageId": "hk1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "disciplineId": "numerical_computational_math",
+      "disciplineTitle": "Phương pháp số và toán học tính toán",
+      "localChapterNo": 1,
+      "pureLayer": [
+        "condition number",
+        "ổn định số",
+        "decomposition",
+        "least squares",
+        "sai số số học",
+        "điều kiện bài toán"
+      ],
+      "appliedLayer": [
+        "tính toán ổn định",
+        "PCA số",
+        "giải hệ lớn",
+        "ML pipeline",
+        "Python/MATLAB simulation",
+        "fitting dữ liệu cảm biến"
+      ],
+      "bridgeQuestion": "Khi nào ma trận đúng về công thức nhưng nguy hiểm khi tính bằng máy?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK1-C20-toi_uu_hoa_loi_va_toi_uu",
+      "chapterTitle": "Chương 2 · Tối ưu hóa lồi và tối ưu có ràng buộc",
+      "stageId": "hk1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "disciplineId": "optimization_programming",
+      "disciplineTitle": "Tối ưu hóa và quy hoạch toán học",
+      "localChapterNo": 2,
+      "pureLayer": [
+        "convexity",
+        "ràng buộc",
+        "KKT nhập môn",
+        "duality",
+        "cực trị",
+        "hàm lồi"
+      ],
+      "appliedLayer": [
+        "training objective",
+        "tối ưu quỹ đạo",
+        "regularization",
+        "resource allocation",
+        "huấn luyện mô hình AI",
+        "tối ưu tham số điều khiển"
+      ],
+      "bridgeQuestion": "Tối ưu lồi giúp ta chắc chắn điều gì về nghiệm?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK1-C21-entropy_thong_tin_va_pha",
+      "chapterTitle": "Chương 3 · Entropy, thông tin và phân phối xác suất",
+      "stageId": "hk1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 3,
+      "pureLayer": [
+        "entropy",
+        "phân phối",
+        "information",
+        "divergence",
+        "biến ngẫu nhiên",
+        "kỳ vọng/phương sai"
+      ],
+      "appliedLayer": [
+        "đo thông tin",
+        "đánh giá phân phối",
+        "uncertainty",
+        "ML loss",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Thông tin và bất định liên hệ bằng đại lượng nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "stageId": "hk1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "disciplineId": "signal_processing_time_series",
+      "disciplineTitle": "Xử lý tín hiệu và chuỗi thời gian",
+      "localChapterNo": 4,
+      "pureLayer": [
+        "quá trình ngẫu nhiên",
+        "autocorrelation",
+        "stationarity",
+        "time series",
+        "hàm theo thời gian",
+        "chuỗi"
+      ],
+      "appliedLayer": [
+        "dự báo",
+        "nhiễu thời gian",
+        "tín hiệu cảm biến",
+        "monitoring",
+        "lọc nhiễu",
+        "phân tích cảm biến"
+      ],
+      "bridgeQuestion": "Dữ liệu theo thời gian khác dữ liệu độc lập ở đâu?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK1-C23-fourier_laplace_z_transf",
+      "chapterTitle": "Chương 5 · Fourier, Laplace, Z-transform và xử lý tín hiệu",
+      "stageId": "hk1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "disciplineId": "signal_processing_time_series",
+      "disciplineTitle": "Xử lý tín hiệu và chuỗi thời gian",
+      "localChapterNo": 5,
+      "pureLayer": [
+        "Fourier",
+        "Laplace",
+        "Z-transform",
+        "frequency domain",
+        "hàm theo thời gian",
+        "chuỗi"
+      ],
+      "appliedLayer": [
+        "lọc nhiễu",
+        "DSP",
+        "hàm truyền",
+        "nhận dạng tín hiệu",
+        "phân tích cảm biến",
+        "dự báo chuỗi thời gian"
+      ],
+      "bridgeQuestion": "Vì sao chuyển miền giúp nhìn thấy cấu trúc tín hiệu?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK1-C24-mo_hinh_trang_thai_va_mo",
+      "chapterTitle": "Chương 6 · Mô hình trạng thái và mô phỏng hệ thống",
+      "stageId": "hk1",
+      "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "disciplineId": "ode_dynamical_systems",
+      "disciplineTitle": "Phương trình vi phân và hệ động lực",
+      "localChapterNo": 6,
+      "pureLayer": [
+        "state space",
+        "state transition",
+        "linear system",
+        "simulation",
+        "ODE cấp một/cấp hai",
+        "hệ phương trình vi phân"
+      ],
+      "appliedLayer": [
+        "mô phỏng hệ thống",
+        "digital twin cơ bản",
+        "control model",
+        "state estimation nền",
+        "mô hình chuyển động robot/UAV",
+        "mô hình trạng thái liên tục"
+      ],
+      "bridgeQuestion": "Trạng thái hệ chứa đủ thông tin nào để dự báo tương lai?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK2-C25-hoi_quy_phan_loai_va_reg",
+      "chapterTitle": "Chương 1 · Hồi quy, phân loại và regularization",
+      "stageId": "hk2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 · học kỳ 2",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 1,
+      "pureLayer": [
+        "regression",
+        "classification",
+        "loss",
+        "bias-variance",
+        "biến ngẫu nhiên",
+        "phân phối"
+      ],
+      "appliedLayer": [
+        "regularization",
+        "model evaluation",
+        "supervised learning",
+        "feature engineering",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Một mô hình dự đoán sai vì dữ liệu, hàm mất mát hay cách đánh giá?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK2-C26-machine_learning_va_anh_",
+      "chapterTitle": "Chương 2 · Machine Learning và đánh giá mô hình",
+      "stageId": "hk2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 · học kỳ 2",
+      "disciplineId": "optimization_programming",
+      "disciplineTitle": "Tối ưu hóa và quy hoạch toán học",
+      "localChapterNo": 2,
+      "pureLayer": [
+        "empirical risk",
+        "validation",
+        "generalization",
+        "metrics",
+        "cực trị",
+        "hàm lồi"
+      ],
+      "appliedLayer": [
+        "model selection",
+        "cross-validation",
+        "ML evaluation",
+        "deployment risk",
+        "huấn luyện mô hình AI",
+        "tối ưu quỹ đạo"
+      ],
+      "bridgeQuestion": "Đánh giá mô hình thế nào để không tự lừa mình?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK2-C27-toan_cua_mang_neural_va_",
+      "chapterTitle": "Chương 3 · Toán của mạng neural và deep learning",
+      "stageId": "hk2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 · học kỳ 2",
+      "disciplineId": "calculus_multivariable",
+      "disciplineTitle": "Giải tích một biến và nhiều biến",
+      "localChapterNo": 3,
+      "pureLayer": [
+        "chain rule",
+        "gradient",
+        "matrix derivatives",
+        "Jacobian",
+        "hàm số",
+        "giới hạn"
+      ],
+      "appliedLayer": [
+        "backpropagation",
+        "neural weights",
+        "deep learning",
+        "loss landscape",
+        "gradient descent",
+        "hàm mất mát"
+      ],
+      "bridgeQuestion": "Backpropagation thực chất là chuỗi đạo hàm nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK2-C28-ieu_khien_tu_ong_on_inh_",
+      "chapterTitle": "Chương 4 · Điều khiển tự động: ổn định, quan sát và điều khiển được",
+      "stageId": "hk2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 · học kỳ 2",
+      "disciplineId": "automatic_control_theory",
+      "disciplineTitle": "Lý thuyết điều khiển tự động",
+      "localChapterNo": 4,
+      "pureLayer": [
+        "stability",
+        "controllability",
+        "observability",
+        "Lyapunov",
+        "hàm truyền",
+        "không gian trạng thái"
+      ],
+      "appliedLayer": [
+        "feedback control",
+        "PID/LQR",
+        "robot control",
+        "safety",
+        "điều khiển robot/UAV",
+        "AI trong vòng điều khiển"
+      ],
+      "bridgeQuestion": "Hệ điều khiển đúng mục tiêu nhưng mất ổn định thì nguy hiểm thế nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK2-C29-kalman_filter_bayesian_f",
+      "chapterTitle": "Chương 5 · Kalman filter, Bayesian filtering và sensor fusion",
+      "stageId": "hk2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 · học kỳ 2",
+      "disciplineId": "state_estimation_sensor_fusion",
+      "disciplineTitle": "Ước lượng trạng thái, lọc và sensor fusion",
+      "localChapterNo": 5,
+      "pureLayer": [
+        "Bayesian update",
+        "Kalman filter",
+        "noise covariance",
+        "state estimate",
+        "mô hình trạng thái",
+        "nhiễu đo"
+      ],
+      "appliedLayer": [
+        "GPS/IMU fusion",
+        "tracking",
+        "sensor noise",
+        "real-time estimation",
+        "định vị robot",
+        "GPS/IMU/camera fusion"
+      ],
+      "bridgeQuestion": "Khi cảm biến nhiễu, hệ thống tin vào mô hình hay phép đo?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK2-C30-ai_trong_he_xu_ly_thong_",
+      "chapterTitle": "Chương 6 · AI trong hệ xử lý thông tin và điều khiển tự động",
+      "stageId": "hk2",
+      "stageTitle": "Giai đoạn 3 · Thạc sĩ năm 1 · học kỳ 2",
+      "disciplineId": "automatic_control_theory",
+      "disciplineTitle": "Lý thuyết điều khiển tự động",
+      "localChapterNo": 6,
+      "pureLayer": [
+        "closed loop",
+        "state model",
+        "objective",
+        "uncertainty",
+        "hàm truyền",
+        "không gian trạng thái"
+      ],
+      "appliedLayer": [
+        "AI control loop",
+        "information processing",
+        "decision system",
+        "automated control",
+        "PID/LQR",
+        "điều khiển robot/UAV"
+      ],
+      "bridgeQuestion": "AI nằm ở đâu trong vòng xử lý thông tin và điều khiển?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK3-C31-chuoi_thoi_gian_nang_cao",
+      "chapterTitle": "Chương 1 · Chuỗi thời gian nâng cao và dự báo",
+      "stageId": "hk3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 · học kỳ 3",
+      "disciplineId": "signal_processing_time_series",
+      "disciplineTitle": "Xử lý tín hiệu và chuỗi thời gian",
+      "localChapterNo": 1,
+      "pureLayer": [
+        "forecasting",
+        "spectral analysis",
+        "state-space time series",
+        "residuals",
+        "hàm theo thời gian",
+        "chuỗi"
+      ],
+      "appliedLayer": [
+        "dự báo nâng cao",
+        "monitoring",
+        "anomaly precursor",
+        "sensor trends",
+        "lọc nhiễu",
+        "phân tích cảm biến"
+      ],
+      "bridgeQuestion": "Một chuỗi thời gian đang báo tín hiệu hay nhiễu?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK3-C32-robustness_anomaly_detec",
+      "chapterTitle": "Chương 2 · Robustness, anomaly detection và độ tin cậy mô hình",
+      "stageId": "hk3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 · học kỳ 3",
+      "disciplineId": "reliability_verification_lifecycle",
+      "disciplineTitle": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "localChapterNo": 2,
+      "pureLayer": [
+        "robustness",
+        "outlier",
+        "failure mode",
+        "risk metric",
+        "Markov chain cơ bản",
+        "failure rate"
+      ],
+      "appliedLayer": [
+        "anomaly detection",
+        "reliability model",
+        "stress test",
+        "model degradation",
+        "reliability models",
+        "availability"
+      ],
+      "bridgeQuestion": "Mô hình hỏng theo cách nào trước khi hệ thống hỏng?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK3-C33-o_thi_multi_agent_system",
+      "chapterTitle": "Chương 3 · Đồ thị, multi-agent systems và robotics planning",
+      "stageId": "hk3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 · học kỳ 3",
+      "disciplineId": "discrete_graph_db_knowledge",
+      "disciplineTitle": "Toán rời rạc, đồ thị, CSDL và biểu diễn tri thức",
+      "localChapterNo": 3,
+      "pureLayer": [
+        "graph",
+        "path",
+        "multi-agent",
+        "planning",
+        "logic rời rạc",
+        "đồ thị"
+      ],
+      "appliedLayer": [
+        "robotics planning",
+        "distributed control",
+        "knowledge graph",
+        "multi-agent coordination",
+        "graph planning",
+        "mivar logical AI"
+      ],
+      "bridgeQuestion": "Đường đi tối ưu của một tác tử khác gì khi có nhiều tác tử?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK3-C34-system_identification_va",
+      "chapterTitle": "Chương 4 · System identification và thiết kế thực nghiệm",
+      "stageId": "hk3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 · học kỳ 3",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 4,
+      "pureLayer": [
+        "system identification",
+        "experiment design",
+        "parameter estimation",
+        "residual analysis",
+        "biến ngẫu nhiên",
+        "phân phối"
+      ],
+      "appliedLayer": [
+        "identification",
+        "ablation",
+        "model fit",
+        "research design",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Làm sao suy ra mô hình từ dữ liệu đo được?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK3-C35-mo_phong_so_digital_twin",
+      "chapterTitle": "Chương 5 · Mô phỏng số, digital twin và surrogate model",
+      "stageId": "hk3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 · học kỳ 3",
+      "disciplineId": "numerical_computational_math",
+      "disciplineTitle": "Phương pháp số và toán học tính toán",
+      "localChapterNo": 5,
+      "pureLayer": [
+        "surrogate model",
+        "simulation error",
+        "sampling",
+        "approximation",
+        "sai số số học",
+        "điều kiện bài toán"
+      ],
+      "appliedLayer": [
+        "digital twin",
+        "simulation-based inference",
+        "surrogate model",
+        "what-if analysis",
+        "Python/MATLAB simulation",
+        "fitting dữ liệu cảm biến"
+      ],
+      "bridgeQuestion": "Mô phỏng thay hệ thật đến mức nào thì còn đáng tin?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK3-C36-nir_ablation_reproducibi",
+      "chapterTitle": "Chương 6 · NIR: ablation, reproducibility và báo cáo kết quả",
+      "stageId": "hk3",
+      "stageTitle": "Giai đoạn 4 · Thạc sĩ năm 2 · học kỳ 3",
+      "disciplineId": "reliability_verification_lifecycle",
+      "disciplineTitle": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "localChapterNo": 6,
+      "pureLayer": [
+        "reproducibility",
+        "ablation",
+        "statistical reporting",
+        "metrics",
+        "Markov chain cơ bản",
+        "failure rate"
+      ],
+      "appliedLayer": [
+        "NIR report",
+        "experiment protocol",
+        "evidence chain",
+        "result validation",
+        "reliability models",
+        "availability"
+      ],
+      "bridgeQuestion": "Một kết quả nghiên cứu cần bằng chứng nào để đứng vững?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK4-C37-pipeline_toan_hoc_cho_lu",
+      "chapterTitle": "Chương 1 · Pipeline toán học cho luận văn thạc sĩ",
+      "stageId": "hk4",
+      "stageTitle": "Giai đoạn 5 · Thạc sĩ năm 2 · học kỳ 4",
+      "disciplineId": "reliability_verification_lifecycle",
+      "disciplineTitle": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "localChapterNo": 1,
+      "pureLayer": [
+        "system metric",
+        "model assumption",
+        "validation pipeline",
+        "risk",
+        "Markov chain cơ bản",
+        "failure rate"
+      ],
+      "appliedLayer": [
+        "VKR pipeline",
+        "requirements traceability",
+        "system argument",
+        "quantitative defense",
+        "reliability models",
+        "availability"
+      ],
+      "bridgeQuestion": "Luận văn cần chứng minh mô hình hay chứng minh hệ thống?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK4-C38-anh_gia_kiem_chung_uncer",
+      "chapterTitle": "Chương 2 · Đánh giá, kiểm chứng, uncertainty và báo cáo định lượng",
+      "stageId": "hk4",
+      "stageTitle": "Giai đoạn 5 · Thạc sĩ năm 2 · học kỳ 4",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 2,
+      "pureLayer": [
+        "uncertainty",
+        "confidence interval",
+        "validation metric",
+        "error propagation",
+        "biến ngẫu nhiên",
+        "phân phối"
+      ],
+      "appliedLayer": [
+        "báo cáo định lượng",
+        "uncertainty analysis",
+        "model comparison",
+        "defense evidence",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Một kết quả tốt hơn bao nhiêu mới đáng kể?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK4-C39-viet_trinh_bay_va_bao_ve",
+      "chapterTitle": "Chương 3 · Viết, trình bày và bảo vệ VKR",
+      "stageId": "hk4",
+      "stageTitle": "Giai đoạn 5 · Thạc sĩ năm 2 · học kỳ 4",
+      "disciplineId": "math_language_logic",
+      "disciplineTitle": "Ngôn ngữ toán học và logic nền tảng",
+      "localChapterNo": 3,
+      "pureLayer": [
+        "argument structure",
+        "definition",
+        "claim",
+        "proof sketch",
+        "ký hiệu toán học",
+        "mệnh đề và lượng từ"
+      ],
+      "appliedLayer": [
+        "VKR presentation",
+        "thesis logic",
+        "review response",
+        "technical explanation",
+        "đọc đề toán tiếng Nga",
+        "trình bày lời giải kỹ thuật"
+      ],
+      "bridgeQuestion": "Bảo vệ luận văn cần một câu chuyện toán học chặt thế nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-HK4-C40-tong_hop_tu_mo_hinh_toan",
+      "chapterTitle": "Chương 4 · Tổng hợp: từ mô hình toán đến kết luận kỹ thuật",
+      "stageId": "hk4",
+      "stageTitle": "Giai đoạn 5 · Thạc sĩ năm 2 · học kỳ 4",
+      "disciplineId": "reliability_verification_lifecycle",
+      "disciplineTitle": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "localChapterNo": 4,
+      "pureLayer": [
+        "synthesis",
+        "metrics",
+        "validation",
+        "contribution",
+        "Markov chain cơ bản",
+        "failure rate"
+      ],
+      "appliedLayer": [
+        "defense synthesis",
+        "system conclusion",
+        "engineering decision",
+        "future work",
+        "reliability models",
+        "availability"
+      ],
+      "bridgeQuestion": "Từ mô hình toán đi tới kết luận kỹ thuật bằng con đường nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDBRIDGE-C41-mathematical_maturity_fo",
+      "chapterTitle": "Chương 1 · Mathematical maturity for research",
+      "stageId": "phd_bridge",
+      "stageTitle": "Giai đoạn 6 · Cầu nối sau thạc sĩ",
+      "disciplineId": "math_language_logic",
+      "disciplineTitle": "Ngôn ngữ toán học và logic nền tảng",
+      "localChapterNo": 1,
+      "pureLayer": [
+        "proof maturity",
+        "abstraction",
+        "definition",
+        "theorem structure",
+        "ký hiệu toán học",
+        "mệnh đề và lượng từ"
+      ],
+      "appliedLayer": [
+        "research reading",
+        "paper critique",
+        "seminar defense",
+        "mathematical contribution",
+        "đọc đề toán tiếng Nga",
+        "trình bày lời giải kỹ thuật"
+      ],
+      "bridgeQuestion": "Khi nào một lập luận đủ trưởng thành để thành nghiên cứu?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDBRIDGE-C42-advanced_optimization_no",
+      "chapterTitle": "Chương 2 · Advanced optimization: non-convex, stochastic and constrained systems",
+      "stageId": "phd_bridge",
+      "stageTitle": "Giai đoạn 6 · Cầu nối sau thạc sĩ",
+      "disciplineId": "optimization_programming",
+      "disciplineTitle": "Tối ưu hóa và quy hoạch toán học",
+      "localChapterNo": 2,
+      "pureLayer": [
+        "non-convexity",
+        "stochastic optimization",
+        "constraints",
+        "duality",
+        "cực trị",
+        "hàm lồi"
+      ],
+      "appliedLayer": [
+        "advanced training",
+        "trajectory optimization",
+        "robust optimization",
+        "research algorithms",
+        "huấn luyện mô hình AI",
+        "tối ưu quỹ đạo"
+      ],
+      "bridgeQuestion": "Tối ưu phi lồi cần nhìn rủi ro nghiệm như thế nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDBRIDGE-C43-advanced_stochastic_proc",
+      "chapterTitle": "Chương 3 · Advanced stochastic processes and stochastic control",
+      "stageId": "phd_bridge",
+      "stageTitle": "Giai đoạn 6 · Cầu nối sau thạc sĩ",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 3,
+      "pureLayer": [
+        "stochastic process",
+        "stochastic control",
+        "martingale intuition",
+        "state uncertainty",
+        "biến ngẫu nhiên",
+        "phân phối"
+      ],
+      "appliedLayer": [
+        "stochastic control",
+        "risk-aware decision",
+        "filtering research",
+        "random systems",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Điều khiển khi mô hình và môi trường đều ngẫu nhiên thì khác gì?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDBRIDGE-C44-information_theory_and_s",
+      "chapterTitle": "Chương 4 · Information theory and statistical decision theory",
+      "stageId": "phd_bridge",
+      "stageTitle": "Giai đoạn 6 · Cầu nối sau thạc sĩ",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 4,
+      "pureLayer": [
+        "information theory",
+        "decision theory",
+        "loss/risk",
+        "Bayesian decision",
+        "biến ngẫu nhiên",
+        "phân phối"
+      ],
+      "appliedLayer": [
+        "statistical decision",
+        "active learning",
+        "uncertainty-aware AI",
+        "research metrics",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Một quyết định tối ưu cần tối ưu thông tin hay rủi ro?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDY1-C45-dynamical_systems_stabil",
+      "chapterTitle": "Chương 1 · Dynamical systems, stability and nonlinear control",
+      "stageId": "phd_y1",
+      "stageTitle": "Giai đoạn 7 · Tiến sĩ năm 1",
+      "disciplineId": "ode_dynamical_systems",
+      "disciplineTitle": "Phương trình vi phân và hệ động lực",
+      "localChapterNo": 1,
+      "pureLayer": [
+        "nonlinear dynamics",
+        "stability",
+        "bifurcation intuition",
+        "Lyapunov methods",
+        "ODE cấp một/cấp hai",
+        "hệ phương trình vi phân"
+      ],
+      "appliedLayer": [
+        "nonlinear control",
+        "safety-critical dynamics",
+        "advanced robotics",
+        "flight systems",
+        "mô hình chuyển động robot/UAV",
+        "mô hình trạng thái liên tục"
+      ],
+      "bridgeQuestion": "Ổn định phi tuyến có thể sụp ở đâu dù tuyến tính hóa đẹp?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDY1-C46-advanced_signal_processi",
+      "chapterTitle": "Chương 2 · Advanced signal processing and inverse problems",
+      "stageId": "phd_y1",
+      "stageTitle": "Giai đoạn 7 · Tiến sĩ năm 1",
+      "disciplineId": "signal_processing_time_series",
+      "disciplineTitle": "Xử lý tín hiệu và chuỗi thời gian",
+      "localChapterNo": 2,
+      "pureLayer": [
+        "inverse problem",
+        "regularization",
+        "spectral methods",
+        "wavelet",
+        "hàm theo thời gian",
+        "chuỗi"
+      ],
+      "appliedLayer": [
+        "advanced sensing",
+        "signal reconstruction",
+        "denoising",
+        "ill-posed systems",
+        "lọc nhiễu",
+        "phân tích cảm biến"
+      ],
+      "bridgeQuestion": "Khi tín hiệu bị mất thông tin, khôi phục cần giả thiết nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDY1-C47-learning_theory_generali",
+      "chapterTitle": "Chương 3 · Learning theory, generalization and uncertainty",
+      "stageId": "phd_y1",
+      "stageTitle": "Giai đoạn 7 · Tiến sĩ năm 1",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 3,
+      "pureLayer": [
+        "learning theory",
+        "generalization",
+        "uncertainty bounds",
+        "risk",
+        "biến ngẫu nhiên",
+        "phân phối"
+      ],
+      "appliedLayer": [
+        "model reliability",
+        "generalization research",
+        "uncertainty-aware ML",
+        "theoretical ML",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Mô hình học được điều gì ngoài tập huấn luyện?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDY1-C48-numerical_methods_for_la",
+      "chapterTitle": "Chương 4 · Numerical methods for large-scale scientific computing",
+      "stageId": "phd_y1",
+      "stageTitle": "Giai đoạn 7 · Tiến sĩ năm 1",
+      "disciplineId": "numerical_computational_math",
+      "disciplineTitle": "Phương pháp số và toán học tính toán",
+      "localChapterNo": 4,
+      "pureLayer": [
+        "large-scale methods",
+        "parallel numerical algorithms",
+        "conditioning",
+        "scientific computing",
+        "sai số số học",
+        "điều kiện bài toán"
+      ],
+      "appliedLayer": [
+        "large simulation",
+        "HPC",
+        "digital twin scale-up",
+        "reproducible computation",
+        "Python/MATLAB simulation",
+        "fitting dữ liệu cảm biến"
+      ],
+      "bridgeQuestion": "Tính toán lớn làm thay đổi bản chất thuật toán thế nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDY2-C49-multi_agent_systems_grap",
+      "chapterTitle": "Chương 1 · Multi-agent systems, graph learning and distributed control",
+      "stageId": "phd_y2",
+      "stageTitle": "Giai đoạn 8 · Tiến sĩ năm 2",
+      "disciplineId": "discrete_graph_db_knowledge",
+      "disciplineTitle": "Toán rời rạc, đồ thị, CSDL và biểu diễn tri thức",
+      "localChapterNo": 1,
+      "pureLayer": [
+        "graph learning",
+        "distributed systems",
+        "consensus",
+        "multi-agent",
+        "logic rời rạc",
+        "đồ thị"
+      ],
+      "appliedLayer": [
+        "distributed control",
+        "multi-agent AI",
+        "graph neural systems",
+        "coordination",
+        "graph planning",
+        "knowledge graph"
+      ],
+      "bridgeQuestion": "Điều khiển phân tán cần tri thức đồ thị nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDY2-C50-robust_ai_systems_and_sa",
+      "chapterTitle": "Chương 2 · Robust AI systems and safety-critical decision making",
+      "stageId": "phd_y2",
+      "stageTitle": "Giai đoạn 8 · Tiến sĩ năm 2",
+      "disciplineId": "reliability_verification_lifecycle",
+      "disciplineTitle": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "localChapterNo": 2,
+      "pureLayer": [
+        "safety metric",
+        "robustness guarantee",
+        "failure probability",
+        "validation",
+        "Markov chain cơ bản",
+        "failure rate"
+      ],
+      "appliedLayer": [
+        "safety-critical AI",
+        "certification mindset",
+        "risk-aware control",
+        "fault tolerance",
+        "reliability models",
+        "availability"
+      ],
+      "bridgeQuestion": "AI an toàn cần chứng minh điều gì trước khi vận hành?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDY2-C51-digital_twins_simulation",
+      "chapterTitle": "Chương 3 · Digital twins, simulation-based inference and surrogate models",
+      "stageId": "phd_y2",
+      "stageTitle": "Giai đoạn 8 · Tiến sĩ năm 2",
+      "disciplineId": "numerical_computational_math",
+      "disciplineTitle": "Phương pháp số và toán học tính toán",
+      "localChapterNo": 3,
+      "pureLayer": [
+        "simulation-based inference",
+        "surrogate error",
+        "uncertainty propagation",
+        "calibration",
+        "sai số số học",
+        "điều kiện bài toán"
+      ],
+      "appliedLayer": [
+        "digital twin research",
+        "surrogate modeling",
+        "system calibration",
+        "Bayesian simulation",
+        "Python/MATLAB simulation",
+        "fitting dữ liệu cảm biến"
+      ],
+      "bridgeQuestion": "Digital twin đáng tin khi sai số mô phỏng được kiểm soát ra sao?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDY2-C52-experimental_design_for_",
+      "chapterTitle": "Chương 4 · Experimental design for publishable research",
+      "stageId": "phd_y2",
+      "stageTitle": "Giai đoạn 8 · Tiến sĩ năm 2",
+      "disciplineId": "probability_statistics_inference",
+      "disciplineTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "localChapterNo": 4,
+      "pureLayer": [
+        "experimental design",
+        "power analysis",
+        "effect size",
+        "reproducibility",
+        "biến ngẫu nhiên",
+        "phân phối"
+      ],
+      "appliedLayer": [
+        "publishable experiment",
+        "research protocol",
+        "reviewer-ready evidence",
+        "benchmarking",
+        "nhiễu cảm biến",
+        "đánh giá mô hình ML"
+      ],
+      "bridgeQuestion": "Thiết kế thí nghiệm thế nào để bài báo đứng vững?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDTHESIS-C53-thesis_architecture_and_",
+      "chapterTitle": "Chương 1 · Thesis architecture and mathematical contribution",
+      "stageId": "phd_thesis",
+      "stageTitle": "Giai đoạn 9 · Tiến sĩ luận án",
+      "disciplineId": "math_language_logic",
+      "disciplineTitle": "Ngôn ngữ toán học và logic nền tảng",
+      "localChapterNo": 1,
+      "pureLayer": [
+        "thesis claim",
+        "mathematical contribution",
+        "proof outline",
+        "scope control",
+        "ký hiệu toán học",
+        "mệnh đề và lượng từ"
+      ],
+      "appliedLayer": [
+        "dissertation architecture",
+        "contribution framing",
+        "defense logic",
+        "research novelty",
+        "đọc đề toán tiếng Nga",
+        "trình bày lời giải kỹ thuật"
+      ],
+      "bridgeQuestion": "Luận án đóng góp toán học ở đâu, không chỉ chạy mô hình nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDTHESIS-C54-paper_pipeline_theorem_e",
+      "chapterTitle": "Chương 2 · Paper pipeline: theorem, experiment, result and rebuttal",
+      "stageId": "phd_thesis",
+      "stageTitle": "Giai đoạn 9 · Tiến sĩ luận án",
+      "disciplineId": "math_language_logic",
+      "disciplineTitle": "Ngôn ngữ toán học và logic nền tảng",
+      "localChapterNo": 2,
+      "pureLayer": [
+        "theorem-experiment link",
+        "result interpretation",
+        "counterargument",
+        "rebuttal",
+        "ký hiệu toán học",
+        "mệnh đề và lượng từ"
+      ],
+      "appliedLayer": [
+        "paper pipeline",
+        "peer review response",
+        "scientific storytelling",
+        "evidence packaging",
+        "đọc đề toán tiếng Nga",
+        "trình bày lời giải kỹ thuật"
+      ],
+      "bridgeQuestion": "Một kết quả bài báo cần chống được phản biện nào?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDTHESIS-C55-dissertation_validation_",
+      "chapterTitle": "Chương 3 · Dissertation validation and reproducibility package",
+      "stageId": "phd_thesis",
+      "stageTitle": "Giai đoạn 9 · Tiến sĩ luận án",
+      "disciplineId": "reliability_verification_lifecycle",
+      "disciplineTitle": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "localChapterNo": 3,
+      "pureLayer": [
+        "validation package",
+        "reproducibility",
+        "artifact evaluation",
+        "traceability",
+        "Markov chain cơ bản",
+        "failure rate"
+      ],
+      "appliedLayer": [
+        "dissertation package",
+        "code/data reproducibility",
+        "benchmark archive",
+        "audit trail",
+        "reliability models",
+        "availability"
+      ],
+      "bridgeQuestion": "Làm sao để người khác tái lập kết quả luận án?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    },
+    {
+      "chapterId": "MATH-PHDTHESIS-C56-defense_level_synthesis_",
+      "chapterTitle": "Chương 4 · Defense-level synthesis: model, proof, experiment and contribution",
+      "stageId": "phd_thesis",
+      "stageTitle": "Giai đoạn 9 · Tiến sĩ luận án",
+      "disciplineId": "reliability_verification_lifecycle",
+      "disciplineTitle": "Độ tin cậy, kiểm chứng và vòng đời hệ thống",
+      "localChapterNo": 4,
+      "pureLayer": [
+        "model-proof-experiment synthesis",
+        "metrics",
+        "limitations",
+        "contribution",
+        "Markov chain cơ bản",
+        "failure rate"
+      ],
+      "appliedLayer": [
+        "doctoral defense",
+        "research synthesis",
+        "future program",
+        "scientific contribution",
+        "reliability models",
+        "availability"
+      ],
+      "bridgeQuestion": "Mô hình, chứng minh và thí nghiệm hợp thành đóng góp ra sao?",
+      "contentStatus": "empty_waiting_for_simulation_content"
+    }
+  ],
+  "updatedAt": "2026-06-22",
+  "cleanArchitecturePolicy": {
+    "frameIsStructureOnly": true,
+    "contentIsRecordsOnly": true,
+    "uiMustOpenFrameAndContentSeparately": true,
+    "importDefaultTarget": "simulation_content",
+    "legacyFilesAreCompatibilityOnly": true
+  },
+  "phdContentPolicy": "framework_only_locked_no_content_generation"
+}

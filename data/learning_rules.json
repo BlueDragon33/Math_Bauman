@@ -1,0 +1,14 @@
+{
+  "version": "E107_FOUNDATION_SPINE_RESET",
+  "status": "rules_only_no_content",
+  "rules": [
+    {
+      "id": "one_chat_one_bundle",
+      "title": "Một phiên chat chỉ làm một bộ nội dung."
+    },
+    {
+      "id": "import_after_audit",
+      "title": "Chỉ import JSON sau khi audit PASS."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "bauman_math_exercise_content_e110",
+  "schema": "bauman_math_content_records_v1",
+  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "subject": "math",
+  "title": "Bài tập · Nội dung",
+  "contentVaultRole": "content",
+  "group": "Bài tập",
+  "purpose": "Nội dung chi tiết được tạo bằng bundle riêng và import vào nguồn này. File này không chứa khung giai đoạn/phân môn/chương.",
+  "frameSource": "exercise_frame.json",
+  "legacyExportTarget": "exercises.json",
+  "recordKey": "exerciseId",
+  "records": [],
+  "importPolicy": {
+    "key": "exerciseId",
+    "requires": [
+      "exerciseId",
+      "lessonId",
+      "chapterId",
+      "level",
+      "prompt",
+      "solution"
+    ],
+    "auditBeforeImport": true,
+    "appendOrReplace": "replace_by_key_then_append",
+    "doNotChange": [
+      "chapterId unless intentionally remapping",
+      "lessonId unless intentionally remapping"
+    ]
+  },
+  "searchIndexHint": {
+    "primary": [
+      "chapterId",
+      "lessonId",
+      "exerciseId"
+    ],
+    "semantic": [
+      "title",
+      "tags",
+      "pureLayer",
+      "appliedLayer",
+      "bridgeQuestion"
+    ]
+  },
+  "sampleRecord": {
+    "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+    "lessonId": "MATH-VN-LA-C01-L04",
+    "tags": [
+      "vector",
+      "AI",
+      "điều khiển"
+    ],
+    "exerciseId": "MATH-VN-LA-C01-L04-E01",
+    "level": "easy",
+    "prompt": "Tính tích vô hướng của hai vector đã cho.",
+    "solution": "Nhân từng thành phần rồi cộng lại.",
+    "auditStatus": "DRAFT"
+  },
+  "updatedAt": "2026-06-22",
+  "emoji": "📝",
+  "cleanArchitecturePolicy": {
+    "contentMustNotStoreStageTree": true,
+    "recordsMustUseStableIds": true,
+    "defaultImportMode": "replace_by_key_then_append",
+    "auditBeforeImport": true
+  }
+}

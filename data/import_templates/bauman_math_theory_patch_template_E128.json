@@ -1,0 +1,235 @@
+{
+  "packageType": "bauman.math.theory.patch",
+  "target": "lessons.json",
+  "mode": "patch",
+  "version": "E128_patch_template",
+  "createdAt": "2026-06-26",
+  "policy": {
+    "patch": "Cho phép sửa một hoặc vài slide của lessonId đã có.",
+    "merge": "Lesson mới hoặc lesson thay thế bắt buộc sourceChapterNo 1-40, sourceStageNo 0-5, đúng 16 slides.",
+    "replace": "Toàn bộ lessons thay thế bắt buộc mỗi lesson đúng 16 slides."
+  },
+  "lessons": [
+    {
+      "lessonId": "MATH-E128-SAMPLE-L01",
+      "id": "MATH-E128-SAMPLE-L01",
+      "sourceStageNo": 3,
+      "sourceChapterNo": 30,
+      "sourceChapterId": "math_chapter_30",
+      "chapterTitle": "AI trong hệ xử lý thông tin và điều khiển tự động",
+      "title": "§E128 · Bài lý thuyết bổ sung mẫu",
+      "kind": "theory",
+      "contentRole": "theory_only",
+      "slides": [
+        {
+          "id": "MATH-E128-SAMPLE-L01-S01",
+          "role": "problem_framing",
+          "title": "problem framing",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S02",
+          "role": "deep_essence",
+          "title": "deep essence",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S03",
+          "role": "counter_intuition",
+          "title": "counter intuition",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S04",
+          "role": "real_bridge",
+          "title": "real bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S05",
+          "role": "notation",
+          "title": "notation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S06",
+          "role": "core_formula",
+          "title": "core formula",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S07",
+          "role": "assumption_gate",
+          "title": "assumption gate",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S08",
+          "role": "mini_case",
+          "title": "mini case",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S09",
+          "role": "interpretation",
+          "title": "interpretation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S10",
+          "role": "simulation",
+          "title": "simulation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S11",
+          "role": "common_mistakes",
+          "title": "common mistakes",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S12",
+          "role": "application",
+          "title": "application",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S13",
+          "role": "practice",
+          "title": "practice",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S14",
+          "role": "professor_qa",
+          "title": "professor qa",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S15",
+          "role": "bridge",
+          "title": "bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-E128-SAMPLE-L01-S16",
+          "role": "takeaway",
+          "title": "takeaway",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nội dung mẫu",
+              "body": "Thay đoạn này bằng nội dung học thuật đã kiểm."
+            }
+          ],
+          "renderPolicy": "safe_text_formula_blocks_only"
+        }
+      ]
+    }
+  ]
+}
