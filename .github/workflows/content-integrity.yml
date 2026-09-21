@@ -9,6 +9,7 @@ on:
       - "assets/**"
       - "data/**"
       - "tools/e145_content_integrity.py"
+      - "tools/e155_browser_smoke.mjs"
       - ".github/workflows/content-integrity.yml"
   push:
     branches: [main]
@@ -19,6 +20,7 @@ on:
       - "assets/**"
       - "data/**"
       - "tools/e145_content_integrity.py"
+      - "tools/e155_browser_smoke.mjs"
       - ".github/workflows/content-integrity.yml"
   workflow_dispatch:
 
@@ -29,7 +31,7 @@ jobs:
   integrity:
     name: E145 Runtime Content Integrity
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -44,3 +46,14 @@ jobs:
             node --check "$file"
           done < <(find assets -type f -name '*.js' -print0 | sort -z)
           node --check subject-manifest.js
+      - name: Install browser smoke harness
+        run: npm install --no-save --package-lock=false playwright-core@1.55.0
+      - name: Run E155 browser smoke
+        shell: bash
+        run: |
+          set -euo pipefail
+          command -v google-chrome || command -v chromium || command -v chromium-browser
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/e155-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          node tools/e155_browser_smoke.mjs
