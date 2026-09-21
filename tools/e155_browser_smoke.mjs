@@ -330,7 +330,43 @@ try {
       !!window.DB &&
       (document.querySelector('#view')?.innerText || '').trim().length > 20;
   }, null, { timeout: 60000 });
-  await page.waitForFunction(() => window.__BAUMAN_MATH_E140_VAULT_BRIDGE__?.loaded === true, null, { timeout: 30000 });
+  try {
+    await page.waitForFunction(() => window.__BAUMAN_MATH_E140_VAULT_BRIDGE__?.loaded === true, null, { timeout: 22000 });
+  } catch (error) {
+    const diagnostics = await page.evaluate(async () => {
+      const db = window.DB || {};
+      const files = Array.isArray(window.SUBJECT_ADAPTER?.initialDataFiles) ? window.SUBJECT_ADAPTER.initialDataFiles : [];
+      const missing = files.filter(name => !Object.prototype.hasOwnProperty.call(db, name));
+      const nullish = files.filter(name => Object.prototype.hasOwnProperty.call(db, name) && db[name] == null);
+      let overlayFetch = null;
+      try {
+        const r = await fetch('data/theory_lecture_overlay_e138.json', { cache:'no-store' });
+        overlayFetch = { ok:r.ok, status:r.status, length:(await r.text()).length };
+      } catch (e) {
+        overlayFetch = { ok:false, error:String(e && e.message || e) };
+      }
+      return {
+        e138: window.__BAUMAN_MATH_E138_THEORY_OVERLAY__ || null,
+        e140: window.__BAUMAN_MATH_E140_VAULT_BRIDGE__ || null,
+        initialCount: files.length,
+        missing,
+        nullish,
+        theoryContent: Array.isArray(db.theory_lecture_content)
+          ? db.theory_lecture_content.length
+          : (Array.isArray(db.theory_lecture_content?.records) ? db.theory_lecture_content.records.length : null),
+        formulaContent: Array.isArray(db.formula_content)
+          ? db.formula_content.length
+          : (Array.isArray(db.formula_content?.records) ? db.formula_content.records.length : null),
+        mindmapContent: Array.isArray(db.mindmap_content)
+          ? db.mindmap_content.length
+          : (Array.isArray(db.mindmap_content?.records) ? db.mindmap_content.records.length : null),
+        overlayFetch,
+        cacheKeys: await caches.keys()
+      };
+    });
+    console.error('E167 offline bridge diagnostics', JSON.stringify(diagnostics));
+    await fail('E140 did not hydrate after service-worker update + origin-down reload');
+  }
   await page.waitForFunction(() => window.__BAUMAN_MATH_E150_MINDMAP_TOPOLOGY__?.loaded === true, null, { timeout: 30000 });
 
   const offline = await page.evaluate(async () => {
