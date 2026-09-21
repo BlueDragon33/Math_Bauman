@@ -1,0 +1,26 @@
+{
+  "id": "E134_THEORY_SOURCE_RECOVERY_REPORT",
+  "date": "2026-09-21",
+  "status": "PASS_WITH_KNOWN_CONTENT_GAP",
+  "sourceBranch": "migration/full-webapp-v2",
+  "runtimeCore": "preserved E133 / existing mature core",
+  "theoryRoute": "E129 frame/content",
+  "recovered": {
+    "theoryFrameChapters": 56,
+    "theoryContentRecords": 18,
+    "theorySlides": 300,
+    "scope": "C01-C03 available in migration source"
+  },
+  "validation": {
+    "duplicateLessonIds": 0,
+    "orphanChapterRefs": 0,
+    "e129Syntax": "PASS",
+    "indexUsesE129": true,
+    "indexUsesE126": false
+  },
+  "knownGap": {
+    "chapter7Checkpoint": "8 lessons / 160 slides / 24 formulas / 64 exercises / 16 applications / 16 simulations / 8 professor QA / 48 questions / 8 review packs",
+    "payloadStatus": "checkpoint report exists, original JSON payload not found in accessible Git history/repos",
+    "policy": "do not regenerate or invent the missing E15 payload during recovery"
+  }
+}
