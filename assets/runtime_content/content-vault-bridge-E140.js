@@ -1,6 +1,7 @@
 'use strict';
 (function(){
   const RELEASE='E140_CONTENT_VAULT_RUNTIME_BRIDGE';
+  const HARDENING='E156_POST_INIT_DB_REBIND_GUARD';
   const MAX_ATTEMPTS=160;
   let attempts=0,applied=false;
   function arr(v){return Array.isArray(v)?v:[];}
@@ -42,6 +43,8 @@
   }
   function apply(){
     if(applied)return true;
+    const coreState=window.__BAUMAN_CORE_API&&window.__BAUMAN_CORE_API.state;
+    if(!coreState||!(Number(coreState.e69InitialLoadMs)>0))return false;
     const db=window.DB;
     if(!db||!db.theory_lecture_content)return false;
     if(!window.__BAUMAN_MATH_E138_THEORY_OVERLAY__ || window.__BAUMAN_MATH_E138_THEORY_OVERLAY__.loaded!==true)return false;
@@ -71,7 +74,7 @@
     const mm=records(db.mindmap_content);
     if(mm.length&&emptyArray(db.mindmap)){db.mindmap=mindmapLegacy(mm);bridged.mindmap=db.mindmap.length;}
     applied=true;
-    window.__BAUMAN_MATH_E140_VAULT_BRIDGE__={release:RELEASE,loaded:true,bridged};
+    window.__BAUMAN_MATH_E140_VAULT_BRIDGE__={release:RELEASE,hardening:HARDENING,loaded:true,bridged,initialLoadMs:Number(coreState.e69InitialLoadMs)||0};
     try{if(window.__BAUMAN_CORE_API&&typeof window.__BAUMAN_CORE_API.render==='function')window.__BAUMAN_CORE_API.render();}catch(_){}
     return true;
   }
@@ -79,7 +82,7 @@
     if(apply())return;
     attempts++;
     if(attempts<MAX_ATTEMPTS)setTimeout(wait,100);
-    else window.__BAUMAN_MATH_E140_VAULT_BRIDGE__={release:RELEASE,loaded:false,error:'content_vaults_not_ready',attempts};
+    else window.__BAUMAN_MATH_E140_VAULT_BRIDGE__={release:RELEASE,hardening:HARDENING,loaded:false,error:'content_vaults_or_core_init_not_ready',attempts};
   }
   window.BAUMAN_MATH_E140_SELF_CHECK=function(){
     const db=window.DB||{}, q=arr(db.tests&&db.tests.questions);
