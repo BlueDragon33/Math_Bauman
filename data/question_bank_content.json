@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_question_bank_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E140_EXAM_RUNTIME_COMPAT",
+  "version": "E141_STAGE_SCOPED_100Q_CAPACITY",
   "subject": "math",
   "title": "Ngân hàng câu hỏi · Nội dung",
   "contentVaultRole": "content",
@@ -41,9 +41,9 @@
       "question": "Bẫy nào phải tránh trong Dữ liệu đa chiều và ma trận dữ liệu X?",
       "options": [
         "đảo hàng và cột",
-        "đảo hàng và cột",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "đảo hàng và cột",
       "explanation": "Đáp án đúng vì đảo hàng và cột Nội dung này giữ giới hạn kết luận của Dữ liệu đa chiều và ma trận dữ liệu X.",
@@ -173,9 +173,9 @@
       "question": "Bẫy nào phải tránh trong Trung tâm hóa và chuẩn hóa đặc trưng?",
       "options": [
         "data leakage khi fit trên test",
-        "data leakage khi fit trên test",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "data leakage khi fit trên test",
       "explanation": "Đáp án đúng vì data leakage khi fit trên test Nội dung này giữ giới hạn kết luận của Trung tâm hóa và chuẩn hóa đặc trưng.",
@@ -305,9 +305,9 @@
       "question": "Bẫy nào phải tránh trong Hiệp phương sai?",
       "options": [
         "coi covariance lớn là quan hệ mạnh tuyệt đối",
-        "coi covariance lớn là quan hệ mạnh tuyệt đối",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "coi covariance lớn là quan hệ mạnh tuyệt đối",
       "explanation": "Đáp án đúng vì coi covariance lớn là quan hệ mạnh tuyệt đối Nội dung này giữ giới hạn kết luận của Hiệp phương sai.",
@@ -437,9 +437,9 @@
       "question": "Bẫy nào phải tránh trong Tương quan Pearson?",
       "options": [
         "r≈0 đồng nghĩa độc lập",
-        "r≈0 đồng nghĩa độc lập",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "r≈0 đồng nghĩa độc lập",
       "explanation": "Đáp án đúng vì r≈0 đồng nghĩa độc lập Nội dung này giữ giới hạn kết luận của Tương quan Pearson.",
@@ -569,9 +569,9 @@
       "question": "Bẫy nào phải tránh trong Ma trận hiệp phương sai?",
       "options": [
         "nhầm covariance matrix là n×n",
-        "nhầm covariance matrix là n×n",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "nhầm covariance matrix là n×n",
       "explanation": "Đáp án đúng vì nhầm covariance matrix là n×n Nội dung này giữ giới hạn kết luận của Ma trận hiệp phương sai.",
@@ -701,9 +701,9 @@
       "question": "Bẫy nào phải tránh trong Trị riêng và vector riêng của covariance matrix?",
       "options": [
         "coi trị riêng âm đáng kể là bình thường",
-        "coi trị riêng âm đáng kể là bình thường",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "coi trị riêng âm đáng kể là bình thường",
       "explanation": "Đáp án đúng vì coi trị riêng âm đáng kể là bình thường Nội dung này giữ giới hạn kết luận của Trị riêng và vector riêng của covariance matrix.",
@@ -833,9 +833,9 @@
       "question": "Bẫy nào phải tránh trong PCA nhập môn?",
       "options": [
         "chọn k hoàn toàn theo cảm tính",
-        "chọn k hoàn toàn theo cảm tính",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "chọn k hoàn toàn theo cảm tính",
       "explanation": "Đáp án đúng vì chọn k hoàn toàn theo cảm tính Nội dung này giữ giới hạn kết luận của PCA nhập môn.",
@@ -965,9 +965,9 @@
       "question": "Bẫy nào phải tránh trong Tái tạo dữ liệu và sai số khi giảm chiều?",
       "options": [
         "coi giảm chiều là không mất thông tin",
-        "coi giảm chiều là không mất thông tin",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "coi giảm chiều là không mất thông tin",
       "explanation": "Đáp án đúng vì coi giảm chiều là không mất thông tin Nội dung này giữ giới hạn kết luận của Tái tạo dữ liệu và sai số khi giảm chiều.",
@@ -1066,6 +1066,3502 @@
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL",
       "stage": "prep"
+    },
+    {
+      "questionId": "E141-data_matrix-Q007",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Bản chất nào đúng nhất về Dữ liệu đa chiều và ma trận dữ liệu X?",
+      "options": [
+        "Ma trận dữ liệu X cần giữ một quy ước nhất quán: n hàng là mẫu, p cột là đặc trưng.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Ma trận dữ liệu X cần giữ một quy ước nhất quán: n hàng là mẫu, p cột là đặc trưng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Ma trận dữ liệu X cần giữ một quy ước nhất quán: n hàng là mẫu, p cột là đặc trưng.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q008",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Công thức neo phù hợp với Dữ liệu đa chiều và ma trận dữ liệu X là gì?",
+      "options": [
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "X ∈ R^(n×p)"
+      ],
+      "answer": "X ∈ R^(n×p)",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: X ∈ R^(n×p)",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q009",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Bẫy nào cần tránh nhất khi dùng Dữ liệu đa chiều và ma trận dữ liệu X?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
+      ],
+      "answer": "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q010",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Cách kiểm chứng tối thiểu cho Dữ liệu đa chiều và ma trận dữ liệu X là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kiểm shape trước/sau từng phép biến đổi.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Kiểm shape trước/sau từng phép biến đổi.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Kiểm shape trước/sau từng phép biến đổi.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q011",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Trong ngữ cảnh kỹ thuật, Dữ liệu đa chiều và ma trận dữ liệu X hữu ích trực tiếp cho việc gì?",
+      "options": [
+        "biểu diễn dữ liệu cảm biến nhiều kênh",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "biểu diễn dữ liệu cảm biến nhiều kênh",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: biểu diễn dữ liệu cảm biến nhiều kênh",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q012",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Nếu kết quả số trông hợp lý nhưng giả thiết sai, nên làm gì?",
+      "options": [
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục."
+      ],
+      "answer": "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q013",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Khi thay đổi đơn vị/thang đo, điều gì phải được kiểm tra?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân."
+      ],
+      "answer": "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q014",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Một pipeline tái lập tốt phải lưu lại điều gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q015",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Khi dùng NumPy để kiểm tra kết quả, bước nào quan trọng?",
+      "options": [
+        "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q016",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Dấu hiệu nào cho thấy kết luận đang quá mạnh?",
+      "options": [
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được."
+      ],
+      "answer": "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q017",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Nếu có outlier mạnh, nên xử lý thế nào trước khi tin kết quả?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân."
+      ],
+      "answer": "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q018",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Vì sao cần ví dụ phản chứng khi học Dữ liệu đa chiều và ma trận dữ liệu X?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q019",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Khi chuyển từ dữ liệu train sang test, nguyên tắc nào phải giữ?",
+      "options": [
+        "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q020",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Một kết quả đúng về đại số nhưng sai về shape cho thấy điều gì?",
+      "options": [
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến."
+      ],
+      "answer": "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q021",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Khi nào nên ưu tiên diễn giải thay vì chỉ báo một scalar?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân."
+      ],
+      "answer": "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q022",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Cách tốt nhất để nối Dữ liệu đa chiều và ma trận dữ liệu X với bài kế tiếp là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q023",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Nếu hai cách tính cho kết quả hơi khác nhau, kiểm tra gì trước?",
+      "options": [
+        "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q024",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Một câu trả lời vấn đáp tốt về Dữ liệu đa chiều và ma trận dữ liệu X cần đủ những phần nào?",
+      "options": [
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật."
+      ],
+      "answer": "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-data_matrix-Q025",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Tiêu chí nào cho thấy đã hiểu sâu Dữ liệu đa chiều và ma trận dữ liệu X?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân."
+      ],
+      "answer": "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "tags": [
+        "data_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q007",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Bản chất nào đúng nhất về Trung tâm hóa và chuẩn hóa đặc trưng?",
+      "options": [
+        "Centering trừ trung bình; standardization chia thêm độ lệch chuẩn; thống kê preprocessing phải fit trên train.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Centering trừ trung bình; standardization chia thêm độ lệch chuẩn; thống kê preprocessing phải fit trên train.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Centering trừ trung bình; standardization chia thêm độ lệch chuẩn; thống kê preprocessing phải fit trên train.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q008",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Công thức neo phù hợp với Trung tâm hóa và chuẩn hóa đặc trưng là gì?",
+      "options": [
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "z=(x-μ_train)/s_train"
+      ],
+      "answer": "z=(x-μ_train)/s_train",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: z=(x-μ_train)/s_train",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q009",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Bẫy nào cần tránh nhất khi dùng Trung tâm hóa và chuẩn hóa đặc trưng?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
+      ],
+      "answer": "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q010",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Cách kiểm chứng tối thiểu cho Trung tâm hóa và chuẩn hóa đặc trưng là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Tách train/test trước, fit scaler trên train rồi transform cả train và test.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Tách train/test trước, fit scaler trên train rồi transform cả train và test.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Tách train/test trước, fit scaler trên train rồi transform cả train và test.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q011",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Trong ngữ cảnh kỹ thuật, Trung tâm hóa và chuẩn hóa đặc trưng hữu ích trực tiếp cho việc gì?",
+      "options": [
+        "tiền xử lý dữ liệu trước PCA/ML",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "tiền xử lý dữ liệu trước PCA/ML",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: tiền xử lý dữ liệu trước PCA/ML",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q012",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Nếu kết quả số trông hợp lý nhưng giả thiết sai, nên làm gì?",
+      "options": [
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục."
+      ],
+      "answer": "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q013",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Khi thay đổi đơn vị/thang đo, điều gì phải được kiểm tra?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage."
+      ],
+      "answer": "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q014",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Một pipeline tái lập tốt phải lưu lại điều gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q015",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Khi dùng NumPy để kiểm tra kết quả, bước nào quan trọng?",
+      "options": [
+        "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q016",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Dấu hiệu nào cho thấy kết luận đang quá mạnh?",
+      "options": [
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được."
+      ],
+      "answer": "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q017",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Nếu có outlier mạnh, nên xử lý thế nào trước khi tin kết quả?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage."
+      ],
+      "answer": "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q018",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Vì sao cần ví dụ phản chứng khi học Trung tâm hóa và chuẩn hóa đặc trưng?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q019",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Khi chuyển từ dữ liệu train sang test, nguyên tắc nào phải giữ?",
+      "options": [
+        "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q020",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Một kết quả đúng về đại số nhưng sai về shape cho thấy điều gì?",
+      "options": [
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến."
+      ],
+      "answer": "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q021",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Khi nào nên ưu tiên diễn giải thay vì chỉ báo một scalar?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage."
+      ],
+      "answer": "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q022",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Cách tốt nhất để nối Trung tâm hóa và chuẩn hóa đặc trưng với bài kế tiếp là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q023",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Nếu hai cách tính cho kết quả hơi khác nhau, kiểm tra gì trước?",
+      "options": [
+        "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q024",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Một câu trả lời vấn đáp tốt về Trung tâm hóa và chuẩn hóa đặc trưng cần đủ những phần nào?",
+      "options": [
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật."
+      ],
+      "answer": "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-centering-Q025",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Tiêu chí nào cho thấy đã hiểu sâu Trung tâm hóa và chuẩn hóa đặc trưng?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage."
+      ],
+      "answer": "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "tags": [
+        "centering",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q007",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Bản chất nào đúng nhất về Hiệp phương sai?",
+      "options": [
+        "Covariance đo đồng biến thiên nhưng độ lớn phụ thuộc đơn vị và thang đo.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Covariance đo đồng biến thiên nhưng độ lớn phụ thuộc đơn vị và thang đo.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Covariance đo đồng biến thiên nhưng độ lớn phụ thuộc đơn vị và thang đo.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q008",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Công thức neo phù hợp với Hiệp phương sai là gì?",
+      "options": [
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "cov(x,y)=Σ(x_i-x̄)(y_i-ȳ)/(n-1)"
+      ],
+      "answer": "cov(x,y)=Σ(x_i-x̄)(y_i-ȳ)/(n-1)",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: cov(x,y)=Σ(x_i-x̄)(y_i-ȳ)/(n-1)",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q009",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Bẫy nào cần tránh nhất khi dùng Hiệp phương sai?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
+      ],
+      "answer": "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q010",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Cách kiểm chứng tối thiểu cho Hiệp phương sai là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kiểm đơn vị, scatter plot và đối chiếu correlation nếu cần so cường độ.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Kiểm đơn vị, scatter plot và đối chiếu correlation nếu cần so cường độ.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Kiểm đơn vị, scatter plot và đối chiếu correlation nếu cần so cường độ.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q011",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Trong ngữ cảnh kỹ thuật, Hiệp phương sai hữu ích trực tiếp cho việc gì?",
+      "options": [
+        "phân tích quan hệ giữa các kênh cảm biến",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "phân tích quan hệ giữa các kênh cảm biến",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: phân tích quan hệ giữa các kênh cảm biến",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q012",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Nếu kết quả số trông hợp lý nhưng giả thiết sai, nên làm gì?",
+      "options": [
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục."
+      ],
+      "answer": "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q013",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Khi thay đổi đơn vị/thang đo, điều gì phải được kiểm tra?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang."
+      ],
+      "answer": "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q014",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Một pipeline tái lập tốt phải lưu lại điều gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q015",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Khi dùng NumPy để kiểm tra kết quả, bước nào quan trọng?",
+      "options": [
+        "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q016",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Dấu hiệu nào cho thấy kết luận đang quá mạnh?",
+      "options": [
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được."
+      ],
+      "answer": "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q017",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Nếu có outlier mạnh, nên xử lý thế nào trước khi tin kết quả?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang."
+      ],
+      "answer": "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q018",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Vì sao cần ví dụ phản chứng khi học Hiệp phương sai?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q019",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Khi chuyển từ dữ liệu train sang test, nguyên tắc nào phải giữ?",
+      "options": [
+        "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q020",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Một kết quả đúng về đại số nhưng sai về shape cho thấy điều gì?",
+      "options": [
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến."
+      ],
+      "answer": "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q021",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Khi nào nên ưu tiên diễn giải thay vì chỉ báo một scalar?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang."
+      ],
+      "answer": "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q022",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Cách tốt nhất để nối Hiệp phương sai với bài kế tiếp là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q023",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Nếu hai cách tính cho kết quả hơi khác nhau, kiểm tra gì trước?",
+      "options": [
+        "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q024",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Một câu trả lời vấn đáp tốt về Hiệp phương sai cần đủ những phần nào?",
+      "options": [
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật."
+      ],
+      "answer": "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-covariance-Q025",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Tiêu chí nào cho thấy đã hiểu sâu Hiệp phương sai?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang."
+      ],
+      "answer": "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "tags": [
+        "covariance",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q007",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Bản chất nào đúng nhất về Tương quan Pearson?",
+      "options": [
+        "Pearson là covariance chuẩn hóa, đo liên hệ tuyến tính chứ không chứng minh nhân quả.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Pearson là covariance chuẩn hóa, đo liên hệ tuyến tính chứ không chứng minh nhân quả.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Pearson là covariance chuẩn hóa, đo liên hệ tuyến tính chứ không chứng minh nhân quả.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q008",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Công thức neo phù hợp với Tương quan Pearson là gì?",
+      "options": [
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "r=cov(x,y)/(s_x s_y)"
+      ],
+      "answer": "r=cov(x,y)/(s_x s_y)",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: r=cov(x,y)/(s_x s_y)",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q009",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Bẫy nào cần tránh nhất khi dùng Tương quan Pearson?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
+      ],
+      "answer": "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q010",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Cách kiểm chứng tối thiểu cho Tương quan Pearson là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Xem scatter plot, outlier, cỡ mẫu và dạng phi tuyến trước khi diễn giải.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Xem scatter plot, outlier, cỡ mẫu và dạng phi tuyến trước khi diễn giải.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Xem scatter plot, outlier, cỡ mẫu và dạng phi tuyến trước khi diễn giải.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q011",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "easy",
+      "question": "Trong ngữ cảnh kỹ thuật, Tương quan Pearson hữu ích trực tiếp cho việc gì?",
+      "options": [
+        "sàng lọc redundancy giữa các feature",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "sàng lọc redundancy giữa các feature",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: sàng lọc redundancy giữa các feature",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q012",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Nếu kết quả số trông hợp lý nhưng giả thiết sai, nên làm gì?",
+      "options": [
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục."
+      ],
+      "answer": "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q013",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Khi thay đổi đơn vị/thang đo, điều gì phải được kiểm tra?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả."
+      ],
+      "answer": "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q014",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Một pipeline tái lập tốt phải lưu lại điều gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q015",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Khi dùng NumPy để kiểm tra kết quả, bước nào quan trọng?",
+      "options": [
+        "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q016",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Dấu hiệu nào cho thấy kết luận đang quá mạnh?",
+      "options": [
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được."
+      ],
+      "answer": "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q017",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "medium",
+      "question": "Nếu có outlier mạnh, nên xử lý thế nào trước khi tin kết quả?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả."
+      ],
+      "answer": "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q018",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Vì sao cần ví dụ phản chứng khi học Tương quan Pearson?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q019",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Khi chuyển từ dữ liệu train sang test, nguyên tắc nào phải giữ?",
+      "options": [
+        "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q020",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Một kết quả đúng về đại số nhưng sai về shape cho thấy điều gì?",
+      "options": [
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến."
+      ],
+      "answer": "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q021",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "hard",
+      "question": "Khi nào nên ưu tiên diễn giải thay vì chỉ báo một scalar?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả."
+      ],
+      "answer": "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q022",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Cách tốt nhất để nối Tương quan Pearson với bài kế tiếp là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q023",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Nếu hai cách tính cho kết quả hơi khác nhau, kiểm tra gì trước?",
+      "options": [
+        "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q024",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Một câu trả lời vấn đáp tốt về Tương quan Pearson cần đủ những phần nào?",
+      "options": [
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật."
+      ],
+      "answer": "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pearson-Q025",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "level": "expert",
+      "question": "Tiêu chí nào cho thấy đã hiểu sâu Tương quan Pearson?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả."
+      ],
+      "answer": "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "tags": [
+        "pearson",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q007",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Bản chất nào đúng nhất về Ma trận hiệp phương sai?",
+      "options": [
+        "Với Xc có n mẫu × p feature, S=XcᵀXc/(n-1) là ma trận p×p, đối xứng và bán xác định dương.",
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Với Xc có n mẫu × p feature, S=XcᵀXc/(n-1) là ma trận p×p, đối xứng và bán xác định dương.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Với Xc có n mẫu × p feature, S=XcᵀXc/(n-1) là ma trận p×p, đối xứng và bán xác định dương.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q008",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Công thức neo phù hợp với Ma trận hiệp phương sai là gì?",
+      "options": [
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "S=X_c^T X_c/(n-1)"
+      ],
+      "answer": "S=X_c^T X_c/(n-1)",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: S=X_c^T X_c/(n-1)",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q009",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Bẫy nào cần tránh nhất khi dùng Ma trận hiệp phương sai?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
+      ],
+      "answer": "Nhầm S là n×n hoặc bỏ bước centering.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Nhầm S là n×n hoặc bỏ bước centering.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q010",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Cách kiểm chứng tối thiểu cho Ma trận hiệp phương sai là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kiểm shape p×p, tính đối xứng và trị riêng không âm trong sai số số học.",
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Kiểm shape p×p, tính đối xứng và trị riêng không âm trong sai số số học.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Kiểm shape p×p, tính đối xứng và trị riêng không âm trong sai số số học.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q011",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Trong ngữ cảnh kỹ thuật, Ma trận hiệp phương sai hữu ích trực tiếp cho việc gì?",
+      "options": [
+        "tạo đầu vào phổ cho PCA",
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "tạo đầu vào phổ cho PCA",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: tạo đầu vào phổ cho PCA",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q012",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Nếu kết quả số trông hợp lý nhưng giả thiết sai, nên làm gì?",
+      "options": [
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục."
+      ],
+      "answer": "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q013",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Khi thay đổi đơn vị/thang đo, điều gì phải được kiểm tra?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+        "Nhầm S là n×n hoặc bỏ bước centering."
+      ],
+      "answer": "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q014",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Một pipeline tái lập tốt phải lưu lại điều gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q015",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Khi dùng NumPy để kiểm tra kết quả, bước nào quan trọng?",
+      "options": [
+        "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q016",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Dấu hiệu nào cho thấy kết luận đang quá mạnh?",
+      "options": [
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được."
+      ],
+      "answer": "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q017",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Nếu có outlier mạnh, nên xử lý thế nào trước khi tin kết quả?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+        "Nhầm S là n×n hoặc bỏ bước centering."
+      ],
+      "answer": "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q018",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Vì sao cần ví dụ phản chứng khi học Ma trận hiệp phương sai?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q019",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Khi chuyển từ dữ liệu train sang test, nguyên tắc nào phải giữ?",
+      "options": [
+        "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q020",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Một kết quả đúng về đại số nhưng sai về shape cho thấy điều gì?",
+      "options": [
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến."
+      ],
+      "answer": "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q021",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Khi nào nên ưu tiên diễn giải thay vì chỉ báo một scalar?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+        "Nhầm S là n×n hoặc bỏ bước centering."
+      ],
+      "answer": "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q022",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Cách tốt nhất để nối Ma trận hiệp phương sai với bài kế tiếp là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q023",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Nếu hai cách tính cho kết quả hơi khác nhau, kiểm tra gì trước?",
+      "options": [
+        "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q024",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Một câu trả lời vấn đáp tốt về Ma trận hiệp phương sai cần đủ những phần nào?",
+      "options": [
+        "Nhầm S là n×n hoặc bỏ bước centering.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật."
+      ],
+      "answer": "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-cov_matrix-Q025",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Tiêu chí nào cho thấy đã hiểu sâu Ma trận hiệp phương sai?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+        "Nhầm S là n×n hoặc bỏ bước centering."
+      ],
+      "answer": "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "tags": [
+        "cov_matrix",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q007",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Bản chất nào đúng nhất về Trị riêng và vector riêng của covariance matrix?",
+      "options": [
+        "Sv=λv; λ cho phương sai theo hướng v, và dấu của vector riêng không làm thay đổi trục.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Sv=λv; λ cho phương sai theo hướng v, và dấu của vector riêng không làm thay đổi trục.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Sv=λv; λ cho phương sai theo hướng v, và dấu của vector riêng không làm thay đổi trục.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q008",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Công thức neo phù hợp với Trị riêng và vector riêng của covariance matrix là gì?",
+      "options": [
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "S v = λ v"
+      ],
+      "answer": "S v = λ v",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: S v = λ v",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q009",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Bẫy nào cần tránh nhất khi dùng Trị riêng và vector riêng của covariance matrix?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
+      ],
+      "answer": "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q010",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Cách kiểm chứng tối thiểu cho Trị riêng và vector riêng của covariance matrix là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kiểm residual ||Sv-λv|| và chuẩn trực giao của các vector riêng đối xứng.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Kiểm residual ||Sv-λv|| và chuẩn trực giao của các vector riêng đối xứng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Kiểm residual ||Sv-λv|| và chuẩn trực giao của các vector riêng đối xứng.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q011",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Trong ngữ cảnh kỹ thuật, Trị riêng và vector riêng của covariance matrix hữu ích trực tiếp cho việc gì?",
+      "options": [
+        "xác định các hướng phương sai chính",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "xác định các hướng phương sai chính",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: xác định các hướng phương sai chính",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q012",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Nếu kết quả số trông hợp lý nhưng giả thiết sai, nên làm gì?",
+      "options": [
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục."
+      ],
+      "answer": "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q013",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Khi thay đổi đơn vị/thang đo, điều gì phải được kiểm tra?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix."
+      ],
+      "answer": "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q014",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Một pipeline tái lập tốt phải lưu lại điều gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q015",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Khi dùng NumPy để kiểm tra kết quả, bước nào quan trọng?",
+      "options": [
+        "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q016",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Dấu hiệu nào cho thấy kết luận đang quá mạnh?",
+      "options": [
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được."
+      ],
+      "answer": "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q017",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Nếu có outlier mạnh, nên xử lý thế nào trước khi tin kết quả?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix."
+      ],
+      "answer": "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q018",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Vì sao cần ví dụ phản chứng khi học Trị riêng và vector riêng của covariance matrix?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q019",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Khi chuyển từ dữ liệu train sang test, nguyên tắc nào phải giữ?",
+      "options": [
+        "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q020",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Một kết quả đúng về đại số nhưng sai về shape cho thấy điều gì?",
+      "options": [
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến."
+      ],
+      "answer": "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q021",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Khi nào nên ưu tiên diễn giải thay vì chỉ báo một scalar?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix."
+      ],
+      "answer": "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q022",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Cách tốt nhất để nối Trị riêng và vector riêng của covariance matrix với bài kế tiếp là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q023",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Nếu hai cách tính cho kết quả hơi khác nhau, kiểm tra gì trước?",
+      "options": [
+        "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q024",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Một câu trả lời vấn đáp tốt về Trị riêng và vector riêng của covariance matrix cần đủ những phần nào?",
+      "options": [
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật."
+      ],
+      "answer": "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-eigen_cov-Q025",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Tiêu chí nào cho thấy đã hiểu sâu Trị riêng và vector riêng của covariance matrix?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix."
+      ],
+      "answer": "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "tags": [
+        "eigen_cov",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q007",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Bản chất nào đúng nhất về PCA nhập môn?",
+      "options": [
+        "PCA chiếu dữ liệu lên các vector riêng có trị riêng lớn nhất để giữ tối đa phương sai theo số chiều đã chọn.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "PCA chiếu dữ liệu lên các vector riêng có trị riêng lớn nhất để giữ tối đa phương sai theo số chiều đã chọn.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: PCA chiếu dữ liệu lên các vector riêng có trị riêng lớn nhất để giữ tối đa phương sai theo số chiều đã chọn.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q008",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Công thức neo phù hợp với PCA nhập môn là gì?",
+      "options": [
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Z=X_c V_k"
+      ],
+      "answer": "Z=X_c V_k",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Z=X_c V_k",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q009",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Bẫy nào cần tránh nhất khi dùng PCA nhập môn?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
+      ],
+      "answer": "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q010",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Cách kiểm chứng tối thiểu cho PCA nhập môn là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kiểm cumulative explained variance và đánh giá downstream sau giảm chiều.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Kiểm cumulative explained variance và đánh giá downstream sau giảm chiều.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Kiểm cumulative explained variance và đánh giá downstream sau giảm chiều.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q011",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Trong ngữ cảnh kỹ thuật, PCA nhập môn hữu ích trực tiếp cho việc gì?",
+      "options": [
+        "giảm chiều dữ liệu cảm biến/feature",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "giảm chiều dữ liệu cảm biến/feature",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: giảm chiều dữ liệu cảm biến/feature",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q012",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Nếu kết quả số trông hợp lý nhưng giả thiết sai, nên làm gì?",
+      "options": [
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục."
+      ],
+      "answer": "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q013",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Khi thay đổi đơn vị/thang đo, điều gì phải được kiểm tra?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA."
+      ],
+      "answer": "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q014",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Một pipeline tái lập tốt phải lưu lại điều gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q015",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Khi dùng NumPy để kiểm tra kết quả, bước nào quan trọng?",
+      "options": [
+        "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q016",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Dấu hiệu nào cho thấy kết luận đang quá mạnh?",
+      "options": [
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được."
+      ],
+      "answer": "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q017",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Nếu có outlier mạnh, nên xử lý thế nào trước khi tin kết quả?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA."
+      ],
+      "answer": "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q018",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Vì sao cần ví dụ phản chứng khi học PCA nhập môn?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q019",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Khi chuyển từ dữ liệu train sang test, nguyên tắc nào phải giữ?",
+      "options": [
+        "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q020",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Một kết quả đúng về đại số nhưng sai về shape cho thấy điều gì?",
+      "options": [
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến."
+      ],
+      "answer": "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q021",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Khi nào nên ưu tiên diễn giải thay vì chỉ báo một scalar?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA."
+      ],
+      "answer": "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q022",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Cách tốt nhất để nối PCA nhập môn với bài kế tiếp là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q023",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Nếu hai cách tính cho kết quả hơi khác nhau, kiểm tra gì trước?",
+      "options": [
+        "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q024",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Một câu trả lời vấn đáp tốt về PCA nhập môn cần đủ những phần nào?",
+      "options": [
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật."
+      ],
+      "answer": "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-pca-Q025",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Tiêu chí nào cho thấy đã hiểu sâu PCA nhập môn?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA."
+      ],
+      "answer": "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "tags": [
+        "pca",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q007",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Bản chất nào đúng nhất về Tái tạo dữ liệu và sai số khi giảm chiều?",
+      "options": [
+        "Tái tạo PCA dùng X_hat=ZV_kᵀ+μ; k<p gây mất thông tin và cần đo sai số.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Tái tạo PCA dùng X_hat=ZV_kᵀ+μ; k<p gây mất thông tin và cần đo sai số.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Tái tạo PCA dùng X_hat=ZV_kᵀ+μ; k<p gây mất thông tin và cần đo sai số.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q008",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Công thức neo phù hợp với Tái tạo dữ liệu và sai số khi giảm chiều là gì?",
+      "options": [
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "X_hat=Z V_k^T + μ"
+      ],
+      "answer": "X_hat=Z V_k^T + μ",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: X_hat=Z V_k^T + μ",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q009",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Bẫy nào cần tránh nhất khi dùng Tái tạo dữ liệu và sai số khi giảm chiều?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
+      ],
+      "answer": "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q010",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Cách kiểm chứng tối thiểu cho Tái tạo dữ liệu và sai số khi giảm chiều là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Đo Frobenius error và thêm metric theo từng feature quan trọng.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Đo Frobenius error và thêm metric theo từng feature quan trọng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Đo Frobenius error và thêm metric theo từng feature quan trọng.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q011",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "easy",
+      "question": "Trong ngữ cảnh kỹ thuật, Tái tạo dữ liệu và sai số khi giảm chiều hữu ích trực tiếp cho việc gì?",
+      "options": [
+        "nén dữ liệu và đánh giá thông tin bị mất",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "nén dữ liệu và đánh giá thông tin bị mất",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: nén dữ liệu và đánh giá thông tin bị mất",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q012",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Nếu kết quả số trông hợp lý nhưng giả thiết sai, nên làm gì?",
+      "options": [
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục."
+      ],
+      "answer": "Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Hạ cấp kết luận, kiểm lại giả thiết và chọn phương pháp phù hợp trước khi tiếp tục.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q013",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Khi thay đổi đơn vị/thang đo, điều gì phải được kiểm tra?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau."
+      ],
+      "answer": "Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Phải kiểm tra đại lượng có bất biến theo scale hay không và ý nghĩa vật lý có bị thay đổi không.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q014",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Một pipeline tái lập tốt phải lưu lại điều gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Quy ước dữ liệu, tham số preprocessing, phiên bản công thức/thuật toán và tiêu chí đánh giá.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q015",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Khi dùng NumPy để kiểm tra kết quả, bước nào quan trọng?",
+      "options": [
+        "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Đối chiếu shape, tolerance số học và một ví dụ tính tay nhỏ.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q016",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Dấu hiệu nào cho thấy kết luận đang quá mạnh?",
+      "options": [
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được."
+      ],
+      "answer": "Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Kết luận vượt khỏi giả thiết, dữ liệu quan sát hoặc metric thực sự đo được.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q017",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "medium",
+      "question": "Nếu có outlier mạnh, nên xử lý thế nào trước khi tin kết quả?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau."
+      ],
+      "answer": "Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Quan sát dữ liệu, đánh giá độ nhạy có/không outlier và báo cáo cả hai nếu cần.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q018",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Vì sao cần ví dụ phản chứng khi học Tái tạo dữ liệu và sai số khi giảm chiều?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Để biết ranh giới nơi công thức hoặc trực giác không còn áp dụng.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q019",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Khi chuyển từ dữ liệu train sang test, nguyên tắc nào phải giữ?",
+      "options": [
+        "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Không học lại tham số preprocessing từ test; chỉ transform bằng tham số đã fit trên train.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q020",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Một kết quả đúng về đại số nhưng sai về shape cho thấy điều gì?",
+      "options": [
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến."
+      ],
+      "answer": "Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Pipeline chưa kiểm soát kích thước; phép tính có thể không còn mang ý nghĩa dữ liệu dự kiến.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q021",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "hard",
+      "question": "Khi nào nên ưu tiên diễn giải thay vì chỉ báo một scalar?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau."
+      ],
+      "answer": "Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Khi scalar nhạy với scale, outlier, cỡ mẫu hoặc che giấu cấu trúc đa chiều.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q022",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Cách tốt nhất để nối Tái tạo dữ liệu và sai số khi giảm chiều với bài kế tiếp là gì?",
+      "options": [
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được."
+      ],
+      "answer": "Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Giữ lại đối tượng, giả thiết, công thức neo và output cần dùng ở bước tiếp theo.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q023",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Nếu hai cách tính cho kết quả hơi khác nhau, kiểm tra gì trước?",
+      "options": [
+        "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất."
+      ],
+      "answer": "Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Kiểm tra quy ước mẫu/tổng thể, centering, normalization và sai số số học.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q024",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Một câu trả lời vấn đáp tốt về Tái tạo dữ liệu và sai số khi giảm chiều cần đủ những phần nào?",
+      "options": [
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật."
+      ],
+      "answer": "Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Bản chất, công thức, điều kiện áp dụng, diễn giải, bẫy và một ứng dụng kỹ thuật.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E141-reconstruction-Q025",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "level": "expert",
+      "question": "Tiêu chí nào cho thấy đã hiểu sâu Tái tạo dữ liệu và sai số khi giảm chiều?",
+      "options": [
+        "Không cần kiểm tra giả thiết nếu code chạy được.",
+        "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
+        "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau."
+      ],
+      "answer": "Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Có thể dự đoán kết quả khi thay đổi dữ liệu/giả thiết và giải thích vì sao, không chỉ thay số vào công thức.",
+      "tags": [
+        "reconstruction",
+        "E141",
+        "exam-capacity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
     }
   ],
   "importPolicy": {
