@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "subject-manifest.json"
+      - "subject-manifest.js"
       - "assets/**"
       - "data/**"
       - "tools/e145_content_integrity.py"
@@ -12,6 +14,8 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "subject-manifest.json"
+      - "subject-manifest.js"
       - "assets/**"
       - "data/**"
       - "tools/e145_content_integrity.py"
