@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_mindmap_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
   "subject": "math",
   "title": "Mind map · Nội dung",
   "contentVaultRole": "content",
@@ -10,7 +10,600 @@
   "frameSource": "mindmap_frame.json",
   "legacyExportTarget": "mindmap.json",
   "recordKey": "mindmapId",
-  "records": [],
+  "records": [
+    {
+      "mindmapId": "E15-data_matrix-MM01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Dữ liệu đa chiều và ma trận dữ liệu X",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức / phép biến đổi",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: đảo hàng và cột",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Ứng dụng AI / cảm biến / PCA",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm chứng bằng ví dụ + NumPy",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "data_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "mindmapId": "E15-centering-MM01",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Trung tâm hóa và chuẩn hóa đặc trưng",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức / phép biến đổi",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: data leakage khi fit trên test",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Ứng dụng AI / cảm biến / PCA",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm chứng bằng ví dụ + NumPy",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "centering",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "mindmapId": "E15-covariance-MM01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Hiệp phương sai",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức / phép biến đổi",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: coi covariance lớn là quan hệ mạnh tuyệt đối",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Ứng dụng AI / cảm biến / PCA",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm chứng bằng ví dụ + NumPy",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "covariance",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "mindmapId": "E15-pearson-MM01",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Tương quan Pearson",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức / phép biến đổi",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: r≈0 đồng nghĩa độc lập",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Ứng dụng AI / cảm biến / PCA",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm chứng bằng ví dụ + NumPy",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "pearson",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "mindmapId": "E15-cov_matrix-MM01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Ma trận hiệp phương sai",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức / phép biến đổi",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: nhầm covariance matrix là n×n",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Ứng dụng AI / cảm biến / PCA",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm chứng bằng ví dụ + NumPy",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "cov_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "mindmapId": "E15-eigen_cov-MM01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Trị riêng và vector riêng của covariance matrix",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức / phép biến đổi",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: coi trị riêng âm đáng kể là bình thường",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Ứng dụng AI / cảm biến / PCA",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm chứng bằng ví dụ + NumPy",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "eigen_cov",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "mindmapId": "E15-pca-MM01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "PCA nhập môn",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức / phép biến đổi",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: chọn k hoàn toàn theo cảm tính",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Ứng dụng AI / cảm biến / PCA",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm chứng bằng ví dụ + NumPy",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "pca",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "mindmapId": "E15-reconstruction-MM01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Tái tạo dữ liệu và sai số khi giảm chiều",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức / phép biến đổi",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: coi giảm chiều là không mất thông tin",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Ứng dụng AI / cảm biến / PCA",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm chứng bằng ví dụ + NumPy",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "reconstruction",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    }
+  ],
   "importPolicy": {
     "key": "mindmapId",
     "requires": [
@@ -47,12 +640,13 @@
     "edges": [],
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-06-22",
+  "updatedAt": "2026-09-21",
   "emoji": "🧠",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
     "recordsMustUseStableIds": true,
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
-  }
+  },
+  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
 }
