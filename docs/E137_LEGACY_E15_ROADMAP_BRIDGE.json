@@ -1,0 +1,109 @@
+{
+  "release": "E137_LEGACY_E15_ROADMAP_BRIDGE",
+  "date": "2026-09-21",
+  "status": "ACTIVE_MAPPING",
+  "purpose": "Preserve the historical E15 covariance/correlation/PCA learning intent without recreating a physical VN Chapter 7 that no longer exists in the current roadmap.",
+  "sourceSpecification": {
+    "legacyBundle": "E15 · Chương 7 · Hiệp phương sai, tương quan và PCA nhập môn",
+    "legacyLessonCount": 8,
+    "note": "Historical E15 remains a logical competency bundle, not a physical chapter node."
+  },
+  "currentArchitecture": {
+    "vnPhysicalChapters": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "pcaPhysicalTarget": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+    "pcaTargetTitle": "Đại số tuyến tính II: trị riêng, trực giao, SVD và PCA"
+  },
+  "mapping": [
+    {
+      "legacy": "§7.1 Dữ liệu đa chiều và ma trận dữ liệu X",
+      "status": "COVERED_BY_EXISTING_THEORY",
+      "targets": [
+        "MATH-VN-LA-C01-L01",
+        "MATH-VN-LA-C02-L01",
+        "MATH-VN-LA-C02-L03"
+      ]
+    },
+    {
+      "legacy": "§7.2 Trung tâm hóa và chuẩn hóa đặc trưng",
+      "status": "PARTIAL_EXISTING_PLUS_GAP",
+      "targets": [
+        "MATH-VN-PS-C05-L07"
+      ],
+      "gap": "Centering theo feature chưa có bài chuyên biệt."
+    },
+    {
+      "legacy": "§7.3 Hiệp phương sai",
+      "status": "COVERED_BY_EXISTING_THEORY",
+      "targets": [
+        "MATH-VN-PS-C05-L05"
+      ]
+    },
+    {
+      "legacy": "§7.4 Tương quan Pearson",
+      "status": "GAP_REQUIRES_CONTENT",
+      "targets": [],
+      "gap": "Không có bài lý thuyết hiện hành tương đương trực tiếp; không map ép vào cosine similarity."
+    },
+    {
+      "legacy": "§7.5 Ma trận hiệp phương sai",
+      "status": "COVERED_BY_EXISTING_THEORY",
+      "targets": [
+        "MATH-PREP-LA2-C10-L05"
+      ]
+    },
+    {
+      "legacy": "§7.6 Trị riêng, vector riêng của covariance matrix",
+      "status": "COVERED_BY_EXISTING_THEORY",
+      "targets": [
+        "MATH-PREP-LA2-C10-L01",
+        "MATH-PREP-LA2-C10-L05"
+      ]
+    },
+    {
+      "legacy": "§7.7 PCA nhập môn",
+      "status": "COVERED_BY_EXISTING_THEORY",
+      "targets": [
+        "MATH-PREP-LA2-C10-L06"
+      ]
+    },
+    {
+      "legacy": "§7.8 Tái tạo dữ liệu và sai số khi giảm chiều",
+      "status": "COVERED_BY_EXISTING_THEORY",
+      "targets": [
+        "MATH-PREP-LA2-C10-L07",
+        "MATH-PREP-LA2-C10-L08"
+      ]
+    }
+  ],
+  "implementationPolicy": {
+    "createNewPhysicalVNChapter7": false,
+    "preserveCurrentChapterSpine": true,
+    "preserveExistingTheoryRecords": true,
+    "createMissingPearsonAndCenteringAsTargetedContent": true,
+    "hydrateNonTheoryVaultsAgainstStableCurrentLessonIds": true
+  },
+  "generatedNextRounds": [
+    {
+      "release": "E138",
+      "name": "Pearson + feature-centering theory gap patch",
+      "scope": "targeted"
+    },
+    {
+      "release": "E139",
+      "name": "Non-theory content vault hydration",
+      "scope": "formulas/exercises/applications/simulations/professor_qa/questions/review/mindmap"
+    },
+    {
+      "release": "E140",
+      "name": "Cross-vault integrity + runtime render audit",
+      "scope": "IDs/counts/render/storage"
+    }
+  ]
+}
