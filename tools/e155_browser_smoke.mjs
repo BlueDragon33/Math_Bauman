@@ -244,6 +244,64 @@ try {
     await fail('PWA did not become controlled/offline-ready');
   }
 
+  const activationSeed = await page.evaluate(async () => {
+    const keys = await caches.keys();
+    const runtime = keys.find(k => k.endsWith('-runtime'));
+    if (!runtime) return { ok:false, runtime };
+    const url = new URL('./__e166_activation_stale_probe__.txt', location.href).href;
+    const req = new Request(url);
+    await (await caches.open(runtime)).put(req, new Response('stale-before-update', { status:200, headers:{'Content-Type':'text/plain'} }));
+    const status = window.MathBaumanPWA.selfCheck();
+    return { ok:true, runtime, url, controllerChanges:status.controllerChanges || 0 };
+  });
+  console.log('E166 activation seed', JSON.stringify(activationSeed));
+  if (!activationSeed.ok) await fail('E166 could not seed stale runtime cache probe');
+
+  fs.appendFileSync(new URL('../service-worker.js', import.meta.url), '\n// E166 CI update probe\n', 'utf8');
+
+  const swUpdate = await page.evaluate(async (beforeChanges) => {
+    const registration = await navigator.serviceWorker.getRegistration('./');
+    if (!registration) return { ok:false, reason:'missing registration' };
+    const changed = new Promise((resolve, reject) => {
+      const timer = setTimeout(() => reject(new Error('controllerchange timeout')), 30000);
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        clearTimeout(timer);
+        resolve(true);
+      }, { once:true });
+    });
+    await registration.update();
+    await changed;
+    return {
+      ok:true,
+      beforeChanges,
+      controller: !!navigator.serviceWorker.controller
+    };
+  }, activationSeed.controllerChanges);
+  console.log('E166 service-worker update', JSON.stringify(swUpdate));
+  if (!swUpdate.ok || !swUpdate.controller) await fail('E166 service worker did not take control after update');
+
+  await page.waitForFunction((beforeChanges) => {
+    const pwa = window.MathBaumanPWA;
+    if (!pwa || typeof pwa.selfCheck !== 'function') return false;
+    const status = pwa.selfCheck();
+    return status.ok === true && status.controllerChanges > beforeChanges;
+  }, activationSeed.controllerChanges, { timeout: 120000 });
+
+  const activationPost = await page.evaluate(async (probeUrl) => {
+    const keys = await caches.keys();
+    const runtime = keys.find(k => k.endsWith('-runtime'));
+    const hit = runtime ? await (await caches.open(runtime)).match(probeUrl) : null;
+    return {
+      runtime,
+      staleProbePresent: !!hit,
+      pwa: window.MathBaumanPWA.selfCheck()
+    };
+  }, activationSeed.url);
+  console.log('E166 activation post', JSON.stringify(activationPost));
+  if (activationPost.staleProbePresent || !activationPost.pwa.ok) {
+    await fail('E166 stale runtime cache survived service-worker activation or rewarm failed');
+  }
+
   const cachePrioritySeed = await page.evaluate(async () => {
     const keys = await caches.keys();
     const shell = keys.find(k => k.endsWith('-shell'));
@@ -307,7 +365,7 @@ try {
   if (pageErrors.length) await fail('uncaught page errors detected');
   if (guardErrors.length) await fail('render guard errors detected');
 
-  console.log('E155/E157/E158/E160/E162/E164/E165 PASS: routes, interactions, persistence, mobile layout, offline runtime and cache freshness priority are healthy.');
+  console.log('E155/E157/E158/E160/E162/E164/E165/E166 PASS: routes, interactions, persistence, mobile layout, offline runtime, cache freshness and service-worker activation are healthy.');
 } finally {
   await browser.close();
 }
