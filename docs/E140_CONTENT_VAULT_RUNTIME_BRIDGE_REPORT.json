@@ -1,0 +1,72 @@
+{
+  "release": "E140_CONTENT_VAULT_RUNTIME_BRIDGE",
+  "date": "2026-09-21",
+  "status": "IMPLEMENTED_ON_BRANCH",
+  "findings": [
+    "Core exam engine reads SUBJECT_ADAPTER.getTests(), which used legacy tests/question_bank rather than question_bank_content.",
+    "Mind map renderer reads DB.mindmap rather than mindmap_content.",
+    "Legacy lesson/formula/exercise/application arrays are still used by several routing/context helpers even after content-vault architecture."
+  ],
+  "fixes": {
+    "compatibilityBridge": "assets/runtime_content/content-vault-bridge-E140.js",
+    "loaderOrder": [
+      "core.js",
+      "theory-overlay-E138.js",
+      "content-vault-bridge-E140.js",
+      "theory-main-adapter-E126.js"
+    ],
+    "inMemoryOnly": true,
+    "vaultsRemainSourceOfTruth": true,
+    "bridgedTargets": [
+      "lessons",
+      "formulas",
+      "exercises",
+      "applications",
+      "simulations",
+      "professor_qa",
+      "review_packs",
+      "question_bank",
+      "tests.questions",
+      "test_blueprints",
+      "mindmap"
+    ],
+    "e138DependencyGuard": true
+  },
+  "questionBank": {
+    "total": 48,
+    "levels": {
+      "easy": 16,
+      "medium": 16,
+      "hard": 8,
+      "expert": 8
+    },
+    "stages": {
+      "vn": 24,
+      "prep": 24
+    },
+    "standard20ReadyPerStage": true,
+    "intensive40ReadyGlobally": true,
+    "advanced60Ready": false,
+    "deep100Ready": false
+  },
+  "blueprints": {
+    "records": 4,
+    "note": "Blueprints reflect available E15 questions by current physical chapter; they do not fabricate missing capacity."
+  },
+  "safeguards": {
+    "coreJsModified": false,
+    "storageKeyModified": false,
+    "physicalVNChapter7Created": false,
+    "legacyFilesPersisted": false
+  },
+  "nextGeneratedRound": {
+    "release": "E141_EXAM_CAPACITY_AND_STAGE_SCOPING",
+    "reason": "Current E15 bank supports standard 20-question exams in each populated stage, but does not independently support 40/60/100-question stage-scoped papers.",
+    "tasks": [
+      "Expand question capacity without duplicating stems.",
+      "Keep stage-scoped pools; do not pull Prep questions into VN exams or vice versa.",
+      "Add academic-quality distractor audit and answer-index validation.",
+      "Run browser/runtime self-check after expansion."
+    ]
+  }
+}
