@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "manifest.webmanifest"
+      - "service-worker.js"
       - "subject-manifest.json"
       - "subject-manifest.js"
       - "assets/**"
@@ -15,6 +17,8 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "manifest.webmanifest"
+      - "service-worker.js"
       - "subject-manifest.json"
       - "subject-manifest.js"
       - "assets/**"
@@ -46,6 +50,8 @@ jobs:
             node --check "$file"
           done < <(find assets -type f -name '*.js' -print0 | sort -z)
           node --check subject-manifest.js
+          node --check service-worker.js
+          node --check tools/e155_browser_smoke.mjs
       - name: Install browser smoke harness
         run: npm install --no-save --package-lock=false playwright-core@1.55.0
       - name: Run E155 browser smoke
@@ -55,5 +61,6 @@ jobs:
           command -v google-chrome || command -v chromium || command -v chromium-browser
           python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/e155-http.log 2>&1 &
           server_pid=$!
+          export E155_SERVER_PID="$server_pid"
           trap 'kill "$server_pid" 2>/dev/null || true' EXIT
           node tools/e155_browser_smoke.mjs

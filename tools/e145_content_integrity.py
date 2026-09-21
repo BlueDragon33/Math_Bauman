@@ -354,6 +354,42 @@ def check_mindmap_graph() -> None:
             fail(f"{mid}: unreachable nodes: {', '.join(unreachable)}")
 
 
+
+def check_pwa_contract() -> None:
+    manifest_path = ROOT / "manifest.webmanifest"
+    manifest = load_json(manifest_path)
+    if not isinstance(manifest, dict):
+        fail("manifest.webmanifest must be valid JSON")
+    else:
+        if manifest.get("start_url") != "./index.html":
+            fail("manifest.webmanifest start_url must be ./index.html")
+        if manifest.get("scope") != "./":
+            fail("manifest.webmanifest scope must be ./")
+        if manifest.get("display") != "standalone":
+            fail("manifest.webmanifest display must be standalone")
+        icons = manifest.get("icons")
+        if not isinstance(icons, list) or not icons:
+            fail("manifest.webmanifest must declare at least one icon")
+        elif not (ROOT / str(icons[0].get("src") or "")).is_file():
+            fail("manifest.webmanifest icon is missing")
+
+    sw_path = ROOT / "service-worker.js"
+    if not sw_path.is_file():
+        fail("missing service-worker.js")
+    else:
+        sw = sw_path.read_text(encoding="utf-8")
+        for signature in ("addEventListener('install'", "addEventListener('activate'", "addEventListener('fetch'", "E160_CACHE_URLS"):
+            if signature not in sw:
+                fail(f"service-worker.js missing PWA contract: {signature}")
+
+    index_path = ROOT / "index.html"
+    text = index_path.read_text(encoding="utf-8") if index_path.is_file() else ""
+    if 'rel="manifest" href="manifest.webmanifest"' not in text:
+        fail("index.html does not link manifest.webmanifest")
+    if "assets/webapp-bootstrap-E160.js?v=160" not in text:
+        fail("index.html does not load E160 PWA bootstrap")
+
+
 def check_runtime_shell() -> None:
     index_path = ROOT / "index.html"
     try:
@@ -427,6 +463,7 @@ def main() -> int:
     check_adapter_counts(counts)
     questions, blueprints = check_questions_and_blueprints()
     check_mindmap_graph()
+    check_pwa_contract()
     check_runtime_shell()
     check_bridge_contract(counts)
 

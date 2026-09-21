@@ -230,10 +230,64 @@ try {
     }
   }
 
+  // E160: installability + warm-cache + true offline reload.
+  await page.waitForFunction(() => {
+    const pwa = window.MathBaumanPWA;
+    if (!pwa || typeof pwa.selfCheck !== 'function') return false;
+    const status = pwa.selfCheck();
+    return status.ok === true && status.controlled === true;
+  }, null, { timeout: 120000 });
+
+  const pwaOnline = await page.evaluate(() => window.MathBaumanPWA.selfCheck());
+  console.log('E160 PWA online-ready', JSON.stringify(pwaOnline));
+  if (!pwaOnline.ok || !pwaOnline.controlled || pwaOnline.initialDataFiles < 10) {
+    await fail('PWA did not become controlled/offline-ready');
+  }
+
+  const serverPid = Number(process.env.E155_SERVER_PID || 0);
+  if (!Number.isInteger(serverPid) || serverPid <= 1) {
+    await fail('E164 local origin PID is unavailable');
+  }
+  process.kill(serverPid, 'SIGTERM');
+  await new Promise(resolve => setTimeout(resolve, 350));
+  console.log('E164 origin stopped', JSON.stringify({ serverPid }));
+
+  await page.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
+  await page.waitForFunction(() => {
+    return !!window.__BAUMAN_CORE_API &&
+      !!window.DB &&
+      (document.querySelector('#view')?.innerText || '').trim().length > 20;
+  }, null, { timeout: 60000 });
+  await page.waitForFunction(() => window.__BAUMAN_MATH_E140_VAULT_BRIDGE__?.loaded === true, null, { timeout: 30000 });
+  await page.waitForFunction(() => window.__BAUMAN_MATH_E150_MINDMAP_TOPOLOGY__?.loaded === true, null, { timeout: 30000 });
+
+  const offline = await page.evaluate(async () => {
+    let uncachedProbeFailed = false;
+    try {
+      await fetch('./__e162_uncached_offline_probe__.txt?probe=' + Date.now(), { cache: 'no-store' });
+    } catch (_) {
+      uncachedProbeFailed = true;
+    }
+    return {
+      onlineHint: navigator.onLine,
+      uncachedProbeFailed,
+      view: window.__BAUMAN_CORE_API?.state?.view,
+      textLength: (document.querySelector('#view')?.innerText || '').replace(/\s+/g, ' ').trim().length,
+      maps: Array.isArray(window.DB?.mindmap) ? window.DB.mindmap.length : 0,
+      professorQa: Array.isArray(window.DB?.professor_qa) ? window.DB.professor_qa.length : 0,
+      e140: typeof window.BAUMAN_MATH_E140_SELF_CHECK === 'function' ? window.BAUMAN_MATH_E140_SELF_CHECK().ok : false,
+      e150: typeof window.BAUMAN_MATH_E150_SELF_CHECK === 'function' ? window.BAUMAN_MATH_E150_SELF_CHECK().ok : false,
+      recovery: /KHÔI PHỤC TAB HỌC TẬP|LỖI TAB HỌC TẬP/i.test(document.querySelector('#view')?.innerText || '')
+    };
+  });
+  console.log('E160 offline reload', JSON.stringify(offline));
+  if (!offline.uncachedProbeFailed || offline.textLength < 24 || offline.maps < 1 || offline.professorQa < 1 || !offline.e140 || !offline.e150 || offline.recovery) {
+    await fail('offline reload did not preserve a healthy learning runtime');
+  }
   if (pageErrors.length) await fail('uncaught page errors detected');
   if (guardErrors.length) await fail('render guard errors detected');
 
-  console.log('E155/E157/E158 PASS: browser routes, interactions, persistence, content bridges and mobile layout are healthy.');
+  console.log('E155/E157/E158/E160/E162/E164 PASS: routes, interactions, persistence, mobile layout and verified origin-down offline Web App runtime are healthy.');
 } finally {
   await browser.close();
 }
