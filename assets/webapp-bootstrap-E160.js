@@ -4,6 +4,7 @@
   let registration=null;
   let offlineReady=false;
   let cachedCount=0;
+  let skippedCount=0;
   let failedCount=0;
 
   function setStatus(ready){
@@ -14,6 +15,7 @@
       registered:!!registration,
       offlineReady,
       cachedCount,
+      skippedCount,
       failedCount
     };
   }
@@ -58,6 +60,7 @@
     const data=event.data||{};
     if(data.type!=='E160_CACHE_COMPLETE')return;
     cachedCount=Number(data.cached||0);
+    skippedCount=Number(data.skipped||0);
     failedCount=Number(data.failed||0);
     setStatus(cachedCount>0&&failedCount===0);
   });
@@ -74,6 +77,7 @@
         controlled:!!navigator.serviceWorker?.controller,
         offlineReady,
         cachedCount,
+        skippedCount,
         failedCount,
         initialDataFiles:coreUrls().length
       };
