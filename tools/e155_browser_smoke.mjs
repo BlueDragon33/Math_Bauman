@@ -200,10 +200,40 @@ try {
   if (persisted.maps < 1 || persisted.professorQa < 1) await fail('content bridges did not recover after reload');
   if (persisted.recovery) await fail('reload fell into recovery UI');
 
+  // E158: mobile viewport smoke for the most important surfaces.
+  await page.setViewportSize({ width: 390, height: 844 });
+  const mobileRoutes = [
+    ['mobile/overview', 'overview', null],
+    ['mobile/learning-theory', 'learning', 'theory'],
+    ['mobile/dialogue', 'dialogue', null],
+    ['mobile/mindmap', 'mindmap', null]
+  ];
+  for (const [label, view, tab] of mobileRoutes) {
+    await routeSmoke(label, view, tab);
+    const geometry = await page.evaluate(() => {
+      const app = document.querySelector('#app')?.getBoundingClientRect();
+      const main = document.querySelector('.main')?.getBoundingClientRect();
+      const bodyOverflow = Math.max(0, document.documentElement.scrollWidth - window.innerWidth);
+      return {
+        innerWidth: window.innerWidth,
+        appWidth: app?.width || 0,
+        mainWidth: main?.width || 0,
+        bodyOverflow
+      };
+    });
+    console.log('E158 mobile geometry', label, JSON.stringify(geometry));
+    if (geometry.appWidth < 300 || geometry.mainWidth < 280) {
+      await fail(label + ': main application area collapsed on mobile');
+    }
+    if (geometry.bodyOverflow > 32) {
+      await fail(label + ': global horizontal overflow ' + geometry.bodyOverflow + 'px');
+    }
+  }
+
   if (pageErrors.length) await fail('uncaught page errors detected');
   if (guardErrors.length) await fail('render guard errors detected');
 
-  console.log('E155/E157 PASS: browser routes, real UI interactions, persistence and content bridges are healthy.');
+  console.log('E155/E157/E158 PASS: browser routes, interactions, persistence, content bridges and mobile layout are healthy.');
 } finally {
   await browser.close();
 }
