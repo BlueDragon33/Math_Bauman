@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_exercise_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
+  "version": "E151_HK1_TIME_SERIES_CONTENT",
   "subject": "math",
   "title": "Bài tập · Nội dung",
   "contentVaultRole": "content",
@@ -970,6 +970,582 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E151-process-E01",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Giải thích bằng lời bản chất của Dữ liệu theo thời gian và quá trình ngẫu nhiên và chỉ ra vì sao thứ tự thời gian quan trọng.",
+      "solution": "Thứ tự thời gian và sample path là một phần của dữ liệu.",
+      "tags": [
+        "time-series",
+        "process",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-process-E02",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Viết công thức neo của Dữ liệu theo thời gian và quá trình ngẫu nhiên, giải thích từng ký hiệu và đơn vị/lag liên quan.",
+      "solution": "Dùng {X_t : t∈T} và/hoặc x_t(ω), t∈T; phải nói rõ t, h/lag và tập dữ liệu dùng để ước lượng.",
+      "tags": [
+        "time-series",
+        "process",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-process-E03",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Cho một chuỗi số ngắn, mô tả bước tính/kiểm tra cần làm để đánh giá Dữ liệu theo thời gian và quá trình ngẫu nhiên.",
+      "solution": "Giữ thứ tự timestamp, tính đại lượng trên lag/cửa sổ phù hợp, sau đó đối chiếu với đồ thị và giả thiết.",
+      "tags": [
+        "time-series",
+        "process",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-process-E04",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Phân tích bẫy “xáo trộn thời gian như dữ liệu i.i.d.” và nêu một phép kiểm tra dữ liệu để phát hiện.",
+      "solution": "Không được xáo trộn thời gian như dữ liệu i.i.d.; dùng split theo thời gian, rolling statistics, ACF hoặc residual tùy bài.",
+      "tags": [
+        "time-series",
+        "process",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-process-E05",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "prompt": "Thiết kế một pipeline cảm biến dùng Dữ liệu theo thời gian và quá trình ngẫu nhiên mà không để thông tin tương lai rò vào quá khứ.",
+      "solution": "Chỉ xây feature từ dữ liệu ≤ thời điểm t; fit preprocessing trên train quá khứ; đánh giá trên đoạn tương lai.",
+      "tags": [
+        "time-series",
+        "process",
+        "hard",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-process-E06",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "prompt": "Phản biện một kết luận quá mạnh về Dữ liệu theo thời gian và quá trình ngẫu nhiên; nêu giả thiết thiếu và thí nghiệm kiểm chứng.",
+      "solution": "Kết luận phải giới hạn ở phụ thuộc/đại lượng đã đo; kiểm bằng baseline, residual và dữ liệu ngoài khoảng fit.",
+      "tags": [
+        "time-series",
+        "process",
+        "expert",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-stationarity-E01",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Giải thích bằng lời bản chất của Tính dừng và tính dừng yếu (WSS) và chỉ ra vì sao thứ tự thời gian quan trọng.",
+      "solution": "WSS yêu cầu mean hằng theo thời gian và autocovariance chỉ phụ thuộc lag.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-stationarity-E02",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Viết công thức neo của Tính dừng và tính dừng yếu (WSS), giải thích từng ký hiệu và đơn vị/lag liên quan.",
+      "solution": "Dùng E[X_t]=μ và/hoặc γ(t,s)=γ(t-s)=γ(h); phải nói rõ t, h/lag và tập dữ liệu dùng để ước lượng.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-stationarity-E03",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Cho một chuỗi số ngắn, mô tả bước tính/kiểm tra cần làm để đánh giá Tính dừng và tính dừng yếu (WSS).",
+      "solution": "Giữ thứ tự timestamp, tính đại lượng trên lag/cửa sổ phù hợp, sau đó đối chiếu với đồ thị và giả thiết.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-stationarity-E04",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Phân tích bẫy “kết luận dừng chỉ từ một đoạn đồ thị ngắn” và nêu một phép kiểm tra dữ liệu để phát hiện.",
+      "solution": "Không được kết luận dừng chỉ từ một đoạn đồ thị ngắn; dùng split theo thời gian, rolling statistics, ACF hoặc residual tùy bài.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-stationarity-E05",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "prompt": "Thiết kế một pipeline cảm biến dùng Tính dừng và tính dừng yếu (WSS) mà không để thông tin tương lai rò vào quá khứ.",
+      "solution": "Chỉ xây feature từ dữ liệu ≤ thời điểm t; fit preprocessing trên train quá khứ; đánh giá trên đoạn tương lai.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hard",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-stationarity-E06",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "prompt": "Phản biện một kết luận quá mạnh về Tính dừng và tính dừng yếu (WSS); nêu giả thiết thiếu và thí nghiệm kiểm chứng.",
+      "solution": "Kết luận phải giới hạn ở phụ thuộc/đại lượng đã đo; kiểm bằng baseline, residual và dữ liệu ngoài khoảng fit.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "expert",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-acf-E01",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Giải thích bằng lời bản chất của Autocovariance, autocorrelation và độ trễ và chỉ ra vì sao thứ tự thời gian quan trọng.",
+      "solution": "ACF đo phụ thuộc tuyến tính của chuỗi với chính nó theo lag.",
+      "tags": [
+        "time-series",
+        "acf",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-acf-E02",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Viết công thức neo của Autocovariance, autocorrelation và độ trễ, giải thích từng ký hiệu và đơn vị/lag liên quan.",
+      "solution": "Dùng γ(h)=Cov(X_t,X_{t-h}) và/hoặc ρ(h)=γ(h)/γ(0); phải nói rõ t, h/lag và tập dữ liệu dùng để ước lượng.",
+      "tags": [
+        "time-series",
+        "acf",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-acf-E03",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Cho một chuỗi số ngắn, mô tả bước tính/kiểm tra cần làm để đánh giá Autocovariance, autocorrelation và độ trễ.",
+      "solution": "Giữ thứ tự timestamp, tính đại lượng trên lag/cửa sổ phù hợp, sau đó đối chiếu với đồ thị và giả thiết.",
+      "tags": [
+        "time-series",
+        "acf",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-acf-E04",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Phân tích bẫy “đọc ACF như quan hệ nhân quả” và nêu một phép kiểm tra dữ liệu để phát hiện.",
+      "solution": "Không được đọc ACF như quan hệ nhân quả; dùng split theo thời gian, rolling statistics, ACF hoặc residual tùy bài.",
+      "tags": [
+        "time-series",
+        "acf",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-acf-E05",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "prompt": "Thiết kế một pipeline cảm biến dùng Autocovariance, autocorrelation và độ trễ mà không để thông tin tương lai rò vào quá khứ.",
+      "solution": "Chỉ xây feature từ dữ liệu ≤ thời điểm t; fit preprocessing trên train quá khứ; đánh giá trên đoạn tương lai.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hard",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-acf-E06",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "prompt": "Phản biện một kết luận quá mạnh về Autocovariance, autocorrelation và độ trễ; nêu giả thiết thiếu và thí nghiệm kiểm chứng.",
+      "solution": "Kết luận phải giới hạn ở phụ thuộc/đại lượng đã đo; kiểm bằng baseline, residual và dữ liệu ngoài khoảng fit.",
+      "tags": [
+        "time-series",
+        "acf",
+        "expert",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-ar1-E01",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Giải thích bằng lời bản chất của White noise, random walk và AR(1) và chỉ ra vì sao thứ tự thời gian quan trọng.",
+      "solution": "White noise, random walk và AR(1) có cấu trúc phụ thuộc rất khác nhau dù đều dùng nhiễu.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-ar1-E02",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Viết công thức neo của White noise, random walk và AR(1), giải thích từng ký hiệu và đơn vị/lag liên quan.",
+      "solution": "Dùng X_t=φX_{t-1}+ε_t và/hoặc |φ|<1; phải nói rõ t, h/lag và tập dữ liệu dùng để ước lượng.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-ar1-E03",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Cho một chuỗi số ngắn, mô tả bước tính/kiểm tra cần làm để đánh giá White noise, random walk và AR(1).",
+      "solution": "Giữ thứ tự timestamp, tính đại lượng trên lag/cửa sổ phù hợp, sau đó đối chiếu với đồ thị và giả thiết.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-ar1-E04",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Phân tích bẫy “nhầm random walk với white noise” và nêu một phép kiểm tra dữ liệu để phát hiện.",
+      "solution": "Không được nhầm random walk với white noise; dùng split theo thời gian, rolling statistics, ACF hoặc residual tùy bài.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-ar1-E05",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "prompt": "Thiết kế một pipeline cảm biến dùng White noise, random walk và AR(1) mà không để thông tin tương lai rò vào quá khứ.",
+      "solution": "Chỉ xây feature từ dữ liệu ≤ thời điểm t; fit preprocessing trên train quá khứ; đánh giá trên đoạn tương lai.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hard",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-ar1-E06",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "prompt": "Phản biện một kết luận quá mạnh về White noise, random walk và AR(1); nêu giả thiết thiếu và thí nghiệm kiểm chứng.",
+      "solution": "Kết luận phải giới hạn ở phụ thuộc/đại lượng đã đo; kiểm bằng baseline, residual và dữ liệu ngoài khoảng fit.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "expert",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-structure-E01",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Giải thích bằng lời bản chất của Trend, seasonality và sai phân và chỉ ra vì sao thứ tự thời gian quan trọng.",
+      "solution": "Trend/seasonality phải được tách hoặc mô hình hóa; differencing có thể giảm stochastic trend.",
+      "tags": [
+        "time-series",
+        "structure",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-structure-E02",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Viết công thức neo của Trend, seasonality và sai phân, giải thích từng ký hiệu và đơn vị/lag liên quan.",
+      "solution": "Dùng ΔX_t=X_t-X_{t-1} và/hoặc Δ_s X_t=X_t-X_{t-s}; phải nói rõ t, h/lag và tập dữ liệu dùng để ước lượng.",
+      "tags": [
+        "time-series",
+        "structure",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-structure-E03",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Cho một chuỗi số ngắn, mô tả bước tính/kiểm tra cần làm để đánh giá Trend, seasonality và sai phân.",
+      "solution": "Giữ thứ tự timestamp, tính đại lượng trên lag/cửa sổ phù hợp, sau đó đối chiếu với đồ thị và giả thiết.",
+      "tags": [
+        "time-series",
+        "structure",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-structure-E04",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Phân tích bẫy “over-differencing làm tăng nhiễu và mất cấu trúc” và nêu một phép kiểm tra dữ liệu để phát hiện.",
+      "solution": "Không được over-differencing làm tăng nhiễu và mất cấu trúc; dùng split theo thời gian, rolling statistics, ACF hoặc residual tùy bài.",
+      "tags": [
+        "time-series",
+        "structure",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-structure-E05",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "prompt": "Thiết kế một pipeline cảm biến dùng Trend, seasonality và sai phân mà không để thông tin tương lai rò vào quá khứ.",
+      "solution": "Chỉ xây feature từ dữ liệu ≤ thời điểm t; fit preprocessing trên train quá khứ; đánh giá trên đoạn tương lai.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hard",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-structure-E06",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "prompt": "Phản biện một kết luận quá mạnh về Trend, seasonality và sai phân; nêu giả thiết thiếu và thí nghiệm kiểm chứng.",
+      "solution": "Kết luận phải giới hạn ở phụ thuộc/đại lượng đã đo; kiểm bằng baseline, residual và dữ liệu ngoài khoảng fit.",
+      "tags": [
+        "time-series",
+        "structure",
+        "expert",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-forecast-E01",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Giải thích bằng lời bản chất của Forecast baseline, temporal split và residual và chỉ ra vì sao thứ tự thời gian quan trọng.",
+      "solution": "Đánh giá phải giữ hướng thời gian và so với baseline đơn giản.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-forecast-E02",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "prompt": "Viết công thức neo của Forecast baseline, temporal split và residual, giải thích từng ký hiệu và đơn vị/lag liên quan.",
+      "solution": "Dùng ŷ_{t+1}=y_t và/hoặc e_t=y_t-ŷ_t; phải nói rõ t, h/lag và tập dữ liệu dùng để ước lượng.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "easy",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-forecast-E03",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Cho một chuỗi số ngắn, mô tả bước tính/kiểm tra cần làm để đánh giá Forecast baseline, temporal split và residual.",
+      "solution": "Giữ thứ tự timestamp, tính đại lượng trên lag/cửa sổ phù hợp, sau đó đối chiếu với đồ thị và giả thiết.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-forecast-E04",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "prompt": "Phân tích bẫy “random split hoặc feature tương lai gây temporal leakage” và nêu một phép kiểm tra dữ liệu để phát hiện.",
+      "solution": "Không được random split hoặc feature tương lai gây temporal leakage; dùng split theo thời gian, rolling statistics, ACF hoặc residual tùy bài.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "medium",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-forecast-E05",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "prompt": "Thiết kế một pipeline cảm biến dùng Forecast baseline, temporal split và residual mà không để thông tin tương lai rò vào quá khứ.",
+      "solution": "Chỉ xây feature từ dữ liệu ≤ thời điểm t; fit preprocessing trên train quá khứ; đánh giá trên đoạn tương lai.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hard",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "exerciseId": "E151-forecast-E06",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "prompt": "Phản biện một kết luận quá mạnh về Forecast baseline, temporal split và residual; nêu giả thiết thiếu và thí nghiệm kiểm chứng.",
+      "solution": "Kết luận phải giới hạn ở phụ thuộc/đại lượng đã đo; kiểm bằng baseline, residual và dữ liệu ngoài khoảng fit.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "expert",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
     }
   ],
   "importPolicy": {
@@ -1025,5 +1601,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
 }
