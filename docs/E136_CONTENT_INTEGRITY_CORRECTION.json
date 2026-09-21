@@ -1,0 +1,45 @@
+{
+  "release": "E136_CONTENT_INTEGRITY_CORRECTION",
+  "date": "2026-09-21",
+  "status": "THEORY_CONTENT_PRESENT_NON_THEORY_VAULT_EMPTY",
+  "supersedesFinding": "docs/E135_CONTENT_INTEGRITY_AUDIT.json",
+  "summary": "E135 incorrectly classified the large theory content payload as empty. Blob-level verification proves theory_lecture_content.json is populated; non-theory content vault record arrays remain empty.",
+  "verifiedBy": "git_blob_level_read",
+  "framework": {
+    "curriculum": "present",
+    "discipline_spine": "present",
+    "chapter_spine": "present"
+  },
+  "theoryContent": {
+    "path": "data/theory_lecture_content.json",
+    "blobSha": "0a6437c45f619e6562256db95c56b6f88536016c",
+    "repositorySizeBytes": 8203557,
+    "decodedChars": 7275230,
+    "records": 347,
+    "slidesPerVerifiedSample": 16,
+    "pcaEvidence": [
+      "§10.5 · Ma trận hiệp phương sai và hướng phương sai lớn nhất",
+      "§10.6 · PCA: giảm chiều bằng phương sai giải thích",
+      "§10.7 · SVD: phân rã ma trận dữ liệu và liên hệ với PCA",
+      "§15.6 · Hiệp phương sai, tương quan và nhiễu cảm biến nhiều chiều"
+    ]
+  },
+  "nonTheoryVault": {
+    "formula_content_records": 0,
+    "exercise_content_records": 0,
+    "application_content_records": 0,
+    "simulation_content_records": 0,
+    "professor_qa_content_records": 0,
+    "review_pack_content_records": 0,
+    "question_bank_content_records": 0,
+    "mindmap_content_records": 0
+  },
+  "rootCause": "Large-file reads through the contents path returned an empty content payload, while the Git blob contains data. Audit logic must use blob metadata/read for oversized files.",
+  "policy": {
+    "doNotRegenerateTheory": true,
+    "hydrateOnlyMissingNonTheoryContent": true,
+    "preserveStableIds": true,
+    "preserveStorageKey": true,
+    "nextRelease": "E137_NON_THEORY_CONTENT_HYDRATION"
+  }
+}
