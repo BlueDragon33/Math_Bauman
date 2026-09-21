@@ -1124,7 +1124,7 @@
         "Không cần kiểm tra giả thiết nếu code chạy được.",
         "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
         "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
-        "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân."
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
       ],
       "answer": "Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
       "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Dữ liệu đa chiều và ma trận dữ liệu X: Đảo hàng và cột giữa các bước làm sai shape và ý nghĩa phép nhân.",
@@ -1561,7 +1561,7 @@
         "Không cần kiểm tra giả thiết nếu code chạy được.",
         "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
         "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
-        "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage."
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
       ],
       "answer": "Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
       "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trung tâm hóa và chuẩn hóa đặc trưng: Fit scaler trên toàn bộ dữ liệu hoặc test gây data leakage.",
@@ -1998,7 +1998,7 @@
         "Không cần kiểm tra giả thiết nếu code chạy được.",
         "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
         "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
-        "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang."
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
       ],
       "answer": "So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
       "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Hiệp phương sai: So độ lớn covariance của các cặp có đơn vị khác nhau như thể chúng cùng thang.",
@@ -2435,7 +2435,7 @@
         "Không cần kiểm tra giả thiết nếu code chạy được.",
         "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
         "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
-        "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả."
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
       ],
       "answer": "Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
       "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tương quan Pearson: Kết luận r≈0 nghĩa là độc lập hoặc |r| lớn nghĩa là quan hệ nhân quả.",
@@ -2872,7 +2872,7 @@
         "Không cần kiểm tra giả thiết nếu code chạy được.",
         "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
         "Nhầm S là n×n hoặc bỏ bước centering.",
-        "Nhầm S là n×n hoặc bỏ bước centering."
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
       ],
       "answer": "Nhầm S là n×n hoặc bỏ bước centering.",
       "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Ma trận hiệp phương sai: Nhầm S là n×n hoặc bỏ bước centering.",
@@ -3309,7 +3309,7 @@
         "Không cần kiểm tra giả thiết nếu code chạy được.",
         "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
         "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
-        "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix."
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
       ],
       "answer": "Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
       "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Trị riêng và vector riêng của covariance matrix: Coi vector riêng đổi dấu là nghiệm khác hoặc chấp nhận trị riêng âm lớn của covariance matrix.",
@@ -3746,7 +3746,7 @@
         "Không cần kiểm tra giả thiết nếu code chạy được.",
         "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
         "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
-        "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA."
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
       ],
       "answer": "Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
       "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của PCA nhập môn: Chọn k theo cảm tính hoặc quên xem ảnh hưởng của scale trước PCA.",
@@ -4183,7 +4183,7 @@
         "Không cần kiểm tra giả thiết nếu code chạy được.",
         "Chỉ cần chọn đáp án có giá trị số lớn nhất.",
         "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
-        "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau."
+        "Kết luận ngay từ một scalar mà không kiểm tra dữ liệu."
       ],
       "answer": "Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
       "explanation": "Đáp án đúng phải giữ được bản chất và giới hạn của Tái tạo dữ liệu và sai số khi giảm chiều: Coi sai số tổng nhỏ là mọi feature đều được tái tạo tốt như nhau.",
