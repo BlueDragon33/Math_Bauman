@@ -51,15 +51,20 @@ let USER_DATA_SOURCES=new Set();
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
 const arr=v=>Array.isArray(v)?v:[], str=v=>String(v??''), esc=v=>str(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])), lower=v=>str(v).toLowerCase();
 const uniq=a=>Array.from(new Set(arr(a).filter(Boolean))); const key=A.storageKey||'bauman_math_elearning_e74_skeleton';
+const CORE_STORAGE=window.BaumanPlatformStorage||null;
+function coreStorageGet(k){try{return CORE_STORAGE?CORE_STORAGE.getItem(k):localStorage.getItem(k)}catch(_){return null}}
+function coreStorageSet(k,v,meta){try{if(CORE_STORAGE)CORE_STORAGE.setItem(k,v,meta||{layer:'core'});else localStorage.setItem(k,v);return true}catch(_){return false}}
+function coreStorageRemove(k,meta){try{if(CORE_STORAGE)CORE_STORAGE.removeItem(k,meta||{layer:'core'});else localStorage.removeItem(k);return true}catch(_){return false}}
+
 function dedupeById(list){const seen=new Set();return arr(list).filter((x,i)=>{const id=str(x?.id||x?.lessonId||x?.title||i); if(seen.has(id))return false; seen.add(id); return true;});}
 function safeParseJson(raw,fallback){try{return raw?JSON.parse(raw):fallback}catch(_){return fallback}}
 function safeLocalJson(keyName,fallback={},maxChars=3500000){
  try{
-  const raw=localStorage.getItem(keyName);
+  const raw=coreStorageGet(keyName);
   if(!raw)return fallback;
   if(raw.length>maxChars){
    console.warn('LocalStorage payload quá lớn, bỏ qua để tránh treo giao diện',keyName,raw.length);
-   localStorage.removeItem(keyName);
+   coreStorageRemove(keyName);
    return fallback;
   }
   return safeParseJson(raw,fallback);
@@ -72,7 +77,7 @@ function cleanDbOverlay(overlay){
 }
 function byId(list,id){return arr(list).find(x=>(x?.id||x?.title)===id)}
 function call(name,fallback,...args){return typeof A[name]==='function'?A[name](...args):fallback}
-function save(){try{localStorage.setItem(key,JSON.stringify(state)); const s=$('#saveState'); if(s)s.textContent='Đã đồng bộ'}catch(e){}}
+function save(){try{coreStorageSet(key,JSON.stringify(state)); const s=$('#saveState'); if(s)s.textContent='Đã đồng bộ'}catch(e){}}
 function loadState(){const stored=safeLocalJson(key,{},1600000); state={...DEFAULT,...stored,testSession:{...DEFAULT.testSession,...(stored.testSession||{})},speechResults:{...(stored.speechResults||{})},practiceSpeechResults:{...(stored.practiceSpeechResults||{})},dialogueSpeechResults:{...(stored.dialogueSpeechResults||{})},deepSpeakingProgress:{done:{},weak:{},attempts:{},lastMode:{},...(stored.deepSpeakingProgress||{})},optionalDataLoading:{},optionalDataError:{...(stored.optionalDataError||{})},reviewProgress:{done:{},flagged:{},wrong:{},...(stored.reviewProgress||{})},examProgress:{answers:{},marked:{},submitted:false,submittedAt:null,result:null,wrong:{},paperResults:{},...(stored.examProgress||{})},examHistory:arr(stored.examHistory).slice(0,20),remedialPlan:{active:false,cards:[],completed:{},createdAt:null,lastExamAt:null,lastScore:null,...(stored.remedialPlan||{})},recentAccess:arr(stored.recentAccess)}; sanitize()}
 function sanitize(){state.stage=canonStage(state.stage||DEFAULT.stage||'vn');const views=NAV.map(x=>x[0]); const tabs=LEARN_TABS.map(x=>x[0]); if(!views.includes(state.view))state.view='overview'; if(!tabs.includes(state.learnTab))state.learnTab='theory'; ['vocabIndex','vocabPage','grammarIndex','slide','exerciseIndex','testIndex','reviewIndex','reviewPage','examIndex','examPage','dialogueLineIndex','practiceLineIndex','deepSpeakingStep','handwritingIndex','handwritingStep','writingIndex'].forEach(k=>state[k]=Math.max(0,Number(state[k])||0)); if(state.learnTab==='tests')state.learnTab='review'; state.reviewProgress={done:{},flagged:{},wrong:{},...(state.reviewProgress||{})}; state.examProgress={answers:{},marked:{},submitted:false,submittedAt:null,result:null,wrong:{},paperResults:{},...(state.examProgress||{})}; if(!EXAM_PAPER_ORDER.includes(state.examPaperType))state.examPaperType=EXAM_PAPER_ORDER.includes(state.examPaperLevel)?state.examPaperLevel:'standard'; state.examPaperLevel=state.examPaperType; state.examCycle='auto'; state.examHistory=arr(state.examHistory).slice(0,20); state.remedialPlan={active:false,cards:[],completed:{},createdAt:null,lastExamAt:null,lastScore:null,...(state.remedialPlan||{})}; normalizeRemedialPlan(); state.testSession={...DEFAULT.testSession,...(state.testSession||{})}; state.speechResults={...(state.speechResults||{})}; state.practiceSpeechResults={...(state.practiceSpeechResults||{}),...(state.speechResults||{})}; state.dialogueSpeechResults={...(state.dialogueSpeechResults||{})}; state.deepSpeakingProgress={done:{},weak:{},attempts:{},lastMode:{},...(state.deepSpeakingProgress||{})}; state.optionalDataLoading={}; state.optionalDataError={...(state.optionalDataError||{})}; state.speechRecording=false; state.recentAccess=arr(state.recentAccess).slice(0,6); if(!state.storagePreviewAutoCollapsedV1322){state.storagePreviewLimit=0;state.storagePreviewAutoCollapsedV1322=true;} state.mindmapFontScale=normalizeMindFontSize(state.mindmapFontScale); state.mindmapDrag=state.mindmapDrag&&typeof state.mindmapDrag==='object'?state.mindmapDrag:{}; if(state.mindmapLayoutVersion!=='v13_32_clean'){state.mindmapDrag={};state.mindmapLayoutVersion='v13_32_clean';} state.stageGate=state.stageGate&&typeof state.stageGate==='object'?state.stageGate:null; state.examGateSource=state.examGateSource&&typeof state.examGateSource==='object'?state.examGateSource:null; if(state.simulationKind!=='unified')state.simulationKind='unified'; state.simulationTargetId=str(state.simulationTargetId||'');}
 async function loadData(){
@@ -220,7 +225,7 @@ function importStorageJson(raw,fileName,preferred){
  return commitStorageSource(detected,parsed,{label:`Đã nhập ${fileName?baseNameNoExt(fileName):'file'} vào `});
 }
 
-function saveDB(){try{localStorage.setItem(key+'_db',JSON.stringify(dbForLocalStorage()));}catch(e){toast('Trình duyệt không cho lưu DB lớn')}}
+function saveDB(){try{coreStorageSet(key+'_db',JSON.stringify(dbForLocalStorage()));}catch(e){toast('Trình duyệt không cho lưu DB lớn')}}
 function isOptionalFile(name){return OPTIONAL_DATA_FILES.includes(name)}
 function optionalSourcePath(name){return A.dataSourceMeta?.[name]?.path||`${DATA_ROOT}${name}.json`}
 async function loadOptionalData(name,quiet=false){
@@ -636,7 +641,7 @@ function runConfirmedAction(action){
  if(action==='route-request-regen-do'){if(routeResetLocked()){closeModal(); toast(routeResetLockMessage()); return;} closeModal(); requestMainSchedule('regenerate'); return;}
  if(action==='clear-remedial-do'){state.remedialPlan.active=false; save(); closeModal(); render(); toast('Đã ẩn lịch trình phụ đạo'); return;}
  if(action==='storage-reset-source-do'){resetCurrentSource(); closeModal(); return;}
- if(action==='reset-db-do'){localStorage.removeItem(key+'_db'); USER_DATA_SOURCES=new Set(); closeModal(); toast('Đã khôi phục dữ liệu gốc, đang tải lại'); setTimeout(()=>location.reload(),300); return;}
+ if(action==='reset-db-do'){coreStorageRemove(key+'_db'); USER_DATA_SOURCES=new Set(); closeModal(); toast('Đã khôi phục dữ liệu gốc, đang tải lại'); setTimeout(()=>location.reload(),300); return;}
  if(action==='media-group-delete-do'){const g=state.pendingMediaGroupDelete||''; deleteMediaGroup(g); state.pendingMediaGroupDelete=''; openModal(renderMediaGroupManager(),'media-groups'); toast('Đã xóa nhóm Video/Audio'); return;}
  toast('Không nhận diện được hành động xác nhận');
 }
@@ -5038,7 +5043,7 @@ document.addEventListener('click',function(e){
  if(r.practiceDialogueId){state.practiceDialogueId=r.practiceDialogueId; state.practiceLineIndex=0;}
  if(r.dialogueId){state.dialogueId=r.dialogueId; state.dialogueLineIndex=0;}
  if(r.simulationTargetId){state.simulationKind='unified';state.simulationTargetId=r.simulationTargetId;const all=arr(DB.simulations);const sim=all.find(s=>str(s.lessonId)===r.simulationTargetId||str(s.id)===r.simulationTargetId);if(sim)state.writingIndex=all.indexOf(sim);}
- let done={}; try{done=JSON.parse(localStorage.getItem('mathTodayDoneE61')||'{}')||{};}catch(_){done={};} done[(r.view||'')+'::'+(r.learnTab||'')+'::'+(r.lessonId||'')]=Date.now(); try{localStorage.setItem('mathTodayDoneE61',JSON.stringify(done));}catch(_){ }
+ let done={}; try{done=JSON.parse(coreStorageGet('mathTodayDoneE61')||'{}')||{};}catch(_){done={};} done[(r.view||'')+'::'+(r.learnTab||'')+'::'+(r.lessonId||'')]=Date.now(); try{coreStorageSet('mathTodayDoneE61',JSON.stringify(done));}catch(_){ }
  save(); render();
 },true);
 /* ===== END E61 ===== */
@@ -8819,12 +8824,12 @@ window.BAUMAN_MATH_FINAL_SELF_CHECK=window.BAUMAN_MATH_E122_ROUND5_SELF_CHECK;
     rep.at=new Date().toISOString(); rep.release=RELEASE;
     window.__E123_LAST_IMPORT=rep;
     try{st().e123LastImport=rep;}catch(_){}
-    try{localStorage.setItem(localKey()+'_e123_last_import',JSON.stringify(rep));}catch(_){}
+    try{coreStorageSet(localKey()+'_e123_last_import',JSON.stringify(rep));}catch(_){}
   }
   function getReport(){
     try{if(st().e123LastImport)return st().e123LastImport;}catch(_){}
     try{if(window.__E123_LAST_IMPORT)return window.__E123_LAST_IMPORT;}catch(_){}
-    try{var raw=localStorage.getItem(localKey()+'_e123_last_import'); if(raw)return JSON.parse(raw);}catch(_){}
+    try{var raw=coreStorageGet(localKey()+'_e123_last_import'); if(raw)return JSON.parse(raw);}catch(_){}
     return null;
   }
   function stripJsonName(x){return S(x).replace(/^.*[\\\/]/,'').replace(/\.json$/i,'').trim();}
