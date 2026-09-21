@@ -290,16 +290,32 @@ try {
   const activationPost = await page.evaluate(async (probeUrl) => {
     const keys = await caches.keys();
     const runtime = keys.find(k => k.endsWith('-runtime'));
-    const hit = runtime ? await (await caches.open(runtime)).match(probeUrl) : null;
+    const cache = runtime ? await caches.open(runtime) : null;
+    const hit = cache ? await cache.match(probeUrl) : null;
+    const entries = cache ? await cache.keys() : [];
+    const required = {};
+    for (const path of [
+      'data/theory_lecture_content.json',
+      'data/mindmap_content.json',
+      'data/theory_lecture_overlay_e138.json'
+    ]) {
+      const url = new URL(path, location.href).href;
+      const response = cache ? await cache.match(url) : null;
+      required[path] = response ? { present:true, status:response.status } : { present:false };
+    }
     return {
       runtime,
       staleProbePresent: !!hit,
+      entryCount: entries.length,
+      required,
+      sampleEntries: entries.slice(0,8).map(r=>r.url),
       pwa: window.MathBaumanPWA.selfCheck()
     };
   }, activationSeed.url);
   console.log('E166 activation post', JSON.stringify(activationPost));
-  if (activationPost.staleProbePresent || !activationPost.pwa.ok) {
-    await fail('E166 stale runtime cache survived service-worker activation or rewarm failed');
+  const materialized = Object.values(activationPost.required || {}).every(x => x && x.present);
+  if (activationPost.staleProbePresent || !activationPost.pwa.ok || activationPost.entryCount < 40 || !materialized) {
+    await fail('E168 runtime cache did not materialize required core data after service-worker activation');
   }
 
   const cachePrioritySeed = await page.evaluate(async () => {
