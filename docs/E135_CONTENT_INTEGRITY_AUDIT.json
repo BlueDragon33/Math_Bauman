@@ -1,0 +1,54 @@
+{
+  "release": "E135_CONTENT_INTEGRITY_AUDIT",
+  "date": "2026-09-21",
+  "status": "BLOCKED_BY_MISSING_SOURCE_CONTENT",
+  "summary": "Framework data exists, but active learning-content payloads are absent from repository history/branches inspected.",
+  "framework": {
+    "curriculum": "present",
+    "discipline_spine": "present",
+    "chapter_spine": "present"
+  },
+  "legacyContent": {
+    "lessons": "empty_file",
+    "formulas": 0,
+    "exercises": 0,
+    "applications": 0,
+    "simulations": 0,
+    "professor_qa": 0,
+    "review_packs": 0,
+    "question_bank": 0,
+    "mindmap": 0
+  },
+  "contentVault": {
+    "theory_lecture_content": "empty_file",
+    "formula_content_records": 0,
+    "exercise_content_records": 0,
+    "application_content_records": 0,
+    "simulation_content_records": 0,
+    "professor_qa_content_records": 0,
+    "review_pack_content_records": 0,
+    "question_bank_content_records": 0,
+    "mindmap_content_records": 0,
+    "chapter_lecture_content_records": 0
+  },
+  "recoverySearch": {
+    "branchesChecked": [
+      "main",
+      "migration/full-webapp-v2",
+      "work/e134-theory-source-recovery"
+    ],
+    "repositorySearchTerms": [
+      "Hiệp phương sai tương quan PCA",
+      "covariance PCA",
+      "§7.7 PCA",
+      "MATH-VN-C07",
+      "phương sai giải thích"
+    ],
+    "result": "no recoverable E15/PCA learning payload found"
+  },
+  "policy": {
+    "doNotInventMissingLessons": true,
+    "doNotMarkContentCompleteWithoutPayload": true,
+    "nextRequiredInput": "Recover/import the actual E15 content bundle or regenerate content explicitly as a new content build."
+  }
+}
