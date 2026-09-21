@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_application_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
   "subject": "math",
   "title": "Ứng dụng · Nội dung",
   "contentVaultRole": "content",
@@ -10,7 +10,264 @@
   "frameSource": "application_frame.json",
   "legacyExportTarget": "applications.json",
   "recordKey": "applicationId",
-  "records": [],
+  "records": [
+    {
+      "applicationId": "E15-data_matrix-A1",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Dữ liệu đa chiều và ma trận dữ liệu X trong dữ liệu cảm biến",
+      "scenario": "Một tập nhiều kênh cảm biến có đơn vị, nhiễu và độ biến thiên khác nhau.",
+      "method": "Áp dụng Dữ liệu đa chiều và ma trận dữ liệu X sau khi xác nhận quy ước sample/feature, đơn vị và preprocessing.",
+      "expectedOutcome": "Kết quả có thể diễn giải và truy vết tới dữ liệu gốc.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-data_matrix-A2",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Dữ liệu đa chiều và ma trận dữ liệu X trong pipeline AI/PCA",
+      "scenario": "Một pipeline giảm chiều cần giữ cấu trúc dữ liệu nhưng tránh leakage và kết luận quá mức.",
+      "method": "Gắn Dữ liệu đa chiều và ma trận dữ liệu X vào chuỗi preprocessing → covariance/correlation → spectral analysis → validation.",
+      "expectedOutcome": "Pipeline tái lập được và nêu rõ phần thông tin mất/giữ.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-centering-A1",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Trung tâm hóa và chuẩn hóa đặc trưng trong dữ liệu cảm biến",
+      "scenario": "Một tập nhiều kênh cảm biến có đơn vị, nhiễu và độ biến thiên khác nhau.",
+      "method": "Áp dụng Trung tâm hóa và chuẩn hóa đặc trưng sau khi xác nhận quy ước sample/feature, đơn vị và preprocessing.",
+      "expectedOutcome": "Kết quả có thể diễn giải và truy vết tới dữ liệu gốc.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-centering-A2",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Trung tâm hóa và chuẩn hóa đặc trưng trong pipeline AI/PCA",
+      "scenario": "Một pipeline giảm chiều cần giữ cấu trúc dữ liệu nhưng tránh leakage và kết luận quá mức.",
+      "method": "Gắn Trung tâm hóa và chuẩn hóa đặc trưng vào chuỗi preprocessing → covariance/correlation → spectral analysis → validation.",
+      "expectedOutcome": "Pipeline tái lập được và nêu rõ phần thông tin mất/giữ.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-covariance-A1",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "title": "Hiệp phương sai trong dữ liệu cảm biến",
+      "scenario": "Một tập nhiều kênh cảm biến có đơn vị, nhiễu và độ biến thiên khác nhau.",
+      "method": "Áp dụng Hiệp phương sai sau khi xác nhận quy ước sample/feature, đơn vị và preprocessing.",
+      "expectedOutcome": "Kết quả có thể diễn giải và truy vết tới dữ liệu gốc.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-covariance-A2",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "title": "Hiệp phương sai trong pipeline AI/PCA",
+      "scenario": "Một pipeline giảm chiều cần giữ cấu trúc dữ liệu nhưng tránh leakage và kết luận quá mức.",
+      "method": "Gắn Hiệp phương sai vào chuỗi preprocessing → covariance/correlation → spectral analysis → validation.",
+      "expectedOutcome": "Pipeline tái lập được và nêu rõ phần thông tin mất/giữ.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-pearson-A1",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Tương quan Pearson trong dữ liệu cảm biến",
+      "scenario": "Một tập nhiều kênh cảm biến có đơn vị, nhiễu và độ biến thiên khác nhau.",
+      "method": "Áp dụng Tương quan Pearson sau khi xác nhận quy ước sample/feature, đơn vị và preprocessing.",
+      "expectedOutcome": "Kết quả có thể diễn giải và truy vết tới dữ liệu gốc.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-pearson-A2",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Tương quan Pearson trong pipeline AI/PCA",
+      "scenario": "Một pipeline giảm chiều cần giữ cấu trúc dữ liệu nhưng tránh leakage và kết luận quá mức.",
+      "method": "Gắn Tương quan Pearson vào chuỗi preprocessing → covariance/correlation → spectral analysis → validation.",
+      "expectedOutcome": "Pipeline tái lập được và nêu rõ phần thông tin mất/giữ.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-cov_matrix-A1",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Ma trận hiệp phương sai trong dữ liệu cảm biến",
+      "scenario": "Một tập nhiều kênh cảm biến có đơn vị, nhiễu và độ biến thiên khác nhau.",
+      "method": "Áp dụng Ma trận hiệp phương sai sau khi xác nhận quy ước sample/feature, đơn vị và preprocessing.",
+      "expectedOutcome": "Kết quả có thể diễn giải và truy vết tới dữ liệu gốc.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-cov_matrix-A2",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Ma trận hiệp phương sai trong pipeline AI/PCA",
+      "scenario": "Một pipeline giảm chiều cần giữ cấu trúc dữ liệu nhưng tránh leakage và kết luận quá mức.",
+      "method": "Gắn Ma trận hiệp phương sai vào chuỗi preprocessing → covariance/correlation → spectral analysis → validation.",
+      "expectedOutcome": "Pipeline tái lập được và nêu rõ phần thông tin mất/giữ.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-eigen_cov-A1",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Trị riêng và vector riêng của covariance matrix trong dữ liệu cảm biến",
+      "scenario": "Một tập nhiều kênh cảm biến có đơn vị, nhiễu và độ biến thiên khác nhau.",
+      "method": "Áp dụng Trị riêng và vector riêng của covariance matrix sau khi xác nhận quy ước sample/feature, đơn vị và preprocessing.",
+      "expectedOutcome": "Kết quả có thể diễn giải và truy vết tới dữ liệu gốc.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-eigen_cov-A2",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Trị riêng và vector riêng của covariance matrix trong pipeline AI/PCA",
+      "scenario": "Một pipeline giảm chiều cần giữ cấu trúc dữ liệu nhưng tránh leakage và kết luận quá mức.",
+      "method": "Gắn Trị riêng và vector riêng của covariance matrix vào chuỗi preprocessing → covariance/correlation → spectral analysis → validation.",
+      "expectedOutcome": "Pipeline tái lập được và nêu rõ phần thông tin mất/giữ.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-pca-A1",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "PCA nhập môn trong dữ liệu cảm biến",
+      "scenario": "Một tập nhiều kênh cảm biến có đơn vị, nhiễu và độ biến thiên khác nhau.",
+      "method": "Áp dụng PCA nhập môn sau khi xác nhận quy ước sample/feature, đơn vị và preprocessing.",
+      "expectedOutcome": "Kết quả có thể diễn giải và truy vết tới dữ liệu gốc.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-pca-A2",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "PCA nhập môn trong pipeline AI/PCA",
+      "scenario": "Một pipeline giảm chiều cần giữ cấu trúc dữ liệu nhưng tránh leakage và kết luận quá mức.",
+      "method": "Gắn PCA nhập môn vào chuỗi preprocessing → covariance/correlation → spectral analysis → validation.",
+      "expectedOutcome": "Pipeline tái lập được và nêu rõ phần thông tin mất/giữ.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-reconstruction-A1",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Tái tạo dữ liệu và sai số khi giảm chiều trong dữ liệu cảm biến",
+      "scenario": "Một tập nhiều kênh cảm biến có đơn vị, nhiễu và độ biến thiên khác nhau.",
+      "method": "Áp dụng Tái tạo dữ liệu và sai số khi giảm chiều sau khi xác nhận quy ước sample/feature, đơn vị và preprocessing.",
+      "expectedOutcome": "Kết quả có thể diễn giải và truy vết tới dữ liệu gốc.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E15-reconstruction-A2",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Tái tạo dữ liệu và sai số khi giảm chiều trong pipeline AI/PCA",
+      "scenario": "Một pipeline giảm chiều cần giữ cấu trúc dữ liệu nhưng tránh leakage và kết luận quá mức.",
+      "method": "Gắn Tái tạo dữ liệu và sai số khi giảm chiều vào chuỗi preprocessing → covariance/correlation → spectral analysis → validation.",
+      "expectedOutcome": "Pipeline tái lập được và nêu rõ phần thông tin mất/giữ.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    }
+  ],
   "importPolicy": {
     "key": "applicationId",
     "requires": [
@@ -56,12 +313,13 @@
     "method": "Chuẩn hóa rồi tính cosine similarity.",
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-06-22",
+  "updatedAt": "2026-09-21",
   "emoji": "🧩",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
     "recordsMustUseStableIds": true,
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
-  }
+  },
+  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
 }
