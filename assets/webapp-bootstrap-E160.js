@@ -21,7 +21,10 @@
   function coreUrls(){
     const adapter=global.SUBJECT_ADAPTER||{};
     const files=Array.isArray(adapter.initialDataFiles)?adapter.initialDataFiles:[];
-    return files.map(name=>'data/'+name+'.json');
+    return Array.from(new Set(
+      files.map(name=>'data/'+name+'.json')
+        .concat(['data/theory_lecture_overlay_e138.json'])
+    ));
   }
 
   function warmCoreCache(){
