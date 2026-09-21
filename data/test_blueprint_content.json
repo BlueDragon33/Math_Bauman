@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_test_blueprint_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "version": "E140_E15_RUNTIME_BLUEPRINTS",
   "subject": "math",
   "title": "Blueprint kiểm tra · Nội dung",
   "contentVaultRole": "content",
@@ -10,7 +10,128 @@
   "frameSource": "test_blueprint_frame.json",
   "legacyExportTarget": "test_blueprints.json",
   "recordKey": "blueprintId",
-  "records": [],
+  "records": [
+    {
+      "blueprintId": "E140-E15-BP01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "stage": "vn",
+      "title": "E15 logical assessment · MATH-VN-C01-vector_trong_khong_gian_",
+      "distribution": {
+        "easy": 2,
+        "medium": 2,
+        "hard": 1,
+        "expert": 1
+      },
+      "questionRefs": [
+        "E15-data_matrix-Q001",
+        "E15-data_matrix-Q002",
+        "E15-data_matrix-Q003",
+        "E15-data_matrix-Q004",
+        "E15-data_matrix-Q005",
+        "E15-data_matrix-Q006"
+      ],
+      "availableQuestionCount": 6,
+      "standardExamReady": false,
+      "auditStatus": "PASS",
+      "sourceBundle": "E140_E15_RUNTIME_BRIDGE"
+    },
+    {
+      "blueprintId": "E140-E15-BP02",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "stage": "vn",
+      "title": "E15 logical assessment · MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "distribution": {
+        "easy": 4,
+        "medium": 4,
+        "hard": 2,
+        "expert": 2
+      },
+      "questionRefs": [
+        "E15-centering-Q001",
+        "E15-centering-Q002",
+        "E15-centering-Q003",
+        "E15-centering-Q004",
+        "E15-centering-Q005",
+        "E15-centering-Q006",
+        "E15-pearson-Q001",
+        "E15-pearson-Q002",
+        "E15-pearson-Q003",
+        "E15-pearson-Q004",
+        "E15-pearson-Q005",
+        "E15-pearson-Q006"
+      ],
+      "availableQuestionCount": 12,
+      "standardExamReady": false,
+      "auditStatus": "PASS",
+      "sourceBundle": "E140_E15_RUNTIME_BRIDGE"
+    },
+    {
+      "blueprintId": "E140-E15-BP03",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "stage": "vn",
+      "title": "E15 logical assessment · MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "distribution": {
+        "easy": 2,
+        "medium": 2,
+        "hard": 1,
+        "expert": 1
+      },
+      "questionRefs": [
+        "E15-covariance-Q001",
+        "E15-covariance-Q002",
+        "E15-covariance-Q003",
+        "E15-covariance-Q004",
+        "E15-covariance-Q005",
+        "E15-covariance-Q006"
+      ],
+      "availableQuestionCount": 6,
+      "standardExamReady": false,
+      "auditStatus": "PASS",
+      "sourceBundle": "E140_E15_RUNTIME_BRIDGE"
+    },
+    {
+      "blueprintId": "E140-E15-BP04",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "stage": "prep",
+      "title": "E15 logical assessment · MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "distribution": {
+        "easy": 8,
+        "medium": 8,
+        "hard": 4,
+        "expert": 4
+      },
+      "questionRefs": [
+        "E15-cov_matrix-Q001",
+        "E15-cov_matrix-Q002",
+        "E15-cov_matrix-Q003",
+        "E15-cov_matrix-Q004",
+        "E15-cov_matrix-Q005",
+        "E15-cov_matrix-Q006",
+        "E15-eigen_cov-Q001",
+        "E15-eigen_cov-Q002",
+        "E15-eigen_cov-Q003",
+        "E15-eigen_cov-Q004",
+        "E15-eigen_cov-Q005",
+        "E15-eigen_cov-Q006",
+        "E15-pca-Q001",
+        "E15-pca-Q002",
+        "E15-pca-Q003",
+        "E15-pca-Q004",
+        "E15-pca-Q005",
+        "E15-pca-Q006",
+        "E15-reconstruction-Q001",
+        "E15-reconstruction-Q002",
+        "E15-reconstruction-Q003",
+        "E15-reconstruction-Q004",
+        "E15-reconstruction-Q005",
+        "E15-reconstruction-Q006"
+      ],
+      "availableQuestionCount": 24,
+      "standardExamReady": true,
+      "auditStatus": "PASS",
+      "sourceBundle": "E140_E15_RUNTIME_BRIDGE"
+    }
+  ],
   "importPolicy": {
     "key": "blueprintId",
     "requires": [
@@ -52,7 +173,7 @@
     "questionRefs": [],
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-06-22",
+  "updatedAt": "2026-09-21",
   "emoji": "🧾",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
