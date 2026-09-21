@@ -54,6 +54,10 @@ async function cached(request){
     || (await shell.match(request,{ignoreSearch:true}));
 }
 
+function preferMaterializedCache(url){
+  return /\/data\/[^/?]+\.json$/i.test(url.pathname);
+}
+
 self.addEventListener('install',event=>{
   event.waitUntil(
     caches.open(SHELL_CACHE)
@@ -111,6 +115,14 @@ self.addEventListener('fetch',event=>{
   if(url.origin!==self.location.origin)return;
 
   event.respondWith((async()=>{
+    // E167: core JSON is explicitly materialized by E160/E166 after each
+    // freshness reset. Read that verified runtime copy first so an origin-down
+    // reload does not block E140 hydration on doomed network requests.
+    if(preferMaterializedCache(url)){
+      const hit=await cached(request);
+      if(hit)return hit;
+    }
+
     try{
       const response=await fetch(request);
       if(response&&response.ok){
