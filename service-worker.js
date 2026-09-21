@@ -1,6 +1,6 @@
 'use strict';
 
-const RELEASE='math-bauman-e166-pwa-v2';
+const RELEASE='math-bauman-e169-pwa-v3';
 const SHELL_CACHE=RELEASE+'-shell';
 const RUNTIME_CACHE=RELEASE+'-runtime';
 const CACHE_PREFIX='math-bauman-';
@@ -58,6 +58,29 @@ function preferMaterializedCache(url){
   return /\/data\/[^/?]+\.json$/i.test(url.pathname);
 }
 
+async function materializeUrls(urls,resetBeforeWarm){
+  if(resetBeforeWarm)await caches.delete(RUNTIME_CACHE);
+  const cache=await caches.open(RUNTIME_CACHE);
+  let cachedCount=0,skippedCount=0,failedCount=0;
+  for(const raw of Array.from(new Set(urls||[]))){
+    try{
+      const url=new URL(raw,self.location.href);
+      if(url.origin!==self.location.origin)continue;
+      const request=new Request(url.href,{method:'GET',credentials:'same-origin',cache:'reload'});
+      const response=await fetch(request);
+      if(response&&response.ok){
+        await cache.put(request,response.clone());
+        cachedCount++;
+      }else if(response&&response.status===404){
+        skippedCount++;
+      }else{
+        failedCount++;
+      }
+    }catch(_){failedCount++;}
+  }
+  return {cachedCount,skippedCount,failedCount};
+}
+
 self.addEventListener('install',event=>{
   event.waitUntil(
     caches.open(SHELL_CACHE)
@@ -74,8 +97,6 @@ self.addEventListener('activate',event=>{
         .filter(key=>key.startsWith(CACHE_PREFIX)&&key!==SHELL_CACHE&&key!==RUNTIME_CACHE)
         .map(key=>caches.delete(key))
     );
-    // A newly activated worker must never inherit stale runtime responses from
-    // the previous worker when the cache namespace is intentionally reused.
     await caches.delete(RUNTIME_CACHE);
     await caches.open(RUNTIME_CACHE);
     await self.clients.claim();
@@ -84,27 +105,21 @@ self.addEventListener('activate',event=>{
 
 self.addEventListener('message',event=>{
   const data=event.data||{};
-  if(data.type!=='E160_CACHE_URLS'||!Array.isArray(data.urls))return;
+  const normalWarm=data.type==='E160_CACHE_URLS';
+  const atomicResetWarm=data.type==='E169_RESET_AND_CACHE_URLS';
+  if((!normalWarm&&!atomicResetWarm)||!Array.isArray(data.urls))return;
   event.waitUntil((async()=>{
-    let cachedCount=0,skippedCount=0,failedCount=0;
-    const cache=await caches.open(RUNTIME_CACHE);
-    for(const raw of Array.from(new Set(data.urls))){
-      try{
-        const url=new URL(raw,self.location.href);
-        if(url.origin!==self.location.origin)continue;
-        const request=new Request(url.href,{method:'GET',credentials:'same-origin',cache:'reload'});
-        const response=await fetch(request);
-        if(response&&response.ok){
-          await cache.put(request,response.clone());
-          cachedCount++;
-        }else if(response&&response.status===404){
-          skippedCount++;
-        }else{
-          failedCount++;
-        }
-      }catch(_){failedCount++;}
-    }
-    try{event.source&&event.source.postMessage({type:'E160_CACHE_COMPLETE',cached:cachedCount,skipped:skippedCount,failed:failedCount,release:RELEASE});}catch(_){}
+    const result=await materializeUrls(data.urls,atomicResetWarm);
+    try{
+      event.source&&event.source.postMessage({
+        type:'E160_CACHE_COMPLETE',
+        cached:result.cachedCount,
+        skipped:result.skippedCount,
+        failed:result.failedCount,
+        reset:atomicResetWarm,
+        release:RELEASE
+      });
+    }catch(_){}
   })());
 });
 
@@ -115,9 +130,9 @@ self.addEventListener('fetch',event=>{
   if(url.origin!==self.location.origin)return;
 
   event.respondWith((async()=>{
-    // E167: core JSON is explicitly materialized by E160/E166 after each
-    // freshness reset. Read that verified runtime copy first so an origin-down
-    // reload does not block E140 hydration on doomed network requests.
+    // E167/E169: current core JSON is explicitly materialized after every
+    // activation. Read that verified copy first; freshness is guaranteed by
+    // the atomic reset-and-rewarm transaction on controller handoff.
     if(preferMaterializedCache(url)){
       const hit=await cached(request);
       if(hit)return hit;
