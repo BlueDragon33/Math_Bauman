@@ -421,12 +421,16 @@ try {
       professorQa: Array.isArray(window.DB?.professor_qa) ? window.DB.professor_qa.length : 0,
       e140: typeof window.BAUMAN_MATH_E140_SELF_CHECK === 'function' ? window.BAUMAN_MATH_E140_SELF_CHECK().ok : false,
       e150: typeof window.BAUMAN_MATH_E150_SELF_CHECK === 'function' ? window.BAUMAN_MATH_E150_SELF_CHECK().ok : false,
+      pwa: typeof window.MathBaumanPWA?.selfCheck === 'function' ? window.MathBaumanPWA.selfCheck() : null,
       recovery: /KHÔI PHỤC TAB HỌC TẬP|LỖI TAB HỌC TẬP/i.test(document.querySelector('#view')?.innerText || '')
     };
   });
   console.log('E160 offline reload', JSON.stringify(offline));
   if (!offline.uncachedProbeFailed || offline.cachePriorityBody !== 'runtime-fresh' || offline.textLength < 24 || offline.maps < 1 || offline.professorQa < 1 || !offline.e140 || !offline.e150 || offline.recovery) {
     await fail('offline reload did not preserve a healthy learning runtime');
+  }
+  if (!offline.pwa?.ok || !offline.pwa?.controlled || !offline.pwa?.offlineReady) {
+    await fail('E172 offline runtime is healthy but PWA readiness state regressed');
   }
   if (pageErrors.length) await fail('uncaught page errors detected');
   if (guardErrors.length) await fail('render guard errors detected');
