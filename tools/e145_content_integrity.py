@@ -275,6 +275,69 @@ def check_questions_and_blueprints() -> tuple[int, int]:
     return len(question_by_id), len(blueprint_ids)
 
 
+def check_mindmap_graph() -> None:
+    payload = load_json(DATA / "mindmap_content.json")
+    maps = records(payload)
+    for index, item in enumerate(maps):
+        if not isinstance(item, dict):
+            fail(f"mindmap[{index}] is not an object")
+            continue
+        mid = str(item.get("mindmapId") or item.get("id") or f"mindmap[{index}]")
+        nodes = item.get("nodes")
+        edges = item.get("edges")
+        if not isinstance(nodes, list) or not nodes:
+            fail(f"{mid}: nodes missing")
+            continue
+        if not isinstance(edges, list):
+            fail(f"{mid}: edges missing")
+            continue
+        ids = [str(node.get("id") or "") for node in nodes if isinstance(node, dict)]
+        if any(not node_id for node_id in ids):
+            fail(f"{mid}: node missing id")
+        if len(ids) != len(set(ids)):
+            fail(f"{mid}: duplicate node ids")
+        id_set = set(ids)
+        roots = [node for node in nodes if isinstance(node, dict) and (node.get("type") == "root" or str(node.get("id")) == "root")]
+        if len(roots) != 1:
+            fail(f"{mid}: expected exactly one root, found {len(roots)}")
+            continue
+        root_id = str(roots[0].get("id"))
+        adjacency: dict[str, list[str]] = {}
+        indegree = {node_id: 0 for node_id in id_set}
+        for edge in edges:
+            if not isinstance(edge, dict):
+                fail(f"{mid}: invalid edge object")
+                continue
+            src, dst = str(edge.get("from") or ""), str(edge.get("to") or "")
+            if src not in id_set or dst not in id_set:
+                fail(f"{mid}: edge references missing node {src!r}->{dst!r}")
+                continue
+            if src == dst:
+                fail(f"{mid}: self-loop at {src}")
+            adjacency.setdefault(src, []).append(dst)
+            indegree[dst] = indegree.get(dst, 0) + 1
+        seen, visiting = set(), set()
+        cycle = False
+        def walk(node_id: str) -> None:
+            nonlocal cycle
+            if node_id in visiting:
+                cycle = True
+                return
+            if node_id in seen:
+                return
+            visiting.add(node_id)
+            for child in adjacency.get(node_id, []):
+                walk(child)
+            visiting.remove(node_id)
+            seen.add(node_id)
+        walk(root_id)
+        if cycle:
+            fail(f"{mid}: cycle detected")
+        unreachable = sorted(id_set - seen)
+        if unreachable:
+            fail(f"{mid}: unreachable nodes: {', '.join(unreachable)}")
+
+
 def check_runtime_shell() -> None:
     index_path = ROOT / "index.html"
     try:
@@ -293,6 +356,7 @@ def check_runtime_shell() -> None:
         "assets/core.js?v=134",
         "assets/runtime_content/theory-overlay-E138.js?v=138",
         "assets/runtime_content/content-vault-bridge-E140.js?v=140",
+        "assets/runtime_content/mindmap-topology-bridge-E150.js?v=150",
     ]
     positions = [text.find(src) for src in required_order]
     if any(pos < 0 for pos in positions) or positions != sorted(positions):
