@@ -97,7 +97,12 @@ self.addEventListener('activate',event=>{
         .filter(key=>key.startsWith(CACHE_PREFIX)&&key!==SHELL_CACHE&&key!==RUNTIME_CACHE)
         .map(key=>caches.delete(key))
     );
-    await caches.delete(RUNTIME_CACHE);
+    // E171: never destructively clear the current release cache merely
+    // because a same-release worker activates. Browser update checks can occur
+    // during an offline navigation before page bootstrap observes
+    // controllerchange. Current-cache reset belongs only to the explicit
+    // E169_RESET_AND_CACHE_URLS transaction, which can reset and repopulate
+    // atomically while the origin is available.
     await caches.open(RUNTIME_CACHE);
     await self.clients.claim();
   })());
