@@ -1,11 +1,13 @@
 (function(global){
   'use strict';
-  const RELEASE='E160_PWA_OFFLINE_SHELL';
+  const RELEASE='E166_PWA_ACTIVATION_FRESHNESS';
   let registration=null;
   let offlineReady=false;
   let cachedCount=0;
   let skippedCount=0;
   let failedCount=0;
+  let controllerChanges=0;
+  let rewarmTimer=null;
 
   function setStatus(ready){
     offlineReady=!!ready;
@@ -16,8 +18,10 @@
       offlineReady,
       cachedCount,
       skippedCount,
-      failedCount
+      failedCount,
+      controllerChanges
     };
+    global.__BAUMAN_MATH_E166_PWA__=global.__BAUMAN_MATH_E160_PWA__;
   }
 
   function coreUrls(){
@@ -56,6 +60,18 @@
     }
   }
 
+  async function rewarmAfterControllerChange(){
+    controllerChanges++;
+    setStatus(false);
+    try{registration=await navigator.serviceWorker.ready;}catch(_){}
+    clearTimeout(rewarmTimer);
+    rewarmTimer=setTimeout(()=>{warmCoreCache();},60);
+  }
+
+  navigator.serviceWorker&&navigator.serviceWorker.addEventListener('controllerchange',()=>{
+    rewarmAfterControllerChange();
+  });
+
   navigator.serviceWorker&&navigator.serviceWorker.addEventListener('message',event=>{
     const data=event.data||{};
     if(data.type!=='E160_CACHE_COMPLETE')return;
@@ -79,6 +95,7 @@
         cachedCount,
         skippedCount,
         failedCount,
+        controllerChanges,
         initialDataFiles:coreUrls().length
       };
     }
