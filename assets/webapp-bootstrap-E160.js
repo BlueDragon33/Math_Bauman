@@ -1,6 +1,6 @@
 (function(global){
   'use strict';
-  const RELEASE='E166_PWA_ACTIVATION_FRESHNESS';
+  const RELEASE='E168_PWA_SINGLE_OWNER_ACTIVATION_RESET';
   let registration=null;
   let offlineReady=false;
   let cachedCount=0;
@@ -62,20 +62,15 @@
     }
   }
 
-  async function resetRuntimeCaches(){
-    if(!('caches' in global))return 0;
-    const keys=await caches.keys();
-    const runtimeKeys=keys.filter(key=>/^math-bauman-.*-runtime$/.test(key));
-    await Promise.all(runtimeKeys.map(key=>caches.delete(key)));
-    runtimeResets+=runtimeKeys.length;
-    return runtimeKeys.length;
-  }
-
-  async function rewarmAfterControllerChange(){
+  function rewarmAfterControllerChange(){
     controllerChanges++;
+    // E168: cache reset has one owner only: the service worker's activate
+    // transaction. Deleting the same runtime cache again from the page races
+    // the sequential core load on reload and can turn later DB slots null.
+    // After controllerchange the page only requests a fresh warmup.
+    offlineReady=false;
+    failedCount=0;
     setStatus(false);
-    try{registration=await navigator.serviceWorker.ready;}catch(_){}
-    try{await resetRuntimeCaches();}catch(_){}
     clearTimeout(rewarmTimer);
     rewarmTimer=setTimeout(()=>{warmCoreCache();},60);
   }
