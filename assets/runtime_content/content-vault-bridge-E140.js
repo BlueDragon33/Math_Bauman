@@ -1,7 +1,7 @@
 'use strict';
 (function(){
   const RELEASE='E140_CONTENT_VAULT_RUNTIME_BRIDGE';
-  const HARDENING='E156_POST_INIT_DB_REBIND_GUARD';
+  const HARDENING='E159_RELOAD_SAFE_INITIAL_DATA_READINESS';
   const MAX_ATTEMPTS=160;
   let attempts=0,applied=false;
   function arr(v){return Array.isArray(v)?v:[];}
@@ -21,6 +21,10 @@
     return 'vn';
   }
   function enriched(xs){return arr(xs).map(x=>x&&typeof x==='object'?Object.assign({},x,{stage:inferStage(x)}):x);}
+  function coreInitialDataReady(db){
+    const files=arr(window.SUBJECT_ADAPTER&&window.SUBJECT_ADAPTER.initialDataFiles);
+    return !!(db&&files.length&&files.every(name=>Object.prototype.hasOwnProperty.call(db,name)));
+  }
   function emptyArray(v){return !Array.isArray(v)||v.length===0;}
   function mindmapLegacy(xs){
     return arr(xs).map((m,mi)=>{
@@ -44,8 +48,8 @@
   function apply(){
     if(applied)return true;
     const coreState=window.__BAUMAN_CORE_API&&window.__BAUMAN_CORE_API.state;
-    if(!coreState||!(Number(coreState.e69InitialLoadMs)>0))return false;
     const db=window.DB;
+    if(!coreInitialDataReady(db))return false;
     if(!db||!db.theory_lecture_content)return false;
     if(!window.__BAUMAN_MATH_E138_THEORY_OVERLAY__ || window.__BAUMAN_MATH_E138_THEORY_OVERLAY__.loaded!==true)return false;
     const sources={
@@ -82,7 +86,7 @@
     if(apply())return;
     attempts++;
     if(attempts<MAX_ATTEMPTS)setTimeout(wait,100);
-    else window.__BAUMAN_MATH_E140_VAULT_BRIDGE__={release:RELEASE,hardening:HARDENING,loaded:false,error:'content_vaults_or_core_init_not_ready',attempts};
+    else window.__BAUMAN_MATH_E140_VAULT_BRIDGE__={release:RELEASE,hardening:HARDENING,loaded:false,error:'content_vaults_or_current_initial_data_not_ready',attempts};
   }
   window.BAUMAN_MATH_E140_SELF_CHECK=function(){
     const db=window.DB||{}, q=arr(db.tests&&db.tests.questions);
