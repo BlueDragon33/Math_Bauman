@@ -244,6 +244,20 @@ try {
     await fail('PWA did not become controlled/offline-ready');
   }
 
+  const cachePrioritySeed = await page.evaluate(async () => {
+    const keys = await caches.keys();
+    const shell = keys.find(k => k.endsWith('-shell'));
+    const runtime = keys.find(k => k.endsWith('-runtime'));
+    if (!shell || !runtime) return { ok:false, shell, runtime };
+    const url = new URL('./__e165_cache_priority_probe__.txt', location.href).href;
+    const req = new Request(url);
+    await (await caches.open(shell)).put(req, new Response('shell-stale', { status:200, headers:{'Content-Type':'text/plain'} }));
+    await (await caches.open(runtime)).put(req, new Response('runtime-fresh', { status:200, headers:{'Content-Type':'text/plain'} }));
+    return { ok:true, shell, runtime, url };
+  });
+  console.log('E165 cache priority seed', JSON.stringify(cachePrioritySeed));
+  if (!cachePrioritySeed.ok) await fail('E165 could not seed shell/runtime cache priority probe');
+
   const serverPid = Number(process.env.E155_SERVER_PID || 0);
   if (!Number.isInteger(serverPid) || serverPid <= 1) {
     await fail('E164 local origin PID is unavailable');
@@ -263,14 +277,20 @@ try {
 
   const offline = await page.evaluate(async () => {
     let uncachedProbeFailed = false;
+    let cachePriorityBody = '';
     try {
       await fetch('./__e162_uncached_offline_probe__.txt?probe=' + Date.now(), { cache: 'no-store' });
     } catch (_) {
       uncachedProbeFailed = true;
     }
+    try {
+      const response = await fetch('./__e165_cache_priority_probe__.txt', { cache: 'no-store' });
+      cachePriorityBody = await response.text();
+    } catch (_) {}
     return {
       onlineHint: navigator.onLine,
       uncachedProbeFailed,
+      cachePriorityBody,
       view: window.__BAUMAN_CORE_API?.state?.view,
       textLength: (document.querySelector('#view')?.innerText || '').replace(/\s+/g, ' ').trim().length,
       maps: Array.isArray(window.DB?.mindmap) ? window.DB.mindmap.length : 0,
@@ -281,13 +301,13 @@ try {
     };
   });
   console.log('E160 offline reload', JSON.stringify(offline));
-  if (!offline.uncachedProbeFailed || offline.textLength < 24 || offline.maps < 1 || offline.professorQa < 1 || !offline.e140 || !offline.e150 || offline.recovery) {
+  if (!offline.uncachedProbeFailed || offline.cachePriorityBody !== 'runtime-fresh' || offline.textLength < 24 || offline.maps < 1 || offline.professorQa < 1 || !offline.e140 || !offline.e150 || offline.recovery) {
     await fail('offline reload did not preserve a healthy learning runtime');
   }
   if (pageErrors.length) await fail('uncaught page errors detected');
   if (guardErrors.length) await fail('render guard errors detected');
 
-  console.log('E155/E157/E158/E160/E162/E164 PASS: routes, interactions, persistence, mobile layout and verified origin-down offline Web App runtime are healthy.');
+  console.log('E155/E157/E158/E160/E162/E164/E165 PASS: routes, interactions, persistence, mobile layout, offline runtime and cache freshness priority are healthy.');
 } finally {
   await browser.close();
 }

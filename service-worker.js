@@ -46,7 +46,12 @@ async function put(cacheName,request,response){
 }
 
 async function cached(request){
-  return (await caches.match(request)) || (await caches.match(request,{ignoreSearch:true}));
+  const runtime=await caches.open(RUNTIME_CACHE);
+  const shell=await caches.open(SHELL_CACHE);
+  return (await runtime.match(request))
+    || (await runtime.match(request,{ignoreSearch:true}))
+    || (await shell.match(request))
+    || (await shell.match(request,{ignoreSearch:true}));
 }
 
 self.addEventListener('install',event=>{
@@ -105,7 +110,7 @@ self.addEventListener('fetch',event=>{
       const hit=await cached(request);
       if(hit)return hit;
       if(request.mode==='navigate'){
-        const fallback=await caches.match('./index.html',{ignoreSearch:true});
+        const fallback=await cached(new Request(new URL('./index.html',self.location.href).href));
         if(fallback)return fallback;
       }
       return Response.error();
