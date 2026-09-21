@@ -148,10 +148,62 @@ try {
     await fail('runtime bridged data was lost during route traversal');
   }
 
+  // E157: use the real delegated UI events, then verify persisted state survives reload.
+  await page.locator('#nav button[data-view="learning"]').click();
+  await page.waitForFunction(() => window.__BAUMAN_CORE_API?.state?.view === 'learning');
+
+  await page.evaluate(() => {
+    const button = document.querySelector('button[data-learn="exercises"]');
+    if (!button) throw new Error('missing exercises learning-tab button');
+    button.click();
+  });
+  await page.waitForFunction(() => window.__BAUMAN_CORE_API?.state?.learnTab === 'exercises');
+
+  const hasPrep = await page.locator('#stageSelect option[value="prep"]').count();
+  if (!hasPrep) await fail('stageSelect does not expose prep stage');
+  await page.locator('#stageSelect').selectOption('prep');
+  await page.waitForFunction(() => window.__BAUMAN_CORE_API?.state?.stage === 'prep');
+
+  const interactionState = await page.evaluate(() => ({
+    view: window.__BAUMAN_CORE_API?.state?.view,
+    learnTab: window.__BAUMAN_CORE_API?.state?.learnTab,
+    stage: window.__BAUMAN_CORE_API?.state?.stage,
+    viewText: (document.querySelector('#view')?.innerText || '').replace(/\s+/g, ' ').trim().length
+  }));
+  console.log('E157 interaction state', JSON.stringify(interactionState));
+  if (interactionState.view !== 'learning' || interactionState.learnTab !== 'exercises' || interactionState.stage !== 'prep') {
+    await fail('real UI interaction state mismatch');
+  }
+  if (interactionState.viewText < 24) await fail('interaction route rendered empty content');
+
+  await page.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
+  await page.waitForFunction(() => {
+    return !!window.__BAUMAN_CORE_API &&
+      !!window.DB &&
+      (document.querySelector('#view')?.innerText || '').trim().length > 20;
+  }, null, { timeout: 60000 });
+  await page.waitForFunction(() => window.__BAUMAN_MATH_E140_VAULT_BRIDGE__?.loaded === true, null, { timeout: 30000 });
+  await page.waitForFunction(() => window.__BAUMAN_MATH_E150_MINDMAP_TOPOLOGY__?.loaded === true, null, { timeout: 30000 });
+
+  const persisted = await page.evaluate(() => ({
+    view: window.__BAUMAN_CORE_API?.state?.view,
+    learnTab: window.__BAUMAN_CORE_API?.state?.learnTab,
+    stage: window.__BAUMAN_CORE_API?.state?.stage,
+    maps: Array.isArray(window.DB?.mindmap) ? window.DB.mindmap.length : 0,
+    professorQa: Array.isArray(window.DB?.professor_qa) ? window.DB.professor_qa.length : 0,
+    recovery: /KHÔI PHỤC TAB HỌC TẬP|LỖI TAB HỌC TẬP/i.test(document.querySelector('#view')?.innerText || '')
+  }));
+  console.log('E157 persisted state', JSON.stringify(persisted));
+  if (persisted.view !== 'learning' || persisted.learnTab !== 'exercises' || persisted.stage !== 'prep') {
+    await fail('view/tab/stage state did not persist across reload');
+  }
+  if (persisted.maps < 1 || persisted.professorQa < 1) await fail('content bridges did not recover after reload');
+  if (persisted.recovery) await fail('reload fell into recovery UI');
+
   if (pageErrors.length) await fail('uncaught page errors detected');
   if (guardErrors.length) await fail('render guard errors detected');
 
-  console.log('E155 PASS: browser runtime routes and content bridges are healthy.');
+  console.log('E155/E157 PASS: browser routes, real UI interactions, persistence and content bridges are healthy.');
 } finally {
   await browser.close();
 }
