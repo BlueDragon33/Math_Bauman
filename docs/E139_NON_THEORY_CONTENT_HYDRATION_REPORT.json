@@ -1,0 +1,48 @@
+{
+  "release": "E139_NON_THEORY_CONTENT_HYDRATION",
+  "date": "2026-09-21",
+  "status": "IMPLEMENTED_ON_BRANCH",
+  "sourceSpecification": "Legacy E15 logical competency bundle, bridged by E137 to current stable lesson/chapter IDs.",
+  "architecture": "content_vault_records",
+  "counts": {
+    "formulas": 24,
+    "exercises": 64,
+    "applications": 16,
+    "simulations": 16,
+    "professor_qa": 8,
+    "question_bank": 48,
+    "review_packs": 8,
+    "mindmaps": 8
+  },
+  "logicalModules": [
+    "Dữ liệu đa chiều và ma trận dữ liệu X",
+    "Trung tâm hóa và chuẩn hóa đặc trưng",
+    "Hiệp phương sai",
+    "Tương quan Pearson",
+    "Ma trận hiệp phương sai",
+    "Trị riêng và vector riêng của covariance matrix",
+    "PCA nhập môn",
+    "Tái tạo dữ liệu và sai số khi giảm chiều"
+  ],
+  "safeguards": {
+    "physicalVNChapter7Created": false,
+    "currentChapterSpineModified": false,
+    "stableLessonIdsUsed": true,
+    "legacyEmptyExportsModified": false,
+    "contentVaultOnly": true,
+    "storageKeyModified": false
+  },
+  "runtimeEvidence": {
+    "coreReadsVaultSources": [
+      "formula_content",
+      "exercise_content",
+      "application_content",
+      "simulation_content",
+      "professor_qa_content",
+      "review_pack_content",
+      "question_bank_content",
+      "mindmap_content"
+    ],
+    "nextGate": "E140 cross-vault ID/count/runtime render audit"
+  }
+}
