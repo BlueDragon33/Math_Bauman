@@ -1,0 +1,2347 @@
+{
+  "id": "bauman_math_theory_overlay_e151_hk1_time_series",
+  "schema": "bauman_math_content_records_v1",
+  "version": "E151_HK1_TIME_SERIES_CONTENT",
+  "subject": "math",
+  "title": "HK1 C22 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+  "baseSource": "theory_lecture_content.json",
+  "recordKey": "lessonId",
+  "mergePolicy": "replace_by_lessonId_then_append_in_memory",
+  "records": [
+    {
+      "id": "MATH-HK1-TS-C22-L01",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "stage": "hk1",
+      "stageName": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "facultyId": "faculty_hk1",
+      "facultyTitle": "Khoa Toán lõi Bauman · Năm 1 HK1",
+      "departmentId": "hk1__signal_processing_time_series",
+      "departmentTitle": "Xử lý tín hiệu và chuỗi thời gian",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "frameChapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "title": "§4.1 · Dữ liệu theo thời gian và quá trình ngẫu nhiên",
+      "displayTitle": "§4.1 · Dữ liệu theo thời gian và quá trình ngẫu nhiên",
+      "shortTitle": "§4.1 · Dữ liệu theo thời gian và quá trình ngẫu nhiên",
+      "kind": "theory",
+      "contentRole": "theory_only",
+      "contentDepth": "deep_academic_verified",
+      "conceptIds": [
+        "timeseries_process"
+      ],
+      "skillIds": [
+        "SK-MATH-HK1-C22-L01-CORE"
+      ],
+      "sourceAnchors": {
+        "schema": "bauman.math.chapter_spine.v2.1",
+        "version": "E151_HK1_TIME_SERIES",
+        "stageId": "hk1",
+        "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+        "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+        "chapterNo": 22,
+        "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+        "primaryDiscipline": "Xử lý tín hiệu và chuỗi thời gian",
+        "secondaryDisciplines": [
+          "Xác suất, thống kê và suy luận dữ liệu"
+        ],
+        "pureLayer": [
+          "quá trình ngẫu nhiên",
+          "autocorrelation",
+          "stationarity",
+          "time series"
+        ],
+        "appliedLayer": [
+          "dự báo",
+          "nhiễu thời gian",
+          "tín hiệu cảm biến",
+          "monitoring"
+        ],
+        "bridgeQuestion": "Dữ liệu theo thời gian khác dữ liệu độc lập ở đâu?",
+        "targetOutcome": "Biết đọc chuỗi thời gian và quá trình ngẫu nhiên cơ bản.",
+        "timelineRole": "main_path_august_2026_to_bauman_graduation"
+      },
+      "eLearning": {
+        "mode": "e151_time_series_overlay",
+        "hideSearchMeta": true,
+        "targetSource": "theory_lecture_overlay_e151.json",
+        "importMode": "replace_or_add_lesson_by_lessonId",
+        "uiCoreModified": false
+      },
+      "qualityGates": {
+        "mappingChecked": true,
+        "scopeGuard": "existing_physical_C22_only",
+        "slideRoleCount": 14,
+        "renderSafe": true,
+        "deepAndCarefulPass": true
+      },
+      "slides": [
+        {
+          "id": "MATH-HK1-TS-C22-L01-S01",
+          "title": "Vấn đề nghiên cứu",
+          "layout": "academic-opening",
+          "role": "problem_framing",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Câu hỏi chính",
+              "body": "Dữ liệu theo thời gian và quá trình ngẫu nhiên: điều gì thay đổi khi dữ liệu có thứ tự và phụ thuộc theo thời gian?"
+            },
+            {
+              "type": "section",
+              "title": "Đích học",
+              "body": "Chuỗi thời gian giữ thứ tự thời gian; quá trình ngẫu nhiên là họ biến ngẫu nhiên {X_t} được đánh chỉ số bởi thời gian."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S02",
+          "title": "Bản chất học thuật",
+          "layout": "deep-academic",
+          "role": "deep_essence",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Bản chất",
+              "body": "Chuỗi thời gian giữ thứ tự thời gian; quá trình ngẫu nhiên là họ biến ngẫu nhiên {X_t} được đánh chỉ số bởi thời gian."
+            },
+            {
+              "type": "section",
+              "title": "Điều phải giữ khi diễn giải",
+              "body": "Luôn tách giả thiết toán học, ước lượng từ mẫu và giới hạn của kết luận."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S03",
+          "title": "Khi trực giác dễ đánh lừa",
+          "layout": "deep-academic",
+          "role": "counter_intuition",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Bẫy trọng tâm",
+              "items": [
+                "Xáo trộn mẫu như dữ liệu i.i.d. làm mất cấu trúc phụ thuộc thời gian.",
+                "Không dùng đồ thị đẹp thay cho kiểm tra giả thiết.",
+                "Không dùng dữ liệu tương lai để quyết định ở quá khứ."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S04",
+          "title": "Cầu nối sang bài toán kỹ thuật",
+          "layout": "applied-bridge",
+          "role": "real_bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ngữ cảnh cảm biến/AI",
+              "body": "Dòng nhiệt độ, rung và dòng điện từ cảm biến được lấy mẫu theo thời gian; thứ tự và khoảng lấy mẫu là một phần của dữ liệu."
+            },
+            {
+              "type": "section",
+              "title": "Cầu nối",
+              "body": "Từ khái niệm sample path chuyển sang câu hỏi: các đặc trưng thống kê có thay đổi theo thời gian hay không?"
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S05",
+          "title": "Ký hiệu và công thức neo",
+          "layout": "formula-focus",
+          "role": "core_formula",
+          "blocks": [
+            {
+              "type": "formula-list",
+              "title": "Công thức neo",
+              "items": [
+                "X_t, t ∈ T; một sample path là {x_t(ω)} theo t"
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Cách đọc",
+              "body": "Xác định rõ chỉ số thời gian, lag, đơn vị và tập dữ liệu dùng để ước lượng."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S06",
+          "title": "Cửa giả thiết",
+          "layout": "assumption-check",
+          "role": "assumption_gate",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Cổng giả thiết",
+              "items": [
+                "Kiểm tra sampling interval và missing timestamps.",
+                "Kiểm tra trend/seasonality/drift trước khi coi chuỗi dừng.",
+                "Mọi preprocessing/feature phải chỉ dùng thông tin sẵn có tại thời điểm dự báo."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S07",
+          "title": "Mini-case cảm biến",
+          "layout": "case-study",
+          "role": "mini_case",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Mini-case",
+              "body": "Dòng nhiệt độ, rung và dòng điện từ cảm biến được lấy mẫu theo thời gian; thứ tự và khoảng lấy mẫu là một phần của dữ liệu."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Quy trình",
+              "items": [
+                "Vẽ theo thời gian và kiểm timestamp.",
+                "Đặt giả thiết về phụ thuộc/dừng.",
+                "Tính đại lượng theo lag hoặc baseline.",
+                "Đọc residual và nêu giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S08",
+          "title": "Diễn giải kết quả",
+          "layout": "result-reading",
+          "role": "interpretation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Diễn giải",
+              "body": "Kết quả phải nói được cấu trúc theo thời gian nào đang được đo và cấu trúc nào chưa được mô hình hóa."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Không kết luận quá tay",
+              "items": [
+                "Xáo trộn mẫu như dữ liệu i.i.d. làm mất cấu trúc phụ thuộc thời gian.",
+                "Correlation theo lag không đồng nghĩa nhân quả.",
+                "Metric test chỉ đáng tin khi chia dữ liệu đúng thứ tự thời gian."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S09",
+          "title": "Thí nghiệm khái niệm",
+          "layout": "conceptual-experiment",
+          "role": "simulation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Thí nghiệm khái niệm",
+              "body": "Giữ nguyên các giá trị nhưng xáo trộn thứ tự; histogram gần như giữ nguyên trong khi autocorrelation và khả năng dự báo thay đổi."
+            },
+            {
+              "type": "section",
+              "title": "Quan sát cần ghi",
+              "body": "Ghi lại thay đổi của mean/variance/ACF hoặc residual, không chỉ ảnh chụp đường tín hiệu."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S10",
+          "title": "Ứng dụng trong monitoring/AI",
+          "layout": "engineering-application",
+          "role": "application",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ứng dụng kỹ thuật",
+              "body": "Dòng nhiệt độ, rung và dòng điện từ cảm biến được lấy mẫu theo thời gian; thứ tự và khoảng lấy mẫu là một phần của dữ liệu."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Câu hỏi kỹ thuật",
+              "items": [
+                "Input nào có ở thời điểm t?",
+                "Lag nào có ý nghĩa vật lý?",
+                "Baseline đơn giản có bị mô hình phức tạp vượt qua không?"
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S11",
+          "title": "Bài luyện có hướng dẫn",
+          "layout": "guided-practice",
+          "role": "practice",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nhiệm vụ",
+              "body": "Tạo một ví dụ số nhỏ cho Dữ liệu theo thời gian và quá trình ngẫu nhiên; tính/diễn giải đại lượng lõi và chỉ ra một cách làm sai."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Tự chấm",
+              "items": [
+                "Đúng công thức/quy ước.",
+                "Đúng trật tự thời gian.",
+                "Nêu được giả thiết và giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S12",
+          "title": "Vấn đáp + chốt kiến thức",
+          "layout": "qa-dialogue",
+          "role": "professor_qa",
+          "blocks": [
+            {
+              "type": "qa-list",
+              "title": "Vấn đáp",
+              "items": [
+                {
+                  "q": "Ý cốt lõi của Dữ liệu theo thời gian và quá trình ngẫu nhiên là gì?",
+                  "a": "Chuỗi thời gian giữ thứ tự thời gian; quá trình ngẫu nhiên là họ biến ngẫu nhiên {X_t} được đánh chỉ số bởi thời gian."
+                },
+                {
+                  "q": "Bẫy quan trọng nhất?",
+                  "a": "Xáo trộn mẫu như dữ liệu i.i.d. làm mất cấu trúc phụ thuộc thời gian."
+                },
+                {
+                  "q": "Kiểm chứng bằng dữ liệu thế nào?",
+                  "a": "Giữ nguyên các giá trị nhưng xáo trộn thứ tự; histogram gần như giữ nguyên trong khi autocorrelation và khả năng dự báo thay đổi."
+                }
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S13",
+          "title": "Cầu nối sang bài kế tiếp",
+          "layout": "learning-bridge",
+          "role": "bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nối bài",
+              "body": "Từ khái niệm sample path chuyển sang câu hỏi: các đặc trưng thống kê có thay đổi theo thời gian hay không?"
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L01-S14",
+          "title": "Chốt kiến thức cần giữ",
+          "layout": "summary",
+          "role": "takeaway",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Ba điều phải nhớ",
+              "items": [
+                "Chuỗi thời gian giữ thứ tự thời gian; quá trình ngẫu nhiên là họ biến ngẫu nhiên {X_t} được đánh chỉ số bởi thời gian.",
+                "X_t, t ∈ T; một sample path là {x_t(ω)} theo t",
+                "Xáo trộn mẫu như dữ liệu i.i.d. làm mất cấu trúc phụ thuộc thời gian."
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Câu chốt",
+              "body": "Với chuỗi thời gian, thứ tự và thông tin sẵn có tại thời điểm quyết định là một phần của mô hình."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        }
+      ],
+      "e151Added": true
+    },
+    {
+      "id": "MATH-HK1-TS-C22-L02",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "stage": "hk1",
+      "stageName": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "facultyId": "faculty_hk1",
+      "facultyTitle": "Khoa Toán lõi Bauman · Năm 1 HK1",
+      "departmentId": "hk1__signal_processing_time_series",
+      "departmentTitle": "Xử lý tín hiệu và chuỗi thời gian",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "frameChapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "title": "§4.2 · Tính dừng và tính dừng yếu (WSS)",
+      "displayTitle": "§4.2 · Tính dừng và tính dừng yếu (WSS)",
+      "shortTitle": "§4.2 · Tính dừng và tính dừng yếu (WSS)",
+      "kind": "theory",
+      "contentRole": "theory_only",
+      "contentDepth": "deep_academic_verified",
+      "conceptIds": [
+        "timeseries_stationarity"
+      ],
+      "skillIds": [
+        "SK-MATH-HK1-C22-L02-CORE"
+      ],
+      "sourceAnchors": {
+        "schema": "bauman.math.chapter_spine.v2.1",
+        "version": "E151_HK1_TIME_SERIES",
+        "stageId": "hk1",
+        "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+        "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+        "chapterNo": 22,
+        "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+        "primaryDiscipline": "Xử lý tín hiệu và chuỗi thời gian",
+        "secondaryDisciplines": [
+          "Xác suất, thống kê và suy luận dữ liệu"
+        ],
+        "pureLayer": [
+          "quá trình ngẫu nhiên",
+          "autocorrelation",
+          "stationarity",
+          "time series"
+        ],
+        "appliedLayer": [
+          "dự báo",
+          "nhiễu thời gian",
+          "tín hiệu cảm biến",
+          "monitoring"
+        ],
+        "bridgeQuestion": "Dữ liệu theo thời gian khác dữ liệu độc lập ở đâu?",
+        "targetOutcome": "Biết đọc chuỗi thời gian và quá trình ngẫu nhiên cơ bản.",
+        "timelineRole": "main_path_august_2026_to_bauman_graduation"
+      },
+      "eLearning": {
+        "mode": "e151_time_series_overlay",
+        "hideSearchMeta": true,
+        "targetSource": "theory_lecture_overlay_e151.json",
+        "importMode": "replace_or_add_lesson_by_lessonId",
+        "uiCoreModified": false
+      },
+      "qualityGates": {
+        "mappingChecked": true,
+        "scopeGuard": "existing_physical_C22_only",
+        "slideRoleCount": 14,
+        "renderSafe": true,
+        "deepAndCarefulPass": true
+      },
+      "slides": [
+        {
+          "id": "MATH-HK1-TS-C22-L02-S01",
+          "title": "Vấn đề nghiên cứu",
+          "layout": "academic-opening",
+          "role": "problem_framing",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Câu hỏi chính",
+              "body": "Tính dừng và tính dừng yếu: điều gì thay đổi khi dữ liệu có thứ tự và phụ thuộc theo thời gian?"
+            },
+            {
+              "type": "section",
+              "title": "Đích học",
+              "body": "Với WSS, trung bình không phụ thuộc thời điểm và autocovariance chỉ phụ thuộc độ trễ, không phụ thuộc mốc thời gian tuyệt đối."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S02",
+          "title": "Bản chất học thuật",
+          "layout": "deep-academic",
+          "role": "deep_essence",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Bản chất",
+              "body": "Với WSS, trung bình không phụ thuộc thời điểm và autocovariance chỉ phụ thuộc độ trễ, không phụ thuộc mốc thời gian tuyệt đối."
+            },
+            {
+              "type": "section",
+              "title": "Điều phải giữ khi diễn giải",
+              "body": "Luôn tách giả thiết toán học, ước lượng từ mẫu và giới hạn của kết luận."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S03",
+          "title": "Khi trực giác dễ đánh lừa",
+          "layout": "deep-academic",
+          "role": "counter_intuition",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Bẫy trọng tâm",
+              "items": [
+                "Một chuỗi có trung bình gần như ổn định trong một đoạn ngắn chưa đủ để kết luận dừng.",
+                "Không dùng đồ thị đẹp thay cho kiểm tra giả thiết.",
+                "Không dùng dữ liệu tương lai để quyết định ở quá khứ."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S04",
+          "title": "Cầu nối sang bài toán kỹ thuật",
+          "layout": "applied-bridge",
+          "role": "real_bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ngữ cảnh cảm biến/AI",
+              "body": "Một cảm biến có drift theo nhiệt độ môi trường có thể phá tính dừng dù biên độ nhiễu nhìn bằng mắt khá giống nhau."
+            },
+            {
+              "type": "section",
+              "title": "Cầu nối",
+              "body": "Khi giả thiết dừng hợp lý, autocovariance theo lag trở thành công cụ mô tả phụ thuộc thời gian."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S05",
+          "title": "Ký hiệu và công thức neo",
+          "layout": "formula-focus",
+          "role": "core_formula",
+          "blocks": [
+            {
+              "type": "formula-list",
+              "title": "Công thức neo",
+              "items": [
+                "E[X_t]=μ; γ(t,s)=γ(t-s)=γ(h)"
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Cách đọc",
+              "body": "Xác định rõ chỉ số thời gian, lag, đơn vị và tập dữ liệu dùng để ước lượng."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S06",
+          "title": "Cửa giả thiết",
+          "layout": "assumption-check",
+          "role": "assumption_gate",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Cổng giả thiết",
+              "items": [
+                "Kiểm tra sampling interval và missing timestamps.",
+                "Kiểm tra trend/seasonality/drift trước khi coi chuỗi dừng.",
+                "Mọi preprocessing/feature phải chỉ dùng thông tin sẵn có tại thời điểm dự báo."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S07",
+          "title": "Mini-case cảm biến",
+          "layout": "case-study",
+          "role": "mini_case",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Mini-case",
+              "body": "Một cảm biến có drift theo nhiệt độ môi trường có thể phá tính dừng dù biên độ nhiễu nhìn bằng mắt khá giống nhau."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Quy trình",
+              "items": [
+                "Vẽ theo thời gian và kiểm timestamp.",
+                "Đặt giả thiết về phụ thuộc/dừng.",
+                "Tính đại lượng theo lag hoặc baseline.",
+                "Đọc residual và nêu giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S08",
+          "title": "Diễn giải kết quả",
+          "layout": "result-reading",
+          "role": "interpretation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Diễn giải",
+              "body": "Kết quả phải nói được cấu trúc theo thời gian nào đang được đo và cấu trúc nào chưa được mô hình hóa."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Không kết luận quá tay",
+              "items": [
+                "Một chuỗi có trung bình gần như ổn định trong một đoạn ngắn chưa đủ để kết luận dừng.",
+                "Correlation theo lag không đồng nghĩa nhân quả.",
+                "Metric test chỉ đáng tin khi chia dữ liệu đúng thứ tự thời gian."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S09",
+          "title": "Thí nghiệm khái niệm",
+          "layout": "conceptual-experiment",
+          "role": "simulation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Thí nghiệm khái niệm",
+              "body": "So sánh rolling mean/variance giữa white noise, random walk và chuỗi có trend."
+            },
+            {
+              "type": "section",
+              "title": "Quan sát cần ghi",
+              "body": "Ghi lại thay đổi của mean/variance/ACF hoặc residual, không chỉ ảnh chụp đường tín hiệu."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S10",
+          "title": "Ứng dụng trong monitoring/AI",
+          "layout": "engineering-application",
+          "role": "application",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ứng dụng kỹ thuật",
+              "body": "Một cảm biến có drift theo nhiệt độ môi trường có thể phá tính dừng dù biên độ nhiễu nhìn bằng mắt khá giống nhau."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Câu hỏi kỹ thuật",
+              "items": [
+                "Input nào có ở thời điểm t?",
+                "Lag nào có ý nghĩa vật lý?",
+                "Baseline đơn giản có bị mô hình phức tạp vượt qua không?"
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S11",
+          "title": "Bài luyện có hướng dẫn",
+          "layout": "guided-practice",
+          "role": "practice",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nhiệm vụ",
+              "body": "Tạo một ví dụ số nhỏ cho Tính dừng và tính dừng yếu; tính/diễn giải đại lượng lõi và chỉ ra một cách làm sai."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Tự chấm",
+              "items": [
+                "Đúng công thức/quy ước.",
+                "Đúng trật tự thời gian.",
+                "Nêu được giả thiết và giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S12",
+          "title": "Vấn đáp + chốt kiến thức",
+          "layout": "qa-dialogue",
+          "role": "professor_qa",
+          "blocks": [
+            {
+              "type": "qa-list",
+              "title": "Vấn đáp",
+              "items": [
+                {
+                  "q": "Ý cốt lõi của Tính dừng và tính dừng yếu là gì?",
+                  "a": "Với WSS, trung bình không phụ thuộc thời điểm và autocovariance chỉ phụ thuộc độ trễ, không phụ thuộc mốc thời gian tuyệt đối."
+                },
+                {
+                  "q": "Bẫy quan trọng nhất?",
+                  "a": "Một chuỗi có trung bình gần như ổn định trong một đoạn ngắn chưa đủ để kết luận dừng."
+                },
+                {
+                  "q": "Kiểm chứng bằng dữ liệu thế nào?",
+                  "a": "So sánh rolling mean/variance giữa white noise, random walk và chuỗi có trend."
+                }
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S13",
+          "title": "Cầu nối sang bài kế tiếp",
+          "layout": "learning-bridge",
+          "role": "bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nối bài",
+              "body": "Khi giả thiết dừng hợp lý, autocovariance theo lag trở thành công cụ mô tả phụ thuộc thời gian."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L02-S14",
+          "title": "Chốt kiến thức cần giữ",
+          "layout": "summary",
+          "role": "takeaway",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Ba điều phải nhớ",
+              "items": [
+                "Với WSS, trung bình không phụ thuộc thời điểm và autocovariance chỉ phụ thuộc độ trễ, không phụ thuộc mốc thời gian tuyệt đối.",
+                "E[X_t]=μ; γ(t,s)=γ(t-s)=γ(h)",
+                "Một chuỗi có trung bình gần như ổn định trong một đoạn ngắn chưa đủ để kết luận dừng."
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Câu chốt",
+              "body": "Với chuỗi thời gian, thứ tự và thông tin sẵn có tại thời điểm quyết định là một phần của mô hình."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        }
+      ],
+      "e151Added": true
+    },
+    {
+      "id": "MATH-HK1-TS-C22-L03",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "stage": "hk1",
+      "stageName": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "facultyId": "faculty_hk1",
+      "facultyTitle": "Khoa Toán lõi Bauman · Năm 1 HK1",
+      "departmentId": "hk1__signal_processing_time_series",
+      "departmentTitle": "Xử lý tín hiệu và chuỗi thời gian",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "frameChapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "title": "§4.3 · Autocovariance, autocorrelation và độ trễ",
+      "displayTitle": "§4.3 · Autocovariance, autocorrelation và độ trễ",
+      "shortTitle": "§4.3 · Autocovariance, autocorrelation và độ trễ",
+      "kind": "theory",
+      "contentRole": "theory_only",
+      "contentDepth": "deep_academic_verified",
+      "conceptIds": [
+        "timeseries_acf"
+      ],
+      "skillIds": [
+        "SK-MATH-HK1-C22-L03-CORE"
+      ],
+      "sourceAnchors": {
+        "schema": "bauman.math.chapter_spine.v2.1",
+        "version": "E151_HK1_TIME_SERIES",
+        "stageId": "hk1",
+        "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+        "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+        "chapterNo": 22,
+        "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+        "primaryDiscipline": "Xử lý tín hiệu và chuỗi thời gian",
+        "secondaryDisciplines": [
+          "Xác suất, thống kê và suy luận dữ liệu"
+        ],
+        "pureLayer": [
+          "quá trình ngẫu nhiên",
+          "autocorrelation",
+          "stationarity",
+          "time series"
+        ],
+        "appliedLayer": [
+          "dự báo",
+          "nhiễu thời gian",
+          "tín hiệu cảm biến",
+          "monitoring"
+        ],
+        "bridgeQuestion": "Dữ liệu theo thời gian khác dữ liệu độc lập ở đâu?",
+        "targetOutcome": "Biết đọc chuỗi thời gian và quá trình ngẫu nhiên cơ bản.",
+        "timelineRole": "main_path_august_2026_to_bauman_graduation"
+      },
+      "eLearning": {
+        "mode": "e151_time_series_overlay",
+        "hideSearchMeta": true,
+        "targetSource": "theory_lecture_overlay_e151.json",
+        "importMode": "replace_or_add_lesson_by_lessonId",
+        "uiCoreModified": false
+      },
+      "qualityGates": {
+        "mappingChecked": true,
+        "scopeGuard": "existing_physical_C22_only",
+        "slideRoleCount": 14,
+        "renderSafe": true,
+        "deepAndCarefulPass": true
+      },
+      "slides": [
+        {
+          "id": "MATH-HK1-TS-C22-L03-S01",
+          "title": "Vấn đề nghiên cứu",
+          "layout": "academic-opening",
+          "role": "problem_framing",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Câu hỏi chính",
+              "body": "Autocovariance, autocorrelation và lag: điều gì thay đổi khi dữ liệu có thứ tự và phụ thuộc theo thời gian?"
+            },
+            {
+              "type": "section",
+              "title": "Đích học",
+              "body": "Autocorrelation đo mức liên hệ tuyến tính của chuỗi với chính nó sau một độ trễ h, giúp nhìn ký ức tuyến tính theo thời gian."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S02",
+          "title": "Bản chất học thuật",
+          "layout": "deep-academic",
+          "role": "deep_essence",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Bản chất",
+              "body": "Autocorrelation đo mức liên hệ tuyến tính của chuỗi với chính nó sau một độ trễ h, giúp nhìn ký ức tuyến tính theo thời gian."
+            },
+            {
+              "type": "section",
+              "title": "Điều phải giữ khi diễn giải",
+              "body": "Luôn tách giả thiết toán học, ước lượng từ mẫu và giới hạn của kết luận."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S03",
+          "title": "Khi trực giác dễ đánh lừa",
+          "layout": "deep-academic",
+          "role": "counter_intuition",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Bẫy trọng tâm",
+              "items": [
+                "ACF lớn không chứng minh quan hệ nhân quả; ACF mẫu ở nhiều lag có dao động ngẫu nhiên.",
+                "Không dùng đồ thị đẹp thay cho kiểm tra giả thiết.",
+                "Không dùng dữ liệu tương lai để quyết định ở quá khứ."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S04",
+          "title": "Cầu nối sang bài toán kỹ thuật",
+          "layout": "applied-bridge",
+          "role": "real_bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ngữ cảnh cảm biến/AI",
+              "body": "Rung động máy có chu kỳ tạo đỉnh ACF lặp lại; sensor smoothing mạnh cũng có thể tạo phụ thuộc giữa các mẫu kề nhau."
+            },
+            {
+              "type": "section",
+              "title": "Cầu nối",
+              "body": "Mẫu ACF dẫn tự nhiên tới mô hình AR đơn giản và phân biệt white noise với random walk."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S05",
+          "title": "Ký hiệu và công thức neo",
+          "layout": "formula-focus",
+          "role": "core_formula",
+          "blocks": [
+            {
+              "type": "formula-list",
+              "title": "Công thức neo",
+              "items": [
+                "ρ(h)=γ(h)/γ(0), với |ρ(h)|≤1"
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Cách đọc",
+              "body": "Xác định rõ chỉ số thời gian, lag, đơn vị và tập dữ liệu dùng để ước lượng."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S06",
+          "title": "Cửa giả thiết",
+          "layout": "assumption-check",
+          "role": "assumption_gate",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Cổng giả thiết",
+              "items": [
+                "Kiểm tra sampling interval và missing timestamps.",
+                "Kiểm tra trend/seasonality/drift trước khi coi chuỗi dừng.",
+                "Mọi preprocessing/feature phải chỉ dùng thông tin sẵn có tại thời điểm dự báo."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S07",
+          "title": "Mini-case cảm biến",
+          "layout": "case-study",
+          "role": "mini_case",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Mini-case",
+              "body": "Rung động máy có chu kỳ tạo đỉnh ACF lặp lại; sensor smoothing mạnh cũng có thể tạo phụ thuộc giữa các mẫu kề nhau."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Quy trình",
+              "items": [
+                "Vẽ theo thời gian và kiểm timestamp.",
+                "Đặt giả thiết về phụ thuộc/dừng.",
+                "Tính đại lượng theo lag hoặc baseline.",
+                "Đọc residual và nêu giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S08",
+          "title": "Diễn giải kết quả",
+          "layout": "result-reading",
+          "role": "interpretation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Diễn giải",
+              "body": "Kết quả phải nói được cấu trúc theo thời gian nào đang được đo và cấu trúc nào chưa được mô hình hóa."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Không kết luận quá tay",
+              "items": [
+                "ACF lớn không chứng minh quan hệ nhân quả; ACF mẫu ở nhiều lag có dao động ngẫu nhiên.",
+                "Correlation theo lag không đồng nghĩa nhân quả.",
+                "Metric test chỉ đáng tin khi chia dữ liệu đúng thứ tự thời gian."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S09",
+          "title": "Thí nghiệm khái niệm",
+          "layout": "conceptual-experiment",
+          "role": "simulation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Thí nghiệm khái niệm",
+              "body": "Sinh AR(1) với các φ khác nhau và quan sát tốc độ suy giảm ACF."
+            },
+            {
+              "type": "section",
+              "title": "Quan sát cần ghi",
+              "body": "Ghi lại thay đổi của mean/variance/ACF hoặc residual, không chỉ ảnh chụp đường tín hiệu."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S10",
+          "title": "Ứng dụng trong monitoring/AI",
+          "layout": "engineering-application",
+          "role": "application",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ứng dụng kỹ thuật",
+              "body": "Rung động máy có chu kỳ tạo đỉnh ACF lặp lại; sensor smoothing mạnh cũng có thể tạo phụ thuộc giữa các mẫu kề nhau."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Câu hỏi kỹ thuật",
+              "items": [
+                "Input nào có ở thời điểm t?",
+                "Lag nào có ý nghĩa vật lý?",
+                "Baseline đơn giản có bị mô hình phức tạp vượt qua không?"
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S11",
+          "title": "Bài luyện có hướng dẫn",
+          "layout": "guided-practice",
+          "role": "practice",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nhiệm vụ",
+              "body": "Tạo một ví dụ số nhỏ cho Autocovariance, autocorrelation và lag; tính/diễn giải đại lượng lõi và chỉ ra một cách làm sai."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Tự chấm",
+              "items": [
+                "Đúng công thức/quy ước.",
+                "Đúng trật tự thời gian.",
+                "Nêu được giả thiết và giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S12",
+          "title": "Vấn đáp + chốt kiến thức",
+          "layout": "qa-dialogue",
+          "role": "professor_qa",
+          "blocks": [
+            {
+              "type": "qa-list",
+              "title": "Vấn đáp",
+              "items": [
+                {
+                  "q": "Ý cốt lõi của Autocovariance, autocorrelation và lag là gì?",
+                  "a": "Autocorrelation đo mức liên hệ tuyến tính của chuỗi với chính nó sau một độ trễ h, giúp nhìn ký ức tuyến tính theo thời gian."
+                },
+                {
+                  "q": "Bẫy quan trọng nhất?",
+                  "a": "ACF lớn không chứng minh quan hệ nhân quả; ACF mẫu ở nhiều lag có dao động ngẫu nhiên."
+                },
+                {
+                  "q": "Kiểm chứng bằng dữ liệu thế nào?",
+                  "a": "Sinh AR(1) với các φ khác nhau và quan sát tốc độ suy giảm ACF."
+                }
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S13",
+          "title": "Cầu nối sang bài kế tiếp",
+          "layout": "learning-bridge",
+          "role": "bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nối bài",
+              "body": "Mẫu ACF dẫn tự nhiên tới mô hình AR đơn giản và phân biệt white noise với random walk."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L03-S14",
+          "title": "Chốt kiến thức cần giữ",
+          "layout": "summary",
+          "role": "takeaway",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Ba điều phải nhớ",
+              "items": [
+                "Autocorrelation đo mức liên hệ tuyến tính của chuỗi với chính nó sau một độ trễ h, giúp nhìn ký ức tuyến tính theo thời gian.",
+                "ρ(h)=γ(h)/γ(0), với |ρ(h)|≤1",
+                "ACF lớn không chứng minh quan hệ nhân quả; ACF mẫu ở nhiều lag có dao động ngẫu nhiên."
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Câu chốt",
+              "body": "Với chuỗi thời gian, thứ tự và thông tin sẵn có tại thời điểm quyết định là một phần của mô hình."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        }
+      ],
+      "e151Added": true
+    },
+    {
+      "id": "MATH-HK1-TS-C22-L04",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "stage": "hk1",
+      "stageName": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "facultyId": "faculty_hk1",
+      "facultyTitle": "Khoa Toán lõi Bauman · Năm 1 HK1",
+      "departmentId": "hk1__signal_processing_time_series",
+      "departmentTitle": "Xử lý tín hiệu và chuỗi thời gian",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "frameChapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "title": "§4.4 · White noise, random walk và AR(1)",
+      "displayTitle": "§4.4 · White noise, random walk và AR(1)",
+      "shortTitle": "§4.4 · White noise, random walk và AR(1)",
+      "kind": "theory",
+      "contentRole": "theory_only",
+      "contentDepth": "deep_academic_verified",
+      "conceptIds": [
+        "timeseries_ar1"
+      ],
+      "skillIds": [
+        "SK-MATH-HK1-C22-L04-CORE"
+      ],
+      "sourceAnchors": {
+        "schema": "bauman.math.chapter_spine.v2.1",
+        "version": "E151_HK1_TIME_SERIES",
+        "stageId": "hk1",
+        "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+        "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+        "chapterNo": 22,
+        "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+        "primaryDiscipline": "Xử lý tín hiệu và chuỗi thời gian",
+        "secondaryDisciplines": [
+          "Xác suất, thống kê và suy luận dữ liệu"
+        ],
+        "pureLayer": [
+          "quá trình ngẫu nhiên",
+          "autocorrelation",
+          "stationarity",
+          "time series"
+        ],
+        "appliedLayer": [
+          "dự báo",
+          "nhiễu thời gian",
+          "tín hiệu cảm biến",
+          "monitoring"
+        ],
+        "bridgeQuestion": "Dữ liệu theo thời gian khác dữ liệu độc lập ở đâu?",
+        "targetOutcome": "Biết đọc chuỗi thời gian và quá trình ngẫu nhiên cơ bản.",
+        "timelineRole": "main_path_august_2026_to_bauman_graduation"
+      },
+      "eLearning": {
+        "mode": "e151_time_series_overlay",
+        "hideSearchMeta": true,
+        "targetSource": "theory_lecture_overlay_e151.json",
+        "importMode": "replace_or_add_lesson_by_lessonId",
+        "uiCoreModified": false
+      },
+      "qualityGates": {
+        "mappingChecked": true,
+        "scopeGuard": "existing_physical_C22_only",
+        "slideRoleCount": 14,
+        "renderSafe": true,
+        "deepAndCarefulPass": true
+      },
+      "slides": [
+        {
+          "id": "MATH-HK1-TS-C22-L04-S01",
+          "title": "Vấn đề nghiên cứu",
+          "layout": "academic-opening",
+          "role": "problem_framing",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Câu hỏi chính",
+              "body": "White noise, random walk và AR(1): điều gì thay đổi khi dữ liệu có thứ tự và phụ thuộc theo thời gian?"
+            },
+            {
+              "type": "section",
+              "title": "Đích học",
+              "body": "White noise không có phụ thuộc tuyến tính theo lag; random walk tích lũy nhiễu và không dừng; AR(1) mô tả ký ức tuyến tính bậc một."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S02",
+          "title": "Bản chất học thuật",
+          "layout": "deep-academic",
+          "role": "deep_essence",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Bản chất",
+              "body": "White noise không có phụ thuộc tuyến tính theo lag; random walk tích lũy nhiễu và không dừng; AR(1) mô tả ký ức tuyến tính bậc một."
+            },
+            {
+              "type": "section",
+              "title": "Điều phải giữ khi diễn giải",
+              "body": "Luôn tách giả thiết toán học, ước lượng từ mẫu và giới hạn của kết luận."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S03",
+          "title": "Khi trực giác dễ đánh lừa",
+          "layout": "deep-academic",
+          "role": "counter_intuition",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Bẫy trọng tâm",
+              "items": [
+                "Nhầm random walk với white noise vì cả hai đều được xây từ nhiễu; random walk có tích lũy và phương sai tăng theo thời gian.",
+                "Không dùng đồ thị đẹp thay cho kiểm tra giả thiết.",
+                "Không dùng dữ liệu tương lai để quyết định ở quá khứ."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S04",
+          "title": "Cầu nối sang bài toán kỹ thuật",
+          "layout": "applied-bridge",
+          "role": "real_bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ngữ cảnh cảm biến/AI",
+              "body": "Sai số tích phân từ cảm biến quán tính thường giống random walk; tín hiệu có quán tính ngắn có thể gần AR(1)."
+            },
+            {
+              "type": "section",
+              "title": "Cầu nối",
+              "body": "Từ mô hình sinh dữ liệu chuyển sang cách tách trend/seasonality và biến đổi chuỗi để mô hình hóa."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S05",
+          "title": "Ký hiệu và công thức neo",
+          "layout": "formula-focus",
+          "role": "core_formula",
+          "blocks": [
+            {
+              "type": "formula-list",
+              "title": "Công thức neo",
+              "items": [
+                "AR(1): X_t=φX_{t-1}+ε_t; dừng yếu khi |φ|<1"
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Cách đọc",
+              "body": "Xác định rõ chỉ số thời gian, lag, đơn vị và tập dữ liệu dùng để ước lượng."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S06",
+          "title": "Cửa giả thiết",
+          "layout": "assumption-check",
+          "role": "assumption_gate",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Cổng giả thiết",
+              "items": [
+                "Kiểm tra sampling interval và missing timestamps.",
+                "Kiểm tra trend/seasonality/drift trước khi coi chuỗi dừng.",
+                "Mọi preprocessing/feature phải chỉ dùng thông tin sẵn có tại thời điểm dự báo."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S07",
+          "title": "Mini-case cảm biến",
+          "layout": "case-study",
+          "role": "mini_case",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Mini-case",
+              "body": "Sai số tích phân từ cảm biến quán tính thường giống random walk; tín hiệu có quán tính ngắn có thể gần AR(1)."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Quy trình",
+              "items": [
+                "Vẽ theo thời gian và kiểm timestamp.",
+                "Đặt giả thiết về phụ thuộc/dừng.",
+                "Tính đại lượng theo lag hoặc baseline.",
+                "Đọc residual và nêu giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S08",
+          "title": "Diễn giải kết quả",
+          "layout": "result-reading",
+          "role": "interpretation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Diễn giải",
+              "body": "Kết quả phải nói được cấu trúc theo thời gian nào đang được đo và cấu trúc nào chưa được mô hình hóa."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Không kết luận quá tay",
+              "items": [
+                "Nhầm random walk với white noise vì cả hai đều được xây từ nhiễu; random walk có tích lũy và phương sai tăng theo thời gian.",
+                "Correlation theo lag không đồng nghĩa nhân quả.",
+                "Metric test chỉ đáng tin khi chia dữ liệu đúng thứ tự thời gian."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S09",
+          "title": "Thí nghiệm khái niệm",
+          "layout": "conceptual-experiment",
+          "role": "simulation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Thí nghiệm khái niệm",
+              "body": "Thay φ từ -0.8 đến 0.95 và so sánh sample path, variance và ACF."
+            },
+            {
+              "type": "section",
+              "title": "Quan sát cần ghi",
+              "body": "Ghi lại thay đổi của mean/variance/ACF hoặc residual, không chỉ ảnh chụp đường tín hiệu."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S10",
+          "title": "Ứng dụng trong monitoring/AI",
+          "layout": "engineering-application",
+          "role": "application",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ứng dụng kỹ thuật",
+              "body": "Sai số tích phân từ cảm biến quán tính thường giống random walk; tín hiệu có quán tính ngắn có thể gần AR(1)."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Câu hỏi kỹ thuật",
+              "items": [
+                "Input nào có ở thời điểm t?",
+                "Lag nào có ý nghĩa vật lý?",
+                "Baseline đơn giản có bị mô hình phức tạp vượt qua không?"
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S11",
+          "title": "Bài luyện có hướng dẫn",
+          "layout": "guided-practice",
+          "role": "practice",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nhiệm vụ",
+              "body": "Tạo một ví dụ số nhỏ cho White noise, random walk và AR(1); tính/diễn giải đại lượng lõi và chỉ ra một cách làm sai."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Tự chấm",
+              "items": [
+                "Đúng công thức/quy ước.",
+                "Đúng trật tự thời gian.",
+                "Nêu được giả thiết và giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S12",
+          "title": "Vấn đáp + chốt kiến thức",
+          "layout": "qa-dialogue",
+          "role": "professor_qa",
+          "blocks": [
+            {
+              "type": "qa-list",
+              "title": "Vấn đáp",
+              "items": [
+                {
+                  "q": "Ý cốt lõi của White noise, random walk và AR(1) là gì?",
+                  "a": "White noise không có phụ thuộc tuyến tính theo lag; random walk tích lũy nhiễu và không dừng; AR(1) mô tả ký ức tuyến tính bậc một."
+                },
+                {
+                  "q": "Bẫy quan trọng nhất?",
+                  "a": "Nhầm random walk với white noise vì cả hai đều được xây từ nhiễu; random walk có tích lũy và phương sai tăng theo thời gian."
+                },
+                {
+                  "q": "Kiểm chứng bằng dữ liệu thế nào?",
+                  "a": "Thay φ từ -0.8 đến 0.95 và so sánh sample path, variance và ACF."
+                }
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S13",
+          "title": "Cầu nối sang bài kế tiếp",
+          "layout": "learning-bridge",
+          "role": "bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nối bài",
+              "body": "Từ mô hình sinh dữ liệu chuyển sang cách tách trend/seasonality và biến đổi chuỗi để mô hình hóa."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L04-S14",
+          "title": "Chốt kiến thức cần giữ",
+          "layout": "summary",
+          "role": "takeaway",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Ba điều phải nhớ",
+              "items": [
+                "White noise không có phụ thuộc tuyến tính theo lag; random walk tích lũy nhiễu và không dừng; AR(1) mô tả ký ức tuyến tính bậc một.",
+                "AR(1): X_t=φX_{t-1}+ε_t; dừng yếu khi |φ|<1",
+                "Nhầm random walk với white noise vì cả hai đều được xây từ nhiễu; random walk có tích lũy và phương sai tăng theo thời gian."
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Câu chốt",
+              "body": "Với chuỗi thời gian, thứ tự và thông tin sẵn có tại thời điểm quyết định là một phần của mô hình."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        }
+      ],
+      "e151Added": true
+    },
+    {
+      "id": "MATH-HK1-TS-C22-L05",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "stage": "hk1",
+      "stageName": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "facultyId": "faculty_hk1",
+      "facultyTitle": "Khoa Toán lõi Bauman · Năm 1 HK1",
+      "departmentId": "hk1__signal_processing_time_series",
+      "departmentTitle": "Xử lý tín hiệu và chuỗi thời gian",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "frameChapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "title": "§4.5 · Trend, seasonality và sai phân",
+      "displayTitle": "§4.5 · Trend, seasonality và sai phân",
+      "shortTitle": "§4.5 · Trend, seasonality và sai phân",
+      "kind": "theory",
+      "contentRole": "theory_only",
+      "contentDepth": "deep_academic_verified",
+      "conceptIds": [
+        "timeseries_structure"
+      ],
+      "skillIds": [
+        "SK-MATH-HK1-C22-L05-CORE"
+      ],
+      "sourceAnchors": {
+        "schema": "bauman.math.chapter_spine.v2.1",
+        "version": "E151_HK1_TIME_SERIES",
+        "stageId": "hk1",
+        "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+        "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+        "chapterNo": 22,
+        "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+        "primaryDiscipline": "Xử lý tín hiệu và chuỗi thời gian",
+        "secondaryDisciplines": [
+          "Xác suất, thống kê và suy luận dữ liệu"
+        ],
+        "pureLayer": [
+          "quá trình ngẫu nhiên",
+          "autocorrelation",
+          "stationarity",
+          "time series"
+        ],
+        "appliedLayer": [
+          "dự báo",
+          "nhiễu thời gian",
+          "tín hiệu cảm biến",
+          "monitoring"
+        ],
+        "bridgeQuestion": "Dữ liệu theo thời gian khác dữ liệu độc lập ở đâu?",
+        "targetOutcome": "Biết đọc chuỗi thời gian và quá trình ngẫu nhiên cơ bản.",
+        "timelineRole": "main_path_august_2026_to_bauman_graduation"
+      },
+      "eLearning": {
+        "mode": "e151_time_series_overlay",
+        "hideSearchMeta": true,
+        "targetSource": "theory_lecture_overlay_e151.json",
+        "importMode": "replace_or_add_lesson_by_lessonId",
+        "uiCoreModified": false
+      },
+      "qualityGates": {
+        "mappingChecked": true,
+        "scopeGuard": "existing_physical_C22_only",
+        "slideRoleCount": 14,
+        "renderSafe": true,
+        "deepAndCarefulPass": true
+      },
+      "slides": [
+        {
+          "id": "MATH-HK1-TS-C22-L05-S01",
+          "title": "Vấn đề nghiên cứu",
+          "layout": "academic-opening",
+          "role": "problem_framing",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Câu hỏi chính",
+              "body": "Trend, seasonality và differencing: điều gì thay đổi khi dữ liệu có thứ tự và phụ thuộc theo thời gian?"
+            },
+            {
+              "type": "section",
+              "title": "Đích học",
+              "body": "Trend và seasonality là cấu trúc theo thời gian; sai phân có thể giảm trend/stochastic trend nhưng cũng làm thay đổi noise và thông tin tần số."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S02",
+          "title": "Bản chất học thuật",
+          "layout": "deep-academic",
+          "role": "deep_essence",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Bản chất",
+              "body": "Trend và seasonality là cấu trúc theo thời gian; sai phân có thể giảm trend/stochastic trend nhưng cũng làm thay đổi noise và thông tin tần số."
+            },
+            {
+              "type": "section",
+              "title": "Điều phải giữ khi diễn giải",
+              "body": "Luôn tách giả thiết toán học, ước lượng từ mẫu và giới hạn của kết luận."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S03",
+          "title": "Khi trực giác dễ đánh lừa",
+          "layout": "deep-academic",
+          "role": "counter_intuition",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Bẫy trọng tâm",
+              "items": [
+                "Sai phân lặp lại một cách máy móc có thể over-difference, tăng nhiễu và làm mất cấu trúc hữu ích.",
+                "Không dùng đồ thị đẹp thay cho kiểm tra giả thiết.",
+                "Không dùng dữ liệu tương lai để quyết định ở quá khứ."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S04",
+          "title": "Cầu nối sang bài toán kỹ thuật",
+          "layout": "applied-bridge",
+          "role": "real_bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ngữ cảnh cảm biến/AI",
+              "body": "Tải điện theo ngày có trend dài hạn và chu kỳ 24 giờ; cần tách cấu trúc trước khi đánh giá phần dư."
+            },
+            {
+              "type": "section",
+              "title": "Cầu nối",
+              "body": "Chuỗi sau biến đổi cần được đánh giá bằng dự báo theo thời gian và chẩn đoán residual."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S05",
+          "title": "Ký hiệu và công thức neo",
+          "layout": "formula-focus",
+          "role": "core_formula",
+          "blocks": [
+            {
+              "type": "formula-list",
+              "title": "Công thức neo",
+              "items": [
+                "ΔX_t = X_t - X_{t-1}; seasonal difference: X_t-X_{t-s}"
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Cách đọc",
+              "body": "Xác định rõ chỉ số thời gian, lag, đơn vị và tập dữ liệu dùng để ước lượng."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S06",
+          "title": "Cửa giả thiết",
+          "layout": "assumption-check",
+          "role": "assumption_gate",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Cổng giả thiết",
+              "items": [
+                "Kiểm tra sampling interval và missing timestamps.",
+                "Kiểm tra trend/seasonality/drift trước khi coi chuỗi dừng.",
+                "Mọi preprocessing/feature phải chỉ dùng thông tin sẵn có tại thời điểm dự báo."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S07",
+          "title": "Mini-case cảm biến",
+          "layout": "case-study",
+          "role": "mini_case",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Mini-case",
+              "body": "Tải điện theo ngày có trend dài hạn và chu kỳ 24 giờ; cần tách cấu trúc trước khi đánh giá phần dư."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Quy trình",
+              "items": [
+                "Vẽ theo thời gian và kiểm timestamp.",
+                "Đặt giả thiết về phụ thuộc/dừng.",
+                "Tính đại lượng theo lag hoặc baseline.",
+                "Đọc residual và nêu giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S08",
+          "title": "Diễn giải kết quả",
+          "layout": "result-reading",
+          "role": "interpretation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Diễn giải",
+              "body": "Kết quả phải nói được cấu trúc theo thời gian nào đang được đo và cấu trúc nào chưa được mô hình hóa."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Không kết luận quá tay",
+              "items": [
+                "Sai phân lặp lại một cách máy móc có thể over-difference, tăng nhiễu và làm mất cấu trúc hữu ích.",
+                "Correlation theo lag không đồng nghĩa nhân quả.",
+                "Metric test chỉ đáng tin khi chia dữ liệu đúng thứ tự thời gian."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S09",
+          "title": "Thí nghiệm khái niệm",
+          "layout": "conceptual-experiment",
+          "role": "simulation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Thí nghiệm khái niệm",
+              "body": "So sánh chuỗi gốc, sai phân bậc một và sai phân theo mùa trên dữ liệu trend + seasonal + noise."
+            },
+            {
+              "type": "section",
+              "title": "Quan sát cần ghi",
+              "body": "Ghi lại thay đổi của mean/variance/ACF hoặc residual, không chỉ ảnh chụp đường tín hiệu."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S10",
+          "title": "Ứng dụng trong monitoring/AI",
+          "layout": "engineering-application",
+          "role": "application",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ứng dụng kỹ thuật",
+              "body": "Tải điện theo ngày có trend dài hạn và chu kỳ 24 giờ; cần tách cấu trúc trước khi đánh giá phần dư."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Câu hỏi kỹ thuật",
+              "items": [
+                "Input nào có ở thời điểm t?",
+                "Lag nào có ý nghĩa vật lý?",
+                "Baseline đơn giản có bị mô hình phức tạp vượt qua không?"
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S11",
+          "title": "Bài luyện có hướng dẫn",
+          "layout": "guided-practice",
+          "role": "practice",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nhiệm vụ",
+              "body": "Tạo một ví dụ số nhỏ cho Trend, seasonality và differencing; tính/diễn giải đại lượng lõi và chỉ ra một cách làm sai."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Tự chấm",
+              "items": [
+                "Đúng công thức/quy ước.",
+                "Đúng trật tự thời gian.",
+                "Nêu được giả thiết và giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S12",
+          "title": "Vấn đáp + chốt kiến thức",
+          "layout": "qa-dialogue",
+          "role": "professor_qa",
+          "blocks": [
+            {
+              "type": "qa-list",
+              "title": "Vấn đáp",
+              "items": [
+                {
+                  "q": "Ý cốt lõi của Trend, seasonality và differencing là gì?",
+                  "a": "Trend và seasonality là cấu trúc theo thời gian; sai phân có thể giảm trend/stochastic trend nhưng cũng làm thay đổi noise và thông tin tần số."
+                },
+                {
+                  "q": "Bẫy quan trọng nhất?",
+                  "a": "Sai phân lặp lại một cách máy móc có thể over-difference, tăng nhiễu và làm mất cấu trúc hữu ích."
+                },
+                {
+                  "q": "Kiểm chứng bằng dữ liệu thế nào?",
+                  "a": "So sánh chuỗi gốc, sai phân bậc một và sai phân theo mùa trên dữ liệu trend + seasonal + noise."
+                }
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S13",
+          "title": "Cầu nối sang bài kế tiếp",
+          "layout": "learning-bridge",
+          "role": "bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nối bài",
+              "body": "Chuỗi sau biến đổi cần được đánh giá bằng dự báo theo thời gian và chẩn đoán residual."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L05-S14",
+          "title": "Chốt kiến thức cần giữ",
+          "layout": "summary",
+          "role": "takeaway",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Ba điều phải nhớ",
+              "items": [
+                "Trend và seasonality là cấu trúc theo thời gian; sai phân có thể giảm trend/stochastic trend nhưng cũng làm thay đổi noise và thông tin tần số.",
+                "ΔX_t = X_t - X_{t-1}; seasonal difference: X_t-X_{t-s}",
+                "Sai phân lặp lại một cách máy móc có thể over-difference, tăng nhiễu và làm mất cấu trúc hữu ích."
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Câu chốt",
+              "body": "Với chuỗi thời gian, thứ tự và thông tin sẵn có tại thời điểm quyết định là một phần của mô hình."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        }
+      ],
+      "e151Added": true
+    },
+    {
+      "id": "MATH-HK1-TS-C22-L06",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "stage": "hk1",
+      "stageName": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+      "facultyId": "faculty_hk1",
+      "facultyTitle": "Khoa Toán lõi Bauman · Năm 1 HK1",
+      "departmentId": "hk1__signal_processing_time_series",
+      "departmentTitle": "Xử lý tín hiệu và chuỗi thời gian",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "frameChapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+      "title": "§4.6 · Dự báo cơ sở, chia train/test theo thời gian và residual",
+      "displayTitle": "§4.6 · Dự báo cơ sở, chia train/test theo thời gian và residual",
+      "shortTitle": "§4.6 · Dự báo cơ sở, chia train/test theo thời gian và residual",
+      "kind": "theory",
+      "contentRole": "theory_only",
+      "contentDepth": "deep_academic_verified",
+      "conceptIds": [
+        "timeseries_forecast"
+      ],
+      "skillIds": [
+        "SK-MATH-HK1-C22-L06-CORE"
+      ],
+      "sourceAnchors": {
+        "schema": "bauman.math.chapter_spine.v2.1",
+        "version": "E151_HK1_TIME_SERIES",
+        "stageId": "hk1",
+        "stageTitle": "Giai đoạn 2 · Thạc sĩ năm 1 · học kỳ 1",
+        "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+        "chapterNo": 22,
+        "chapterTitle": "Chương 4 · Quá trình ngẫu nhiên và chuỗi thời gian cơ bản",
+        "primaryDiscipline": "Xử lý tín hiệu và chuỗi thời gian",
+        "secondaryDisciplines": [
+          "Xác suất, thống kê và suy luận dữ liệu"
+        ],
+        "pureLayer": [
+          "quá trình ngẫu nhiên",
+          "autocorrelation",
+          "stationarity",
+          "time series"
+        ],
+        "appliedLayer": [
+          "dự báo",
+          "nhiễu thời gian",
+          "tín hiệu cảm biến",
+          "monitoring"
+        ],
+        "bridgeQuestion": "Dữ liệu theo thời gian khác dữ liệu độc lập ở đâu?",
+        "targetOutcome": "Biết đọc chuỗi thời gian và quá trình ngẫu nhiên cơ bản.",
+        "timelineRole": "main_path_august_2026_to_bauman_graduation"
+      },
+      "eLearning": {
+        "mode": "e151_time_series_overlay",
+        "hideSearchMeta": true,
+        "targetSource": "theory_lecture_overlay_e151.json",
+        "importMode": "replace_or_add_lesson_by_lessonId",
+        "uiCoreModified": false
+      },
+      "qualityGates": {
+        "mappingChecked": true,
+        "scopeGuard": "existing_physical_C22_only",
+        "slideRoleCount": 14,
+        "renderSafe": true,
+        "deepAndCarefulPass": true
+      },
+      "slides": [
+        {
+          "id": "MATH-HK1-TS-C22-L06-S01",
+          "title": "Vấn đề nghiên cứu",
+          "layout": "academic-opening",
+          "role": "problem_framing",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Câu hỏi chính",
+              "body": "Forecast baseline, temporal split và residual: điều gì thay đổi khi dữ liệu có thứ tự và phụ thuộc theo thời gian?"
+            },
+            {
+              "type": "section",
+              "title": "Đích học",
+              "body": "Đánh giá chuỗi thời gian phải giữ hướng thời gian: train ở quá khứ, validation/test ở tương lai; baseline đơn giản là mốc bắt buộc trước mô hình phức tạp."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S02",
+          "title": "Bản chất học thuật",
+          "layout": "deep-academic",
+          "role": "deep_essence",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Bản chất",
+              "body": "Đánh giá chuỗi thời gian phải giữ hướng thời gian: train ở quá khứ, validation/test ở tương lai; baseline đơn giản là mốc bắt buộc trước mô hình phức tạp."
+            },
+            {
+              "type": "section",
+              "title": "Điều phải giữ khi diễn giải",
+              "body": "Luôn tách giả thiết toán học, ước lượng từ mẫu và giới hạn của kết luận."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S03",
+          "title": "Khi trực giác dễ đánh lừa",
+          "layout": "deep-academic",
+          "role": "counter_intuition",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Bẫy trọng tâm",
+              "items": [
+                "Random split hoặc dùng feature tương lai gây temporal leakage và tạo điểm số lạc quan giả.",
+                "Không dùng đồ thị đẹp thay cho kiểm tra giả thiết.",
+                "Không dùng dữ liệu tương lai để quyết định ở quá khứ."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S04",
+          "title": "Cầu nối sang bài toán kỹ thuật",
+          "layout": "applied-bridge",
+          "role": "real_bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ngữ cảnh cảm biến/AI",
+              "body": "Monitoring cảm biến cần dự báo/threshold dựa trên lịch sử có sẵn tại thời điểm quyết định, không dùng thông tin tương lai."
+            },
+            {
+              "type": "section",
+              "title": "Cầu nối",
+              "body": "Residual còn autocorrelation nghĩa là mô hình chưa khai thác hết cấu trúc thời gian; đây là cầu nối sang chuỗi thời gian nâng cao ở HK3."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S05",
+          "title": "Ký hiệu và công thức neo",
+          "layout": "formula-focus",
+          "role": "core_formula",
+          "blocks": [
+            {
+              "type": "formula-list",
+              "title": "Công thức neo",
+              "items": [
+                "naive forecast: ŷ_{t+1}=y_t; residual e_t=y_t-ŷ_t"
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Cách đọc",
+              "body": "Xác định rõ chỉ số thời gian, lag, đơn vị và tập dữ liệu dùng để ước lượng."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S06",
+          "title": "Cửa giả thiết",
+          "layout": "assumption-check",
+          "role": "assumption_gate",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Cổng giả thiết",
+              "items": [
+                "Kiểm tra sampling interval và missing timestamps.",
+                "Kiểm tra trend/seasonality/drift trước khi coi chuỗi dừng.",
+                "Mọi preprocessing/feature phải chỉ dùng thông tin sẵn có tại thời điểm dự báo."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S07",
+          "title": "Mini-case cảm biến",
+          "layout": "case-study",
+          "role": "mini_case",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Mini-case",
+              "body": "Monitoring cảm biến cần dự báo/threshold dựa trên lịch sử có sẵn tại thời điểm quyết định, không dùng thông tin tương lai."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Quy trình",
+              "items": [
+                "Vẽ theo thời gian và kiểm timestamp.",
+                "Đặt giả thiết về phụ thuộc/dừng.",
+                "Tính đại lượng theo lag hoặc baseline.",
+                "Đọc residual và nêu giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S08",
+          "title": "Diễn giải kết quả",
+          "layout": "result-reading",
+          "role": "interpretation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Diễn giải",
+              "body": "Kết quả phải nói được cấu trúc theo thời gian nào đang được đo và cấu trúc nào chưa được mô hình hóa."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Không kết luận quá tay",
+              "items": [
+                "Random split hoặc dùng feature tương lai gây temporal leakage và tạo điểm số lạc quan giả.",
+                "Correlation theo lag không đồng nghĩa nhân quả.",
+                "Metric test chỉ đáng tin khi chia dữ liệu đúng thứ tự thời gian."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S09",
+          "title": "Thí nghiệm khái niệm",
+          "layout": "conceptual-experiment",
+          "role": "simulation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Thí nghiệm khái niệm",
+              "body": "So sánh random split với chronological split và naive baseline; kiểm tra ACF của residual."
+            },
+            {
+              "type": "section",
+              "title": "Quan sát cần ghi",
+              "body": "Ghi lại thay đổi của mean/variance/ACF hoặc residual, không chỉ ảnh chụp đường tín hiệu."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S10",
+          "title": "Ứng dụng trong monitoring/AI",
+          "layout": "engineering-application",
+          "role": "application",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ứng dụng kỹ thuật",
+              "body": "Monitoring cảm biến cần dự báo/threshold dựa trên lịch sử có sẵn tại thời điểm quyết định, không dùng thông tin tương lai."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Câu hỏi kỹ thuật",
+              "items": [
+                "Input nào có ở thời điểm t?",
+                "Lag nào có ý nghĩa vật lý?",
+                "Baseline đơn giản có bị mô hình phức tạp vượt qua không?"
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S11",
+          "title": "Bài luyện có hướng dẫn",
+          "layout": "guided-practice",
+          "role": "practice",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nhiệm vụ",
+              "body": "Tạo một ví dụ số nhỏ cho Forecast baseline, temporal split và residual; tính/diễn giải đại lượng lõi và chỉ ra một cách làm sai."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Tự chấm",
+              "items": [
+                "Đúng công thức/quy ước.",
+                "Đúng trật tự thời gian.",
+                "Nêu được giả thiết và giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S12",
+          "title": "Vấn đáp + chốt kiến thức",
+          "layout": "qa-dialogue",
+          "role": "professor_qa",
+          "blocks": [
+            {
+              "type": "qa-list",
+              "title": "Vấn đáp",
+              "items": [
+                {
+                  "q": "Ý cốt lõi của Forecast baseline, temporal split và residual là gì?",
+                  "a": "Đánh giá chuỗi thời gian phải giữ hướng thời gian: train ở quá khứ, validation/test ở tương lai; baseline đơn giản là mốc bắt buộc trước mô hình phức tạp."
+                },
+                {
+                  "q": "Bẫy quan trọng nhất?",
+                  "a": "Random split hoặc dùng feature tương lai gây temporal leakage và tạo điểm số lạc quan giả."
+                },
+                {
+                  "q": "Kiểm chứng bằng dữ liệu thế nào?",
+                  "a": "So sánh random split với chronological split và naive baseline; kiểm tra ACF của residual."
+                }
+              ]
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S13",
+          "title": "Cầu nối sang bài kế tiếp",
+          "layout": "learning-bridge",
+          "role": "bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nối bài",
+              "body": "Residual còn autocorrelation nghĩa là mô hình chưa khai thác hết cấu trúc thời gian; đây là cầu nối sang chuỗi thời gian nâng cao ở HK3."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-HK1-TS-C22-L06-S14",
+          "title": "Chốt kiến thức cần giữ",
+          "layout": "summary",
+          "role": "takeaway",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Ba điều phải nhớ",
+              "items": [
+                "Đánh giá chuỗi thời gian phải giữ hướng thời gian: train ở quá khứ, validation/test ở tương lai; baseline đơn giản là mốc bắt buộc trước mô hình phức tạp.",
+                "naive forecast: ŷ_{t+1}=y_t; residual e_t=y_t-ŷ_t",
+                "Random split hoặc dùng feature tương lai gây temporal leakage và tạo điểm số lạc quan giả."
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Câu chốt",
+              "body": "Với chuỗi thời gian, thứ tự và thông tin sẵn có tại thời điểm quyết định là một phần của mô hình."
+            }
+          ],
+          "sourceChapterNo": 22,
+          "sourceStageNo": 2,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        }
+      ],
+      "e151Added": true
+    }
+  ],
+  "updatedAt": "2026-09-21",
+  "guard": {
+    "physicalChapterCreated": false,
+    "targetChapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+    "existingPhysicalChapterRequired": true,
+    "baseTheoryVaultOverwritten": false
+  }
+}
