@@ -69,7 +69,7 @@ self.addEventListener('message',event=>{
   const data=event.data||{};
   if(data.type!=='E160_CACHE_URLS'||!Array.isArray(data.urls))return;
   event.waitUntil((async()=>{
-    let cachedCount=0,failedCount=0;
+    let cachedCount=0,skippedCount=0,failedCount=0;
     const cache=await caches.open(RUNTIME_CACHE);
     for(const raw of Array.from(new Set(data.urls))){
       try{
@@ -80,10 +80,14 @@ self.addEventListener('message',event=>{
         if(response&&response.ok){
           await cache.put(request,response.clone());
           cachedCount++;
-        }else failedCount++;
+        }else if(response&&response.status===404){
+          skippedCount++;
+        }else{
+          failedCount++;
+        }
       }catch(_){failedCount++;}
     }
-    try{event.source&&event.source.postMessage({type:'E160_CACHE_COMPLETE',cached:cachedCount,failed:failedCount,release:RELEASE});}catch(_){}
+    try{event.source&&event.source.postMessage({type:'E160_CACHE_COMPLETE',cached:cachedCount,skipped:skippedCount,failed:failedCount,release:RELEASE});}catch(_){}
   })());
 });
 
