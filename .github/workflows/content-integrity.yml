@@ -32,7 +32,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Run integrity gate
         run: python3 tools/e145_content_integrity.py
       - name: Parse runtime JavaScript
