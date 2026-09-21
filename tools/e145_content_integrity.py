@@ -107,6 +107,62 @@ def check_manifest_counts() -> tuple[dict[str, int], dict]:
     return counts, manifest
 
 
+def check_manifest_federation(counts: dict[str, int], manifest: dict) -> None:
+    content_manifest = load_json(DATA / "content-manifest.json")
+    subject_manifest = load_json(ROOT / "subject-manifest.json")
+    if not isinstance(content_manifest, dict):
+        fail("content-manifest.json must be an object")
+        return
+    if not isinstance(subject_manifest, dict):
+        fail("subject-manifest.json must be an object")
+        return
+
+    cm_counts = content_manifest.get("counts") or {}
+    cm_sources = {str(x.get("id")): x for x in content_manifest.get("dataSources", []) if isinstance(x, dict)}
+    sm_data = subject_manifest.get("data") or {}
+    sm_sources = {str(x.get("id")): x for x in subject_manifest.get("externalDataFiles", []) if isinstance(x, dict)}
+
+    for domain in manifest.get("domains", []):
+        if not isinstance(domain, dict):
+            continue
+        for source_name, actual in ((str(domain.get("frame") or ""), int(domain.get("frameCount") or 0)),
+                                    (str(domain.get("content") or ""), int(domain.get("contentCount") or 0))):
+            if not source_name:
+                continue
+            if cm_counts.get(source_name) != actual:
+                fail(f"content-manifest counts drift: {source_name} != {actual}")
+            cm_source = cm_sources.get(source_name)
+            if not cm_source:
+                fail(f"content-manifest missing dataSource: {source_name}")
+            else:
+                expected = f"data/{source_name}.json"
+                if cm_source.get("path") != expected:
+                    fail(f"content-manifest path drift: {source_name}")
+                if cm_source.get("plannedCount") != actual:
+                    fail(f"content-manifest plannedCount drift: {source_name}")
+            if sm_data.get(source_name) != actual:
+                fail(f"subject-manifest data drift: {source_name} != {actual}")
+            sm_source = sm_sources.get(source_name)
+            if sm_source:
+                if sm_source.get("path") != f"data/{source_name}.json":
+                    fail(f"subject-manifest external path drift: {source_name}")
+                if sm_source.get("plannedCount") != actual:
+                    fail(f"subject-manifest plannedCount drift: {source_name}")
+
+    js_path = ROOT / "subject-manifest.js"
+    try:
+        js_text = js_path.read_text(encoding="utf-8").strip()
+        prefix = "window.SUBJECT_MANIFEST = "
+        if not js_text.startswith(prefix) or not js_text.endswith(";"):
+            fail("subject-manifest.js wrapper is invalid")
+        else:
+            js_payload = json.loads(js_text[len(prefix):-1])
+            if js_payload != subject_manifest:
+                fail("subject-manifest.js and subject-manifest.json are not identical")
+    except (FileNotFoundError, json.JSONDecodeError) as exc:
+        fail(f"subject-manifest.js invalid: {exc}")
+
+
 def check_adapter_counts(counts: dict[str, int]) -> None:
     path = ROOT / "assets" / "subject-adapter.js"
     try:
@@ -285,7 +341,8 @@ def check_bridge_contract(counts: dict[str, int]) -> None:
 
 
 def main() -> int:
-    counts, _manifest = check_manifest_counts()
+    counts, manifest = check_manifest_counts()
+    check_manifest_federation(counts, manifest)
     check_adapter_counts(counts)
     questions, blueprints = check_questions_and_blueprints()
     check_runtime_shell()

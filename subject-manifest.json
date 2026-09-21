@@ -1,6 +1,6 @@
 {
   "id": "math",
-  "title": "Toán Bauman · E126 Theory Visual Integrated",
+  "title": "Toán Bauman · E148 Manifest Federation Reconciled",
   "entry": "subjects/math/index.html",
   "editor": "subjects/math/editor.html",
   "schema": "subject-v7",
@@ -33,29 +33,29 @@
     "theory_lecture_frame": 56,
     "theory_lecture_content": 347,
     "formula_frame": 56,
-    "formula_content": 18,
+    "formula_content": 24,
     "simulation_frame": 56,
-    "simulation_content": 18,
+    "simulation_content": 16,
     "exercise_frame": 56,
-    "exercise_content": 18,
+    "exercise_content": 64,
     "application_frame": 56,
-    "application_content": 18,
+    "application_content": 16,
     "professor_qa_frame": 56,
-    "professor_qa_content": 18,
+    "professor_qa_content": 8,
     "review_pack_frame": 56,
-    "review_pack_content": 18,
+    "review_pack_content": 8,
     "question_bank_frame": 56,
-    "question_bank_content": 18,
+    "question_bank_content": 200,
     "test_blueprint_frame": 56,
-    "test_blueprint_content": 18,
+    "test_blueprint_content": 4,
     "chapter_lecture_frame": 56,
-    "chapter_lecture_content": 18,
+    "chapter_lecture_content": 0,
     "mindmap_frame": 56,
-    "mindmap_content": 18,
+    "mindmap_content": 8,
     "concept_map_frame": 56,
-    "concept_map_content": 18,
+    "concept_map_content": 0,
     "media_frame": 56,
-    "media_content": 18,
+    "media_content": 0,
     "chapter_spine": 56,
     "curriculumStages": 10,
     "professor_qa": 0,
@@ -75,26 +75,26 @@
     "learning_rules": 3,
     "tests": 5
   },
-  "release": "E118_TOTAL_SCHEDULE_POPUP_REBUILD",
+  "release": "E148_MANIFEST_FEDERATION_RECONCILED",
   "focus": "Bản sạch chỉ giữ subjects/math và các nguồn runtime cần thiết của môn Toán; bỏ toàn bộ README, audit, work, template rác ngoài runtime.",
   "bridge": {
     "protocol": "BAUMAN_PLANNING_BRIDGE_V3_ROUTE_CARDS"
   },
-  "version": "E126_THEORY_VISUAL_INTEGRATED",
-  "coreVersion": "E113_SUBJECTS_ONLY_CLEAN",
+  "version": "E148_MANIFEST_FEDERATION_RECONCILED",
+  "coreVersion": "E134_STORAGE_MARKUP_HOTFIX",
   "bridgeProtocol": "BAUMAN_PLANNING_BRIDGE_V3_ROUTE_CARDS",
   "name": "Toán Bauman · Math Roadmap Master V7",
   "ui": {
-    "coreLabel": "MATH · E113 Subjects Only",
+    "coreLabel": "MATH · E147 Integrity Hardened",
     "title": "Toán Bauman",
-    "subtitle": "Bản sạch: chỉ subjects/math, khung/nội dung tách riêng trong Kho môn học.",
-    "overviewSubtitle": "Bắt đầu từ Lịch trình hôm nay. Kho môn học mở trực tiếp từng cặp Khung/Nội dung.",
-    "learningSubtitle": "Lý thuyết và các nội dung phụ đọc theo khung JSON, nội dung nạp riêng qua Kho môn học.",
-    "heroBadge": "Math Bauman · E113",
-    "heroTitle": "Toán Bauman · Subjects Only Clean",
-    "assistantToast": "E113: đã dọn sạch gói xuất, chỉ giữ subjects/math và dữ liệu runtime cần thiết."
+    "subtitle": "Site Toán độc lập · runtime E134 · integrity E145 · Content Vault path contract E146.",
+    "overviewSubtitle": "Release state đã reconciled; Content Vault và manifest dùng cùng một nguồn đếm/path.",
+    "learningSubtitle": "Lý thuyết và nội dung phụ đọc từ các nguồn frame/content đã được integrity gate kiểm tra.",
+    "heroBadge": "Math Bauman · E148",
+    "heroTitle": "Toán Bauman · Manifest Federation Reconciled",
+    "assistantToast": "E148: subject/content manifests đã đồng bộ với Content Vault và release state hiện tại."
   },
-  "updated": "2026-06-26",
+  "updated": "2026-09-21",
   "package": "Bauman Math StandardFinal RenderClean V18",
   "paths": {
     "assets": "assets/",
@@ -162,14 +162,16 @@
       "path": "data/theory_lecture_frame.json",
       "required": true,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "theory_lecture_content",
       "path": "data/theory_lecture_content.json",
       "required": true,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 347,
+      "recordCount": 347
     },
     {
       "id": "curriculum",
@@ -394,175 +396,200 @@
       "path": "data/content_vault_manifest.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 13,
+      "recordCount": 13
     },
     {
       "id": "formula_frame",
       "path": "data/formula_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "formula_content",
       "path": "data/formula_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 24,
+      "recordCount": 24
     },
     {
       "id": "simulation_frame",
       "path": "data/simulation_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "simulation_content",
       "path": "data/simulation_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 16,
+      "recordCount": 16
     },
     {
       "id": "exercise_frame",
       "path": "data/exercise_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "exercise_content",
       "path": "data/exercise_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 64,
+      "recordCount": 64
     },
     {
       "id": "application_frame",
       "path": "data/application_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "application_content",
       "path": "data/application_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 16,
+      "recordCount": 16
     },
     {
       "id": "professor_qa_frame",
       "path": "data/professor_qa_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "professor_qa_content",
       "path": "data/professor_qa_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 8,
+      "recordCount": 8
     },
     {
       "id": "review_pack_frame",
       "path": "data/review_pack_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "review_pack_content",
       "path": "data/review_pack_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 8,
+      "recordCount": 8
     },
     {
       "id": "question_bank_frame",
       "path": "data/question_bank_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "question_bank_content",
       "path": "data/question_bank_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 200,
+      "recordCount": 200
     },
     {
       "id": "test_blueprint_frame",
       "path": "data/test_blueprint_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "test_blueprint_content",
       "path": "data/test_blueprint_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 4,
+      "recordCount": 4
     },
     {
       "id": "chapter_lecture_frame",
       "path": "data/chapter_lecture_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "chapter_lecture_content",
       "path": "data/chapter_lecture_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 0,
+      "recordCount": 0
     },
     {
       "id": "mindmap_frame",
       "path": "data/mindmap_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "mindmap_content",
       "path": "data/mindmap_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 8,
+      "recordCount": 8
     },
     {
       "id": "concept_map_frame",
       "path": "data/concept_map_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "concept_map_content",
       "path": "data/concept_map_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 0,
+      "recordCount": 0
     },
     {
       "id": "media_frame",
       "path": "data/media_frame.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56
+      "plannedCount": 56,
+      "recordCount": 56
     },
     {
       "id": "media_content",
       "path": "data/media_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 0
+      "plannedCount": 0,
+      "recordCount": 0
     }
   ],
   "capabilities": {
@@ -1069,5 +1096,16 @@
     "activeTheoryChapters": 40,
     "theoryLessons": 347,
     "theorySlides": 5552
+  },
+  "standaloneEntry": "index.html",
+  "standaloneEditor": "editor.html",
+  "packageEntry": "subjects/math/index.html",
+  "packageEditor": "subjects/math/editor.html",
+  "releaseState": {
+    "manifestFederation": "E148",
+    "visibleRelease": "E147",
+    "runtimeCore": "E134",
+    "integrityGate": "E145",
+    "contentPathContract": "E146"
   }
 }
