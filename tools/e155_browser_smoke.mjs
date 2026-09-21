@@ -243,6 +243,9 @@ try {
   if (!pwaOnline.ok || !pwaOnline.controlled || pwaOnline.initialDataFiles < 10) {
     await fail('PWA did not become controlled/offline-ready');
   }
+  if (Number(pwaOnline.skippedCount || 0) !== 0) {
+    await fail('E174 required initial-data contract contains missing physical JSON files');
+  }
 
   const activationSeed = await page.evaluate(async () => {
     const keys = await caches.keys();
