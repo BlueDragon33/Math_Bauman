@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_question_bank_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
   "subject": "math",
   "title": "Ngân hàng câu hỏi · Nội dung",
   "contentVaultRole": "content",
@@ -10,7 +10,1016 @@
   "frameSource": "question_bank_frame.json",
   "legacyExportTarget": "question_bank.json",
   "recordKey": "questionId",
-  "records": [],
+  "records": [
+    {
+      "questionId": "E15-data_matrix-Q001",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Khẳng định nào mô tả đúng nhất Dữ liệu đa chiều và ma trận dữ liệu X?",
+      "options": [
+        "Quy ước n mẫu × p feature phải thống nhất; shape là một phần của ý nghĩa toán học.",
+        "đảo hàng và cột",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Quy ước n mẫu × p feature phải thống nhất; shape là một phần của ý nghĩa toán học.",
+      "explanation": "Đáp án đúng vì Quy ước n mẫu × p feature phải thống nhất; shape là một phần của ý nghĩa toán học. Nội dung này giữ giới hạn kết luận của Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "tags": [
+        "data_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-data_matrix-Q002",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Bẫy nào phải tránh trong Dữ liệu đa chiều và ma trận dữ liệu X?",
+      "options": [
+        "đảo hàng và cột",
+        "đảo hàng và cột",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "đảo hàng và cột",
+      "explanation": "Đáp án đúng vì đảo hàng và cột Nội dung này giữ giới hạn kết luận của Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "tags": [
+        "data_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-data_matrix-Q003",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Trước khi dùng Dữ liệu đa chiều và ma trận dữ liệu X, điều gì cần kiểm tra?",
+      "options": [
+        "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+        "đảo hàng và cột",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+      "explanation": "Đáp án đúng vì Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing. Nội dung này giữ giới hạn kết luận của Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "tags": [
+        "data_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-data_matrix-Q004",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Vì sao kết quả số của Dữ liệu đa chiều và ma trận dữ liệu X chưa đủ để kết luận?",
+      "options": [
+        "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+        "đảo hàng và cột",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+      "explanation": "Đáp án đúng vì Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật. Nội dung này giữ giới hạn kết luận của Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "tags": [
+        "data_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-data_matrix-Q005",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Trong pipeline PCA, Dữ liệu đa chiều và ma trận dữ liệu X liên quan đến bước nào?",
+      "options": [
+        "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+        "đảo hàng và cột",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+      "explanation": "Đáp án đúng vì Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo. Nội dung này giữ giới hạn kết luận của Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "tags": [
+        "data_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-data_matrix-Q006",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Cách kiểm chứng tốt cho Dữ liệu đa chiều và ma trận dữ liệu X là gì?",
+      "options": [
+        "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+        "đảo hàng và cột",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+      "explanation": "Đáp án đúng vì Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên. Nội dung này giữ giới hạn kết luận của Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "tags": [
+        "data_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-centering-Q001",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "easy",
+      "question": "Khẳng định nào mô tả đúng nhất Trung tâm hóa và chuẩn hóa đặc trưng?",
+      "options": [
+        "Centering trừ trung bình; standardization chia thêm độ lệch chuẩn; scaler chỉ fit trên train.",
+        "data leakage khi fit trên test",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Centering trừ trung bình; standardization chia thêm độ lệch chuẩn; scaler chỉ fit trên train.",
+      "explanation": "Đáp án đúng vì Centering trừ trung bình; standardization chia thêm độ lệch chuẩn; scaler chỉ fit trên train. Nội dung này giữ giới hạn kết luận của Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "tags": [
+        "centering",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-centering-Q002",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "easy",
+      "question": "Bẫy nào phải tránh trong Trung tâm hóa và chuẩn hóa đặc trưng?",
+      "options": [
+        "data leakage khi fit trên test",
+        "data leakage khi fit trên test",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "data leakage khi fit trên test",
+      "explanation": "Đáp án đúng vì data leakage khi fit trên test Nội dung này giữ giới hạn kết luận của Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "tags": [
+        "centering",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-centering-Q003",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "medium",
+      "question": "Trước khi dùng Trung tâm hóa và chuẩn hóa đặc trưng, điều gì cần kiểm tra?",
+      "options": [
+        "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+        "data leakage khi fit trên test",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+      "explanation": "Đáp án đúng vì Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing. Nội dung này giữ giới hạn kết luận của Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "tags": [
+        "centering",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-centering-Q004",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "medium",
+      "question": "Vì sao kết quả số của Trung tâm hóa và chuẩn hóa đặc trưng chưa đủ để kết luận?",
+      "options": [
+        "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+        "data leakage khi fit trên test",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+      "explanation": "Đáp án đúng vì Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật. Nội dung này giữ giới hạn kết luận của Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "tags": [
+        "centering",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-centering-Q005",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "hard",
+      "question": "Trong pipeline PCA, Trung tâm hóa và chuẩn hóa đặc trưng liên quan đến bước nào?",
+      "options": [
+        "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+        "data leakage khi fit trên test",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+      "explanation": "Đáp án đúng vì Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo. Nội dung này giữ giới hạn kết luận của Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "tags": [
+        "centering",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-centering-Q006",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "hard",
+      "question": "Cách kiểm chứng tốt cho Trung tâm hóa và chuẩn hóa đặc trưng là gì?",
+      "options": [
+        "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+        "data leakage khi fit trên test",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+      "explanation": "Đáp án đúng vì Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên. Nội dung này giữ giới hạn kết luận của Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "tags": [
+        "centering",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-covariance-Q001",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "easy",
+      "question": "Khẳng định nào mô tả đúng nhất Hiệp phương sai?",
+      "options": [
+        "Covariance đo đồng biến thiên và phụ thuộc đơn vị; dịch chuyển không đổi covariance nhưng đổi thang làm đổi độ lớn.",
+        "coi covariance lớn là quan hệ mạnh tuyệt đối",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Covariance đo đồng biến thiên và phụ thuộc đơn vị; dịch chuyển không đổi covariance nhưng đổi thang làm đổi độ lớn.",
+      "explanation": "Đáp án đúng vì Covariance đo đồng biến thiên và phụ thuộc đơn vị; dịch chuyển không đổi covariance nhưng đổi thang làm đổi độ lớn. Nội dung này giữ giới hạn kết luận của Hiệp phương sai.",
+      "tags": [
+        "covariance",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-covariance-Q002",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "easy",
+      "question": "Bẫy nào phải tránh trong Hiệp phương sai?",
+      "options": [
+        "coi covariance lớn là quan hệ mạnh tuyệt đối",
+        "coi covariance lớn là quan hệ mạnh tuyệt đối",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "coi covariance lớn là quan hệ mạnh tuyệt đối",
+      "explanation": "Đáp án đúng vì coi covariance lớn là quan hệ mạnh tuyệt đối Nội dung này giữ giới hạn kết luận của Hiệp phương sai.",
+      "tags": [
+        "covariance",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-covariance-Q003",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "medium",
+      "question": "Trước khi dùng Hiệp phương sai, điều gì cần kiểm tra?",
+      "options": [
+        "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+        "coi covariance lớn là quan hệ mạnh tuyệt đối",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+      "explanation": "Đáp án đúng vì Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing. Nội dung này giữ giới hạn kết luận của Hiệp phương sai.",
+      "tags": [
+        "covariance",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-covariance-Q004",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "medium",
+      "question": "Vì sao kết quả số của Hiệp phương sai chưa đủ để kết luận?",
+      "options": [
+        "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+        "coi covariance lớn là quan hệ mạnh tuyệt đối",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+      "explanation": "Đáp án đúng vì Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật. Nội dung này giữ giới hạn kết luận của Hiệp phương sai.",
+      "tags": [
+        "covariance",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-covariance-Q005",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "hard",
+      "question": "Trong pipeline PCA, Hiệp phương sai liên quan đến bước nào?",
+      "options": [
+        "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+        "coi covariance lớn là quan hệ mạnh tuyệt đối",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+      "explanation": "Đáp án đúng vì Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo. Nội dung này giữ giới hạn kết luận của Hiệp phương sai.",
+      "tags": [
+        "covariance",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-covariance-Q006",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "hard",
+      "question": "Cách kiểm chứng tốt cho Hiệp phương sai là gì?",
+      "options": [
+        "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+        "coi covariance lớn là quan hệ mạnh tuyệt đối",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+      "explanation": "Đáp án đúng vì Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên. Nội dung này giữ giới hạn kết luận của Hiệp phương sai.",
+      "tags": [
+        "covariance",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pearson-Q001",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "easy",
+      "question": "Khẳng định nào mô tả đúng nhất Tương quan Pearson?",
+      "options": [
+        "Pearson là covariance chuẩn hóa, chỉ đo liên hệ tuyến tính, không chứng minh nhân quả.",
+        "r≈0 đồng nghĩa độc lập",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Pearson là covariance chuẩn hóa, chỉ đo liên hệ tuyến tính, không chứng minh nhân quả.",
+      "explanation": "Đáp án đúng vì Pearson là covariance chuẩn hóa, chỉ đo liên hệ tuyến tính, không chứng minh nhân quả. Nội dung này giữ giới hạn kết luận của Tương quan Pearson.",
+      "tags": [
+        "pearson",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pearson-Q002",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "easy",
+      "question": "Bẫy nào phải tránh trong Tương quan Pearson?",
+      "options": [
+        "r≈0 đồng nghĩa độc lập",
+        "r≈0 đồng nghĩa độc lập",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "r≈0 đồng nghĩa độc lập",
+      "explanation": "Đáp án đúng vì r≈0 đồng nghĩa độc lập Nội dung này giữ giới hạn kết luận của Tương quan Pearson.",
+      "tags": [
+        "pearson",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pearson-Q003",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "medium",
+      "question": "Trước khi dùng Tương quan Pearson, điều gì cần kiểm tra?",
+      "options": [
+        "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+        "r≈0 đồng nghĩa độc lập",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+      "explanation": "Đáp án đúng vì Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing. Nội dung này giữ giới hạn kết luận của Tương quan Pearson.",
+      "tags": [
+        "pearson",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pearson-Q004",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "medium",
+      "question": "Vì sao kết quả số của Tương quan Pearson chưa đủ để kết luận?",
+      "options": [
+        "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+        "r≈0 đồng nghĩa độc lập",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+      "explanation": "Đáp án đúng vì Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật. Nội dung này giữ giới hạn kết luận của Tương quan Pearson.",
+      "tags": [
+        "pearson",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pearson-Q005",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "hard",
+      "question": "Trong pipeline PCA, Tương quan Pearson liên quan đến bước nào?",
+      "options": [
+        "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+        "r≈0 đồng nghĩa độc lập",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+      "explanation": "Đáp án đúng vì Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo. Nội dung này giữ giới hạn kết luận của Tương quan Pearson.",
+      "tags": [
+        "pearson",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pearson-Q006",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "hard",
+      "question": "Cách kiểm chứng tốt cho Tương quan Pearson là gì?",
+      "options": [
+        "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+        "r≈0 đồng nghĩa độc lập",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+      "explanation": "Đáp án đúng vì Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên. Nội dung này giữ giới hạn kết luận của Tương quan Pearson.",
+      "tags": [
+        "pearson",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-cov_matrix-Q001",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "question": "Khẳng định nào mô tả đúng nhất Ma trận hiệp phương sai?",
+      "options": [
+        "S=XcᵀXc/(n-1) có kích thước p×p khi cột là feature; S đối xứng bán xác định dương.",
+        "nhầm covariance matrix là n×n",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "S=XcᵀXc/(n-1) có kích thước p×p khi cột là feature; S đối xứng bán xác định dương.",
+      "explanation": "Đáp án đúng vì S=XcᵀXc/(n-1) có kích thước p×p khi cột là feature; S đối xứng bán xác định dương. Nội dung này giữ giới hạn kết luận của Ma trận hiệp phương sai.",
+      "tags": [
+        "cov_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-cov_matrix-Q002",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "question": "Bẫy nào phải tránh trong Ma trận hiệp phương sai?",
+      "options": [
+        "nhầm covariance matrix là n×n",
+        "nhầm covariance matrix là n×n",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "nhầm covariance matrix là n×n",
+      "explanation": "Đáp án đúng vì nhầm covariance matrix là n×n Nội dung này giữ giới hạn kết luận của Ma trận hiệp phương sai.",
+      "tags": [
+        "cov_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-cov_matrix-Q003",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "question": "Trước khi dùng Ma trận hiệp phương sai, điều gì cần kiểm tra?",
+      "options": [
+        "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+        "nhầm covariance matrix là n×n",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+      "explanation": "Đáp án đúng vì Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing. Nội dung này giữ giới hạn kết luận của Ma trận hiệp phương sai.",
+      "tags": [
+        "cov_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-cov_matrix-Q004",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "question": "Vì sao kết quả số của Ma trận hiệp phương sai chưa đủ để kết luận?",
+      "options": [
+        "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+        "nhầm covariance matrix là n×n",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+      "explanation": "Đáp án đúng vì Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật. Nội dung này giữ giới hạn kết luận của Ma trận hiệp phương sai.",
+      "tags": [
+        "cov_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-cov_matrix-Q005",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "question": "Trong pipeline PCA, Ma trận hiệp phương sai liên quan đến bước nào?",
+      "options": [
+        "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+        "nhầm covariance matrix là n×n",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+      "explanation": "Đáp án đúng vì Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo. Nội dung này giữ giới hạn kết luận của Ma trận hiệp phương sai.",
+      "tags": [
+        "cov_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-cov_matrix-Q006",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "question": "Cách kiểm chứng tốt cho Ma trận hiệp phương sai là gì?",
+      "options": [
+        "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+        "nhầm covariance matrix là n×n",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+      "explanation": "Đáp án đúng vì Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên. Nội dung này giữ giới hạn kết luận của Ma trận hiệp phương sai.",
+      "tags": [
+        "cov_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-eigen_cov-Q001",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "question": "Khẳng định nào mô tả đúng nhất Trị riêng và vector riêng của covariance matrix?",
+      "options": [
+        "Sv=λv; λ là phương sai theo hướng riêng và vector riêng chỉ xác định tới dấu.",
+        "coi trị riêng âm đáng kể là bình thường",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Sv=λv; λ là phương sai theo hướng riêng và vector riêng chỉ xác định tới dấu.",
+      "explanation": "Đáp án đúng vì Sv=λv; λ là phương sai theo hướng riêng và vector riêng chỉ xác định tới dấu. Nội dung này giữ giới hạn kết luận của Trị riêng và vector riêng của covariance matrix.",
+      "tags": [
+        "eigen_cov",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-eigen_cov-Q002",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "question": "Bẫy nào phải tránh trong Trị riêng và vector riêng của covariance matrix?",
+      "options": [
+        "coi trị riêng âm đáng kể là bình thường",
+        "coi trị riêng âm đáng kể là bình thường",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "coi trị riêng âm đáng kể là bình thường",
+      "explanation": "Đáp án đúng vì coi trị riêng âm đáng kể là bình thường Nội dung này giữ giới hạn kết luận của Trị riêng và vector riêng của covariance matrix.",
+      "tags": [
+        "eigen_cov",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-eigen_cov-Q003",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "question": "Trước khi dùng Trị riêng và vector riêng của covariance matrix, điều gì cần kiểm tra?",
+      "options": [
+        "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+        "coi trị riêng âm đáng kể là bình thường",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+      "explanation": "Đáp án đúng vì Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing. Nội dung này giữ giới hạn kết luận của Trị riêng và vector riêng của covariance matrix.",
+      "tags": [
+        "eigen_cov",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-eigen_cov-Q004",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "question": "Vì sao kết quả số của Trị riêng và vector riêng của covariance matrix chưa đủ để kết luận?",
+      "options": [
+        "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+        "coi trị riêng âm đáng kể là bình thường",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+      "explanation": "Đáp án đúng vì Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật. Nội dung này giữ giới hạn kết luận của Trị riêng và vector riêng của covariance matrix.",
+      "tags": [
+        "eigen_cov",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-eigen_cov-Q005",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "question": "Trong pipeline PCA, Trị riêng và vector riêng của covariance matrix liên quan đến bước nào?",
+      "options": [
+        "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+        "coi trị riêng âm đáng kể là bình thường",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+      "explanation": "Đáp án đúng vì Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo. Nội dung này giữ giới hạn kết luận của Trị riêng và vector riêng của covariance matrix.",
+      "tags": [
+        "eigen_cov",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-eigen_cov-Q006",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "question": "Cách kiểm chứng tốt cho Trị riêng và vector riêng của covariance matrix là gì?",
+      "options": [
+        "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+        "coi trị riêng âm đáng kể là bình thường",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+      "explanation": "Đáp án đúng vì Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên. Nội dung này giữ giới hạn kết luận của Trị riêng và vector riêng của covariance matrix.",
+      "tags": [
+        "eigen_cov",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pca-Q001",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "question": "Khẳng định nào mô tả đúng nhất PCA nhập môn?",
+      "options": [
+        "PCA chọn các hướng phương sai lớn nhất; explained variance giúp lượng hóa thông tin giữ lại.",
+        "chọn k hoàn toàn theo cảm tính",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "PCA chọn các hướng phương sai lớn nhất; explained variance giúp lượng hóa thông tin giữ lại.",
+      "explanation": "Đáp án đúng vì PCA chọn các hướng phương sai lớn nhất; explained variance giúp lượng hóa thông tin giữ lại. Nội dung này giữ giới hạn kết luận của PCA nhập môn.",
+      "tags": [
+        "pca",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pca-Q002",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "question": "Bẫy nào phải tránh trong PCA nhập môn?",
+      "options": [
+        "chọn k hoàn toàn theo cảm tính",
+        "chọn k hoàn toàn theo cảm tính",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "chọn k hoàn toàn theo cảm tính",
+      "explanation": "Đáp án đúng vì chọn k hoàn toàn theo cảm tính Nội dung này giữ giới hạn kết luận của PCA nhập môn.",
+      "tags": [
+        "pca",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pca-Q003",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "question": "Trước khi dùng PCA nhập môn, điều gì cần kiểm tra?",
+      "options": [
+        "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+        "chọn k hoàn toàn theo cảm tính",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+      "explanation": "Đáp án đúng vì Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing. Nội dung này giữ giới hạn kết luận của PCA nhập môn.",
+      "tags": [
+        "pca",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pca-Q004",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "question": "Vì sao kết quả số của PCA nhập môn chưa đủ để kết luận?",
+      "options": [
+        "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+        "chọn k hoàn toàn theo cảm tính",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+      "explanation": "Đáp án đúng vì Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật. Nội dung này giữ giới hạn kết luận của PCA nhập môn.",
+      "tags": [
+        "pca",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pca-Q005",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "question": "Trong pipeline PCA, PCA nhập môn liên quan đến bước nào?",
+      "options": [
+        "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+        "chọn k hoàn toàn theo cảm tính",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+      "explanation": "Đáp án đúng vì Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo. Nội dung này giữ giới hạn kết luận của PCA nhập môn.",
+      "tags": [
+        "pca",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-pca-Q006",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "question": "Cách kiểm chứng tốt cho PCA nhập môn là gì?",
+      "options": [
+        "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+        "chọn k hoàn toàn theo cảm tính",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+      "explanation": "Đáp án đúng vì Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên. Nội dung này giữ giới hạn kết luận của PCA nhập môn.",
+      "tags": [
+        "pca",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-reconstruction-Q001",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "question": "Khẳng định nào mô tả đúng nhất Tái tạo dữ liệu và sai số khi giảm chiều?",
+      "options": [
+        "X̂=ZVkᵀ+μ; giảm chiều gây mất thông tin và cần đo sai số tái tạo.",
+        "coi giảm chiều là không mất thông tin",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "X̂=ZVkᵀ+μ; giảm chiều gây mất thông tin và cần đo sai số tái tạo.",
+      "explanation": "Đáp án đúng vì X̂=ZVkᵀ+μ; giảm chiều gây mất thông tin và cần đo sai số tái tạo. Nội dung này giữ giới hạn kết luận của Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "tags": [
+        "reconstruction",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-reconstruction-Q002",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "question": "Bẫy nào phải tránh trong Tái tạo dữ liệu và sai số khi giảm chiều?",
+      "options": [
+        "coi giảm chiều là không mất thông tin",
+        "coi giảm chiều là không mất thông tin",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "coi giảm chiều là không mất thông tin",
+      "explanation": "Đáp án đúng vì coi giảm chiều là không mất thông tin Nội dung này giữ giới hạn kết luận của Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "tags": [
+        "reconstruction",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-reconstruction-Q003",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "question": "Trước khi dùng Tái tạo dữ liệu và sai số khi giảm chiều, điều gì cần kiểm tra?",
+      "options": [
+        "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+        "coi giảm chiều là không mất thông tin",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing.",
+      "explanation": "Đáp án đúng vì Quy ước dữ liệu, giả thiết, kích thước/đơn vị và cách preprocessing. Nội dung này giữ giới hạn kết luận của Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "tags": [
+        "reconstruction",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-reconstruction-Q004",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "question": "Vì sao kết quả số của Tái tạo dữ liệu và sai số khi giảm chiều chưa đủ để kết luận?",
+      "options": [
+        "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+        "coi giảm chiều là không mất thông tin",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật.",
+      "explanation": "Đáp án đúng vì Vì còn phải kiểm tra giả thiết, độ nhạy, phạm vi dữ liệu và ý nghĩa kỹ thuật. Nội dung này giữ giới hạn kết luận của Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "tags": [
+        "reconstruction",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-reconstruction-Q005",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "question": "Trong pipeline PCA, Tái tạo dữ liệu và sai số khi giảm chiều liên quan đến bước nào?",
+      "options": [
+        "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+        "coi giảm chiều là không mất thông tin",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo.",
+      "explanation": "Đáp án đúng vì Nó phải được đặt đúng vị trí trong chuỗi dữ liệu → preprocessing → covariance/correlation → phổ → chiếu/tái tạo. Nội dung này giữ giới hạn kết luận của Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "tags": [
+        "reconstruction",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "questionId": "E15-reconstruction-Q006",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "question": "Cách kiểm chứng tốt cho Tái tạo dữ liệu và sai số khi giảm chiều là gì?",
+      "options": [
+        "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+        "coi giảm chiều là không mất thông tin",
+        "Không cần kiểm tra giả thiết",
+        "Chỉ cần đồ thị đẹp"
+      ],
+      "answer": "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
+      "explanation": "Đáp án đúng vì Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên. Nội dung này giữ giới hạn kết luận của Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "tags": [
+        "reconstruction",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    }
+  ],
   "importPolicy": {
     "key": "questionId",
     "requires": [
@@ -62,12 +1071,13 @@
     "answer": "Độ dài vector",
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-06-22",
+  "updatedAt": "2026-09-21",
   "emoji": "❓",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
     "recordsMustUseStableIds": true,
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
-  }
+  },
+  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
 }

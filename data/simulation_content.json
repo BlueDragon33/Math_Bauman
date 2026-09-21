@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_simulation_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
   "subject": "math",
   "title": "Mô phỏng unified · Nội dung",
   "contentVaultRole": "content",
@@ -10,7 +10,600 @@
   "frameSource": "simulation_frame.json",
   "legacyExportTarget": "simulations.json",
   "recordKey": "simulationId",
-  "records": [],
+  "records": [
+    {
+      "simulationId": "E15-data_matrix-SIM1",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng lý thuyết · Dữ liệu đa chiều và ma trận dữ liệu X",
+      "purpose": "Thay đổi tham số nhỏ để quan sát trực giác của Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "controls": [
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "offset",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "core_metric",
+          "label": "Đại lượng lõi"
+        },
+        {
+          "key": "shape",
+          "label": "Kích thước"
+        }
+      ],
+      "expectedObservation": "Phân biệt ảnh hưởng của dịch chuyển/thay đổi thang với cấu trúc thật.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-data_matrix-SIM2",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng ứng dụng · Dữ liệu đa chiều và ma trận dữ liệu X",
+      "purpose": "Quan sát tác động của Dữ liệu đa chiều và ma trận dữ liệu X lên dữ liệu cảm biến/PCA.",
+      "controls": [
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 100
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "before_after",
+          "label": "Trước / sau"
+        },
+        {
+          "key": "error",
+          "label": "Sai số"
+        }
+      ],
+      "expectedObservation": "Đánh giá kết quả bằng metric và giới hạn, không chỉ bằng hình ảnh.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-centering-SIM1",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Mô phỏng lý thuyết · Trung tâm hóa và chuẩn hóa đặc trưng",
+      "purpose": "Thay đổi tham số nhỏ để quan sát trực giác của Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "controls": [
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "offset",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "core_metric",
+          "label": "Đại lượng lõi"
+        },
+        {
+          "key": "shape",
+          "label": "Kích thước"
+        }
+      ],
+      "expectedObservation": "Phân biệt ảnh hưởng của dịch chuyển/thay đổi thang với cấu trúc thật.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-centering-SIM2",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Mô phỏng ứng dụng · Trung tâm hóa và chuẩn hóa đặc trưng",
+      "purpose": "Quan sát tác động của Trung tâm hóa và chuẩn hóa đặc trưng lên dữ liệu cảm biến/PCA.",
+      "controls": [
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 100
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "before_after",
+          "label": "Trước / sau"
+        },
+        {
+          "key": "error",
+          "label": "Sai số"
+        }
+      ],
+      "expectedObservation": "Đánh giá kết quả bằng metric và giới hạn, không chỉ bằng hình ảnh.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-covariance-SIM1",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "title": "Mô phỏng lý thuyết · Hiệp phương sai",
+      "purpose": "Thay đổi tham số nhỏ để quan sát trực giác của Hiệp phương sai.",
+      "controls": [
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "offset",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "core_metric",
+          "label": "Đại lượng lõi"
+        },
+        {
+          "key": "shape",
+          "label": "Kích thước"
+        }
+      ],
+      "expectedObservation": "Phân biệt ảnh hưởng của dịch chuyển/thay đổi thang với cấu trúc thật.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-covariance-SIM2",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "title": "Mô phỏng ứng dụng · Hiệp phương sai",
+      "purpose": "Quan sát tác động của Hiệp phương sai lên dữ liệu cảm biến/PCA.",
+      "controls": [
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 100
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "before_after",
+          "label": "Trước / sau"
+        },
+        {
+          "key": "error",
+          "label": "Sai số"
+        }
+      ],
+      "expectedObservation": "Đánh giá kết quả bằng metric và giới hạn, không chỉ bằng hình ảnh.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-pearson-SIM1",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Mô phỏng lý thuyết · Tương quan Pearson",
+      "purpose": "Thay đổi tham số nhỏ để quan sát trực giác của Tương quan Pearson.",
+      "controls": [
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "offset",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "core_metric",
+          "label": "Đại lượng lõi"
+        },
+        {
+          "key": "shape",
+          "label": "Kích thước"
+        }
+      ],
+      "expectedObservation": "Phân biệt ảnh hưởng của dịch chuyển/thay đổi thang với cấu trúc thật.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-pearson-SIM2",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Mô phỏng ứng dụng · Tương quan Pearson",
+      "purpose": "Quan sát tác động của Tương quan Pearson lên dữ liệu cảm biến/PCA.",
+      "controls": [
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 100
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "before_after",
+          "label": "Trước / sau"
+        },
+        {
+          "key": "error",
+          "label": "Sai số"
+        }
+      ],
+      "expectedObservation": "Đánh giá kết quả bằng metric và giới hạn, không chỉ bằng hình ảnh.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-cov_matrix-SIM1",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Mô phỏng lý thuyết · Ma trận hiệp phương sai",
+      "purpose": "Thay đổi tham số nhỏ để quan sát trực giác của Ma trận hiệp phương sai.",
+      "controls": [
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "offset",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "core_metric",
+          "label": "Đại lượng lõi"
+        },
+        {
+          "key": "shape",
+          "label": "Kích thước"
+        }
+      ],
+      "expectedObservation": "Phân biệt ảnh hưởng của dịch chuyển/thay đổi thang với cấu trúc thật.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-cov_matrix-SIM2",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Mô phỏng ứng dụng · Ma trận hiệp phương sai",
+      "purpose": "Quan sát tác động của Ma trận hiệp phương sai lên dữ liệu cảm biến/PCA.",
+      "controls": [
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 100
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "before_after",
+          "label": "Trước / sau"
+        },
+        {
+          "key": "error",
+          "label": "Sai số"
+        }
+      ],
+      "expectedObservation": "Đánh giá kết quả bằng metric và giới hạn, không chỉ bằng hình ảnh.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-eigen_cov-SIM1",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Mô phỏng lý thuyết · Trị riêng và vector riêng của covariance matrix",
+      "purpose": "Thay đổi tham số nhỏ để quan sát trực giác của Trị riêng và vector riêng của covariance matrix.",
+      "controls": [
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "offset",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "core_metric",
+          "label": "Đại lượng lõi"
+        },
+        {
+          "key": "shape",
+          "label": "Kích thước"
+        }
+      ],
+      "expectedObservation": "Phân biệt ảnh hưởng của dịch chuyển/thay đổi thang với cấu trúc thật.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-eigen_cov-SIM2",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Mô phỏng ứng dụng · Trị riêng và vector riêng của covariance matrix",
+      "purpose": "Quan sát tác động của Trị riêng và vector riêng của covariance matrix lên dữ liệu cảm biến/PCA.",
+      "controls": [
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 100
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "before_after",
+          "label": "Trước / sau"
+        },
+        {
+          "key": "error",
+          "label": "Sai số"
+        }
+      ],
+      "expectedObservation": "Đánh giá kết quả bằng metric và giới hạn, không chỉ bằng hình ảnh.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-pca-SIM1",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Mô phỏng lý thuyết · PCA nhập môn",
+      "purpose": "Thay đổi tham số nhỏ để quan sát trực giác của PCA nhập môn.",
+      "controls": [
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "offset",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "core_metric",
+          "label": "Đại lượng lõi"
+        },
+        {
+          "key": "shape",
+          "label": "Kích thước"
+        }
+      ],
+      "expectedObservation": "Phân biệt ảnh hưởng của dịch chuyển/thay đổi thang với cấu trúc thật.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-pca-SIM2",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Mô phỏng ứng dụng · PCA nhập môn",
+      "purpose": "Quan sát tác động của PCA nhập môn lên dữ liệu cảm biến/PCA.",
+      "controls": [
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 100
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "before_after",
+          "label": "Trước / sau"
+        },
+        {
+          "key": "error",
+          "label": "Sai số"
+        }
+      ],
+      "expectedObservation": "Đánh giá kết quả bằng metric và giới hạn, không chỉ bằng hình ảnh.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-reconstruction-SIM1",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Mô phỏng lý thuyết · Tái tạo dữ liệu và sai số khi giảm chiều",
+      "purpose": "Thay đổi tham số nhỏ để quan sát trực giác của Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "controls": [
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "offset",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "core_metric",
+          "label": "Đại lượng lõi"
+        },
+        {
+          "key": "shape",
+          "label": "Kích thước"
+        }
+      ],
+      "expectedObservation": "Phân biệt ảnh hưởng của dịch chuyển/thay đổi thang với cấu trúc thật.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E15-reconstruction-SIM2",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Mô phỏng ứng dụng · Tái tạo dữ liệu và sai số khi giảm chiều",
+      "purpose": "Quan sát tác động của Tái tạo dữ liệu và sai số khi giảm chiều lên dữ liệu cảm biến/PCA.",
+      "controls": [
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 100
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "before_after",
+          "label": "Trước / sau"
+        },
+        {
+          "key": "error",
+          "label": "Sai số"
+        }
+      ],
+      "expectedObservation": "Đánh giá kết quả bằng metric và giới hạn, không chỉ bằng hình ảnh.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    }
+  ],
   "importPolicy": {
     "key": "simulationId",
     "requires": [
@@ -69,12 +662,13 @@
     ],
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-06-22",
+  "updatedAt": "2026-09-21",
   "emoji": "🔬",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
     "recordsMustUseStableIds": true,
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
-  }
+  },
+  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
 }

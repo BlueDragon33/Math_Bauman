@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_professor_qa_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
   "subject": "math",
   "title": "Vấn đáp giáo sư · Nội dung",
   "contentVaultRole": "content",
@@ -10,7 +10,144 @@
   "frameSource": "professor_qa_frame.json",
   "legacyExportTarget": "professor_qa.json",
   "recordKey": "qaId",
-  "records": [],
+  "records": [
+    {
+      "qaId": "E15-data_matrix-QA01",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "question": "Nếu phải giải thích Dữ liệu đa chiều và ma trận dữ liệu X trước giáo sư mà không đọc công thức, ý cốt lõi và giới hạn quan trọng nhất là gì?",
+      "answer": "Quy ước n mẫu × p feature phải thống nhất; shape là một phần của ý nghĩa toán học. Giới hạn cần nhấn mạnh: tránh đảo hàng và cột.",
+      "followUp": [
+        "Điều gì xảy ra nếu giả thiết chính không còn đúng?",
+        "Bạn sẽ kiểm tra kết luận bằng dữ liệu hoặc mô phỏng như thế nào?"
+      ],
+      "tags": [
+        "data_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "qaId": "E15-centering-QA01",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "question": "Nếu phải giải thích Trung tâm hóa và chuẩn hóa đặc trưng trước giáo sư mà không đọc công thức, ý cốt lõi và giới hạn quan trọng nhất là gì?",
+      "answer": "Centering trừ trung bình; standardization chia thêm độ lệch chuẩn; scaler chỉ fit trên train. Giới hạn cần nhấn mạnh: tránh data leakage khi fit trên test.",
+      "followUp": [
+        "Điều gì xảy ra nếu giả thiết chính không còn đúng?",
+        "Bạn sẽ kiểm tra kết luận bằng dữ liệu hoặc mô phỏng như thế nào?"
+      ],
+      "tags": [
+        "centering",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "qaId": "E15-covariance-QA01",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "question": "Nếu phải giải thích Hiệp phương sai trước giáo sư mà không đọc công thức, ý cốt lõi và giới hạn quan trọng nhất là gì?",
+      "answer": "Covariance đo đồng biến thiên và phụ thuộc đơn vị; dịch chuyển không đổi covariance nhưng đổi thang làm đổi độ lớn. Giới hạn cần nhấn mạnh: tránh coi covariance lớn là quan hệ mạnh tuyệt đối.",
+      "followUp": [
+        "Điều gì xảy ra nếu giả thiết chính không còn đúng?",
+        "Bạn sẽ kiểm tra kết luận bằng dữ liệu hoặc mô phỏng như thế nào?"
+      ],
+      "tags": [
+        "covariance",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "qaId": "E15-pearson-QA01",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "question": "Nếu phải giải thích Tương quan Pearson trước giáo sư mà không đọc công thức, ý cốt lõi và giới hạn quan trọng nhất là gì?",
+      "answer": "Pearson là covariance chuẩn hóa, chỉ đo liên hệ tuyến tính, không chứng minh nhân quả. Giới hạn cần nhấn mạnh: tránh r≈0 đồng nghĩa độc lập.",
+      "followUp": [
+        "Điều gì xảy ra nếu giả thiết chính không còn đúng?",
+        "Bạn sẽ kiểm tra kết luận bằng dữ liệu hoặc mô phỏng như thế nào?"
+      ],
+      "tags": [
+        "pearson",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "qaId": "E15-cov_matrix-QA01",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "question": "Nếu phải giải thích Ma trận hiệp phương sai trước giáo sư mà không đọc công thức, ý cốt lõi và giới hạn quan trọng nhất là gì?",
+      "answer": "S=XcᵀXc/(n-1) có kích thước p×p khi cột là feature; S đối xứng bán xác định dương. Giới hạn cần nhấn mạnh: tránh nhầm covariance matrix là n×n.",
+      "followUp": [
+        "Điều gì xảy ra nếu giả thiết chính không còn đúng?",
+        "Bạn sẽ kiểm tra kết luận bằng dữ liệu hoặc mô phỏng như thế nào?"
+      ],
+      "tags": [
+        "cov_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "qaId": "E15-eigen_cov-QA01",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "question": "Nếu phải giải thích Trị riêng và vector riêng của covariance matrix trước giáo sư mà không đọc công thức, ý cốt lõi và giới hạn quan trọng nhất là gì?",
+      "answer": "Sv=λv; λ là phương sai theo hướng riêng và vector riêng chỉ xác định tới dấu. Giới hạn cần nhấn mạnh: tránh coi trị riêng âm đáng kể là bình thường.",
+      "followUp": [
+        "Điều gì xảy ra nếu giả thiết chính không còn đúng?",
+        "Bạn sẽ kiểm tra kết luận bằng dữ liệu hoặc mô phỏng như thế nào?"
+      ],
+      "tags": [
+        "eigen_cov",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "qaId": "E15-pca-QA01",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "question": "Nếu phải giải thích PCA nhập môn trước giáo sư mà không đọc công thức, ý cốt lõi và giới hạn quan trọng nhất là gì?",
+      "answer": "PCA chọn các hướng phương sai lớn nhất; explained variance giúp lượng hóa thông tin giữ lại. Giới hạn cần nhấn mạnh: tránh chọn k hoàn toàn theo cảm tính.",
+      "followUp": [
+        "Điều gì xảy ra nếu giả thiết chính không còn đúng?",
+        "Bạn sẽ kiểm tra kết luận bằng dữ liệu hoặc mô phỏng như thế nào?"
+      ],
+      "tags": [
+        "pca",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "qaId": "E15-reconstruction-QA01",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "question": "Nếu phải giải thích Tái tạo dữ liệu và sai số khi giảm chiều trước giáo sư mà không đọc công thức, ý cốt lõi và giới hạn quan trọng nhất là gì?",
+      "answer": "X̂=ZVkᵀ+μ; giảm chiều gây mất thông tin và cần đo sai số tái tạo. Giới hạn cần nhấn mạnh: tránh coi giảm chiều là không mất thông tin.",
+      "followUp": [
+        "Điều gì xảy ra nếu giả thiết chính không còn đúng?",
+        "Bạn sẽ kiểm tra kết luận bằng dữ liệu hoặc mô phỏng như thế nào?"
+      ],
+      "tags": [
+        "reconstruction",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    }
+  ],
   "importPolicy": {
     "key": "qaId",
     "requires": [
@@ -54,12 +191,13 @@
     "answer": "Vì tích vô hướng bị ảnh hưởng bởi độ dài; cần chuẩn hóa để xét hướng.",
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-06-22",
+  "updatedAt": "2026-09-21",
   "emoji": "🎓",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
     "recordsMustUseStableIds": true,
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
-  }
+  },
+  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
 }
