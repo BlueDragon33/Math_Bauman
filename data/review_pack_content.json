@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_review_pack_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
   "subject": "math",
   "title": "Gói ôn tập · Nội dung",
   "contentVaultRole": "content",
@@ -10,7 +10,256 @@
   "frameSource": "review_pack_frame.json",
   "legacyExportTarget": "review_packs.json",
   "recordKey": "reviewPackId",
-  "records": [],
+  "records": [
+    {
+      "reviewPackId": "E15-data_matrix-RP01",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Dữ liệu đa chiều và ma trận dữ liệu X trong 60 giây mà không nhìn tài liệu.",
+          "expected": "Quy ước n mẫu × p feature phải thống nhất; shape là một phần của ý nghĩa toán học."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao lỗi “đảo hàng và cột” sai và cách phát hiện."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết công thức/quan hệ lõi, ghi rõ ký hiệu, kích thước hoặc đơn vị."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một tình huống cảm biến/AI/PCA mà kiến thức này thay đổi quyết định xử lý."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + đúng giả thiết + không mắc bẫy chính",
+      "tags": [
+        "data_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "reviewPackId": "E15-centering-RP01",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Trung tâm hóa và chuẩn hóa đặc trưng trong 60 giây mà không nhìn tài liệu.",
+          "expected": "Centering trừ trung bình; standardization chia thêm độ lệch chuẩn; scaler chỉ fit trên train."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao lỗi “data leakage khi fit trên test” sai và cách phát hiện."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết công thức/quan hệ lõi, ghi rõ ký hiệu, kích thước hoặc đơn vị."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một tình huống cảm biến/AI/PCA mà kiến thức này thay đổi quyết định xử lý."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + đúng giả thiết + không mắc bẫy chính",
+      "tags": [
+        "centering",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "reviewPackId": "E15-covariance-RP01",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Hiệp phương sai trong 60 giây mà không nhìn tài liệu.",
+          "expected": "Covariance đo đồng biến thiên và phụ thuộc đơn vị; dịch chuyển không đổi covariance nhưng đổi thang làm đổi độ lớn."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao lỗi “coi covariance lớn là quan hệ mạnh tuyệt đối” sai và cách phát hiện."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết công thức/quan hệ lõi, ghi rõ ký hiệu, kích thước hoặc đơn vị."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một tình huống cảm biến/AI/PCA mà kiến thức này thay đổi quyết định xử lý."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + đúng giả thiết + không mắc bẫy chính",
+      "tags": [
+        "covariance",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "reviewPackId": "E15-pearson-RP01",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Tương quan Pearson trong 60 giây mà không nhìn tài liệu.",
+          "expected": "Pearson là covariance chuẩn hóa, chỉ đo liên hệ tuyến tính, không chứng minh nhân quả."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao lỗi “r≈0 đồng nghĩa độc lập” sai và cách phát hiện."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết công thức/quan hệ lõi, ghi rõ ký hiệu, kích thước hoặc đơn vị."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một tình huống cảm biến/AI/PCA mà kiến thức này thay đổi quyết định xử lý."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + đúng giả thiết + không mắc bẫy chính",
+      "tags": [
+        "pearson",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "reviewPackId": "E15-cov_matrix-RP01",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Ma trận hiệp phương sai trong 60 giây mà không nhìn tài liệu.",
+          "expected": "S=XcᵀXc/(n-1) có kích thước p×p khi cột là feature; S đối xứng bán xác định dương."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao lỗi “nhầm covariance matrix là n×n” sai và cách phát hiện."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết công thức/quan hệ lõi, ghi rõ ký hiệu, kích thước hoặc đơn vị."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một tình huống cảm biến/AI/PCA mà kiến thức này thay đổi quyết định xử lý."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + đúng giả thiết + không mắc bẫy chính",
+      "tags": [
+        "cov_matrix",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "reviewPackId": "E15-eigen_cov-RP01",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Trị riêng và vector riêng của covariance matrix trong 60 giây mà không nhìn tài liệu.",
+          "expected": "Sv=λv; λ là phương sai theo hướng riêng và vector riêng chỉ xác định tới dấu."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao lỗi “coi trị riêng âm đáng kể là bình thường” sai và cách phát hiện."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết công thức/quan hệ lõi, ghi rõ ký hiệu, kích thước hoặc đơn vị."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một tình huống cảm biến/AI/PCA mà kiến thức này thay đổi quyết định xử lý."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + đúng giả thiết + không mắc bẫy chính",
+      "tags": [
+        "eigen_cov",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "reviewPackId": "E15-pca-RP01",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại PCA nhập môn trong 60 giây mà không nhìn tài liệu.",
+          "expected": "PCA chọn các hướng phương sai lớn nhất; explained variance giúp lượng hóa thông tin giữ lại."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao lỗi “chọn k hoàn toàn theo cảm tính” sai và cách phát hiện."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết công thức/quan hệ lõi, ghi rõ ký hiệu, kích thước hoặc đơn vị."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một tình huống cảm biến/AI/PCA mà kiến thức này thay đổi quyết định xử lý."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + đúng giả thiết + không mắc bẫy chính",
+      "tags": [
+        "pca",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "reviewPackId": "E15-reconstruction-RP01",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Tái tạo dữ liệu và sai số khi giảm chiều trong 60 giây mà không nhìn tài liệu.",
+          "expected": "X̂=ZVkᵀ+μ; giảm chiều gây mất thông tin và cần đo sai số tái tạo."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao lỗi “coi giảm chiều là không mất thông tin” sai và cách phát hiện."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết công thức/quan hệ lõi, ghi rõ ký hiệu, kích thước hoặc đơn vị."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một tình huống cảm biến/AI/PCA mà kiến thức này thay đổi quyết định xử lý."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + đúng giả thiết + không mắc bẫy chính",
+      "tags": [
+        "reconstruction",
+        "E15"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    }
+  ],
   "importPolicy": {
     "key": "reviewPackId",
     "requires": [
@@ -57,12 +306,13 @@
     ],
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-06-22",
+  "updatedAt": "2026-09-21",
   "emoji": "🧪",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
     "recordsMustUseStableIds": true,
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
-  }
+  },
+  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
 }
