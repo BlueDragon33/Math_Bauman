@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_formula_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
   "subject": "math",
   "title": "Công thức · Nội dung",
   "contentVaultRole": "content",
@@ -10,7 +10,440 @@
   "frameSource": "formula_frame.json",
   "legacyExportTarget": "formulas.json",
   "recordKey": "formulaId",
-  "records": [],
+  "records": [
+    {
+      "formulaId": "E15-data_matrix-F1",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Kích thước ma trận dữ liệu",
+      "formula": "X ∈ R^(n×p)",
+      "meaning": "n mẫu, p đặc trưng; phải thống nhất quy ước hàng=mẫu, cột=feature.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-data_matrix-F2",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Vector mẫu",
+      "formula": "x_i = [x_i1,...,x_ip]",
+      "meaning": "Mỗi hàng là một điểm trong không gian p chiều.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-data_matrix-F3",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Vector đặc trưng",
+      "formula": "X_:j = [x_1j,...,x_nj]^T",
+      "meaning": "Mỗi cột mô tả một đại lượng trên toàn bộ mẫu.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-centering-F1",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Trung tâm hóa",
+      "formula": "x_c = x - x̄",
+      "meaning": "Đưa trung bình về 0 nhưng không đổi đơn vị.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-centering-F2",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Z-score",
+      "formula": "z_i = (x_i-x̄)/s_x",
+      "meaning": "Đưa feature về thang độ lệch chuẩn.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-centering-F3",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Pipeline train/test",
+      "formula": "z_test=(x_test-μ_train)/s_train",
+      "meaning": "Thông số preprocessing phải fit trên train để tránh leakage.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-covariance-F1",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "title": "Hiệp phương sai mẫu",
+      "formula": "cov(x,y)=Σ(x_i-x̄)(y_i-ȳ)/(n-1)",
+      "meaning": "Dấu cho hướng đồng biến/nghịch biến; độ lớn phụ thuộc đơn vị.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-covariance-F2",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "title": "Phương sai là covariance đặc biệt",
+      "formula": "var(x)=cov(x,x)",
+      "meaning": "Đường chéo covariance matrix là phương sai.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-covariance-F3",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "title": "Tính chất đổi thang",
+      "formula": "cov(ax+b,cy+d)=ac·cov(x,y)",
+      "meaning": "Dịch chuyển không đổi covariance; đổi thang làm đổi độ lớn.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-pearson-F1",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Pearson từ covariance",
+      "formula": "r_xy=cov(x,y)/(s_x s_y)",
+      "meaning": "Chuẩn hóa covariance thành đại lượng không đơn vị.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-pearson-F2",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Miền giá trị",
+      "formula": "-1 ≤ r_xy ≤ 1",
+      "meaning": "Dấu là hướng; trị tuyệt đối là cường độ tuyến tính.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-pearson-F3",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "title": "Liên hệ với z-score",
+      "formula": "r_xy=Σ z_xi z_yi/(n-1)",
+      "meaning": "Pearson là tích trung bình của hai biến đã chuẩn hóa theo quy ước mẫu.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-cov_matrix-F1",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Covariance matrix",
+      "formula": "S=X_c^T X_c/(n-1)",
+      "meaning": "Với X có n mẫu × p feature, S có kích thước p×p.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-cov_matrix-F2",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Đối xứng",
+      "formula": "S=S^T",
+      "meaning": "Covariance matrix thực là ma trận đối xứng.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-cov_matrix-F3",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Bán xác định dương",
+      "formula": "v^T S v ≥ 0",
+      "meaning": "Các trị riêng lý tưởng không âm; âm nhỏ có thể do sai số số học.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-eigen_cov-F1",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Bài toán trị riêng",
+      "formula": "S v = λ v",
+      "meaning": "Vector riêng là hướng giữ nguyên phương sau phép biến đổi.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-eigen_cov-F2",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Phương sai theo hướng riêng",
+      "formula": "var(X_c v)=λ",
+      "meaning": "Trị riêng của S bằng phương sai dữ liệu trên vector riêng tương ứng.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-eigen_cov-F3",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Tổng trị riêng",
+      "formula": "tr(S)=Σ λ_j",
+      "meaning": "Tổng phương sai bằng tổng trị riêng.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-pca-F1",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Chiếu PCA",
+      "formula": "Z=X_c V_k",
+      "meaning": "V_k chứa k vector riêng ứng với trị riêng lớn nhất.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-pca-F2",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Tỷ lệ phương sai giải thích",
+      "formula": "EVR_j=λ_j/Σ_i λ_i",
+      "meaning": "Dùng để lượng hóa phần biến thiên giữ lại.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-pca-F3",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Phương sai tích lũy",
+      "formula": "CEVR_k=Σ_(j=1)^k EVR_j",
+      "meaning": "Chọn k dựa trên mục tiêu và sai số, không chỉ cảm tính.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-reconstruction-F1",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Tái tạo từ PCA",
+      "formula": "X_hat=Z V_k^T + μ",
+      "meaning": "Đưa biểu diễn k chiều về không gian gốc.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-reconstruction-F2",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Sai số Frobenius",
+      "formula": "||X-X_hat||_F^2",
+      "meaning": "Đo tổng bình phương sai khác của các phần tử.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E15-reconstruction-F3",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "title": "Sai số PCA tối ưu",
+      "formula": "min_rank-k ||X_c-X_hat_c||_F^2 = Σ_(j>k) σ_j^2",
+      "meaning": "PCA/SVD giữ các hướng năng lượng lớn nhất cho xấp xỉ hạng thấp.",
+      "conditions": [
+        "Dùng cùng quy ước sample/feature trong toàn pipeline"
+      ],
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    }
+  ],
   "importPolicy": {
     "key": "formulaId",
     "requires": [
@@ -58,12 +491,13 @@
     ],
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-06-22",
+  "updatedAt": "2026-09-21",
   "emoji": "∑",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
     "recordsMustUseStableIds": true,
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
-  }
+  },
+  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
 }
