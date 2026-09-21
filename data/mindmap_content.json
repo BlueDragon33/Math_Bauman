@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_mindmap_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
+  "version": "E151_HK1_TIME_SERIES_CONTENT",
   "subject": "math",
   "title": "Mind map · Nội dung",
   "contentVaultRole": "content",
@@ -602,6 +602,456 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "mindmapId": "E151-process-MM01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Dữ liệu theo thời gian và quá trình ngẫu nhiên",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức: {X_t : t∈T}",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết thời gian / sampling",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: Xáo trộn thời gian như dữ liệu i.i.d.",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Chuỗi rung/nhiệt độ/dòng điện theo timestamp.",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm ACF / residual / chronological split",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "time-series",
+        "process",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "mindmapId": "E151-stationarity-MM01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Tính dừng và tính dừng yếu (WSS)",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức: E[X_t]=μ; γ(t,s)=γ(t-s)",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết thời gian / sampling",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Theo dõi drift cảm biến bằng rolling mean/variance.",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm ACF / residual / chronological split",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "mindmapId": "E151-acf-MM01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Autocovariance, autocorrelation và độ trễ",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức: ρ(h)=γ(h)/γ(0)",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết thời gian / sampling",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: Đọc ACF như quan hệ nhân quả.",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Tìm chu kỳ và ký ức ngắn hạn trong tín hiệu cảm biến.",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm ACF / residual / chronological split",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "mindmapId": "E151-ar1-MM01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "White noise, random walk và AR(1)",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức: X_t=φX_{t-1}+ε_t",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết thời gian / sampling",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: Nhầm random walk với white noise.",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Mô hình quán tính ngắn và drift tích lũy của cảm biến.",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm ACF / residual / chronological split",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "mindmapId": "E151-structure-MM01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Trend, seasonality và sai phân",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức: ΔX_t=X_t-X_{t-1}",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết thời gian / sampling",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Tải điện theo ngày và monitoring theo ca.",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm ACF / residual / chronological split",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "mindmapId": "E151-forecast-MM01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Forecast baseline, temporal split và residual",
+          "type": "root"
+        },
+        {
+          "id": "core",
+          "label": "Bản chất",
+          "type": "concept"
+        },
+        {
+          "id": "formula",
+          "label": "Công thức: ŷ_{t+1}=y_t; e_t=y_t-ŷ_t",
+          "type": "formula"
+        },
+        {
+          "id": "assumption",
+          "label": "Giả thiết thời gian / sampling",
+          "type": "gate"
+        },
+        {
+          "id": "trap",
+          "label": "Bẫy: Random split hoặc feature tương lai gây temporal leakage.",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Forecast/monitoring cảm biến theo chronological split.",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "Kiểm ACF / residual / chronological split",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "core"
+        },
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "core",
+          "to": "assumption"
+        },
+        {
+          "from": "assumption",
+          "to": "trap"
+        },
+        {
+          "from": "formula",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
     }
   ],
   "importPolicy": {
@@ -648,5 +1098,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
 }
