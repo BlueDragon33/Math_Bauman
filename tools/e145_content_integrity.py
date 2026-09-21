@@ -229,8 +229,11 @@ def check_runtime_shell() -> None:
 
     if "\\n" in text:
         fail("index.html contains literal \\n sequence")
+    if "E147 Integrity Hardened" not in text:
+        fail("index.html release label is not reconciled to E147")
 
     required_order = [
+        "assets/runtime_audit/runtime-release-sync-E147.js?v=147",
         "assets/core.js?v=134",
         "assets/runtime_content/theory-overlay-E138.js?v=138",
         "assets/runtime_content/content-vault-bridge-E140.js?v=140",
