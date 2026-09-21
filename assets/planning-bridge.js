@@ -212,14 +212,17 @@
     }
     const easy = tp.unlockEasy || {};
     const learnedMinutes = Number(stats.studyMinutes || availableMinutes(mission));
-    const learnedItems = Number(stats.learnedItems ?? stats.completedItems ?? sessionNo * 20);
-    const dialogues = mission.subjectType==='technical'
-      ? Number(stats.practiceItems ?? stats.exercises ?? stats.dialogues ?? sessionNo)
-      : Number(stats.dialogues ?? sessionNo);
-    if(sessionNo < Number(easy.minSessions || 3)) blockers.push(`Cần ${Number(easy.minSessions || 3)} buổi học nền.`);
-    if(learnedMinutes < Number(easy.minStudyMinutes || 0)) blockers.push(`Cần tối thiểu ${Number(easy.minStudyMinutes || 0)} phút học thực.`);
-    if(learnedItems < Number(easy.minLearnedItems || 0)) blockers.push(`Cần tối thiểu ${Number(easy.minLearnedItems || 0)} đơn vị học/từ/cụm.`);
-    if(dialogues < Number(easy.minDialogues || 0)) blockers.push(mission.subjectType==='technical' ? `Cần tối thiểu ${Number(easy.minDialogues || 0)} lượt bài tập/thực hành.` : `Cần tối thiểu ${Number(easy.minDialogues || 0)} vấn đáp/thực hành.`);
+    const isTechnical = mission.subjectType==='technical';
+    const learnedItems = Number(stats.learnedItems ?? stats.completedItems ?? 0);
+    const practiceItems = Number(stats.practiceItems ?? stats.exercises ?? stats.dialogues ?? sessionNo);
+    const requiredSessions = Number(easy.minSessions || 3);
+    const requiredMinutes = Number(easy.minStudyMinutes || 0);
+    const requiredLearnedItems = isTechnical ? Number(easy.minTechnicalLearnedItems || 0) : Number(easy.minLearnedItems || 0);
+    const requiredPracticeItems = isTechnical ? Number(easy.minPracticeItems ?? easy.minDialogues ?? 0) : Number(easy.minDialogues || 0);
+    if(sessionNo < requiredSessions) blockers.push(`Cần ${requiredSessions} buổi học nền.`);
+    if(learnedMinutes < requiredMinutes) blockers.push(`Cần tối thiểu ${requiredMinutes} phút học thực.`);
+    if(requiredLearnedItems>0 && learnedItems < requiredLearnedItems) blockers.push(`Cần tối thiểu ${requiredLearnedItems} đơn vị học/từ/cụm.`);
+    if(practiceItems < requiredPracticeItems) blockers.push(isTechnical ? `Cần tối thiểu ${requiredPracticeItems} lượt bài tập/thực hành.` : `Cần tối thiểu ${requiredPracticeItems} vấn đáp/thực hành.`);
     if(blockers.length) return {unlocked:null, reason:'not_enough_learning_material', blockers};
 
     const easyScore = assessmentScore(mission,'easy');
