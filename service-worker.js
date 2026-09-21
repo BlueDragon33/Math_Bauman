@@ -63,11 +63,19 @@ self.addEventListener('install',event=>{
 });
 
 self.addEventListener('activate',event=>{
-  event.waitUntil(
-    caches.keys()
-      .then(keys=>Promise.all(keys.filter(key=>key.startsWith(CACHE_PREFIX)&&key!==SHELL_CACHE&&key!==RUNTIME_CACHE).map(key=>caches.delete(key))))
-      .then(()=>self.clients.claim())
-  );
+  event.waitUntil((async()=>{
+    const keys=await caches.keys();
+    await Promise.all(
+      keys
+        .filter(key=>key.startsWith(CACHE_PREFIX)&&key!==SHELL_CACHE&&key!==RUNTIME_CACHE)
+        .map(key=>caches.delete(key))
+    );
+    // A newly activated worker must never inherit stale runtime responses from
+    // the previous worker when the cache namespace is intentionally reused.
+    await caches.delete(RUNTIME_CACHE);
+    await caches.open(RUNTIME_CACHE);
+    await self.clients.claim();
+  })());
 });
 
 self.addEventListener('message',event=>{
