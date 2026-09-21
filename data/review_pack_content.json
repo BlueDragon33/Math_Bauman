@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_review_pack_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
+  "version": "E151_HK1_TIME_SERIES_CONTENT",
   "subject": "math",
   "title": "Gói ôn tập · Nội dung",
   "contentVaultRole": "content",
@@ -258,6 +258,222 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "reviewPackId": "E151-process-RP01",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Dữ liệu theo thời gian và quá trình ngẫu nhiên trong 60 giây.",
+          "expected": "Thứ tự thời gian và sample path là một phần của dữ liệu."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết và giải thích công thức neo: {X_t : t∈T}."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao “Xáo trộn thời gian như dữ liệu i.i.d.” sai và cách phát hiện."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Áp dụng vào case: Chuỗi rung/nhiệt độ/dòng điện theo timestamp."
+        },
+        {
+          "type": "diagnostic",
+          "prompt": "Nêu phép kiểm tra bằng ACF/rolling statistics/residual hoặc baseline phù hợp."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + công thức/quy ước + chronological reasoning + không mắc temporal leakage",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "reviewPackId": "E151-stationarity-RP01",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Tính dừng và tính dừng yếu (WSS) trong 60 giây.",
+          "expected": "WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết và giải thích công thức neo: E[X_t]=μ; γ(t,s)=γ(t-s)."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao “Kết luận dừng chỉ từ một đoạn đồ thị ngắn.” sai và cách phát hiện."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Áp dụng vào case: Theo dõi drift cảm biến bằng rolling mean/variance."
+        },
+        {
+          "type": "diagnostic",
+          "prompt": "Nêu phép kiểm tra bằng ACF/rolling statistics/residual hoặc baseline phù hợp."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + công thức/quy ước + chronological reasoning + không mắc temporal leakage",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "reviewPackId": "E151-acf-RP01",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Autocovariance, autocorrelation và độ trễ trong 60 giây.",
+          "expected": "ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết và giải thích công thức neo: ρ(h)=γ(h)/γ(0)."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao “Đọc ACF như quan hệ nhân quả.” sai và cách phát hiện."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Áp dụng vào case: Tìm chu kỳ và ký ức ngắn hạn trong tín hiệu cảm biến."
+        },
+        {
+          "type": "diagnostic",
+          "prompt": "Nêu phép kiểm tra bằng ACF/rolling statistics/residual hoặc baseline phù hợp."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + công thức/quy ước + chronological reasoning + không mắc temporal leakage",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "reviewPackId": "E151-ar1-RP01",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại White noise, random walk và AR(1) trong 60 giây.",
+          "expected": "White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết và giải thích công thức neo: X_t=φX_{t-1}+ε_t."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao “Nhầm random walk với white noise.” sai và cách phát hiện."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Áp dụng vào case: Mô hình quán tính ngắn và drift tích lũy của cảm biến."
+        },
+        {
+          "type": "diagnostic",
+          "prompt": "Nêu phép kiểm tra bằng ACF/rolling statistics/residual hoặc baseline phù hợp."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + công thức/quy ước + chronological reasoning + không mắc temporal leakage",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "reviewPackId": "E151-structure-RP01",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Trend, seasonality và sai phân trong 60 giây.",
+          "expected": "Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết và giải thích công thức neo: ΔX_t=X_t-X_{t-1}."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao “Over-differencing làm tăng nhiễu và mất cấu trúc.” sai và cách phát hiện."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Áp dụng vào case: Tải điện theo ngày và monitoring theo ca."
+        },
+        {
+          "type": "diagnostic",
+          "prompt": "Nêu phép kiểm tra bằng ACF/rolling statistics/residual hoặc baseline phù hợp."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + công thức/quy ước + chronological reasoning + không mắc temporal leakage",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "reviewPackId": "E151-forecast-RP01",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại Forecast baseline, temporal split và residual trong 60 giây.",
+          "expected": "Đánh giá forecast phải giữ hướng thời gian và so với baseline."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết và giải thích công thức neo: ŷ_{t+1}=y_t; e_t=y_t-ŷ_t."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao “Random split hoặc feature tương lai gây temporal leakage.” sai và cách phát hiện."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Áp dụng vào case: Forecast/monitoring cảm biến theo chronological split."
+        },
+        {
+          "type": "diagnostic",
+          "prompt": "Nêu phép kiểm tra bằng ACF/rolling statistics/residual hoặc baseline phù hợp."
+        }
+      ],
+      "masteryGate": "Đúng bản chất + công thức/quy ước + chronological reasoning + không mắc temporal leakage",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
     }
   ],
   "importPolicy": {
@@ -314,5 +530,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
 }
