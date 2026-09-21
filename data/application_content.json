@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_application_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
+  "version": "E151_HK1_TIME_SERIES_CONTENT",
   "subject": "math",
   "title": "Ứng dụng · Nội dung",
   "contentVaultRole": "content",
@@ -266,6 +266,210 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E151-process-A1",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Dữ liệu theo thời gian và quá trình ngẫu nhiên · case 1",
+      "scenario": "Dữ liệu rung/nhiệt độ/dòng điện từ cảm biến theo timestamp.",
+      "method": "Xây pipeline: kiểm timestamp → giữ đúng thứ tự → áp dụng Dữ liệu theo thời gian và quá trình ngẫu nhiên → đọc metric/ACF/residual → nêu giới hạn.",
+      "expectedOutcome": "Phát hiện cấu trúc theo thời gian có thể truy vết tới tín hiệu gốc.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "process",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-process-A2",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Dữ liệu theo thời gian và quá trình ngẫu nhiên · case 2",
+      "scenario": "Kiểm tra tác động của resampling và missing timestamps.",
+      "method": "So sánh baseline/biến đổi phù hợp với trường hợp Dữ liệu theo thời gian và quá trình ngẫu nhiên; tuyệt đối không random split nếu mục tiêu là dự báo tương lai.",
+      "expectedOutcome": "Đánh giá thực tế hơn và tránh temporal leakage.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "process",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-stationarity-A1",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Tính dừng và tính dừng yếu (WSS) · case 1",
+      "scenario": "Phát hiện drift của cảm biến qua rolling mean/variance.",
+      "method": "Xây pipeline: kiểm timestamp → giữ đúng thứ tự → áp dụng Tính dừng và tính dừng yếu (WSS) → đọc metric/ACF/residual → nêu giới hạn.",
+      "expectedOutcome": "Phát hiện cấu trúc theo thời gian có thể truy vết tới tín hiệu gốc.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "stationarity",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-stationarity-A2",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Tính dừng và tính dừng yếu (WSS) · case 2",
+      "scenario": "So sánh white noise với random walk để thấy giả thiết dừng.",
+      "method": "So sánh baseline/biến đổi phù hợp với trường hợp Tính dừng và tính dừng yếu (WSS); tuyệt đối không random split nếu mục tiêu là dự báo tương lai.",
+      "expectedOutcome": "Đánh giá thực tế hơn và tránh temporal leakage.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "stationarity",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-acf-A1",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Autocovariance, autocorrelation và độ trễ · case 1",
+      "scenario": "Tìm chu kỳ lặp trong rung máy bằng các đỉnh ACF.",
+      "method": "Xây pipeline: kiểm timestamp → giữ đúng thứ tự → áp dụng Autocovariance, autocorrelation và độ trễ → đọc metric/ACF/residual → nêu giới hạn.",
+      "expectedOutcome": "Phát hiện cấu trúc theo thời gian có thể truy vết tới tín hiệu gốc.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "acf",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-acf-A2",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Autocovariance, autocorrelation và độ trễ · case 2",
+      "scenario": "Đánh giá ký ức ngắn hạn trước khi chọn lag feature.",
+      "method": "So sánh baseline/biến đổi phù hợp với trường hợp Autocovariance, autocorrelation và độ trễ; tuyệt đối không random split nếu mục tiêu là dự báo tương lai.",
+      "expectedOutcome": "Đánh giá thực tế hơn và tránh temporal leakage.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "acf",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-ar1-A1",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "White noise, random walk và AR(1) · case 1",
+      "scenario": "Mô hình gần đúng quán tính ngắn của tín hiệu cảm biến.",
+      "method": "Xây pipeline: kiểm timestamp → giữ đúng thứ tự → áp dụng White noise, random walk và AR(1) → đọc metric/ACF/residual → nêu giới hạn.",
+      "expectedOutcome": "Phát hiện cấu trúc theo thời gian có thể truy vết tới tín hiệu gốc.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "ar1",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-ar1-A2",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "White noise, random walk và AR(1) · case 2",
+      "scenario": "Phân biệt bias tích lũy kiểu random walk với white noise.",
+      "method": "So sánh baseline/biến đổi phù hợp với trường hợp White noise, random walk và AR(1); tuyệt đối không random split nếu mục tiêu là dự báo tương lai.",
+      "expectedOutcome": "Đánh giá thực tế hơn và tránh temporal leakage.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "ar1",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-structure-A1",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Trend, seasonality và sai phân · case 1",
+      "scenario": "Tải điện có xu hướng dài hạn và chu kỳ 24 giờ.",
+      "method": "Xây pipeline: kiểm timestamp → giữ đúng thứ tự → áp dụng Trend, seasonality và sai phân → đọc metric/ACF/residual → nêu giới hạn.",
+      "expectedOutcome": "Phát hiện cấu trúc theo thời gian có thể truy vết tới tín hiệu gốc.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "structure",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-structure-A2",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Trend, seasonality và sai phân · case 2",
+      "scenario": "Monitoring nhiệt độ theo ca/ngày với seasonality rõ.",
+      "method": "So sánh baseline/biến đổi phù hợp với trường hợp Trend, seasonality và sai phân; tuyệt đối không random split nếu mục tiêu là dự báo tương lai.",
+      "expectedOutcome": "Đánh giá thực tế hơn và tránh temporal leakage.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "structure",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-forecast-A1",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Forecast baseline, temporal split và residual · case 1",
+      "scenario": "Dự báo baseline cho monitoring cảm biến.",
+      "method": "Xây pipeline: kiểm timestamp → giữ đúng thứ tự → áp dụng Forecast baseline, temporal split và residual → đọc metric/ACF/residual → nêu giới hạn.",
+      "expectedOutcome": "Phát hiện cấu trúc theo thời gian có thể truy vết tới tín hiệu gốc.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "forecast",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "applicationId": "E151-forecast-A2",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Forecast baseline, temporal split và residual · case 2",
+      "scenario": "So sánh chronological split với random split để phát hiện leakage.",
+      "method": "So sánh baseline/biến đổi phù hợp với trường hợp Forecast baseline, temporal split và residual; tuyệt đối không random split nếu mục tiêu là dự báo tương lai.",
+      "expectedOutcome": "Đánh giá thực tế hơn và tránh temporal leakage.",
+      "tags": [
+        "time-series",
+        "sensor",
+        "forecast",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
     }
   ],
   "importPolicy": {
@@ -321,5 +525,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
 }
