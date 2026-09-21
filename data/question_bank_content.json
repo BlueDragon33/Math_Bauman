@@ -41,9 +41,9 @@
       "question": "Bẫy nào phải tránh trong Dữ liệu đa chiều và ma trận dữ liệu X?",
       "options": [
         "đảo hàng và cột",
-        "đảo hàng và cột",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "đảo hàng và cột",
       "explanation": "Đáp án đúng vì đảo hàng và cột Nội dung này giữ giới hạn kết luận của Dữ liệu đa chiều và ma trận dữ liệu X.",
@@ -173,9 +173,9 @@
       "question": "Bẫy nào phải tránh trong Trung tâm hóa và chuẩn hóa đặc trưng?",
       "options": [
         "data leakage khi fit trên test",
-        "data leakage khi fit trên test",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "data leakage khi fit trên test",
       "explanation": "Đáp án đúng vì data leakage khi fit trên test Nội dung này giữ giới hạn kết luận của Trung tâm hóa và chuẩn hóa đặc trưng.",
@@ -305,9 +305,9 @@
       "question": "Bẫy nào phải tránh trong Hiệp phương sai?",
       "options": [
         "coi covariance lớn là quan hệ mạnh tuyệt đối",
-        "coi covariance lớn là quan hệ mạnh tuyệt đối",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "coi covariance lớn là quan hệ mạnh tuyệt đối",
       "explanation": "Đáp án đúng vì coi covariance lớn là quan hệ mạnh tuyệt đối Nội dung này giữ giới hạn kết luận của Hiệp phương sai.",
@@ -437,9 +437,9 @@
       "question": "Bẫy nào phải tránh trong Tương quan Pearson?",
       "options": [
         "r≈0 đồng nghĩa độc lập",
-        "r≈0 đồng nghĩa độc lập",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "r≈0 đồng nghĩa độc lập",
       "explanation": "Đáp án đúng vì r≈0 đồng nghĩa độc lập Nội dung này giữ giới hạn kết luận của Tương quan Pearson.",
@@ -569,9 +569,9 @@
       "question": "Bẫy nào phải tránh trong Ma trận hiệp phương sai?",
       "options": [
         "nhầm covariance matrix là n×n",
-        "nhầm covariance matrix là n×n",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "nhầm covariance matrix là n×n",
       "explanation": "Đáp án đúng vì nhầm covariance matrix là n×n Nội dung này giữ giới hạn kết luận của Ma trận hiệp phương sai.",
@@ -701,9 +701,9 @@
       "question": "Bẫy nào phải tránh trong Trị riêng và vector riêng của covariance matrix?",
       "options": [
         "coi trị riêng âm đáng kể là bình thường",
-        "coi trị riêng âm đáng kể là bình thường",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "coi trị riêng âm đáng kể là bình thường",
       "explanation": "Đáp án đúng vì coi trị riêng âm đáng kể là bình thường Nội dung này giữ giới hạn kết luận của Trị riêng và vector riêng của covariance matrix.",
@@ -833,9 +833,9 @@
       "question": "Bẫy nào phải tránh trong PCA nhập môn?",
       "options": [
         "chọn k hoàn toàn theo cảm tính",
-        "chọn k hoàn toàn theo cảm tính",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "chọn k hoàn toàn theo cảm tính",
       "explanation": "Đáp án đúng vì chọn k hoàn toàn theo cảm tính Nội dung này giữ giới hạn kết luận của PCA nhập môn.",
@@ -965,9 +965,9 @@
       "question": "Bẫy nào phải tránh trong Tái tạo dữ liệu và sai số khi giảm chiều?",
       "options": [
         "coi giảm chiều là không mất thông tin",
-        "coi giảm chiều là không mất thông tin",
         "Không cần kiểm tra giả thiết",
-        "Chỉ cần đồ thị đẹp"
+        "Chỉ cần đồ thị đẹp",
+        "Không cần kiểm tra shape/đơn vị nếu phép tính chạy được."
       ],
       "answer": "coi giảm chiều là không mất thông tin",
       "explanation": "Đáp án đúng vì coi giảm chiều là không mất thông tin Nội dung này giữ giới hạn kết luận của Tái tạo dữ liệu và sai số khi giảm chiều.",
