@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_question_bank_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
+  "version": "E140_EXAM_RUNTIME_COMPAT",
   "subject": "math",
   "title": "Ngân hàng câu hỏi · Nội dung",
   "contentVaultRole": "content",
@@ -30,7 +30,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-data_matrix-Q002",
@@ -51,7 +52,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-data_matrix-Q003",
@@ -72,7 +74,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-data_matrix-Q004",
@@ -93,7 +96,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-data_matrix-Q005",
@@ -114,13 +118,14 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-data_matrix-Q006",
       "lessonId": "MATH-VN-LA-C01-L01",
       "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
-      "level": "hard",
+      "level": "expert",
       "question": "Cách kiểm chứng tốt cho Dữ liệu đa chiều và ma trận dữ liệu X là gì?",
       "options": [
         "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
@@ -135,7 +140,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-centering-Q001",
@@ -156,7 +162,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-centering-Q002",
@@ -177,7 +184,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-centering-Q003",
@@ -198,7 +206,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-centering-Q004",
@@ -219,7 +228,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-centering-Q005",
@@ -240,13 +250,14 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-centering-Q006",
       "lessonId": "MATH-VN-PS-C06-L09",
       "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
-      "level": "hard",
+      "level": "expert",
       "question": "Cách kiểm chứng tốt cho Trung tâm hóa và chuẩn hóa đặc trưng là gì?",
       "options": [
         "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
@@ -261,7 +272,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-covariance-Q001",
@@ -282,7 +294,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-covariance-Q002",
@@ -303,7 +316,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-covariance-Q003",
@@ -324,7 +338,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-covariance-Q004",
@@ -345,7 +360,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-covariance-Q005",
@@ -366,13 +382,14 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-covariance-Q006",
       "lessonId": "MATH-VN-PS-C05-L05",
       "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
-      "level": "hard",
+      "level": "expert",
       "question": "Cách kiểm chứng tốt cho Hiệp phương sai là gì?",
       "options": [
         "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
@@ -387,7 +404,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-pearson-Q001",
@@ -408,7 +426,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-pearson-Q002",
@@ -429,7 +448,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-pearson-Q003",
@@ -450,7 +470,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-pearson-Q004",
@@ -471,7 +492,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-pearson-Q005",
@@ -492,13 +514,14 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-pearson-Q006",
       "lessonId": "MATH-VN-PS-C06-L10",
       "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
-      "level": "hard",
+      "level": "expert",
       "question": "Cách kiểm chứng tốt cho Tương quan Pearson là gì?",
       "options": [
         "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
@@ -513,7 +536,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "vn"
     },
     {
       "questionId": "E15-cov_matrix-Q001",
@@ -534,7 +558,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-cov_matrix-Q002",
@@ -555,7 +580,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-cov_matrix-Q003",
@@ -576,7 +602,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-cov_matrix-Q004",
@@ -597,7 +624,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-cov_matrix-Q005",
@@ -618,13 +646,14 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-cov_matrix-Q006",
       "lessonId": "MATH-PREP-LA2-C10-L05",
       "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
-      "level": "hard",
+      "level": "expert",
       "question": "Cách kiểm chứng tốt cho Ma trận hiệp phương sai là gì?",
       "options": [
         "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
@@ -639,7 +668,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-eigen_cov-Q001",
@@ -660,7 +690,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-eigen_cov-Q002",
@@ -681,7 +712,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-eigen_cov-Q003",
@@ -702,7 +734,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-eigen_cov-Q004",
@@ -723,7 +756,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-eigen_cov-Q005",
@@ -744,13 +778,14 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-eigen_cov-Q006",
       "lessonId": "MATH-PREP-LA2-C10-L01",
       "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
-      "level": "hard",
+      "level": "expert",
       "question": "Cách kiểm chứng tốt cho Trị riêng và vector riêng của covariance matrix là gì?",
       "options": [
         "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
@@ -765,7 +800,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-pca-Q001",
@@ -786,7 +822,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-pca-Q002",
@@ -807,7 +844,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-pca-Q003",
@@ -828,7 +866,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-pca-Q004",
@@ -849,7 +888,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-pca-Q005",
@@ -870,13 +910,14 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-pca-Q006",
       "lessonId": "MATH-PREP-LA2-C10-L06",
       "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
-      "level": "hard",
+      "level": "expert",
       "question": "Cách kiểm chứng tốt cho PCA nhập môn là gì?",
       "options": [
         "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
@@ -891,7 +932,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-reconstruction-Q001",
@@ -912,7 +954,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-reconstruction-Q002",
@@ -933,7 +976,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-reconstruction-Q003",
@@ -954,7 +998,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-reconstruction-Q004",
@@ -975,7 +1020,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-reconstruction-Q005",
@@ -996,13 +1042,14 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     },
     {
       "questionId": "E15-reconstruction-Q006",
       "lessonId": "MATH-PREP-LA2-C10-L08",
       "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
-      "level": "hard",
+      "level": "expert",
       "question": "Cách kiểm chứng tốt cho Tái tạo dữ liệu và sai số khi giảm chiều là gì?",
       "options": [
         "Tính tay trên ví dụ nhỏ, đối chiếu bằng NumPy, kiểm shape/đơn vị và thử trường hợp biên.",
@@ -1017,7 +1064,8 @@
         "E15"
       ],
       "auditStatus": "PASS",
-      "sourceBundle": "E139_E15_LOGICAL"
+      "sourceBundle": "E139_E15_LOGICAL",
+      "stage": "prep"
     }
   ],
   "importPolicy": {
