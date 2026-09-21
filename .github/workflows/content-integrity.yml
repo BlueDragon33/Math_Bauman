@@ -1,0 +1,33 @@
+name: Math Content Integrity Gate
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "assets/**"
+      - "data/**"
+      - "tools/e145_content_integrity.py"
+      - ".github/workflows/content-integrity.yml"
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "assets/**"
+      - "data/**"
+      - "tools/e145_content_integrity.py"
+      - ".github/workflows/content-integrity.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integrity:
+    name: E145 Runtime Content Integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run integrity gate
+        run: python3 tools/e145_content_integrity.py
