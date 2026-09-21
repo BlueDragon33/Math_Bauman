@@ -51,6 +51,22 @@ def records(payload) -> list:
     return []
 
 
+
+def check_all_json_files() -> int:
+    """Parse every persisted JSON file under data/ plus root subject-manifest.json."""
+    paths = sorted(DATA.rglob("*.json")) + [ROOT / "subject-manifest.json"]
+    checked = 0
+    for path in paths:
+        try:
+            json.loads(path.read_text(encoding="utf-8"))
+            checked += 1
+        except FileNotFoundError:
+            fail(f"missing JSON: {path.relative_to(ROOT)}")
+        except json.JSONDecodeError as exc:
+            fail(f"invalid JSON: {path.relative_to(ROOT)}:{exc.lineno}:{exc.colno} {exc.msg}")
+    return checked
+
+
 def check_manifest_counts() -> tuple[dict[str, int], dict]:
     path = DATA / "content_vault_manifest.json"
     manifest = load_json(path)
@@ -405,6 +421,7 @@ def check_bridge_contract(counts: dict[str, int]) -> None:
 
 
 def main() -> int:
+    json_files = check_all_json_files()
     counts, manifest = check_manifest_counts()
     check_manifest_federation(counts, manifest)
     check_adapter_counts(counts)
@@ -414,6 +431,7 @@ def main() -> int:
     check_bridge_contract(counts)
 
     print("E145 Runtime Content Integrity Gate")
+    print(f"- JSON files parsed: {json_files}")
     print(f"- Content Vault domains: {len(counts)}")
     print(f"- Questions: {questions}")
     print(f"- Blueprints: {blueprints}")
