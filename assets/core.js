@@ -52,9 +52,9 @@ const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.quer
 const arr=v=>Array.isArray(v)?v:[], str=v=>String(v??''), esc=v=>str(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])), lower=v=>str(v).toLowerCase();
 const uniq=a=>Array.from(new Set(arr(a).filter(Boolean))); const key=A.storageKey||'bauman_math_elearning_e74_skeleton';
 const CORE_STORAGE=window.BaumanPlatformStorage||null;
-function coreStorageGet(k){try{return CORE_STORAGE?CORE_STORAGE.getItem(k):coreStorageGet(k)}catch(_){return null}}
-function coreStorageSet(k,v,meta){try{if(CORE_STORAGE)CORE_STORAGE.setItem(k,v,meta||{layer:'core'});else coreStorageSet(k,v);return true}catch(_){return false}}
-function coreStorageRemove(k,meta){try{if(CORE_STORAGE)CORE_STORAGE.removeItem(k,meta||{layer:'core'});else coreStorageRemove(k);return true}catch(_){return false}}
+function coreStorageGet(k){try{return CORE_STORAGE?CORE_STORAGE.getItem(k):localStorage.getItem(k)}catch(_){return null}}
+function coreStorageSet(k,v,meta){try{if(CORE_STORAGE)CORE_STORAGE.setItem(k,v,meta||{layer:'core'});else localStorage.setItem(k,v);return true}catch(_){return false}}
+function coreStorageRemove(k,meta){try{if(CORE_STORAGE)CORE_STORAGE.removeItem(k,meta||{layer:'core'});else localStorage.removeItem(k);return true}catch(_){return false}}
 
 function dedupeById(list){const seen=new Set();return arr(list).filter((x,i)=>{const id=str(x?.id||x?.lessonId||x?.title||i); if(seen.has(id))return false; seen.add(id); return true;});}
 function safeParseJson(raw,fallback){try{return raw?JSON.parse(raw):fallback}catch(_){return fallback}}
