@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_simulation_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
+  "version": "E151_HK1_TIME_SERIES_CONTENT",
   "subject": "math",
   "title": "Mô phỏng unified · Nội dung",
   "contentVaultRole": "content",
@@ -602,6 +602,324 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E151-process-SIM1",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Lab chuỗi thời gian · Dữ liệu theo thời gian và quá trình ngẫu nhiên",
+      "purpose": "Quan sát trực giác của Dữ liệu theo thời gian và quá trình ngẫu nhiên khi thay đổi phụ thuộc, noise và độ dài chuỗi.",
+      "controls": [
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 200,
+          "min": 40,
+          "max": 1000
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.2,
+          "min": 0,
+          "max": 2
+        },
+        {
+          "key": "lag_or_phi",
+          "type": "number",
+          "default": 1,
+          "min": -0.95,
+          "max": 24
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "mean_variance",
+          "label": "Mean / variance"
+        },
+        {
+          "key": "acf",
+          "label": "ACF / lag diagnostic"
+        },
+        {
+          "key": "residual_metric",
+          "label": "Residual / baseline error"
+        }
+      ],
+      "expectedObservation": "Thứ tự thời gian và sample path là một phần của dữ liệu. Thay đổi tham số phải phản ánh vào cấu trúc theo thời gian, không chỉ phân phối biên.",
+      "tags": [
+        "time-series",
+        "simulation",
+        "process",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "simulationId": "E151-stationarity-SIM1",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Lab chuỗi thời gian · Tính dừng và tính dừng yếu (WSS)",
+      "purpose": "Quan sát trực giác của Tính dừng và tính dừng yếu (WSS) khi thay đổi phụ thuộc, noise và độ dài chuỗi.",
+      "controls": [
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 200,
+          "min": 40,
+          "max": 1000
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.2,
+          "min": 0,
+          "max": 2
+        },
+        {
+          "key": "lag_or_phi",
+          "type": "number",
+          "default": 1,
+          "min": -0.95,
+          "max": 24
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "mean_variance",
+          "label": "Mean / variance"
+        },
+        {
+          "key": "acf",
+          "label": "ACF / lag diagnostic"
+        },
+        {
+          "key": "residual_metric",
+          "label": "Residual / baseline error"
+        }
+      ],
+      "expectedObservation": "WSS yêu cầu mean hằng theo thời gian và autocovariance chỉ phụ thuộc lag. Thay đổi tham số phải phản ánh vào cấu trúc theo thời gian, không chỉ phân phối biên.",
+      "tags": [
+        "time-series",
+        "simulation",
+        "stationarity",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "simulationId": "E151-acf-SIM1",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Lab chuỗi thời gian · Autocovariance, autocorrelation và độ trễ",
+      "purpose": "Quan sát trực giác của Autocovariance, autocorrelation và độ trễ khi thay đổi phụ thuộc, noise và độ dài chuỗi.",
+      "controls": [
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 200,
+          "min": 40,
+          "max": 1000
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.2,
+          "min": 0,
+          "max": 2
+        },
+        {
+          "key": "lag_or_phi",
+          "type": "number",
+          "default": 1,
+          "min": -0.95,
+          "max": 24
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "mean_variance",
+          "label": "Mean / variance"
+        },
+        {
+          "key": "acf",
+          "label": "ACF / lag diagnostic"
+        },
+        {
+          "key": "residual_metric",
+          "label": "Residual / baseline error"
+        }
+      ],
+      "expectedObservation": "ACF đo phụ thuộc tuyến tính của chuỗi với chính nó theo lag. Thay đổi tham số phải phản ánh vào cấu trúc theo thời gian, không chỉ phân phối biên.",
+      "tags": [
+        "time-series",
+        "simulation",
+        "acf",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "simulationId": "E151-ar1-SIM1",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Lab chuỗi thời gian · White noise, random walk và AR(1)",
+      "purpose": "Quan sát trực giác của White noise, random walk và AR(1) khi thay đổi phụ thuộc, noise và độ dài chuỗi.",
+      "controls": [
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 200,
+          "min": 40,
+          "max": 1000
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.2,
+          "min": 0,
+          "max": 2
+        },
+        {
+          "key": "lag_or_phi",
+          "type": "number",
+          "default": 0.7,
+          "min": -0.95,
+          "max": 24
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "mean_variance",
+          "label": "Mean / variance"
+        },
+        {
+          "key": "acf",
+          "label": "ACF / lag diagnostic"
+        },
+        {
+          "key": "residual_metric",
+          "label": "Residual / baseline error"
+        }
+      ],
+      "expectedObservation": "White noise, random walk và AR(1) có cấu trúc phụ thuộc rất khác nhau dù đều dùng nhiễu. Thay đổi tham số phải phản ánh vào cấu trúc theo thời gian, không chỉ phân phối biên.",
+      "tags": [
+        "time-series",
+        "simulation",
+        "ar1",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "simulationId": "E151-structure-SIM1",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Lab chuỗi thời gian · Trend, seasonality và sai phân",
+      "purpose": "Quan sát trực giác của Trend, seasonality và sai phân khi thay đổi phụ thuộc, noise và độ dài chuỗi.",
+      "controls": [
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 200,
+          "min": 40,
+          "max": 1000
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.2,
+          "min": 0,
+          "max": 2
+        },
+        {
+          "key": "lag_or_phi",
+          "type": "number",
+          "default": 1,
+          "min": -0.95,
+          "max": 24
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "mean_variance",
+          "label": "Mean / variance"
+        },
+        {
+          "key": "acf",
+          "label": "ACF / lag diagnostic"
+        },
+        {
+          "key": "residual_metric",
+          "label": "Residual / baseline error"
+        }
+      ],
+      "expectedObservation": "Trend/seasonality phải được tách hoặc mô hình hóa; differencing có thể giảm stochastic trend. Thay đổi tham số phải phản ánh vào cấu trúc theo thời gian, không chỉ phân phối biên.",
+      "tags": [
+        "time-series",
+        "simulation",
+        "structure",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "simulationId": "E151-forecast-SIM1",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Lab chuỗi thời gian · Forecast baseline, temporal split và residual",
+      "purpose": "Quan sát trực giác của Forecast baseline, temporal split và residual khi thay đổi phụ thuộc, noise và độ dài chuỗi.",
+      "controls": [
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 200,
+          "min": 40,
+          "max": 1000
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.2,
+          "min": 0,
+          "max": 2
+        },
+        {
+          "key": "lag_or_phi",
+          "type": "number",
+          "default": 1,
+          "min": -0.95,
+          "max": 24
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "mean_variance",
+          "label": "Mean / variance"
+        },
+        {
+          "key": "acf",
+          "label": "ACF / lag diagnostic"
+        },
+        {
+          "key": "residual_metric",
+          "label": "Residual / baseline error"
+        }
+      ],
+      "expectedObservation": "Đánh giá phải giữ hướng thời gian và so với baseline đơn giản. Thay đổi tham số phải phản ánh vào cấu trúc theo thời gian, không chỉ phân phối biên.",
+      "tags": [
+        "time-series",
+        "simulation",
+        "forecast",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
     }
   ],
   "importPolicy": {
@@ -670,5 +988,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
 }
