@@ -1,0 +1,24 @@
+{
+  "name": "Toán Bauman · Math Master Web App",
+  "short_name": "Toán Bauman",
+  "description": "Web App Toán Bauman cho lộ trình dự bị, thạc sĩ, AI, tín hiệu và hệ thống.",
+  "lang": "vi",
+  "id": "./",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#f4f7fb",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "assets/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
