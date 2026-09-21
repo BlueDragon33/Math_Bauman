@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_formula_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
+  "version": "E151_HK1_TIME_SERIES_CONTENT",
   "subject": "math",
   "title": "Công thức · Nội dung",
   "contentVaultRole": "content",
@@ -442,6 +442,234 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E151-process-F1",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Quá trình ngẫu nhiên",
+      "formula": "{X_t : t∈T}",
+      "meaning": "Một họ biến ngẫu nhiên được đánh chỉ số bởi thời gian.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "process",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-process-F2",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Sample path",
+      "formula": "x_t(ω), t∈T",
+      "meaning": "Một hiện thực của quá trình khi cố định kết quả ω.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "process",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-stationarity-F1",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Mean WSS",
+      "formula": "E[X_t]=μ",
+      "meaning": "Trung bình không phụ thuộc mốc thời gian t.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-stationarity-F2",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Autocovariance WSS",
+      "formula": "γ(t,s)=γ(t-s)=γ(h)",
+      "meaning": "Quan hệ bậc hai chỉ phụ thuộc độ trễ.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-acf-F1",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Autocovariance",
+      "formula": "γ(h)=Cov(X_t,X_{t-h})",
+      "meaning": "Đồng biến thiên theo độ trễ h với chuỗi dừng yếu.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-acf-F2",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Autocorrelation",
+      "formula": "ρ(h)=γ(h)/γ(0)",
+      "meaning": "Chuẩn hóa autocovariance, |ρ(h)|≤1.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-ar1-F1",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "AR(1)",
+      "formula": "X_t=φX_{t-1}+ε_t",
+      "meaning": "Mô hình ký ức tuyến tính bậc một.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-ar1-F2",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Điều kiện dừng AR(1)",
+      "formula": "|φ|<1",
+      "meaning": "Với white-noise innovation và |φ|<1, AR(1) có nghiệm dừng.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-structure-F1",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Sai phân bậc một",
+      "formula": "ΔX_t=X_t-X_{t-1}",
+      "meaning": "Loại một phần mức chậm/stochastic trend.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-structure-F2",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Sai phân theo mùa",
+      "formula": "Δ_s X_t=X_t-X_{t-s}",
+      "meaning": "So sánh với giá trị cách s bước để giảm seasonality.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-forecast-F1",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Naive forecast",
+      "formula": "ŷ_{t+1}=y_t",
+      "meaning": "Baseline: dự báo bước kế tiếp bằng quan sát gần nhất.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "formulaId": "E151-forecast-F2",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "title": "Residual",
+      "formula": "e_t=y_t-ŷ_t",
+      "meaning": "Sai số dự báo; residual còn autocorrelation nghĩa là còn cấu trúc chưa mô hình hóa.",
+      "conditions": [
+        "Giữ đúng chỉ số thời gian/lag và quy ước sampling.",
+        "Không dùng dữ liệu tương lai khi ước lượng cho bài toán dự báo."
+      ],
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
     }
   ],
   "importPolicy": {
@@ -499,5 +727,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
 }
