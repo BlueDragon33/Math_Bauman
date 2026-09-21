@@ -1,13 +1,13 @@
 {
-  "id": "bauman_math_content_manifest_e113_subjects_only_clean",
-  "version": "E113_SUBJECTS_ONLY_CLEAN",
+  "id": "bauman_math_content_manifest_e148_reconciled",
+  "version": "E148_MANIFEST_FEDERATION_RECONCILED",
   "subject": "math",
   "createdAt": "2026-06-22",
-  "status": "framework_only_empty_content_subjects_only_clean",
+  "status": "hydrated_content_manifest_reconciled",
   "isFinal": false,
   "final": false,
-  "release": "E113_SUBJECTS_ONLY_CLEAN",
-  "focus": "Bản sạch subject-only: chỉ giữ sources cần thiết để chạy môn Toán và Kho môn học frame/content.",
+  "release": "E148_MANIFEST_FEDERATION_RECONCILED",
+  "focus": "Manifest liên bang thống nhất với Content Vault E146 và release state E147; path local cho standalone, packagePath cho Hub.",
   "counts": {
     "content_vault_manifest": 13,
     "discipline_spine": 12,
@@ -16,31 +16,31 @@
     "content-manifest": 30,
     "learning_rules": 3,
     "theory_lecture_frame": 56,
-    "theory_lecture_content": 18,
+    "theory_lecture_content": 347,
     "formula_frame": 56,
-    "formula_content": 18,
+    "formula_content": 24,
     "simulation_frame": 56,
-    "simulation_content": 18,
+    "simulation_content": 16,
     "exercise_frame": 56,
-    "exercise_content": 18,
+    "exercise_content": 64,
     "application_frame": 56,
-    "application_content": 18,
+    "application_content": 16,
     "professor_qa_frame": 56,
-    "professor_qa_content": 18,
+    "professor_qa_content": 8,
     "review_pack_frame": 56,
-    "review_pack_content": 18,
+    "review_pack_content": 8,
     "question_bank_frame": 56,
-    "question_bank_content": 18,
+    "question_bank_content": 200,
     "test_blueprint_frame": 56,
-    "test_blueprint_content": 18,
+    "test_blueprint_content": 4,
     "chapter_lecture_frame": 56,
-    "chapter_lecture_content": 18,
+    "chapter_lecture_content": 0,
     "mindmap_frame": 56,
-    "mindmap_content": 18,
+    "mindmap_content": 8,
     "concept_map_frame": 56,
-    "concept_map_content": 18,
+    "concept_map_content": 0,
     "media_frame": 56,
-    "media_content": 18,
+    "media_content": 0,
     "lessons": 0,
     "formulas": 0,
     "simulations": 0,
@@ -59,10 +59,11 @@
     "mastery-map": 0
   },
   "activeStatus": {
-    "content": "empty_by_design",
-    "ui": "clean_vault_ready",
-    "dataVault": "frame_content_ready",
-    "schedule": "today_table_focused"
+    "content": "hydrated",
+    "ui": "integrity_hardened",
+    "dataVault": "dual_mode_path_contract",
+    "schedule": "today_table_focused",
+    "integrityGate": "E145"
   },
   "treePolicy": "E112_stage_discipline_frame_content_clean_json",
   "contentPolicy": "Mọi khối nội dung chính có frame/content riêng; nhập nội dung vào *_content.json; thay khung ở *_frame.json.",
@@ -71,9 +72,11 @@
       "id": "content_vault_manifest",
       "label": "Manifest Kho môn học",
       "group": "Khung hệ thống",
-      "path": "subjects/math/data/content_vault_manifest.json",
+      "path": "data/content_vault_manifest.json",
       "description": "Bản điều khiển các cặp frame/content",
-      "plannedCount": 13
+      "plannedCount": 13,
+      "packagePath": "subjects/math/data/content_vault_manifest.json",
+      "recordCount": 13
     },
     {
       "id": "discipline_spine",
@@ -103,209 +106,261 @@
       "id": "theory_lecture_frame",
       "label": "Bài giảng lý thuyết · Khung",
       "group": "Bài giảng lý thuyết",
-      "path": "subjects/math/data/theory_lecture_frame.json",
+      "path": "data/theory_lecture_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Bài giảng lý thuyết",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/theory_lecture_frame.json",
+      "recordCount": 56
     },
     {
       "id": "theory_lecture_content",
       "label": "Bài giảng lý thuyết · Nội dung",
       "group": "Bài giảng lý thuyết",
-      "path": "subjects/math/data/theory_lecture_content.json",
+      "path": "data/theory_lecture_content.json",
       "description": "Records nội dung import/export cho Bài giảng lý thuyết",
-      "plannedCount": 18
+      "plannedCount": 347,
+      "packagePath": "subjects/math/data/theory_lecture_content.json",
+      "recordCount": 347
     },
     {
       "id": "formula_frame",
       "label": "Công thức · Khung",
       "group": "Công thức",
-      "path": "subjects/math/data/formula_frame.json",
+      "path": "data/formula_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Công thức",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/formula_frame.json",
+      "recordCount": 56
     },
     {
       "id": "formula_content",
       "label": "Công thức · Nội dung",
       "group": "Công thức",
-      "path": "subjects/math/data/formula_content.json",
+      "path": "data/formula_content.json",
       "description": "Records nội dung import/export cho Công thức",
-      "plannedCount": 18
+      "plannedCount": 24,
+      "packagePath": "subjects/math/data/formula_content.json",
+      "recordCount": 24
     },
     {
       "id": "simulation_frame",
       "label": "Mô phỏng · Khung",
       "group": "Mô phỏng",
-      "path": "subjects/math/data/simulation_frame.json",
+      "path": "data/simulation_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Mô phỏng",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/simulation_frame.json",
+      "recordCount": 56
     },
     {
       "id": "simulation_content",
       "label": "Mô phỏng · Nội dung",
       "group": "Mô phỏng",
-      "path": "subjects/math/data/simulation_content.json",
+      "path": "data/simulation_content.json",
       "description": "Records nội dung import/export cho Mô phỏng",
-      "plannedCount": 18
+      "plannedCount": 16,
+      "packagePath": "subjects/math/data/simulation_content.json",
+      "recordCount": 16
     },
     {
       "id": "exercise_frame",
       "label": "Bài tập · Khung",
       "group": "Bài tập",
-      "path": "subjects/math/data/exercise_frame.json",
+      "path": "data/exercise_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Bài tập",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/exercise_frame.json",
+      "recordCount": 56
     },
     {
       "id": "exercise_content",
       "label": "Bài tập · Nội dung",
       "group": "Bài tập",
-      "path": "subjects/math/data/exercise_content.json",
+      "path": "data/exercise_content.json",
       "description": "Records nội dung import/export cho Bài tập",
-      "plannedCount": 18
+      "plannedCount": 64,
+      "packagePath": "subjects/math/data/exercise_content.json",
+      "recordCount": 64
     },
     {
       "id": "application_frame",
       "label": "Ứng dụng · Khung",
       "group": "Ứng dụng",
-      "path": "subjects/math/data/application_frame.json",
+      "path": "data/application_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Ứng dụng",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/application_frame.json",
+      "recordCount": 56
     },
     {
       "id": "application_content",
       "label": "Ứng dụng · Nội dung",
       "group": "Ứng dụng",
-      "path": "subjects/math/data/application_content.json",
+      "path": "data/application_content.json",
       "description": "Records nội dung import/export cho Ứng dụng",
-      "plannedCount": 18
+      "plannedCount": 16,
+      "packagePath": "subjects/math/data/application_content.json",
+      "recordCount": 16
     },
     {
       "id": "professor_qa_frame",
       "label": "Vấn đáp · Khung",
       "group": "Vấn đáp",
-      "path": "subjects/math/data/professor_qa_frame.json",
+      "path": "data/professor_qa_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Vấn đáp",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/professor_qa_frame.json",
+      "recordCount": 56
     },
     {
       "id": "professor_qa_content",
       "label": "Vấn đáp · Nội dung",
       "group": "Vấn đáp",
-      "path": "subjects/math/data/professor_qa_content.json",
+      "path": "data/professor_qa_content.json",
       "description": "Records nội dung import/export cho Vấn đáp",
-      "plannedCount": 18
+      "plannedCount": 8,
+      "packagePath": "subjects/math/data/professor_qa_content.json",
+      "recordCount": 8
     },
     {
       "id": "review_pack_frame",
       "label": "Ôn tập · Khung",
       "group": "Ôn tập",
-      "path": "subjects/math/data/review_pack_frame.json",
+      "path": "data/review_pack_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Ôn tập",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/review_pack_frame.json",
+      "recordCount": 56
     },
     {
       "id": "review_pack_content",
       "label": "Ôn tập · Nội dung",
       "group": "Ôn tập",
-      "path": "subjects/math/data/review_pack_content.json",
+      "path": "data/review_pack_content.json",
       "description": "Records nội dung import/export cho Ôn tập",
-      "plannedCount": 18
+      "plannedCount": 8,
+      "packagePath": "subjects/math/data/review_pack_content.json",
+      "recordCount": 8
     },
     {
       "id": "question_bank_frame",
       "label": "Ngân hàng câu hỏi · Khung",
       "group": "Ngân hàng câu hỏi",
-      "path": "subjects/math/data/question_bank_frame.json",
+      "path": "data/question_bank_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Ngân hàng câu hỏi",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/question_bank_frame.json",
+      "recordCount": 56
     },
     {
       "id": "question_bank_content",
       "label": "Ngân hàng câu hỏi · Nội dung",
       "group": "Ngân hàng câu hỏi",
-      "path": "subjects/math/data/question_bank_content.json",
+      "path": "data/question_bank_content.json",
       "description": "Records nội dung import/export cho Ngân hàng câu hỏi",
-      "plannedCount": 18
+      "plannedCount": 200,
+      "packagePath": "subjects/math/data/question_bank_content.json",
+      "recordCount": 200
     },
     {
       "id": "test_blueprint_frame",
       "label": "Blueprint kiểm tra · Khung",
       "group": "Blueprint kiểm tra",
-      "path": "subjects/math/data/test_blueprint_frame.json",
+      "path": "data/test_blueprint_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Blueprint kiểm tra",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/test_blueprint_frame.json",
+      "recordCount": 56
     },
     {
       "id": "test_blueprint_content",
       "label": "Blueprint kiểm tra · Nội dung",
       "group": "Blueprint kiểm tra",
-      "path": "subjects/math/data/test_blueprint_content.json",
+      "path": "data/test_blueprint_content.json",
       "description": "Records nội dung import/export cho Blueprint kiểm tra",
-      "plannedCount": 18
+      "plannedCount": 4,
+      "packagePath": "subjects/math/data/test_blueprint_content.json",
+      "recordCount": 4
     },
     {
       "id": "chapter_lecture_frame",
       "label": "Slide bổ trợ cấp chương · Khung",
       "group": "Slide bổ trợ cấp chương",
-      "path": "subjects/math/data/chapter_lecture_frame.json",
+      "path": "data/chapter_lecture_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Slide bổ trợ cấp chương",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/chapter_lecture_frame.json",
+      "recordCount": 56
     },
     {
       "id": "chapter_lecture_content",
       "label": "Slide bổ trợ cấp chương · Nội dung",
       "group": "Slide bổ trợ cấp chương",
-      "path": "subjects/math/data/chapter_lecture_content.json",
+      "path": "data/chapter_lecture_content.json",
       "description": "Records nội dung import/export cho Slide bổ trợ cấp chương",
-      "plannedCount": 18
+      "plannedCount": 0,
+      "packagePath": "subjects/math/data/chapter_lecture_content.json",
+      "recordCount": 0
     },
     {
       "id": "mindmap_frame",
       "label": "Mind map · Khung",
       "group": "Mind map",
-      "path": "subjects/math/data/mindmap_frame.json",
+      "path": "data/mindmap_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Mind map",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/mindmap_frame.json",
+      "recordCount": 56
     },
     {
       "id": "mindmap_content",
       "label": "Mind map · Nội dung",
       "group": "Mind map",
-      "path": "subjects/math/data/mindmap_content.json",
+      "path": "data/mindmap_content.json",
       "description": "Records nội dung import/export cho Mind map",
-      "plannedCount": 18
+      "plannedCount": 8,
+      "packagePath": "subjects/math/data/mindmap_content.json",
+      "recordCount": 8
     },
     {
       "id": "concept_map_frame",
       "label": "Concept map · Khung",
       "group": "Concept map",
-      "path": "subjects/math/data/concept_map_frame.json",
+      "path": "data/concept_map_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Concept map",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/concept_map_frame.json",
+      "recordCount": 56
     },
     {
       "id": "concept_map_content",
       "label": "Concept map · Nội dung",
       "group": "Concept map",
-      "path": "subjects/math/data/concept_map_content.json",
+      "path": "data/concept_map_content.json",
       "description": "Records nội dung import/export cho Concept map",
-      "plannedCount": 18
+      "plannedCount": 0,
+      "packagePath": "subjects/math/data/concept_map_content.json",
+      "recordCount": 0
     },
     {
       "id": "media_frame",
       "label": "Media / Canva · Khung",
       "group": "Media / Canva",
-      "path": "subjects/math/data/media_frame.json",
+      "path": "data/media_frame.json",
       "description": "Khung/phân loại/luật tìm kiếm-thay thế cho Media / Canva",
-      "plannedCount": 56
+      "plannedCount": 56,
+      "packagePath": "subjects/math/data/media_frame.json",
+      "recordCount": 56
     },
     {
       "id": "media_content",
       "label": "Media / Canva · Nội dung",
       "group": "Media / Canva",
-      "path": "subjects/math/data/media_content.json",
+      "path": "data/media_content.json",
       "description": "Records nội dung import/export cho Media / Canva",
-      "plannedCount": 18
+      "plannedCount": 0,
+      "packagePath": "subjects/math/data/media_content.json",
+      "recordCount": 0
     }
   ],
   "qualityGate": {
@@ -319,5 +374,9 @@
     "visibleSplitVaultUi": true,
     "allSplitSourcesLoadedByDefault": true
   },
-  "updatedAt": "2026-06-22T07:15:00Z"
+  "updatedAt": "2026-09-21T00:00:00Z",
+  "pathContract": {
+    "standaloneRoot": "./",
+    "packageRoot": "subjects/math/"
+  }
 }
