@@ -4,7 +4,7 @@
   let observer=null,queued=false;
   function arr(v){return Array.isArray(v)?v:[];}
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-  function state(){return window.__MATH_STATE||{};}
+  function state(){return (window.__BAUMAN_CORE_API&&window.__BAUMAN_CORE_API.state)||window.__MATH_STATE||window.state||{};}
   function stageOf(x){
     if(x&&x.stage)return String(x.stage);
     const id=String((x&&(x.chapterId||x.lessonId||x.id))||'');
