@@ -60,7 +60,10 @@ async function routeSmoke(label, view, learnTab = null) {
       state: window.__BAUMAN_CORE_API ? {
         view: window.__BAUMAN_CORE_API.state.view,
         learnTab: window.__BAUMAN_CORE_API.state.learnTab
-      } : null
+      } : null,
+      mindmapCanvas: !!document.querySelector('[data-mindmap-canvas="1"]'),
+      maps: Array.isArray(window.DB?.mindmap) ? window.DB.mindmap.length : 0,
+      professorQa: Array.isArray(window.DB?.professor_qa) ? window.DB.professor_qa.length : 0
     };
   });
 
@@ -70,6 +73,12 @@ async function routeSmoke(label, view, learnTab = null) {
   if (result.textLength < 24) await fail(label + ': rendered content is unexpectedly empty');
   if (result.recovery) await fail(label + ': recovery UI was rendered');
   if (result.objectObject) await fail(label + ': visible [object Object] regression');
+  if (view === 'mindmap' && (!result.mindmapCanvas || result.maps < 1)) {
+    await fail(label + ': visible mindmap runtime surface missing');
+  }
+  if (view === 'dialogue' && result.professorQa < 1) {
+    await fail(label + ': professor QA runtime bridge is empty');
+  }
 }
 
 try {
@@ -124,14 +133,20 @@ try {
     await routeSmoke(label, view, tab || null);
   }
 
-  const mindmap = await page.evaluate(() => ({
-    canvas: !!document.querySelector('[data-mindmap-canvas="1"]'),
+  const postChecks = await page.evaluate(() => ({
+    e140: typeof window.BAUMAN_MATH_E140_SELF_CHECK === 'function'
+      ? window.BAUMAN_MATH_E140_SELF_CHECK() : null,
+    e150: typeof window.BAUMAN_MATH_E150_SELF_CHECK === 'function'
+      ? window.BAUMAN_MATH_E150_SELF_CHECK() : null,
     maps: Array.isArray(window.DB?.mindmap) ? window.DB.mindmap.length : 0,
     professorQa: Array.isArray(window.DB?.professor_qa) ? window.DB.professor_qa.length : 0
   }));
-  console.log('E155 runtime data', JSON.stringify(mindmap));
-  if (!mindmap.canvas || mindmap.maps < 1) await fail('mindmap visible runtime surface missing');
-  if (mindmap.professorQa < 1) await fail('professor QA runtime bridge is empty');
+  console.log('E155 post-route checks', JSON.stringify(postChecks));
+  if (!postChecks.e140?.ok) await fail('E140 bridge regressed after route traversal');
+  if (!postChecks.e150?.ok) await fail('E150 bridge regressed after route traversal');
+  if (postChecks.maps < 1 || postChecks.professorQa < 1) {
+    await fail('runtime bridged data was lost during route traversal');
+  }
 
   if (pageErrors.length) await fail('uncaught page errors detected');
   if (guardErrors.length) await fail('render guard errors detected');
