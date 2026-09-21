@@ -244,6 +244,80 @@ try {
     await fail('PWA did not become controlled/offline-ready');
   }
 
+  const activationSeed = await page.evaluate(async () => {
+    const keys = await caches.keys();
+    const runtime = keys.find(k => k.endsWith('-runtime'));
+    if (!runtime) return { ok:false, runtime };
+    const url = new URL('./__e166_activation_stale_probe__.txt', location.href).href;
+    const req = new Request(url);
+    await (await caches.open(runtime)).put(req, new Response('stale-before-update', { status:200, headers:{'Content-Type':'text/plain'} }));
+    const status = window.MathBaumanPWA.selfCheck();
+    return { ok:true, runtime, url, controllerChanges:status.controllerChanges || 0 };
+  });
+  console.log('E166 activation seed', JSON.stringify(activationSeed));
+  if (!activationSeed.ok) await fail('E166 could not seed stale runtime cache probe');
+
+  fs.appendFileSync(new URL('../service-worker.js', import.meta.url), '\n// E166 CI update probe\n', 'utf8');
+
+  const swUpdate = await page.evaluate(async (beforeChanges) => {
+    const registration = await navigator.serviceWorker.getRegistration('./');
+    if (!registration) return { ok:false, reason:'missing registration' };
+    const changed = new Promise((resolve, reject) => {
+      const timer = setTimeout(() => reject(new Error('controllerchange timeout')), 30000);
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        clearTimeout(timer);
+        resolve(true);
+      }, { once:true });
+    });
+    await registration.update();
+    await changed;
+    return {
+      ok:true,
+      beforeChanges,
+      controller: !!navigator.serviceWorker.controller
+    };
+  }, activationSeed.controllerChanges);
+  console.log('E166 service-worker update', JSON.stringify(swUpdate));
+  if (!swUpdate.ok || !swUpdate.controller) await fail('E166 service worker did not take control after update');
+
+  await page.waitForFunction((beforeChanges) => {
+    const pwa = window.MathBaumanPWA;
+    if (!pwa || typeof pwa.selfCheck !== 'function') return false;
+    const status = pwa.selfCheck();
+    return status.ok === true && status.controllerChanges > beforeChanges;
+  }, activationSeed.controllerChanges, { timeout: 120000 });
+
+  const activationPost = await page.evaluate(async (probeUrl) => {
+    const keys = await caches.keys();
+    const runtime = keys.find(k => k.endsWith('-runtime'));
+    const cache = runtime ? await caches.open(runtime) : null;
+    const hit = cache ? await cache.match(probeUrl) : null;
+    const entries = cache ? await cache.keys() : [];
+    const required = {};
+    for (const path of [
+      'data/theory_lecture_content.json',
+      'data/mindmap_content.json',
+      'data/theory_lecture_overlay_e138.json'
+    ]) {
+      const url = new URL(path, location.href).href;
+      const response = cache ? await cache.match(url) : null;
+      required[path] = response ? { present:true, status:response.status } : { present:false };
+    }
+    return {
+      runtime,
+      staleProbePresent: !!hit,
+      entryCount: entries.length,
+      required,
+      sampleEntries: entries.slice(0,8).map(r=>r.url),
+      pwa: window.MathBaumanPWA.selfCheck()
+    };
+  }, activationSeed.url);
+  console.log('E166 activation post', JSON.stringify(activationPost));
+  const materialized = Object.values(activationPost.required || {}).every(x => x && x.present);
+  if (activationPost.staleProbePresent || !activationPost.pwa.ok || activationPost.entryCount < 40 || !materialized) {
+    await fail('E168 runtime cache did not materialize required core data after service-worker activation');
+  }
+
   const cachePrioritySeed = await page.evaluate(async () => {
     const keys = await caches.keys();
     const shell = keys.find(k => k.endsWith('-shell'));
@@ -272,7 +346,57 @@ try {
       !!window.DB &&
       (document.querySelector('#view')?.innerText || '').trim().length > 20;
   }, null, { timeout: 60000 });
-  await page.waitForFunction(() => window.__BAUMAN_MATH_E140_VAULT_BRIDGE__?.loaded === true, null, { timeout: 30000 });
+  try {
+    await page.waitForFunction(() => window.__BAUMAN_MATH_E140_VAULT_BRIDGE__?.loaded === true, null, { timeout: 22000 });
+  } catch (error) {
+    const diagnostics = await page.evaluate(async () => {
+      const db = window.DB || {};
+      const files = Array.isArray(window.SUBJECT_ADAPTER?.initialDataFiles) ? window.SUBJECT_ADAPTER.initialDataFiles : [];
+      const missing = files.filter(name => !Object.prototype.hasOwnProperty.call(db, name));
+      const nullish = files.filter(name => Object.prototype.hasOwnProperty.call(db, name) && db[name] == null);
+      let overlayFetch = null;
+      try {
+        const r = await fetch('data/theory_lecture_overlay_e138.json', { cache:'no-store' });
+        overlayFetch = { ok:r.ok, status:r.status, length:(await r.text()).length };
+      } catch (e) {
+        overlayFetch = { ok:false, error:String(e && e.message || e) };
+      }
+      return {
+        e138: window.__BAUMAN_MATH_E138_THEORY_OVERLAY__ || null,
+        e140: window.__BAUMAN_MATH_E140_VAULT_BRIDGE__ || null,
+        initialCount: files.length,
+        missing,
+        nullish,
+        theoryContent: Array.isArray(db.theory_lecture_content)
+          ? db.theory_lecture_content.length
+          : (Array.isArray(db.theory_lecture_content?.records) ? db.theory_lecture_content.records.length : null),
+        formulaContent: Array.isArray(db.formula_content)
+          ? db.formula_content.length
+          : (Array.isArray(db.formula_content?.records) ? db.formula_content.records.length : null),
+        mindmapContent: Array.isArray(db.mindmap_content)
+          ? db.mindmap_content.length
+          : (Array.isArray(db.mindmap_content?.records) ? db.mindmap_content.records.length : null),
+        overlayFetch,
+        cacheKeys: await caches.keys(),
+        pwa: typeof window.MathBaumanPWA?.selfCheck === 'function' ? window.MathBaumanPWA.selfCheck() : null,
+        controllerScript: navigator.serviceWorker?.controller?.scriptURL || null,
+        runtimeCache: await (async()=>{
+          const key=(await caches.keys()).find(k=>k.endsWith('-runtime'));
+          if(!key)return {key:null,count:0,sample:[]};
+          const cache=await caches.open(key);
+          const entries=await cache.keys();
+          const probes={};
+          for(const path of ['data/content_vault_manifest.json','data/discipline_spine.json','data/chapter_spine.json','data/theory_lecture_content.json','data/mindmap_content.json']){
+            const u=new URL(path,location.href).href;
+            probes[path]=!!(await cache.match(u));
+          }
+          return {key,count:entries.length,sample:entries.slice(0,12).map(x=>x.url),probes};
+        })()
+      };
+    });
+    console.error('E167 offline bridge diagnostics', JSON.stringify(diagnostics));
+    await fail('E140 did not hydrate after service-worker update + origin-down reload');
+  }
   await page.waitForFunction(() => window.__BAUMAN_MATH_E150_MINDMAP_TOPOLOGY__?.loaded === true, null, { timeout: 30000 });
 
   const offline = await page.evaluate(async () => {
@@ -307,7 +431,7 @@ try {
   if (pageErrors.length) await fail('uncaught page errors detected');
   if (guardErrors.length) await fail('render guard errors detected');
 
-  console.log('E155/E157/E158/E160/E162/E164/E165 PASS: routes, interactions, persistence, mobile layout, offline runtime and cache freshness priority are healthy.');
+  console.log('E155/E157/E158/E160/E162/E164/E165/E166 PASS: routes, interactions, persistence, mobile layout, offline runtime, cache freshness and service-worker activation are healthy.');
 } finally {
   await browser.close();
 }
