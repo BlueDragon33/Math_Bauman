@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_exercise_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E112_CONTENT_VAULT_CLEAN_ARCHITECTURE",
+  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
   "subject": "math",
   "title": "Bài tập · Nội dung",
   "contentVaultRole": "content",
@@ -10,7 +10,968 @@
   "frameSource": "exercise_frame.json",
   "legacyExportTarget": "exercises.json",
   "recordKey": "exerciseId",
-  "records": [],
+  "records": [
+    {
+      "exerciseId": "E15-data_matrix-E01",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Nêu đúng đối tượng và kích thước/đơn vị trong chủ đề Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "solution": "Xác định rõ biến, quy ước và miền áp dụng trước khi tính.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-data_matrix-E02",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Tính một ví dụ số nhỏ cho công thức lõi của Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "solution": "Áp dụng công thức theo đúng quy ước; kiểm tra kích thước và đơn vị sau phép tính.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-data_matrix-E03",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Giải thích vì sao bẫy sau là sai: Không được đảo hàng/cột giữa các bước.",
+      "solution": "Sai vì Không được đảo hàng/cột giữa các bước. Cần kiểm tra dữ liệu và giả thiết trước khi kết luận.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-data_matrix-E04",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "So sánh hai cách xử lý và chọn cách hợp lệ cho Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "solution": "Chọn cách giữ đúng giả thiết, không rò rỉ dữ liệu và không đổi ý nghĩa vật lý ngoài chủ đích.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-data_matrix-E05",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Cho dữ liệu nhỏ, thực hiện phép tính rồi diễn giải kết quả theo ngữ cảnh kỹ thuật.",
+      "solution": "Tính từng bước, sau đó đọc giá trị số cùng dấu, độ lớn, đơn vị và phạm vi áp dụng.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-data_matrix-E06",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Phân tích trường hợp biên hoặc giả thiết bị vi phạm trong Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "solution": "Khi giả thiết hỏng, hạ cấp kết luận hoặc chuyển sang phương pháp phù hợp hơn; không ép công thức.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-data_matrix-E07",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Thiết kế kiểm tra bằng Python/NumPy để xác nhận kết quả của Dữ liệu đa chiều và ma trận dữ liệu X.",
+      "solution": "Tạo dữ liệu nhỏ, tính bằng công thức và NumPy, so sai khác theo tolerance rồi kiểm tra shape.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-data_matrix-E08",
+      "lessonId": "MATH-VN-LA-C01-L01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Bài tổng hợp: nối Dữ liệu đa chiều và ma trận dữ liệu X với pipeline covariance → eigen → PCA và chỉ ra giới hạn kết luận.",
+      "solution": "Chuỗi hợp lệ phải thống nhất preprocessing, covariance/correlation, phổ trị riêng, lựa chọn k và sai số tái tạo.",
+      "tags": [
+        "data-matrix",
+        "feature",
+        "sample"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-centering-E01",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "easy",
+      "prompt": "Nêu đúng đối tượng và kích thước/đơn vị trong chủ đề Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "solution": "Xác định rõ biến, quy ước và miền áp dụng trước khi tính.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-centering-E02",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "easy",
+      "prompt": "Tính một ví dụ số nhỏ cho công thức lõi của Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "solution": "Áp dụng công thức theo đúng quy ước; kiểm tra kích thước và đơn vị sau phép tính.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-centering-E03",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "medium",
+      "prompt": "Giải thích vì sao bẫy sau là sai: Không fit scaler bằng dữ liệu test.",
+      "solution": "Sai vì Không fit scaler bằng dữ liệu test. Cần kiểm tra dữ liệu và giả thiết trước khi kết luận.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-centering-E04",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "medium",
+      "prompt": "So sánh hai cách xử lý và chọn cách hợp lệ cho Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "solution": "Chọn cách giữ đúng giả thiết, không rò rỉ dữ liệu và không đổi ý nghĩa vật lý ngoài chủ đích.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-centering-E05",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "medium",
+      "prompt": "Cho dữ liệu nhỏ, thực hiện phép tính rồi diễn giải kết quả theo ngữ cảnh kỹ thuật.",
+      "solution": "Tính từng bước, sau đó đọc giá trị số cùng dấu, độ lớn, đơn vị và phạm vi áp dụng.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-centering-E06",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "hard",
+      "prompt": "Phân tích trường hợp biên hoặc giả thiết bị vi phạm trong Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "solution": "Khi giả thiết hỏng, hạ cấp kết luận hoặc chuyển sang phương pháp phù hợp hơn; không ép công thức.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-centering-E07",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "hard",
+      "prompt": "Thiết kế kiểm tra bằng Python/NumPy để xác nhận kết quả của Trung tâm hóa và chuẩn hóa đặc trưng.",
+      "solution": "Tạo dữ liệu nhỏ, tính bằng công thức và NumPy, so sai khác theo tolerance rồi kiểm tra shape.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-centering-E08",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "hard",
+      "prompt": "Bài tổng hợp: nối Trung tâm hóa và chuẩn hóa đặc trưng với pipeline covariance → eigen → PCA và chỉ ra giới hạn kết luận.",
+      "solution": "Chuỗi hợp lệ phải thống nhất preprocessing, covariance/correlation, phổ trị riêng, lựa chọn k và sai số tái tạo.",
+      "tags": [
+        "centering",
+        "standardization",
+        "z-score"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-covariance-E01",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "easy",
+      "prompt": "Nêu đúng đối tượng và kích thước/đơn vị trong chủ đề Hiệp phương sai.",
+      "solution": "Xác định rõ biến, quy ước và miền áp dụng trước khi tính.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-covariance-E02",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "easy",
+      "prompt": "Tính một ví dụ số nhỏ cho công thức lõi của Hiệp phương sai.",
+      "solution": "Áp dụng công thức theo đúng quy ước; kiểm tra kích thước và đơn vị sau phép tính.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-covariance-E03",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "medium",
+      "prompt": "Giải thích vì sao bẫy sau là sai: Covariance lớn chưa chắc quan hệ mạnh nếu đơn vị khác nhau.",
+      "solution": "Sai vì Covariance lớn chưa chắc quan hệ mạnh nếu đơn vị khác nhau. Cần kiểm tra dữ liệu và giả thiết trước khi kết luận.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-covariance-E04",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "medium",
+      "prompt": "So sánh hai cách xử lý và chọn cách hợp lệ cho Hiệp phương sai.",
+      "solution": "Chọn cách giữ đúng giả thiết, không rò rỉ dữ liệu và không đổi ý nghĩa vật lý ngoài chủ đích.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-covariance-E05",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "medium",
+      "prompt": "Cho dữ liệu nhỏ, thực hiện phép tính rồi diễn giải kết quả theo ngữ cảnh kỹ thuật.",
+      "solution": "Tính từng bước, sau đó đọc giá trị số cùng dấu, độ lớn, đơn vị và phạm vi áp dụng.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-covariance-E06",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "hard",
+      "prompt": "Phân tích trường hợp biên hoặc giả thiết bị vi phạm trong Hiệp phương sai.",
+      "solution": "Khi giả thiết hỏng, hạ cấp kết luận hoặc chuyển sang phương pháp phù hợp hơn; không ép công thức.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-covariance-E07",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "hard",
+      "prompt": "Thiết kế kiểm tra bằng Python/NumPy để xác nhận kết quả của Hiệp phương sai.",
+      "solution": "Tạo dữ liệu nhỏ, tính bằng công thức và NumPy, so sai khác theo tolerance rồi kiểm tra shape.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-covariance-E08",
+      "lessonId": "MATH-VN-PS-C05-L05",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "level": "hard",
+      "prompt": "Bài tổng hợp: nối Hiệp phương sai với pipeline covariance → eigen → PCA và chỉ ra giới hạn kết luận.",
+      "solution": "Chuỗi hợp lệ phải thống nhất preprocessing, covariance/correlation, phổ trị riêng, lựa chọn k và sai số tái tạo.",
+      "tags": [
+        "covariance",
+        "variance",
+        "statistics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pearson-E01",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "easy",
+      "prompt": "Nêu đúng đối tượng và kích thước/đơn vị trong chủ đề Tương quan Pearson.",
+      "solution": "Xác định rõ biến, quy ước và miền áp dụng trước khi tính.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pearson-E02",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "easy",
+      "prompt": "Tính một ví dụ số nhỏ cho công thức lõi của Tương quan Pearson.",
+      "solution": "Áp dụng công thức theo đúng quy ước; kiểm tra kích thước và đơn vị sau phép tính.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pearson-E03",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "medium",
+      "prompt": "Giải thích vì sao bẫy sau là sai: Tương quan không suy ra nhân quả; r≈0 không loại trừ phụ thuộc phi tuyến.",
+      "solution": "Sai vì Tương quan không suy ra nhân quả; r≈0 không loại trừ phụ thuộc phi tuyến. Cần kiểm tra dữ liệu và giả thiết trước khi kết luận.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pearson-E04",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "medium",
+      "prompt": "So sánh hai cách xử lý và chọn cách hợp lệ cho Tương quan Pearson.",
+      "solution": "Chọn cách giữ đúng giả thiết, không rò rỉ dữ liệu và không đổi ý nghĩa vật lý ngoài chủ đích.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pearson-E05",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "medium",
+      "prompt": "Cho dữ liệu nhỏ, thực hiện phép tính rồi diễn giải kết quả theo ngữ cảnh kỹ thuật.",
+      "solution": "Tính từng bước, sau đó đọc giá trị số cùng dấu, độ lớn, đơn vị và phạm vi áp dụng.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pearson-E06",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "hard",
+      "prompt": "Phân tích trường hợp biên hoặc giả thiết bị vi phạm trong Tương quan Pearson.",
+      "solution": "Khi giả thiết hỏng, hạ cấp kết luận hoặc chuyển sang phương pháp phù hợp hơn; không ép công thức.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pearson-E07",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "hard",
+      "prompt": "Thiết kế kiểm tra bằng Python/NumPy để xác nhận kết quả của Tương quan Pearson.",
+      "solution": "Tạo dữ liệu nhỏ, tính bằng công thức và NumPy, so sai khác theo tolerance rồi kiểm tra shape.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pearson-E08",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "chapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "level": "hard",
+      "prompt": "Bài tổng hợp: nối Tương quan Pearson với pipeline covariance → eigen → PCA và chỉ ra giới hạn kết luận.",
+      "solution": "Chuỗi hợp lệ phải thống nhất preprocessing, covariance/correlation, phổ trị riêng, lựa chọn k và sai số tái tạo.",
+      "tags": [
+        "pearson",
+        "correlation",
+        "linear-relation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-cov_matrix-E01",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "prompt": "Nêu đúng đối tượng và kích thước/đơn vị trong chủ đề Ma trận hiệp phương sai.",
+      "solution": "Xác định rõ biến, quy ước và miền áp dụng trước khi tính.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-cov_matrix-E02",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "prompt": "Tính một ví dụ số nhỏ cho công thức lõi của Ma trận hiệp phương sai.",
+      "solution": "Áp dụng công thức theo đúng quy ước; kiểm tra kích thước và đơn vị sau phép tính.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-cov_matrix-E03",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "Giải thích vì sao bẫy sau là sai: Không nhầm kích thước n×n với p×p khi covariance theo feature.",
+      "solution": "Sai vì Không nhầm kích thước n×n với p×p khi covariance theo feature. Cần kiểm tra dữ liệu và giả thiết trước khi kết luận.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-cov_matrix-E04",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "So sánh hai cách xử lý và chọn cách hợp lệ cho Ma trận hiệp phương sai.",
+      "solution": "Chọn cách giữ đúng giả thiết, không rò rỉ dữ liệu và không đổi ý nghĩa vật lý ngoài chủ đích.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-cov_matrix-E05",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "Cho dữ liệu nhỏ, thực hiện phép tính rồi diễn giải kết quả theo ngữ cảnh kỹ thuật.",
+      "solution": "Tính từng bước, sau đó đọc giá trị số cùng dấu, độ lớn, đơn vị và phạm vi áp dụng.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-cov_matrix-E06",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Phân tích trường hợp biên hoặc giả thiết bị vi phạm trong Ma trận hiệp phương sai.",
+      "solution": "Khi giả thiết hỏng, hạ cấp kết luận hoặc chuyển sang phương pháp phù hợp hơn; không ép công thức.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-cov_matrix-E07",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Thiết kế kiểm tra bằng Python/NumPy để xác nhận kết quả của Ma trận hiệp phương sai.",
+      "solution": "Tạo dữ liệu nhỏ, tính bằng công thức và NumPy, so sai khác theo tolerance rồi kiểm tra shape.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-cov_matrix-E08",
+      "lessonId": "MATH-PREP-LA2-C10-L05",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Bài tổng hợp: nối Ma trận hiệp phương sai với pipeline covariance → eigen → PCA và chỉ ra giới hạn kết luận.",
+      "solution": "Chuỗi hợp lệ phải thống nhất preprocessing, covariance/correlation, phổ trị riêng, lựa chọn k và sai số tái tạo.",
+      "tags": [
+        "covariance-matrix",
+        "symmetric",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-eigen_cov-E01",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "prompt": "Nêu đúng đối tượng và kích thước/đơn vị trong chủ đề Trị riêng và vector riêng của covariance matrix.",
+      "solution": "Xác định rõ biến, quy ước và miền áp dụng trước khi tính.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-eigen_cov-E02",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "prompt": "Tính một ví dụ số nhỏ cho công thức lõi của Trị riêng và vector riêng của covariance matrix.",
+      "solution": "Áp dụng công thức theo đúng quy ước; kiểm tra kích thước và đơn vị sau phép tính.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-eigen_cov-E03",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "Giải thích vì sao bẫy sau là sai: Vector riêng có thể đổi dấu mà vẫn biểu diễn cùng một trục.",
+      "solution": "Sai vì Vector riêng có thể đổi dấu mà vẫn biểu diễn cùng một trục. Cần kiểm tra dữ liệu và giả thiết trước khi kết luận.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-eigen_cov-E04",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "So sánh hai cách xử lý và chọn cách hợp lệ cho Trị riêng và vector riêng của covariance matrix.",
+      "solution": "Chọn cách giữ đúng giả thiết, không rò rỉ dữ liệu và không đổi ý nghĩa vật lý ngoài chủ đích.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-eigen_cov-E05",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "Cho dữ liệu nhỏ, thực hiện phép tính rồi diễn giải kết quả theo ngữ cảnh kỹ thuật.",
+      "solution": "Tính từng bước, sau đó đọc giá trị số cùng dấu, độ lớn, đơn vị và phạm vi áp dụng.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-eigen_cov-E06",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Phân tích trường hợp biên hoặc giả thiết bị vi phạm trong Trị riêng và vector riêng của covariance matrix.",
+      "solution": "Khi giả thiết hỏng, hạ cấp kết luận hoặc chuyển sang phương pháp phù hợp hơn; không ép công thức.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-eigen_cov-E07",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Thiết kế kiểm tra bằng Python/NumPy để xác nhận kết quả của Trị riêng và vector riêng của covariance matrix.",
+      "solution": "Tạo dữ liệu nhỏ, tính bằng công thức và NumPy, so sai khác theo tolerance rồi kiểm tra shape.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-eigen_cov-E08",
+      "lessonId": "MATH-PREP-LA2-C10-L01",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Bài tổng hợp: nối Trị riêng và vector riêng của covariance matrix với pipeline covariance → eigen → PCA và chỉ ra giới hạn kết luận.",
+      "solution": "Chuỗi hợp lệ phải thống nhất preprocessing, covariance/correlation, phổ trị riêng, lựa chọn k và sai số tái tạo.",
+      "tags": [
+        "eigenvalue",
+        "eigenvector",
+        "covariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pca-E01",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "prompt": "Nêu đúng đối tượng và kích thước/đơn vị trong chủ đề PCA nhập môn.",
+      "solution": "Xác định rõ biến, quy ước và miền áp dụng trước khi tính.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pca-E02",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "prompt": "Tính một ví dụ số nhỏ cho công thức lõi của PCA nhập môn.",
+      "solution": "Áp dụng công thức theo đúng quy ước; kiểm tra kích thước và đơn vị sau phép tính.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pca-E03",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "Giải thích vì sao bẫy sau là sai: PCA không tự động giữ 100% thông tin khi k<p.",
+      "solution": "Sai vì PCA không tự động giữ 100% thông tin khi k<p. Cần kiểm tra dữ liệu và giả thiết trước khi kết luận.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pca-E04",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "So sánh hai cách xử lý và chọn cách hợp lệ cho PCA nhập môn.",
+      "solution": "Chọn cách giữ đúng giả thiết, không rò rỉ dữ liệu và không đổi ý nghĩa vật lý ngoài chủ đích.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pca-E05",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "Cho dữ liệu nhỏ, thực hiện phép tính rồi diễn giải kết quả theo ngữ cảnh kỹ thuật.",
+      "solution": "Tính từng bước, sau đó đọc giá trị số cùng dấu, độ lớn, đơn vị và phạm vi áp dụng.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pca-E06",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Phân tích trường hợp biên hoặc giả thiết bị vi phạm trong PCA nhập môn.",
+      "solution": "Khi giả thiết hỏng, hạ cấp kết luận hoặc chuyển sang phương pháp phù hợp hơn; không ép công thức.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pca-E07",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Thiết kế kiểm tra bằng Python/NumPy để xác nhận kết quả của PCA nhập môn.",
+      "solution": "Tạo dữ liệu nhỏ, tính bằng công thức và NumPy, so sai khác theo tolerance rồi kiểm tra shape.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-pca-E08",
+      "lessonId": "MATH-PREP-LA2-C10-L06",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Bài tổng hợp: nối PCA nhập môn với pipeline covariance → eigen → PCA và chỉ ra giới hạn kết luận.",
+      "solution": "Chuỗi hợp lệ phải thống nhất preprocessing, covariance/correlation, phổ trị riêng, lựa chọn k và sai số tái tạo.",
+      "tags": [
+        "pca",
+        "dimension-reduction",
+        "explained-variance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-reconstruction-E01",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "prompt": "Nêu đúng đối tượng và kích thước/đơn vị trong chủ đề Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "solution": "Xác định rõ biến, quy ước và miền áp dụng trước khi tính.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-reconstruction-E02",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "easy",
+      "prompt": "Tính một ví dụ số nhỏ cho công thức lõi của Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "solution": "Áp dụng công thức theo đúng quy ước; kiểm tra kích thước và đơn vị sau phép tính.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-reconstruction-E03",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "Giải thích vì sao bẫy sau là sai: Sai số nhỏ không đồng nghĩa mọi feature đều được tái tạo tốt như nhau.",
+      "solution": "Sai vì Sai số nhỏ không đồng nghĩa mọi feature đều được tái tạo tốt như nhau. Cần kiểm tra dữ liệu và giả thiết trước khi kết luận.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-reconstruction-E04",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "So sánh hai cách xử lý và chọn cách hợp lệ cho Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "solution": "Chọn cách giữ đúng giả thiết, không rò rỉ dữ liệu và không đổi ý nghĩa vật lý ngoài chủ đích.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-reconstruction-E05",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "medium",
+      "prompt": "Cho dữ liệu nhỏ, thực hiện phép tính rồi diễn giải kết quả theo ngữ cảnh kỹ thuật.",
+      "solution": "Tính từng bước, sau đó đọc giá trị số cùng dấu, độ lớn, đơn vị và phạm vi áp dụng.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-reconstruction-E06",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Phân tích trường hợp biên hoặc giả thiết bị vi phạm trong Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "solution": "Khi giả thiết hỏng, hạ cấp kết luận hoặc chuyển sang phương pháp phù hợp hơn; không ép công thức.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-reconstruction-E07",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Thiết kế kiểm tra bằng Python/NumPy để xác nhận kết quả của Tái tạo dữ liệu và sai số khi giảm chiều.",
+      "solution": "Tạo dữ liệu nhỏ, tính bằng công thức và NumPy, so sai khác theo tolerance rồi kiểm tra shape.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "exerciseId": "E15-reconstruction-E08",
+      "lessonId": "MATH-PREP-LA2-C10-L08",
+      "chapterId": "MATH-PREP-C10-ai_so_tuyen_tinh_ii_tri_",
+      "level": "hard",
+      "prompt": "Bài tổng hợp: nối Tái tạo dữ liệu và sai số khi giảm chiều với pipeline covariance → eigen → PCA và chỉ ra giới hạn kết luận.",
+      "solution": "Chuỗi hợp lệ phải thống nhất preprocessing, covariance/correlation, phổ trị riêng, lựa chọn k và sai số tái tạo.",
+      "tags": [
+        "pca",
+        "reconstruction",
+        "low-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E139_E15_LOGICAL"
+    }
+  ],
   "importPolicy": {
     "key": "exerciseId",
     "requires": [
@@ -56,12 +1017,13 @@
     "solution": "Nhân từng thành phần rồi cộng lại.",
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-06-22",
+  "updatedAt": "2026-09-21",
   "emoji": "📝",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
     "recordsMustUseStableIds": true,
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
-  }
+  },
+  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
 }
