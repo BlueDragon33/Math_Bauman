@@ -192,8 +192,7 @@ try {
     maps: Array.isArray(window.DB?.mindmap) ? window.DB.mindmap.length : 0,
     professorQa: Array.isArray(window.DB?.professor_qa) ? window.DB.professor_qa.length : 0,
     recovery: /KHÔI PHỤC TAB HỌC TẬP|LỖI TAB HỌC TẬP/i.test(document.querySelector('#view')?.innerText || '')
-    };
-  });
+  }));
   console.log('E157 persisted state', JSON.stringify(persisted));
   if (persisted.view !== 'learning' || persisted.learnTab !== 'exercises' || persisted.stage !== 'prep') {
     await fail('view/tab/stage state did not persist across reload');
@@ -263,16 +262,17 @@ try {
       uncachedProbeFailed = true;
     }
     return {
-    onlineHint: navigator.onLine,
-    uncachedProbeFailed,
-    view: window.__BAUMAN_CORE_API?.state?.view,
-    textLength: (document.querySelector('#view')?.innerText || '').replace(/\s+/g, ' ').trim().length,
-    maps: Array.isArray(window.DB?.mindmap) ? window.DB.mindmap.length : 0,
-    professorQa: Array.isArray(window.DB?.professor_qa) ? window.DB.professor_qa.length : 0,
-    e140: typeof window.BAUMAN_MATH_E140_SELF_CHECK === 'function' ? window.BAUMAN_MATH_E140_SELF_CHECK().ok : false,
-    e150: typeof window.BAUMAN_MATH_E150_SELF_CHECK === 'function' ? window.BAUMAN_MATH_E150_SELF_CHECK().ok : false,
-    recovery: /KHÔI PHỤC TAB HỌC TẬP|LỖI TAB HỌC TẬP/i.test(document.querySelector('#view')?.innerText || '')
-  }));
+      onlineHint: navigator.onLine,
+      uncachedProbeFailed,
+      view: window.__BAUMAN_CORE_API?.state?.view,
+      textLength: (document.querySelector('#view')?.innerText || '').replace(/\s+/g, ' ').trim().length,
+      maps: Array.isArray(window.DB?.mindmap) ? window.DB.mindmap.length : 0,
+      professorQa: Array.isArray(window.DB?.professor_qa) ? window.DB.professor_qa.length : 0,
+      e140: typeof window.BAUMAN_MATH_E140_SELF_CHECK === 'function' ? window.BAUMAN_MATH_E140_SELF_CHECK().ok : false,
+      e150: typeof window.BAUMAN_MATH_E150_SELF_CHECK === 'function' ? window.BAUMAN_MATH_E150_SELF_CHECK().ok : false,
+      recovery: /KHÔI PHỤC TAB HỌC TẬP|LỖI TAB HỌC TẬP/i.test(document.querySelector('#view')?.innerText || '')
+    };
+  });
   console.log('E160 offline reload', JSON.stringify(offline));
   if (!offline.uncachedProbeFailed || offline.textLength < 24 || offline.maps < 1 || offline.professorQa < 1 || !offline.e140 || !offline.e150 || offline.recovery) {
     await fail('offline reload did not preserve a healthy learning runtime');
