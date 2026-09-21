@@ -1,0 +1,27 @@
+{
+  "release": "E142_PROFESSOR_QA_AND_MINDMAP_UI_INTEGRATION_AUDIT",
+  "date": "2026-09-21",
+  "status": "IMPLEMENTED_ON_BRANCH",
+  "finding": "professor_qa_content was present and bridged to DB.professor_qa, but the visible Vấn đáp route did not render that academic QA dataset.",
+  "fix": "Inject a dedicated Professor Q&A panel at the top of the existing dialogue route; preserve speaking/application UI below it.",
+  "dependencies": [
+    "E138 theory overlay",
+    "E140 content vault runtime bridge"
+  ],
+  "mindmapAudit": "E140 transforms mindmap_content into DB.mindmap; current renderer can consume the transformed records.",
+  "safeguards": {
+    "coreJsModified": false,
+    "dialogueRendererReplaced": false,
+    "storageKeyModified": false,
+    "sourceVaultModified": false
+  },
+  "selfCheck": "BAUMAN_MATH_E142_SELF_CHECK",
+  "nextGeneratedRound": {
+    "release": "E143_BROWSER_SMOKE_AND_VISIBLE_ROUTE_AUDIT",
+    "tasks": [
+      "Verify visible counts/routes after all runtime bridges",
+      "Check no duplicate panels after rerender",
+      "Check responsive layout and exam/mindmap/dialogue smoke paths"
+    ]
+  }
+}
