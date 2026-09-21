@@ -72,10 +72,17 @@
     return out;
   };
   function levelIndex(level){ const i=LEVEL_ORDER.indexOf(clean(level)); return i>=0?i:LEVEL_ORDER.indexOf('A0'); }
-  function parseLevels(raw){
+  function parseLevels(raw, adapter={}, subjectType='academic'){
+    const explicitStart = clean(raw?.startLevel || raw?.fromLevel || raw?.currentLevel || raw?.startStage || raw?.stage);
+    const explicitTarget = clean(raw?.targetLevel || raw?.toLevel || raw?.level || raw?.targetStage || raw?.requiredOutput?.stage);
+    const isMath = subjectType==='technical' && /math|toán/i.test([adapter?.id,adapter?.ui?.title,raw?.courseId,raw?.courseName].map(clean).join(' '));
+    if(isMath){
+      const fallback = clean(adapter?.defaultState?.stage) || 'vn';
+      const startLevel = explicitStart || fallback;
+      const targetLevel = explicitTarget || startLevel;
+      return {startLevel,targetLevel};
+    }
     const text = clean(raw?.target || raw?.learningItem || raw?.requiredOutput?.level || raw?.goal || raw?.title || '').toUpperCase();
-    const explicitStart = clean(raw?.startLevel || raw?.fromLevel || raw?.currentLevel);
-    const explicitTarget = clean(raw?.targetLevel || raw?.toLevel || raw?.level);
     const found = text.match(/A0|A1|A2|B1|B2|C1|C2/g) || [];
     let startLevel = explicitStart || (found.length>=2 ? found[0] : (found[0] || 'A0'));
     let targetLevel = explicitTarget || (found.length>=2 ? found[found.length-1] : (found[0] || 'A1'));
@@ -106,11 +113,11 @@
   function normalizeMission(raw={}, ctx={}){
     const adapter = ctx.adapter || {};
     const sessions = normalizeSessions(raw);
-    const {startLevel,targetLevel} = parseLevels(raw);
+    const subjectType = clean(raw.subjectType) || inferSubjectType(raw, adapter);
+    const {startLevel,targetLevel} = parseLevels(raw, adapter, subjectType);
     const startDate = isoDate(raw.startDate || raw.date || sessions[0]?.date || Date.now());
     const deadline = isoDate(raw.deadline || raw.plannedEndDate || raw.endDate || sessions[sessions.length-1]?.date || addDays(startDate, Math.max(0,sessions.length-1)));
     const durationDays = Math.max(1, Number(raw.durationDays || Math.ceil((new Date(deadline)-new Date(startDate))/86400000)+1 || sessions.length || 1));
-    const subjectType = clean(raw.subjectType) || inferSubjectType(raw, adapter);
     const policy = deepMerge(DEFAULT_POLICY, adapter.planningPolicy || {}, raw.policy || {});
     policy.minMinutesByLevel = Object.assign({}, DEFAULT_POLICY.minMinutesByLevel, adapter.planningPolicy?.minMinutesByLevel || {}, raw.policy?.minMinutesByLevel || {});
     policy.minDaysByLevel = Object.assign({}, DEFAULT_POLICY.minDaysByLevel, adapter.planningPolicy?.minDaysByLevel || {}, raw.policy?.minDaysByLevel || {});
@@ -205,12 +212,17 @@
     }
     const easy = tp.unlockEasy || {};
     const learnedMinutes = Number(stats.studyMinutes || availableMinutes(mission));
-    const learnedItems = Number(stats.learnedItems || sessionNo * 20);
-    const dialogues = Number(stats.dialogues || sessionNo);
-    if(sessionNo < Number(easy.minSessions || 3)) blockers.push(`Cần ${Number(easy.minSessions || 3)} buổi học nền.`);
-    if(learnedMinutes < Number(easy.minStudyMinutes || 0)) blockers.push(`Cần tối thiểu ${Number(easy.minStudyMinutes || 0)} phút học thực.`);
-    if(learnedItems < Number(easy.minLearnedItems || 0)) blockers.push(`Cần tối thiểu ${Number(easy.minLearnedItems || 0)} đơn vị học/từ/cụm.`);
-    if(dialogues < Number(easy.minDialogues || 0)) blockers.push(`Cần tối thiểu ${Number(easy.minDialogues || 0)} vấn đáp/thực hành.`);
+    const isTechnical = mission.subjectType==='technical';
+    const learnedItems = Number(stats.learnedItems ?? stats.completedItems ?? 0);
+    const practiceItems = Number(stats.practiceItems ?? stats.exercises ?? stats.dialogues ?? sessionNo);
+    const requiredSessions = Number(easy.minSessions || 3);
+    const requiredMinutes = Number(easy.minStudyMinutes || 0);
+    const requiredLearnedItems = isTechnical ? Number(easy.minTechnicalLearnedItems || 0) : Number(easy.minLearnedItems || 0);
+    const requiredPracticeItems = isTechnical ? Number(easy.minPracticeItems ?? easy.minDialogues ?? 0) : Number(easy.minDialogues || 0);
+    if(sessionNo < requiredSessions) blockers.push(`Cần ${requiredSessions} buổi học nền.`);
+    if(learnedMinutes < requiredMinutes) blockers.push(`Cần tối thiểu ${requiredMinutes} phút học thực.`);
+    if(requiredLearnedItems>0 && learnedItems < requiredLearnedItems) blockers.push(`Cần tối thiểu ${requiredLearnedItems} đơn vị học/từ/cụm.`);
+    if(practiceItems < requiredPracticeItems) blockers.push(isTechnical ? `Cần tối thiểu ${requiredPracticeItems} lượt bài tập/thực hành.` : `Cần tối thiểu ${requiredPracticeItems} vấn đáp/thực hành.`);
     if(blockers.length) return {unlocked:null, reason:'not_enough_learning_material', blockers};
 
     const easyScore = assessmentScore(mission,'easy');
