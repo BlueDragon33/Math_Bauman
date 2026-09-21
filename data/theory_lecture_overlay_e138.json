@@ -1,0 +1,932 @@
+{
+  "id": "bauman_math_theory_overlay_e138",
+  "schema": "bauman_math_content_overlay_v1",
+  "version": "E138_CENTERING_PEARSON_GAP_PATCH",
+  "subject": "math",
+  "title": "Theory gap overlay · Centering + Pearson",
+  "baseSource": "theory_lecture_content.json",
+  "recordKey": "lessonId",
+  "mergePolicy": "replace_by_lessonId_then_append",
+  "records": [
+    {
+      "id": "MATH-VN-PS-C06-L09",
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "stage": "vn",
+      "stageName": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "facultyId": "bauman_math_stage_0",
+      "facultyTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "departmentId": "dept_x_c_su_t_th_ng_k_v_suy_lu_n_d_li_u",
+      "departmentTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "chapterId": "MATH-VN-PS-C06",
+      "sourceChapterId": "math_chapter_05",
+      "sourceChapterNo": 5,
+      "sourceStageId": "stage_0_vietnam_preparatory",
+      "sourceStageNo": 0,
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "title": "§3.9 · Trung tâm hóa và chuẩn hóa đặc trưng trước PCA/ML",
+      "displayTitle": "§3.9 · Trung tâm hóa và chuẩn hóa đặc trưng trước PCA/ML",
+      "shortTitle": "§3.9 · Trung tâm hóa và chuẩn hóa đặc trưng trước PCA/ML",
+      "kind": "theory",
+      "contentRole": "theory_only",
+      "contentDepth": "deep_academic_verified",
+      "conceptIds": [
+        "trung_tam_hoa",
+        "chuan_hoa",
+        "z_score"
+      ],
+      "skillIds": [
+        "SK-MATH-VN-PS-C06-L09-CORE"
+      ],
+      "mindmapNodeIds": [
+        "MM-MATH-VN-PS-C06-L09-CORE"
+      ],
+      "sourceAnchors": {
+        "schema": "bauman.math.chapter_spine.v2.1",
+        "version": "E138_targeted_gap_patch",
+        "stageId": "stage_0_vietnam_preparatory",
+        "stageTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+        "chapterId": "math_chapter_05",
+        "chapterNo": 5,
+        "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+        "primaryDiscipline": "Xác suất, thống kê và suy luận dữ liệu",
+        "secondaryDisciplines": [
+          "Đại số tuyến tính và không gian dữ liệu",
+          "Phương pháp số và toán học tính toán"
+        ],
+        "pureLayer": [
+          "trung bình",
+          "trung tâm hóa",
+          "chuẩn hóa",
+          "z-score"
+        ],
+        "appliedLayer": [
+          "PCA",
+          "dữ liệu cảm biến",
+          "machine learning",
+          "EDA"
+        ],
+        "bridgeQuestion": "Khi nào cần center và khi nào cần standardize trước PCA/ML?",
+        "targetOutcome": "Tiền xử lý đặc trưng không leakage và phù hợp thang đo.",
+        "timelineRole": "main_path_august_to_bauman_graduation"
+      },
+      "eLearning": {
+        "mode": "e138_targeted_gap_overlay",
+        "hideSearchMeta": true,
+        "formulaRenderMode": "safe_formula_and_matrix_blocks",
+        "matrixRenderMode": "css_matrix_grid_not_text_alignment",
+        "canvaReady": false,
+        "targetSource": "theory_lecture_overlay_e138.json",
+        "importMode": "replace_or_add_lesson_by_lessonId",
+        "uiCoreModified": false
+      },
+      "qualityGates": {
+        "mappingChecked": true,
+        "scopeGuard": "theory_only_overlay",
+        "noPhdContent": true,
+        "slideRoleCount": 16,
+        "renderSafe": true,
+        "deepAndCarefulPass": true
+      },
+      "slides": [
+        {
+          "id": "MATH-VN-PS-C06-L09-S01",
+          "title": "Vấn đề nghiên cứu của bài",
+          "layout": "academic-opening",
+          "role": "problem_framing",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Câu hỏi chính",
+              "body": "Vì sao dữ liệu đa đặc trưng phải được đưa về cùng mốc và đôi khi cùng thang trước khi tính covariance, PCA hoặc đưa vào mô hình học máy?"
+            },
+            {
+              "type": "section",
+              "title": "Móc học thuật",
+              "body": "Centering loại dịch chuyển trung bình; standardization tiếp tục chia cho độ lệch chuẩn để kiểm soát chênh lệch thang đo."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S02",
+          "title": "Bản chất học thuật",
+          "layout": "deep-academic",
+          "role": "deep_essence",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Bản chất vận hành",
+              "body": "Centering thay đổi gốc tọa độ về trung bình nhưng giữ hình dạng tương đối của đám mây dữ liệu. Standardization còn đổi thang để mỗi feature được đo theo số độ lệch chuẩn."
+            },
+            {
+              "type": "section",
+              "title": "Đầu ra cần đạt",
+              "body": "Biết khi nào chỉ center, khi nào standardize, và tránh data leakage trong train/test."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S03",
+          "title": "Khi trực giác dễ đánh lừa",
+          "layout": "deep-academic",
+          "role": "counter_intuition",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Ba bẫy chính",
+              "items": [
+                "Centering không làm các feature cùng đơn vị.",
+                "Standardization không biến phân phối thành phân phối chuẩn.",
+                "Tính μ và s trên toàn bộ dữ liệu trước khi chia train/test gây data leakage."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S04",
+          "title": "Cầu nối sang bài toán kỹ thuật",
+          "layout": "applied-bridge",
+          "role": "real_bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ứng dụng",
+              "body": "Center trước covariance/PCA. Standardize khi các feature khác đơn vị hoặc độ lớn và ta không muốn thang đo lớn tự động chi phối."
+            },
+            {
+              "type": "section",
+              "title": "Ngữ cảnh AI/điều khiển",
+              "body": "Chuẩn hóa có thể giúp tối ưu gradient, khoảng cách và PCA ổn định hơn trên dữ liệu hỗn hợp đơn vị."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S05",
+          "title": "Ký hiệu, định nghĩa và biến số",
+          "layout": "concept",
+          "role": "notation",
+          "blocks": [
+            {
+              "type": "formula-list",
+              "title": "Công thức neo",
+              "items": [
+                "x_c = x - x̄",
+                "z_i = (x_i-x̄)/s_x",
+                "X_c = X - 1 μ^T",
+                "x_test,std = (x_test-μ_train)/s_train"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "Quy tắc đọc",
+              "items": [
+                "μ_train và s_train phải được lưu để dùng lại.",
+                "Feature hằng số có s=0 và cần xử lý riêng.",
+                "Center theo từng feature, không trừ một scalar chung cho cả ma trận."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S06",
+          "title": "Công thức lõi và cách đọc",
+          "layout": "formula-focus",
+          "role": "core_formula",
+          "blocks": [
+            {
+              "type": "formula-list",
+              "title": "Công thức lõi",
+              "items": [
+                "X_c = X - 1 μ^T",
+                "Z = (X-μ)/s"
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Ý nghĩa",
+              "body": "Centering sửa mốc; standardization sửa cả mốc và thang."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S07",
+          "title": "Cửa giả thiết trước khi dùng công thức",
+          "layout": "assumption-check",
+          "role": "assumption_gate",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Kiểm tra bắt buộc",
+              "items": [
+                "Train/test đã được tách trước khi fit scaler chưa?",
+                "Đơn vị khác nhau có thực sự cần standardize không?",
+                "Feature rời rạc/one-hot có cần xử lý giống feature liên tục không?"
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S08",
+          "title": "Mini-case kỹ thuật",
+          "layout": "case-study",
+          "role": "mini_case",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Tình huống",
+              "body": "Dữ liệu gồm nhiệt độ khoảng 20–40 °C và tốc độ động cơ 0–6000 rpm. PCA trên covariance chưa standardize có thể bị rpm chi phối chỉ vì thang số lớn."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Các bước",
+              "items": [
+                "Xác định biến và đơn vị.",
+                "Kiểm tra phân bố và ngoại lai.",
+                "Áp dụng công thức đúng.",
+                "Diễn giải cùng giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S09",
+          "title": "Diễn giải kết quả",
+          "layout": "result-reading",
+          "role": "interpretation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Đọc đúng",
+              "body": "Sau center, trung bình feature xấp xỉ 0. Sau z-score, trên tập dùng để fit scaler, trung bình xấp xỉ 0 và độ lệch chuẩn xấp xỉ 1."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Không kết luận quá tay",
+              "items": [
+                "Không fit scaler riêng trên test.",
+                "Không dùng toàn dataset để tính μ,s trước cross-validation.",
+                "Không nghĩ z-score sẽ xóa outlier."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S10",
+          "title": "Thí nghiệm khái niệm",
+          "layout": "conceptual-experiment",
+          "role": "simulation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Thí nghiệm",
+              "body": "Dịch toàn bộ feature thêm +100: covariance sau centering không đổi. Nhân một feature ×100: covariance thay đổi mạnh trong khi correlation không đổi."
+            },
+            {
+              "type": "section",
+              "title": "Mục tiêu",
+              "body": "Tách ảnh hưởng của dịch chuyển mốc và thay đổi thang khỏi cấu trúc quan hệ thực."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S11",
+          "title": "Lỗi thường gặp và dấu hiệu nhận biết",
+          "layout": "mistake-map",
+          "role": "common_mistakes",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Lỗi thường gặp",
+              "items": [
+                "Center theo từng sample thay vì từng feature.",
+                "Dùng định nghĩa độ lệch chuẩn không nhất quán.",
+                "Chuẩn hóa trước khi chia train/test."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S12",
+          "title": "Ứng dụng trong PCA và dữ liệu",
+          "layout": "engineering-application",
+          "role": "application",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ứng dụng chính",
+              "body": "PCA trên covariance cần dữ liệu đã center. Standardization trước PCA phụ thuộc vào ý nghĩa vật lý của thang đo và mục tiêu phân tích."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Câu hỏi kỹ thuật",
+              "items": [
+                "Đơn vị có chứa ưu tiên vật lý cần giữ không?",
+                "Có data leakage không?",
+                "Metric downstream có nhạy với scale không?"
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S13",
+          "title": "Bài luyện có hướng dẫn",
+          "layout": "guided-practice",
+          "role": "practice",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nhiệm vụ",
+              "body": "Tính μ,s trên train; biến đổi một điểm train và một điểm test bằng cùng μ,s. So sánh với cách sai là fit riêng test."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Tiêu chí tự chấm",
+              "items": [
+                "Đúng công thức.",
+                "Đúng tập dùng để ước lượng thống kê.",
+                "Đúng phạm vi diễn giải."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S14",
+          "title": "Vấn đáp kiểu giáo viên",
+          "layout": "qa-dialogue",
+          "role": "professor_qa",
+          "blocks": [
+            {
+              "type": "qa-list",
+              "title": "Vấn đáp kiểm tra hiểu sâu",
+              "items": [
+                {
+                  "q": "Centering và standardization khác nhau thế nào?",
+                  "a": "Centering chỉ trừ trung bình; standardization còn chia cho độ lệch chuẩn."
+                },
+                {
+                  "q": "Vì sao không fit scaler trên test?",
+                  "a": "Vì dùng thông tin của test trong preprocessing gây data leakage."
+                },
+                {
+                  "q": "PCA luôn cần standardize không?",
+                  "a": "Không. Centering gần như bắt buộc trong PCA covariance; standardize phụ thuộc ý nghĩa thang đo và đơn vị."
+                }
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S15",
+          "title": "Cầu nối sang bài kế tiếp",
+          "layout": "learning-bridge",
+          "role": "bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nối về PCA",
+              "body": "Centering dẫn trực tiếp sang covariance matrix; standardization dẫn sang correlation matrix và PCA theo z-score."
+            },
+            {
+              "type": "section",
+              "title": "Nối về pipeline",
+              "body": "Mọi thống kê preprocessing dùng khi inference phải lấy từ pipeline đã fit trên train."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L09-S16",
+          "title": "Chốt kiến thức cần giữ lại",
+          "layout": "summary",
+          "role": "takeaway",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Ba điều phải nhớ",
+              "items": [
+                "Center = trừ trung bình; standardize = center rồi chia độ lệch chuẩn.",
+                "Fit μ,s chỉ trên train.",
+                "PCA/covariance/correlation phản ứng khác nhau với scale."
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Câu chốt",
+              "body": "Preprocessing là một phần của mô hình, không phải bước trang trí."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        }
+      ],
+      "frameChapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "e138Added": true
+    },
+    {
+      "id": "MATH-VN-PS-C06-L10",
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "stage": "vn",
+      "stageName": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "facultyId": "bauman_math_stage_0",
+      "facultyTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+      "departmentId": "dept_x_c_su_t_th_ng_k_v_suy_lu_n_d_li_u",
+      "departmentTitle": "Xác suất, thống kê và suy luận dữ liệu",
+      "chapterId": "MATH-VN-PS-C06",
+      "sourceChapterId": "math_chapter_05",
+      "sourceChapterNo": 5,
+      "sourceStageId": "stage_0_vietnam_preparatory",
+      "sourceStageNo": 0,
+      "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+      "title": "§3.10 · Tương quan Pearson: đo liên hệ tuyến tính và các bẫy diễn giải",
+      "displayTitle": "§3.10 · Tương quan Pearson: đo liên hệ tuyến tính và các bẫy diễn giải",
+      "shortTitle": "§3.10 · Tương quan Pearson: đo liên hệ tuyến tính và các bẫy diễn giải",
+      "kind": "theory",
+      "contentRole": "theory_only",
+      "contentDepth": "deep_academic_verified",
+      "conceptIds": [
+        "hiep_phuong_sai",
+        "tuong_quan_pearson",
+        "do_lech_chuan"
+      ],
+      "skillIds": [
+        "SK-MATH-VN-PS-C06-L10-CORE"
+      ],
+      "mindmapNodeIds": [
+        "MM-MATH-VN-PS-C06-L10-CORE"
+      ],
+      "sourceAnchors": {
+        "schema": "bauman.math.chapter_spine.v2.1",
+        "version": "E138_targeted_gap_patch",
+        "stageId": "stage_0_vietnam_preparatory",
+        "stageTitle": "Giai đoạn 0 · Tháng 8/2026 đến trước dự bị",
+        "chapterId": "math_chapter_05",
+        "chapterNo": 5,
+        "chapterTitle": "Thống kê mô tả và dữ liệu thực nghiệm",
+        "primaryDiscipline": "Xác suất, thống kê và suy luận dữ liệu",
+        "secondaryDisciplines": [
+          "Đại số tuyến tính và không gian dữ liệu",
+          "Phương pháp số và toán học tính toán"
+        ],
+        "pureLayer": [
+          "hiệp phương sai",
+          "tương quan Pearson",
+          "độ lệch chuẩn"
+        ],
+        "appliedLayer": [
+          "PCA",
+          "dữ liệu cảm biến",
+          "machine learning",
+          "EDA"
+        ],
+        "bridgeQuestion": "Khi nào một hệ số tương quan phản ánh cấu trúc dữ liệu và khi nào nó đánh lừa?",
+        "targetOutcome": "Tính và diễn giải Pearson đúng phạm vi.",
+        "timelineRole": "main_path_august_to_bauman_graduation"
+      },
+      "eLearning": {
+        "mode": "e138_targeted_gap_overlay",
+        "hideSearchMeta": true,
+        "formulaRenderMode": "safe_formula_and_matrix_blocks",
+        "matrixRenderMode": "css_matrix_grid_not_text_alignment",
+        "canvaReady": false,
+        "targetSource": "theory_lecture_overlay_e138.json",
+        "importMode": "replace_or_add_lesson_by_lessonId",
+        "uiCoreModified": false
+      },
+      "qualityGates": {
+        "mappingChecked": true,
+        "scopeGuard": "theory_only_overlay",
+        "noPhdContent": true,
+        "slideRoleCount": 16,
+        "renderSafe": true,
+        "deepAndCarefulPass": true
+      },
+      "slides": [
+        {
+          "id": "MATH-VN-PS-C06-L10-S01",
+          "title": "Vấn đề nghiên cứu của bài",
+          "layout": "academic-opening",
+          "role": "problem_framing",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Câu hỏi chính",
+              "body": "Khi hai đại lượng cùng thay đổi, hệ số Pearson đo mức liên hệ tuyến tính mạnh đến đâu và khi nào nó có thể gây hiểu sai?"
+            },
+            {
+              "type": "section",
+              "title": "Móc học thuật",
+              "body": "Pearson là hiệp phương sai được chuẩn hóa bởi độ phân tán của hai biến, nên cho một chỉ số không đơn vị về hướng và cường độ liên hệ tuyến tính."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S02",
+          "title": "Bản chất học thuật",
+          "layout": "deep-academic",
+          "role": "deep_essence",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Bản chất vận hành",
+              "body": "Pearson đo mức hai biến cùng lệch khỏi trung bình theo một quy luật gần tuyến tính. Nó không đo mọi dạng phụ thuộc và không tự chứng minh quan hệ nhân quả."
+            },
+            {
+              "type": "section",
+              "title": "Đầu ra cần đạt",
+              "body": "Tính, đọc và phản biện hệ số Pearson; phân biệt tương quan với nhân quả và với quan hệ phi tuyến."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S03",
+          "title": "Khi trực giác dễ đánh lừa",
+          "layout": "deep-academic",
+          "role": "counter_intuition",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Ba bẫy chính",
+              "items": [
+                "r gần 0 không có nghĩa hai biến độc lập.",
+                "|r| lớn không chứng minh biến này gây ra biến kia.",
+                "Một outlier có thể làm r thay đổi rất mạnh."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S04",
+          "title": "Cầu nối sang bài toán kỹ thuật",
+          "layout": "applied-bridge",
+          "role": "real_bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ứng dụng",
+              "body": "Dùng Pearson để rà quan hệ tuyến tính giữa kênh cảm biến, đặc trưng hoặc biến đầu vào; luôn kết hợp scatter plot và kiểm tra outlier."
+            },
+            {
+              "type": "section",
+              "title": "Ngữ cảnh AI/điều khiển",
+              "body": "Tương quan hỗ trợ phát hiện redundancy và chẩn đoán cảm biến, nhưng không thay thế mô hình động lực hay kiểm định nhân quả."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S05",
+          "title": "Ký hiệu, định nghĩa và biến số",
+          "layout": "concept",
+          "role": "notation",
+          "blocks": [
+            {
+              "type": "formula-list",
+              "title": "Công thức neo",
+              "items": [
+                "r_xy = Σ[(x_i-x̄)(y_i-ȳ)] / √(Σ(x_i-x̄)^2 · Σ(y_i-ȳ)^2)",
+                "-1 ≤ r_xy ≤ 1",
+                "r_xy = cov(x,y)/(s_x s_y)"
+              ]
+            },
+            {
+              "type": "bullet-list",
+              "title": "Quy tắc đọc",
+              "items": [
+                "x̄, ȳ là trung bình mẫu.",
+                "s_x và s_y phải khác 0.",
+                "r không mang đơn vị."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S06",
+          "title": "Công thức lõi và cách đọc",
+          "layout": "formula-focus",
+          "role": "core_formula",
+          "blocks": [
+            {
+              "type": "formula-list",
+              "title": "Công thức lõi",
+              "items": [
+                "r_xy = cov(x,y)/(s_x s_y)",
+                "r_xy ∈ [-1,1]"
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Ý nghĩa",
+              "body": "Tử số đo đồng biến thiên; mẫu số chuẩn hóa theo độ phân tán riêng của x và y."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S07",
+          "title": "Cửa giả thiết trước khi dùng công thức",
+          "layout": "assumption-check",
+          "role": "assumption_gate",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Kiểm tra bắt buộc",
+              "items": [
+                "Quan hệ cần đánh giá có gần tuyến tính không?",
+                "Có outlier mạnh hoặc cụm dữ liệu tách biệt không?",
+                "Biến có gần như hằng số khiến s≈0 không?"
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S08",
+          "title": "Mini-case kỹ thuật",
+          "layout": "case-study",
+          "role": "mini_case",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Tình huống",
+              "body": "Hai cảm biến nhiệt độ và công suất cho r=0.82. Kết luận hợp lệ: có liên hệ tuyến tính dương mạnh trong tập đo. Chưa được kết luận nhiệt độ gây tăng công suất."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Các bước",
+              "items": [
+                "Xác định biến và đơn vị.",
+                "Kiểm tra phân bố và ngoại lai.",
+                "Áp dụng công thức đúng.",
+                "Diễn giải cùng giới hạn."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S09",
+          "title": "Diễn giải kết quả",
+          "layout": "result-reading",
+          "role": "interpretation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Đọc đúng",
+              "body": "Dấu của r cho hướng tuyến tính; |r| cho cường độ tuyến tính trong mẫu. Không có một ngưỡng mạnh/yếu tuyệt đối cho mọi lĩnh vực."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Không kết luận quá tay",
+              "items": [
+                "Không biến r thành quan hệ nhân quả.",
+                "Không bỏ qua cỡ mẫu.",
+                "Không bỏ qua phi tuyến và outlier."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S10",
+          "title": "Thí nghiệm khái niệm",
+          "layout": "conceptual-experiment",
+          "role": "simulation",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Thí nghiệm",
+              "body": "Giữ một đám mây điểm gần đường thẳng rồi thêm một outlier xa; quan sát r thay đổi để thấy độ nhạy với điểm ngoại lai."
+            },
+            {
+              "type": "section",
+              "title": "Mục tiêu",
+              "body": "Tách ảnh hưởng của dịch chuyển mốc và thay đổi thang khỏi cấu trúc quan hệ thực."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S11",
+          "title": "Lỗi thường gặp và dấu hiệu nhận biết",
+          "layout": "mistake-map",
+          "role": "common_mistakes",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Lỗi thường gặp",
+              "items": [
+                "Dùng Pearson cho quan hệ chữ U rồi kết luận không liên hệ.",
+                "Nhầm correlation matrix với covariance matrix.",
+                "Đọc r=0.9 như 90% biến thiên được giải thích."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S12",
+          "title": "Ứng dụng trong PCA và dữ liệu",
+          "layout": "engineering-application",
+          "role": "application",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Ứng dụng chính",
+              "body": "Correlation matrix hữu ích khi muốn loại ảnh hưởng đơn vị; PCA trên correlation thường tương ứng với PCA sau standardization theo quy ước nhất quán."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Câu hỏi kỹ thuật",
+              "items": [
+                "Đơn vị có chứa ưu tiên vật lý cần giữ không?",
+                "Có data leakage không?",
+                "Metric downstream có nhạy với scale không?"
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S13",
+          "title": "Bài luyện có hướng dẫn",
+          "layout": "guided-practice",
+          "role": "practice",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nhiệm vụ",
+              "body": "Tính r cho một cặp dữ liệu nhỏ; sau đó thêm một outlier và giải thích vì sao r thay đổi."
+            },
+            {
+              "type": "bullet-list",
+              "title": "Tiêu chí tự chấm",
+              "items": [
+                "Đúng công thức.",
+                "Đúng tập dùng để ước lượng thống kê.",
+                "Đúng phạm vi diễn giải."
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S14",
+          "title": "Vấn đáp kiểu giáo viên",
+          "layout": "qa-dialogue",
+          "role": "professor_qa",
+          "blocks": [
+            {
+              "type": "qa-list",
+              "title": "Vấn đáp kiểm tra hiểu sâu",
+              "items": [
+                {
+                  "q": "Pearson khác covariance ở đâu?",
+                  "a": "Pearson chuẩn hóa covariance bằng độ lệch chuẩn hai biến nên không mang đơn vị và nằm trong [-1,1]."
+                },
+                {
+                  "q": "r=0 có nghĩa độc lập không?",
+                  "a": "Không. r=0 chỉ cho thấy không có tương quan tuyến tính; vẫn có thể tồn tại phụ thuộc phi tuyến."
+                },
+                {
+                  "q": "Vì sao outlier nguy hiểm?",
+                  "a": "Vì trung bình, phương sai và tích sai lệch đều nhạy với điểm cực đoan."
+                }
+              ]
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S15",
+          "title": "Cầu nối sang bài kế tiếp",
+          "layout": "learning-bridge",
+          "role": "bridge",
+          "blocks": [
+            {
+              "type": "section",
+              "title": "Nối về PCA",
+              "body": "Pearson dẫn sang correlation matrix và so sánh với covariance matrix trước PCA."
+            },
+            {
+              "type": "section",
+              "title": "Nối về pipeline",
+              "body": "Mọi thống kê preprocessing dùng khi inference phải lấy từ pipeline đã fit trên train."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        },
+        {
+          "id": "MATH-VN-PS-C06-L10-S16",
+          "title": "Chốt kiến thức cần giữ lại",
+          "layout": "summary",
+          "role": "takeaway",
+          "blocks": [
+            {
+              "type": "bullet-list",
+              "title": "Ba điều phải nhớ",
+              "items": [
+                "Pearson đo liên hệ tuyến tính, không phải nhân quả.",
+                "r không có đơn vị và nằm trong [-1,1].",
+                "Luôn kiểm tra scatter, outlier và cỡ mẫu."
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Câu chốt",
+              "body": "Một hệ số đơn lẻ chỉ hữu ích khi đi cùng hình dạng dữ liệu và giả thiết."
+            }
+          ],
+          "sourceChapterNo": 5,
+          "sourceStageNo": 0,
+          "renderPolicy": "safe_text_formula_blocks_only"
+        }
+      ],
+      "frameChapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+      "e138Added": true
+    }
+  ],
+  "updatedAt": "2026-09-21",
+  "guard": {
+    "physicalChapter7Created": false,
+    "stableIdsRequired": true,
+    "storageKeyModified": false
+  }
+}
