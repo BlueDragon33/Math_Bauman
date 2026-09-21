@@ -1,0 +1,29 @@
+{
+  "release": "E138_CENTERING_PEARSON_GAP_PATCH",
+  "date": "2026-09-21",
+  "status": "IMPLEMENTED_ON_BRANCH",
+  "rationale": "Use a small overlay because direct replacement of the multi-megabyte theory vault failed at transport level and would increase accidental overwrite risk.",
+  "source": "data/theory_lecture_overlay_e138.json",
+  "runtimeBridge": "assets/runtime_content/theory-overlay-E138.js",
+  "records": [
+    {
+      "lessonId": "MATH-VN-PS-C06-L09",
+      "title": "Trung tâm hóa và chuẩn hóa đặc trưng trước PCA/ML",
+      "slides": 16
+    },
+    {
+      "lessonId": "MATH-VN-PS-C06-L10",
+      "title": "Tương quan Pearson: đo liên hệ tuyến tính và các bẫy diễn giải",
+      "slides": 16
+    }
+  ],
+  "mergePolicy": "replace_by_lessonId_then_append_in_memory",
+  "gates": {
+    "physicalVNChapter7Created": false,
+    "baseTheoryVaultOverwritten": false,
+    "storageKeyModified": false,
+    "stableFrameChapterId": "MATH-VN-C05-thong_ke_mo_ta_va_du_lie",
+    "runtimeSelfCheck": "BAUMAN_MATH_E138_SELF_CHECK"
+  },
+  "next": "E139_NON_THEORY_CONTENT_HYDRATION"
+}
