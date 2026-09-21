@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_question_bank_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E141_STAGE_SCOPED_100Q_CAPACITY",
+  "version": "E151_HK1_TIME_SERIES_CONTENT",
   "subject": "math",
   "title": "Ngân hàng câu hỏi · Nội dung",
   "contentVaultRole": "content",
@@ -4562,6 +4562,1446 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E151-process-Q01",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Một chuỗi thời gian khác bảng i.i.d. chủ yếu ở điểm nào?",
+      "options": [
+        "Thứ tự thời gian và phụ thuộc giữa các thời điểm mang thông tin.",
+        "Mỗi hàng luôn độc lập.",
+        "Chỉ khác ở tên cột timestamp.",
+        "Luôn có phân phối chuẩn."
+      ],
+      "answer": "Thứ tự thời gian và phụ thuộc giữa các thời điểm mang thông tin.",
+      "explanation": "Thứ tự thời gian và phụ thuộc giữa các thời điểm mang thông tin. Liên hệ bài Dữ liệu theo thời gian và quá trình ngẫu nhiên: Thứ tự thời gian và sample path là một phần của dữ liệu. Bẫy cần tránh: Xáo trộn thời gian như dữ liệu i.i.d.",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-process-Q02",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Ký hiệu {X_t:t∈T} mô tả gì?",
+      "options": [
+        "Một quá trình ngẫu nhiên được đánh chỉ số bởi thời gian.",
+        "Một vector tham số cố định.",
+        "Một ma trận covariance.",
+        "Một histogram."
+      ],
+      "answer": "Một quá trình ngẫu nhiên được đánh chỉ số bởi thời gian.",
+      "explanation": "Một quá trình ngẫu nhiên được đánh chỉ số bởi thời gian. Liên hệ bài Dữ liệu theo thời gian và quá trình ngẫu nhiên: Thứ tự thời gian và sample path là một phần của dữ liệu. Bẫy cần tránh: Xáo trộn thời gian như dữ liệu i.i.d.",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-process-Q03",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Sample path là gì?",
+      "options": [
+        "Một hiện thực của quá trình theo thời gian khi cố định kết quả ngẫu nhiên.",
+        "Tập tất cả mô hình có thể.",
+        "Phân phối biên tại một thời điểm.",
+        "Tập feature sau PCA."
+      ],
+      "answer": "Một hiện thực của quá trình theo thời gian khi cố định kết quả ngẫu nhiên.",
+      "explanation": "Một hiện thực của quá trình theo thời gian khi cố định kết quả ngẫu nhiên. Liên hệ bài Dữ liệu theo thời gian và quá trình ngẫu nhiên: Thứ tự thời gian và sample path là một phần của dữ liệu. Bẫy cần tránh: Xáo trộn thời gian như dữ liệu i.i.d.",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-process-Q04",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Vì sao xáo trộn thứ tự mẫu có thể nguy hiểm?",
+      "options": [
+        "Nó phá cấu trúc phụ thuộc thời gian dù phân phối biên có thể gần như giữ nguyên.",
+        "Nó luôn đổi mean về 0.",
+        "Nó luôn tăng variance.",
+        "Nó làm dữ liệu thành Gaussian."
+      ],
+      "answer": "Nó phá cấu trúc phụ thuộc thời gian dù phân phối biên có thể gần như giữ nguyên.",
+      "explanation": "Nó phá cấu trúc phụ thuộc thời gian dù phân phối biên có thể gần như giữ nguyên. Liên hệ bài Dữ liệu theo thời gian và quá trình ngẫu nhiên: Thứ tự thời gian và sample path là một phần của dữ liệu. Bẫy cần tránh: Xáo trộn thời gian như dữ liệu i.i.d.",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-process-Q05",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Điều gì phải kiểm tra trước khi phân tích chuỗi cảm biến?",
+      "options": [
+        "Timestamp, khoảng lấy mẫu, missing/duplicate time và thứ tự.",
+        "Chỉ số hàng có tăng đều không là đủ.",
+        "Chỉ kiểm histogram.",
+        "Chỉ chuẩn hóa min-max."
+      ],
+      "answer": "Timestamp, khoảng lấy mẫu, missing/duplicate time và thứ tự.",
+      "explanation": "Timestamp, khoảng lấy mẫu, missing/duplicate time và thứ tự. Liên hệ bài Dữ liệu theo thời gian và quá trình ngẫu nhiên: Thứ tự thời gian và sample path là một phần của dữ liệu. Bẫy cần tránh: Xáo trộn thời gian như dữ liệu i.i.d.",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-process-Q06",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Nếu histogram trước/sau shuffle gần như giống nhau, kết luận nào đúng?",
+      "options": [
+        "Phân phối biên giống không đảm bảo cấu trúc theo thời gian giống.",
+        "Hai chuỗi chắc chắn tương đương.",
+        "ACF chắc chắn giống.",
+        "Khả năng dự báo chắc chắn giống."
+      ],
+      "answer": "Phân phối biên giống không đảm bảo cấu trúc theo thời gian giống.",
+      "explanation": "Phân phối biên giống không đảm bảo cấu trúc theo thời gian giống. Liên hệ bài Dữ liệu theo thời gian và quá trình ngẫu nhiên: Thứ tự thời gian và sample path là một phần của dữ liệu. Bẫy cần tránh: Xáo trộn thời gian như dữ liệu i.i.d.",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-process-Q07",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "Feature dùng để dự báo tại t phải thỏa gì?",
+      "options": [
+        "Chỉ dùng thông tin có sẵn không muộn hơn thời điểm t.",
+        "Có thể dùng giá trị t+1 nếu tăng accuracy.",
+        "Có thể fit trên toàn bộ test.",
+        "Không cần giữ timestamp."
+      ],
+      "answer": "Chỉ dùng thông tin có sẵn không muộn hơn thời điểm t.",
+      "explanation": "Chỉ dùng thông tin có sẵn không muộn hơn thời điểm t. Liên hệ bài Dữ liệu theo thời gian và quá trình ngẫu nhiên: Thứ tự thời gian và sample path là một phần của dữ liệu. Bẫy cần tránh: Xáo trộn thời gian như dữ liệu i.i.d.",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-process-Q08",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "Một ensemble của quá trình ngẫu nhiên là gì?",
+      "options": [
+        "Tập nhiều sample path/hiện thực có thể của cùng quá trình.",
+        "Một sample path duy nhất.",
+        "Một tập lag của ACF.",
+        "Một tập residual."
+      ],
+      "answer": "Tập nhiều sample path/hiện thực có thể của cùng quá trình.",
+      "explanation": "Tập nhiều sample path/hiện thực có thể của cùng quá trình. Liên hệ bài Dữ liệu theo thời gian và quá trình ngẫu nhiên: Thứ tự thời gian và sample path là một phần của dữ liệu. Bẫy cần tránh: Xáo trộn thời gian như dữ liệu i.i.d.",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-process-Q09",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Bẫy học thuật quan trọng khi suy từ một sample path?",
+      "options": [
+        "Không đồng nhất ngay thống kê theo thời gian với thống kê ensemble nếu chưa có giả thiết thích hợp.",
+        "Luôn coi time average bằng expectation.",
+        "Luôn giả sử ergodic.",
+        "Bỏ qua sampling interval."
+      ],
+      "answer": "Không đồng nhất ngay thống kê theo thời gian với thống kê ensemble nếu chưa có giả thiết thích hợp.",
+      "explanation": "Không đồng nhất ngay thống kê theo thời gian với thống kê ensemble nếu chưa có giả thiết thích hợp. Liên hệ bài Dữ liệu theo thời gian và quá trình ngẫu nhiên: Thứ tự thời gian và sample path là một phần của dữ liệu. Bẫy cần tránh: Xáo trộn thời gian như dữ liệu i.i.d.",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-process-Q10",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Thí nghiệm nào chứng minh thứ tự quan trọng?",
+      "options": [
+        "Shuffle cùng tập giá trị rồi so sánh ACF/forecast error với chuỗi gốc.",
+        "Chỉ so sánh min/max.",
+        "Chỉ đổi tên cột.",
+        "Chỉ vẽ boxplot."
+      ],
+      "answer": "Shuffle cùng tập giá trị rồi so sánh ACF/forecast error với chuỗi gốc.",
+      "explanation": "Shuffle cùng tập giá trị rồi so sánh ACF/forecast error với chuỗi gốc. Liên hệ bài Dữ liệu theo thời gian và quá trình ngẫu nhiên: Thứ tự thời gian và sample path là một phần của dữ liệu. Bẫy cần tránh: Xáo trộn thời gian như dữ liệu i.i.d.",
+      "tags": [
+        "time-series",
+        "process",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-stationarity-Q01",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Điều kiện mean của WSS là gì?",
+      "options": [
+        "E[X_t]=μ không phụ thuộc t.",
+        "Mean phải bằng 0.",
+        "Mean phải tăng tuyến tính.",
+        "Mean phải bằng variance."
+      ],
+      "answer": "E[X_t]=μ không phụ thuộc t.",
+      "explanation": "E[X_t]=μ không phụ thuộc t. Liên hệ bài Tính dừng và tính dừng yếu (WSS): WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag. Bẫy cần tránh: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-stationarity-Q02",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Autocovariance của WSS phụ thuộc vào gì?",
+      "options": [
+        "Độ trễ h=t-s, không phụ thuộc mốc thời gian tuyệt đối.",
+        "Chỉ t.",
+        "Chỉ s.",
+        "Giá trị cực đại của chuỗi."
+      ],
+      "answer": "Độ trễ h=t-s, không phụ thuộc mốc thời gian tuyệt đối.",
+      "explanation": "Độ trễ h=t-s, không phụ thuộc mốc thời gian tuyệt đối. Liên hệ bài Tính dừng và tính dừng yếu (WSS): WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag. Bẫy cần tránh: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-stationarity-Q03",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Một random walk điển hình có WSS không?",
+      "options": [
+        "Không; variance của nó tăng theo thời gian.",
+        "Có vì innovation là white noise.",
+        "Có nếu mean bằng 0.",
+        "Luôn có sau standardization."
+      ],
+      "answer": "Không; variance của nó tăng theo thời gian.",
+      "explanation": "Không; variance của nó tăng theo thời gian. Liên hệ bài Tính dừng và tính dừng yếu (WSS): WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag. Bẫy cần tránh: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-stationarity-Q04",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Rolling mean thay đổi rõ theo thời gian gợi ý gì?",
+      "options": [
+        "Khả năng có drift/nonstationarity cần kiểm tra.",
+        "Chuỗi chắc chắn white noise.",
+        "Chuỗi chắc chắn AR(1).",
+        "ACF chắc chắn bằng 0."
+      ],
+      "answer": "Khả năng có drift/nonstationarity cần kiểm tra.",
+      "explanation": "Khả năng có drift/nonstationarity cần kiểm tra. Liên hệ bài Tính dừng và tính dừng yếu (WSS): WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag. Bẫy cần tránh: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-stationarity-Q05",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Vì sao một đoạn ngắn nhìn ổn định chưa đủ kết luận dừng?",
+      "options": [
+        "Tính dừng là tính chất phân phối/thống kê theo thời gian, không phải chỉ hình dạng cục bộ.",
+        "Vì phải có ít nhất 1 triệu mẫu.",
+        "Vì dừng chỉ áp dụng cho tín hiệu tuần hoàn.",
+        "Vì mean luôn bằng 0."
+      ],
+      "answer": "Tính dừng là tính chất phân phối/thống kê theo thời gian, không phải chỉ hình dạng cục bộ.",
+      "explanation": "Tính dừng là tính chất phân phối/thống kê theo thời gian, không phải chỉ hình dạng cục bộ. Liên hệ bài Tính dừng và tính dừng yếu (WSS): WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag. Bẫy cần tránh: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-stationarity-Q06",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Biến đổi nào thường giúp giảm trend tuyến tính/stochastic trend?",
+      "options": [
+        "Sai phân, nếu phù hợp và được kiểm tra.",
+        "Shuffle dữ liệu.",
+        "Random split.",
+        "PCA trên timestamp."
+      ],
+      "answer": "Sai phân, nếu phù hợp và được kiểm tra.",
+      "explanation": "Sai phân, nếu phù hợp và được kiểm tra. Liên hệ bài Tính dừng và tính dừng yếu (WSS): WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag. Bẫy cần tránh: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-stationarity-Q07",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "Khi đánh giá WSS thực nghiệm, nên làm gì?",
+      "options": [
+        "So sánh mean/variance theo các cửa sổ và xem covariance/ACF theo lag.",
+        "Chỉ tính một mean toàn cục.",
+        "Chỉ xem histogram.",
+        "Chỉ kiểm số lượng mẫu."
+      ],
+      "answer": "So sánh mean/variance theo các cửa sổ và xem covariance/ACF theo lag.",
+      "explanation": "So sánh mean/variance theo các cửa sổ và xem covariance/ACF theo lag. Liên hệ bài Tính dừng và tính dừng yếu (WSS): WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag. Bẫy cần tránh: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-stationarity-Q08",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "Nếu variance đổi mạnh theo thời gian thì sao?",
+      "options": [
+        "Giả thiết WSS bị nghi ngờ dù mean có thể ổn định.",
+        "WSS vẫn chắc chắn đúng.",
+        "Chỉ cần trừ mean là xong.",
+        "Không ảnh hưởng mô hình."
+      ],
+      "answer": "Giả thiết WSS bị nghi ngờ dù mean có thể ổn định.",
+      "explanation": "Giả thiết WSS bị nghi ngờ dù mean có thể ổn định. Liên hệ bài Tính dừng và tính dừng yếu (WSS): WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag. Bẫy cần tránh: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-stationarity-Q09",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Chuỗi seasonal có thể dừng không?",
+      "options": [
+        "Có thể sau mô hình hóa/loại thành phần mùa; seasonality thô thường làm thống kê phụ thuộc vị trí trong chu kỳ.",
+        "Không bao giờ.",
+        "Luôn dừng nếu chu kỳ cố định.",
+        "Chỉ cần chuẩn hóa z-score."
+      ],
+      "answer": "Có thể sau mô hình hóa/loại thành phần mùa; seasonality thô thường làm thống kê phụ thuộc vị trí trong chu kỳ.",
+      "explanation": "Có thể sau mô hình hóa/loại thành phần mùa; seasonality thô thường làm thống kê phụ thuộc vị trí trong chu kỳ. Liên hệ bài Tính dừng và tính dừng yếu (WSS): WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag. Bẫy cần tránh: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-stationarity-Q10",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Một kết luận an toàn về stationarity là gì?",
+      "options": [
+        "Nêu rõ tiêu chí/đoạn dữ liệu đã kiểm và coi đây là giả thiết mô hình cần tái kiểm.",
+        "Tuyên bố dừng vĩnh viễn.",
+        "Suy từ một đồ thị.",
+        "Bỏ qua thay đổi chế độ vận hành."
+      ],
+      "answer": "Nêu rõ tiêu chí/đoạn dữ liệu đã kiểm và coi đây là giả thiết mô hình cần tái kiểm.",
+      "explanation": "Nêu rõ tiêu chí/đoạn dữ liệu đã kiểm và coi đây là giả thiết mô hình cần tái kiểm. Liên hệ bài Tính dừng và tính dừng yếu (WSS): WSS yêu cầu mean hằng và autocovariance chỉ phụ thuộc lag. Bẫy cần tránh: Kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-acf-Q01",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "ρ(0) bằng bao nhiêu nếu variance dương?",
+      "options": [
+        "1.",
+        "0.",
+        "-1.",
+        "Phụ thuộc đơn vị."
+      ],
+      "answer": "1.",
+      "explanation": "1. Liên hệ bài Autocovariance, autocorrelation và độ trễ: ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag. Bẫy cần tránh: Đọc ACF như quan hệ nhân quả.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-acf-Q02",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "ACF ở lag h đo gì?",
+      "options": [
+        "Liên hệ tuyến tính giữa chuỗi và bản dịch h bước của chính nó.",
+        "Quan hệ nhân quả chắc chắn.",
+        "Entropy của chuỗi.",
+        "Sai số PCA."
+      ],
+      "answer": "Liên hệ tuyến tính giữa chuỗi và bản dịch h bước của chính nó.",
+      "explanation": "Liên hệ tuyến tính giữa chuỗi và bản dịch h bước của chính nó. Liên hệ bài Autocovariance, autocorrelation và độ trễ: ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag. Bẫy cần tránh: Đọc ACF như quan hệ nhân quả.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-acf-Q03",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Tại sao autocorrelation không có đơn vị?",
+      "options": [
+        "Vì autocovariance được chuẩn hóa bởi variance γ(0).",
+        "Vì timestamp không có đơn vị.",
+        "Vì mean luôn 0.",
+        "Vì mọi chuỗi đã z-score."
+      ],
+      "answer": "Vì autocovariance được chuẩn hóa bởi variance γ(0).",
+      "explanation": "Vì autocovariance được chuẩn hóa bởi variance γ(0). Liên hệ bài Autocovariance, autocorrelation và độ trễ: ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag. Bẫy cần tránh: Đọc ACF như quan hệ nhân quả.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-acf-Q04",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Đỉnh ACF lặp lại theo các lag đều nhau có thể gợi ý gì?",
+      "options": [
+        "Cấu trúc tuần hoàn/seasonality.",
+        "Chuỗi chắc chắn độc lập.",
+        "Không có noise.",
+        "Mean bằng 0."
+      ],
+      "answer": "Cấu trúc tuần hoàn/seasonality.",
+      "explanation": "Cấu trúc tuần hoàn/seasonality. Liên hệ bài Autocovariance, autocorrelation và độ trễ: ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag. Bẫy cần tránh: Đọc ACF như quan hệ nhân quả.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-acf-Q05",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "ACF gần 0 ở lag 1 có nghĩa gì?",
+      "options": [
+        "Ít liên hệ tuyến tính ở lag 1; không chứng minh độc lập tổng quát.",
+        "Hai mẫu chắc chắn độc lập.",
+        "Không có quan hệ phi tuyến.",
+        "Chuỗi chắc chắn white noise."
+      ],
+      "answer": "Ít liên hệ tuyến tính ở lag 1; không chứng minh độc lập tổng quát.",
+      "explanation": "Ít liên hệ tuyến tính ở lag 1; không chứng minh độc lập tổng quát. Liên hệ bài Autocovariance, autocorrelation và độ trễ: ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag. Bẫy cần tránh: Đọc ACF như quan hệ nhân quả.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-acf-Q06",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Vì sao phải cẩn thận khi xem nhiều lag?",
+      "options": [
+        "ACF mẫu có dao động ngẫu nhiên; xem nhiều lag dễ thấy đỉnh giả.",
+        "Vì lag lớn luôn bằng 1.",
+        "Vì ACF không dùng cho dữ liệu số.",
+        "Vì mọi lag đều độc lập."
+      ],
+      "answer": "ACF mẫu có dao động ngẫu nhiên; xem nhiều lag dễ thấy đỉnh giả.",
+      "explanation": "ACF mẫu có dao động ngẫu nhiên; xem nhiều lag dễ thấy đỉnh giả. Liên hệ bài Autocovariance, autocorrelation và độ trễ: ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag. Bẫy cần tránh: Đọc ACF như quan hệ nhân quả.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-acf-Q07",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "AR(1) với φ dương nhỏ hơn 1 thường có ACF dạng nào?",
+      "options": [
+        "Suy giảm xấp xỉ theo φ^h.",
+        "Bằng 0 ở mọi lag dương.",
+        "Tăng vô hạn.",
+        "Luôn dao động dấu bất kể φ."
+      ],
+      "answer": "Suy giảm xấp xỉ theo φ^h.",
+      "explanation": "Suy giảm xấp xỉ theo φ^h. Liên hệ bài Autocovariance, autocorrelation và độ trễ: ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag. Bẫy cần tránh: Đọc ACF như quan hệ nhân quả.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-acf-Q08",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "AR(1) với φ âm thường có ACF thế nào?",
+      "options": [
+        "Dấu luân phiên và biên độ suy giảm.",
+        "Luôn dương.",
+        "Luôn bằng 1.",
+        "Không xác định."
+      ],
+      "answer": "Dấu luân phiên và biên độ suy giảm.",
+      "explanation": "Dấu luân phiên và biên độ suy giảm. Liên hệ bài Autocovariance, autocorrelation và độ trễ: ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag. Bẫy cần tránh: Đọc ACF như quan hệ nhân quả.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-acf-Q09",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Sensor smoothing mạnh thường tác động ACF ra sao?",
+      "options": [
+        "Tăng phụ thuộc giữa các mẫu kề nhau.",
+        "Làm mọi lag bằng 0.",
+        "Xóa timestamp.",
+        "Biến chuỗi thành random walk chắc chắn."
+      ],
+      "answer": "Tăng phụ thuộc giữa các mẫu kề nhau.",
+      "explanation": "Tăng phụ thuộc giữa các mẫu kề nhau. Liên hệ bài Autocovariance, autocorrelation và độ trễ: ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag. Bẫy cần tránh: Đọc ACF như quan hệ nhân quả.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-acf-Q10",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "ACF residual còn lớn sau dự báo cho biết gì?",
+      "options": [
+        "Mô hình có thể chưa khai thác hết cấu trúc tuyến tính theo thời gian.",
+        "Mô hình đã hoàn hảo.",
+        "Residual chắc chắn Gaussian.",
+        "Không cần cải thiện."
+      ],
+      "answer": "Mô hình có thể chưa khai thác hết cấu trúc tuyến tính theo thời gian.",
+      "explanation": "Mô hình có thể chưa khai thác hết cấu trúc tuyến tính theo thời gian. Liên hệ bài Autocovariance, autocorrelation và độ trễ: ACF đo liên hệ tuyến tính của chuỗi với chính nó theo lag. Bẫy cần tránh: Đọc ACF như quan hệ nhân quả.",
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-ar1-Q01",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Điều kiện dừng cơ bản của AR(1) là gì?",
+      "options": [
+        "|φ|<1.",
+        "φ>1.",
+        "φ=1.",
+        "φ luôn âm."
+      ],
+      "answer": "|φ|<1.",
+      "explanation": "|φ|<1. Liên hệ bài White noise, random walk và AR(1): White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau. Bẫy cần tránh: Nhầm random walk với white noise.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-ar1-Q02",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Khi φ=0, AR(1) trở thành gì?",
+      "options": [
+        "White-noise innovation (nếu không có hằng số).",
+        "Random walk.",
+        "Seasonal process.",
+        "Deterministic trend."
+      ],
+      "answer": "White-noise innovation (nếu không có hằng số).",
+      "explanation": "White-noise innovation (nếu không có hằng số). Liên hệ bài White noise, random walk và AR(1): White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau. Bẫy cần tránh: Nhầm random walk với white noise.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-ar1-Q03",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Khi φ=1, mô hình X_t=X_{t-1}+ε_t là gì?",
+      "options": [
+        "Random walk.",
+        "WSS AR(1).",
+        "White noise.",
+        "Moving average bậc 0."
+      ],
+      "answer": "Random walk.",
+      "explanation": "Random walk. Liên hệ bài White noise, random walk và AR(1): White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau. Bẫy cần tránh: Nhầm random walk với white noise.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-ar1-Q04",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Khác biệt then chốt random walk và white noise?",
+      "options": [
+        "Random walk tích lũy innovation nên có memory và variance tăng theo thời gian.",
+        "White noise có variance tăng theo t.",
+        "Cả hai luôn dừng.",
+        "Cả hai có ACF giống nhau."
+      ],
+      "answer": "Random walk tích lũy innovation nên có memory và variance tăng theo thời gian.",
+      "explanation": "Random walk tích lũy innovation nên có memory và variance tăng theo thời gian. Liên hệ bài White noise, random walk và AR(1): White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau. Bẫy cần tránh: Nhầm random walk với white noise.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-ar1-Q05",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "AR(1) φ≈0.9 biểu hiện gì?",
+      "options": [
+        "Ký ức kéo dài và ACF suy giảm chậm.",
+        "Không có memory.",
+        "ACF chỉ khác 0 ở lag 0.",
+        "Luôn oscillatory."
+      ],
+      "answer": "Ký ức kéo dài và ACF suy giảm chậm.",
+      "explanation": "Ký ức kéo dài và ACF suy giảm chậm. Liên hệ bài White noise, random walk và AR(1): White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau. Bẫy cần tránh: Nhầm random walk với white noise.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-ar1-Q06",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "AR(1) φ≈-0.8 thường cho sample path gì?",
+      "options": [
+        "Xu hướng đổi dấu/dao động với ACF luân phiên.",
+        "Trend tuyến tính dương.",
+        "Random walk đơn điệu.",
+        "White noise độc lập hoàn toàn."
+      ],
+      "answer": "Xu hướng đổi dấu/dao động với ACF luân phiên.",
+      "explanation": "Xu hướng đổi dấu/dao động với ACF luân phiên. Liên hệ bài White noise, random walk và AR(1): White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau. Bẫy cần tránh: Nhầm random walk với white noise.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-ar1-Q07",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "Innovation ε_t trong AR(1) thường giả sử gì ở mô hình cơ bản?",
+      "options": [
+        "White noise có mean 0 và variance hữu hạn.",
+        "Random walk.",
+        "Có trend mạnh.",
+        "Biết trước tương lai."
+      ],
+      "answer": "White noise có mean 0 và variance hữu hạn.",
+      "explanation": "White noise có mean 0 và variance hữu hạn. Liên hệ bài White noise, random walk và AR(1): White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau. Bẫy cần tránh: Nhầm random walk với white noise.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-ar1-Q08",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "Vì sao random walk không nên xử lý như chuỗi dừng thô?",
+      "options": [
+        "Moments như variance phụ thuộc thời gian; hồi quy có thể cho quan hệ giả.",
+        "Vì không có timestamp.",
+        "Vì mean luôn vô hạn.",
+        "Vì không thể sai phân."
+      ],
+      "answer": "Moments như variance phụ thuộc thời gian; hồi quy có thể cho quan hệ giả.",
+      "explanation": "Moments như variance phụ thuộc thời gian; hồi quy có thể cho quan hệ giả. Liên hệ bài White noise, random walk và AR(1): White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau. Bẫy cần tránh: Nhầm random walk với white noise.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-ar1-Q09",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Sai phân random walk X_t-X_{t-1} cho gì?",
+      "options": [
+        "Innovation ε_t trong mô hình cơ bản.",
+        "Một random walk khác.",
+        "AR(2) chắc chắn.",
+        "Seasonality."
+      ],
+      "answer": "Innovation ε_t trong mô hình cơ bản.",
+      "explanation": "Innovation ε_t trong mô hình cơ bản. Liên hệ bài White noise, random walk và AR(1): White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau. Bẫy cần tránh: Nhầm random walk với white noise.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-ar1-Q10",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Case cảm biến nào gần random walk?",
+      "options": [
+        "Bias tích lũy của cảm biến quán tính/integration drift.",
+        "White noise đo tức thời.",
+        "Một timestamp đều.",
+        "Một hằng số."
+      ],
+      "answer": "Bias tích lũy của cảm biến quán tính/integration drift.",
+      "explanation": "Bias tích lũy của cảm biến quán tính/integration drift. Liên hệ bài White noise, random walk và AR(1): White noise, random walk và AR(1) có cấu trúc phụ thuộc khác nhau. Bẫy cần tránh: Nhầm random walk với white noise.",
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-structure-Q01",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Sai phân bậc một là gì?",
+      "options": [
+        "ΔX_t=X_t-X_{t-1}.",
+        "X_t+X_{t-1}.",
+        "X_t/X_{t-1} luôn.",
+        "Mean toàn chuỗi."
+      ],
+      "answer": "ΔX_t=X_t-X_{t-1}.",
+      "explanation": "ΔX_t=X_t-X_{t-1}. Liên hệ bài Trend, seasonality và sai phân: Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức. Bẫy cần tránh: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-structure-Q02",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Sai phân mùa với chu kỳ s là gì?",
+      "options": [
+        "X_t-X_{t-s}.",
+        "X_t-X_{t-1} luôn.",
+        "X_t/s.",
+        "X_t+s."
+      ],
+      "answer": "X_t-X_{t-s}.",
+      "explanation": "X_t-X_{t-s}. Liên hệ bài Trend, seasonality và sai phân: Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức. Bẫy cần tránh: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-structure-Q03",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Trend là gì trong bối cảnh cơ bản?",
+      "options": [
+        "Biến đổi mức dài hạn theo thời gian.",
+        "Noise độc lập.",
+        "Một lag duy nhất.",
+        "Residual bằng 0."
+      ],
+      "answer": "Biến đổi mức dài hạn theo thời gian.",
+      "explanation": "Biến đổi mức dài hạn theo thời gian. Liên hệ bài Trend, seasonality và sai phân: Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức. Bẫy cần tránh: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-structure-Q04",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Seasonality khác trend ở đâu?",
+      "options": [
+        "Seasonality lặp theo chu kỳ; trend mô tả biến đổi mức dài hạn.",
+        "Không khác.",
+        "Trend luôn tuần hoàn.",
+        "Seasonality luôn ngẫu nhiên."
+      ],
+      "answer": "Seasonality lặp theo chu kỳ; trend mô tả biến đổi mức dài hạn.",
+      "explanation": "Seasonality lặp theo chu kỳ; trend mô tả biến đổi mức dài hạn. Liên hệ bài Trend, seasonality và sai phân: Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức. Bẫy cần tránh: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-structure-Q05",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Mục tiêu của differencing thường là gì?",
+      "options": [
+        "Giảm cấu trúc mức/trend để mô hình hóa phần biến thiên ổn định hơn.",
+        "Tăng số mẫu.",
+        "Đảo thứ tự thời gian.",
+        "Tạo leakage."
+      ],
+      "answer": "Giảm cấu trúc mức/trend để mô hình hóa phần biến thiên ổn định hơn.",
+      "explanation": "Giảm cấu trúc mức/trend để mô hình hóa phần biến thiên ổn định hơn. Liên hệ bài Trend, seasonality và sai phân: Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức. Bẫy cần tránh: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-structure-Q06",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Vì sao không differencing vô hạn?",
+      "options": [
+        "Over-differencing có thể khuếch đại noise và làm mất cấu trúc dự báo.",
+        "Vì file sẽ lớn.",
+        "Vì mean sẽ luôn 1.",
+        "Vì ACF không tính được."
+      ],
+      "answer": "Over-differencing có thể khuếch đại noise và làm mất cấu trúc dự báo.",
+      "explanation": "Over-differencing có thể khuếch đại noise và làm mất cấu trúc dự báo. Liên hệ bài Trend, seasonality và sai phân: Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức. Bẫy cần tránh: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-structure-Q07",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "Chuỗi tải điện có đỉnh mỗi 24 giờ gợi ý gì?",
+      "options": [
+        "Seasonality chu kỳ ngày.",
+        "White noise.",
+        "Random walk chắc chắn.",
+        "Không có phụ thuộc."
+      ],
+      "answer": "Seasonality chu kỳ ngày.",
+      "explanation": "Seasonality chu kỳ ngày. Liên hệ bài Trend, seasonality và sai phân: Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức. Bẫy cần tránh: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-structure-Q08",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "Sau differencing nên kiểm gì?",
+      "options": [
+        "Mean/variance, ACF và tính dễ dự báo của chuỗi mới.",
+        "Chỉ min/max.",
+        "Chỉ tên cột.",
+        "Chỉ số mẫu."
+      ],
+      "answer": "Mean/variance, ACF và tính dễ dự báo của chuỗi mới.",
+      "explanation": "Mean/variance, ACF và tính dễ dự báo của chuỗi mới. Liên hệ bài Trend, seasonality và sai phân: Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức. Bẫy cần tránh: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-structure-Q09",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Tách trend bằng rolling mean có nguy cơ nào khi forecasting?",
+      "options": [
+        "Nếu dùng cửa sổ centered chứa tương lai có thể gây leakage.",
+        "Không có nguy cơ.",
+        "Luôn tốt hơn causal filter.",
+        "Làm mọi residual độc lập."
+      ],
+      "answer": "Nếu dùng cửa sổ centered chứa tương lai có thể gây leakage.",
+      "explanation": "Nếu dùng cửa sổ centered chứa tương lai có thể gây leakage. Liên hệ bài Trend, seasonality và sai phân: Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức. Bẫy cần tránh: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-structure-Q10",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Một pipeline an toàn với seasonality là gì?",
+      "options": [
+        "Ước lượng/biến đổi bằng dữ liệu quá khứ, đánh giá trên tương lai và kiểm residual.",
+        "Fit toàn bộ chuỗi rồi chia.",
+        "Shuffle trước khi split.",
+        "Chọn mô hình theo test."
+      ],
+      "answer": "Ước lượng/biến đổi bằng dữ liệu quá khứ, đánh giá trên tương lai và kiểm residual.",
+      "explanation": "Ước lượng/biến đổi bằng dữ liệu quá khứ, đánh giá trên tương lai và kiểm residual. Liên hệ bài Trend, seasonality và sai phân: Trend/seasonality là cấu trúc theo thời gian; differencing có thể giúp ổn định mức. Bẫy cần tránh: Over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-forecast-Q01",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Naive one-step forecast cơ bản là gì?",
+      "options": [
+        "ŷ_{t+1}=y_t.",
+        "ŷ_{t+1}=0 luôn.",
+        "ŷ_t=y_{t+1}.",
+        "Mean test set."
+      ],
+      "answer": "ŷ_{t+1}=y_t.",
+      "explanation": "ŷ_{t+1}=y_t. Liên hệ bài Forecast baseline, temporal split và residual: Đánh giá forecast phải giữ hướng thời gian và so với baseline. Bẫy cần tránh: Random split hoặc feature tương lai gây temporal leakage.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-forecast-Q02",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Residual forecast được định nghĩa thế nào?",
+      "options": [
+        "e_t=y_t-ŷ_t.",
+        "e_t=y_t+ŷ_t.",
+        "e_t=ŷ_t/y_t luôn.",
+        "e_t chỉ là noise sensor."
+      ],
+      "answer": "e_t=y_t-ŷ_t.",
+      "explanation": "e_t=y_t-ŷ_t. Liên hệ bài Forecast baseline, temporal split và residual: Đánh giá forecast phải giữ hướng thời gian và so với baseline. Bẫy cần tránh: Random split hoặc feature tương lai gây temporal leakage.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-forecast-Q03",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "easy",
+      "question": "Vì sao random train/test split thường sai cho forecasting?",
+      "options": [
+        "Nó có thể trộn tương lai vào train và phá hướng thời gian của bài toán.",
+        "Vì làm ít mẫu hơn.",
+        "Vì luôn tăng variance.",
+        "Vì không dùng được Python."
+      ],
+      "answer": "Nó có thể trộn tương lai vào train và phá hướng thời gian của bài toán.",
+      "explanation": "Nó có thể trộn tương lai vào train và phá hướng thời gian của bài toán. Liên hệ bài Forecast baseline, temporal split và residual: Đánh giá forecast phải giữ hướng thời gian và so với baseline. Bẫy cần tránh: Random split hoặc feature tương lai gây temporal leakage.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1",
+        "easy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-forecast-Q04",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Chronological split làm gì?",
+      "options": [
+        "Train trên quá khứ và đánh giá trên đoạn tương lai chưa dùng.",
+        "Shuffle rồi chia.",
+        "Fit scaler trên toàn bộ chuỗi.",
+        "Chọn test trước train."
+      ],
+      "answer": "Train trên quá khứ và đánh giá trên đoạn tương lai chưa dùng.",
+      "explanation": "Train trên quá khứ và đánh giá trên đoạn tương lai chưa dùng. Liên hệ bài Forecast baseline, temporal split và residual: Đánh giá forecast phải giữ hướng thời gian và so với baseline. Bẫy cần tránh: Random split hoặc feature tương lai gây temporal leakage.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-forecast-Q05",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Tại sao cần baseline naive?",
+      "options": [
+        "Để biết mô hình phức tạp có thực sự vượt một quy tắc đơn giản hợp lý hay không.",
+        "Để thay thế mọi mô hình.",
+        "Để tăng dữ liệu.",
+        "Để loại timestamp."
+      ],
+      "answer": "Để biết mô hình phức tạp có thực sự vượt một quy tắc đơn giản hợp lý hay không.",
+      "explanation": "Để biết mô hình phức tạp có thực sự vượt một quy tắc đơn giản hợp lý hay không. Liên hệ bài Forecast baseline, temporal split và residual: Đánh giá forecast phải giữ hướng thời gian và so với baseline. Bẫy cần tránh: Random split hoặc feature tương lai gây temporal leakage.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-forecast-Q06",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "medium",
+      "question": "Residual còn ACF lớn cho biết gì?",
+      "options": [
+        "Còn cấu trúc thời gian chưa được mô hình khai thác.",
+        "Mô hình hoàn hảo.",
+        "Không có noise.",
+        "Test bị thiếu timestamp chắc chắn."
+      ],
+      "answer": "Còn cấu trúc thời gian chưa được mô hình khai thác.",
+      "explanation": "Còn cấu trúc thời gian chưa được mô hình khai thác. Liên hệ bài Forecast baseline, temporal split và residual: Đánh giá forecast phải giữ hướng thời gian và so với baseline. Bẫy cần tránh: Random split hoặc feature tương lai gây temporal leakage.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1",
+        "medium"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-forecast-Q07",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "Feature rolling mean cho dự báo tại t phải dùng dữ liệu nào?",
+      "options": [
+        "Chỉ các quan sát ≤t theo cửa sổ causal.",
+        "Bao gồm t+1 để mượt hơn.",
+        "Toàn bộ test set.",
+        "Giá trị target tương lai."
+      ],
+      "answer": "Chỉ các quan sát ≤t theo cửa sổ causal.",
+      "explanation": "Chỉ các quan sát ≤t theo cửa sổ causal. Liên hệ bài Forecast baseline, temporal split và residual: Đánh giá forecast phải giữ hướng thời gian và so với baseline. Bẫy cần tránh: Random split hoặc feature tương lai gây temporal leakage.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-forecast-Q08",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "hard",
+      "question": "Temporal leakage là gì?",
+      "options": [
+        "Thông tin từ tương lai lọt vào feature/preprocessing/model dùng để dự đoán quá khứ.",
+        "Chỉ là missing value.",
+        "Là variance lớn.",
+        "Là ACF âm."
+      ],
+      "answer": "Thông tin từ tương lai lọt vào feature/preprocessing/model dùng để dự đoán quá khứ.",
+      "explanation": "Thông tin từ tương lai lọt vào feature/preprocessing/model dùng để dự đoán quá khứ. Liên hệ bài Forecast baseline, temporal split và residual: Đánh giá forecast phải giữ hướng thời gian và so với baseline. Bẫy cần tránh: Random split hoặc feature tương lai gây temporal leakage.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1",
+        "hard"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-forecast-Q09",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Nếu model RMSE tốt hơn naive nhưng residual còn pattern mạnh, nên kết luận gì?",
+      "options": [
+        "Model cải thiện baseline nhưng vẫn bỏ sót cấu trúc; cần chẩn đoán thêm.",
+        "Model đã tối ưu tuyệt đối.",
+        "Residual không quan trọng.",
+        "Có thể dùng random split."
+      ],
+      "answer": "Model cải thiện baseline nhưng vẫn bỏ sót cấu trúc; cần chẩn đoán thêm.",
+      "explanation": "Model cải thiện baseline nhưng vẫn bỏ sót cấu trúc; cần chẩn đoán thêm. Liên hệ bài Forecast baseline, temporal split và residual: Đánh giá forecast phải giữ hướng thời gian và so với baseline. Bẫy cần tránh: Random split hoặc feature tương lai gây temporal leakage.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
+    },
+    {
+      "questionId": "E151-forecast-Q10",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "level": "expert",
+      "question": "Đánh giá đáng tin cậy nhất cho monitoring theo thời gian?",
+      "options": [
+        "Backtesting/rolling-origin hoặc split theo thời gian giữ đúng thông tin sẵn có.",
+        "Một random split duy nhất.",
+        "Fit cả chuỗi rồi báo train error.",
+        "Chọn hyperparameter trên test."
+      ],
+      "answer": "Backtesting/rolling-origin hoặc split theo thời gian giữ đúng thông tin sẵn có.",
+      "explanation": "Backtesting/rolling-origin hoặc split theo thời gian giữ đúng thông tin sẵn có. Liên hệ bài Forecast baseline, temporal split và residual: Đánh giá forecast phải giữ hướng thời gian và so với baseline. Bẫy cần tránh: Random split hoặc feature tương lai gây temporal leakage.",
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1",
+        "expert"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT",
+      "stage": "hk1"
     }
   ],
   "importPolicy": {
@@ -4623,5 +6063,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
 }
