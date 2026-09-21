@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_professor_qa_content_e110",
   "schema": "bauman_math_content_records_v1",
-  "version": "E139_E15_LOGICAL_NON_THEORY_HYDRATION",
+  "version": "E151_HK1_TIME_SERIES_CONTENT",
   "subject": "math",
   "title": "Vấn đáp giáo sư · Nội dung",
   "contentVaultRole": "content",
@@ -146,6 +146,330 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "qaId": "E151-process-QA01",
+      "lessonId": "MATH-HK1-TS-C22-L01",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "question": "Nếu giáo sư hỏi “Dữ liệu theo thời gian và quá trình ngẫu nhiên dùng để hiểu điều gì?”, bạn trả lời thế nào?",
+      "answer": "Thứ tự thời gian và sample path là một phần của dữ liệu. Công thức neo: {X_t : t∈T}. Bẫy phải tránh: xáo trộn thời gian như dữ liệu i.i.d..",
+      "followUp": [
+        "Giả thiết nào có thể bị phá?",
+        "Bạn kiểm chứng bằng dữ liệu hoặc residual như thế nào?"
+      ],
+      "qaPairs": [
+        {
+          "question": "Bản chất của Dữ liệu theo thời gian và quá trình ngẫu nhiên?",
+          "shortAnswer": "Thứ tự thời gian và sample path là một phần của dữ liệu.",
+          "fullAnswer": "Thứ tự thời gian và sample path là một phần của dữ liệu. Công thức neo là {X_t : t∈T}; phải diễn giải theo thứ tự thời gian và giả thiết.",
+          "correctnessCriteria": [
+            "Đúng bản chất",
+            "Có công thức/quy ước",
+            "Có giới hạn"
+          ],
+          "commonWrongAnswer": "xáo trộn thời gian như dữ liệu i.i.d.",
+          "scoreGuide": "3/3 ý để đạt."
+        },
+        {
+          "question": "Bẫy thực nghiệm quan trọng nhất?",
+          "shortAnswer": "xáo trộn thời gian như dữ liệu i.i.d.",
+          "fullAnswer": "Tránh xáo trộn thời gian như dữ liệu i.i.d.. Phải giữ chronological split và chỉ dùng thông tin có sẵn ở thời điểm quyết định.",
+          "correctnessCriteria": [
+            "Nhận diện leakage/bẫy",
+            "Nêu cách phòng tránh"
+          ],
+          "commonWrongAnswer": "Dùng toàn bộ dữ liệu rồi mới chia train/test.",
+          "scoreGuide": "Đạt khi chỉ ra cả lỗi và cách sửa."
+        },
+        {
+          "question": "Một case kỹ thuật phù hợp?",
+          "shortAnswer": "Dữ liệu rung/nhiệt độ/dòng điện từ cảm biến theo timestamp.",
+          "fullAnswer": "Dữ liệu rung/nhiệt độ/dòng điện từ cảm biến theo timestamp. Có thể kiểm bằng mô phỏng/rolling statistics/ACF/residual tùy bài.",
+          "correctnessCriteria": [
+            "Case đúng ngữ cảnh",
+            "Có phép kiểm tra"
+          ],
+          "commonWrongAnswer": "Chỉ nêu tên ứng dụng, không có input/output hoặc phép kiểm.",
+          "scoreGuide": "Đạt khi case có dữ liệu và tiêu chí đánh giá."
+        }
+      ],
+      "tags": [
+        "time-series",
+        "process",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "qaId": "E151-stationarity-QA01",
+      "lessonId": "MATH-HK1-TS-C22-L02",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "question": "Nếu giáo sư hỏi “Tính dừng và tính dừng yếu (WSS) dùng để hiểu điều gì?”, bạn trả lời thế nào?",
+      "answer": "WSS yêu cầu mean hằng theo thời gian và autocovariance chỉ phụ thuộc lag. Công thức neo: E[X_t]=μ. Bẫy phải tránh: kết luận dừng chỉ từ một đoạn đồ thị ngắn.",
+      "followUp": [
+        "Giả thiết nào có thể bị phá?",
+        "Bạn kiểm chứng bằng dữ liệu hoặc residual như thế nào?"
+      ],
+      "qaPairs": [
+        {
+          "question": "Bản chất của Tính dừng và tính dừng yếu (WSS)?",
+          "shortAnswer": "WSS yêu cầu mean hằng theo thời gian và autocovariance chỉ phụ thuộc lag.",
+          "fullAnswer": "WSS yêu cầu mean hằng theo thời gian và autocovariance chỉ phụ thuộc lag. Công thức neo là E[X_t]=μ; phải diễn giải theo thứ tự thời gian và giả thiết.",
+          "correctnessCriteria": [
+            "Đúng bản chất",
+            "Có công thức/quy ước",
+            "Có giới hạn"
+          ],
+          "commonWrongAnswer": "kết luận dừng chỉ từ một đoạn đồ thị ngắn",
+          "scoreGuide": "3/3 ý để đạt."
+        },
+        {
+          "question": "Bẫy thực nghiệm quan trọng nhất?",
+          "shortAnswer": "kết luận dừng chỉ từ một đoạn đồ thị ngắn",
+          "fullAnswer": "Tránh kết luận dừng chỉ từ một đoạn đồ thị ngắn. Phải giữ chronological split và chỉ dùng thông tin có sẵn ở thời điểm quyết định.",
+          "correctnessCriteria": [
+            "Nhận diện leakage/bẫy",
+            "Nêu cách phòng tránh"
+          ],
+          "commonWrongAnswer": "Dùng toàn bộ dữ liệu rồi mới chia train/test.",
+          "scoreGuide": "Đạt khi chỉ ra cả lỗi và cách sửa."
+        },
+        {
+          "question": "Một case kỹ thuật phù hợp?",
+          "shortAnswer": "Phát hiện drift của cảm biến qua rolling mean/variance.",
+          "fullAnswer": "Phát hiện drift của cảm biến qua rolling mean/variance. Có thể kiểm bằng mô phỏng/rolling statistics/ACF/residual tùy bài.",
+          "correctnessCriteria": [
+            "Case đúng ngữ cảnh",
+            "Có phép kiểm tra"
+          ],
+          "commonWrongAnswer": "Chỉ nêu tên ứng dụng, không có input/output hoặc phép kiểm.",
+          "scoreGuide": "Đạt khi case có dữ liệu và tiêu chí đánh giá."
+        }
+      ],
+      "tags": [
+        "time-series",
+        "stationarity",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "qaId": "E151-acf-QA01",
+      "lessonId": "MATH-HK1-TS-C22-L03",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "question": "Nếu giáo sư hỏi “Autocovariance, autocorrelation và độ trễ dùng để hiểu điều gì?”, bạn trả lời thế nào?",
+      "answer": "ACF đo phụ thuộc tuyến tính của chuỗi với chính nó theo lag. Công thức neo: γ(h)=Cov(X_t,X_{t-h}). Bẫy phải tránh: đọc ACF như quan hệ nhân quả.",
+      "followUp": [
+        "Giả thiết nào có thể bị phá?",
+        "Bạn kiểm chứng bằng dữ liệu hoặc residual như thế nào?"
+      ],
+      "qaPairs": [
+        {
+          "question": "Bản chất của Autocovariance, autocorrelation và độ trễ?",
+          "shortAnswer": "ACF đo phụ thuộc tuyến tính của chuỗi với chính nó theo lag.",
+          "fullAnswer": "ACF đo phụ thuộc tuyến tính của chuỗi với chính nó theo lag. Công thức neo là γ(h)=Cov(X_t,X_{t-h}); phải diễn giải theo thứ tự thời gian và giả thiết.",
+          "correctnessCriteria": [
+            "Đúng bản chất",
+            "Có công thức/quy ước",
+            "Có giới hạn"
+          ],
+          "commonWrongAnswer": "đọc ACF như quan hệ nhân quả",
+          "scoreGuide": "3/3 ý để đạt."
+        },
+        {
+          "question": "Bẫy thực nghiệm quan trọng nhất?",
+          "shortAnswer": "đọc ACF như quan hệ nhân quả",
+          "fullAnswer": "Tránh đọc ACF như quan hệ nhân quả. Phải giữ chronological split và chỉ dùng thông tin có sẵn ở thời điểm quyết định.",
+          "correctnessCriteria": [
+            "Nhận diện leakage/bẫy",
+            "Nêu cách phòng tránh"
+          ],
+          "commonWrongAnswer": "Dùng toàn bộ dữ liệu rồi mới chia train/test.",
+          "scoreGuide": "Đạt khi chỉ ra cả lỗi và cách sửa."
+        },
+        {
+          "question": "Một case kỹ thuật phù hợp?",
+          "shortAnswer": "Tìm chu kỳ lặp trong rung máy bằng các đỉnh ACF.",
+          "fullAnswer": "Tìm chu kỳ lặp trong rung máy bằng các đỉnh ACF. Có thể kiểm bằng mô phỏng/rolling statistics/ACF/residual tùy bài.",
+          "correctnessCriteria": [
+            "Case đúng ngữ cảnh",
+            "Có phép kiểm tra"
+          ],
+          "commonWrongAnswer": "Chỉ nêu tên ứng dụng, không có input/output hoặc phép kiểm.",
+          "scoreGuide": "Đạt khi case có dữ liệu và tiêu chí đánh giá."
+        }
+      ],
+      "tags": [
+        "time-series",
+        "acf",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "qaId": "E151-ar1-QA01",
+      "lessonId": "MATH-HK1-TS-C22-L04",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "question": "Nếu giáo sư hỏi “White noise, random walk và AR(1) dùng để hiểu điều gì?”, bạn trả lời thế nào?",
+      "answer": "White noise, random walk và AR(1) có cấu trúc phụ thuộc rất khác nhau dù đều dùng nhiễu. Công thức neo: X_t=φX_{t-1}+ε_t. Bẫy phải tránh: nhầm random walk với white noise.",
+      "followUp": [
+        "Giả thiết nào có thể bị phá?",
+        "Bạn kiểm chứng bằng dữ liệu hoặc residual như thế nào?"
+      ],
+      "qaPairs": [
+        {
+          "question": "Bản chất của White noise, random walk và AR(1)?",
+          "shortAnswer": "White noise, random walk và AR(1) có cấu trúc phụ thuộc rất khác nhau dù đều dùng nhiễu.",
+          "fullAnswer": "White noise, random walk và AR(1) có cấu trúc phụ thuộc rất khác nhau dù đều dùng nhiễu. Công thức neo là X_t=φX_{t-1}+ε_t; phải diễn giải theo thứ tự thời gian và giả thiết.",
+          "correctnessCriteria": [
+            "Đúng bản chất",
+            "Có công thức/quy ước",
+            "Có giới hạn"
+          ],
+          "commonWrongAnswer": "nhầm random walk với white noise",
+          "scoreGuide": "3/3 ý để đạt."
+        },
+        {
+          "question": "Bẫy thực nghiệm quan trọng nhất?",
+          "shortAnswer": "nhầm random walk với white noise",
+          "fullAnswer": "Tránh nhầm random walk với white noise. Phải giữ chronological split và chỉ dùng thông tin có sẵn ở thời điểm quyết định.",
+          "correctnessCriteria": [
+            "Nhận diện leakage/bẫy",
+            "Nêu cách phòng tránh"
+          ],
+          "commonWrongAnswer": "Dùng toàn bộ dữ liệu rồi mới chia train/test.",
+          "scoreGuide": "Đạt khi chỉ ra cả lỗi và cách sửa."
+        },
+        {
+          "question": "Một case kỹ thuật phù hợp?",
+          "shortAnswer": "Mô hình gần đúng quán tính ngắn của tín hiệu cảm biến.",
+          "fullAnswer": "Mô hình gần đúng quán tính ngắn của tín hiệu cảm biến. Có thể kiểm bằng mô phỏng/rolling statistics/ACF/residual tùy bài.",
+          "correctnessCriteria": [
+            "Case đúng ngữ cảnh",
+            "Có phép kiểm tra"
+          ],
+          "commonWrongAnswer": "Chỉ nêu tên ứng dụng, không có input/output hoặc phép kiểm.",
+          "scoreGuide": "Đạt khi case có dữ liệu và tiêu chí đánh giá."
+        }
+      ],
+      "tags": [
+        "time-series",
+        "ar1",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "qaId": "E151-structure-QA01",
+      "lessonId": "MATH-HK1-TS-C22-L05",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "question": "Nếu giáo sư hỏi “Trend, seasonality và sai phân dùng để hiểu điều gì?”, bạn trả lời thế nào?",
+      "answer": "Trend/seasonality phải được tách hoặc mô hình hóa; differencing có thể giảm stochastic trend. Công thức neo: ΔX_t=X_t-X_{t-1}. Bẫy phải tránh: over-differencing làm tăng nhiễu và mất cấu trúc.",
+      "followUp": [
+        "Giả thiết nào có thể bị phá?",
+        "Bạn kiểm chứng bằng dữ liệu hoặc residual như thế nào?"
+      ],
+      "qaPairs": [
+        {
+          "question": "Bản chất của Trend, seasonality và sai phân?",
+          "shortAnswer": "Trend/seasonality phải được tách hoặc mô hình hóa; differencing có thể giảm stochastic trend.",
+          "fullAnswer": "Trend/seasonality phải được tách hoặc mô hình hóa; differencing có thể giảm stochastic trend. Công thức neo là ΔX_t=X_t-X_{t-1}; phải diễn giải theo thứ tự thời gian và giả thiết.",
+          "correctnessCriteria": [
+            "Đúng bản chất",
+            "Có công thức/quy ước",
+            "Có giới hạn"
+          ],
+          "commonWrongAnswer": "over-differencing làm tăng nhiễu và mất cấu trúc",
+          "scoreGuide": "3/3 ý để đạt."
+        },
+        {
+          "question": "Bẫy thực nghiệm quan trọng nhất?",
+          "shortAnswer": "over-differencing làm tăng nhiễu và mất cấu trúc",
+          "fullAnswer": "Tránh over-differencing làm tăng nhiễu và mất cấu trúc. Phải giữ chronological split và chỉ dùng thông tin có sẵn ở thời điểm quyết định.",
+          "correctnessCriteria": [
+            "Nhận diện leakage/bẫy",
+            "Nêu cách phòng tránh"
+          ],
+          "commonWrongAnswer": "Dùng toàn bộ dữ liệu rồi mới chia train/test.",
+          "scoreGuide": "Đạt khi chỉ ra cả lỗi và cách sửa."
+        },
+        {
+          "question": "Một case kỹ thuật phù hợp?",
+          "shortAnswer": "Tải điện có xu hướng dài hạn và chu kỳ 24 giờ.",
+          "fullAnswer": "Tải điện có xu hướng dài hạn và chu kỳ 24 giờ. Có thể kiểm bằng mô phỏng/rolling statistics/ACF/residual tùy bài.",
+          "correctnessCriteria": [
+            "Case đúng ngữ cảnh",
+            "Có phép kiểm tra"
+          ],
+          "commonWrongAnswer": "Chỉ nêu tên ứng dụng, không có input/output hoặc phép kiểm.",
+          "scoreGuide": "Đạt khi case có dữ liệu và tiêu chí đánh giá."
+        }
+      ],
+      "tags": [
+        "time-series",
+        "structure",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
+    },
+    {
+      "qaId": "E151-forecast-QA01",
+      "lessonId": "MATH-HK1-TS-C22-L06",
+      "chapterId": "MATH-HK1-C22-qua_trinh_ngau_nhien_va_",
+      "question": "Nếu giáo sư hỏi “Forecast baseline, temporal split và residual dùng để hiểu điều gì?”, bạn trả lời thế nào?",
+      "answer": "Đánh giá phải giữ hướng thời gian và so với baseline đơn giản. Công thức neo: ŷ_{t+1}=y_t. Bẫy phải tránh: random split hoặc feature tương lai gây temporal leakage.",
+      "followUp": [
+        "Giả thiết nào có thể bị phá?",
+        "Bạn kiểm chứng bằng dữ liệu hoặc residual như thế nào?"
+      ],
+      "qaPairs": [
+        {
+          "question": "Bản chất của Forecast baseline, temporal split và residual?",
+          "shortAnswer": "Đánh giá phải giữ hướng thời gian và so với baseline đơn giản.",
+          "fullAnswer": "Đánh giá phải giữ hướng thời gian và so với baseline đơn giản. Công thức neo là ŷ_{t+1}=y_t; phải diễn giải theo thứ tự thời gian và giả thiết.",
+          "correctnessCriteria": [
+            "Đúng bản chất",
+            "Có công thức/quy ước",
+            "Có giới hạn"
+          ],
+          "commonWrongAnswer": "random split hoặc feature tương lai gây temporal leakage",
+          "scoreGuide": "3/3 ý để đạt."
+        },
+        {
+          "question": "Bẫy thực nghiệm quan trọng nhất?",
+          "shortAnswer": "random split hoặc feature tương lai gây temporal leakage",
+          "fullAnswer": "Tránh random split hoặc feature tương lai gây temporal leakage. Phải giữ chronological split và chỉ dùng thông tin có sẵn ở thời điểm quyết định.",
+          "correctnessCriteria": [
+            "Nhận diện leakage/bẫy",
+            "Nêu cách phòng tránh"
+          ],
+          "commonWrongAnswer": "Dùng toàn bộ dữ liệu rồi mới chia train/test.",
+          "scoreGuide": "Đạt khi chỉ ra cả lỗi và cách sửa."
+        },
+        {
+          "question": "Một case kỹ thuật phù hợp?",
+          "shortAnswer": "Dự báo baseline cho monitoring cảm biến.",
+          "fullAnswer": "Dự báo baseline cho monitoring cảm biến. Có thể kiểm bằng mô phỏng/rolling statistics/ACF/residual tùy bài.",
+          "correctnessCriteria": [
+            "Case đúng ngữ cảnh",
+            "Có phép kiểm tra"
+          ],
+          "commonWrongAnswer": "Chỉ nêu tên ứng dụng, không có input/output hoặc phép kiểm.",
+          "scoreGuide": "Đạt khi case có dữ liệu và tiêu chí đánh giá."
+        }
+      ],
+      "tags": [
+        "time-series",
+        "forecast",
+        "hk1"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
     }
   ],
   "importPolicy": {
@@ -199,5 +523,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E151_HK1_TIME_SERIES_CONTENT"
 }
