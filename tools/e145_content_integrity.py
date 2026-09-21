@@ -77,6 +77,26 @@ def check_manifest_counts() -> tuple[dict[str, int], dict]:
             fail(f"duplicate manifest content source: {content_name}")
         seen.add(content_name)
 
+        frame_name = str(domain.get("frame") or "")
+        if not frame_name:
+            fail(f"{content_name}: manifest domain missing frame name")
+        expected_frame = f"data/{frame_name}.json"
+        expected_content = f"data/{content_name}.json"
+        if domain.get("framePath") != expected_frame:
+            fail(f"{content_name}: framePath={domain.get('framePath')!r}, expected={expected_frame!r}")
+        if domain.get("contentPath") != expected_content:
+            fail(f"{content_name}: contentPath={domain.get('contentPath')!r}, expected={expected_content!r}")
+        if not (ROOT / expected_frame).is_file():
+            fail(f"{content_name}: missing standalone frame path {expected_frame}")
+        if not (ROOT / expected_content).is_file():
+            fail(f"{content_name}: missing standalone content path {expected_content}")
+        expected_package_frame = f"subjects/math/data/{frame_name}.json"
+        expected_package_content = f"subjects/math/data/{content_name}.json"
+        if domain.get("packageFramePath") != expected_package_frame:
+            fail(f"{content_name}: packageFramePath drift")
+        if domain.get("packageContentPath") != expected_package_content:
+            fail(f"{content_name}: packageContentPath drift")
+
         payload = load_json(DATA / f"{content_name}.json")
         actual = len(records(payload))
         declared = domain.get("contentCount")

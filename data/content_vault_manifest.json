@@ -1,7 +1,7 @@
 {
   "id": "bauman_math_content_vault_manifest_e113_subjects_only_clean",
   "schema": "bauman_math_content_vault_manifest_v2",
-  "version": "E143_CONTENT_VAULT_MANIFEST_RECONCILED",
+  "version": "E146_DUAL_MODE_CONTENT_VAULT_PATH_CONTRACT",
   "subject": "math",
   "title": "Content Vault · Specialized Data Router",
   "purpose": "Kho môn học chuyên biệt: Kho môn học → Học tập → tab nội dung → Khung môn học/Dữ liệu môn học, mỗi slot có Chèn/Sửa/Xóa/Xuất/Form.",
@@ -25,8 +25,8 @@
       "key": "lessonId",
       "frameCount": 56,
       "contentCount": 347,
-      "framePath": "subjects/math/data/theory_lecture_frame.json",
-      "contentPath": "subjects/math/data/theory_lecture_content.json",
+      "framePath": "data/theory_lecture_frame.json",
+      "contentPath": "data/theory_lecture_content.json",
       "importTarget": "theory_lecture_content",
       "replacePolicy": {
         "key": "lessonId",
@@ -40,7 +40,9 @@
           "chapterId unless intentionally remapping to a frame chapter"
         ],
         "auditBeforeImport": true
-      }
+      },
+      "packageFramePath": "subjects/math/data/theory_lecture_frame.json",
+      "packageContentPath": "subjects/math/data/theory_lecture_content.json"
     },
     {
       "group": "Công thức",
@@ -53,8 +55,8 @@
       "key": "formulaId",
       "frameCount": 56,
       "contentCount": 24,
-      "framePath": "subjects/math/data/formula_frame.json",
-      "contentPath": "subjects/math/data/formula_content.json",
+      "framePath": "data/formula_frame.json",
+      "contentPath": "data/formula_content.json",
       "importTarget": "formula_content",
       "replacePolicy": {
         "key": "formulaId",
@@ -71,7 +73,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/formula_frame.json",
+      "packageContentPath": "subjects/math/data/formula_content.json"
     },
     {
       "group": "Mô phỏng",
@@ -84,8 +88,8 @@
       "key": "simulationId",
       "frameCount": 56,
       "contentCount": 16,
-      "framePath": "subjects/math/data/simulation_frame.json",
-      "contentPath": "subjects/math/data/simulation_content.json",
+      "framePath": "data/simulation_frame.json",
+      "contentPath": "data/simulation_content.json",
       "importTarget": "simulation_content",
       "replacePolicy": {
         "key": "simulationId",
@@ -104,7 +108,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/simulation_frame.json",
+      "packageContentPath": "subjects/math/data/simulation_content.json"
     },
     {
       "group": "Bài tập",
@@ -117,8 +123,8 @@
       "key": "exerciseId",
       "frameCount": 56,
       "contentCount": 64,
-      "framePath": "subjects/math/data/exercise_frame.json",
-      "contentPath": "subjects/math/data/exercise_content.json",
+      "framePath": "data/exercise_frame.json",
+      "contentPath": "data/exercise_content.json",
       "importTarget": "exercise_content",
       "replacePolicy": {
         "key": "exerciseId",
@@ -136,7 +142,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/exercise_frame.json",
+      "packageContentPath": "subjects/math/data/exercise_content.json"
     },
     {
       "group": "Ứng dụng",
@@ -149,8 +157,8 @@
       "key": "applicationId",
       "frameCount": 56,
       "contentCount": 16,
-      "framePath": "subjects/math/data/application_frame.json",
-      "contentPath": "subjects/math/data/application_content.json",
+      "framePath": "data/application_frame.json",
+      "contentPath": "data/application_content.json",
       "importTarget": "application_content",
       "replacePolicy": {
         "key": "applicationId",
@@ -168,7 +176,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/application_frame.json",
+      "packageContentPath": "subjects/math/data/application_content.json"
     },
     {
       "group": "Vấn đáp",
@@ -181,8 +191,8 @@
       "key": "qaId",
       "frameCount": 56,
       "contentCount": 8,
-      "framePath": "subjects/math/data/professor_qa_frame.json",
-      "contentPath": "subjects/math/data/professor_qa_content.json",
+      "framePath": "data/professor_qa_frame.json",
+      "contentPath": "data/professor_qa_content.json",
       "importTarget": "professor_qa_content",
       "replacePolicy": {
         "key": "qaId",
@@ -199,7 +209,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/professor_qa_frame.json",
+      "packageContentPath": "subjects/math/data/professor_qa_content.json"
     },
     {
       "group": "Ôn tập",
@@ -212,8 +224,8 @@
       "key": "reviewPackId",
       "frameCount": 56,
       "contentCount": 8,
-      "framePath": "subjects/math/data/review_pack_frame.json",
-      "contentPath": "subjects/math/data/review_pack_content.json",
+      "framePath": "data/review_pack_frame.json",
+      "contentPath": "data/review_pack_content.json",
       "importTarget": "review_pack_content",
       "replacePolicy": {
         "key": "reviewPackId",
@@ -229,7 +241,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/review_pack_frame.json",
+      "packageContentPath": "subjects/math/data/review_pack_content.json"
     },
     {
       "group": "Ngân hàng câu hỏi",
@@ -242,8 +256,8 @@
       "key": "questionId",
       "frameCount": 56,
       "contentCount": 200,
-      "framePath": "subjects/math/data/question_bank_frame.json",
-      "contentPath": "subjects/math/data/question_bank_content.json",
+      "framePath": "data/question_bank_frame.json",
+      "contentPath": "data/question_bank_content.json",
       "importTarget": "question_bank_content",
       "replacePolicy": {
         "key": "questionId",
@@ -261,7 +275,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/question_bank_frame.json",
+      "packageContentPath": "subjects/math/data/question_bank_content.json"
     },
     {
       "group": "Blueprint kiểm tra",
@@ -274,8 +290,8 @@
       "key": "blueprintId",
       "frameCount": 56,
       "contentCount": 4,
-      "framePath": "subjects/math/data/test_blueprint_frame.json",
-      "contentPath": "subjects/math/data/test_blueprint_content.json",
+      "framePath": "data/test_blueprint_frame.json",
+      "contentPath": "data/test_blueprint_content.json",
       "importTarget": "test_blueprint_content",
       "replacePolicy": {
         "key": "blueprintId",
@@ -291,7 +307,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/test_blueprint_frame.json",
+      "packageContentPath": "subjects/math/data/test_blueprint_content.json"
     },
     {
       "group": "Slide bổ trợ cấp chương",
@@ -304,8 +322,8 @@
       "key": "chapterLectureId",
       "frameCount": 56,
       "contentCount": 0,
-      "framePath": "subjects/math/data/chapter_lecture_frame.json",
-      "contentPath": "subjects/math/data/chapter_lecture_content.json",
+      "framePath": "data/chapter_lecture_frame.json",
+      "contentPath": "data/chapter_lecture_content.json",
       "importTarget": "chapter_lecture_content",
       "replacePolicy": {
         "key": "chapterLectureId",
@@ -320,7 +338,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/chapter_lecture_frame.json",
+      "packageContentPath": "subjects/math/data/chapter_lecture_content.json"
     },
     {
       "group": "Mind map",
@@ -333,8 +353,8 @@
       "key": "mindmapId",
       "frameCount": 56,
       "contentCount": 8,
-      "framePath": "subjects/math/data/mindmap_frame.json",
-      "contentPath": "subjects/math/data/mindmap_content.json",
+      "framePath": "data/mindmap_frame.json",
+      "contentPath": "data/mindmap_content.json",
       "importTarget": "mindmap_content",
       "replacePolicy": {
         "key": "mindmapId",
@@ -350,7 +370,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/mindmap_frame.json",
+      "packageContentPath": "subjects/math/data/mindmap_content.json"
     },
     {
       "group": "Concept map",
@@ -363,8 +385,8 @@
       "key": "conceptMapId",
       "frameCount": 56,
       "contentCount": 0,
-      "framePath": "subjects/math/data/concept_map_frame.json",
-      "contentPath": "subjects/math/data/concept_map_content.json",
+      "framePath": "data/concept_map_frame.json",
+      "contentPath": "data/concept_map_content.json",
       "importTarget": "concept_map_content",
       "replacePolicy": {
         "key": "conceptMapId",
@@ -380,7 +402,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/concept_map_frame.json",
+      "packageContentPath": "subjects/math/data/concept_map_content.json"
     },
     {
       "group": "Media / Canva",
@@ -393,8 +417,8 @@
       "key": "mediaId",
       "frameCount": 56,
       "contentCount": 0,
-      "framePath": "subjects/math/data/media_frame.json",
-      "contentPath": "subjects/math/data/media_content.json",
+      "framePath": "data/media_frame.json",
+      "contentPath": "data/media_content.json",
       "importTarget": "media_content",
       "replacePolicy": {
         "key": "mediaId",
@@ -410,7 +434,9 @@
           "chapterId unless intentionally remapping",
           "lessonId unless intentionally remapping"
         ]
-      }
+      },
+      "packageFramePath": "subjects/math/data/media_frame.json",
+      "packageContentPath": "subjects/math/data/media_content.json"
     }
   ],
   "uiContract": {
@@ -442,5 +468,11 @@
     "release": "E143",
     "policy": "contentCount mirrors the actual records array in each *_content.json source",
     "runtimeNote": "E138 theory overlay remains a runtime overlay and is not counted as persisted theory_lecture_content records"
+  },
+  "pathContract": {
+    "standaloneRoot": "./",
+    "packageRoot": "subjects/math/",
+    "standalonePolicy": "framePath/contentPath must resolve inside this standalone repository",
+    "packagePolicy": "packageFramePath/packageContentPath preserve Hub packaging locations"
   }
 }
