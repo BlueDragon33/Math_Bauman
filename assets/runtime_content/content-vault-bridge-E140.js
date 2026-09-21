@@ -44,7 +44,7 @@
     if(applied)return true;
     const db=window.DB;
     if(!db||!db.theory_lecture_content)return false;
-    if(window.__BAUMAN_MATH_E138_THEORY_OVERLAY__ && window.__BAUMAN_MATH_E138_THEORY_OVERLAY__.loaded===false)return false;
+    if(!window.__BAUMAN_MATH_E138_THEORY_OVERLAY__ || window.__BAUMAN_MATH_E138_THEORY_OVERLAY__.loaded!==true)return false;
     const sources={
       lessons:records(db.theory_lecture_content),
       formulas:records(db.formula_content),
