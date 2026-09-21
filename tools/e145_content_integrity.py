@@ -409,6 +409,7 @@ def main() -> int:
     check_manifest_federation(counts, manifest)
     check_adapter_counts(counts)
     questions, blueprints = check_questions_and_blueprints()
+    check_mindmap_graph()
     check_runtime_shell()
     check_bridge_contract(counts)
 
