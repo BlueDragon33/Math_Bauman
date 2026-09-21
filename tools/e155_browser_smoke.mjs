@@ -244,7 +244,14 @@ try {
     await fail('PWA did not become controlled/offline-ready');
   }
 
-  await page.context().setOffline(true);
+  const serverPid = Number(process.env.E155_SERVER_PID || 0);
+  if (!Number.isInteger(serverPid) || serverPid <= 1) {
+    await fail('E164 local origin PID is unavailable');
+  }
+  process.kill(serverPid, 'SIGTERM');
+  await new Promise(resolve => setTimeout(resolve, 350));
+  console.log('E164 origin stopped', JSON.stringify({ serverPid }));
+
   await page.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
   await page.waitForFunction(() => {
     return !!window.__BAUMAN_CORE_API &&
@@ -277,13 +284,10 @@ try {
   if (!offline.uncachedProbeFailed || offline.textLength < 24 || offline.maps < 1 || offline.professorQa < 1 || !offline.e140 || !offline.e150 || offline.recovery) {
     await fail('offline reload did not preserve a healthy learning runtime');
   }
-  await page.context().setOffline(false);
-
   if (pageErrors.length) await fail('uncaught page errors detected');
   if (guardErrors.length) await fail('render guard errors detected');
 
-  console.log('E155/E157/E158/E160/E162 PASS: routes, interactions, persistence, mobile layout and verified offline Web App runtime are healthy.');
+  console.log('E155/E157/E158/E160/E162/E164 PASS: routes, interactions, persistence, mobile layout and verified origin-down offline Web App runtime are healthy.');
 } finally {
-  try{await page.context().setOffline(false);}catch(_){}
   await browser.close();
 }
