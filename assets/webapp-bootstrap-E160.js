@@ -1,6 +1,6 @@
 (function(global){
   'use strict';
-  const RELEASE='E168_PWA_SINGLE_OWNER_ACTIVATION_RESET';
+  const RELEASE='E169_PWA_ATOMIC_RESET_REWARM';
   let registration=null;
   let offlineReady=false;
   let cachedCount=0;
@@ -35,12 +35,13 @@
     ));
   }
 
-  function warmCoreCache(){
-    const worker=registration&&(registration.active||registration.waiting||registration.installing);
+  function warmCoreCache(type){
+    const worker=navigator.serviceWorker?.controller
+      || (registration&&(registration.active||registration.waiting||registration.installing));
     if(!worker)return false;
     const urls=coreUrls();
     if(!urls.length)return false;
-    worker.postMessage({type:'E160_CACHE_URLS',urls});
+    worker.postMessage({type:type||'E160_CACHE_URLS',urls});
     return true;
   }
 
@@ -53,7 +54,7 @@
       registration=await navigator.serviceWorker.register('./service-worker.js',{scope:'./'});
       registration=await navigator.serviceWorker.ready;
       setStatus(false);
-      warmCoreCache();
+      if(controllerChanges===0)warmCoreCache('E160_CACHE_URLS');
       return registration;
     }catch(error){
       console.warn('E160 service worker registration failed:',error&&error.message||error);
@@ -64,15 +65,15 @@
 
   function rewarmAfterControllerChange(){
     controllerChanges++;
-    // E168: cache reset has one owner only: the service worker's activate
-    // transaction. Deleting the same runtime cache again from the page races
-    // the sequential core load on reload and can turn later DB slots null.
-    // After controllerchange the page only requests a fresh warmup.
     offlineReady=false;
+    cachedCount=0;
+    skippedCount=0;
     failedCount=0;
     setStatus(false);
     clearTimeout(rewarmTimer);
-    rewarmTimer=setTimeout(()=>{warmCoreCache();},60);
+    rewarmTimer=setTimeout(()=>{
+      warmCoreCache('E169_RESET_AND_CACHE_URLS');
+    },60);
   }
 
   navigator.serviceWorker&&navigator.serviceWorker.addEventListener('controllerchange',()=>{
@@ -85,6 +86,7 @@
     cachedCount=Number(data.cached||0);
     skippedCount=Number(data.skipped||0);
     failedCount=Number(data.failed||0);
+    if(data.reset===true)runtimeResets++;
     setStatus(cachedCount>0&&failedCount===0);
   });
 
