@@ -1,0 +1,52 @@
+{
+  "release": "E141_EXAM_CAPACITY_AND_STAGE_SCOPING",
+  "date": "2026-09-21",
+  "status": "IMPLEMENTED_ON_BRANCH",
+  "baseCoreQuestions": 48,
+  "extensionQuestions": 152,
+  "totalQuestions": 200,
+  "stageCapacity": {
+    "vn": {
+      "total": 100,
+      "easy": 30,
+      "medium": 30,
+      "hard": 20,
+      "expert": 20,
+      "papers": {
+        "standard20": true,
+        "intensive40": true,
+        "advanced60": true,
+        "deep100": true
+      }
+    },
+    "prep": {
+      "total": 100,
+      "easy": 30,
+      "medium": 30,
+      "hard": 20,
+      "expert": 20,
+      "papers": {
+        "standard20": true,
+        "intensive40": true,
+        "advanced60": true,
+        "deep100": true
+      }
+    }
+  },
+  "qualityFixes": [
+    "Added expert level to the sixth original E15 question in every logical module.",
+    "Removed duplicated distractors from original and extension records.",
+    "Every question has four unique options and the answer text occurs in options.",
+    "Extension records preserve lessonId/chapterId/stage and are tagged E141_EXAM_CAPACITY_EXTENSION."
+  ],
+  "architecture": {
+    "engineUnchanged": true,
+    "contentVaultSource": "data/question_bank_content.json",
+    "runtimeBridge": "E140 content-vault runtime bridge",
+    "crossStageFallbackNeeded": false
+  },
+  "nextGeneratedRound": {
+    "release": "E142_PROFESSOR_QA_AND_MINDMAP_UI_INTEGRATION_AUDIT",
+    "reason": "Professor-QA content is bridged to DB.professor_qa but the current Vấn đáp renderer is oriented around speaking/application flows; verify dedicated academic QA is reachable from the visible UI. Re-check mindmap transformation after E140."
+  }
+}
