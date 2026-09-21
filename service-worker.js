@@ -113,7 +113,16 @@ self.addEventListener('fetch',event=>{
   event.respondWith((async()=>{
     try{
       const response=await fetch(request);
-      return await put(RUNTIME_CACHE,request,response);
+      if(response&&response.ok){
+        return await put(RUNTIME_CACHE,request,response);
+      }
+      const hit=await cached(request);
+      if(hit)return hit;
+      if(request.mode==='navigate'){
+        const fallback=await cached(new Request(new URL('./index.html',self.location.href).href));
+        if(fallback)return fallback;
+      }
+      return response||Response.error();
     }catch(_){
       const hit=await cached(request);
       if(hit)return hit;
