@@ -377,7 +377,21 @@ try {
           ? db.mindmap_content.length
           : (Array.isArray(db.mindmap_content?.records) ? db.mindmap_content.records.length : null),
         overlayFetch,
-        cacheKeys: await caches.keys()
+        cacheKeys: await caches.keys(),
+        pwa: typeof window.MathBaumanPWA?.selfCheck === 'function' ? window.MathBaumanPWA.selfCheck() : null,
+        controllerScript: navigator.serviceWorker?.controller?.scriptURL || null,
+        runtimeCache: await (async()=>{
+          const key=(await caches.keys()).find(k=>k.endsWith('-runtime'));
+          if(!key)return {key:null,count:0,sample:[]};
+          const cache=await caches.open(key);
+          const entries=await cache.keys();
+          const probes={};
+          for(const path of ['data/content_vault_manifest.json','data/discipline_spine.json','data/chapter_spine.json','data/theory_lecture_content.json','data/mindmap_content.json']){
+            const u=new URL(path,location.href).href;
+            probes[path]=!!(await cache.match(u));
+          }
+          return {key,count:entries.length,sample:entries.slice(0,12).map(x=>x.url),probes};
+        })()
       };
     });
     console.error('E167 offline bridge diagnostics', JSON.stringify(diagnostics));
