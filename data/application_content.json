@@ -1081,6 +1081,38 @@
         "calibration",
         "conditioning"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "applicationId": "E206-prob-A1",
+      "title": "Không gian biến cố cho hệ cảnh báo cảm biến",
+      "scenario": "Hệ có ba cảnh báo: quá nhiệt, quá áp và mất tín hiệu.",
+      "method": "Định nghĩa outcome theo tổ hợp trạng thái ba cờ, chọn Ω đủ 2³ khả năng; xây các event union/intersection cho 'có cảnh báo', 'nhiều lỗi đồng thời', 'không lỗi'.",
+      "expectedOutcome": "Logic cảnh báo được mô tả rõ trước khi gắn xác suất/tần suất, tránh đếm trùng hoặc bỏ trường hợp.",
+      "tags": [
+        "sensor",
+        "fault",
+        "event-logic"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "applicationId": "E206-prob-A2",
+      "title": "Event masks trong dữ liệu",
+      "scenario": "Dataset có nhãn pass/fail và quality flag; cần lọc các nhóm để kiểm tra lỗi.",
+      "method": "Biểu diễn A,B bằng boolean masks; dùng OR/AND/NOT tương ứng union/intersection/complement và kiểm số lượng từng vùng Venn.",
+      "expectedOutcome": "Nối trực tiếp set algebra với lọc dữ liệu và audit cohort.",
+      "tags": [
+        "data",
+        "boolean-mask",
+        "quality"
+      ]
     }
   ],
   "importPolicy": {
