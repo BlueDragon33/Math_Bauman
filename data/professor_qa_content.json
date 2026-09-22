@@ -421,6 +421,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "qaId": "E195-rank-QA01",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Nếu giáo sư hỏi 'rank nói lên điều gì và dùng rank để phân loại nghiệm Ax=b thế nào?', bạn trả lời thế nào?",
+      "answer": "Rank đo số chiều độc lập của hàng/cột và bằng số pivot trong echelon form. Hệ Ax=b có nghiệm khi rank(A)=rank([A|b]); nếu rank bằng số ẩn thì nghiệm duy nhất, còn nhỏ hơn số ẩn thì có biến tự do và vô số nghiệm. Trong floating point phải nói numerical rank với tolerance thay vì exact zero.",
+      "followUp": [
+        "Nullity bằng gì?",
+        "Rank deficiency ảnh hưởng least squares ra sao?",
+        "Tại sao row operations không đổi rank?"
+      ],
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
     }
   ],
   "importPolicy": {

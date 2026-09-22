@@ -12837,6 +12837,556 @@
       "auditStatus": "PASS",
       "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
       "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q001",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Rank của ma trận trong REF bằng?",
+      "options": [
+        "Số pivot",
+        "Số phần tử khác 0",
+        "Số hàng luôn",
+        "Số cột luôn"
+      ],
+      "answer": "Số pivot",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q002",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Nullity(A) với A có n cột bằng?",
+      "options": [
+        "n-rank(A)",
+        "m-rank(A)",
+        "rank(A)-n",
+        "det(A)"
+      ],
+      "answer": "n-rank(A)",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q003",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Ax=b có nghiệm khi?",
+      "options": [
+        "rank(A)=rank([A|b])",
+        "rank(A)>rank([A|b])",
+        "det(A)=0 luôn",
+        "A vuông"
+      ],
+      "answer": "rank(A)=rank([A|b])",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q004",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "A 3×3 full rank có rank?",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "9"
+      ],
+      "answer": "3",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q005",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Nếu rank(A)=0 thì A phải?",
+      "options": [
+        "Zero matrix",
+        "Identity",
+        "Diagonal khác 0",
+        "Khả nghịch"
+      ],
+      "answer": "Zero matrix",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q006",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Row operations có đổi rank không?",
+      "options": [
+        "Không",
+        "Có luôn",
+        "Chỉ swap đổi",
+        "Chỉ scale đổi"
+      ],
+      "answer": "Không",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q007",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "A có 4 cột, rank 2 thì số biến tự do của Ax=0?",
+      "options": [
+        "2",
+        "4",
+        "1",
+        "0"
+      ],
+      "answer": "2",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q008",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Một hàng zero trong REF đóng góp bao nhiêu pivot?",
+      "options": [
+        "0",
+        "1",
+        "Số cột",
+        "Không xác định"
+      ],
+      "answer": "0",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q009",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "rank(A)=rank([A|b])=n với n số ẩn nghĩa là?",
+      "options": [
+        "Nghiệm duy nhất",
+        "Vô nghiệm",
+        "Vô số nghiệm",
+        "Không kết luận"
+      ],
+      "answer": "Nghiệm duy nhất",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q010",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "rank(A)=rank([A|b])<n nghĩa là?",
+      "options": [
+        "Vô số nghiệm",
+        "Nghiệm duy nhất",
+        "Vô nghiệm",
+        "A chắc chắn vuông"
+      ],
+      "answer": "Vô số nghiệm",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q011",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "rank(A)<rank([A|b]) nghĩa là?",
+      "options": [
+        "Vô nghiệm",
+        "Nghiệm duy nhất",
+        "Vô số nghiệm",
+        "A khả nghịch"
+      ],
+      "answer": "Vô nghiệm",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q012",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Rank tối đa của A m×n là?",
+      "options": [
+        "min(m,n)",
+        "m+n",
+        "mn",
+        "max(m,n)"
+      ],
+      "answer": "min(m,n)",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q013",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Hai cột giống hệt nhau ảnh hưởng rank thế nào?",
+      "options": [
+        "Tạo phụ thuộc tuyến tính nên không thể cả hai cùng tăng rank",
+        "Luôn tăng rank 2",
+        "Không liên quan",
+        "Làm rank bằng 0"
+      ],
+      "answer": "Tạo phụ thuộc tuyến tính nên không thể cả hai cùng tăng rank",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q014",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Rank deficiency nghĩa là?",
+      "options": [
+        "Rank nhỏ hơn mức full rank mong đợi",
+        "Determinant luôn 1",
+        "A luôn zero",
+        "A luôn symmetric"
+      ],
+      "answer": "Rank nhỏ hơn mức full rank mong đợi",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q015",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Trong floating point, exact rank có thể nhạy với?",
+      "options": [
+        "Tolerance và singular values nhỏ",
+        "Tên biến",
+        "Số cột header",
+        "UI"
+      ],
+      "answer": "Tolerance và singular values nhỏ",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q016",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "SVD giúp đánh giá numerical rank bằng cách?",
+      "options": [
+        "Đếm singular values lớn hơn threshold",
+        "Đếm phần tử dương",
+        "Đếm diagonal A",
+        "Tính trace"
+      ],
+      "answer": "Đếm singular values lớn hơn threshold",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q017",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Rank(A)=rank(Aᵀ) đúng không?",
+      "options": [
+        "Đúng",
+        "Sai luôn",
+        "Chỉ khi A vuông",
+        "Chỉ khi full rank"
+      ],
+      "answer": "Đúng",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q018",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Nếu A có 5 hàng, 3 cột và rank 3 thì?",
+      "options": [
+        "Các cột độc lập tuyến tính",
+        "Các hàng đều độc lập",
+        "Nullity=2",
+        "A vuông"
+      ],
+      "answer": "Các cột độc lập tuyến tính",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q019",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Rank deficiency trong normal equations có thể gây?",
+      "options": [
+        "Không duy nhất/kém điều kiện",
+        "Luôn nghiệm duy nhất",
+        "Rank tăng",
+        "Không ảnh hưởng"
+      ],
+      "answer": "Không duy nhất/kém điều kiện",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q020",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Một cách ổn định hơn normal equations cho least squares rank-deficient là?",
+      "options": [
+        "SVD/QR phù hợp",
+        "Tăng mọi phần tử",
+        "Chỉ inverse AᵀA",
+        "Transpose b"
+      ],
+      "answer": "SVD/QR phù hợp",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q021",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Numerical rank thay đổi khi tolerance đổi vì?",
+      "options": [
+        "Các singular value gần 0 có thể đổi phân loại zero/nonzero",
+        "Rank toán học thay đổi thật",
+        "Shape đổi",
+        "Dtype luôn đổi"
+      ],
+      "answer": "Các singular value gần 0 có thể đổi phân loại zero/nonzero",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q022",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Trong observability/identifiability, rank thường dùng để?",
+      "options": [
+        "Kiểm số chiều thông tin độc lập",
+        "Tính màu đồ thị",
+        "Đổi unit",
+        "Tính hash"
+      ],
+      "answer": "Kiểm số chiều thông tin độc lập",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q023",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Nếu feature matrix X rank-deficient, hệ quả cho linear regression có thể là?",
+      "options": [
+        "Hệ số không duy nhất/multicollinearity",
+        "Loss luôn 0",
+        "Rank tự tăng khi train",
+        "Không ảnh hưởng"
+      ],
+      "answer": "Hệ số không duy nhất/multicollinearity",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q024",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Một regression test tốt cho rank logic nên gồm?",
+      "options": [
+        "Full rank, duplicate column, near-dependent column với tolerance và inconsistent augmented case",
+        "Chỉ identity",
+        "Chỉ random matrix",
+        "Chỉ zero matrix"
+      ],
+      "answer": "Full rank, duplicate column, near-dependent column với tolerance và inconsistent augmented case",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E195-rank-Q025",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Rank-nullity theorem cho linear map R^n→R^m là?",
+      "options": [
+        "rank+nullity=n",
+        "rank+nullity=m",
+        "rank·nullity=n",
+        "rank-nullity=0"
+      ],
+      "answer": "rank+nullity=n",
+      "explanation": "Đáp án dựa trên rank/pivot, định lý tương thích rank(A)=rank([A|b]), rank-nullity và numerical rank trong floating point.",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
+      "stage": "vn"
     }
   ],
   "importPolicy": {

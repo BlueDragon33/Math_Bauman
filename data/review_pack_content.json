@@ -769,6 +769,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "reviewPackId": "E195-rank-RP01",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "rank",
+          "prompt": "Rank đọc từ REF thế nào?",
+          "expected": "Số pivot/hàng khác 0 trong REF."
+        },
+        {
+          "type": "consistency",
+          "prompt": "Điều kiện Ax=b có nghiệm?",
+          "expected": "rank(A)=rank([A|b])."
+        },
+        {
+          "type": "degrees",
+          "prompt": "Số biến tự do?",
+          "expected": "n-rank(A)."
+        },
+        {
+          "type": "numerical",
+          "prompt": "Vì sao cần tolerance?",
+          "expected": "Để phân biệt zero thực với số rất nhỏ do nhiễu/roundoff."
+        }
+      ],
+      "masteryGate": "Đọc rank từ pivot + phân loại hệ bằng rank(A)/rank(augmented) + tính nullity + hiểu numerical rank và rank deficiency",
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
     }
   ],
   "importPolicy": {

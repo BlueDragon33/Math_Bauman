@@ -1998,6 +1998,86 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "simulationId": "E195-rank-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng rank khi hai cột tiến gần phụ thuộc",
+      "purpose": "Thay ε trong c₂=c₁+εv và quan sát singular values/numerical rank.",
+      "controls": [
+        {
+          "key": "epsilon",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "tolerance",
+          "type": "number",
+          "default": 1e-8
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "singular_values",
+          "label": "Singular values"
+        },
+        {
+          "key": "numerical_rank",
+          "label": "Numerical rank"
+        },
+        {
+          "key": "condition",
+          "label": "Condition indicator"
+        }
+      ],
+      "expectedObservation": "Khi ε nhỏ, một singular value tiến về 0 và rank số phụ thuộc tolerance.",
+      "tags": [
+        "rank",
+        "svd"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "simulationId": "E195-rank-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng phân loại nghiệm Ax=b",
+      "purpose": "Thay b để quan sát rank(A), rank([A|b]) và số bậc tự do.",
+      "controls": [
+        {
+          "key": "b_mode",
+          "type": "select",
+          "default": "consistent"
+        },
+        {
+          "key": "tolerance",
+          "type": "number",
+          "default": 1e-8
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "rank_a",
+          "label": "rank(A)"
+        },
+        {
+          "key": "rank_aug",
+          "label": "rank([A|b])"
+        },
+        {
+          "key": "solution_type",
+          "label": "Loại nghiệm"
+        }
+      ],
+      "expectedObservation": "rank mismatch tạo vô nghiệm; rank bằng số ẩn cho nghiệm duy nhất; rank nhỏ hơn số ẩn tạo nghiệm vô số nếu hệ tương thích.",
+      "tags": [
+        "linear-system",
+        "consistency"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
     }
   ],
   "importPolicy": {

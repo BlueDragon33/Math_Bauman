@@ -1500,6 +1500,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "formulaId": "E195-rank-F1",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Hạng ma trận qua pivot",
+      "formula": "rank(A)=số pivot trong REF/RREF",
+      "meaning": "Hạng là số hàng/cột độc lập tuyến tính tối đa và có thể đọc trực tiếp từ số pivot sau khi đưa ma trận về dạng bậc thang.",
+      "conditions": [
+        "Row operations không làm thay đổi rank.",
+        "Cần dùng tolerance hợp lý khi xác định pivot trong floating point."
+      ],
+      "commonMistakes": [
+        "Đếm số hàng khác 0 trước khi elimination rồi gọi là rank.",
+        "Coi phần tử rất nhỏ luôn là pivot thật."
+      ],
+      "programmingUse": "rank via SVD/QR hoặc echelon với tolerance; không nên tự đếm exact zero trong float.",
+      "tags": [
+        "rank",
+        "pivot"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "formulaId": "E195-rank-F2",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Điều kiện tương thích của hệ Ax=b",
+      "formula": "rank(A)=rank([A|b])",
+      "meaning": "Hệ tuyến tính có ít nhất một nghiệm khi rank của ma trận hệ số bằng rank của ma trận mở rộng.",
+      "conditions": [
+        "A và [A|b] được xét trên cùng trường số.",
+        "Trong tính số cần tolerance nhất quán khi so rank."
+      ],
+      "commonMistakes": [
+        "Chỉ kiểm det(A) dù A có thể không vuông.",
+        "So rank(A) với số ẩn mà bỏ qua rank([A|b])."
+      ],
+      "programmingUse": "So numerical_rank(A) và numerical_rank(augmented) với cùng tolerance trước khi phân loại nghiệm.",
+      "tags": [
+        "linear-system",
+        "rouche-capelli"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "formulaId": "E195-rank-F3",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Số bậc tự do của nghiệm",
+      "formula": "nullity(A)=n-rank(A)",
+      "meaning": "Với A có n cột, số biến tự do của hệ thuần nhất bằng số cột không pivot; đây là cầu nối giữa rank và phụ thuộc tuyến tính.",
+      "conditions": [
+        "n là số cột/số ẩn.",
+        "Dùng rank của A, không phải rank của augmented matrix."
+      ],
+      "commonMistakes": [
+        "Nhầm nullity với số hàng zero.",
+        "Dùng m-rank(A) thay vì n-rank(A)."
+      ],
+      "programmingUse": "free_variables = n - rank; dùng để parameterize null space và nghiệm tổng quát.",
+      "tags": [
+        "nullity",
+        "free-variables"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
     }
   ],
   "importPolicy": {
