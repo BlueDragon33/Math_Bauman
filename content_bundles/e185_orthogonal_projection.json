@@ -1,0 +1,1018 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E185_ORTHOGONAL_PROJECTION",
+  "lessonId": "MATH-VN-LA-C01-L06",
+  "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+  "title": "§1.6 · Phép chiếu trực giao và thành phần song song/vuông góc",
+  "sources": {
+    "formula_content": [
+      {
+        "formulaId": "E185-proj-F1",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Hệ số chiếu lên một vector",
+        "formula": "α = (u·x)/(u·u)",
+        "meaning": "α là hệ số scalar cho biết phải nhân vector u bao nhiêu lần để lấy thành phần của x theo hướng u.",
+        "conditions": [
+          "u khác vector 0.",
+          "x và u ở cùng không gian tọa độ."
+        ],
+        "commonMistakes": [
+          "Dùng α=u·x khi u chưa được chuẩn hóa.",
+          "Quên mẫu u·u khi u không phải unit vector."
+        ],
+        "programmingUse": "alpha = dot(u,x)/dot(u,u); kiểm dot(u,u) không gần 0.",
+        "tags": [
+          "projection",
+          "dot-product",
+          "vector"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "formulaId": "E185-proj-F2",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Projection vector",
+        "formula": "proj_u(x) = ((u·x)/(u·u))u",
+        "meaning": "Projection là thành phần của x song song với span{u}; residual x-proj_u(x) trực giao với u.",
+        "conditions": [
+          "u≠0.",
+          "Inner product dùng nhất quán."
+        ],
+        "commonMistakes": [
+          "Nhầm hệ số projection với projection vector.",
+          "Dùng u đơn vị giả định mà không kiểm norm."
+        ],
+        "programmingUse": "p = (u @ x)/(u @ u) * u.",
+        "tags": [
+          "projection",
+          "orthogonal",
+          "residual"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "formulaId": "E185-proj-F3",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Phân rã song song và vuông góc",
+        "formula": "x = x∥ + x⊥,  x∥=proj_u(x),  u·x⊥=0",
+        "meaning": "Mọi vector x được tách thành phần theo hướng u và phần dư vuông góc với u.",
+        "conditions": [
+          "u≠0.",
+          "Không gian Euclid hữu hạn chiều trong bài này."
+        ],
+        "commonMistakes": [
+          "Cho rằng residual nhỏ nghĩa là projection đúng nếu u bị scale sai.",
+          "Nhầm x⊥ với vector 0."
+        ],
+        "programmingUse": "r = x - p; kiểm abs(dot(u,r))/(norm(u)*max(norm(r),eps)) nhỏ.",
+        "tags": [
+          "decomposition",
+          "projection",
+          "orthogonality"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      }
+    ],
+    "exercise_content": [
+      {
+        "exerciseId": "E185-proj-E01",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "prompt": "Cho x=(3,4), u=(1,0). Tính proj_u(x).",
+        "solution": "α=3, projection=(3,0).",
+        "tags": [
+          "projection",
+          "numeric"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "exerciseId": "E185-proj-E02",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "prompt": "Cho x=(2,2), u=(1,1). Tính projection của x lên u.",
+        "solution": "α=(4)/(2)=2, projection=(2,2).",
+        "tags": [
+          "projection"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "exerciseId": "E185-proj-E03",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "prompt": "Cho x=(2,1), u=(1,1). Tính thành phần song song và vuông góc.",
+        "solution": "α=3/2, x∥=(1.5,1.5), x⊥=(0.5,-0.5).",
+        "tags": [
+          "decomposition"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "exerciseId": "E185-proj-E04",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "prompt": "Kiểm tra residual ở E03 có trực giao với u không.",
+        "solution": "u·x⊥=1·0.5+1·(-0.5)=0.",
+        "tags": [
+          "orthogonality"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "exerciseId": "E185-proj-E05",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "prompt": "Vì sao projection lên u không đổi nếu thay u bằng 5u?",
+        "solution": "Hệ số giảm 1/5 nhưng nhân lại 5u, nên projection vector giữ nguyên.",
+        "tags": [
+          "scale-invariance"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "exerciseId": "E185-proj-E06",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "prompt": "Chứng minh proj_u(x) là điểm gần x nhất trên đường thẳng span{u}.",
+        "solution": "Với y=βu, ||x-y||²=||x-p||²+||p-y||² vì x-p trực giao span{u}; nhỏ nhất khi y=p.",
+        "tags": [
+          "least-squares",
+          "proof"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "exerciseId": "E185-proj-E07",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "prompt": "Trong số thực máy, residual dot với u bằng 1e-12. Có thể coi trực giao không?",
+        "solution": "Cần chuẩn hóa sai số tương đối theo ||u||||r|| và tolerance; không kết luận từ trị tuyệt đối đơn lẻ.",
+        "tags": [
+          "numerical",
+          "orthogonality"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "exerciseId": "E185-proj-E08",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "expert",
+        "prompt": "Viết projection lên không gian cột của A khi A có cột độc lập tuyến tính.",
+        "solution": "P=A(AᵀA)⁻¹Aᵀ và projection là Px; nếu A trực chuẩn thì P=AAᵀ.",
+        "tags": [
+          "projection-matrix",
+          "least-squares"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      }
+    ],
+    "application_content": [
+      {
+        "applicationId": "E185-proj-A1",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Projection trong least squares",
+        "scenario": "Dữ liệu b không nằm chính xác trong không gian cột của ma trận thiết kế A.",
+        "method": "Chiếu b lên Col(A); residual r=b-Ax̂ trực giao với mọi cột A, dẫn tới normal equations AᵀA x̂=Aᵀb.",
+        "expectedOutcome": "Hiểu least squares như bài toán hình học projection, không chỉ là công thức giải hệ.",
+        "tags": [
+          "projection",
+          "least-squares",
+          "regression"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "applicationId": "E185-proj-A2",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Tách thành phần tín hiệu theo hướng chuẩn",
+        "scenario": "Một vector cảm biến cần tách thành phần dọc theo hướng chuyển động mong muốn và phần nhiễu ngang.",
+        "method": "Dùng unit direction u, tính x∥=(u·x)u và x⊥=x-x∥; theo dõi norm của residual để phát hiện lệch hướng.",
+        "expectedOutcome": "Biết dùng projection để tách tín hiệu mục tiêu khỏi thành phần vuông góc.",
+        "tags": [
+          "projection",
+          "signal",
+          "robotics"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      }
+    ],
+    "simulation_content": [
+      {
+        "simulationId": "E185-proj-SIM1",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Mô phỏng vector và projection 2D",
+        "purpose": "Kéo x và u để quan sát thành phần song song/vuông góc.",
+        "controls": [
+          {
+            "key": "x1",
+            "type": "number",
+            "default": 3
+          },
+          {
+            "key": "x2",
+            "type": "number",
+            "default": 2
+          },
+          {
+            "key": "u_angle_deg",
+            "type": "number",
+            "default": 30
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "alpha",
+            "label": "Hệ số chiếu"
+          },
+          {
+            "key": "parallel_norm",
+            "label": "||x∥||"
+          },
+          {
+            "key": "perp_norm",
+            "label": "||x⊥||"
+          },
+          {
+            "key": "orthogonality",
+            "label": "u·x⊥"
+          }
+        ],
+        "expectedObservation": "Projection đổi theo hướng u; residual luôn vuông góc u về lý thuyết.",
+        "tags": [
+          "projection",
+          "geometry"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      },
+      {
+        "simulationId": "E185-proj-SIM2",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Mô phỏng least-squares projection",
+        "purpose": "Thay ma trận A và vector b nhỏ để xem b̂=Ax̂ và residual.",
+        "controls": [
+          {
+            "key": "a11",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "a21",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "b1",
+            "type": "number",
+            "default": 2
+          },
+          {
+            "key": "b2",
+            "type": "number",
+            "default": 0
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "x_hat",
+            "label": "x̂"
+          },
+          {
+            "key": "b_hat",
+            "label": "Projection b̂"
+          },
+          {
+            "key": "residual",
+            "label": "Residual r"
+          },
+          {
+            "key": "normal_residual",
+            "label": "Aᵀr"
+          }
+        ],
+        "expectedObservation": "Ở nghiệm least squares, Aᵀr gần 0.",
+        "tags": [
+          "projection",
+          "least-squares",
+          "normal-equation"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "qaId": "E185-proj-QA01",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "question": "Nếu giáo sư hỏi vì sao projection lại liên quan trực tiếp đến least squares, bạn giải thích thế nào?",
+        "answer": "Projection chọn điểm trong không gian con gần vector dữ liệu nhất theo chuẩn Euclid. Điều kiện cực tiểu tương đương residual vuông góc với không gian con. Với Col(A), điều đó cho Aᵀ(b-Ax̂)=0 và dẫn tới normal equations.",
+        "followUp": [
+          "Khi nào dùng P=A(AᵀA)⁻¹Aᵀ?",
+          "Nếu cột A không độc lập thì làm gì?",
+          "Vì sao residual trực giao với Col(A)?"
+        ],
+        "tags": [
+          "projection",
+          "least-squares",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      }
+    ],
+    "review_pack_content": [
+      {
+        "reviewPackId": "E185-proj-RP01",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "items": [
+          {
+            "type": "concept",
+            "prompt": "Nêu hệ số projection và projection vector lên u.",
+            "expected": "α=(u·x)/(u·u), proj_u(x)=αu."
+          },
+          {
+            "type": "mistake",
+            "prompt": "Lỗi nào xảy ra khi dùng u·x làm projection coefficient với u không đơn vị?",
+            "expected": "Bỏ mất mẫu u·u nên kết quả phụ thuộc scale của u."
+          },
+          {
+            "type": "geometry",
+            "prompt": "Nêu điều kiện residual của projection.",
+            "expected": "r=x-proj_u(x) và u·r=0."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Liên hệ projection với least squares.",
+            "expected": "Residual trực giao Col(A), tạo AᵀA x̂=Aᵀb."
+          }
+        ],
+        "masteryGate": "Tính projection đúng + kiểm residual trực giao + giải thích scale invariance + nối được sang least squares",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      }
+    ],
+    "question_bank_content": [
+      {
+        "questionId": "E185-proj-Q001",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Projection coefficient lên u không đơn vị là?",
+        "options": [
+          "u·x",
+          "(u·x)/(u·u)",
+          "||x||/||u||",
+          "u·u"
+        ],
+        "answer": "(u·x)/(u·u)",
+        "explanation": "Hệ số chiếu chuẩn là inner product chia squared norm của u.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q002",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Projection vector proj_u(x) có hướng nào?",
+        "options": [
+          "Song song với u",
+          "Luôn vuông góc u",
+          "Luôn song song x",
+          "Không xác định"
+        ],
+        "answer": "Song song với u",
+        "explanation": "Projection vector nằm trên span{u}.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q003",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Residual x-proj_u(x) có quan hệ gì với u?",
+        "options": [
+          "Trực giao với u",
+          "Song song với u",
+          "Bằng u",
+          "Luôn bằng 0"
+        ],
+        "answer": "Trực giao với u",
+        "explanation": "Residual trực giao với hướng được chiếu.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q004",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Nếu u là unit vector, coefficient projection là?",
+        "options": [
+          "u·x",
+          "u·u",
+          "||x||",
+          "1"
+        ],
+        "answer": "u·x",
+        "explanation": "Nếu ||u||=1 thì u·u=1.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q005",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Thay u bằng 3u thì projection vector thay đổi thế nào?",
+        "options": [
+          "Không đổi",
+          "Tăng 3 lần",
+          "Giảm 3 lần",
+          "Đổi dấu"
+        ],
+        "answer": "Không đổi",
+        "explanation": "Scale của vector sinh không đổi subspace nên projection không đổi.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q006",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "proj_u(u) bằng?",
+        "options": [
+          "u",
+          "0",
+          "2u",
+          "Không xác định"
+        ],
+        "answer": "u",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q007",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "proj_u(0) bằng?",
+        "options": [
+          "0",
+          "u",
+          "1",
+          "Không xác định"
+        ],
+        "answer": "0",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q008",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Nếu x trực giao u thì proj_u(x) bằng?",
+        "options": [
+          "0",
+          "x",
+          "u",
+          "x+u"
+        ],
+        "answer": "0",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q009",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Công thức phân rã đúng là?",
+        "options": [
+          "x=x∥+x⊥",
+          "x=x∥x⊥",
+          "x∥=x⊥",
+          "x=0"
+        ],
+        "answer": "x=x∥+x⊥",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q010",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Điều kiện u·x⊥ bằng?",
+        "options": [
+          "0",
+          "1",
+          "||u||",
+          "||x||"
+        ],
+        "answer": "0",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q011",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Projection onto span{u} là nghiệm của bài toán nào?",
+        "options": [
+          "Minimize ||x-y|| với y∈span{u}",
+          "Maximize ||x-y||",
+          "Solve det(x)=0",
+          "Normalize x"
+        ],
+        "answer": "Minimize ||x-y|| với y∈span{u}",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q012",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Với A có cột trực chuẩn, projection matrix là?",
+        "options": [
+          "AAᵀ",
+          "AᵀA",
+          "A⁻¹",
+          "I-A"
+        ],
+        "answer": "AAᵀ",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q013",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Với A full column rank, projection matrix là?",
+        "options": [
+          "A(AᵀA)⁻¹Aᵀ",
+          "Aᵀ(AAᵀ)⁻¹A",
+          "AᵀA",
+          "AAᵀ luôn"
+        ],
+        "answer": "A(AᵀA)⁻¹Aᵀ",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q014",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Projection matrix trực giao P thỏa?",
+        "options": [
+          "P²=P và Pᵀ=P",
+          "P²=0",
+          "Pᵀ=-P",
+          "det(P)=1 luôn"
+        ],
+        "answer": "P²=P và Pᵀ=P",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q015",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Residual least squares r=b-Ax̂ thỏa?",
+        "options": [
+          "Aᵀr=0",
+          "Ar=0",
+          "r=0 luôn",
+          "Aᵀr=1"
+        ],
+        "answer": "Aᵀr=0",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q016",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Vì sao normal equations xuất hiện?",
+        "options": [
+          "Residual trực giao với Col(A)",
+          "A luôn vuông",
+          "b luôn thuộc Col(A)",
+          "P luôn khả nghịch"
+        ],
+        "answer": "Residual trực giao với Col(A)",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q017",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Projection matrix P có eigenvalue nào?",
+        "options": [
+          "0 hoặc 1",
+          "Chỉ -1",
+          "Mọi số phức",
+          "Chỉ 2"
+        ],
+        "answer": "0 hoặc 1",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q018",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "I-P chiếu lên đâu?",
+        "options": [
+          "Không gian trực giao bổ sung",
+          "Col(A) chính nó",
+          "Kernel của I",
+          "Không gian rỗng"
+        ],
+        "answer": "Không gian trực giao bổ sung",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q019",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Nếu u gần vector 0, vấn đề chính là?",
+        "options": [
+          "Hệ số projection mất ổn định do chia cho u·u rất nhỏ",
+          "Projection luôn bằng 1",
+          "Residual mất nghĩa hình học hoàn toàn",
+          "Không có vấn đề"
+        ],
+        "answer": "Hệ số projection mất ổn định do chia cho u·u rất nhỏ",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q020",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Điều nào đúng với norm?",
+        "options": [
+          "||x||²=||x∥||²+||x⊥||²",
+          "||x||=||x∥||||x⊥||",
+          "||x||²=||x∥||²-||x⊥||²",
+          "Không có hệ thức"
+        ],
+        "answer": "||x||²=||x∥||²+||x⊥||²",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q021",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Projection lên một subspace có phụ thuộc cách chọn basis trực chuẩn không?",
+        "options": [
+          "Không",
+          "Có luôn",
+          "Chỉ trong R2",
+          "Chỉ khi basis duy nhất"
+        ],
+        "answer": "Không",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q022",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "expert",
+        "question": "Nếu A rank deficient, cách ổn định hơn normal inverse là?",
+        "options": [
+          "Dùng QR/SVD hoặc pseudoinverse",
+          "Lấy (AᵀA)⁻¹ bằng mọi giá",
+          "Bỏ residual",
+          "Thêm ma trận 0"
+        ],
+        "answer": "Dùng QR/SVD hoặc pseudoinverse",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q023",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "expert",
+        "question": "Moore-Penrose pseudoinverse cho projection Col(A) là?",
+        "options": [
+          "P=AA⁺",
+          "P=A⁺A luôn cho Col(A)",
+          "P=A⁻¹",
+          "P=0"
+        ],
+        "answer": "P=AA⁺",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q024",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "expert",
+        "question": "Projection orthogonal khác oblique projection chủ yếu ở đâu?",
+        "options": [
+          "Residual trực giao với subspace đích",
+          "Projection không idempotent",
+          "Không có subspace đích",
+          "Luôn giữ norm"
+        ],
+        "answer": "Residual trực giao với subspace đích",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E185-proj-Q025",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "expert",
+        "question": "Trong Hilbert space, projection theorem cần tập con nào?",
+        "options": [
+          "Closed convex subspace/set phù hợp",
+          "Bất kỳ tập rời rạc",
+          "Chỉ finite set",
+          "Chỉ tập không rỗng bất kỳ"
+        ],
+        "answer": "Closed convex subspace/set phù hợp",
+        "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của orthogonal projection.",
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "mindmapId": "E185-proj-MM01",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "lessonId": "MATH-VN-LA-C01-L06",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Projection = thành phần gần nhất trong subspace",
+            "type": "root"
+          },
+          {
+            "id": "coef",
+            "label": "α=(u·x)/(u·u)",
+            "type": "formula"
+          },
+          {
+            "id": "proj",
+            "label": "proj_u(x)=αu",
+            "type": "formula"
+          },
+          {
+            "id": "residual",
+            "label": "r=x-proj_u(x)",
+            "type": "concept"
+          },
+          {
+            "id": "orthogonal",
+            "label": "u·r=0",
+            "type": "validation"
+          },
+          {
+            "id": "leastSquares",
+            "label": "Least squares: Aᵀr=0",
+            "type": "application"
+          },
+          {
+            "id": "numerical",
+            "label": "QR/SVD khi hệ kém điều kiện",
+            "type": "warning"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "coef"
+          },
+          {
+            "from": "coef",
+            "to": "proj"
+          },
+          {
+            "from": "proj",
+            "to": "residual"
+          },
+          {
+            "from": "residual",
+            "to": "orthogonal"
+          },
+          {
+            "from": "orthogonal",
+            "to": "leastSquares"
+          },
+          {
+            "from": "leastSquares",
+            "to": "numerical"
+          }
+        ],
+        "tags": [
+          "projection",
+          "E185"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+      }
+    ]
+  }
+}

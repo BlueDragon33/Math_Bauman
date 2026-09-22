@@ -427,6 +427,38 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "applicationId": "E185-proj-A1",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Projection trong least squares",
+      "scenario": "Dữ liệu b không nằm chính xác trong không gian cột của ma trận thiết kế A.",
+      "method": "Chiếu b lên Col(A); residual r=b-Ax̂ trực giao với mọi cột A, dẫn tới normal equations AᵀA x̂=Aᵀb.",
+      "expectedOutcome": "Hiểu least squares như bài toán hình học projection, không chỉ là công thức giải hệ.",
+      "tags": [
+        "projection",
+        "least-squares",
+        "regression"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "applicationId": "E185-proj-A2",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Tách thành phần tín hiệu theo hướng chuẩn",
+      "scenario": "Một vector cảm biến cần tách thành phần dọc theo hướng chuyển động mong muốn và phần nhiễu ngang.",
+      "method": "Dùng unit direction u, tính x∥=(u·x)u và x⊥=x-x∥; theo dõi norm của residual để phát hiện lệch hướng.",
+      "expectedOutcome": "Biết dùng projection để tách tín hiệu mục tiêu khỏi thành phần vuông góc.",
+      "tags": [
+        "projection",
+        "signal",
+        "robotics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
     }
   ],
   "importPolicy": {

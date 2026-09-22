@@ -237,6 +237,25 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "qaId": "E185-proj-QA01",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "question": "Nếu giáo sư hỏi vì sao projection lại liên quan trực tiếp đến least squares, bạn giải thích thế nào?",
+      "answer": "Projection chọn điểm trong không gian con gần vector dữ liệu nhất theo chuẩn Euclid. Điều kiện cực tiểu tương đương residual vuông góc với không gian con. Với Col(A), điều đó cho Aᵀ(b-Ax̂)=0 và dẫn tới normal equations.",
+      "followUp": [
+        "Khi nào dùng P=A(AᵀA)⁻¹Aᵀ?",
+        "Nếu cột A không độc lập thì làm gì?",
+        "Vì sao residual trực giao với Col(A)?"
+      ],
+      "tags": [
+        "projection",
+        "least-squares",
+        "E185"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
     }
   ],
   "importPolicy": {

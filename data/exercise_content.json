@@ -1543,6 +1543,114 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "exerciseId": "E185-proj-E01",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Cho x=(3,4), u=(1,0). Tính proj_u(x).",
+      "solution": "α=3, projection=(3,0).",
+      "tags": [
+        "projection",
+        "numeric"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "exerciseId": "E185-proj-E02",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Cho x=(2,2), u=(1,1). Tính projection của x lên u.",
+      "solution": "α=(4)/(2)=2, projection=(2,2).",
+      "tags": [
+        "projection"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "exerciseId": "E185-proj-E03",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Cho x=(2,1), u=(1,1). Tính thành phần song song và vuông góc.",
+      "solution": "α=3/2, x∥=(1.5,1.5), x⊥=(0.5,-0.5).",
+      "tags": [
+        "decomposition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "exerciseId": "E185-proj-E04",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Kiểm tra residual ở E03 có trực giao với u không.",
+      "solution": "u·x⊥=1·0.5+1·(-0.5)=0.",
+      "tags": [
+        "orthogonality"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "exerciseId": "E185-proj-E05",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Vì sao projection lên u không đổi nếu thay u bằng 5u?",
+      "solution": "Hệ số giảm 1/5 nhưng nhân lại 5u, nên projection vector giữ nguyên.",
+      "tags": [
+        "scale-invariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "exerciseId": "E185-proj-E06",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Chứng minh proj_u(x) là điểm gần x nhất trên đường thẳng span{u}.",
+      "solution": "Với y=βu, ||x-y||²=||x-p||²+||p-y||² vì x-p trực giao span{u}; nhỏ nhất khi y=p.",
+      "tags": [
+        "least-squares",
+        "proof"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "exerciseId": "E185-proj-E07",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Trong số thực máy, residual dot với u bằng 1e-12. Có thể coi trực giao không?",
+      "solution": "Cần chuẩn hóa sai số tương đối theo ||u||||r|| và tolerance; không kết luận từ trị tuyệt đối đơn lẻ.",
+      "tags": [
+        "numerical",
+        "orthogonality"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "exerciseId": "E185-proj-E08",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "prompt": "Viết projection lên không gian cột của A khi A có cột độc lập tuyến tính.",
+      "solution": "P=A(AᵀA)⁻¹Aᵀ và projection là Px; nếu A trực chuẩn thì P=AAᵀ.",
+      "tags": [
+        "projection-matrix",
+        "least-squares"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
     }
   ],
   "importPolicy": {
