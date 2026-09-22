@@ -553,6 +553,36 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "applicationId": "E189-special-A1",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Diagonal scaling cho chuẩn hóa feature",
+      "scenario": "Các feature cảm biến có scale khác nhau cần rescale trước mô hình.",
+      "method": "Dùng D=diag(s₁,…,s_d) hoặc vector scale tương đương; lưu đơn vị và policy.",
+      "expectedOutcome": "Scale feature rõ ràng, có thể audit và tính nhanh.",
+      "tags": [
+        "sensor",
+        "diagonal"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "applicationId": "E189-special-A2",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Triangular solve trong pipeline số",
+      "scenario": "Sau phân rã LU/Cholesky cần giải nhiều hệ tuyến tính.",
+      "method": "Giữ cấu trúc tam giác và dùng forward/back substitution thay vì inverse dense.",
+      "expectedOutcome": "Giảm chi phí và cải thiện ổn định số.",
+      "tags": [
+        "numerical",
+        "triangular"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
     }
   ],
   "importPolicy": {
