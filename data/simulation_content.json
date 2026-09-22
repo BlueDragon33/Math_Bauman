@@ -2162,7 +2162,7 @@
     {
       "simulationId": "E197-limits-SIM1",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "title": "Mô phỏng giới hạn removable singularity",
       "purpose": "Cho x tiến tới 1 trong (x²-1)/(x-1) và so với biểu thức rút gọn x+1.",
       "controls": [
@@ -2202,7 +2202,7 @@
     {
       "simulationId": "E197-limits-SIM2",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "title": "Mô phỏng finite-difference error theo h",
       "purpose": "Quan sát error của derivative estimate khi h giảm từ thô đến cực nhỏ.",
       "controls": [
