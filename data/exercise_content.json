@@ -3147,6 +3147,111 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "exerciseId": "E200-partial-E01",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "prompt": "Với f(x,y)=x²+3y, tính ∂f/∂x.",
+      "solution": "2x; y được giữ cố định.",
+      "tags": [
+        "partial-x"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "exerciseId": "E200-partial-E02",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "prompt": "Với f(x,y)=x²+3y, tính ∂f/∂y.",
+      "solution": "3; x được xem như hằng số.",
+      "tags": [
+        "partial-y"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "exerciseId": "E200-partial-E03",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "prompt": "Cho f=x²y+3y². Tính f_x và f_y.",
+      "solution": "f_x=2xy; f_y=x²+6y.",
+      "tags": [
+        "polynomial"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "exerciseId": "E200-partial-E04",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "prompt": "Tại (x,y)=(2,1), với f=x²y+3y², sensitivity theo x và y là bao nhiêu?",
+      "solution": "f_x=2·2·1=4; f_y=2²+6·1=10.",
+      "tags": [
+        "sensitivity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "exerciseId": "E200-partial-E05",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "prompt": "Dùng linearization tại (2,1), ước lượng Δf nếu Δx=0.01, Δy=-0.02.",
+      "solution": "Δf≈4·0.01+10·(-0.02)=0.04-0.20=-0.16.",
+      "tags": [
+        "linearization"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "exerciseId": "E200-partial-E06",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "prompt": "Vì sao partial derivative theo x không nói đủ hướng biến thiên mạnh nhất của f(x,y)?",
+      "solution": "Nó chỉ đo sensitivity theo một trục tọa độ; cần toàn bộ các partial ghép thành gradient để xét mọi hướng.",
+      "tags": [
+        "gradient-bridge"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "exerciseId": "E200-partial-E07",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "prompt": "Một model nhiệt T(P,v)=P/(Rv). Khi xét ∂T/∂P, đại lượng nào phải giữ cố định theo định nghĩa partial?",
+      "solution": "v và R; ∂T/∂P=1/(Rv).",
+      "tags": [
+        "physical-model"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "exerciseId": "E200-partial-E08",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "prompt": "Nếu finite difference theo x không khớp ∂f/∂x analytic, nêu các điểm cần debug.",
+      "solution": "Kiểm h, roundoff, có giữ y cố định thật không, state/cache có đổi không, analytic formula có đúng không, điểm xét có trơn/khả vi theo x không.",
+      "tags": [
+        "partial-check",
+        "debug"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
     }
   ],
   "importPolicy": {
