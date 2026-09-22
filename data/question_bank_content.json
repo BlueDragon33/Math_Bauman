@@ -11187,6 +11187,556 @@
       "auditStatus": "PASS",
       "sourceBundle": "E191_MATRIX_ARITHMETIC",
       "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q001",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Khi A∈R^{m×n}, B∈R^{n×p}, AB thuộc? ",
+      "options": [
+        "R^{m×p}",
+        "R^{n×n}",
+        "R^{p×m}",
+        "R^{m×n}"
+      ],
+      "answer": "R^{m×p}",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q002",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Điều kiện để AB tồn tại là?",
+      "options": [
+        "Số cột A = số hàng B",
+        "A,B cùng shape",
+        "A,B đều vuông",
+        "det(A)=det(B)"
+      ],
+      "answer": "Số cột A = số hàng B",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q003",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "(AB)ᵢⱼ được tính bằng?",
+      "options": [
+        "Tích vô hướng hàng i của A với cột j của B",
+        "aᵢⱼbᵢⱼ",
+        "Tổng hàng i của A",
+        "Tổng cột j của B"
+      ],
+      "answer": "Tích vô hướng hàng i của A với cột j của B",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q004",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Nếu A 2×3 và B 3×5 thì AB shape?",
+      "options": [
+        "2×5",
+        "3×3",
+        "5×2",
+        "2×3"
+      ],
+      "answer": "2×5",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q005",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Phép nhân ma trận nói chung có giao hoán không?",
+      "options": [
+        "Không",
+        "Có luôn",
+        "Chỉ với matrix chữ nhật",
+        "Chỉ khi có vector"
+      ],
+      "answer": "Không",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q006",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "AI bằng?",
+      "options": [
+        "A",
+        "I",
+        "0",
+        "Aᵀ"
+      ],
+      "answer": "A",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q007",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "IA bằng?",
+      "options": [
+        "A",
+        "I",
+        "0",
+        "A⁻¹"
+      ],
+      "answer": "A",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q008",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Matrix product khác Hadamard product ở điểm chính nào?",
+      "options": [
+        "Matrix product dùng hàng×cột và tổng theo chiều chung",
+        "Không khác",
+        "Hadamard luôn đổi shape",
+        "Matrix product chỉ dùng đường chéo"
+      ],
+      "answer": "Matrix product dùng hàng×cột và tổng theo chiều chung",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q009",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "A 4×3, B 3×2. BA có tồn tại không?",
+      "options": [
+        "Không, vì 2≠4",
+        "Có, shape 3×3",
+        "Có, shape 2×4",
+        "Luôn tồn tại"
+      ],
+      "answer": "Không, vì 2≠4",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q010",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Nếu cả AB và BA cùng tồn tại thì có suy ra AB=BA không?",
+      "options": [
+        "Không",
+        "Có",
+        "Chỉ cần cùng trace",
+        "Chỉ cần cùng determinant"
+      ],
+      "answer": "Không",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q011",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Trong Y=XW với X N×d, W d×k, Y shape?",
+      "options": [
+        "N×k",
+        "d×d",
+        "k×N",
+        "N×d"
+      ],
+      "answer": "N×k",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q012",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Chiều chung bị cộng trong XW là?",
+      "options": [
+        "d",
+        "N",
+        "k",
+        "N+k"
+      ],
+      "answer": "d",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q013",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Nếu đổi W từ d×k thành k×d nhưng vẫn giữ X N×d thì XW?",
+      "options": [
+        "Không còn hợp lệ trừ khi d=k",
+        "Luôn hợp lệ",
+        "Tự transpose",
+        "Cho N×d"
+      ],
+      "answer": "Không còn hợp lệ trừ khi d=k",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q014",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Tại sao thứ tự matrix product quan trọng?",
+      "options": [
+        "Vì nó mã hóa thứ tự composition của phép biến đổi",
+        "Vì determinant luôn khác",
+        "Vì trace đổi shape",
+        "Vì matrix phải vuông"
+      ],
+      "answer": "Vì nó mã hóa thứ tự composition của phép biến đổi",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q015",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Khi nào AB và BA có thể cùng shape?",
+      "options": [
+        "Ví dụ A,B đều n×n",
+        "Chỉ khi A=B=0",
+        "Không bao giờ",
+        "Chỉ khi là vector"
+      ],
+      "answer": "Ví dụ A,B đều n×n",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q016",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Một bug phổ biến khi dùng NumPy/PyTorch matmul là?",
+      "options": [
+        "Transpose/batch dimension sai nhưng shape vẫn tình cờ hợp lệ",
+        "Matrix tự nghịch đảo",
+        "Rank luôn tăng",
+        "Dtype luôn thành int"
+      ],
+      "answer": "Transpose/batch dimension sai nhưng shape vẫn tình cờ hợp lệ",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q017",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Trong neural network, W1W2 và W2W1 thường khác vì?",
+      "options": [
+        "Composition của hai linear maps có thứ tự",
+        "Scalar multiplication giao hoán",
+        "Determinant bằng nhau",
+        "Cùng số phần tử"
+      ],
+      "answer": "Composition của hai linear maps có thứ tự",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q018",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Nếu A là rotation và B là anisotropic scaling, AB so với BA thường?",
+      "options": [
+        "Khác nhau",
+        "Luôn bằng",
+        "Luôn zero",
+        "Luôn singular"
+      ],
+      "answer": "Khác nhau",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q019",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Unit test tốt cho matrix multiplication nên kiểm gì?",
+      "options": [
+        "Shape contract, phần tử mẫu, identity và order-sensitive case",
+        "Chỉ tổng phần tử",
+        "Chỉ determinant",
+        "Chỉ dtype"
+      ],
+      "answer": "Shape contract, phần tử mẫu, identity và order-sensitive case",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q020",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Tại sao không nên thay matrix multiplication bằng elementwise product trong linear layer?",
+      "options": [
+        "Hai phép toán có semantics và coupling giữa feature khác nhau",
+        "Vì Hadamard luôn chậm hơn",
+        "Vì matrix product không cần shape",
+        "Vì elementwise luôn singular"
+      ],
+      "answer": "Hai phép toán có semantics và coupling giữa feature khác nhau",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q021",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Trong batch tensor B×N×d nhân d×k, cần kiểm gì ngoài d?",
+      "options": [
+        "Convention batch/feature và broadcasting/batched-matmul semantics",
+        "Chỉ determinant",
+        "Chỉ trace",
+        "Chỉ số phần tử"
+      ],
+      "answer": "Convention batch/feature và broadcasting/batched-matmul semantics",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q022",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Nếu A,B gần singular thì vấn đề đó có làm AB 'không tồn tại' theo shape không?",
+      "options": [
+        "Không; singularity ảnh hưởng tính chất số học/invertibility, không phải điều kiện shape của product",
+        "Có luôn",
+        "Chỉ khi vuông",
+        "Chỉ với float32"
+      ],
+      "answer": "Không; singularity ảnh hưởng tính chất số học/invertibility, không phải điều kiện shape của product",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q023",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Trong pipeline tọa độ, đổi convention row-vector sang column-vector có thể yêu cầu gì?",
+      "options": [
+        "Đổi thứ tự multiplication và transpose theo convention nhất quán",
+        "Không cần đổi gì",
+        "Chỉ đổi dtype",
+        "Chỉ đổi determinant"
+      ],
+      "answer": "Đổi thứ tự multiplication và transpose theo convention nhất quán",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q024",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Độ phức tạp cổ điển của nhân matrix m×n với n×p xấp xỉ?",
+      "options": [
+        "O(mnp)",
+        "O(m+n+p)",
+        "O(mp)",
+        "O(n²) luôn"
+      ],
+      "answer": "O(mnp)",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E192-matmul-Q025",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Khi kết quả AB đúng shape nhưng sai semantics, nguyên nhân nguy hiểm nhất có thể là?",
+      "options": [
+        "Feature ordering hoặc coordinate convention không khớp",
+        "Matrix có quá nhiều số 0",
+        "Số hàng nhỏ",
+        "Dùng dấu ngoặc"
+      ],
+      "answer": "Feature ordering hoặc coordinate convention không khớp",
+      "explanation": "Đáp án dựa trên shape contract, công thức hàng×cột, phân biệt Hadamard product, tính không giao hoán và semantics của composition trong AI/control.",
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION",
+      "stage": "vn"
     }
   ],
   "importPolicy": {
