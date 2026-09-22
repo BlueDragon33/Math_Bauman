@@ -1316,6 +1316,119 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "exerciseId": "E183-dot-E01",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Tính x·y với x=(1,2,3), y=(4,-1,2).",
+      "solution": "1·4+2·(-1)+3·2=8.",
+      "tags": [
+        "dot-product",
+        "numeric"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "exerciseId": "E183-dot-E02",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Hai vector (1,1) và (1,-1) có trực giao không?",
+      "solution": "Dot product =1·1+1·(-1)=0 nên trực giao.",
+      "tags": [
+        "orthogonality"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "exerciseId": "E183-dot-E03",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Cho ||x||₂=2, ||y||₂=3 và x·y=3. Tính cosθ.",
+      "solution": "cosθ=3/(2·3)=1/2.",
+      "tags": [
+        "dot-product",
+        "angle"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "exerciseId": "E183-dot-E04",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Tìm a để x=(1,a,2) trực giao với y=(2,-1,1).",
+      "solution": "x·y=2-a+2=4-a=0 ⇒ a=4.",
+      "tags": [
+        "orthogonality",
+        "parameter"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "exerciseId": "E183-dot-E05",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Vì sao dot product của hai vector lớn không thể tự nó được hiểu là similarity hướng?",
+      "solution": "Dot product phụ thuộc cả norm; vector lớn có thể cho dot lớn dù góc không nhỏ. Cần chuẩn hóa thành cosine similarity nếu chỉ quan tâm hướng.",
+      "tags": [
+        "dot-product",
+        "scale",
+        "similarity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "exerciseId": "E183-dot-E06",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Chứng minh |x·y|≤||x||₂||y||₂ và nêu tên bất đẳng thức.",
+      "solution": "Đây là Cauchy–Schwarz. Có thể xét ||x-αy||²≥0 và chọn α=(x·y)/||y||² để suy ra kết quả.",
+      "tags": [
+        "cauchy-schwarz",
+        "proof"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "exerciseId": "E183-dot-E07",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Trong số thực máy, dot(x,y)=1e-14. Khi nào có thể xem x,y gần trực giao?",
+      "solution": "So tương đối: |x·y|/(||x||||y||) nhỏ hơn tolerance phù hợp; không chỉ nhìn 1e-14 tuyệt đối.",
+      "tags": [
+        "orthogonality",
+        "numerical"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "exerciseId": "E183-dot-E08",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "prompt": "Giải thích vì sao Gram matrix G=XᵀX luôn đối xứng và bán xác định dương.",
+      "solution": "Gᵀ=XᵀX. Với mọi z, zᵀGz=zᵀXᵀXz=||Xz||²≥0.",
+      "tags": [
+        "dot-product",
+        "gram-matrix",
+        "psd"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
     }
   ],
   "importPolicy": {
