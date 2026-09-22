@@ -2078,6 +2078,94 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "simulationId": "E196-inverse-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng inverse khi determinant tiến về 0",
+      "purpose": "Thay ε trong A=[[1,1],[1,1+ε]] và quan sát det, condition number, inverse và residual.",
+      "controls": [
+        {
+          "key": "epsilon",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "determinant",
+          "label": "det(A)"
+        },
+        {
+          "key": "condition_number",
+          "label": "cond(A)"
+        },
+        {
+          "key": "inverse_norm",
+          "label": "||A^{-1}||"
+        },
+        {
+          "key": "residual",
+          "label": "||AA^{-1}-I||"
+        }
+      ],
+      "expectedObservation": "Khi ε→0, determinant→0, condition number và độ lớn inverse tăng mạnh; nghiệm nhạy với nhiễu dù inverse còn tồn tại trước khi ε=0.",
+      "tags": [
+        "inverse",
+        "conditioning"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "simulationId": "E196-inverse-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "So sánh inv(A)@b với solve(A,b)",
+      "purpose": "Đo sai số và chi phí giữa tạo inverse tường minh và giải trực tiếp hệ Ax=b.",
+      "controls": [
+        {
+          "key": "matrix_size",
+          "type": "number",
+          "default": 10
+        },
+        {
+          "key": "conditioning",
+          "type": "number",
+          "default": 10
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "solve_error",
+          "label": "Sai số solve"
+        },
+        {
+          "key": "inverse_error",
+          "label": "Sai số inv@b"
+        },
+        {
+          "key": "solve_time",
+          "label": "Thời gian solve"
+        },
+        {
+          "key": "inverse_time",
+          "label": "Thời gian inverse"
+        }
+      ],
+      "expectedObservation": "solve thường trực tiếp và ổn định hơn; khác biệt rõ hơn khi kích thước/condition tăng.",
+      "tags": [
+        "solver",
+        "numerical-stability"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
     }
   ],
   "importPolicy": {
