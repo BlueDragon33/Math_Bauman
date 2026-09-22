@@ -1269,6 +1269,84 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "mindmapId": "E189-special-MM01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Ma trận đặc biệt = cấu trúc + thuật toán phù hợp",
+          "type": "root"
+        },
+        {
+          "id": "zero",
+          "label": "Zero: triệt đóng góp tuyến tính",
+          "type": "concept"
+        },
+        {
+          "id": "identity",
+          "label": "Identity: giữ nguyên",
+          "type": "concept"
+        },
+        {
+          "id": "diag",
+          "label": "Diagonal: scale độc lập",
+          "type": "concept"
+        },
+        {
+          "id": "tri",
+          "label": "Triangular: solve nhanh",
+          "type": "concept"
+        },
+        {
+          "id": "shape",
+          "label": "Row/column/square: shape semantics",
+          "type": "definition"
+        },
+        {
+          "id": "compute",
+          "label": "Khai thác structure, tránh dense mù",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "zero"
+        },
+        {
+          "from": "root",
+          "to": "identity"
+        },
+        {
+          "from": "root",
+          "to": "diag"
+        },
+        {
+          "from": "root",
+          "to": "tri"
+        },
+        {
+          "from": "root",
+          "to": "shape"
+        },
+        {
+          "from": "diag",
+          "to": "compute"
+        },
+        {
+          "from": "tri",
+          "to": "compute"
+        }
+      ],
+      "tags": [
+        "special-matrix",
+        "E189"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
     }
   ],
   "importPolicy": {
