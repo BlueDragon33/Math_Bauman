@@ -2501,6 +2501,97 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "simulationId": "E201-gradient-SIM1",
+      "title": "Gradient và đường mức",
+      "purpose": "Quan sát gradient trên bề mặt f(x,y) và kiểm chứng nó vuông góc đường mức tại cùng điểm.",
+      "controls": [
+        {
+          "key": "x",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "y",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "function",
+          "type": "select",
+          "default": "quadratic"
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "gradient",
+          "label": "∇f(x,y)"
+        },
+        {
+          "key": "grad_norm",
+          "label": "‖∇f‖₂"
+        },
+        {
+          "key": "tangent_dot",
+          "label": "∇f·tangent"
+        }
+      ],
+      "expectedObservation": "Tích vô hướng giữa gradient và tiếp tuyến đường mức xấp xỉ 0; mũi tên gradient trỏ sang đường mức có giá trị lớn hơn.",
+      "tags": [
+        "level-set",
+        "geometry",
+        "gradient"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "simulationId": "E201-gradient-SIM2",
+      "title": "So sánh hướng thay đổi quanh một điểm",
+      "purpose": "Quét nhiều hướng đơn vị u và so Dᵤf=∇f·u để thấy hướng nào tăng/giảm nhanh nhất.",
+      "controls": [
+        {
+          "key": "angle_deg",
+          "type": "number",
+          "default": 0
+        },
+        {
+          "key": "x",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "y",
+          "type": "number",
+          "default": 2
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "directional_derivative",
+          "label": "Dᵤf"
+        },
+        {
+          "key": "max_direction_angle",
+          "label": "Góc hướng ∇f"
+        },
+        {
+          "key": "min_direction_angle",
+          "label": "Góc hướng -∇f"
+        }
+      ],
+      "expectedObservation": "Dᵤf lớn nhất khi u cùng hướng gradient, nhỏ nhất khi u ngược hướng gradient và bằng 0 khi u vuông góc gradient.",
+      "tags": [
+        "directional-derivative",
+        "steepest-direction"
+      ]
     }
   ],
   "importPolicy": {

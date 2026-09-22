@@ -1916,6 +1916,78 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "formulaId": "E201-gradient-F1",
+      "title": "Gradient của hàm vô hướng",
+      "formula": "∇f(x) = [∂f/∂x₁, …, ∂f/∂xₙ]ᵀ",
+      "meaning": "Gradient gom toàn bộ đạo hàm riêng của hàm vô hướng thành một vector tại điểm đang xét.",
+      "conditions": [
+        "f khả vi tại điểm xét.",
+        "Các biến được biểu diễn trong cùng hệ tọa độ đã chọn."
+      ],
+      "commonMistakes": [
+        "Nhầm gradient của hàm vô hướng với Jacobian của ánh xạ vector.",
+        "Bỏ qua ảnh hưởng của thang đo giữa các biến."
+      ],
+      "programmingUse": "Vector đạo hàm dùng trong tối ưu, backpropagation và phân tích sensitivity.",
+      "tags": [
+        "gradient",
+        "partials",
+        "vector"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "formulaId": "E201-gradient-F2",
+      "title": "Đạo hàm theo hướng",
+      "formula": "Dᵤf(x) = ∇f(x)ᵀu, ‖u‖₂ = 1",
+      "meaning": "Mức thay đổi tức thời của f theo hướng đơn vị u bằng tích vô hướng giữa gradient và u.",
+      "conditions": [
+        "f khả vi tại x.",
+        "u là vector đơn vị khi so sánh tốc độ thay đổi theo các hướng."
+      ],
+      "commonMistakes": [
+        "Dùng u chưa chuẩn hóa rồi gọi kết quả là tốc độ theo hướng đơn vị.",
+        "Nhầm dấu khi chọn hướng giảm."
+      ],
+      "programmingUse": "Kiểm tra gradient bằng finite difference theo một hướng bất kỳ.",
+      "tags": [
+        "directional-derivative",
+        "dot-product",
+        "gradient-check"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "formulaId": "E201-gradient-F3",
+      "title": "Hướng tăng và giảm nhanh nhất",
+      "formula": "max_{‖u‖₂=1} Dᵤf = ‖∇f‖₂ tại u = ∇f/‖∇f‖₂; hướng giảm nhanh nhất là -∇f",
+      "meaning": "Theo chuẩn Euclid, gradient chỉ hướng tăng cục bộ nhanh nhất; đổi dấu cho hướng giảm nhanh nhất.",
+      "conditions": [
+        "∇f(x) ≠ 0 để chuẩn hóa hướng.",
+        "Kết luận mang tính cục bộ và theo metric Euclid của tọa độ hiện tại."
+      ],
+      "commonMistakes": [
+        "Tưởng -∇f luôn cho bước tối ưu toàn cục.",
+        "Bỏ qua learning rate và độ cong của hàm."
+      ],
+      "programmingUse": "Cơ sở trực giác cho gradient descent và cập nhật tham số.",
+      "tags": [
+        "steepest-ascent",
+        "steepest-descent",
+        "optimization"
+      ]
     }
   ],
   "importPolicy": {

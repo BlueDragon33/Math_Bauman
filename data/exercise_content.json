@@ -3252,6 +3252,117 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "exerciseId": "E201-gradient-E01",
+      "level": "easy",
+      "prompt": "Với f(x,y)=x²+3y², tính ∇f(x,y).",
+      "solution": "∇f=[2x,6y]ᵀ.",
+      "tags": [
+        "gradient",
+        "symbolic"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "exerciseId": "E201-gradient-E02",
+      "level": "easy",
+      "prompt": "Với f(x,y)=x²+y², tính gradient tại (1,-2).",
+      "solution": "∇f(1,-2)=[2,-4]ᵀ.",
+      "tags": [
+        "gradient",
+        "evaluation"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "exerciseId": "E201-gradient-E03",
+      "level": "medium",
+      "prompt": "Cho f=x²+y² tại (1,2) và u=[3,4]ᵀ/5. Tính Dᵤf.",
+      "solution": "∇f=[2,4]ᵀ nên Dᵤf=[2,4]·[3/5,4/5]=22/5.",
+      "tags": [
+        "directional-derivative"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "exerciseId": "E201-gradient-E04",
+      "level": "medium",
+      "prompt": "Cho f=x²+4y² tại (1,1). Hướng đơn vị tăng nhanh nhất là gì?",
+      "solution": "∇f=[2,8]ᵀ; hướng đơn vị là [2,8]/√68 = [1,4]/√17.",
+      "tags": [
+        "steepest-ascent",
+        "normalization"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "exerciseId": "E201-gradient-E05",
+      "level": "medium",
+      "prompt": "Tại một điểm có ∇f=[3,-4]ᵀ. Hướng giảm nhanh nhất và độ lớn gradient là gì?",
+      "solution": "Hướng giảm là -∇f=[-3,4]ᵀ; ‖∇f‖₂=5. Nếu cần hướng đơn vị: [-3/5,4/5]ᵀ.",
+      "tags": [
+        "steepest-descent",
+        "norm"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "exerciseId": "E201-gradient-E06",
+      "level": "medium",
+      "prompt": "Với f=x²+y², giải thích vì sao gradient vuông góc đường mức x²+y²=c.",
+      "solution": "Đường mức giữ f không đổi nên đạo hàm theo mọi tiếp tuyến bằng 0; do Dᵤf=∇f·u, gradient vuông góc mọi tiếp tuyến.",
+      "tags": [
+        "level-set",
+        "geometry"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "exerciseId": "E201-gradient-E07",
+      "level": "hard",
+      "prompt": "Một loss J(w₁,w₂) có ∇J=[0.6,-0.8]ᵀ tại w. Với η=0.1, viết một bước gradient descent.",
+      "solution": "w_new=w-0.1[0.6,-0.8]ᵀ = w+[-0.06,0.08]ᵀ.",
+      "tags": [
+        "gradient-descent",
+        "learning-rate"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "exerciseId": "E201-gradient-E08",
+      "level": "hard",
+      "prompt": "Tại x, finite difference theo hướng đơn vị u cho (f(x+εu)-f(x))/ε≈1.99, còn ∇f·u=2.00. Kết luận gì?",
+      "solution": "Sai lệch 0.01 là nhỏ; gradient theo hướng này nhất quán với finite difference, nhưng vẫn cần thử thêm hướng và ε khác.",
+      "tags": [
+        "gradient-check",
+        "finite-difference"
+      ]
     }
   ],
   "importPolicy": {

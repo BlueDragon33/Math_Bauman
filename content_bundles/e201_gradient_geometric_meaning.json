@@ -1,0 +1,1054 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E201_GRADIENT_GEOMETRIC_MEANING",
+  "lessonId": "MATH-VN-CA-C03-L05",
+  "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+  "title": "§1.5 · Gradient: hướng tăng nhanh nhất và ý nghĩa hình học",
+  "sources": {
+    "formula_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "formulaId": "E201-gradient-F1",
+        "title": "Gradient của hàm vô hướng",
+        "formula": "∇f(x) = [∂f/∂x₁, …, ∂f/∂xₙ]ᵀ",
+        "meaning": "Gradient gom toàn bộ đạo hàm riêng của hàm vô hướng thành một vector tại điểm đang xét.",
+        "conditions": [
+          "f khả vi tại điểm xét.",
+          "Các biến được biểu diễn trong cùng hệ tọa độ đã chọn."
+        ],
+        "commonMistakes": [
+          "Nhầm gradient của hàm vô hướng với Jacobian của ánh xạ vector.",
+          "Bỏ qua ảnh hưởng của thang đo giữa các biến."
+        ],
+        "programmingUse": "Vector đạo hàm dùng trong tối ưu, backpropagation và phân tích sensitivity.",
+        "tags": [
+          "gradient",
+          "partials",
+          "vector"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "formulaId": "E201-gradient-F2",
+        "title": "Đạo hàm theo hướng",
+        "formula": "Dᵤf(x) = ∇f(x)ᵀu, ‖u‖₂ = 1",
+        "meaning": "Mức thay đổi tức thời của f theo hướng đơn vị u bằng tích vô hướng giữa gradient và u.",
+        "conditions": [
+          "f khả vi tại x.",
+          "u là vector đơn vị khi so sánh tốc độ thay đổi theo các hướng."
+        ],
+        "commonMistakes": [
+          "Dùng u chưa chuẩn hóa rồi gọi kết quả là tốc độ theo hướng đơn vị.",
+          "Nhầm dấu khi chọn hướng giảm."
+        ],
+        "programmingUse": "Kiểm tra gradient bằng finite difference theo một hướng bất kỳ.",
+        "tags": [
+          "directional-derivative",
+          "dot-product",
+          "gradient-check"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "formulaId": "E201-gradient-F3",
+        "title": "Hướng tăng và giảm nhanh nhất",
+        "formula": "max_{‖u‖₂=1} Dᵤf = ‖∇f‖₂ tại u = ∇f/‖∇f‖₂; hướng giảm nhanh nhất là -∇f",
+        "meaning": "Theo chuẩn Euclid, gradient chỉ hướng tăng cục bộ nhanh nhất; đổi dấu cho hướng giảm nhanh nhất.",
+        "conditions": [
+          "∇f(x) ≠ 0 để chuẩn hóa hướng.",
+          "Kết luận mang tính cục bộ và theo metric Euclid của tọa độ hiện tại."
+        ],
+        "commonMistakes": [
+          "Tưởng -∇f luôn cho bước tối ưu toàn cục.",
+          "Bỏ qua learning rate và độ cong của hàm."
+        ],
+        "programmingUse": "Cơ sở trực giác cho gradient descent và cập nhật tham số.",
+        "tags": [
+          "steepest-ascent",
+          "steepest-descent",
+          "optimization"
+        ]
+      }
+    ],
+    "exercise_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "exerciseId": "E201-gradient-E01",
+        "level": "easy",
+        "prompt": "Với f(x,y)=x²+3y², tính ∇f(x,y).",
+        "solution": "∇f=[2x,6y]ᵀ.",
+        "tags": [
+          "gradient",
+          "symbolic"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "exerciseId": "E201-gradient-E02",
+        "level": "easy",
+        "prompt": "Với f(x,y)=x²+y², tính gradient tại (1,-2).",
+        "solution": "∇f(1,-2)=[2,-4]ᵀ.",
+        "tags": [
+          "gradient",
+          "evaluation"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "exerciseId": "E201-gradient-E03",
+        "level": "medium",
+        "prompt": "Cho f=x²+y² tại (1,2) và u=[3,4]ᵀ/5. Tính Dᵤf.",
+        "solution": "∇f=[2,4]ᵀ nên Dᵤf=[2,4]·[3/5,4/5]=22/5.",
+        "tags": [
+          "directional-derivative"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "exerciseId": "E201-gradient-E04",
+        "level": "medium",
+        "prompt": "Cho f=x²+4y² tại (1,1). Hướng đơn vị tăng nhanh nhất là gì?",
+        "solution": "∇f=[2,8]ᵀ; hướng đơn vị là [2,8]/√68 = [1,4]/√17.",
+        "tags": [
+          "steepest-ascent",
+          "normalization"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "exerciseId": "E201-gradient-E05",
+        "level": "medium",
+        "prompt": "Tại một điểm có ∇f=[3,-4]ᵀ. Hướng giảm nhanh nhất và độ lớn gradient là gì?",
+        "solution": "Hướng giảm là -∇f=[-3,4]ᵀ; ‖∇f‖₂=5. Nếu cần hướng đơn vị: [-3/5,4/5]ᵀ.",
+        "tags": [
+          "steepest-descent",
+          "norm"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "exerciseId": "E201-gradient-E06",
+        "level": "medium",
+        "prompt": "Với f=x²+y², giải thích vì sao gradient vuông góc đường mức x²+y²=c.",
+        "solution": "Đường mức giữ f không đổi nên đạo hàm theo mọi tiếp tuyến bằng 0; do Dᵤf=∇f·u, gradient vuông góc mọi tiếp tuyến.",
+        "tags": [
+          "level-set",
+          "geometry"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "exerciseId": "E201-gradient-E07",
+        "level": "hard",
+        "prompt": "Một loss J(w₁,w₂) có ∇J=[0.6,-0.8]ᵀ tại w. Với η=0.1, viết một bước gradient descent.",
+        "solution": "w_new=w-0.1[0.6,-0.8]ᵀ = w+[-0.06,0.08]ᵀ.",
+        "tags": [
+          "gradient-descent",
+          "learning-rate"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "exerciseId": "E201-gradient-E08",
+        "level": "hard",
+        "prompt": "Tại x, finite difference theo hướng đơn vị u cho (f(x+εu)-f(x))/ε≈1.99, còn ∇f·u=2.00. Kết luận gì?",
+        "solution": "Sai lệch 0.01 là nhỏ; gradient theo hướng này nhất quán với finite difference, nhưng vẫn cần thử thêm hướng và ε khác.",
+        "tags": [
+          "gradient-check",
+          "finite-difference"
+        ]
+      }
+    ],
+    "application_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "applicationId": "E201-gradient-A1",
+        "title": "Gradient của loss trong mô hình học máy",
+        "scenario": "Loss J(θ₁,θ₂) thay đổi theo hai tham số và cần biết hướng cập nhật cục bộ để giảm loss.",
+        "method": "Tính từng đạo hàm riêng, ghép thành ∇J, kiểm tra bằng directional finite difference rồi cập nhật θ←θ-η∇J với η đủ nhỏ.",
+        "expectedOutcome": "Hiểu rõ gradient là thông tin hướng cục bộ, còn chất lượng bước đi phụ thuộc learning rate và hình học loss.",
+        "tags": [
+          "machine-learning",
+          "loss",
+          "gradient-descent"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "applicationId": "E201-gradient-A2",
+        "title": "Hướng nhạy nhất của chỉ tiêu kỹ thuật",
+        "scenario": "Một chỉ tiêu hiệu năng g(p₁,p₂) phụ thuộc hai tham số hiệu chỉnh; cần biết tổ hợp thay đổi nhỏ nào làm g tăng mạnh nhất.",
+        "method": "Chuẩn hóa đơn vị tham số nếu cần, tính ∇g tại operating point, dùng hướng ∇g/‖∇g‖ để nhận diện hướng tăng nhạy nhất và -∇g cho hướng giảm.",
+        "expectedOutcome": "Xác định đúng hướng sensitivity lớn nhất thay vì chỉ nhìn từng đạo hàm riêng riêng lẻ.",
+        "tags": [
+          "sensitivity",
+          "engineering",
+          "operating-point"
+        ]
+      }
+    ],
+    "simulation_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "simulationId": "E201-gradient-SIM1",
+        "title": "Gradient và đường mức",
+        "purpose": "Quan sát gradient trên bề mặt f(x,y) và kiểm chứng nó vuông góc đường mức tại cùng điểm.",
+        "controls": [
+          {
+            "key": "x",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "y",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "function",
+            "type": "select",
+            "default": "quadratic"
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "gradient",
+            "label": "∇f(x,y)"
+          },
+          {
+            "key": "grad_norm",
+            "label": "‖∇f‖₂"
+          },
+          {
+            "key": "tangent_dot",
+            "label": "∇f·tangent"
+          }
+        ],
+        "expectedObservation": "Tích vô hướng giữa gradient và tiếp tuyến đường mức xấp xỉ 0; mũi tên gradient trỏ sang đường mức có giá trị lớn hơn.",
+        "tags": [
+          "level-set",
+          "geometry",
+          "gradient"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "simulationId": "E201-gradient-SIM2",
+        "title": "So sánh hướng thay đổi quanh một điểm",
+        "purpose": "Quét nhiều hướng đơn vị u và so Dᵤf=∇f·u để thấy hướng nào tăng/giảm nhanh nhất.",
+        "controls": [
+          {
+            "key": "angle_deg",
+            "type": "number",
+            "default": 0
+          },
+          {
+            "key": "x",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "y",
+            "type": "number",
+            "default": 2
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "directional_derivative",
+            "label": "Dᵤf"
+          },
+          {
+            "key": "max_direction_angle",
+            "label": "Góc hướng ∇f"
+          },
+          {
+            "key": "min_direction_angle",
+            "label": "Góc hướng -∇f"
+          }
+        ],
+        "expectedObservation": "Dᵤf lớn nhất khi u cùng hướng gradient, nhỏ nhất khi u ngược hướng gradient và bằng 0 khi u vuông góc gradient.",
+        "tags": [
+          "directional-derivative",
+          "steepest-direction"
+        ]
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "qaId": "E201-gradient-QA01",
+        "question": "Nếu giáo sư hỏi 'vì sao gradient là hướng tăng nhanh nhất và tại sao nó vuông góc đường mức?', bạn trả lời thế nào?",
+        "answer": "Với mọi hướng đơn vị u, đạo hàm theo hướng là Dᵤf=∇f·u=‖∇f‖cosθ. Giá trị lớn nhất xảy ra khi θ=0, tức u cùng hướng ∇f; nhỏ nhất khi θ=π, tức -∇f. Trên đường mức, f không đổi theo hướng tiếp tuyến nên đạo hàm theo tiếp tuyến bằng 0, suy ra ∇f vuông góc tiếp tuyến và do đó vuông góc đường mức tại điểm khả vi.",
+        "followUp": [
+          "Nếu ∇f=0 thì còn nói được hướng tăng nhanh nhất không?",
+          "Vì sao đổi thang đo biến có thể đổi hướng gradient số học?",
+          "-∇f có đảm bảo đi tới cực tiểu toàn cục không?"
+        ],
+        "tags": [
+          "gradient",
+          "geometry",
+          "oral-exam",
+          "E201"
+        ]
+      }
+    ],
+    "review_pack_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "reviewPackId": "E201-gradient-RP01",
+        "items": [
+          {
+            "type": "definition",
+            "prompt": "Gradient của hàm vô hướng gồm những gì?",
+            "expected": "Vector các đạo hàm riêng theo từng biến."
+          },
+          {
+            "type": "geometry",
+            "prompt": "Gradient liên hệ thế nào với đường mức?",
+            "expected": "Vuông góc với tiếp tuyến đường mức tại điểm khả vi."
+          },
+          {
+            "type": "direction",
+            "prompt": "Hướng tăng nhanh nhất theo chuẩn Euclid?",
+            "expected": "Cùng hướng ∇f; tốc độ cực đại là ‖∇f‖₂."
+          },
+          {
+            "type": "optimization",
+            "prompt": "Gradient descent dùng hướng nào?",
+            "expected": "-∇f, kèm learning rate phù hợp."
+          },
+          {
+            "type": "verification",
+            "prompt": "Kiểm tra gradient số bằng cách nào?",
+            "expected": "So ∇f·u với finite difference theo một hoặc nhiều hướng u."
+          }
+        ],
+        "masteryGate": "Tính đúng gradient + giải thích directional derivative + chứng minh trực giác hướng tăng nhanh nhất + đọc hình học đường mức + nối đúng sang gradient descent và gradient checking",
+        "tags": [
+          "gradient",
+          "geometry",
+          "optimization",
+          "E201"
+        ]
+      }
+    ],
+    "question_bank_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q001",
+        "level": "easy",
+        "question": "Gradient của hàm vô hướng f(x₁,…,xₙ) là gì?",
+        "options": [
+          "Vector các đạo hàm riêng",
+          "Một số vô hướng duy nhất",
+          "Ma trận Hessian",
+          "Tập nghiệm của f"
+        ],
+        "answer": "Vector các đạo hàm riêng",
+        "explanation": "Gradient gom các partial derivatives thành một vector tại điểm xét.",
+        "tags": [
+          "gradient",
+          "definition",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q002",
+        "level": "easy",
+        "question": "Với f=x²+y², ∇f bằng?",
+        "options": [
+          "[2x,2y]ᵀ",
+          "[x,y]ᵀ",
+          "2x+2y",
+          "[x²,y²]ᵀ"
+        ],
+        "answer": "[2x,2y]ᵀ",
+        "explanation": "Lấy đạo hàm riêng theo từng biến.",
+        "tags": [
+          "gradient",
+          "calculation",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q003",
+        "level": "easy",
+        "question": "Nếu ∇f=[3,4]ᵀ thì ‖∇f‖₂ bằng?",
+        "options": [
+          "5",
+          "7",
+          "25",
+          "1"
+        ],
+        "answer": "5",
+        "explanation": "Chuẩn Euclid là √(3²+4²)=5.",
+        "tags": [
+          "gradient",
+          "norm",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q004",
+        "level": "easy",
+        "question": "Đạo hàm theo hướng đơn vị u của f khả vi là?",
+        "options": [
+          "∇f·u",
+          "‖u‖²",
+          "f·u",
+          "Hessian·u"
+        ],
+        "answer": "∇f·u",
+        "explanation": "Directional derivative là tích vô hướng gradient với hướng đơn vị.",
+        "tags": [
+          "directional-derivative",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q005",
+        "level": "easy",
+        "question": "Theo chuẩn Euclid, hướng tăng nhanh nhất của f tại điểm có ∇f≠0 là?",
+        "options": [
+          "Cùng hướng ∇f",
+          "Ngược hướng ∇f",
+          "Bất kỳ hướng nào",
+          "Luôn theo trục x"
+        ],
+        "answer": "Cùng hướng ∇f",
+        "explanation": "Cauchy–Schwarz cho ∇f·u lớn nhất khi u song song cùng chiều ∇f.",
+        "tags": [
+          "steepest-ascent",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q006",
+        "level": "easy",
+        "question": "Hướng giảm nhanh nhất cục bộ là?",
+        "options": [
+          "-∇f",
+          "∇f",
+          "Hessian",
+          "Vector 0"
+        ],
+        "answer": "-∇f",
+        "explanation": "Đổi dấu gradient cho directional derivative âm nhất theo chuẩn Euclid.",
+        "tags": [
+          "steepest-descent",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q007",
+        "level": "easy",
+        "question": "Gradient tại điểm khả vi có quan hệ gì với đường mức?",
+        "options": [
+          "Vuông góc tiếp tuyến đường mức",
+          "Luôn song song tiếp tuyến",
+          "Không liên quan",
+          "Luôn nằm trên trục x"
+        ],
+        "answer": "Vuông góc tiếp tuyến đường mức",
+        "explanation": "f không đổi theo tiếp tuyến nên ∇f·t=0.",
+        "tags": [
+          "level-set",
+          "geometry",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q008",
+        "level": "medium",
+        "question": "Nếu u vuông góc ∇f thì Dᵤf bằng?",
+        "options": [
+          "0",
+          "‖∇f‖",
+          "1",
+          "Không xác định"
+        ],
+        "answer": "0",
+        "explanation": "Tích vô hướng bằng 0 khi hai vector vuông góc.",
+        "tags": [
+          "directional-derivative",
+          "geometry",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q009",
+        "level": "medium",
+        "question": "Nếu u là vector đơn vị cùng hướng ∇f thì Dᵤf bằng?",
+        "options": [
+          "‖∇f‖₂",
+          "0",
+          "-‖∇f‖₂",
+          "‖∇f‖₂²"
+        ],
+        "answer": "‖∇f‖₂",
+        "explanation": "Khi cosθ=1, ∇f·u=‖∇f‖.",
+        "tags": [
+          "steepest-ascent",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q010",
+        "level": "medium",
+        "question": "Nếu u chưa chuẩn hóa, giá trị ∇f·u nên được hiểu là?",
+        "options": [
+          "Biến thiên tuyến tính theo vector u, không phải tốc độ theo hướng đơn vị",
+          "Luôn là tốc độ cực đại",
+          "Luôn bằng chuẩn gradient",
+          "Không có ý nghĩa"
+        ],
+        "answer": "Biến thiên tuyến tính theo vector u, không phải tốc độ theo hướng đơn vị",
+        "explanation": "Độ lớn u làm scale tích vô hướng.",
+        "tags": [
+          "directional-derivative",
+          "normalization",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q011",
+        "level": "medium",
+        "question": "Một bước gradient descent chuẩn có dạng?",
+        "options": [
+          "xₖ₊₁=xₖ-η∇f(xₖ)",
+          "xₖ₊₁=xₖ+η∇f(xₖ)",
+          "xₖ₊₁=ηxₖ",
+          "xₖ₊₁=∇²f"
+        ],
+        "answer": "xₖ₊₁=xₖ-η∇f(xₖ)",
+        "explanation": "Dấu trừ đi theo hướng giảm cục bộ.",
+        "tags": [
+          "gradient-descent",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q012",
+        "level": "medium",
+        "question": "Learning rate η quá lớn có thể gây gì?",
+        "options": [
+          "Vượt quá vùng giảm và dao động/phân kỳ",
+          "Luôn hội tụ nhanh hơn",
+          "Làm gradient bằng 0",
+          "Không ảnh hưởng"
+        ],
+        "answer": "Vượt quá vùng giảm và dao động/phân kỳ",
+        "explanation": "Gradient chỉ cho hướng cục bộ; độ dài bước vẫn phải phù hợp độ cong.",
+        "tags": [
+          "gradient-descent",
+          "learning-rate",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q013",
+        "level": "medium",
+        "question": "Tại điểm ∇f=0, kết luận chắc nhất là?",
+        "options": [
+          "Đó là điểm dừng bậc nhất, chưa đủ để kết luận cực tiểu",
+          "Chắc chắn là cực tiểu toàn cục",
+          "Chắc chắn là cực đại",
+          "Hàm không khả vi"
+        ],
+        "answer": "Đó là điểm dừng bậc nhất, chưa đủ để kết luận cực tiểu",
+        "explanation": "Cần thêm thông tin như Hessian hoặc cấu trúc lồi.",
+        "tags": [
+          "stationary-point",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q014",
+        "level": "medium",
+        "question": "Gradient checking theo hướng u nên so gì?",
+        "options": [
+          "∇f·u với [f(x+εu)-f(x)]/ε",
+          "‖x‖ với f(x)",
+          "Hessian với gradient",
+          "Hai giá trị f ngẫu nhiên"
+        ],
+        "answer": "∇f·u với [f(x+εu)-f(x)]/ε",
+        "explanation": "Hai đại lượng phải gần nhau khi ε phù hợp và gradient đúng.",
+        "tags": [
+          "gradient-check",
+          "finite-difference",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q015",
+        "level": "medium",
+        "question": "Vì sao đổi đơn vị từ m sang mm có thể làm các thành phần gradient thay đổi mạnh?",
+        "options": [
+          "Đạo hàm phụ thuộc thang đo tọa độ",
+          "Gradient luôn bất biến đơn vị",
+          "Do Hessian luôn đổi dấu",
+          "Do f bắt buộc đổi loại"
+        ],
+        "answer": "Đạo hàm phụ thuộc thang đo tọa độ",
+        "explanation": "Gradient số học gắn với hệ tọa độ và đơn vị biến.",
+        "tags": [
+          "scaling",
+          "units",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q016",
+        "level": "medium",
+        "question": "Nếu hai feature có thang đo rất khác, trước khi so độ lớn các thành phần gradient nên làm gì?",
+        "options": [
+          "Xem xét chuẩn hóa/scaling và ý nghĩa đơn vị",
+          "Luôn cộng hai thành phần",
+          "Bỏ feature lớn hơn",
+          "Đặt gradient bằng 1"
+        ],
+        "answer": "Xem xét chuẩn hóa/scaling và ý nghĩa đơn vị",
+        "explanation": "So trực tiếp có thể phản ánh đơn vị hơn là sensitivity thực chất.",
+        "tags": [
+          "scaling",
+          "sensitivity",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q017",
+        "level": "hard",
+        "question": "Vì sao ∇f vuông góc đường mức f(x)=c?",
+        "options": [
+          "Mọi tiếp tuyến t của đường mức có Dₜf=0 nên ∇f·t=0",
+          "Vì gradient luôn là vector đơn vị",
+          "Vì Hessian đối xứng",
+          "Vì f phải tuyến tính"
+        ],
+        "answer": "Mọi tiếp tuyến t của đường mức có Dₜf=0 nên ∇f·t=0",
+        "explanation": "Đây là hệ quả trực tiếp của directional derivative.",
+        "tags": [
+          "level-set",
+          "proof",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q018",
+        "level": "hard",
+        "question": "Mệnh đề nào đúng về -∇f?",
+        "options": [
+          "Cho hướng giảm nhanh nhất cục bộ theo chuẩn Euclid, không tự đảm bảo cực tiểu toàn cục",
+          "Luôn đi thẳng tới cực tiểu toàn cục",
+          "Không phụ thuộc hệ tọa độ",
+          "Không cần learning rate"
+        ],
+        "answer": "Cho hướng giảm nhanh nhất cục bộ theo chuẩn Euclid, không tự đảm bảo cực tiểu toàn cục",
+        "explanation": "Tính cục bộ và hình học hàm quyết định quỹ đạo tối ưu.",
+        "tags": [
+          "optimization",
+          "caveat",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q019",
+        "level": "hard",
+        "question": "Nếu ∇f·u>0 thì khi đi một bước rất nhỏ theo u, f thường?",
+        "options": [
+          "Tăng bậc nhất",
+          "Giảm chắc chắn",
+          "Không đổi",
+          "Bằng 0"
+        ],
+        "answer": "Tăng bậc nhất",
+        "explanation": "Directional derivative dương cho xu hướng tăng cục bộ.",
+        "tags": [
+          "directional-derivative",
+          "interpretation",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q020",
+        "level": "hard",
+        "question": "Nếu ∇f·u<0 thì u là?",
+        "options": [
+          "Một hướng giảm cục bộ",
+          "Hướng tăng nhanh nhất",
+          "Luôn là -∇f",
+          "Tiếp tuyến đường mức"
+        ],
+        "answer": "Một hướng giảm cục bộ",
+        "explanation": "Nhiều hướng có thể làm f giảm; -∇f là hướng giảm nhanh nhất theo chuẩn Euclid.",
+        "tags": [
+          "descent-direction",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q021",
+        "level": "hard",
+        "question": "Gradient của f:Rⁿ→R có kích thước?",
+        "options": [
+          "n×1",
+          "1×1",
+          "n×n",
+          "m×n bất kỳ"
+        ],
+        "answer": "n×1",
+        "explanation": "Mỗi biến đầu vào đóng góp một đạo hàm riêng.",
+        "tags": [
+          "dimension",
+          "gradient",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q022",
+        "level": "hard",
+        "question": "Điểm khác cơ bản giữa gradient và Jacobian là?",
+        "options": [
+          "Gradient thường dùng cho output vô hướng; Jacobian cho ánh xạ vector",
+          "Gradient luôn là ma trận vuông",
+          "Jacobian chỉ có một phần tử",
+          "Không có khác biệt"
+        ],
+        "answer": "Gradient thường dùng cho output vô hướng; Jacobian cho ánh xạ vector",
+        "explanation": "Gradient là trường hợp đặc biệt liên quan output scalar.",
+        "tags": [
+          "gradient",
+          "jacobian-bridge",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q023",
+        "level": "hard",
+        "question": "Nếu hàm không khả vi tại một điểm, dùng gradient cổ điển ở đó thế nào?",
+        "options": [
+          "Có thể không tồn tại; cần kiểm tra hoặc dùng khái niệm thay thế phù hợp",
+          "Luôn đặt gradient bằng 0",
+          "Luôn lấy trung bình hai phía",
+          "Luôn dùng Hessian"
+        ],
+        "answer": "Có thể không tồn tại; cần kiểm tra hoặc dùng khái niệm thay thế phù hợp",
+        "explanation": "Gradient cổ điển đòi hỏi khả vi.",
+        "tags": [
+          "differentiability",
+          "caveat",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q024",
+        "level": "hard",
+        "question": "Trong loss surface, vector gradient lớn có nghĩa trực tiếp nhất là?",
+        "options": [
+          "Độ dốc cục bộ lớn theo ít nhất một hướng, với độ lớn phụ thuộc thang đo",
+          "Loss chắc chắn lớn",
+          "Mô hình chắc chắn sai",
+          "Learning rate phải bằng 1"
+        ],
+        "answer": "Độ dốc cục bộ lớn theo ít nhất một hướng, với độ lớn phụ thuộc thang đo",
+        "explanation": "Chuẩn gradient đo độ dốc cục bộ theo metric tọa độ hiện tại.",
+        "tags": [
+          "loss-surface",
+          "gradient-norm",
+          "E201"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "questionId": "E201-gradient-Q025",
+        "level": "hard",
+        "question": "Cặp phát biểu nào đúng?",
+        "options": [
+          "∇f cho hướng tăng nhanh nhất; -∇f cho hướng giảm nhanh nhất cục bộ",
+          "∇f luôn là hướng giảm; -∇f luôn tăng",
+          "Gradient và đường mức luôn song song",
+          "Gradient không phụ thuộc tọa độ"
+        ],
+        "answer": "∇f cho hướng tăng nhanh nhất; -∇f cho hướng giảm nhanh nhất cục bộ",
+        "explanation": "Đây là trực giác trung tâm nối gradient với tối ưu hóa.",
+        "tags": [
+          "gradient",
+          "summary",
+          "E201"
+        ],
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L05",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+        "mindmapId": "E201-gradient-MM01",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Gradient & geometric meaning",
+            "type": "root"
+          },
+          {
+            "id": "partials",
+            "label": "partials → ∇f",
+            "type": "formula"
+          },
+          {
+            "id": "directional",
+            "label": "Dᵤf=∇f·u",
+            "type": "formula"
+          },
+          {
+            "id": "levelset",
+            "label": "∇f ⟂ level set",
+            "type": "geometry"
+          },
+          {
+            "id": "ascent",
+            "label": "+∇f = steepest ascent",
+            "type": "criterion"
+          },
+          {
+            "id": "descent",
+            "label": "-∇f = steepest descent",
+            "type": "criterion"
+          },
+          {
+            "id": "scaling",
+            "label": "coordinate scaling matters",
+            "type": "warning"
+          },
+          {
+            "id": "gd",
+            "label": "gradient descent",
+            "type": "application"
+          },
+          {
+            "id": "check",
+            "label": "finite-difference check",
+            "type": "verification"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "partials"
+          },
+          {
+            "from": "partials",
+            "to": "directional"
+          },
+          {
+            "from": "directional",
+            "to": "levelset"
+          },
+          {
+            "from": "directional",
+            "to": "ascent"
+          },
+          {
+            "from": "ascent",
+            "to": "descent"
+          },
+          {
+            "from": "descent",
+            "to": "gd"
+          },
+          {
+            "from": "partials",
+            "to": "scaling"
+          },
+          {
+            "from": "directional",
+            "to": "check"
+          }
+        ],
+        "tags": [
+          "gradient",
+          "geometry",
+          "optimization",
+          "E201"
+        ]
+      }
+    ]
+  }
+}
