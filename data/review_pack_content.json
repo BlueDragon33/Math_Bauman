@@ -803,6 +803,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "reviewPackId": "E196-inverse-RP01",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "condition",
+          "prompt": "Điều kiện tương đương để A vuông khả nghịch?",
+          "expected": "det(A)≠0 ⇔ rank(A)=n ⇔ Ax=b có nghiệm duy nhất với mọi b."
+        },
+        {
+          "type": "compute",
+          "prompt": "Inverse 2×2 tính thế nào?",
+          "expected": "Đổi a↔d, đổi dấu b,c rồi chia cho ad-bc."
+        },
+        {
+          "type": "verify",
+          "prompt": "Kiểm A^{-1} trong floating point thế nào?",
+          "expected": "Kiểm norm(AA^{-1}-I) hoặc norm(A^{-1}A-I) nhỏ theo tolerance."
+        },
+        {
+          "type": "numerical",
+          "prompt": "Vì sao ưu tiên solve hơn inv(A)@b?",
+          "expected": "Ít chi phí và ổn định số hơn; tránh tạo inverse tường minh."
+        }
+      ],
+      "masteryGate": "Nêu đúng điều kiện khả nghịch + tính inverse 2×2 + kiểm residual + phân biệt inverse lý thuyết với conditioning + biết khi dùng solve/pseudoinverse",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
     }
   ],
   "importPolicy": {
