@@ -491,6 +491,38 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "applicationId": "E187-num-A1",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Similarity search với embedding gần zero",
+      "scenario": "Một embedding sau preprocessing có norm rất nhỏ nhưng vẫn bị đưa vào cosine search.",
+      "method": "Phát hiện near-zero trước normalize; gắn trạng thái invalid/fallback thay vì ép chia epsilon; log tỷ lệ vector lỗi.",
+      "expectedOutcome": "Tránh score cosine giả tạo và ranking không ổn định.",
+      "tags": [
+        "embedding",
+        "cosine",
+        "validation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "applicationId": "E187-num-A2",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Chuẩn hóa dữ liệu cảm biến trước so hướng",
+      "scenario": "Các cửa sổ cảm biến có biên độ khác nhau nhưng cần so pattern hình dạng.",
+      "method": "Loại offset/scale theo policy, kiểm norm, L2-normalize rồi so cosine; song song giữ magnitude riêng nếu nó mang ý nghĩa vật lý.",
+      "expectedOutcome": "Phân biệt được similarity hướng và thông tin biên độ để không mất tín hiệu quan trọng.",
+      "tags": [
+        "sensor",
+        "normalization",
+        "similarity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
     }
   ],
   "importPolicy": {
