@@ -94,7 +94,7 @@ window.SUBJECT_MANIFEST = {
     "heroTitle": "Toán Bauman · Manifest Federation Reconciled",
     "assistantToast": "E148: subject/content manifests đã đồng bộ với Content Vault và release state hiện tại."
   },
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "package": "Bauman Math StandardFinal RenderClean V18",
   "paths": {
     "assets": "assets/",
@@ -412,8 +412,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/formula_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 78,
-      "recordCount": 78
+      "plannedCount": 81,
+      "recordCount": 81
     },
     {
       "id": "simulation_frame",
@@ -428,8 +428,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/simulation_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 52,
-      "recordCount": 52
+      "plannedCount": 54,
+      "recordCount": 54
     },
     {
       "id": "exercise_frame",
@@ -444,8 +444,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/exercise_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 208,
-      "recordCount": 208
+      "plannedCount": 216,
+      "recordCount": 216
     },
     {
       "id": "application_frame",
@@ -460,8 +460,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/application_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 52,
-      "recordCount": 52
+      "plannedCount": 54,
+      "recordCount": 54
     },
     {
       "id": "professor_qa_frame",
@@ -476,8 +476,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/professor_qa_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 26,
-      "recordCount": 26
+      "plannedCount": 27,
+      "recordCount": 27
     },
     {
       "id": "review_pack_frame",
@@ -492,8 +492,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/review_pack_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 26,
-      "recordCount": 26
+      "plannedCount": 27,
+      "recordCount": 27
     },
     {
       "id": "question_bank_frame",
@@ -508,8 +508,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/question_bank_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 650,
-      "recordCount": 650
+      "plannedCount": 675,
+      "recordCount": 675
     },
     {
       "id": "test_blueprint_frame",
@@ -556,8 +556,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/mindmap_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 26,
-      "recordCount": 26
+      "plannedCount": 27,
+      "recordCount": 27
     },
     {
       "id": "concept_map_frame",
