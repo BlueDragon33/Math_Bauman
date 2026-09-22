@@ -943,6 +943,78 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "formulaId": "E187-num-F1",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "L2-normalization ổn định",
+      "formula": "x̂ = x / ||x||₂",
+      "meaning": "Chuẩn hóa đưa vector khác 0 về unit sphere để similarity theo hướng ít phụ thuộc magnitude.",
+      "conditions": [
+        "||x||₂ lớn hơn ngưỡng near-zero được chọn.",
+        "Mọi vector trong pipeline dùng cùng quy tắc preprocessing."
+      ],
+      "commonMistakes": [
+        "Chuẩn hóa vector 0 hoặc gần 0 không có guard.",
+        "Chuẩn hóa train nhưng quên normalize query/reference ở inference."
+      ],
+      "programmingUse": "n=norm(x); if n<=tol: xử lý riêng; else x_hat=x/n.",
+      "tags": [
+        "normalization",
+        "l2",
+        "numerical"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "formulaId": "E187-num-F2",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Cosine similarity với guard số",
+      "formula": "cos(x,y) = (x·y)/(||x||₂||y||₂)",
+      "meaning": "Cosine chỉ đáng tin khi hai norm không quá nhỏ và phép tích vô hướng không bị mất ổn định do scale.",
+      "conditions": [
+        "||x||,||y|| > tol.",
+        "Dtype và scale dữ liệu phù hợp với miền tính toán."
+      ],
+      "commonMistakes": [
+        "Cộng epsilon tùy tiện làm thay đổi semantics ở vector nhỏ.",
+        "So cosine vượt [-1,1] mà không nhận ra roundoff."
+      ],
+      "programmingUse": "den=nx*ny; nếu den<=tol thì trả trạng thái undefined/invalid; sau đó clip cos về [-1,1] chỉ để chống roundoff nhỏ.",
+      "tags": [
+        "cosine",
+        "tolerance",
+        "floating-point"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "formulaId": "E187-num-F3",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Sai số tương đối khi kiểm trực giao/similarity",
+      "formula": "ρ = |x·y|/(||x||₂||y||₂)",
+      "meaning": "ρ là normalized absolute inner product; dùng để đánh giá gần trực giao ít phụ thuộc scale hơn dot tuyệt đối.",
+      "conditions": [
+        "Hai vector khác 0.",
+        "Tolerance chọn theo precision và bài toán, không dùng một số cứng cho mọi scale."
+      ],
+      "commonMistakes": [
+        "Dùng |x·y|<1e-12 cho mọi dữ liệu.",
+        "Đồng nhất numerical orthogonality với độc lập thống kê."
+      ],
+      "programmingUse": "rho=abs(dot(x,y))/(norm(x)*norm(y)); compare rho <= tol_rel.",
+      "tags": [
+        "relative-error",
+        "orthogonality",
+        "similarity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
     }
   ],
   "importPolicy": {
