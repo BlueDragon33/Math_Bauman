@@ -33,25 +33,25 @@
     "theory_lecture_frame": 56,
     "theory_lecture_content": 347,
     "formula_frame": 56,
-    "formula_content": 69,
+    "formula_content": 72,
     "simulation_frame": 56,
-    "simulation_content": 46,
+    "simulation_content": 48,
     "exercise_frame": 56,
-    "exercise_content": 184,
+    "exercise_content": 192,
     "application_frame": 56,
-    "application_content": 46,
+    "application_content": 48,
     "professor_qa_frame": 56,
-    "professor_qa_content": 23,
+    "professor_qa_content": 24,
     "review_pack_frame": 56,
-    "review_pack_content": 23,
+    "review_pack_content": 24,
     "question_bank_frame": 56,
-    "question_bank_content": 575,
+    "question_bank_content": 600,
     "test_blueprint_frame": 56,
     "test_blueprint_content": 4,
     "chapter_lecture_frame": 56,
     "chapter_lecture_content": 0,
     "mindmap_frame": 56,
-    "mindmap_content": 23,
+    "mindmap_content": 24,
     "concept_map_frame": 56,
     "concept_map_content": 0,
     "media_frame": 56,
@@ -412,8 +412,8 @@
       "path": "data/formula_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 69,
-      "recordCount": 69
+      "plannedCount": 72,
+      "recordCount": 72
     },
     {
       "id": "simulation_frame",
@@ -428,8 +428,8 @@
       "path": "data/simulation_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 46,
-      "recordCount": 46
+      "plannedCount": 48,
+      "recordCount": 48
     },
     {
       "id": "exercise_frame",
@@ -444,8 +444,8 @@
       "path": "data/exercise_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 184,
-      "recordCount": 184
+      "plannedCount": 192,
+      "recordCount": 192
     },
     {
       "id": "application_frame",
@@ -460,8 +460,8 @@
       "path": "data/application_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 46,
-      "recordCount": 46
+      "plannedCount": 48,
+      "recordCount": 48
     },
     {
       "id": "professor_qa_frame",
@@ -476,8 +476,8 @@
       "path": "data/professor_qa_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 23,
-      "recordCount": 23
+      "plannedCount": 24,
+      "recordCount": 24
     },
     {
       "id": "review_pack_frame",
@@ -492,8 +492,8 @@
       "path": "data/review_pack_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 23,
-      "recordCount": 23
+      "plannedCount": 24,
+      "recordCount": 24
     },
     {
       "id": "question_bank_frame",
@@ -508,8 +508,8 @@
       "path": "data/question_bank_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 575,
-      "recordCount": 575
+      "plannedCount": 600,
+      "recordCount": 600
     },
     {
       "id": "test_blueprint_frame",
@@ -556,8 +556,8 @@
       "path": "data/mindmap_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 23,
-      "recordCount": 23
+      "plannedCount": 24,
+      "recordCount": 24
     },
     {
       "id": "concept_map_frame",
@@ -730,14 +730,14 @@
     "review_packs": 260,
     "chapter_lectures": 32,
     "lessonSlides": 4160,
-    "formula_content": 69,
-    "simulation_content": 46,
-    "exercise_content": 184,
-    "application_content": 46,
-    "professor_qa_content": 23,
-    "review_pack_content": 23,
-    "question_bank_content": 575,
-    "mindmap_content": 23
+    "formula_content": 72,
+    "simulation_content": 48,
+    "exercise_content": 192,
+    "application_content": 48,
+    "professor_qa_content": 24,
+    "review_pack_content": 24,
+    "question_bank_content": 600,
+    "mindmap_content": 24
   },
   "simulationMode": "unified_only_260_labs_e76",
   "packageType": "FINAL_WITH_TEMPLATE_REFERENCE",
@@ -884,7 +884,7 @@
       "path": "data/formula_content.json",
       "group": "Công thức",
       "required": true,
-      "plannedCount": 69,
+      "plannedCount": 72,
       "description": "Records nội dung import/export cho Công thức"
     },
     "simulation_frame": {
@@ -900,7 +900,7 @@
       "path": "data/simulation_content.json",
       "group": "Mô phỏng",
       "required": true,
-      "plannedCount": 46,
+      "plannedCount": 48,
       "description": "Records nội dung import/export cho Mô phỏng"
     },
     "exercise_frame": {
@@ -916,7 +916,7 @@
       "path": "data/exercise_content.json",
       "group": "Bài tập",
       "required": true,
-      "plannedCount": 184,
+      "plannedCount": 192,
       "description": "Records nội dung import/export cho Bài tập"
     },
     "application_frame": {
@@ -932,7 +932,7 @@
       "path": "data/application_content.json",
       "group": "Ứng dụng",
       "required": true,
-      "plannedCount": 46,
+      "plannedCount": 48,
       "description": "Records nội dung import/export cho Ứng dụng"
     },
     "professor_qa_frame": {
@@ -948,7 +948,7 @@
       "path": "data/professor_qa_content.json",
       "group": "Vấn đáp",
       "required": true,
-      "plannedCount": 23,
+      "plannedCount": 24,
       "description": "Records nội dung import/export cho Vấn đáp"
     },
     "review_pack_frame": {
@@ -964,7 +964,7 @@
       "path": "data/review_pack_content.json",
       "group": "Ôn tập",
       "required": true,
-      "plannedCount": 23,
+      "plannedCount": 24,
       "description": "Records nội dung import/export cho Ôn tập"
     },
     "question_bank_frame": {
@@ -980,7 +980,7 @@
       "path": "data/question_bank_content.json",
       "group": "Ngân hàng câu hỏi",
       "required": true,
-      "plannedCount": 575,
+      "plannedCount": 600,
       "description": "Records nội dung import/export cho Ngân hàng câu hỏi"
     },
     "test_blueprint_frame": {
@@ -1028,7 +1028,7 @@
       "path": "data/mindmap_content.json",
       "group": "Mind map",
       "required": true,
-      "plannedCount": 23,
+      "plannedCount": 24,
       "description": "Records nội dung import/export cho Mind map"
     },
     "concept_map_frame": {
