@@ -6787,6 +6787,556 @@
       "auditStatus": "PASS",
       "sourceBundle": "E183_DOT_PRODUCT",
       "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q001",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Cosine similarity được tính bằng?",
+      "options": [
+        "(x·y)/(||x||||y||)",
+        "x·y",
+        "||x-y||₁",
+        "max|x-y|"
+      ],
+      "answer": "(x·y)/(||x||||y||)",
+      "explanation": "Cosine chuẩn hóa dot product bằng tích hai L2 norm.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q002",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Cosine của hai vector cùng hướng khác 0 bằng?",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "2"
+      ],
+      "answer": "1",
+      "explanation": "Góc 0° có cosine 1.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q003",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Cosine của hai vector trực giao bằng?",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "Không xác định"
+      ],
+      "answer": "0",
+      "explanation": "Góc 90° có cosine 0.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q004",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Cosine của hai vector ngược hướng bằng?",
+      "options": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": "-1",
+      "explanation": "Góc 180° có cosine -1.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q005",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Cosine không xác định khi?",
+      "options": [
+        "Một vector bằng 0",
+        "Hai vector cùng chiều",
+        "Hai vector có cùng norm",
+        "Dot product dương"
+      ],
+      "answer": "Một vector bằng 0",
+      "explanation": "Mẫu số có norm bằng 0.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q006",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Nếu x→10x với 10>0, cosine(x,y) thay đổi thế nào?",
+      "options": [
+        "Không đổi",
+        "Tăng 10 lần",
+        "Giảm 10 lần",
+        "Đổi dấu"
+      ],
+      "answer": "Không đổi",
+      "explanation": "Scale dương triệt tiêu giữa tử và mẫu.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q007",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Cosine distance thường được định nghĩa là?",
+      "options": [
+        "1-cosine",
+        "cosine²",
+        "||x-y||∞",
+        "1/dot"
+      ],
+      "answer": "1-cosine",
+      "explanation": "Đây là quy ước phổ biến.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q008",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Cosine similarity chủ yếu đo?",
+      "options": [
+        "Độ giống về hướng",
+        "Độ lớn tuyệt đối",
+        "Số chiều",
+        "Determinant"
+      ],
+      "answer": "Độ giống về hướng",
+      "explanation": "Normalization loại ảnh hưởng magnitude.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q009",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Trên vector L2-unit, ||x-y||² bằng?",
+      "options": [
+        "2-2cosθ",
+        "1-cosθ",
+        "cosθ",
+        "2+2cosθ luôn"
+      ],
+      "answer": "2-2cosθ",
+      "explanation": "Khai triển squared Euclidean distance.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q010",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Sau L2-normalize, ranking theo cosine và Euclidean?",
+      "options": [
+        "Tương đương về thứ tự",
+        "Luôn ngược nhau",
+        "Không liên hệ",
+        "Chỉ giống khi cos=0"
+      ],
+      "answer": "Tương đương về thứ tự",
+      "explanation": "Squared Euclidean là 2-2cos, đơn điệu giảm theo cosine.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q011",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Cosine có bất biến với phép tịnh tiến x→x+c không?",
+      "options": [
+        "Không",
+        "Có luôn",
+        "Chỉ trong R²",
+        "Có nếu c lớn"
+      ],
+      "answer": "Không",
+      "explanation": "Tịnh tiến đổi hướng so với gốc.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q012",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Tại sao centering có thể đổi cosine mạnh?",
+      "options": [
+        "Nó đổi hướng vector từ gốc",
+        "Nó chỉ đổi tên feature",
+        "Nó không đổi dữ liệu",
+        "Nó luôn làm cosine=0"
+      ],
+      "answer": "Nó đổi hướng vector từ gốc",
+      "explanation": "Cosine phụ thuộc orientation relative to origin.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q013",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Dot và cosine ranking giống nhau khi nào dễ nhất?",
+      "options": [
+        "Các vector ứng viên có cùng norm hoặc đều normalize",
+        "Norm khác tùy ý",
+        "Một vector bằng 0",
+        "Không bao giờ"
+      ],
+      "answer": "Các vector ứng viên có cùng norm hoặc đều normalize",
+      "explanation": "Khi norm factor cố định, dot là hằng số nhân của cosine.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q014",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Cosine âm nghĩa là?",
+      "options": [
+        "Góc tù",
+        "Góc nhọn",
+        "Luôn trực giao",
+        "Hai vector bằng nhau"
+      ],
+      "answer": "Góc tù",
+      "explanation": "cosθ<0 khi 90°<θ≤180°.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q015",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Một cosine gần 1 có nghĩa chắc chắn hai vector gần nhau về Euclid thô không?",
+      "options": [
+        "Không nếu norm khác nhiều",
+        "Có luôn",
+        "Chỉ phụ thuộc số chiều",
+        "Cosine không liên quan hướng"
+      ],
+      "answer": "Không nếu norm khác nhiều",
+      "explanation": "Cosine bỏ magnitude; Euclid thô vẫn có thể lớn.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q016",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "1-cosine có luôn là metric toán học trên mọi vector không?",
+      "options": [
+        "Không nhất thiết",
+        "Có luôn",
+        "Chỉ khi vector 0",
+        "Nó luôn bằng Euclid"
+      ],
+      "answer": "Không nhất thiết",
+      "explanation": "Cosine distance theo quy ước không luôn thỏa triangle inequality trên toàn miền.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q017",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Nếu embedding model dùng norm để mã hóa confidence, L2-normalize trước search có thể gây gì?",
+      "options": [
+        "Mất thông tin magnitude",
+        "Tăng confidence",
+        "Không thay đổi gì",
+        "Tạo thêm chiều"
+      ],
+      "answer": "Mất thông tin magnitude",
+      "explanation": "Normalization cố norm=1 và xóa tín hiệu độ lớn.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q018",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Với vector đơn vị và cosine=0.5, Euclidean distance bằng?",
+      "options": [
+        "1",
+        "0.5",
+        "√3",
+        "2"
+      ],
+      "answer": "1",
+      "explanation": "Squared distance=2-1=1 nên distance=1.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q019",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Với vector đơn vị và cosine=-1, Euclidean distance bằng?",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "√2"
+      ],
+      "answer": "2",
+      "explanation": "Hai vector đối nhau: squared distance=4.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q020",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Tại sao cần guard near-zero norm khi tính cosine số?",
+      "options": [
+        "Chia cho số rất nhỏ gây bất ổn",
+        "Cosine luôn bằng 1",
+        "Để tăng số chiều",
+        "Vì dot không tồn tại"
+      ],
+      "answer": "Chia cho số rất nhỏ gây bất ổn",
+      "explanation": "Sai số bị khuếch đại khi denominator quá nhỏ.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q021",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Trong retrieval, normalize cả query và documents giúp dot product trở thành?",
+      "options": [
+        "Cosine similarity",
+        "L1 distance",
+        "Determinant",
+        "Covariance"
+      ],
+      "answer": "Cosine similarity",
+      "explanation": "Dot của hai vector đơn vị chính là cosine.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q022",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Nếu x,y được rescale bởi hai hệ số âm, cosine thay đổi ra sao?",
+      "options": [
+        "Nếu tích dấu dương thì giữ, nếu chỉ một vector đổi dấu thì đổi dấu",
+        "Luôn giữ nguyên",
+        "Luôn bằng 1",
+        "Luôn bằng -1"
+      ],
+      "answer": "Nếu tích dấu dương thì giữ, nếu chỉ một vector đổi dấu thì đổi dấu",
+      "explanation": "Dấu của αβ xuất hiện trong numerator còn denominator dùng trị tuyệt đối scale.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q023",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Trong high-dimensional random isotropic vectors, cosine thường tập trung gần?",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "2"
+      ],
+      "answer": "0",
+      "explanation": "Các hướng ngẫu nhiên cao chiều thường gần trực giao.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q024",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Cosine similarity có thể xem là kernel tuyến tính trên dữ liệu nào?",
+      "options": [
+        "Dữ liệu đã L2-normalize",
+        "Mọi dữ liệu kể cả vector 0",
+        "Chỉ scalar",
+        "Chỉ dữ liệu nhị phân"
+      ],
+      "answer": "Dữ liệu đã L2-normalize",
+      "explanation": "K(x,y)=x̂ᵀŷ là linear kernel trên biểu diễn normalized.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E184-cos-Q025",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Một pipeline ANN cosine có thể dùng index Euclidean nếu?",
+      "options": [
+        "Embedding được L2-normalize nhất quán",
+        "Không normalize gì",
+        "Vector có norm 0",
+        "Chỉ dùng số nguyên"
+      ],
+      "answer": "Embedding được L2-normalize nhất quán",
+      "explanation": "Quan hệ 2-2cos bảo toàn thứ tự khoảng cách trên unit sphere.",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY",
+      "stage": "vn"
     }
   ],
   "importPolicy": {

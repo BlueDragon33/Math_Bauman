@@ -395,6 +395,38 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "applicationId": "E184-cos-A1",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Cosine similarity cho semantic retrieval",
+      "scenario": "Query và tài liệu được biểu diễn bằng embedding; cần xếp hạng theo hướng ngữ nghĩa hơn là độ lớn.",
+      "method": "L2-normalize embedding trước khi index/search, guard near-zero vector và kiểm cùng model/preprocessing.",
+      "expectedOutcome": "Ranking phản ánh angle similarity; hiểu rõ khi nào dot-product index tương đương cosine sau normalization.",
+      "tags": [
+        "cosine",
+        "embedding",
+        "retrieval"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "applicationId": "E184-cos-A2",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "So sánh mẫu tín hiệu theo hình dạng",
+      "scenario": "Hai cửa sổ tín hiệu có biên độ tổng khác nhau nhưng cần so mức giống về pattern.",
+      "method": "Biểu diễn thành vector, cân nhắc centering, sau đó normalize L2 và dùng cosine; đối chiếu thêm amplitude metric nếu magnitude vẫn có ý nghĩa.",
+      "expectedOutcome": "Tách được similarity về pattern khỏi khác biệt năng lượng, tránh bỏ mất thông tin amplitude khi nó quan trọng.",
+      "tags": [
+        "cosine",
+        "signal",
+        "sensor"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
     }
   ],
   "importPolicy": {
