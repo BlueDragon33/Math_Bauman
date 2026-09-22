@@ -613,6 +613,26 @@
         "oral-exam",
         "E204"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "qaId": "E205-gd-QA01",
+      "question": "Nếu giáo sư hỏi 'vì sao learning rate quyết định hội tụ và dao động của gradient descent?', bạn trả lời thế nào?",
+      "answer": "Gradient cho hướng cục bộ nhưng learning rate quyết định bước hữu hạn. Với quadratic 1D f=½ax², phép lặp là x_{k+1}=(1-ηa)x_k; hội tụ đúng khi |1-ηa|<1, tức 0<η<2/a. Nếu hệ số âm nhưng độ lớn dưới 1, nghiệm dao động nhưng vẫn hội tụ; nếu độ lớn vượt 1 thì phân kỳ. Trong nhiều chiều, curvature lớn nhất giới hạn step ổn định, còn conditioning quyết định chênh tốc độ giữa các hướng.",
+      "followUp": [
+        "Tại sao η rất nhỏ vẫn không tốt?",
+        "Condition number liên quan zig-zag thế nào?",
+        "L-smooth cho bảo đảm descent nào?"
+      ],
+      "tags": [
+        "gradient-descent",
+        "convergence",
+        "oral-exam",
+        "E205"
+      ]
     }
   ],
   "importPolicy": {
