@@ -1015,6 +1015,77 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "formulaId": "E188-matrix-F1",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Cấp và phần tử ma trận",
+      "formula": "A=[aᵢⱼ] ∈ R^{m×n}",
+      "meaning": "A có m hàng, n cột; aᵢⱼ là phần tử tại hàng i, cột j.",
+      "conditions": [
+        "1≤i≤m và 1≤j≤n.",
+        "Quy ước hàng/cột phải giữ nhất quán giữa toán học và code."
+      ],
+      "commonMistakes": [
+        "Đảo i,j khi đọc chỉ số.",
+        "Gọi m×n thành n×m do nhầm hàng/cột."
+      ],
+      "programmingUse": "shape(A)=(m,n); truy cập A[i,j] theo quy ước index của ngôn ngữ.",
+      "tags": [
+        "matrix",
+        "shape",
+        "index"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "formulaId": "E188-matrix-F2",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Ma trận như ánh xạ tuyến tính",
+      "formula": "A: R^n → R^m,  y = Ax",
+      "meaning": "Ma trận m×n biến vector n chiều thành vector m chiều.",
+      "conditions": [
+        "x có n phần tử.",
+        "Thứ tự feature trong x khớp cột của A."
+      ],
+      "commonMistakes": [
+        "Nhân khi kích thước không tương thích.",
+        "Đổi thứ tự feature nhưng không đổi cột của A."
+      ],
+      "programmingUse": "assert A.shape[1]==x.shape[0]; y=A@x.",
+      "tags": [
+        "linear-map",
+        "shape-contract"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "formulaId": "E188-matrix-F3",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Ma trận dữ liệu mẫu × đặc trưng",
+      "formula": "X ∈ R^{N×d}",
+      "meaning": "Một quy ước phổ biến: N hàng là mẫu, d cột là đặc trưng.",
+      "conditions": [
+        "Semantics của hàng/cột được tài liệu hóa.",
+        "Đơn vị và preprocessing của từng feature được xác định."
+      ],
+      "commonMistakes": [
+        "Giả định mọi thư viện dùng cùng orientation.",
+        "Trộn feature khác đơn vị mà không ghi chú."
+      ],
+      "programmingUse": "schema={rows:'samples', cols:'features', feature_names:[...]}.",
+      "tags": [
+        "data-matrix",
+        "features",
+        "samples"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
     }
   ],
   "importPolicy": {

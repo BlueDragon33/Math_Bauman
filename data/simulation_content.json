@@ -1359,6 +1359,101 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "simulationId": "E188-matrix-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng shape và indexing",
+      "purpose": "Thay số hàng/cột và chọn i,j để quan sát vị trí aᵢⱼ.",
+      "controls": [
+        {
+          "key": "m",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "key": "n",
+          "type": "number",
+          "default": 4
+        },
+        {
+          "key": "i",
+          "type": "number",
+          "default": 2
+        },
+        {
+          "key": "j",
+          "type": "number",
+          "default": 3
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "shape",
+          "label": "Shape m×n"
+        },
+        {
+          "key": "selected",
+          "label": "Phần tử aᵢⱼ"
+        },
+        {
+          "key": "valid_index",
+          "label": "Index hợp lệ"
+        }
+      ],
+      "expectedObservation": "Đổi m,n thay miền index; aᵢⱼ chỉ hợp lệ khi i,j nằm đúng giới hạn.",
+      "tags": [
+        "matrix",
+        "index"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "simulationId": "E188-matrix-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng sample-feature orientation",
+      "purpose": "Đảo orientation của cùng bảng dữ liệu và quan sát phép nhân với weight matrix.",
+      "controls": [
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 100
+        },
+        {
+          "key": "features",
+          "type": "number",
+          "default": 8
+        },
+        {
+          "key": "orientation",
+          "type": "select",
+          "default": "samples_rows"
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "data_shape",
+          "label": "Shape dữ liệu"
+        },
+        {
+          "key": "compatible",
+          "label": "Tương thích với W"
+        },
+        {
+          "key": "semantic_warning",
+          "label": "Cảnh báo semantics"
+        }
+      ],
+      "expectedObservation": "Transpose có thể tạo shape hợp lệ cho phép toán khác nhưng semantics sample/feature đã đổi.",
+      "tags": [
+        "orientation",
+        "pipeline"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
     }
   ],
   "importPolicy": {

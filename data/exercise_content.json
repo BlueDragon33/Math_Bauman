@@ -1870,6 +1870,116 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "exerciseId": "E188-matrix-E01",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Cho A=[[1,2,3],[4,5,6]]. Xác định cấp của A và a₂₃.",
+      "solution": "A có 2 hàng, 3 cột nên cấp 2×3; a₂₃=6.",
+      "tags": [
+        "shape",
+        "index"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "exerciseId": "E188-matrix-E02",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Một ma trận dữ liệu có 120 mẫu và 8 feature theo quy ước sample×feature. Shape là gì?",
+      "solution": "120×8.",
+      "tags": [
+        "data-matrix"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "exerciseId": "E188-matrix-E03",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "A∈R^{4×3}, x∈R^3. Shape của y=Ax là gì?",
+      "solution": "y∈R^4.",
+      "tags": [
+        "linear-map"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "exerciseId": "E188-matrix-E04",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "X∈R^{200×6}. Nếu thêm 20 mẫu nhưng không thêm feature thì shape mới?",
+      "solution": "220×6.",
+      "tags": [
+        "samples",
+        "features"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "exerciseId": "E188-matrix-E05",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Giải thích vì sao đổi thứ tự hai cột feature nhưng giữ nguyên W có thể làm dự đoán sai.",
+      "solution": "Các cột W gắn với semantic feature theo thứ tự; đổi feature mà không đổi W làm sai mapping.",
+      "tags": [
+        "semantics",
+        "pipeline"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "exerciseId": "E188-matrix-E06",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Một API nhận matrix nhưng không ghi rõ rows=samples hay cols=samples. Nêu hai lỗi có thể xảy ra.",
+      "solution": "Có thể đảo sample/feature semantics và thực hiện phép nhân theo axis sai dù shape tình cờ tương thích.",
+      "tags": [
+        "api",
+        "axis"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "exerciseId": "E188-matrix-E07",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Từ tensor cảm biến T(time,sensor,feature), khi reshape thành matrix cần lưu metadata gì?",
+      "solution": "Cần lưu mapping từ mỗi axis cũ sang hàng/cột mới, thứ tự sensor/feature và đơn vị.",
+      "tags": [
+        "tensor",
+        "reshape"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "exerciseId": "E188-matrix-E08",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "prompt": "Thiết kế một shape contract tối thiểu cho layer y=Wx+b.",
+      "solution": "Ghi W∈R^{m×n}, x∈R^n, b∈R^m, y∈R^m; n=input_dim, m=output_dim; kiểm batch convention riêng.",
+      "tags": [
+        "shape-contract",
+        "neural-network"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
     }
   ],
   "importPolicy": {

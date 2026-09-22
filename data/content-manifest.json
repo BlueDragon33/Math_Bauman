@@ -18,25 +18,25 @@
     "theory_lecture_frame": 56,
     "theory_lecture_content": 347,
     "formula_frame": 56,
-    "formula_content": 48,
+    "formula_content": 51,
     "simulation_frame": 56,
-    "simulation_content": 32,
+    "simulation_content": 34,
     "exercise_frame": 56,
-    "exercise_content": 128,
+    "exercise_content": 136,
     "application_frame": 56,
-    "application_content": 32,
+    "application_content": 34,
     "professor_qa_frame": 56,
-    "professor_qa_content": 16,
+    "professor_qa_content": 17,
     "review_pack_frame": 56,
-    "review_pack_content": 16,
+    "review_pack_content": 17,
     "question_bank_frame": 56,
-    "question_bank_content": 400,
+    "question_bank_content": 425,
     "test_blueprint_frame": 56,
     "test_blueprint_content": 4,
     "chapter_lecture_frame": 56,
     "chapter_lecture_content": 0,
     "mindmap_frame": 56,
-    "mindmap_content": 16,
+    "mindmap_content": 17,
     "concept_map_frame": 56,
     "concept_map_content": 0,
     "media_frame": 56,
@@ -138,9 +138,9 @@
       "group": "Công thức",
       "path": "data/formula_content.json",
       "description": "Records nội dung import/export cho Công thức",
-      "plannedCount": 48,
+      "plannedCount": 51,
       "packagePath": "subjects/math/data/formula_content.json",
-      "recordCount": 48
+      "recordCount": 51
     },
     {
       "id": "simulation_frame",
@@ -158,9 +158,9 @@
       "group": "Mô phỏng",
       "path": "data/simulation_content.json",
       "description": "Records nội dung import/export cho Mô phỏng",
-      "plannedCount": 32,
+      "plannedCount": 34,
       "packagePath": "subjects/math/data/simulation_content.json",
-      "recordCount": 32
+      "recordCount": 34
     },
     {
       "id": "exercise_frame",
@@ -178,9 +178,9 @@
       "group": "Bài tập",
       "path": "data/exercise_content.json",
       "description": "Records nội dung import/export cho Bài tập",
-      "plannedCount": 128,
+      "plannedCount": 136,
       "packagePath": "subjects/math/data/exercise_content.json",
-      "recordCount": 128
+      "recordCount": 136
     },
     {
       "id": "application_frame",
@@ -198,9 +198,9 @@
       "group": "Ứng dụng",
       "path": "data/application_content.json",
       "description": "Records nội dung import/export cho Ứng dụng",
-      "plannedCount": 32,
+      "plannedCount": 34,
       "packagePath": "subjects/math/data/application_content.json",
-      "recordCount": 32
+      "recordCount": 34
     },
     {
       "id": "professor_qa_frame",
@@ -218,9 +218,9 @@
       "group": "Vấn đáp",
       "path": "data/professor_qa_content.json",
       "description": "Records nội dung import/export cho Vấn đáp",
-      "plannedCount": 16,
+      "plannedCount": 17,
       "packagePath": "subjects/math/data/professor_qa_content.json",
-      "recordCount": 16
+      "recordCount": 17
     },
     {
       "id": "review_pack_frame",
@@ -238,9 +238,9 @@
       "group": "Ôn tập",
       "path": "data/review_pack_content.json",
       "description": "Records nội dung import/export cho Ôn tập",
-      "plannedCount": 16,
+      "plannedCount": 17,
       "packagePath": "subjects/math/data/review_pack_content.json",
-      "recordCount": 16
+      "recordCount": 17
     },
     {
       "id": "question_bank_frame",
@@ -258,9 +258,9 @@
       "group": "Ngân hàng câu hỏi",
       "path": "data/question_bank_content.json",
       "description": "Records nội dung import/export cho Ngân hàng câu hỏi",
-      "plannedCount": 400,
+      "plannedCount": 425,
       "packagePath": "subjects/math/data/question_bank_content.json",
-      "recordCount": 400
+      "recordCount": 425
     },
     {
       "id": "test_blueprint_frame",
@@ -318,9 +318,9 @@
       "group": "Mind map",
       "path": "data/mindmap_content.json",
       "description": "Records nội dung import/export cho Mind map",
-      "plannedCount": 16,
+      "plannedCount": 17,
       "packagePath": "subjects/math/data/mindmap_content.json",
-      "recordCount": 16
+      "recordCount": 17
     },
     {
       "id": "concept_map_frame",

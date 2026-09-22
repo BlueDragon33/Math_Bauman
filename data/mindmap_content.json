@@ -1195,6 +1195,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "mindmapId": "E188-matrix-MM01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Ma trận = cấu trúc số + semantics hàng/cột",
+          "type": "root"
+        },
+        {
+          "id": "shape",
+          "label": "A∈R^{m×n}: m hàng, n cột",
+          "type": "formula"
+        },
+        {
+          "id": "index",
+          "label": "aᵢⱼ: hàng i, cột j",
+          "type": "definition"
+        },
+        {
+          "id": "data",
+          "label": "X∈R^{N×d}: mẫu × đặc trưng",
+          "type": "application"
+        },
+        {
+          "id": "map",
+          "label": "y=Ax: R^n→R^m",
+          "type": "formula"
+        },
+        {
+          "id": "contract",
+          "label": "Shape contract trước khi code",
+          "type": "validation"
+        },
+        {
+          "id": "semantics",
+          "label": "Không đảo axis/feature order",
+          "type": "warning"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "shape"
+        },
+        {
+          "from": "shape",
+          "to": "index"
+        },
+        {
+          "from": "root",
+          "to": "data"
+        },
+        {
+          "from": "root",
+          "to": "map"
+        },
+        {
+          "from": "map",
+          "to": "contract"
+        },
+        {
+          "from": "contract",
+          "to": "semantics"
+        }
+      ],
+      "tags": [
+        "matrix",
+        "E188"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
     }
   ],
   "importPolicy": {

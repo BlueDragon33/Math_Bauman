@@ -294,6 +294,25 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "qaId": "E188-matrix-QA01",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Nếu giáo sư hỏi 'ma trận chỉ là một bảng số hay là một ánh xạ tuyến tính?', bạn trả lời thế nào?",
+      "answer": "Cùng một mảng số có thể được dùng như bảng dữ liệu hoặc biểu diễn toán tử tuyến tính; ý nghĩa đến từ không gian đầu vào/đầu ra, semantics hàng-cột và phép toán ta thực hiện. Vì vậy phải nêu shape, ý nghĩa trục và bối cảnh trước khi diễn giải.",
+      "followUp": [
+        "aᵢⱼ được đọc thế nào?",
+        "Khi nào y=Ax hợp lệ về kích thước?",
+        "Vì sao đổi thứ tự feature có thể phá pipeline?"
+      ],
+      "tags": [
+        "matrix",
+        "semantics",
+        "E188"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
     }
   ],
   "importPolicy": {
