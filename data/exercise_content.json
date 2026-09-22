@@ -2934,6 +2934,112 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "exerciseId": "E198-derivative-E01",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "prompt": "Với f(x)=x², tính f'(3).",
+      "solution": "f'(x)=2x nên f'(3)=6.",
+      "tags": [
+        "power-rule"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "exerciseId": "E198-derivative-E02",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "prompt": "Đạo hàm của 5x³-2x+7 là gì?",
+      "solution": "15x²-2.",
+      "tags": [
+        "power-rule"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "exerciseId": "E198-derivative-E03",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "prompt": "Dùng định nghĩa giới hạn để chứng minh đạo hàm của f(x)=x² tại a bằng 2a.",
+      "solution": "[(a+h)²-a²]/h=2a+h với h≠0; cho h→0 được 2a.",
+      "tags": [
+        "definition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "exerciseId": "E198-derivative-E04",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "prompt": "Tính đạo hàm của (x²+1)(3x-2).",
+      "solution": "2x(3x-2)+3(x²+1)=9x²-4x+3.",
+      "tags": [
+        "product-rule"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "exerciseId": "E198-derivative-E05",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "prompt": "Tính đạo hàm của (x²+1)/x với x≠0.",
+      "solution": "Theo quotient rule: [2x·x-(x²+1)]/x²=(x²-1)/x²=1-1/x².",
+      "tags": [
+        "quotient-rule"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "exerciseId": "E198-derivative-E06",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "prompt": "Viết phương trình tiếp tuyến của y=x² tại x=2.",
+      "solution": "f(2)=4, f'(2)=4 nên y-4=4(x-2), tức y=4x-4.",
+      "tags": [
+        "tangent"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "exerciseId": "E198-derivative-E07",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "prompt": "Một sensor model y=0.02x²+1.5x. Tại x=10, sensitivity dy/dx bằng bao nhiêu và ý nghĩa là gì?",
+      "solution": "dy/dx=0.04x+1.5 nên tại 10 bằng 1.9; quanh x=10, tăng x khoảng 1 đơn vị làm y tăng xấp xỉ 1.9 đơn vị nếu tuyến tính hóa còn hợp lệ.",
+      "tags": [
+        "sensitivity",
+        "sensor"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "exerciseId": "E198-derivative-E08",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "prompt": "Vì sao đạo hàm analytic và central finite difference có thể lệch nhau dù công thức analytic đúng?",
+      "solution": "Finite difference có truncation error, roundoff/cancellation và phụ thuộc h; analytic derivative có thể đúng nhưng đánh giá số ở finite precision vẫn lệch.",
+      "tags": [
+        "numerical-derivative",
+        "validation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
     }
   ],
   "importPolicy": {
@@ -2989,5 +3095,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
 }

@@ -33,25 +33,25 @@
     "theory_lecture_frame": 56,
     "theory_lecture_content": 347,
     "formula_frame": 56,
-    "formula_content": 78,
+    "formula_content": 81,
     "simulation_frame": 56,
-    "simulation_content": 52,
+    "simulation_content": 54,
     "exercise_frame": 56,
-    "exercise_content": 208,
+    "exercise_content": 216,
     "application_frame": 56,
-    "application_content": 52,
+    "application_content": 54,
     "professor_qa_frame": 56,
-    "professor_qa_content": 26,
+    "professor_qa_content": 27,
     "review_pack_frame": 56,
-    "review_pack_content": 26,
+    "review_pack_content": 27,
     "question_bank_frame": 56,
-    "question_bank_content": 650,
+    "question_bank_content": 675,
     "test_blueprint_frame": 56,
     "test_blueprint_content": 4,
     "chapter_lecture_frame": 56,
     "chapter_lecture_content": 0,
     "mindmap_frame": 56,
-    "mindmap_content": 26,
+    "mindmap_content": 27,
     "concept_map_frame": 56,
     "concept_map_content": 0,
     "media_frame": 56,
@@ -94,7 +94,7 @@
     "heroTitle": "Toán Bauman · Manifest Federation Reconciled",
     "assistantToast": "E148: subject/content manifests đã đồng bộ với Content Vault và release state hiện tại."
   },
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "package": "Bauman Math StandardFinal RenderClean V18",
   "paths": {
     "assets": "assets/",
@@ -412,8 +412,8 @@
       "path": "data/formula_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 78,
-      "recordCount": 78
+      "plannedCount": 81,
+      "recordCount": 81
     },
     {
       "id": "simulation_frame",
@@ -428,8 +428,8 @@
       "path": "data/simulation_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 52,
-      "recordCount": 52
+      "plannedCount": 54,
+      "recordCount": 54
     },
     {
       "id": "exercise_frame",
@@ -444,8 +444,8 @@
       "path": "data/exercise_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 208,
-      "recordCount": 208
+      "plannedCount": 216,
+      "recordCount": 216
     },
     {
       "id": "application_frame",
@@ -460,8 +460,8 @@
       "path": "data/application_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 52,
-      "recordCount": 52
+      "plannedCount": 54,
+      "recordCount": 54
     },
     {
       "id": "professor_qa_frame",
@@ -476,8 +476,8 @@
       "path": "data/professor_qa_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 26,
-      "recordCount": 26
+      "plannedCount": 27,
+      "recordCount": 27
     },
     {
       "id": "review_pack_frame",
@@ -492,8 +492,8 @@
       "path": "data/review_pack_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 26,
-      "recordCount": 26
+      "plannedCount": 27,
+      "recordCount": 27
     },
     {
       "id": "question_bank_frame",
@@ -508,8 +508,8 @@
       "path": "data/question_bank_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 650,
-      "recordCount": 650
+      "plannedCount": 675,
+      "recordCount": 675
     },
     {
       "id": "test_blueprint_frame",
@@ -556,8 +556,8 @@
       "path": "data/mindmap_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 26,
-      "recordCount": 26
+      "plannedCount": 27,
+      "recordCount": 27
     },
     {
       "id": "concept_map_frame",
@@ -730,14 +730,14 @@
     "review_packs": 260,
     "chapter_lectures": 32,
     "lessonSlides": 4160,
-    "formula_content": 78,
-    "simulation_content": 52,
-    "exercise_content": 208,
-    "application_content": 52,
-    "professor_qa_content": 26,
-    "review_pack_content": 26,
-    "question_bank_content": 650,
-    "mindmap_content": 26
+    "formula_content": 81,
+    "simulation_content": 54,
+    "exercise_content": 216,
+    "application_content": 54,
+    "professor_qa_content": 27,
+    "review_pack_content": 27,
+    "question_bank_content": 675,
+    "mindmap_content": 27
   },
   "simulationMode": "unified_only_260_labs_e76",
   "packageType": "FINAL_WITH_TEMPLATE_REFERENCE",

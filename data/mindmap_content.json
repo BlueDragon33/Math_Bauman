@@ -1936,6 +1936,81 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "mindmapId": "E198-derivative-MM01",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Derivative một biến",
+          "type": "root"
+        },
+        {
+          "id": "definition",
+          "label": "limit difference quotient",
+          "type": "concept"
+        },
+        {
+          "id": "rules",
+          "label": "power / product / quotient",
+          "type": "formula"
+        },
+        {
+          "id": "tangent",
+          "label": "tangent slope f'(a)",
+          "type": "geometry"
+        },
+        {
+          "id": "linearization",
+          "label": "f(a)+f'(a)(x-a)",
+          "type": "application"
+        },
+        {
+          "id": "sensitivity",
+          "label": "local sensitivity",
+          "type": "application"
+        },
+        {
+          "id": "numerical",
+          "label": "finite difference ↔ roundoff",
+          "type": "warning"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "definition"
+        },
+        {
+          "from": "root",
+          "to": "rules"
+        },
+        {
+          "from": "definition",
+          "to": "tangent"
+        },
+        {
+          "from": "tangent",
+          "to": "linearization"
+        },
+        {
+          "from": "linearization",
+          "to": "sensitivity"
+        },
+        {
+          "from": "definition",
+          "to": "numerical"
+        }
+      ],
+      "tags": [
+        "derivative",
+        "tangent",
+        "E198"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
     }
   ],
   "importPolicy": {
@@ -1982,5 +2057,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
 }

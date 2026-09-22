@@ -872,6 +872,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "reviewPackId": "E198-derivative-RP01",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Viết định nghĩa đạo hàm tại a.",
+          "expected": "f'(a)=lim_{h→0}[f(a+h)-f(a)]/h nếu giới hạn tồn tại hữu hạn."
+        },
+        {
+          "type": "rules",
+          "prompt": "Nhắc lại product rule và quotient rule.",
+          "expected": "(fg)'=f'g+fg'; (f/g)'=(f'g-fg')/g² với g≠0."
+        },
+        {
+          "type": "geometry",
+          "prompt": "Ý nghĩa hình học của f'(a)?",
+          "expected": "Hệ số góc tiếp tuyến của đồ thị y=f(x) tại x=a."
+        },
+        {
+          "type": "engineering",
+          "prompt": "Derivative dùng gì trong kỹ thuật?",
+          "expected": "Sensitivity, linearization, optimization và kiểm numerical derivative."
+        }
+      ],
+      "masteryGate": "Tự suy ra derivative từ giới hạn + tính đúng product/quotient + dựng tiếp tuyến + giải thích sensitivity và sai số finite difference",
+      "tags": [
+        "derivative",
+        "E198"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
     }
   ],
   "importPolicy": {
@@ -928,5 +962,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
 }

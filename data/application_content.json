@@ -827,6 +827,37 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "applicationId": "E198-derivative-A1",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Sensitivity của cảm biến theo điểm làm việc",
+      "scenario": "Một cảm biến phi tuyến y=f(x) cần biết vùng nào đầu ra nhạy mạnh với input.",
+      "method": "Tính f'(x) trên miền làm việc, đánh dấu điểm |f'(x)| lớn và dùng tiếp tuyến tại vài operating points để so với dữ liệu thật.",
+      "expectedOutcome": "Xác định vùng nhạy, chọn gain/scale hợp lý và phát hiện vùng tuyến tính hóa kém.",
+      "tags": [
+        "sensor",
+        "sensitivity",
+        "linearization"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "applicationId": "E198-derivative-A2",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Đạo hàm loss một tham số để kiểm optimizer",
+      "scenario": "Một mô hình đơn giản có loss J(w) và cần kiểm chiều cập nhật gradient.",
+      "method": "Rút dJ/dw analytic, so với central finite difference, rồi kiểm dấu của -η dJ/dw làm loss giảm với η nhỏ.",
+      "expectedOutcome": "Phát hiện sai dấu/sai đạo hàm trước khi mở rộng sang gradient nhiều biến.",
+      "tags": [
+        "optimization",
+        "gradient-check"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
     }
   ],
   "importPolicy": {
@@ -882,5 +913,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
 }

@@ -1,0 +1,1029 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E198_SINGLE_VARIABLE_DERIVATIVE",
+  "lessonId": "MATH-VN-CA-C03-L02",
+  "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+  "title": "§1.2 · Đạo hàm một biến: định nghĩa, quy tắc tính và tiếp tuyến",
+  "sources": {
+    "formula_content": [
+      {
+        "formulaId": "E198-derivative-F1",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "title": "Định nghĩa đạo hàm tại một điểm",
+        "formula": "f'(a)=lim_{h→0}[f(a+h)-f(a)]/h",
+        "meaning": "Đạo hàm là giới hạn của tốc độ biến thiên trung bình khi khoảng h co về 0; về hình học là hệ số góc tiếp tuyến tại x=a.",
+        "conditions": [
+          "f phải xác định quanh a.",
+          "Giới hạn difference quotient phải tồn tại và hữu hạn."
+        ],
+        "commonMistakes": [
+          "Cho h=0 ngay trong thương sai phân.",
+          "Nhầm đạo hàm tại a với giá trị f(a)."
+        ],
+        "programmingUse": "Là chuẩn tham chiếu để hiểu numerical differentiation, gradient checking và sensitivity theo một tham số.",
+        "tags": [
+          "derivative",
+          "limit",
+          "tangent"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "formulaId": "E198-derivative-F2",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "title": "Các quy tắc tuyến tính và tích",
+        "formula": "(cf+g)'=cf'+g'; (fg)'=f'g+fg'",
+        "meaning": "Đạo hàm phân phối tuyến tính qua tổng và cần quy tắc tích khi hai thừa số cùng phụ thuộc biến.",
+        "conditions": [
+          "Các hàm thành phần khả vi tại điểm xét.",
+          "Khi dùng product rule phải đạo hàm cả hai thừa số."
+        ],
+        "commonMistakes": [
+          "Đạo hàm tích thành f'g'.",
+          "Bỏ hệ số hằng c hoặc đạo hàm sai hằng số."
+        ],
+        "programmingUse": "Rút đạo hàm analytic cho model, loss và transfer expression trước khi code hoặc so với automatic differentiation.",
+        "tags": [
+          "product-rule",
+          "linearity"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "formulaId": "E198-derivative-F3",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "title": "Quy tắc thương và tiếp tuyến",
+        "formula": "(f/g)'=(f'g-fg')/g²; y≈f(a)+f'(a)(x-a)",
+        "meaning": "Quy tắc thương áp dụng khi mẫu khác 0; linearization bậc một dùng đạo hàm để tạo tiếp tuyến xấp xỉ hàm gần a.",
+        "conditions": [
+          "g(a)≠0 cho quy tắc thương.",
+          "Xấp xỉ tiếp tuyến chỉ đáng tin gần điểm tuyến tính hóa."
+        ],
+        "commonMistakes": [
+          "Đảo dấu tử số trong quotient rule.",
+          "Dùng tiếp tuyến quá xa a mà không kiểm sai số."
+        ],
+        "programmingUse": "Tuyến tính hóa cục bộ sensor/model và đánh giá sensitivity đầu ra theo biến vào.",
+        "tags": [
+          "quotient-rule",
+          "linearization",
+          "tangent"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      }
+    ],
+    "exercise_content": [
+      {
+        "exerciseId": "E198-derivative-E01",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "easy",
+        "prompt": "Với f(x)=x², tính f'(3).",
+        "solution": "f'(x)=2x nên f'(3)=6.",
+        "tags": [
+          "power-rule"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "exerciseId": "E198-derivative-E02",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "easy",
+        "prompt": "Đạo hàm của 5x³-2x+7 là gì?",
+        "solution": "15x²-2.",
+        "tags": [
+          "power-rule"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "exerciseId": "E198-derivative-E03",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "medium",
+        "prompt": "Dùng định nghĩa giới hạn để chứng minh đạo hàm của f(x)=x² tại a bằng 2a.",
+        "solution": "[(a+h)²-a²]/h=2a+h với h≠0; cho h→0 được 2a.",
+        "tags": [
+          "definition"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "exerciseId": "E198-derivative-E04",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "medium",
+        "prompt": "Tính đạo hàm của (x²+1)(3x-2).",
+        "solution": "2x(3x-2)+3(x²+1)=9x²-4x+3.",
+        "tags": [
+          "product-rule"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "exerciseId": "E198-derivative-E05",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "medium",
+        "prompt": "Tính đạo hàm của (x²+1)/x với x≠0.",
+        "solution": "Theo quotient rule: [2x·x-(x²+1)]/x²=(x²-1)/x²=1-1/x².",
+        "tags": [
+          "quotient-rule"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "exerciseId": "E198-derivative-E06",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "hard",
+        "prompt": "Viết phương trình tiếp tuyến của y=x² tại x=2.",
+        "solution": "f(2)=4, f'(2)=4 nên y-4=4(x-2), tức y=4x-4.",
+        "tags": [
+          "tangent"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "exerciseId": "E198-derivative-E07",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "hard",
+        "prompt": "Một sensor model y=0.02x²+1.5x. Tại x=10, sensitivity dy/dx bằng bao nhiêu và ý nghĩa là gì?",
+        "solution": "dy/dx=0.04x+1.5 nên tại 10 bằng 1.9; quanh x=10, tăng x khoảng 1 đơn vị làm y tăng xấp xỉ 1.9 đơn vị nếu tuyến tính hóa còn hợp lệ.",
+        "tags": [
+          "sensitivity",
+          "sensor"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "exerciseId": "E198-derivative-E08",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "expert",
+        "prompt": "Vì sao đạo hàm analytic và central finite difference có thể lệch nhau dù công thức analytic đúng?",
+        "solution": "Finite difference có truncation error, roundoff/cancellation và phụ thuộc h; analytic derivative có thể đúng nhưng đánh giá số ở finite precision vẫn lệch.",
+        "tags": [
+          "numerical-derivative",
+          "validation"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      }
+    ],
+    "application_content": [
+      {
+        "applicationId": "E198-derivative-A1",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "title": "Sensitivity của cảm biến theo điểm làm việc",
+        "scenario": "Một cảm biến phi tuyến y=f(x) cần biết vùng nào đầu ra nhạy mạnh với input.",
+        "method": "Tính f'(x) trên miền làm việc, đánh dấu điểm |f'(x)| lớn và dùng tiếp tuyến tại vài operating points để so với dữ liệu thật.",
+        "expectedOutcome": "Xác định vùng nhạy, chọn gain/scale hợp lý và phát hiện vùng tuyến tính hóa kém.",
+        "tags": [
+          "sensor",
+          "sensitivity",
+          "linearization"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "applicationId": "E198-derivative-A2",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "title": "Đạo hàm loss một tham số để kiểm optimizer",
+        "scenario": "Một mô hình đơn giản có loss J(w) và cần kiểm chiều cập nhật gradient.",
+        "method": "Rút dJ/dw analytic, so với central finite difference, rồi kiểm dấu của -η dJ/dw làm loss giảm với η nhỏ.",
+        "expectedOutcome": "Phát hiện sai dấu/sai đạo hàm trước khi mở rộng sang gradient nhiều biến.",
+        "tags": [
+          "optimization",
+          "gradient-check"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      }
+    ],
+    "simulation_content": [
+      {
+        "simulationId": "E198-derivative-SIM1",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "title": "Mô phỏng secant tiến về tangent",
+        "purpose": "Quan sát hệ số góc secant [f(a+h)-f(a)]/h hội tụ về f'(a) khi h giảm.",
+        "controls": [
+          {
+            "key": "a",
+            "type": "number",
+            "default": 2
+          },
+          {
+            "key": "h",
+            "type": "number",
+            "default": 0.5
+          },
+          {
+            "key": "function",
+            "type": "select",
+            "default": "x^2"
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "secant_slope",
+            "label": "Secant slope"
+          },
+          {
+            "key": "analytic_derivative",
+            "label": "f'(a)"
+          },
+          {
+            "key": "absolute_error",
+            "label": "|secant-f'(a)|"
+          }
+        ],
+        "expectedObservation": "Với h vừa đủ nhỏ, secant slope tiến gần tangent slope; h quá nhỏ có thể lộ roundoff trong tính số.",
+        "tags": [
+          "secant",
+          "tangent",
+          "limit"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      },
+      {
+        "simulationId": "E198-derivative-SIM2",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "title": "Mô phỏng tiếp tuyến và sai số tuyến tính hóa",
+        "purpose": "So f(x) với f(a)+f'(a)(x-a) khi khoảng cách |x-a| tăng.",
+        "controls": [
+          {
+            "key": "a",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "x",
+            "type": "number",
+            "default": 1.2
+          },
+          {
+            "key": "function",
+            "type": "select",
+            "default": "x^2"
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "true_value",
+            "label": "f(x)"
+          },
+          {
+            "key": "tangent_value",
+            "label": "Linearized value"
+          },
+          {
+            "key": "linearization_error",
+            "label": "Absolute error"
+          }
+        ],
+        "expectedObservation": "Tiếp tuyến xấp xỉ tốt gần a và sai số tăng khi đi xa điểm tuyến tính hóa với hàm có độ cong.",
+        "tags": [
+          "linearization",
+          "tangent",
+          "error"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "qaId": "E198-derivative-QA01",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "question": "Nếu giáo sư hỏi 'đạo hàm là gì và tại sao kỹ sư cần quan tâm ngoài việc tính công thức?', bạn trả lời thế nào?",
+        "answer": "Đạo hàm tại một điểm là giới hạn của difference quotient, nên đo tốc độ biến thiên tức thời và là hệ số góc tiếp tuyến. Với kỹ thuật, nó cho sensitivity của output theo input, cho phép tuyến tính hóa cục bộ mô hình phi tuyến và tạo hướng cập nhật trong tối ưu. Khi kiểm trên máy tính, finite difference chỉ là xấp xỉ và phải kiểm trade-off truncation với roundoff.",
+        "followUp": [
+          "Khác nhau giữa secant và tangent?",
+          "Continuity có đủ để derivative tồn tại không?",
+          "Vì sao linearization chỉ cục bộ?",
+          "Product rule sai thường sai ở đâu?"
+        ],
+        "tags": [
+          "derivative",
+          "sensitivity",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      }
+    ],
+    "review_pack_content": [
+      {
+        "reviewPackId": "E198-derivative-RP01",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "items": [
+          {
+            "type": "definition",
+            "prompt": "Viết định nghĩa đạo hàm tại a.",
+            "expected": "f'(a)=lim_{h→0}[f(a+h)-f(a)]/h nếu giới hạn tồn tại hữu hạn."
+          },
+          {
+            "type": "rules",
+            "prompt": "Nhắc lại product rule và quotient rule.",
+            "expected": "(fg)'=f'g+fg'; (f/g)'=(f'g-fg')/g² với g≠0."
+          },
+          {
+            "type": "geometry",
+            "prompt": "Ý nghĩa hình học của f'(a)?",
+            "expected": "Hệ số góc tiếp tuyến của đồ thị y=f(x) tại x=a."
+          },
+          {
+            "type": "engineering",
+            "prompt": "Derivative dùng gì trong kỹ thuật?",
+            "expected": "Sensitivity, linearization, optimization và kiểm numerical derivative."
+          }
+        ],
+        "masteryGate": "Tự suy ra derivative từ giới hạn + tính đúng product/quotient + dựng tiếp tuyến + giải thích sensitivity và sai số finite difference",
+        "tags": [
+          "derivative",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      }
+    ],
+    "question_bank_content": [
+      {
+        "questionId": "E198-derivative-Q001",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "easy",
+        "question": "Đạo hàm f'(a) được định nghĩa bởi giới hạn nào?",
+        "options": [
+          "lim_{h→0}[f(a+h)-f(a)]/h",
+          "lim_{h→∞}f(h)",
+          "f(a)/a",
+          "f(a+h)+f(a)"
+        ],
+        "answer": "lim_{h→0}[f(a+h)-f(a)]/h",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q002",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "easy",
+        "question": "Đạo hàm của x² là?",
+        "options": [
+          "2x",
+          "x",
+          "2",
+          "x³"
+        ],
+        "answer": "2x",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q003",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "easy",
+        "question": "Đạo hàm của hằng số 7 là?",
+        "options": [
+          "0",
+          "7",
+          "1",
+          "x"
+        ],
+        "answer": "0",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q004",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "easy",
+        "question": "Đạo hàm của 3x⁴ là?",
+        "options": [
+          "12x³",
+          "3x³",
+          "12x⁴",
+          "4x³"
+        ],
+        "answer": "12x³",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q005",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "easy",
+        "question": "Ý nghĩa hình học của f'(a) là?",
+        "options": [
+          "Hệ số góc tiếp tuyến",
+          "Diện tích dưới đồ thị",
+          "Giá trị f(a)",
+          "Khoảng cách tới gốc"
+        ],
+        "answer": "Hệ số góc tiếp tuyến",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q006",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "easy",
+        "question": "Product rule đúng là?",
+        "options": [
+          "(fg)'=f'g+fg'",
+          "(fg)'=f'g'",
+          "(fg)'=f'+g'",
+          "(fg)'=fg"
+        ],
+        "answer": "(fg)'=f'g+fg'",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q007",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "easy",
+        "question": "Điều kiện trong quotient rule (f/g)' tại a là?",
+        "options": [
+          "g(a)≠0",
+          "f(a)=0",
+          "g(a)=0",
+          "f'(a)=0"
+        ],
+        "answer": "g(a)≠0",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q008",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "easy",
+        "question": "Tiếp tuyến của f tại a đi qua điểm nào?",
+        "options": [
+          "(a,f(a))",
+          "(0,f(a))",
+          "(a,0)",
+          "(f(a),a)"
+        ],
+        "answer": "(a,f(a))",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q009",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "medium",
+        "question": "Nếu f(x)=x³ thì f'(2)=?",
+        "options": [
+          "12",
+          "8",
+          "6",
+          "4"
+        ],
+        "answer": "12",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q010",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "medium",
+        "question": "Đạo hàm của (x²+1)(x-1) tại x=1 là?",
+        "options": [
+          "2",
+          "0",
+          "1",
+          "4"
+        ],
+        "answer": "2",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q011",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "medium",
+        "question": "Đạo hàm của 1/x là?",
+        "options": [
+          "-1/x²",
+          "1/x²",
+          "-x²",
+          "ln x"
+        ],
+        "answer": "-1/x²",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q012",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "medium",
+        "question": "Phương trình tiếp tuyến của y=x² tại x=1 là?",
+        "options": [
+          "y=2x-1",
+          "y=x+1",
+          "y=2x+1",
+          "y=x-1"
+        ],
+        "answer": "y=2x-1",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q013",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "medium",
+        "question": "Nếu f'(a)>0 thì gần a, theo tuyến tính hóa, f có xu hướng?",
+        "options": [
+          "Tăng khi x tăng",
+          "Luôn bằng 0",
+          "Không đổi",
+          "Không thể nói gì cục bộ"
+        ],
+        "answer": "Tăng khi x tăng",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q014",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "medium",
+        "question": "Secant slope tiến về tangent slope khi?",
+        "options": [
+          "h→0 và derivative tồn tại",
+          "h→∞",
+          "h=0 ngay từ đầu",
+          "f(a)=0"
+        ],
+        "answer": "h→0 và derivative tồn tại",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q015",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "medium",
+        "question": "Đạo hàm của cf+g với c hằng là?",
+        "options": [
+          "cf'+g'",
+          "c'f+g",
+          "c(f'+g')",
+          "f'+cg'"
+        ],
+        "answer": "cf'+g'",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q016",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "hard",
+        "question": "Vì sao |x| không khả vi tại 0?",
+        "options": [
+          "Đạo hàm trái và phải khác nhau",
+          "Hàm không liên tục",
+          "f(0) không tồn tại",
+          "Hàm không bị chặn"
+        ],
+        "answer": "Đạo hàm trái và phải khác nhau",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q017",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "hard",
+        "question": "Linearization y≈f(a)+f'(a)(x-a) tốt nhất khi?",
+        "options": [
+          "x gần a",
+          "x rất xa a",
+          "f'(a)=∞",
+          "Mọi x như nhau"
+        ],
+        "answer": "x gần a",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q018",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "hard",
+        "question": "Nếu central difference lệch analytic derivative khi h rất nhỏ, nguyên nhân có thể là?",
+        "options": [
+          "Roundoff/cancellation",
+          "Derivative không bao giờ tồn tại",
+          "Product rule sai tất yếu",
+          "Ma trận singular"
+        ],
+        "answer": "Roundoff/cancellation",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q019",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "hard",
+        "question": "Sensitivity dy/dx lớn về độ lớn nghĩa là?",
+        "options": [
+          "Output đổi mạnh theo input cục bộ",
+          "Output luôn ổn định",
+          "Input không ảnh hưởng output",
+          "Derivative bằng 0"
+        ],
+        "answer": "Output đổi mạnh theo input cục bộ",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q020",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "hard",
+        "question": "Một đạo hàm analytic đúng nhưng code optimizer đi ngược chiều có thể do?",
+        "options": [
+          "Sai dấu cập nhật hoặc gradient mapping",
+          "Đạo hàm không có nghĩa",
+          "Tangent luôn sai",
+          "Continuity không tồn tại"
+        ],
+        "answer": "Sai dấu cập nhật hoặc gradient mapping",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q021",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "expert",
+        "question": "Quan hệ đúng giữa khả vi và liên tục tại một điểm là?",
+        "options": [
+          "Khả vi ⇒ liên tục",
+          "Liên tục ⇒ khả vi luôn",
+          "Hai khái niệm tương đương",
+          "Không liên hệ"
+        ],
+        "answer": "Khả vi ⇒ liên tục",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q022",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "expert",
+        "question": "Trong exact math, derivative là giới hạn; trong floating point, kiểm derivative bằng finite difference cần?",
+        "options": [
+          "Chọn/quét h để cân bằng truncation và roundoff",
+          "Luôn h=0",
+          "Luôn h=10^-300",
+          "Không cần kiểm precision"
+        ],
+        "answer": "Chọn/quét h để cân bằng truncation và roundoff",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q023",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "expert",
+        "question": "Một model có f'(a)=0 thì kết luận nào an toàn nhất?",
+        "options": [
+          "a là điểm dừng, chưa đủ kết luận cực trị",
+          "a chắc chắn cực tiểu",
+          "a chắc chắn cực đại",
+          "f hằng toàn miền"
+        ],
+        "answer": "a là điểm dừng, chưa đủ kết luận cực trị",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q024",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "expert",
+        "question": "Đạo hàm tại operating point giúp control/estimation chủ yếu bằng cách nào?",
+        "options": [
+          "Tạo gain/sensitivity cục bộ cho tuyến tính hóa",
+          "Xóa mọi phi tuyến toàn cục",
+          "Đảm bảo ổn định tuyệt đối",
+          "Thay thế dữ liệu đo"
+        ],
+        "answer": "Tạo gain/sensitivity cục bộ cho tuyến tính hóa",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E198-derivative-Q025",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "level": "expert",
+        "question": "Một validation tốt cho derivative implementation nên gồm?",
+        "options": [
+          "Analytic/AD so với finite difference trên nhiều điểm và nhiều h",
+          "Chỉ một điểm h=1",
+          "Chỉ kiểm giá trị hàm",
+          "Chỉ vẽ đồ thị"
+        ],
+        "answer": "Analytic/AD so với finite difference trên nhiều điểm và nhiều h",
+        "explanation": "Đáp án bám định nghĩa đạo hàm qua giới hạn, quy tắc tính đạo hàm, ý nghĩa hệ số góc tiếp tuyến và kiểm tra số bằng finite difference.",
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "mindmapId": "E198-derivative-MM01",
+        "lessonId": "MATH-VN-CA-C03-L02",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Derivative một biến",
+            "type": "root"
+          },
+          {
+            "id": "definition",
+            "label": "limit difference quotient",
+            "type": "concept"
+          },
+          {
+            "id": "rules",
+            "label": "power / product / quotient",
+            "type": "formula"
+          },
+          {
+            "id": "tangent",
+            "label": "tangent slope f'(a)",
+            "type": "geometry"
+          },
+          {
+            "id": "linearization",
+            "label": "f(a)+f'(a)(x-a)",
+            "type": "application"
+          },
+          {
+            "id": "sensitivity",
+            "label": "local sensitivity",
+            "type": "application"
+          },
+          {
+            "id": "numerical",
+            "label": "finite difference ↔ roundoff",
+            "type": "warning"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "definition"
+          },
+          {
+            "from": "root",
+            "to": "rules"
+          },
+          {
+            "from": "definition",
+            "to": "tangent"
+          },
+          {
+            "from": "tangent",
+            "to": "linearization"
+          },
+          {
+            "from": "linearization",
+            "to": "sensitivity"
+          },
+          {
+            "from": "definition",
+            "to": "numerical"
+          }
+        ],
+        "tags": [
+          "derivative",
+          "tangent",
+          "E198"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+      }
+    ]
+  }
+}
