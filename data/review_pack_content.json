@@ -906,6 +906,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "reviewPackId": "E199-chain-RP01",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "items": [
+        {
+          "type": "core",
+          "prompt": "Viết chain rule y=f(g(x)).",
+          "expected": "dy/dx=f'(g(x))g'(x)."
+        },
+        {
+          "type": "graph",
+          "prompt": "Total derivative qua nhiều node được tạo thế nào?",
+          "expected": "Nhân local derivatives dọc đường phụ thuộc; với nhiều đường đóng góp thì cộng các path contributions."
+        },
+        {
+          "type": "failure",
+          "prompt": "Vanishing/exploding gradient liên hệ gì với chain rule?",
+          "expected": "Do tích lặp nhiều local derivatives có magnitude <1 hoặc >1."
+        },
+        {
+          "type": "validation",
+          "prompt": "Cách sanity-check chain-rule gradient?",
+          "expected": "So analytic/AD với central finite difference trên nhiều điểm và nhiều h."
+        }
+      ],
+      "masteryGate": "Nhận diện nested functions + triển khai chain rule nhiều tầng + đọc computational graph + giải thích gradient propagation + kiểm bằng finite difference",
+      "tags": [
+        "chain-rule",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
     }
   ],
   "importPolicy": {
