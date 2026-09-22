@@ -1201,6 +1201,121 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "exerciseId": "E181-norm-E01",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Với x=(3,-4), tính ||x||₁, ||x||₂ và ||x||∞.",
+      "solution": "||x||₁=7, ||x||₂=5, ||x||∞=4.",
+      "tags": [
+        "norm",
+        "numeric"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "exerciseId": "E181-norm-E02",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Với x=(1,-2,2), tính squared L2 norm và L2 norm.",
+      "solution": "Σxᵢ²=1+4+4=9; ||x||₂=3.",
+      "tags": [
+        "l2",
+        "squared-norm"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "exerciseId": "E181-norm-E03",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "So sánh hai vector a=(2,0) và b=(1,1) theo L1 và L2.",
+      "solution": "L1: ||a||₁=2, ||b||₁=2 bằng nhau. L2: ||a||₂=2, ||b||₂=√2 nên b ngắn hơn theo L2.",
+      "tags": [
+        "l1",
+        "l2",
+        "geometry"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "exerciseId": "E181-norm-E04",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Chứng minh với x∈Rⁿ rằng ||x||∞ ≤ ||x||₂.",
+      "solution": "Mỗi |xᵢ|² ≤ Σⱼxⱼ², nên maxᵢ|xᵢ| ≤ sqrt(Σⱼxⱼ²)=||x||₂.",
+      "tags": [
+        "norm-inequality",
+        "proof"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "exerciseId": "E181-norm-E05",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Một vector sai số e có các thành phần (0.1,-0.2,0.05). Nếu yêu cầu mọi thành phần sai số ≤0.15 theo trị tuyệt đối, dùng norm nào để kiểm trực tiếp?",
+      "solution": "Dùng L∞. ||e||∞=0.2>0.15 nên vi phạm.",
+      "tags": [
+        "linf",
+        "error-bound"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "exerciseId": "E181-norm-E06",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Tại sao so khoảng cách L2 giữa nhiệt độ (°C) và áp suất (kPa) chưa scale có thể gây hiểu sai?",
+      "solution": "Độ lớn số phụ thuộc đơn vị; feature có scale lớn chi phối norm. Cần chuẩn hóa/standardize hoặc dùng metric có trọng số phù hợp.",
+      "tags": [
+        "l2",
+        "scaling",
+        "data"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "exerciseId": "E181-norm-E07",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Nêu dạng quả cầu đơn vị của L1, L2 và L∞ trong R² và liên hệ với nghiệm regularization.",
+      "solution": "L1: hình thoi; L2: đường tròn; L∞: hình vuông. Góc nhọn của quả cầu L1 làm nghiệm tối ưu dễ chạm trục, liên hệ sparsity.",
+      "tags": [
+        "geometry",
+        "regularization"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "exerciseId": "E181-norm-E08",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "prompt": "Vì sao squared L2 không phải là một norm dù thường dùng làm loss?",
+      "solution": "Nó không đồng nhất bậc 1: ||αx||₂²=α²||x||₂², không bằng |α|·||x||₂² nói chung; do đó vi phạm tiên đề homogeneity của norm.",
+      "tags": [
+        "norm-axioms",
+        "l2",
+        "loss"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
     }
   ],
   "importPolicy": {
