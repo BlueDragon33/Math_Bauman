@@ -363,6 +363,38 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "applicationId": "E183-dot-A1",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Dot product trong scoring của mô hình AI",
+      "scenario": "Embedding query và document được so điểm để xếp hạng.",
+      "method": "Dùng dot product nếu độ lớn embedding mang ý nghĩa; dùng cosine similarity nếu muốn tách scale khỏi hướng; kiểm norm và preprocessing nhất quán.",
+      "expectedOutcome": "Hiểu dot score và cosine score có thể xếp hạng khác nhau khi norm embedding khác nhau.",
+      "tags": [
+        "dot-product",
+        "embedding",
+        "ai"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "applicationId": "E183-dot-A2",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Năng lượng và trực giao trong tín hiệu/cảm biến",
+      "scenario": "Hai mẫu tín hiệu được biểu diễn thành vector cửa sổ và cần kiểm độ chồng lấn hoặc độc lập hướng.",
+      "method": "Tính inner product và norm; dùng normalized inner product để đo tương đồng, dùng near-zero inner product để phát hiện gần trực giao.",
+      "expectedOutcome": "Phân biệt được tương quan hình học với độc lập thống kê và dùng tolerance khi dữ liệu nhiễu.",
+      "tags": [
+        "dot-product",
+        "signal",
+        "sensor"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
     }
   ],
   "importPolicy": {
