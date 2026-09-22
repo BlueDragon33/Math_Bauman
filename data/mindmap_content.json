@@ -751,6 +751,88 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "mindmapId": "E181-norm-MM01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Chuẩn vector = cách đo độ lớn",
+          "type": "root"
+        },
+        {
+          "id": "l1",
+          "label": "L1: Σ|xᵢ| · sparsity",
+          "type": "formula"
+        },
+        {
+          "id": "l2",
+          "label": "L2: √Σxᵢ² · Euclid/energy",
+          "type": "formula"
+        },
+        {
+          "id": "linf",
+          "label": "L∞: max|xᵢ| · worst-case",
+          "type": "formula"
+        },
+        {
+          "id": "geometry",
+          "label": "Hình thoi · tròn · vuông",
+          "type": "concept"
+        },
+        {
+          "id": "scale",
+          "label": "Cảnh báo: scale/đơn vị chi phối metric",
+          "type": "warning"
+        },
+        {
+          "id": "use",
+          "label": "Sensor error · regularization · robustness",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "l1"
+        },
+        {
+          "from": "root",
+          "to": "l2"
+        },
+        {
+          "from": "root",
+          "to": "linf"
+        },
+        {
+          "from": "l1",
+          "to": "geometry"
+        },
+        {
+          "from": "l2",
+          "to": "geometry"
+        },
+        {
+          "from": "linf",
+          "to": "geometry"
+        },
+        {
+          "from": "geometry",
+          "to": "scale"
+        },
+        {
+          "from": "scale",
+          "to": "use"
+        }
+      ],
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
     }
   ],
   "importPolicy": {
