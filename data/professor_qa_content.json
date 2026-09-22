@@ -275,6 +275,25 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "qaId": "E187-num-QA01",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "question": "Nếu giáo sư hỏi tại sao 'cosine similarity scale-invariant' nhưng code vẫn có thể cho kết quả khác khi scale dữ liệu, bạn trả lời thế nào?",
+      "answer": "Scale invariance là tính chất toán học trong số thực chính xác. Trong floating point, scale cực lớn/nhỏ có thể gây overflow, underflow, mất precision hoặc kích hoạt epsilon/guard khác nhau. Vì vậy cần norm ổn định, tolerance có ý nghĩa và kiểm dtype/pipeline.",
+      "followUp": [
+        "Khi nào clip cosine về [-1,1] là hợp lý?",
+        "Vì sao vector near-zero nguy hiểm?",
+        "Tolerance tuyệt đối và tương đối khác nhau thế nào?"
+      ],
+      "tags": [
+        "numerical",
+        "cosine",
+        "E187"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
     }
   ],
   "importPolicy": {
