@@ -674,6 +674,37 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E192_MATRIX_MULTIPLICATION"
+    },
+    {
+      "applicationId": "E193-power-A1",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Lan truyền trạng thái nhiều bước trong điều khiển",
+      "scenario": "Hệ rời rạc x_{k+1}=Ax_k cần dự báo trạng thái sau nhiều bước.",
+      "method": "Tính A^k hoặc dùng lặp/fast exponentiation tùy horizon; áp x_k=A^k x_0 và theo dõi norm/spectral behavior.",
+      "expectedOutcome": "Hiểu trực tiếp mối nối giữa lũy thừa ma trận và ổn định/lan truyền trạng thái.",
+      "tags": [
+        "control",
+        "state-transition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "applicationId": "E193-power-A2",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Graph/message propagation bằng đa thức ma trận",
+      "scenario": "Cần trộn thông tin nhiều hop trên graph hoặc operator tuyến tính mà không trực tiếp giải tích spectral đầy đủ.",
+      "method": "Dùng p(A)=Σc_kA^k để kết hợp ảnh hưởng 0-hop,1-hop,...; chuẩn hóa A nếu cần để kiểm soát scale.",
+      "expectedOutcome": "Xây bộ lọc/operator đa bước có thể giải thích bằng các lũy thừa của A.",
+      "tags": [
+        "graph",
+        "filter",
+        "ai"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
     }
   ],
   "importPolicy": {
