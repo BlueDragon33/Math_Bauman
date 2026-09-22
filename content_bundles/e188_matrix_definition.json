@@ -1,0 +1,1008 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E188_MATRIX_DEFINITION",
+  "lessonId": "MATH-VN-LA-C02-L01",
+  "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+  "title": "§2.1 · Ma trận: định nghĩa, cấp, phần tử, hàng, cột và ký hiệu A=[aᵢⱼ]",
+  "sources": {
+    "formula_content": [
+      {
+        "formulaId": "E188-matrix-F1",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Cấp và phần tử ma trận",
+        "formula": "A=[aᵢⱼ] ∈ R^{m×n}",
+        "meaning": "A có m hàng, n cột; aᵢⱼ là phần tử tại hàng i, cột j.",
+        "conditions": [
+          "1≤i≤m và 1≤j≤n.",
+          "Quy ước hàng/cột phải giữ nhất quán giữa toán học và code."
+        ],
+        "commonMistakes": [
+          "Đảo i,j khi đọc chỉ số.",
+          "Gọi m×n thành n×m do nhầm hàng/cột."
+        ],
+        "programmingUse": "shape(A)=(m,n); truy cập A[i,j] theo quy ước index của ngôn ngữ.",
+        "tags": [
+          "matrix",
+          "shape",
+          "index"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "formulaId": "E188-matrix-F2",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Ma trận như ánh xạ tuyến tính",
+        "formula": "A: R^n → R^m,  y = Ax",
+        "meaning": "Ma trận m×n biến vector n chiều thành vector m chiều.",
+        "conditions": [
+          "x có n phần tử.",
+          "Thứ tự feature trong x khớp cột của A."
+        ],
+        "commonMistakes": [
+          "Nhân khi kích thước không tương thích.",
+          "Đổi thứ tự feature nhưng không đổi cột của A."
+        ],
+        "programmingUse": "assert A.shape[1]==x.shape[0]; y=A@x.",
+        "tags": [
+          "linear-map",
+          "shape-contract"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "formulaId": "E188-matrix-F3",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Ma trận dữ liệu mẫu × đặc trưng",
+        "formula": "X ∈ R^{N×d}",
+        "meaning": "Một quy ước phổ biến: N hàng là mẫu, d cột là đặc trưng.",
+        "conditions": [
+          "Semantics của hàng/cột được tài liệu hóa.",
+          "Đơn vị và preprocessing của từng feature được xác định."
+        ],
+        "commonMistakes": [
+          "Giả định mọi thư viện dùng cùng orientation.",
+          "Trộn feature khác đơn vị mà không ghi chú."
+        ],
+        "programmingUse": "schema={rows:'samples', cols:'features', feature_names:[...]}.",
+        "tags": [
+          "data-matrix",
+          "features",
+          "samples"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      }
+    ],
+    "exercise_content": [
+      {
+        "exerciseId": "E188-matrix-E01",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "prompt": "Cho A=[[1,2,3],[4,5,6]]. Xác định cấp của A và a₂₃.",
+        "solution": "A có 2 hàng, 3 cột nên cấp 2×3; a₂₃=6.",
+        "tags": [
+          "shape",
+          "index"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "exerciseId": "E188-matrix-E02",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "prompt": "Một ma trận dữ liệu có 120 mẫu và 8 feature theo quy ước sample×feature. Shape là gì?",
+        "solution": "120×8.",
+        "tags": [
+          "data-matrix"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "exerciseId": "E188-matrix-E03",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "A∈R^{4×3}, x∈R^3. Shape của y=Ax là gì?",
+        "solution": "y∈R^4.",
+        "tags": [
+          "linear-map"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "exerciseId": "E188-matrix-E04",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "X∈R^{200×6}. Nếu thêm 20 mẫu nhưng không thêm feature thì shape mới?",
+        "solution": "220×6.",
+        "tags": [
+          "samples",
+          "features"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "exerciseId": "E188-matrix-E05",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Giải thích vì sao đổi thứ tự hai cột feature nhưng giữ nguyên W có thể làm dự đoán sai.",
+        "solution": "Các cột W gắn với semantic feature theo thứ tự; đổi feature mà không đổi W làm sai mapping.",
+        "tags": [
+          "semantics",
+          "pipeline"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "exerciseId": "E188-matrix-E06",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "prompt": "Một API nhận matrix nhưng không ghi rõ rows=samples hay cols=samples. Nêu hai lỗi có thể xảy ra.",
+        "solution": "Có thể đảo sample/feature semantics và thực hiện phép nhân theo axis sai dù shape tình cờ tương thích.",
+        "tags": [
+          "api",
+          "axis"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "exerciseId": "E188-matrix-E07",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "prompt": "Từ tensor cảm biến T(time,sensor,feature), khi reshape thành matrix cần lưu metadata gì?",
+        "solution": "Cần lưu mapping từ mỗi axis cũ sang hàng/cột mới, thứ tự sensor/feature và đơn vị.",
+        "tags": [
+          "tensor",
+          "reshape"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "exerciseId": "E188-matrix-E08",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "prompt": "Thiết kế một shape contract tối thiểu cho layer y=Wx+b.",
+        "solution": "Ghi W∈R^{m×n}, x∈R^n, b∈R^m, y∈R^m; n=input_dim, m=output_dim; kiểm batch convention riêng.",
+        "tags": [
+          "shape-contract",
+          "neural-network"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      }
+    ],
+    "application_content": [
+      {
+        "applicationId": "E188-matrix-A1",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Ma trận dữ liệu cảm biến",
+        "scenario": "Nhiều cảm biến cung cấp dữ liệu theo thời gian để đưa vào pipeline phát hiện bất thường.",
+        "method": "Chọn rows=time samples, cols=sensors/features; lưu tên cột, đơn vị, missing-value policy và shape contract.",
+        "expectedOutcome": "Pipeline có matrix semantics rõ, tránh đảo sensor/sample và dễ audit.",
+        "tags": [
+          "sensor",
+          "data-matrix"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "applicationId": "E188-matrix-A2",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Ma trận trọng số của lớp tuyến tính",
+        "scenario": "Một lớp mạng nhận vector feature và tạo representation mới.",
+        "method": "Mô tả W∈R^{m×n}, kiểm input dim n, output dim m và mapping feature trước phép nhân.",
+        "expectedOutcome": "Giảm lỗi shape và giải thích được mỗi chiều đầu ra được tạo từ feature đầu vào như thế nào.",
+        "tags": [
+          "ai",
+          "linear-layer"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      }
+    ],
+    "simulation_content": [
+      {
+        "simulationId": "E188-matrix-SIM1",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Mô phỏng shape và indexing",
+        "purpose": "Thay số hàng/cột và chọn i,j để quan sát vị trí aᵢⱼ.",
+        "controls": [
+          {
+            "key": "m",
+            "type": "number",
+            "default": 3
+          },
+          {
+            "key": "n",
+            "type": "number",
+            "default": 4
+          },
+          {
+            "key": "i",
+            "type": "number",
+            "default": 2
+          },
+          {
+            "key": "j",
+            "type": "number",
+            "default": 3
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "shape",
+            "label": "Shape m×n"
+          },
+          {
+            "key": "selected",
+            "label": "Phần tử aᵢⱼ"
+          },
+          {
+            "key": "valid_index",
+            "label": "Index hợp lệ"
+          }
+        ],
+        "expectedObservation": "Đổi m,n thay miền index; aᵢⱼ chỉ hợp lệ khi i,j nằm đúng giới hạn.",
+        "tags": [
+          "matrix",
+          "index"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      },
+      {
+        "simulationId": "E188-matrix-SIM2",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Mô phỏng sample-feature orientation",
+        "purpose": "Đảo orientation của cùng bảng dữ liệu và quan sát phép nhân với weight matrix.",
+        "controls": [
+          {
+            "key": "samples",
+            "type": "number",
+            "default": 100
+          },
+          {
+            "key": "features",
+            "type": "number",
+            "default": 8
+          },
+          {
+            "key": "orientation",
+            "type": "select",
+            "default": "samples_rows"
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "data_shape",
+            "label": "Shape dữ liệu"
+          },
+          {
+            "key": "compatible",
+            "label": "Tương thích với W"
+          },
+          {
+            "key": "semantic_warning",
+            "label": "Cảnh báo semantics"
+          }
+        ],
+        "expectedObservation": "Transpose có thể tạo shape hợp lệ cho phép toán khác nhưng semantics sample/feature đã đổi.",
+        "tags": [
+          "orientation",
+          "pipeline"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "qaId": "E188-matrix-QA01",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "question": "Nếu giáo sư hỏi 'ma trận chỉ là một bảng số hay là một ánh xạ tuyến tính?', bạn trả lời thế nào?",
+        "answer": "Cùng một mảng số có thể được dùng như bảng dữ liệu hoặc biểu diễn toán tử tuyến tính; ý nghĩa đến từ không gian đầu vào/đầu ra, semantics hàng-cột và phép toán ta thực hiện. Vì vậy phải nêu shape, ý nghĩa trục và bối cảnh trước khi diễn giải.",
+        "followUp": [
+          "aᵢⱼ được đọc thế nào?",
+          "Khi nào y=Ax hợp lệ về kích thước?",
+          "Vì sao đổi thứ tự feature có thể phá pipeline?"
+        ],
+        "tags": [
+          "matrix",
+          "semantics",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      }
+    ],
+    "review_pack_content": [
+      {
+        "reviewPackId": "E188-matrix-RP01",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "items": [
+          {
+            "type": "concept",
+            "prompt": "Nêu nghĩa của A∈R^{m×n} và aᵢⱼ.",
+            "expected": "m hàng, n cột; aᵢⱼ ở hàng i cột j."
+          },
+          {
+            "type": "shape",
+            "prompt": "Nêu điều kiện shape cho y=Ax.",
+            "expected": "A m×n, x n chiều, y m chiều."
+          },
+          {
+            "type": "data",
+            "prompt": "Trong X∈R^{N×d}, nêu một quy ước phổ biến.",
+            "expected": "N hàng mẫu, d cột đặc trưng."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Nêu một lỗi thực tế do đảo semantics hàng/cột.",
+            "expected": "Đảo sample-feature hoặc feature order khiến model/pipeline dùng sai dữ liệu."
+          }
+        ],
+        "masteryGate": "Đọc đúng m×n và aᵢⱼ + kiểm shape trước phép toán + mô tả rõ semantics hàng/cột + liên hệ được matrix dữ liệu và linear map",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      }
+    ],
+    "question_bank_content": [
+      {
+        "questionId": "E188-matrix-Q001",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận A có m hàng và n cột được gọi là ma trận cấp? ",
+        "options": [
+          "m×n",
+          "n×m",
+          "m+n",
+          "mn×mn"
+        ],
+        "answer": "m×n",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q002",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ký hiệu aᵢⱼ chỉ phần tử nằm ở?",
+        "options": [
+          "Hàng i, cột j",
+          "Hàng j, cột i",
+          "Đường chéo chính",
+          "Hàng i+j"
+        ],
+        "answer": "Hàng i, cột j",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q003",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Một ma trận 3×2 có bao nhiêu phần tử?",
+        "options": [
+          "6",
+          "5",
+          "3",
+          "2"
+        ],
+        "answer": "6",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q004",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Vector hàng 1×n có bao nhiêu hàng?",
+        "options": [
+          "1",
+          "n",
+          "0",
+          "Phụ thuộc dữ liệu"
+        ],
+        "answer": "1",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q005",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Vector cột m×1 có bao nhiêu cột?",
+        "options": [
+          "1",
+          "m",
+          "0",
+          "Phụ thuộc dữ liệu"
+        ],
+        "answer": "1",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q006",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Hai ma trận bằng nhau khi?",
+        "options": [
+          "Cùng cấp và từng phần tử tương ứng bằng nhau",
+          "Cùng tổng phần tử",
+          "Cùng số hàng",
+          "Cùng định thức"
+        ],
+        "answer": "Cùng cấp và từng phần tử tương ứng bằng nhau",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q007",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Trong A=[aᵢⱼ], chỉ số i thường biểu diễn?",
+        "options": [
+          "Hàng",
+          "Cột",
+          "Hạng",
+          "Định thức"
+        ],
+        "answer": "Hàng",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q008",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Trong A=[aᵢⱼ], chỉ số j thường biểu diễn?",
+        "options": [
+          "Cột",
+          "Hàng",
+          "Số chiều không gian",
+          "Giá trị riêng"
+        ],
+        "answer": "Cột",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q009",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Nếu X∈R^{N×d} biểu diễn N mẫu, d đặc trưng thì mỗi hàng thường là?",
+        "options": [
+          "Một mẫu",
+          "Một đặc trưng duy nhất",
+          "Một ma trận nghịch đảo",
+          "Một nhãn bắt buộc"
+        ],
+        "answer": "Một mẫu",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q010",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Nếu cột của ma trận dữ liệu là đặc trưng, số cột thay đổi khi?",
+        "options": [
+          "Thêm/bớt feature",
+          "Thêm mẫu nhưng giữ feature",
+          "Đổi thứ tự hàng",
+          "Đổi tên dataset"
+        ],
+        "answer": "Thêm/bớt feature",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q011",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "A∈R^{m×n} nhân x∈R^n tạo Ax thuộc?",
+        "options": [
+          "R^m",
+          "R^n",
+          "R^{m×n}",
+          "R"
+        ],
+        "answer": "R^m",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q012",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Lỗi phổ biến nhất trước phép nhân ma trận-vector là?",
+        "options": [
+          "Không kiểm kích thước tương thích",
+          "Không tính trace",
+          "Không sắp xếp giá trị riêng",
+          "Không chuẩn hóa mọi ma trận"
+        ],
+        "answer": "Không kiểm kích thước tương thích",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q013",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Một ma trận có thể vừa là bảng dữ liệu vừa là toán tử không?",
+        "options": [
+          "Có, tùy semantics và cách sử dụng",
+          "Không bao giờ",
+          "Chỉ khi vuông",
+          "Chỉ khi đối xứng"
+        ],
+        "answer": "Có, tùy semantics và cách sử dụng",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q014",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Trong dữ liệu cảm biến, hàng có thể biểu diễn?",
+        "options": [
+          "Mốc thời gian/mẫu đo",
+          "Chỉ đơn vị SI",
+          "Chỉ nhiễu",
+          "Chỉ bias"
+        ],
+        "answer": "Mốc thời gian/mẫu đo",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q015",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Nếu transpose một ma trận m×n thì cấp mới là?",
+        "options": [
+          "n×m",
+          "m×n",
+          "m×m",
+          "n×n"
+        ],
+        "answer": "n×m",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q016",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Vì sao shape là một phần của semantics chứ không chỉ metadata?",
+        "options": [
+          "Vì shape quyết định cách chỉ số và phép toán được hiểu",
+          "Vì shape luôn quyết định determinant",
+          "Vì mọi matrix phải vuông",
+          "Vì shape thay thế dữ liệu"
+        ],
+        "answer": "Vì shape quyết định cách chỉ số và phép toán được hiểu",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q017",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Trong pipeline ML, nhầm axis hàng/cột có thể gây?",
+        "options": [
+          "Feature/sample semantics bị đảo dù code vẫn chạy",
+          "Luôn lỗi cú pháp",
+          "Luôn determinant bằng 0",
+          "Không ảnh hưởng"
+        ],
+        "answer": "Feature/sample semantics bị đảo dù code vẫn chạy",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q018",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "A=[aᵢⱼ] giúp kiểm implementation bằng cách nào?",
+        "options": [
+          "Map rõ index toán học sang index code",
+          "Bỏ cần kiểm shape",
+          "Bảo đảm matrix khả nghịch",
+          "Bảo đảm dữ liệu sạch"
+        ],
+        "answer": "Map rõ index toán học sang index code",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q019",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Ma trận trọng số W của layer tuyến tính nên được kiểm gì đầu tiên?",
+        "options": [
+          "Quy ước shape input/output",
+          "Định thức bằng 1",
+          "Mọi phần tử dương",
+          "Trace bằng 0"
+        ],
+        "answer": "Quy ước shape input/output",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q020",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Nếu dữ liệu được lưu column-major thay vì row-major thì toán học thay đổi không?",
+        "options": [
+          "Không, nhưng mapping bộ nhớ/index implementation thay đổi",
+          "Có, mọi định nghĩa đổi",
+          "Có, rank luôn đổi",
+          "Không cần quan tâm"
+        ],
+        "answer": "Không, nhưng mapping bộ nhớ/index implementation thay đổi",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q021",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Thiết kế API matrix an toàn nên ưu tiên?",
+        "options": [
+          "Shape contract và semantic axis rõ ràng",
+          "Tự transpose im lặng mọi input",
+          "Ép mọi matrix vuông",
+          "Bỏ kiểm kích thước để nhanh"
+        ],
+        "answer": "Shape contract và semantic axis rõ ràng",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q022",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Trong sensor fusion, vì sao cần ghi rõ đơn vị theo cột?",
+        "options": [
+          "Để tránh trộn feature khác đơn vị và diễn giải sai phép biến đổi",
+          "Để tăng rank tự động",
+          "Để determinant khác 0",
+          "Để giảm số hàng"
+        ],
+        "answer": "Để tránh trộn feature khác đơn vị và diễn giải sai phép biến đổi",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q023",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Khi flatten tensor thành matrix, rủi ro lớn là?",
+        "options": [
+          "Mất semantics trục nếu không lưu mapping axis",
+          "Matrix luôn singular",
+          "Mất mọi dữ liệu",
+          "Không thể nhân ma trận"
+        ],
+        "answer": "Mất semantics trục nếu không lưu mapping axis",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q024",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Một ma trận cùng số liệu nhưng đổi thứ tự cột có thể cho pipeline khác vì?",
+        "options": [
+          "Mỗi cột mang semantic feature khác nhau",
+          "Determinant luôn giữ nguyên",
+          "Rank luôn bằng 1",
+          "Số hàng đổi"
+        ],
+        "answer": "Mỗi cột mang semantic feature khác nhau",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E188-matrix-Q025",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Tiêu chí tối thiểu để đưa matrix vào báo cáo kỹ thuật là?",
+        "options": [
+          "Nêu shape, ý nghĩa hàng/cột, đơn vị và quy ước chỉ số",
+          "Chỉ in toàn bộ số liệu",
+          "Chỉ ghi determinant",
+          "Chỉ ghi tên biến A"
+        ],
+        "answer": "Nêu shape, ý nghĩa hàng/cột, đơn vị và quy ước chỉ số",
+        "explanation": "Đáp án dựa trên định nghĩa ma trận, quy ước hàng-cột, shape contract và semantics của ma trận trong dữ liệu/kỹ thuật.",
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION",
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "mindmapId": "E188-matrix-MM01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "lessonId": "MATH-VN-LA-C02-L01",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Ma trận = cấu trúc số + semantics hàng/cột",
+            "type": "root"
+          },
+          {
+            "id": "shape",
+            "label": "A∈R^{m×n}: m hàng, n cột",
+            "type": "formula"
+          },
+          {
+            "id": "index",
+            "label": "aᵢⱼ: hàng i, cột j",
+            "type": "definition"
+          },
+          {
+            "id": "data",
+            "label": "X∈R^{N×d}: mẫu × đặc trưng",
+            "type": "application"
+          },
+          {
+            "id": "map",
+            "label": "y=Ax: R^n→R^m",
+            "type": "formula"
+          },
+          {
+            "id": "contract",
+            "label": "Shape contract trước khi code",
+            "type": "validation"
+          },
+          {
+            "id": "semantics",
+            "label": "Không đảo axis/feature order",
+            "type": "warning"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "shape"
+          },
+          {
+            "from": "shape",
+            "to": "index"
+          },
+          {
+            "from": "root",
+            "to": "data"
+          },
+          {
+            "from": "root",
+            "to": "map"
+          },
+          {
+            "from": "map",
+            "to": "contract"
+          },
+          {
+            "from": "contract",
+            "to": "semantics"
+          }
+        ],
+        "tags": [
+          "matrix",
+          "E188"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E188_MATRIX_DEFINITION"
+      }
+    ]
+  }
+}
