@@ -369,24 +369,6 @@
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
     },
     {
-      "qaId": "E192-matmul-QA01",
-      "lessonId": "MATH-VN-LA-C02-L05",
-      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
-      "question": "Nếu giáo sư hỏi 'vì sao phép nhân ma trận phải là hàng nhân cột và vì sao AB≠BA?', bạn trả lời thế nào?",
-      "answer": "Hàng×cột bảo đảm mỗi phần tử đầu ra là tích vô hướng giữa tọa độ đầu vào và trọng số theo chiều chung, từ đó composition của ánh xạ tuyến tính được biểu diễn nhất quán. Thứ tự của composition có ý nghĩa nên đổi AB thành BA thường đổi phép biến đổi, thậm chí một trong hai tích có thể không tồn tại do shape.",
-      "followUp": [
-        "Điều kiện shape của AB là gì?",
-        "AB và Hadamard product khác nhau ra sao?",
-        "Trong layer Y=XW, chiều nào là chiều chung?"
-      ],
-      "tags": [
-        "matrix-multiplication",
-        "E192"
-      ],
-      "auditStatus": "PASS",
-      "sourceBundle": "E192_MATRIX_MULTIPLICATION"
-    },
-    {
       "qaId": "E193-power-QA01",
       "lessonId": "MATH-VN-LA-C02-L06",
       "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
