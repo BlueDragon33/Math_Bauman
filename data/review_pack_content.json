@@ -974,6 +974,47 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "reviewPackId": "E201-gradient-RP01",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Gradient của hàm vô hướng gồm những gì?",
+          "expected": "Vector các đạo hàm riêng theo từng biến."
+        },
+        {
+          "type": "geometry",
+          "prompt": "Gradient liên hệ thế nào với đường mức?",
+          "expected": "Vuông góc với tiếp tuyến đường mức tại điểm khả vi."
+        },
+        {
+          "type": "direction",
+          "prompt": "Hướng tăng nhanh nhất theo chuẩn Euclid?",
+          "expected": "Cùng hướng ∇f; tốc độ cực đại là ‖∇f‖₂."
+        },
+        {
+          "type": "optimization",
+          "prompt": "Gradient descent dùng hướng nào?",
+          "expected": "-∇f, kèm learning rate phù hợp."
+        },
+        {
+          "type": "verification",
+          "prompt": "Kiểm tra gradient số bằng cách nào?",
+          "expected": "So ∇f·u với finite difference theo một hoặc nhiều hướng u."
+        }
+      ],
+      "masteryGate": "Tính đúng gradient + giải thích directional derivative + chứng minh trực giác hướng tăng nhanh nhất + đọc hình học đường mức + nối đúng sang gradient descent và gradient checking",
+      "tags": [
+        "gradient",
+        "geometry",
+        "optimization",
+        "E201"
+      ]
     }
   ],
   "importPolicy": {
