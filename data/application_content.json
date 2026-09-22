@@ -523,6 +523,36 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "applicationId": "E188-matrix-A1",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Ma trận dữ liệu cảm biến",
+      "scenario": "Nhiều cảm biến cung cấp dữ liệu theo thời gian để đưa vào pipeline phát hiện bất thường.",
+      "method": "Chọn rows=time samples, cols=sensors/features; lưu tên cột, đơn vị, missing-value policy và shape contract.",
+      "expectedOutcome": "Pipeline có matrix semantics rõ, tránh đảo sensor/sample và dễ audit.",
+      "tags": [
+        "sensor",
+        "data-matrix"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "applicationId": "E188-matrix-A2",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Ma trận trọng số của lớp tuyến tính",
+      "scenario": "Một lớp mạng nhận vector feature và tạo representation mới.",
+      "method": "Mô tả W∈R^{m×n}, kiểm input dim n, output dim m và mapping feature trước phép nhân.",
+      "expectedOutcome": "Giảm lỗi shape và giải thích được mỗi chiều đầu ra được tạo từ feature đầu vào như thế nào.",
+      "tags": [
+        "ai",
+        "linear-layer"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
     }
   ],
   "importPolicy": {
