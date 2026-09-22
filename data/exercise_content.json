@@ -2406,6 +2406,112 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E192_MATRIX_MULTIPLICATION"
+    },
+    {
+      "exerciseId": "E193-power-E01",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Cho A=[[1,1],[0,1]]. Tính A².",
+      "solution": "A²=[[1,2],[0,1]].",
+      "tags": [
+        "power"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "exerciseId": "E193-power-E02",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Với A là ma trận 3×3, A⁰ bằng gì?",
+      "solution": "A⁰=I₃.",
+      "tags": [
+        "identity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "exerciseId": "E193-power-E03",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Viết p(A) cho p(x)=2x²-3x+5.",
+      "solution": "p(A)=2A²-3A+5I.",
+      "tags": [
+        "polynomial"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "exerciseId": "E193-power-E04",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Nếu A²=A thì A⁵ bằng gì?",
+      "solution": "A⁵=A vì A idempotent và mọi k≥1 cho Aᵏ=A.",
+      "tags": [
+        "idempotent"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "exerciseId": "E193-power-E05",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Vì sao không thể định nghĩa A² theo cách chuẩn nếu A shape 2×3?",
+      "solution": "A·A cần inner dimensions 3 và 2 bằng nhau, nên không tồn tại.",
+      "tags": [
+        "shape"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "exerciseId": "E193-power-E06",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Nêu lợi ích của Horner khi tính p(A) bậc cao.",
+      "solution": "Giảm số phép nhân ma trận và tránh tính/lưu nhiều A^k riêng lẻ; thường tốt hơn về thời gian và bộ nhớ.",
+      "tags": [
+        "horner",
+        "complexity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "exerciseId": "E193-power-E07",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Nếu χ_A(λ)=λ²-3λ+2, Cayley–Hamilton cho quan hệ gì?",
+      "solution": "A²-3A+2I=0, tức A²=3A-2I.",
+      "tags": [
+        "cayley-hamilton"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "exerciseId": "E193-power-E08",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "prompt": "Trong mô hình x_{k+1}=Ax_k, giải thích vai trò của A^k.",
+      "solution": "A^k truyền trạng thái qua k bước: x_k=A^k x_0 trong hệ tuyến tính thuần nhất rời rạc; cấu trúc/ổn định của A^k quyết định tăng/giảm trạng thái.",
+      "tags": [
+        "control",
+        "state-transition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
     }
   ],
   "importPolicy": {
