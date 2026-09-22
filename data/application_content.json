@@ -1017,6 +1017,38 @@
         "extrema",
         "engineering"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "applicationId": "E204-opt-A1",
+      "title": "Hiệu chỉnh tham số mô hình không ràng buộc",
+      "scenario": "Một mô hình cảm biến có hai tham số calibration và hàm chi phí bình phương sai số không đặt ràng buộc cứng.",
+      "method": "Tìm stationary point bằng ∇J=0 nếu giải được; kiểm Hessian/convexity; nếu giải số, dùng descent method và kiểm gradient norm, cost decrease, sensitivity.",
+      "expectedOutcome": "Phân biệt nghiệm dừng với nghiệm tối ưu có thể bảo vệ bằng curvature và cấu trúc hàm.",
+      "tags": [
+        "calibration",
+        "least-squares",
+        "optimization"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "applicationId": "E204-opt-A2",
+      "title": "Loss landscape trong học máy",
+      "scenario": "Training có thể đi qua local minimum, saddle hoặc vùng phẳng.",
+      "method": "Theo dõi gradient norm, loss, và nếu cần curvature/Hessian-vector information; không dùng riêng tiêu chí gradient nhỏ để khẳng định đã đạt minimum tốt.",
+      "expectedOutcome": "Đọc đúng trạng thái tối ưu và tránh dừng sai ở saddle/plateau.",
+      "tags": [
+        "machine-learning",
+        "loss-landscape",
+        "saddle"
+      ]
     }
   ],
   "importPolicy": {
