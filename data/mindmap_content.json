@@ -2086,6 +2086,81 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "mindmapId": "E200-partial-MM01",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Multivariable & partial derivatives",
+          "type": "root"
+        },
+        {
+          "id": "hold",
+          "label": "hold other variables fixed",
+          "type": "criterion"
+        },
+        {
+          "id": "partialx",
+          "label": "∂f/∂x",
+          "type": "formula"
+        },
+        {
+          "id": "partialy",
+          "label": "∂f/∂y",
+          "type": "formula"
+        },
+        {
+          "id": "sensitivity",
+          "label": "local sensitivity",
+          "type": "application"
+        },
+        {
+          "id": "linearization",
+          "label": "Σ partial·Δinput",
+          "type": "application"
+        },
+        {
+          "id": "gradient",
+          "label": "partials → gradient",
+          "type": "bridge"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "hold"
+        },
+        {
+          "from": "hold",
+          "to": "partialx"
+        },
+        {
+          "from": "hold",
+          "to": "partialy"
+        },
+        {
+          "from": "partialx",
+          "to": "sensitivity"
+        },
+        {
+          "from": "partialy",
+          "to": "linearization"
+        },
+        {
+          "from": "sensitivity",
+          "to": "gradient"
+        }
+      ],
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
     }
   ],
   "importPolicy": {
