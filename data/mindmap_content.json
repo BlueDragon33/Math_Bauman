@@ -796,27 +796,19 @@
       "edges": [
         {
           "from": "root",
+          "to": "geometry"
+        },
+        {
+          "from": "geometry",
           "to": "l1"
         },
         {
-          "from": "root",
+          "from": "geometry",
           "to": "l2"
         },
         {
-          "from": "root",
+          "from": "geometry",
           "to": "linf"
-        },
-        {
-          "from": "l1",
-          "to": "geometry"
-        },
-        {
-          "from": "l2",
-          "to": "geometry"
-        },
-        {
-          "from": "linf",
-          "to": "geometry"
         },
         {
           "from": "geometry",
