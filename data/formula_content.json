@@ -1569,6 +1569,78 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "formulaId": "E196-inverse-F1",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Điều kiện tồn tại của ma trận nghịch đảo",
+      "formula": "A^{-1} tồn tại ⇔ det(A)≠0 ⇔ rank(A)=n",
+      "meaning": "Với ma trận vuông n×n, khả nghịch tương đương định thức khác 0, full rank và hệ Ax=b có nghiệm duy nhất với mọi b.",
+      "conditions": [
+        "A phải là ma trận vuông.",
+        "Trong tính số, cần phân biệt khả nghịch lý thuyết với gần suy biến/kém điều kiện."
+      ],
+      "commonMistakes": [
+        "Tìm inverse cho ma trận không vuông như inverse thông thường.",
+        "Thấy det(A) rất nhỏ nhưng vẫn coi phép nghịch đảo ổn định."
+      ],
+      "programmingUse": "Trong code, ưu tiên solve(A,b) thay vì tạo A^{-1} rồi nhân b; kiểm condition number khi nghi ngờ gần suy biến.",
+      "tags": [
+        "inverse",
+        "invertibility",
+        "determinant"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "formulaId": "E196-inverse-F2",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Công thức nghịch đảo ma trận 2×2",
+      "formula": "A^{-1}=1/(ad-bc) · [[d,-b],[-c,a]]",
+      "meaning": "Với A=[[a,b],[c,d]], nghịch đảo tồn tại khi ad-bc≠0 và có thể tính trực tiếp bằng adjugate chia determinant.",
+      "conditions": [
+        "A là 2×2.",
+        "ad-bc khác 0."
+      ],
+      "commonMistakes": [
+        "Đổi dấu sai hai phần tử ngoài đường chéo.",
+        "Quên đổi vị trí a và d.",
+        "Chia từng phần tử A cho determinant thay vì dùng adjugate."
+      ],
+      "programmingUse": "Hữu ích để kiểm tay và unit test; với ma trận lớn không dùng công thức adjugate vì kém hiệu quả và kém ổn định.",
+      "tags": [
+        "inverse-2x2",
+        "adjugate"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "formulaId": "E196-inverse-F3",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Kiểm chứng inverse",
+      "formula": "AA^{-1}=A^{-1}A=I",
+      "meaning": "Nghịch đảo là phép biến đổi ngược hai phía của ma trận vuông khả nghịch; nhân kiểm tra phải thu được identity.",
+      "conditions": [
+        "A và A^{-1} cùng cấp n×n.",
+        "Trong floating point, kiểm gần bằng I với tolerance thay vì equality tuyệt đối."
+      ],
+      "commonMistakes": [
+        "Chỉ kiểm một phần tử hoặc một phía rồi kết luận.",
+        "Dùng exact equality cho số thực floating point."
+      ],
+      "programmingUse": "Regression test: norm(A@Ainv-I) nhỏ; kết hợp condition number để phân biệt residual nhỏ nhưng nghiệm nhạy.",
+      "tags": [
+        "inverse",
+        "identity",
+        "residual"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
     }
   ],
   "importPolicy": {
