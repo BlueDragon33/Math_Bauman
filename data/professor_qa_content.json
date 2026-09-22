@@ -367,6 +367,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "qaId": "E192-power-QA01",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Nếu giáo sư hỏi 'A^k chỉ là ký hiệu lũy thừa hay có ý nghĩa hệ thống?', bạn trả lời thế nào?",
+      "answer": "A^k là composition k lần của cùng linear transform. Trong hệ rời rạc x_{k+1}=Ax_k, nó là toán tử chuyển trạng thái k bước; hành vi của A^k phản ánh mode động lực, spectral radius và conditioning, nên có ý nghĩa trực tiếp về ổn định và khuếch đại.",
+      "followUp": [
+        "Tại sao (A+B)^2 không luôn có 2AB?",
+        "Cayley-Hamilton giúp gì?",
+        "Non-normality ảnh hưởng A^k thế nào?"
+      ],
+      "tags": [
+        "matrix-power",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
     }
   ],
   "importPolicy": {
