@@ -2203,6 +2203,78 @@
         "classification",
         "local-optimum"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "formulaId": "E205-gd-F1",
+      "title": "Bước gradient descent",
+      "formula": "x_{k+1}=x_k-η_k∇f(x_k)",
+      "meaning": "Mỗi bước đi ngược gradient; learning rate η_k quyết định độ dài bước và tương tác trực tiếp với curvature.",
+      "conditions": [
+        "Gradient tồn tại tại x_k.",
+        "η_k>0 và phải phù hợp độ trơn/độ cong của bài toán."
+      ],
+      "commonMistakes": [
+        "Tưởng hướng đúng thì step size nào cũng giảm loss.",
+        "Dùng cùng learning rate sau khi đổi scale feature mà không kiểm lại."
+      ],
+      "programmingUse": "Cập nhật tham số cơ bản trong tối ưu số và huấn luyện mô hình.",
+      "tags": [
+        "gradient-descent",
+        "learning-rate",
+        "update"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "formulaId": "E205-gd-F2",
+      "title": "Quadratic 1D và miền hội tụ",
+      "formula": "f(x)=½ax², a>0 ⇒ x_{k+1}=(1-ηa)x_k; hội tụ khi |1-ηa|<1 ⇔ 0<η<2/a",
+      "meaning": "Mô hình quadratic cho thấy learning rate quá lớn gây dao động hoặc phân kỳ; η=1/a đưa x về 0 trong một bước ở 1D lý tưởng.",
+      "conditions": [
+        "a>0.",
+        "Gradient descent với learning rate hằng."
+      ],
+      "commonMistakes": [
+        "Áp 2/a cho mọi hàm phi tuyến như một định luật toàn cục.",
+        "Không phân biệt hội tụ dao động với phân kỳ."
+      ],
+      "programmingUse": "Tạo trực giác ổn định số và chọn learning rate theo curvature.",
+      "tags": [
+        "quadratic",
+        "convergence",
+        "stability"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "formulaId": "E205-gd-F3",
+      "title": "Bảo đảm giảm cho hàm L-smooth",
+      "formula": "Nếu ∇f L-Lipschitz, với 0<η≤1/L: f(x_{k+1})≤f(x_k)-η(1-Lη/2)‖∇f(x_k)‖²",
+      "meaning": "Một bound điển hình cho thấy learning rate bị chi phối bởi độ trơn L; với η đủ nhỏ, mỗi bước tạo giảm có kiểm soát.",
+      "conditions": [
+        "Gradient L-Lipschitz trên vùng xét.",
+        "Đây là bảo đảm descent; tốc độ/global guarantee còn phụ thuộc convexity và giả thiết khác."
+      ],
+      "commonMistakes": [
+        "Nhầm L-smooth với strong convexity.",
+        "Cho rằng η≤1/L luôn là lựa chọn tối ưu thực tế."
+      ],
+      "programmingUse": "Giải thích step-size an toàn, backtracking và scheduler.",
+      "tags": [
+        "smoothness",
+        "descent-lemma",
+        "step-size"
+      ]
     }
   ],
   "importPolicy": {
