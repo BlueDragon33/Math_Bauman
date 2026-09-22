@@ -298,6 +298,38 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "applicationId": "E180-span-A1",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Không gian đặc trưng và biểu diễn giảm chiều",
+      "scenario": "Dữ liệu cảm biến có nhiều feature nhưng phần lớn biến thiên nằm trong một không gian con thấp chiều.",
+      "method": "Biểu diễn mẫu x trong span của các vector cơ sở/latent directions; đo residual ngoài subspace để biết phần thông tin không được mô hình hóa.",
+      "expectedOutcome": "Phân biệt được phần dữ liệu được giải thích bởi subspace và phần residual, tránh coi phép chiếu giảm chiều là không mất thông tin.",
+      "tags": [
+        "span",
+        "feature-subspace",
+        "pca"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "applicationId": "E180-span-A2",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Không gian sinh trong điều khiển và trạng thái",
+      "scenario": "Các hướng tác động của cơ cấu chấp hành tạo ra một tập hướng trạng thái có thể sinh.",
+      "method": "Xem các vector/hướng tác động như các vector sinh; kiểm trạng thái mục tiêu có nằm trong span tương ứng và theo dõi rank của ma trận sinh.",
+      "expectedOutcome": "Biết khi nào một hướng mục tiêu không thể tạo chỉ bằng các hướng hiện có; hiểu span/rank là cầu nối sang controllability ở chương điều khiển.",
+      "tags": [
+        "span",
+        "control",
+        "state-space"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
     }
   ],
   "importPolicy": {

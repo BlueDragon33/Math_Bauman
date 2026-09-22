@@ -676,6 +676,81 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "mindmapId": "E180-span-MM01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Không gian vector · span · subspace",
+          "type": "root"
+        },
+        {
+          "id": "comb",
+          "label": "Linear combination: Σαᵢvᵢ",
+          "type": "formula"
+        },
+        {
+          "id": "span",
+          "label": "Span = mọi tổ hợp tuyến tính",
+          "type": "concept"
+        },
+        {
+          "id": "subspace",
+          "label": "Subspace = đóng dưới αu+βv",
+          "type": "gate"
+        },
+        {
+          "id": "depend",
+          "label": "Vector phụ thuộc không tăng span",
+          "type": "warning"
+        },
+        {
+          "id": "membership",
+          "label": "Membership: Vα=x · rank/residual",
+          "type": "validation"
+        },
+        {
+          "id": "application",
+          "label": "PCA/feature subspace · state/control",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "comb"
+        },
+        {
+          "from": "comb",
+          "to": "span"
+        },
+        {
+          "from": "span",
+          "to": "subspace"
+        },
+        {
+          "from": "span",
+          "to": "depend"
+        },
+        {
+          "from": "span",
+          "to": "membership"
+        },
+        {
+          "from": "membership",
+          "to": "application"
+        }
+      ],
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
     }
   ],
   "importPolicy": {

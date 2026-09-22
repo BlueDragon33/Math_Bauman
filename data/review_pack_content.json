@@ -292,6 +292,41 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "reviewPackId": "E180-span-RP01",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự giải thích trong 60 giây: tổ hợp tuyến tính, span và không gian con liên hệ thế nào.",
+          "expected": "Tổ hợp tuyến tính tạo vector mới; span là tập mọi tổ hợp tuyến tính; span luôn là subspace."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao 'thêm vector mới luôn tăng chiều span' là sai.",
+          "expected": "Nếu vector mới đã thuộc span hiện tại thì không tạo hướng độc lập mới; rank không tăng."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết tiêu chuẩn x∈span(V) bằng hệ Vα=x và nêu cách kiểm rank.",
+          "expected": "Có nghiệm α; trong số học chính xác rank(V)=rank([V|x])."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một ví dụ AI/cảm biến/điều khiển nơi subspace quyết định phần thông tin hoặc hướng trạng thái có thể biểu diễn.",
+          "expected": "Ví dụ latent/PCA subspace hoặc span của các hướng tác động; phải báo phần residual ngoài subspace."
+        }
+      ],
+      "masteryGate": "Phân biệt đúng linear combination/span/subspace + kiểm membership bằng hệ/rank + nhận ra phụ thuộc tuyến tính + biết giới hạn số học",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
     }
   ],
   "importPolicy": {

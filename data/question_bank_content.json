@@ -5112,6 +5112,581 @@
       "auditStatus": "PASS",
       "sourceBundle": "E178_MATRIX_MULTIPLICATION",
       "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q001",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Span của {v₁,v₂} là gì?",
+      "options": [
+        "Tập mọi αv₁+βv₂",
+        "Chỉ gồm v₁ và v₂",
+        "Chỉ gồm v₁+v₂",
+        "Tập vector cùng độ dài"
+      ],
+      "answer": "Tập mọi αv₁+βv₂",
+      "explanation": "Span chứa mọi tổ hợp tuyến tính với hệ số vô hướng.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q002",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Vector 0 có luôn thuộc span của một tập vector không?",
+      "options": [
+        "Có",
+        "Không",
+        "Chỉ khi có vector 0 trong tập sinh",
+        "Chỉ với R²"
+      ],
+      "answer": "Có",
+      "explanation": "Chọn mọi hệ số bằng 0 luôn tạo vector 0.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q003",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Nếu v₂=3v₁ thì span{v₁,v₂} có số chiều tối đa bao nhiêu (v₁≠0)?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Không xác định"
+      ],
+      "answer": "1",
+      "explanation": "Hai vector cùng phương nên chỉ sinh một hướng độc lập.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q004",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Điều nào là cần thiết để W là không gian con?",
+      "options": [
+        "0∈W",
+        "W hữu hạn",
+        "W chỉ chứa vector đơn vị",
+        "W có đúng một cơ sở"
+      ],
+      "answer": "0∈W",
+      "explanation": "Mọi subspace phải chứa vector không.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q005",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "x thuộc span{v₁,…,vₖ} khi nào?",
+      "options": [
+        "Tồn tại αᵢ sao cho x=Σαᵢvᵢ",
+        "x có cùng chuẩn với một vᵢ",
+        "x vuông góc mọi vᵢ",
+        "x bằng một vector sinh"
+      ],
+      "answer": "Tồn tại αᵢ sao cho x=Σαᵢvᵢ",
+      "explanation": "Đây là định nghĩa membership trong span.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q006",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Thêm một vector đã nằm trong span hiện tại sẽ làm gì?",
+      "options": [
+        "Không đổi span",
+        "Luôn tăng chiều thêm 1",
+        "Làm span rỗng",
+        "Biến span thành affine set"
+      ],
+      "answer": "Không đổi span",
+      "explanation": "Vector mới không thêm hướng độc lập.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q007",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "span{(1,0),(0,1)} trong R² bằng gì?",
+      "options": [
+        "R²",
+        "Một đường thẳng",
+        "{0}",
+        "Đường tròn đơn vị"
+      ],
+      "answer": "R²",
+      "explanation": "Hai vector cơ sở chuẩn sinh toàn bộ R².",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q008",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Tập nghiệm của Ax=0 là gì về mặt cấu trúc?",
+      "options": [
+        "Một không gian con",
+        "Luôn là affine set không qua gốc",
+        "Không bao giờ là subspace",
+        "Chỉ là một vector"
+      ],
+      "answer": "Một không gian con",
+      "explanation": "Null space chứa 0 và đóng dưới tổ hợp tuyến tính.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q009",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "W={(x,y):x+y=0} là subspace vì sao?",
+      "options": [
+        "Đóng dưới tổ hợp tuyến tính và chứa 0",
+        "Vì là đường thẳng bất kỳ",
+        "Vì có vô số điểm",
+        "Vì x,y đều thực"
+      ],
+      "answer": "Đóng dưới tổ hợp tuyến tính và chứa 0",
+      "explanation": "Điều kiện tuyến tính thuần nhất bảo toàn dưới tổ hợp tuyến tính.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q010",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "A={(x,y):x+y=1} không là subspace chủ yếu vì?",
+      "options": [
+        "Không chứa vector 0",
+        "Chỉ có một chiều",
+        "Không có vector nào",
+        "Không viết được bằng phương trình"
+      ],
+      "answer": "Không chứa vector 0",
+      "explanation": "(0,0) không thỏa x+y=1.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q011",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Điều kiện rank nào kiểm x∈span(V) trong số học chính xác?",
+      "options": [
+        "rank(V)=rank([V|x])",
+        "rank(V)>rank([V|x])",
+        "rank(V)=0",
+        "rank(V)=số hàng luôn luôn"
+      ],
+      "answer": "rank(V)=rank([V|x])",
+      "explanation": "Thêm x không tăng rank khi x đã nằm trong column space.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q012",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Nếu rank([v₁ v₂ v₃])=2 thì tối đa bao nhiêu vector độc lập tuyến tính trong ba vector?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": "2",
+      "explanation": "Rank bằng số cột độc lập tối đa.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q013",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Phát biểu nào đúng về span khi nhân mọi vector sinh với một hằng số c≠0?",
+      "options": [
+        "Span không đổi",
+        "Span luôn tăng chiều",
+        "Span trở thành {0}",
+        "Span thành affine set"
+      ],
+      "answer": "Span không đổi",
+      "explanation": "Hệ số khác 0 chỉ rescale vector sinh, không đổi hướng sinh.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q014",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Trong NumPy, cách nào phù hợp để tìm α xấp xỉ Vα≈x?",
+      "options": [
+        "Least squares",
+        "Đảo V bất kể shape",
+        "Softmax",
+        "FFT"
+      ],
+      "answer": "Least squares",
+      "explanation": "Least squares xử lý hệ vuông/không vuông và cho residual.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q015",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Một tập vector sinh có nhiều vector hơn số chiều không gian thì điều gì chắc chắn xảy ra?",
+      "options": [
+        "Có phụ thuộc tuyến tính",
+        "Tất cả bằng 0",
+        "Không thể tạo span",
+        "Mọi vector trực giao"
+      ],
+      "answer": "Có phụ thuộc tuyến tính",
+      "explanation": "Trong không gian n chiều, hơn n vector luôn phụ thuộc tuyến tính.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q016",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Vì sao residual nhỏ chưa đủ để tuyên bố x thuộc span trong dữ liệu số?",
+      "options": [
+        "Cần xét scale, tolerance và điều kiện số",
+        "Residual nhỏ luôn vô nghĩa",
+        "Span không dùng được với số thực",
+        "Phải có residual đúng 1"
+      ],
+      "answer": "Cần xét scale, tolerance và điều kiện số",
+      "explanation": "Sai số số/đo làm membership cần tiêu chuẩn tương đối và tolerance.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q017",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Nếu hai vector gần cùng phương, điều gì có thể xảy ra khi ước lượng hệ số biểu diễn?",
+      "options": [
+        "Hệ số rất nhạy với nhiễu",
+        "Rank chắc chắn tăng",
+        "Residual luôn bằng 0 chính xác",
+        "Không có vấn đề số"
+      ],
+      "answer": "Hệ số rất nhạy với nhiễu",
+      "explanation": "Ma trận cơ sở gần suy biến có condition number lớn.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q018",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Column space của ma trận A là gì?",
+      "options": [
+        "Span của các cột A",
+        "Span của các hàng A",
+        "Null space của A",
+        "Tập nghiệm Ax=b với b cố định"
+      ],
+      "answer": "Span của các cột A",
+      "explanation": "Định nghĩa column space là không gian sinh bởi các cột.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q019",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Khi x không thuộc span(V), phép least-squares tìm gì?",
+      "options": [
+        "Vector Vα gần x nhất trong column space theo chuẩn L2",
+        "Một vector ngoài span",
+        "Luôn nghiệm chính xác",
+        "Một phép đổi cơ sở trực giao bắt buộc"
+      ],
+      "answer": "Vector Vα gần x nhất trong column space theo chuẩn L2",
+      "explanation": "Least squares chiếu x lên column space khi dùng chuẩn Euclid.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q020",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Vì sao Ax=b với b≠0 không nhất thiết tạo subspace của nghiệm x?",
+      "options": [
+        "Tập nghiệm nếu có thường không chứa 0",
+        "Vì A luôn không vuông",
+        "Vì b phải là vector riêng",
+        "Vì phép nhân ma trận không tuyến tính"
+      ],
+      "answer": "Tập nghiệm nếu có thường không chứa 0",
+      "explanation": "Nghiệm của hệ không thuần nhất là affine translate của null space.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q021",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Nếu W₁,W₂ là subspace, giao W₁∩W₂ có luôn là subspace không?",
+      "options": [
+        "Có",
+        "Không",
+        "Chỉ trong R²",
+        "Chỉ khi trực giao"
+      ],
+      "answer": "Có",
+      "explanation": "Vector 0 thuộc cả hai và tính đóng được bảo toàn trong giao.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q022",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Tổng W₁+W₂={u+v:u∈W₁,v∈W₂} có là subspace không?",
+      "options": [
+        "Có",
+        "Không",
+        "Chỉ khi W₁=W₂",
+        "Chỉ khi giao bằng {0}"
+      ],
+      "answer": "Có",
+      "explanation": "Tổng hai subspace chứa 0 và đóng dưới tổ hợp tuyến tính.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q023",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Trong PCA, dữ liệu được giữ trong một subspace thấp chiều. Đại lượng nào phản ánh phần không được biểu diễn?",
+      "options": [
+        "Residual ngoài subspace",
+        "Số mẫu tuyệt đối",
+        "Tên feature",
+        "Chỉ số hàng"
+      ],
+      "answer": "Residual ngoài subspace",
+      "explanation": "Sai số tái tạo là thành phần trực giao/ngoài subspace đã giữ.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q024",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Khi quyết định rank bằng SVD, vì sao cần tolerance?",
+      "options": [
+        "Singular value rất nhỏ có thể do nhiễu/làm tròn",
+        "SVD không trả singular values",
+        "Tolerance làm rank luôn bằng 1",
+        "Vì rank không liên quan dữ liệu"
+      ],
+      "answer": "Singular value rất nhỏ có thể do nhiễu/làm tròn",
+      "explanation": "Rank số cần ngưỡng để phân biệt hướng thật với gần suy biến.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E180-span-Q025",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Muốn chứng minh một tập W là subspace nhanh nhất, cách nào thường gọn?",
+      "options": [
+        "Chứng minh với mọi u,v∈W và α,β thì αu+βv∈W",
+        "Liệt kê thật nhiều phần tử",
+        "Vẽ đồ thị đẹp",
+        "Chỉ kiểm W không rỗng"
+      ],
+      "answer": "Chứng minh với mọi u,v∈W và α,β thì αu+βv∈W",
+      "explanation": "Tiêu chuẩn tổ hợp tuyến tính gộp hai tính đóng và kéo theo vector 0 khi W không rỗng thích hợp.",
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN",
+      "stage": "vn"
     }
   ],
   "importPolicy": {

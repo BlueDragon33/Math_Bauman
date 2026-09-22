@@ -1087,6 +1087,120 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "exerciseId": "E180-span-E01",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Trong R², hãy viết (5,1) dưới dạng tổ hợp tuyến tính của e₁=(1,0), e₂=(0,1).",
+      "solution": "(5,1)=5e₁+1e₂.",
+      "tags": [
+        "linear-combination",
+        "coordinates"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "exerciseId": "E180-span-E02",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Tập {v=(2,4)} sinh ra tập nào trong R²?",
+      "solution": "span{v}={t(2,4):t∈R}, là đường thẳng qua gốc theo hướng (1,2).",
+      "tags": [
+        "span",
+        "geometry"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "exerciseId": "E180-span-E03",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Kiểm tra x=(3,5) có thuộc span{(1,1),(1,2)} hay không.",
+      "solution": "Giải a(1,1)+b(1,2)=(3,5): a+b=3, a+2b=5 ⇒ b=2, a=1. Vậy x thuộc span.",
+      "tags": [
+        "span",
+        "linear-system"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "exerciseId": "E180-span-E04",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Các vector (1,0,1), (0,1,1), (1,1,2) có làm span lớn hơn khi thêm vector thứ ba không?",
+      "solution": "Không. Vector thứ ba bằng tổng hai vector đầu, nên span của ba vector bằng span của hai vector đầu.",
+      "tags": [
+        "span",
+        "dependence"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "exerciseId": "E180-span-E05",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Tập W={(x,y)∈R² | x+y=0} có là không gian con của R² không?",
+      "solution": "Có. W chứa 0 và nếu u,v thỏa x+y=0 thì mọi αu+βv cũng thỏa; W=span{(1,-1)}.",
+      "tags": [
+        "subspace",
+        "closure"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "exerciseId": "E180-span-E06",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Tập A={(x,y)∈R² | x+y=1} có là không gian con không? Giải thích bằng tiêu chuẩn tối thiểu.",
+      "solution": "Không, vì (0,0) không thuộc A. Đây là một tập affine, không phải subspace.",
+      "tags": [
+        "subspace",
+        "affine"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "exerciseId": "E180-span-E07",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Ma trận V có các cột v₁,v₂,v₃. Nêu điều kiện để x thuộc span{v₁,v₂,v₃} bằng ngôn ngữ hệ tuyến tính và bằng rank.",
+      "solution": "x thuộc span(V) khi Vα=x có nghiệm; tương đương rank(V)=rank([V|x]) trong số học chính xác.",
+      "tags": [
+        "span",
+        "rank",
+        "linear-system"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "exerciseId": "E180-span-E08",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "prompt": "Trong dữ liệu nhiễu, residual ||Vα−x|| nhỏ nhưng không bằng 0. Vì sao không nên kết luận cứng x∈span(V), và nên báo cáo gì?",
+      "solution": "Do sai số đo/làm tròn, membership tuyệt đối không còn rõ. Nên báo residual tương đối, rank/SVD tolerance và ngưỡng quyết định thay vì chỉ true/false.",
+      "tags": [
+        "span",
+        "numerical",
+        "svd"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
     }
   ],
   "importPolicy": {

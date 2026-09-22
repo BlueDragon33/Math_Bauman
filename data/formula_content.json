@@ -514,6 +514,78 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "formulaId": "E180-span-F1",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Tổ hợp tuyến tính",
+      "formula": "v = α₁v₁ + α₂v₂ + … + αₖvₖ",
+      "meaning": "Vector v là tổ hợp tuyến tính của tập vector khi tồn tại các hệ số vô hướng αᵢ tạo ra v.",
+      "conditions": [
+        "Các vector vᵢ thuộc cùng một không gian vector.",
+        "Các hệ số αᵢ thuộc trường vô hướng của không gian đang xét."
+      ],
+      "commonMistakes": [
+        "Chỉ cộng các vector mà quên hệ số vô hướng.",
+        "Dùng vector khác chiều hoặc khác không gian biểu diễn."
+      ],
+      "programmingUse": "Trong NumPy, tổ hợp tuyến tính của các cột V có thể viết V @ alpha; phải kiểm V.shape[1] == len(alpha).",
+      "tags": [
+        "vector-space",
+        "linear-combination",
+        "span"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "formulaId": "E180-span-F2",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Không gian sinh (span)",
+      "formula": "span{v₁,…,vₖ} = {Σᵢ αᵢvᵢ | αᵢ ∈ R}",
+      "meaning": "Span là tập tất cả tổ hợp tuyến tính tạo được từ các vector sinh; nó là một không gian con.",
+      "conditions": [
+        "Tập sinh nằm trong cùng không gian vector.",
+        "Khi kiểm một vector có thuộc span, phải giải hệ hệ số tương ứng."
+      ],
+      "commonMistakes": [
+        "Nhầm span với chính tập hữu hạn các vector sinh.",
+        "Cho rằng thêm một vector phụ thuộc tuyến tính luôn làm tăng chiều span."
+      ],
+      "programmingUse": "Kiểm x thuộc span(V) bằng nghiệm least-squares và residual; với dữ liệu số nên dùng rank/SVD thay vì nghịch đảo trực tiếp.",
+      "tags": [
+        "vector-space",
+        "span",
+        "subspace"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "formulaId": "E180-span-F3",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Tiêu chuẩn không gian con",
+      "formula": "W ≤ V ⇔ 0∈W và ∀u,v∈W, ∀α,β: αu+βv∈W",
+      "meaning": "Một tập W là không gian con khi đóng dưới mọi tổ hợp tuyến tính; kiểm đóng dưới αu+βv gộp cả phép cộng và nhân vô hướng.",
+      "conditions": [
+        "W là tập con của một không gian vector V.",
+        "Điều kiện phải đúng với mọi u,v và mọi vô hướng α,β."
+      ],
+      "commonMistakes": [
+        "Chỉ kiểm vài ví dụ số rồi kết luận là không gian con.",
+        "Quên kiểm vector 0 hoặc điều kiện đóng."
+      ],
+      "programmingUse": "Các nghiệm của Ax=0 tạo null space — một subspace; với Ax=b, b≠0 nói chung là affine set chứ không phải subspace.",
+      "tags": [
+        "vector-space",
+        "subspace",
+        "closure"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
     }
   ],
   "importPolicy": {
