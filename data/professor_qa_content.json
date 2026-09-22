@@ -594,6 +594,25 @@
         "oral-exam",
         "E203"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "qaId": "E204-opt-QA01",
+      "question": "Nếu giáo sư hỏi 'vì sao ∇f=0 chưa đủ để nói đã tối ưu, và một hướng giảm được định nghĩa thế nào?', bạn trả lời thế nào?",
+      "answer": "∇f=0 chỉ là điều kiện cần bậc nhất cho cực trị nội tại của hàm khả vi; stationary point có thể là min, max, saddle hoặc điểm uốn. Phải dùng curvature/Hessian, convexity hoặc phân tích bổ sung để phân loại. Tại điểm có gradient khác 0, p là hướng giảm nếu ∇fᵀp<0; nhưng để một bước hữu hạn giảm f thì step size cũng phải phù hợp.",
+      "followUp": [
+        "Local min khác global min thế nào?",
+        "Hessian bán xác định xử lý ra sao?",
+        "Vì sao -∇f luôn là một hướng giảm khi ∇f≠0?"
+      ],
+      "tags": [
+        "unconstrained-optimization",
+        "oral-exam",
+        "E204"
+      ]
     }
   ],
   "importPolicy": {
