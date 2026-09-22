@@ -2723,6 +2723,114 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "exerciseId": "E196-inverse-E01",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Ma trận vuông A có det(A)=0. A có nghịch đảo không?",
+      "solution": "Không. det(A)=0 nghĩa là A suy biến và không khả nghịch.",
+      "tags": [
+        "invertibility"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "exerciseId": "E196-inverse-E02",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Tính nghịch đảo của [[2,0],[0,4]].",
+      "solution": "A^{-1}=[[1/2,0],[0,1/4]].",
+      "tags": [
+        "inverse-2x2"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "exerciseId": "E196-inverse-E03",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Tính A^{-1} với A=[[1,2],[3,5]].",
+      "solution": "det=-1; A^{-1}=[[-5,2],[3,-1]].",
+      "tags": [
+        "inverse-2x2"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "exerciseId": "E196-inverse-E04",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Giải thích vì sao ma trận có hai hàng phụ thuộc tuyến tính không thể khả nghịch.",
+      "solution": "Hai hàng phụ thuộc làm rank<n, determinant bằng 0 và phép biến đổi mất thông tin nên không tồn tại ánh xạ ngược duy nhất.",
+      "tags": [
+        "rank",
+        "invertibility"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "exerciseId": "E196-inverse-E05",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Nếu A khả nghịch và Ax=b, viết nghiệm x.",
+      "solution": "x=A^{-1}b. Trong tính số thực tế nên dùng solver thay vì tạo inverse tường minh.",
+      "tags": [
+        "linear-system"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "exerciseId": "E196-inverse-E06",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Vì sao không nên dùng inv(A)@b để giải hệ tuyến tính trong code số?",
+      "solution": "Tạo inverse tường minh tốn tính toán, tăng sai số và kém ổn định hơn các solver dùng LU/QR phù hợp.",
+      "tags": [
+        "numerical-linear-algebra"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "exerciseId": "E196-inverse-E07",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Một ma trận có det rất nhỏ nhưng khác 0. Vì sao vẫn cần cảnh giác?",
+      "solution": "Nó có thể gần suy biến, condition number lớn; nghịch đảo tồn tại lý thuyết nhưng rất nhạy với nhiễu và roundoff.",
+      "tags": [
+        "condition-number",
+        "near-singular"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "exerciseId": "E196-inverse-E08",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "prompt": "Trong ước lượng trạng thái/điều khiển, khi nào regularization hoặc pseudoinverse phù hợp hơn inverse thường?",
+      "solution": "Khi ma trận không vuông, rank-deficient hoặc gần suy biến; pseudoinverse/SVD và regularization xử lý nghiệm least-squares hay giảm nhạy số tốt hơn inverse thường.",
+      "tags": [
+        "pseudoinverse",
+        "regularization",
+        "control"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
     }
   ],
   "importPolicy": {
