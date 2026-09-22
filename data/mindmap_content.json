@@ -1417,6 +1417,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "mindmapId": "E191-arith-MM01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Matrix arithmetic = cùng shape + cùng semantics",
+          "type": "root"
+        },
+        {
+          "id": "add",
+          "label": "A±B: cộng/trừ từng phần tử",
+          "type": "formula"
+        },
+        {
+          "id": "scalar",
+          "label": "αA: scale mọi phần tử",
+          "type": "formula"
+        },
+        {
+          "id": "combo",
+          "label": "αA+βB: tổ hợp tuyến tính",
+          "type": "formula"
+        },
+        {
+          "id": "shape",
+          "label": "Shape contract trước phép toán",
+          "type": "validation"
+        },
+        {
+          "id": "units",
+          "label": "Kiểm đơn vị/representation",
+          "type": "warning"
+        },
+        {
+          "id": "broadcast",
+          "label": "Broadcasting ≠ cộng cùng cấp chuẩn",
+          "type": "warning"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "add"
+        },
+        {
+          "from": "root",
+          "to": "scalar"
+        },
+        {
+          "from": "root",
+          "to": "combo"
+        },
+        {
+          "from": "add",
+          "to": "shape"
+        },
+        {
+          "from": "shape",
+          "to": "units"
+        },
+        {
+          "from": "root",
+          "to": "broadcast"
+        }
+      ],
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
     }
   ],
   "importPolicy": {
