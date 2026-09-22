@@ -2078,6 +2078,86 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "simulationId": "E196-inv-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng inverse khi det→0",
+      "purpose": "Thay ε trong A=[[1,1],[1,1+ε]] và quan sát norm(A⁻¹), condition number.",
+      "controls": [
+        {
+          "key": "epsilon",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "det",
+          "label": "det(A)"
+        },
+        {
+          "key": "cond",
+          "label": "Condition number"
+        },
+        {
+          "key": "inverse_norm",
+          "label": "||A⁻¹||"
+        }
+      ],
+      "expectedObservation": "Khi ε→0, A tiến gần singular, condition và norm inverse tăng mạnh.",
+      "tags": [
+        "conditioning",
+        "inverse"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "simulationId": "E196-inv-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "So sánh solve(A,b) và inv(A)b",
+      "purpose": "Quan sát thời gian/residual với cùng hệ tuyến tính.",
+      "controls": [
+        {
+          "key": "size",
+          "type": "number",
+          "default": 50
+        },
+        {
+          "key": "condition_target",
+          "type": "number",
+          "default": 1000
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "solve_residual",
+          "label": "Residual solve"
+        },
+        {
+          "key": "inverse_residual",
+          "label": "Residual inv(A)b"
+        },
+        {
+          "key": "runtime_ratio",
+          "label": "Tỷ lệ thời gian"
+        }
+      ],
+      "expectedObservation": "Solver trực tiếp thường hiệu quả và ổn định hơn explicit inverse cho Ax=b.",
+      "tags": [
+        "solver",
+        "benchmark"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
     }
   ],
   "importPolicy": {
