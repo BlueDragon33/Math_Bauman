@@ -2158,6 +2158,86 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "simulationId": "E197-limits-SIM1",
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "title": "Mô phỏng giới hạn removable singularity",
+      "purpose": "Cho x tiến tới 1 trong (x²-1)/(x-1) và so với biểu thức rút gọn x+1.",
+      "controls": [
+        {
+          "key": "x",
+          "type": "number",
+          "default": 0.9
+        },
+        {
+          "key": "step",
+          "type": "number",
+          "default": 0.01
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "raw_value",
+          "label": "f(x)"
+        },
+        {
+          "key": "simplified_value",
+          "label": "x+1"
+        },
+        {
+          "key": "distance_to_limit",
+          "label": "|f(x)-2|"
+        }
+      ],
+      "expectedObservation": "Dù biểu thức gốc không xác định tại x=1, giá trị quanh 1 tiến về 2.",
+      "tags": [
+        "limit",
+        "removable"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "simulationId": "E197-limits-SIM2",
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "title": "Mô phỏng finite-difference error theo h",
+      "purpose": "Quan sát error của derivative estimate khi h giảm từ thô đến cực nhỏ.",
+      "controls": [
+        {
+          "key": "h",
+          "type": "number",
+          "default": 0.01
+        },
+        {
+          "key": "method",
+          "type": "select",
+          "default": "central"
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "estimate",
+          "label": "Derivative estimate"
+        },
+        {
+          "key": "absolute_error",
+          "label": "Absolute error"
+        },
+        {
+          "key": "roundoff_indicator",
+          "label": "Roundoff indicator"
+        }
+      ],
+      "expectedObservation": "Error thường giảm rồi tăng lại khi h quá nhỏ; central difference có truncation error tốt hơn forward difference.",
+      "tags": [
+        "finite-difference",
+        "numerical-error"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E197_LIMITS_CONTINUITY"
     }
   ],
   "importPolicy": {
