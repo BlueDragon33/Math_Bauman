@@ -1171,6 +1171,98 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "simulationId": "E186-basis-SIM1",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng đổi cơ sở 2D",
+      "purpose": "Kéo hai vector cơ sở và một vector x để quan sát tọa độ thay đổi trong khi x giữ nguyên.",
+      "controls": [
+        {
+          "key": "b1_angle",
+          "type": "number",
+          "default": 0
+        },
+        {
+          "key": "b2_angle",
+          "type": "number",
+          "default": 60
+        },
+        {
+          "key": "x_angle",
+          "type": "number",
+          "default": 30
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "det_B",
+          "label": "det(B)"
+        },
+        {
+          "key": "coords_B",
+          "label": "[x]_B"
+        },
+        {
+          "key": "condition",
+          "label": "cond(B)"
+        }
+      ],
+      "expectedObservation": "Khi hai vector cơ sở gần phụ thuộc, tọa độ trở nên nhạy và condition number tăng.",
+      "tags": [
+        "basis",
+        "conditioning",
+        "geometry"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "simulationId": "E186-basis-SIM2",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng PCA như đổi tọa độ",
+      "purpose": "Xoay một cloud dữ liệu 2D sang principal basis.",
+      "controls": [
+        {
+          "key": "cloud_angle",
+          "type": "number",
+          "default": 35
+        },
+        {
+          "key": "variance_ratio",
+          "type": "number",
+          "default": 4
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.2
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "pc1_angle",
+          "label": "Góc PC1"
+        },
+        {
+          "key": "cov_offdiag",
+          "label": "Covariance off-diagonal sau đổi cơ sở"
+        },
+        {
+          "key": "explained_ratio",
+          "label": "Explained variance ratio"
+        }
+      ],
+      "expectedObservation": "Trong principal basis, covariance gần diagonal và trục 1 giữ phương sai lớn nhất.",
+      "tags": [
+        "pca",
+        "basis-change",
+        "data"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
     }
   ],
   "importPolicy": {
