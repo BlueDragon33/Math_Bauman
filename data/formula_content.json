@@ -2275,6 +2275,76 @@
         "descent-lemma",
         "step-size"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "formulaId": "E206-prob-F1",
+      "title": "Không gian mẫu và biến cố",
+      "formula": "Ω={mọi kết quả có thể}; A⊆Ω",
+      "meaning": "Không gian mẫu Ω chứa các outcome có thể của thí nghiệm; biến cố A là một tập con của Ω.",
+      "conditions": [
+        "Phải xác định thí nghiệm và mức mô tả outcome trước.",
+        "Các outcome phải đủ để trả lời câu hỏi xác suất đang xét."
+      ],
+      "commonMistakes": [
+        "Dùng Ω quá thô hoặc thiếu outcome.",
+        "Nhầm một outcome ω với một biến cố A."
+      ],
+      "programmingUse": "Thiết kế state/event space trước khi đếm tần suất hoặc mô phỏng Monte Carlo.",
+      "tags": [
+        "sample-space",
+        "event",
+        "set"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "formulaId": "E206-prob-F2",
+      "title": "Phép toán biến cố",
+      "formula": "Aᶜ=Ω\\A; A∪B; A∩B; A\\B",
+      "meaning": "Bù, hợp, giao và hiệu tập hợp chuyển các mệnh đề logic thành phép toán trên biến cố.",
+      "conditions": [
+        "A,B nằm trong cùng không gian mẫu Ω."
+      ],
+      "commonMistakes": [
+        "Nhầm A∪B với 'chỉ một trong hai'.",
+        "Quên phần giao khi cộng xác suất ở bước sau."
+      ],
+      "programmingUse": "Biểu diễn điều kiện lọc dữ liệu và logic event bằng boolean masks.",
+      "tags": [
+        "union",
+        "intersection",
+        "complement"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "formulaId": "E206-prob-F3",
+      "title": "De Morgan cho biến cố",
+      "formula": "(A∪B)ᶜ=Aᶜ∩Bᶜ; (A∩B)ᶜ=Aᶜ∪Bᶜ",
+      "meaning": "Phủ định của 'A hoặc B' là 'không A và không B'; phủ định của 'A và B' là 'không A hoặc không B'.",
+      "conditions": [
+        "Các biến cố cùng Ω."
+      ],
+      "commonMistakes": [
+        "Giữ nguyên phép ∪/∩ khi lấy bù.",
+        "Diễn giải 'hoặc' tự nhiên không nhất quán với union inclusive."
+      ],
+      "programmingUse": "Rút gọn rule logic, detector alarms và điều kiện kiểm thử.",
+      "tags": [
+        "de-morgan",
+        "logic",
+        "events"
+      ]
     }
   ],
   "importPolicy": {
