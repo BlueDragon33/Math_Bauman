@@ -2872,6 +2872,98 @@
         "line-search",
         "step-size"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "simulationId": "E205-gd-SIM1",
+      "title": "Learning-rate regimes trên quadratic 1D",
+      "purpose": "Kéo η trên f=½ax² để quan sát hội tụ đơn điệu, hội tụ dao động, biên ổn định và phân kỳ.",
+      "controls": [
+        {
+          "key": "a",
+          "type": "number",
+          "default": 4
+        },
+        {
+          "key": "eta",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "x0",
+          "type": "number",
+          "default": 3
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "multiplier",
+          "label": "1-ηa"
+        },
+        {
+          "key": "stability",
+          "label": "Trạng thái hội tụ"
+        },
+        {
+          "key": "iterations",
+          "label": "Quỹ đạo x_k"
+        }
+      ],
+      "expectedObservation": "0<ηa<1 hội tụ không đổi dấu; 1<ηa<2 hội tụ dao động; ηa≥2 không hội tụ ổn định.",
+      "tags": [
+        "learning-rate",
+        "stability",
+        "quadratic"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "simulationId": "E205-gd-SIM2",
+      "title": "Gradient descent trên ellipse ill-conditioned",
+      "purpose": "So quỹ đạo trên quadratic 2D với các eigenvalue khác nhau và quan sát zig-zag.",
+      "controls": [
+        {
+          "key": "lambda_min",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "lambda_max",
+          "type": "number",
+          "default": 50
+        },
+        {
+          "key": "eta",
+          "type": "number",
+          "default": 0.02
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "condition_number",
+          "label": "κ"
+        },
+        {
+          "key": "loss_trace",
+          "label": "Loss theo iteration"
+        },
+        {
+          "key": "trajectory",
+          "label": "Quỹ đạo tham số"
+        }
+      ],
+      "expectedObservation": "Condition number lớn làm các hướng co với tốc độ rất khác nhau; η bị giới hạn bởi curvature lớn nhất.",
+      "tags": [
+        "conditioning",
+        "trajectory",
+        "optimization"
+      ]
     }
   ],
   "importPolicy": {
