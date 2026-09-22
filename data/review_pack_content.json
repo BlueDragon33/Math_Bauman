@@ -1056,6 +1056,47 @@
         "uncertainty",
         "E202"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "reviewPackId": "E203-hessian-RP01",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Hessian chứa gì?",
+          "expected": "Các đạo hàm riêng bậc hai ∂²f/∂x_i∂x_j."
+        },
+        {
+          "type": "geometry",
+          "prompt": "Quadratic form dᵀHd nói gì?",
+          "expected": "Độ cong bậc hai theo hướng d."
+        },
+        {
+          "type": "classification",
+          "prompt": "H≻0 tại stationary point?",
+          "expected": "Cực tiểu chặt cục bộ."
+        },
+        {
+          "type": "classification",
+          "prompt": "H bất định tại stationary point?",
+          "expected": "Điểm yên ngựa."
+        },
+        {
+          "type": "caveat",
+          "prompt": "H bán xác định thì sao?",
+          "expected": "Second-order test có thể không kết luận; cần xét thêm."
+        }
+      ],
+      "masteryGate": "Tính đúng Hessian + dùng Taylor bậc hai + đọc trị riêng/definiteness + phân loại stationary point + nhận ra trường hợp second-order test không đủ",
+      "tags": [
+        "hessian",
+        "curvature",
+        "extrema",
+        "E203"
+      ]
     }
   ],
   "importPolicy": {

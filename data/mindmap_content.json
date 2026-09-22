@@ -2349,6 +2349,100 @@
         "uncertainty",
         "E202"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "mindmapId": "E203-hessian-MM01",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Hessian, curvature & extrema",
+          "type": "root"
+        },
+        {
+          "id": "h",
+          "label": "H=[∂²f/∂x_i∂x_j]",
+          "type": "formula"
+        },
+        {
+          "id": "taylor",
+          "label": "2nd-order Taylor",
+          "type": "formula"
+        },
+        {
+          "id": "pd",
+          "label": "H≻0 → local min",
+          "type": "criterion"
+        },
+        {
+          "id": "nd",
+          "label": "H≺0 → local max",
+          "type": "criterion"
+        },
+        {
+          "id": "indef",
+          "label": "indefinite → saddle",
+          "type": "criterion"
+        },
+        {
+          "id": "semi",
+          "label": "semidefinite → inconclusive",
+          "type": "warning"
+        },
+        {
+          "id": "cond",
+          "label": "conditioning / eigenvalues",
+          "type": "geometry"
+        },
+        {
+          "id": "newton",
+          "label": "Newton / curvature-aware optimization",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "h"
+        },
+        {
+          "from": "h",
+          "to": "taylor"
+        },
+        {
+          "from": "h",
+          "to": "pd"
+        },
+        {
+          "from": "h",
+          "to": "nd"
+        },
+        {
+          "from": "h",
+          "to": "indef"
+        },
+        {
+          "from": "h",
+          "to": "semi"
+        },
+        {
+          "from": "h",
+          "to": "cond"
+        },
+        {
+          "from": "cond",
+          "to": "newton"
+        }
+      ],
+      "tags": [
+        "hessian",
+        "curvature",
+        "extrema",
+        "E203"
+      ]
     }
   ],
   "importPolicy": {

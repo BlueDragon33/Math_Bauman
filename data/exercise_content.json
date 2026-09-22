@@ -3477,6 +3477,118 @@
         "finite-difference",
         "jacobian"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "exerciseId": "E203-hessian-E01",
+      "level": "easy",
+      "prompt": "Cho f=x²+3y². Tính Hessian.",
+      "solution": "H=[[2,0],[0,6]].",
+      "tags": [
+        "hessian",
+        "calculation"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "exerciseId": "E203-hessian-E02",
+      "level": "easy",
+      "prompt": "Cho f=x²+2xy+4y². Tính Hessian.",
+      "solution": "H=[[2,2],[2,8]].",
+      "tags": [
+        "cross-partial",
+        "hessian"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "exerciseId": "E203-hessian-E03",
+      "level": "medium",
+      "prompt": "Tại điểm dừng có Hessian diag(2,5). Phân loại.",
+      "solution": "Hai trị riêng dương nên H dương xác định; điểm là cực tiểu chặt cục bộ.",
+      "tags": [
+        "classification",
+        "positive-definite"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "exerciseId": "E203-hessian-E04",
+      "level": "medium",
+      "prompt": "Tại điểm dừng có Hessian diag(-1,-4). Phân loại.",
+      "solution": "Hai trị riêng âm nên H âm xác định; cực đại chặt cục bộ.",
+      "tags": [
+        "classification",
+        "negative-definite"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "exerciseId": "E203-hessian-E05",
+      "level": "medium",
+      "prompt": "Tại điểm dừng có Hessian diag(3,-2). Phân loại.",
+      "solution": "Trị riêng trái dấu nên Hessian bất định; điểm yên ngựa.",
+      "tags": [
+        "classification",
+        "saddle"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "exerciseId": "E203-hessian-E06",
+      "level": "medium",
+      "prompt": "Với f=x²+y² tại x=(1,1), dùng Taylor bậc hai cho Δ=[0.1,-0.2]ᵀ.",
+      "solution": "∇f=[2,2], H=2I. Δf≈[2,2]·[0.1,-0.2]+0.5·2·(0.1²+0.2²)=-0.2+0.05=-0.15; thực tế cũng bằng -0.15 vì hàm bậc hai.",
+      "tags": [
+        "taylor",
+        "quadratic"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "exerciseId": "E203-hessian-E07",
+      "level": "hard",
+      "prompt": "Vì sao Hessian có condition number lớn có thể làm gradient descent khó chọn learning rate?",
+      "solution": "Độ cong rất khác theo các hướng; bước ổn cho hướng cong lớn lại quá nhỏ theo hướng cong nhỏ, tạo zig-zag và hội tụ chậm.",
+      "tags": [
+        "conditioning",
+        "optimization"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "exerciseId": "E203-hessian-E08",
+      "level": "hard",
+      "prompt": "Nếu tại điểm dừng H=diag(2,0), second-order test kết luận chắc gì?",
+      "solution": "Chỉ biết H bán xác định; test bậc hai không đủ để kết luận cực tiểu chặt, cần xét bậc cao hoặc cấu trúc hàm.",
+      "tags": [
+        "semidefinite",
+        "caveat"
+      ]
     }
   ],
   "importPolicy": {
