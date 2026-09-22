@@ -1049,6 +1049,38 @@
         "loss-landscape",
         "saddle"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "applicationId": "E205-gd-A1",
+      "title": "Huấn luyện loss của mô hình nhỏ",
+      "scenario": "Mô hình regression có loss giảm chậm hoặc dao động tùy learning rate.",
+      "method": "Theo dõi loss, gradient norm, step norm và validation metric; thử learning-rate sweep/log scale, chuẩn hóa input và so hành vi với curvature gần optimum.",
+      "expectedOutcome": "Phân biệt learning rate quá nhỏ, vùng hội tụ dao động và learning rate gây phân kỳ.",
+      "tags": [
+        "machine-learning",
+        "training",
+        "learning-rate"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "applicationId": "E205-gd-A2",
+      "title": "Tối ưu tham số điều khiển/calibration",
+      "scenario": "Một hàm chi phí kỹ thuật có hai hướng curvature rất khác nhau.",
+      "method": "Dùng gradient descent baseline; quan sát quỹ đạo zig-zag, ước lượng conditioning; cân nhắc scaling/preconditioning hoặc phương pháp curvature-aware khi cần.",
+      "expectedOutcome": "Hiểu rằng hội tụ chậm có thể do hình học bài toán chứ không chỉ do code hoặc gradient sai.",
+      "tags": [
+        "control",
+        "calibration",
+        "conditioning"
+      ]
     }
   ],
   "importPolicy": {
