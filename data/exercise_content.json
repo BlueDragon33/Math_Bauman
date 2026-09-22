@@ -1760,6 +1760,116 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "exerciseId": "E187-num-E01",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Chuẩn hóa x=(3,4).",
+      "solution": "||x||=5 nên x̂=(0.6,0.8).",
+      "tags": [
+        "normalization"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "exerciseId": "E187-num-E02",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Vì sao không thể L2-normalize vector 0?",
+      "solution": "Mẫu số ||x|| bằng 0 và vector 0 không có hướng.",
+      "tags": [
+        "zero-vector"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "exerciseId": "E187-num-E03",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Nếu x được nhân 1000 lần, cosine(x,y) thay đổi thế nào với hệ số dương?",
+      "solution": "Không đổi về lý thuyết; thực tế có thể chịu ảnh hưởng precision nếu scale cực đoan.",
+      "tags": [
+        "cosine",
+        "scale"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "exerciseId": "E187-num-E04",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Một phép tính cosine cho 1.0000000002. Bạn xử lý thế nào?",
+      "solution": "Nếu sai lệch nhỏ do roundoff, clip về 1 trước arccos; đồng thời kiểm magnitude sai số để chắc không phải lỗi pipeline.",
+      "tags": [
+        "roundoff"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "exerciseId": "E187-num-E05",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Vì sao thêm eps vào mẫu cosine có thể làm sai semantic với vector rất nhỏ?",
+      "solution": "eps trở thành thành phần chi phối mẫu số, biến kết quả thành hàm của eps thay vì hình học vector.",
+      "tags": [
+        "epsilon",
+        "near-zero"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "exerciseId": "E187-num-E06",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "So sánh kiểm trực giao bằng |x·y|<tol_abs và ρ<tol_rel.",
+      "solution": "Kiểm tương đối ρ ít phụ thuộc scale; tol_abs có thể sai khi vector rất lớn/nhỏ.",
+      "tags": [
+        "orthogonality",
+        "tolerance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "exerciseId": "E187-num-E07",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Nêu cách giảm overflow khi tính norm của vector có component rất lớn.",
+      "solution": "Dùng scaled norm/hypot hoặc thuật toán norm ổn định thay vì bình phương trực tiếp mọi component.",
+      "tags": [
+        "overflow",
+        "norm"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "exerciseId": "E187-num-E08",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "prompt": "Vì sao mixed precision có thể làm ranking embedding đổi ở các cặp similarity sát nhau?",
+      "solution": "Roundoff/quantization làm score dịch nhỏ; khi margin giữa top-k nhỏ, thứ tự có thể đảo. Cần kiểm precision, calibration và tie margin.",
+      "tags": [
+        "embedding",
+        "precision",
+        "ranking"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
     }
   ],
   "importPolicy": {
