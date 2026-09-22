@@ -1733,6 +1733,96 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "simulationId": "E192-power-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng norm(A^k) theo spectral radius",
+      "purpose": "Thay eigenvalue magnitude và số bước để quan sát decay/growth.",
+      "controls": [
+        {
+          "key": "lambda_max",
+          "type": "number",
+          "default": 0.9
+        },
+        {
+          "key": "steps",
+          "type": "number",
+          "default": 20
+        },
+        {
+          "key": "non_normality",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "norm_curve",
+          "label": "||A^k||"
+        },
+        {
+          "key": "spectral_radius",
+          "label": "ρ(A)"
+        },
+        {
+          "key": "transient_peak",
+          "label": "Transient peak"
+        }
+      ],
+      "expectedObservation": "ρ<1 thường dẫn decay dài hạn nhưng non-normality có thể tạo transient growth.",
+      "tags": [
+        "stability",
+        "power"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "simulationId": "E192-power-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng polynomial filter",
+      "purpose": "Thay hệ số c_k và xem response của p(A) trên các mode.",
+      "controls": [
+        {
+          "key": "degree",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "key": "c0",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "c1",
+          "type": "number",
+          "default": 0.5
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "response",
+          "label": "p(λ)"
+        },
+        {
+          "key": "matrix_cost",
+          "label": "Chi phí nhân ma trận"
+        },
+        {
+          "key": "gain_max",
+          "label": "Max gain"
+        }
+      ],
+      "expectedObservation": "Hệ số đa thức điều khiển gain theo spectrum và bậc quyết định locality/cost.",
+      "tags": [
+        "polynomial",
+        "filter"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
     }
   ],
   "importPolicy": {
