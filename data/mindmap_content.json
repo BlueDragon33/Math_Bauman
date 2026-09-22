@@ -2011,6 +2011,81 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "mindmapId": "E199-chain-MM01",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Chain rule & computational graph",
+          "type": "root"
+        },
+        {
+          "id": "composition",
+          "label": "f(g(x))",
+          "type": "concept"
+        },
+        {
+          "id": "local",
+          "label": "local derivatives",
+          "type": "formula"
+        },
+        {
+          "id": "product",
+          "label": "path product",
+          "type": "formula"
+        },
+        {
+          "id": "backprop",
+          "label": "backprop reuse",
+          "type": "application"
+        },
+        {
+          "id": "vanish",
+          "label": "vanishing / exploding",
+          "type": "warning"
+        },
+        {
+          "id": "check",
+          "label": "finite-difference check",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "composition"
+        },
+        {
+          "from": "composition",
+          "to": "local"
+        },
+        {
+          "from": "local",
+          "to": "product"
+        },
+        {
+          "from": "product",
+          "to": "backprop"
+        },
+        {
+          "from": "product",
+          "to": "vanish"
+        },
+        {
+          "from": "backprop",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "chain-rule",
+        "backprop",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
     }
   ],
   "importPolicy": {
