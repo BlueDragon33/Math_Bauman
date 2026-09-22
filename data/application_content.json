@@ -645,37 +645,6 @@
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
     },
     {
-      "applicationId": "E192-matmul-A1",
-      "lessonId": "MATH-VN-LA-C02-L05",
-      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
-      "title": "Linear layer trong AI",
-      "scenario": "Batch dữ liệu X có N mẫu và d đặc trưng cần chiếu sang k đặc trưng.",
-      "method": "Dùng W∈R^{d×k}; tính Y=XW để mỗi hàng đầu ra là tổ hợp tuyến tính của đặc trưng đầu vào.",
-      "expectedOutcome": "Y có shape N×k; kiểm rõ feature ordering và bias nếu có.",
-      "tags": [
-        "ai",
-        "linear-layer"
-      ],
-      "auditStatus": "PASS",
-      "sourceBundle": "E192_MATRIX_MULTIPLICATION"
-    },
-    {
-      "applicationId": "E192-matmul-A2",
-      "lessonId": "MATH-VN-LA-C02-L05",
-      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
-      "title": "Ghép phép biến đổi trạng thái/robot",
-      "scenario": "Hệ cần áp dụng liên tiếp nhiều phép biến đổi tuyến tính lên trạng thái hoặc tọa độ.",
-      "method": "Mã hóa từng phép biến đổi bằng ma trận và nhân theo đúng convention composition; khóa thứ tự để tránh đổi semantics.",
-      "expectedOutcome": "Pipeline biến đổi có thể kiểm chứng bằng shape và thứ tự matrix product.",
-      "tags": [
-        "control",
-        "robotics",
-        "composition"
-      ],
-      "auditStatus": "PASS",
-      "sourceBundle": "E192_MATRIX_MULTIPLICATION"
-    },
-    {
       "applicationId": "E193-power-A1",
       "lessonId": "MATH-VN-LA-C02-L06",
       "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
