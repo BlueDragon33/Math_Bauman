@@ -765,6 +765,37 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "applicationId": "E196-inverse-A1",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Khôi phục biến trạng thái từ phép biến đổi tọa độ",
+      "scenario": "Trong mô hình trạng thái, z=T^{-1}x dùng khi đổi cơ sở/tọa độ với T khả nghịch.",
+      "method": "Kiểm rank/condition của T, giải Tz=x hoặc dùng solver ổn định; không tạo inverse nếu không cần.",
+      "expectedOutcome": "Hiểu nghịch đảo như phép hoàn tác biến đổi tuyến tính và nhận biết khi biến đổi mất thông tin.",
+      "tags": [
+        "state-space",
+        "change-of-basis"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
+    },
+    {
+      "applicationId": "E196-inverse-A2",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Giải hệ hiệu chuẩn cảm biến và reconstruction",
+      "scenario": "Ma trận hiệu chuẩn liên hệ tín hiệu đo y với đại lượng thật x qua y=Ax.",
+      "method": "Nếu A vuông full-rank có thể giải Ax=y; nếu A gần suy biến kiểm condition, nếu không vuông dùng least squares/pseudoinverse.",
+      "expectedOutcome": "Không dùng inverse máy móc; chọn solve/pseudoinverse theo shape, rank và conditioning.",
+      "tags": [
+        "calibration",
+        "sensor",
+        "reconstruction"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
     }
   ],
   "importPolicy": {
