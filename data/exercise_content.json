@@ -3040,6 +3040,113 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "exerciseId": "E199-chain-E01",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "prompt": "Tính d/dx (3x+1)^4.",
+      "solution": "4(3x+1)^3·3 = 12(3x+1)^3.",
+      "tags": [
+        "chain-rule"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "exerciseId": "E199-chain-E02",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "prompt": "Tính d/dx sin(x²).",
+      "solution": "cos(x²)·2x.",
+      "tags": [
+        "trig",
+        "chain-rule"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "exerciseId": "E199-chain-E03",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "prompt": "Với y=e^{2x²+1}, tính dy/dx.",
+      "solution": "e^{2x²+1}·4x.",
+      "tags": [
+        "exp",
+        "composition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "exerciseId": "E199-chain-E04",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "prompt": "Cho u=x²+1, v=ln u, y=v³. Viết dy/dx theo local derivatives.",
+      "solution": "dy/dx=(3v²)(1/u)(2x), với u=x²+1, v=ln u.",
+      "tags": [
+        "computational-graph"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "exerciseId": "E199-chain-E05",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "prompt": "Một graph x→u=2x→v=u²→y=sin v. Tính dy/dx.",
+      "solution": "cos(v)·2u·2 = 4u cos(v)=8x cos(4x²).",
+      "tags": [
+        "graph"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "exerciseId": "E199-chain-E06",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "prompt": "Giải thích vì sao product của nhiều local derivatives <1 có thể gây vanishing gradient.",
+      "solution": "Tích nhiều hệ số có độ lớn nhỏ hơn 1 giảm theo chiều sâu, khiến sensitivity từ output về input rất nhỏ.",
+      "tags": [
+        "vanishing-gradient"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "exerciseId": "E199-chain-E07",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "prompt": "Nếu local derivatives lần lượt là 2, 0.5, -3 thì total derivative d output/d input bằng bao nhiêu?",
+      "solution": "2·0.5·(-3)=-3.",
+      "tags": [
+        "sensitivity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "exerciseId": "E199-chain-E08",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "prompt": "Một analytic chain-rule gradient khác central finite difference 2%. Nêu ít nhất ba nguyên nhân cần kiểm.",
+      "solution": "Sai local derivative hoặc dependency path; finite-difference step h chưa tối ưu; roundoff/cancellation; nondifferentiable point; state/cache không đồng nhất giữa hai lần đánh giá.",
+      "tags": [
+        "gradient-check",
+        "debug"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
     }
   ],
   "importPolicy": {
