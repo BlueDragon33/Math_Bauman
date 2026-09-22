@@ -4562,6 +4562,556 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E141_EXAM_CAPACITY_EXTENSION"
+    },
+    {
+      "questionId": "E178-matmul-Q001",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Nếu A∈R^(m×n), B∈R^(n×p), kích thước AB là gì?",
+      "options": [
+        "m×p",
+        "n×n",
+        "p×m",
+        "m×n"
+      ],
+      "answer": "m×p",
+      "explanation": "Hai chiều trong n được ghép; output giữ số hàng của A và số cột của B.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q002",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Điều kiện cơ bản để tích AB tồn tại là gì?",
+      "options": [
+        "Số cột A bằng số hàng B",
+        "A và B phải vuông",
+        "A và B phải cùng kích thước",
+        "Số hàng A bằng số cột B"
+      ],
+      "answer": "Số cột A bằng số hàng B",
+      "explanation": "Phép hàng-nhân-cột cần hai vector trung gian có cùng độ dài.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q003",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "(AB)_ij được tạo bởi phép nào?",
+      "options": [
+        "Hàng i của A nhân vô hướng với cột j của B",
+        "Cột i của A nhân cột j của B",
+        "Hàng i của A nhân hàng j của B",
+        "Nhân từng phần tử cùng vị trí của A và B"
+      ],
+      "answer": "Hàng i của A nhân vô hướng với cột j của B",
+      "explanation": "Định nghĩa phần tử của tích ma trận là dot product hàng-cột.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q004",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Khẳng định nào đúng nói chung?",
+      "options": [
+        "AB có thể khác BA",
+        "AB luôn bằng BA",
+        "AB chỉ tồn tại khi A=B",
+        "AB luôn cùng kích thước với A"
+      ],
+      "answer": "AB có thể khác BA",
+      "explanation": "Nhân ma trận nói chung không giao hoán.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q005",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "[[1,2],[0,1]]·[3,4]^T bằng gì?",
+      "options": [
+        "[11,4]^T",
+        "[7,4]^T",
+        "[3,11]^T",
+        "[5,4]^T"
+      ],
+      "answer": "[11,4]^T",
+      "explanation": "Hàng đầu cho 1·3+2·4=11; hàng sau cho 4.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q006",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Nếu A có kích thước 4×3 và x∈R^3 thì Ax thuộc không gian nào?",
+      "options": [
+        "R^4",
+        "R^3",
+        "R^7",
+        "Không xác định"
+      ],
+      "answer": "R^4",
+      "explanation": "Chiều trong 3 khớp; output có 4 phần tử.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q007",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Biểu thức nào thể hiện tính kết hợp của nhân ma trận?",
+      "options": [
+        "A(BC)=(AB)C",
+        "AB=BA",
+        "A(B+C)=AB+CA",
+        "A^T B=B^T A"
+      ],
+      "answer": "A(BC)=(AB)C",
+      "explanation": "Tính kết hợp cho phép đổi dấu ngoặc nhưng không đổi thứ tự.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q008",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Trong NumPy, phép nào tương ứng với nhân ma trận chuẩn?",
+      "options": [
+        "A @ B",
+        "A * B",
+        "A + B",
+        "A / B"
+      ],
+      "answer": "A @ B",
+      "explanation": "Toán tử @ thực hiện matrix multiplication; * là nhân từng phần tử.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q009",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "A là 2×3, B là 3×4. Khẳng định nào đúng?",
+      "options": [
+        "AB tồn tại và là 2×4; BA không tồn tại",
+        "AB là 3×3; BA là 4×4",
+        "Cả AB và BA đều tồn tại",
+        "AB không tồn tại; BA là 3×2"
+      ],
+      "answer": "AB tồn tại và là 2×4; BA không tồn tại",
+      "explanation": "AB ghép 3 với 3; BA cần 4=2 nên không xác định.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q010",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Với C=AB, công thức đúng cho C_12 là gì?",
+      "options": [
+        "C_12=Σ_k a_1k b_k2",
+        "C_12=Σ_k a_k1 b_k2",
+        "C_12=a_12 b_12",
+        "C_12=Σ_k a_2k b_k1"
+      ],
+      "answer": "C_12=Σ_k a_1k b_k2",
+      "explanation": "Lấy hàng 1 của A tích vô hướng với cột 2 của B.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q011",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Vì sao AB và BA có thể mang ý nghĩa vật lý khác nhau?",
+      "options": [
+        "Vì thứ tự các phép biến đổi được đảo",
+        "Vì phép cộng ma trận không giao hoán",
+        "Vì định thức luôn đổi dấu",
+        "Vì mọi ma trận đều biểu diễn cùng một hệ tọa độ"
+      ],
+      "answer": "Vì thứ tự các phép biến đổi được đảo",
+      "explanation": "AB và BA tương ứng hai chuỗi tác động khác nhau.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q012",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "W∈R^(5×3), x∈R^3 trong y=Wx. Ý nghĩa shape nào đúng?",
+      "options": [
+        "3 đầu vào được ánh xạ thành 5 đầu ra",
+        "5 đầu vào thành 3 đầu ra",
+        "W chỉ dùng được với x∈R^5",
+        "y phải thuộc R^3"
+      ],
+      "answer": "3 đầu vào được ánh xạ thành 5 đầu ra",
+      "explanation": "Số cột W là chiều input và số hàng W là chiều output.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q013",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Lỗi nào nguy hiểm khi code chạy sau khi thêm .T tùy tiện?",
+      "options": [
+        "Shape có thể hợp lệ nhưng ý nghĩa sample/feature bị đảo",
+        "Kết quả luôn chính xác hơn",
+        "Ma trận tự trở thành trực giao",
+        "Không còn sai số số học"
+      ],
+      "answer": "Shape có thể hợp lệ nhưng ý nghĩa sample/feature bị đảo",
+      "explanation": "Transpose phải xuất phát từ quy ước dữ liệu, không phải chỉ để tránh lỗi shape.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q014",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "A(Bx) và (AB)x khác nhau thế nào về toán học khi các kích thước hợp lệ?",
+      "options": [
+        "Bằng nhau theo tính kết hợp",
+        "Luôn khác nhau",
+        "Chỉ bằng khi A=B",
+        "Một biểu thức luôn không tồn tại"
+      ],
+      "answer": "Bằng nhau theo tính kết hợp",
+      "explanation": "Dấu ngoặc có thể đổi nhưng thứ tự A,B,x không đổi.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q015",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Nếu cả AB và BA đều tồn tại, điều nào vẫn phải kiểm?",
+      "options": [
+        "Không được mặc định AB=BA",
+        "Có thể đổi thứ tự tùy ý",
+        "Hai tích bắt buộc cùng giá trị",
+        "A và B bắt buộc đối xứng"
+      ],
+      "answer": "Không được mặc định AB=BA",
+      "explanation": "Cùng tồn tại không kéo theo giao hoán.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q016",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Khẳng định nào đúng về hạng của tích?",
+      "options": [
+        "rank(AB)≤min(rank(A),rank(B))",
+        "rank(AB)=rank(A)+rank(B) luôn đúng",
+        "rank(AB) luôn bằng số cột A",
+        "rank(AB) luôn lớn hơn rank(A)"
+      ],
+      "answer": "rank(AB)≤min(rank(A),rank(B))",
+      "explanation": "Phép hợp thành không thể tạo thêm số chiều độc lập vượt quá từng ánh xạ thành phần.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q017",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Công thức chuyển vị của tích là gì?",
+      "options": [
+        "(AB)^T=B^T A^T",
+        "(AB)^T=A^T B^T",
+        "(AB)^T=AB",
+        "(AB)^T=BA"
+      ],
+      "answer": "(AB)^T=B^T A^T",
+      "explanation": "Chuyển vị đảo thứ tự các thừa số.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q018",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Khi tính A(Bx) thay vì tạo AB trước, lợi ích tiềm năng là gì?",
+      "options": [
+        "Giảm chi phí/bộ nhớ nếu x là vector và kích thước phù hợp",
+        "Cho phép đổi thứ tự A và B",
+        "Loại bỏ mọi sai số số học",
+        "Làm AB trở nên giao hoán"
+      ],
+      "answer": "Giảm chi phí/bộ nhớ nếu x là vector và kích thước phù hợp",
+      "explanation": "Tính kết hợp cho phép chọn thứ tự ngoặc nhằm giảm chi phí mà giữ nghĩa toán học.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q019",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Trong chuỗi đổi hệ tọa độ, vì sao cần ghi rõ ma trận nào tác động trước?",
+      "options": [
+        "Vì nhân ma trận không giao hoán",
+        "Vì mọi ma trận đều vuông",
+        "Vì vector không có hướng",
+        "Vì định thức luôn bằng 1"
+      ],
+      "answer": "Vì nhân ma trận không giao hoán",
+      "explanation": "Đảo ma trận trong tích có thể đảo chuỗi thao tác và đổi output.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q020",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Nếu AB=0, kết luận nào an toàn nhất khi chưa có giả thiết bổ sung?",
+      "options": [
+        "Không thể suy ra A=0 hoặc B=0",
+        "Chắc chắn A=0",
+        "Chắc chắn B=0",
+        "Chắc chắn A=B"
+      ],
+      "answer": "Không thể suy ra A=0 hoặc B=0",
+      "explanation": "Ma trận có thể có không gian null khác không nên tích bằng 0 không buộc từng thừa số bằng 0.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q021",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Ví dụ AB≠BA có giá trị gì trong lập luận?",
+      "options": [
+        "Chứng minh bằng phản ví dụ rằng tính giao hoán không đúng nói chung",
+        "Chứng minh mọi cặp ma trận đều không giao hoán",
+        "Chứng minh AB luôn không tồn tại",
+        "Chứng minh A và B phải khả nghịch"
+      ],
+      "answer": "Chứng minh bằng phản ví dụ rằng tính giao hoán không đúng nói chung",
+      "explanation": "Một phản ví dụ đủ bác bỏ mệnh đề giao hoán phổ quát.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q022",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Nếu B biến đổi từ không gian p→n và A từ n→m, tích nào biểu diễn 'B trước, A sau'?",
+      "options": [
+        "AB",
+        "BA",
+        "A+B",
+        "A^T B"
+      ],
+      "answer": "AB",
+      "explanation": "Với vector cột x, chuỗi là x→Bx→A(Bx)=(AB)x.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q023",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Cách kiểm lỗi axis trong pipeline ma trận đáng tin cậy nhất là gì?",
+      "options": [
+        "Ghi nghĩa và shape từng trục rồi kiểm một mẫu bằng tay",
+        "Thêm transpose đến khi hết exception",
+        "Đổi mọi ma trận thành vuông",
+        "Bỏ kiểm shape nếu test chạy"
+      ],
+      "answer": "Ghi nghĩa và shape từng trục rồi kiểm một mẫu bằng tay",
+      "explanation": "Shape phải gắn với semantics của trục, không chỉ tính hợp lệ cú pháp.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q024",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "A và B đều là ma trận vuông cùng cấp. Điều nào đúng?",
+      "options": [
+        "AB và BA đều tồn tại nhưng vẫn có thể khác nhau",
+        "AB luôn bằng BA",
+        "Một trong hai tích không tồn tại",
+        "AB luôn đối xứng"
+      ],
+      "answer": "AB và BA đều tồn tại nhưng vẫn có thể khác nhau",
+      "explanation": "Ma trận vuông cùng cấp bảo đảm tính xác định của hai tích, không bảo đảm giao hoán.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E178-matmul-Q025",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Trong số học dấu phẩy động, A(BC) và (AB)C có thể khác rất nhỏ dù toán học bằng nhau. Cách diễn giải đúng là gì?",
+      "options": [
+        "Tính kết hợp đúng về đại số; thứ tự phép tính số có thể tạo sai số làm tròn khác nhau",
+        "Tính kết hợp của ma trận là sai",
+        "Có thể đổi cả thứ tự A,B,C",
+        "Sai số chứng minh AB=BA"
+      ],
+      "answer": "Tính kết hợp đúng về đại số; thứ tự phép tính số có thể tạo sai số làm tròn khác nhau",
+      "explanation": "Thuật toán số phải phân biệt đồng nhất thức đại số với sai số làm tròn của cách thực hiện.",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION",
+      "stage": "vn"
     }
   ],
   "importPolicy": {
@@ -4615,7 +5165,7 @@
     "answer": "Độ dài vector",
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "emoji": "❓",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
