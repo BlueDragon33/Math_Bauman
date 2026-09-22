@@ -883,6 +883,98 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "simulationId": "E183-dot-SIM1",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng dot product theo góc và norm",
+      "purpose": "Thay góc và độ dài hai vector để quan sát x·y=||x||||y||cosθ.",
+      "controls": [
+        {
+          "key": "angle_deg",
+          "type": "number",
+          "default": 60
+        },
+        {
+          "key": "norm_x",
+          "type": "number",
+          "default": 2
+        },
+        {
+          "key": "norm_y",
+          "type": "number",
+          "default": 3
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "dot",
+          "label": "x·y"
+        },
+        {
+          "key": "cosine",
+          "label": "cosθ"
+        },
+        {
+          "key": "sign",
+          "label": "Dấu dot product"
+        }
+      ],
+      "expectedObservation": "Khi giữ norm, dot biến thiên theo cosθ; ở 90° bằng 0, >90° âm.",
+      "tags": [
+        "dot-product",
+        "angle",
+        "geometry"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "simulationId": "E183-dot-SIM2",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng dot score và cosine score",
+      "purpose": "Thay scale của hai embedding để so dot product với cosine similarity.",
+      "controls": [
+        {
+          "key": "scale_x",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "scale_y",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "key": "angle_deg",
+          "type": "number",
+          "default": 30
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "dot_score",
+          "label": "Dot score"
+        },
+        {
+          "key": "cosine_score",
+          "label": "Cosine score"
+        },
+        {
+          "key": "ranking_note",
+          "label": "Ảnh hưởng scale"
+        }
+      ],
+      "expectedObservation": "Cosine giữ nguyên khi chỉ rescale vector dương, còn dot score tăng theo tích scale.",
+      "tags": [
+        "dot-product",
+        "cosine",
+        "embedding"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
     }
   ],
   "importPolicy": {
