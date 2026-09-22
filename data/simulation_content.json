@@ -2684,6 +2684,102 @@
         "ellipse",
         "uncertainty"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "simulationId": "E203-hessian-SIM1",
+      "title": "Quadratic surface và trị riêng Hessian",
+      "purpose": "Thay đổi λ₁, λ₂ của quadratic f=½(λ₁z₁²+λ₂z₂²) để quan sát bowl, hill và saddle.",
+      "controls": [
+        {
+          "key": "lambda1",
+          "type": "number",
+          "default": 2
+        },
+        {
+          "key": "lambda2",
+          "type": "number",
+          "default": 5
+        },
+        {
+          "key": "rotation_deg",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "classification",
+          "label": "Phân loại độ cong"
+        },
+        {
+          "key": "condition_number",
+          "label": "Condition number nếu xác định"
+        },
+        {
+          "key": "principal_directions",
+          "label": "Hướng riêng"
+        }
+      ],
+      "expectedObservation": "Cùng dấu dương tạo bowl, cùng dấu âm tạo hill, trái dấu tạo saddle; tỉ số độ lớn trị riêng điều khiển độ méo ellipse.",
+      "tags": [
+        "hessian",
+        "eigenvalues",
+        "surface"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "simulationId": "E203-hessian-SIM2",
+      "title": "Taylor bậc hai quanh operating point",
+      "purpose": "So xấp xỉ tuyến tính và bậc hai với giá trị thật khi Δ tăng dần.",
+      "controls": [
+        {
+          "key": "dx",
+          "type": "number",
+          "default": 0.05
+        },
+        {
+          "key": "dy",
+          "type": "number",
+          "default": 0.05
+        },
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "true_delta",
+          "label": "Δf thật"
+        },
+        {
+          "key": "first_order",
+          "label": "Gradient-only"
+        },
+        {
+          "key": "second_order",
+          "label": "Gradient + Hessian"
+        },
+        {
+          "key": "error_ratio",
+          "label": "Tỉ lệ sai số"
+        }
+      ],
+      "expectedObservation": "Khi curvature đáng kể, thêm Hessian cải thiện xấp xỉ gần operating point; lợi ích giảm khi đi quá xa.",
+      "tags": [
+        "taylor",
+        "curvature",
+        "approximation"
+      ]
     }
   ],
   "importPolicy": {
