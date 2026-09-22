@@ -497,6 +497,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "reviewPackId": "E187-num-RP01",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Nêu điều kiện L2-normalize hợp lệ.",
+          "expected": "Norm phải lớn hơn ngưỡng near-zero phù hợp."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Vì sao không nên cộng eps tùy tiện vào mọi mẫu cosine?",
+          "expected": "Có thể thay đổi semantic, nhất là với vector nhỏ."
+        },
+        {
+          "type": "numerical",
+          "prompt": "Nêu cách kiểm near-orthogonality ít phụ thuộc scale.",
+          "expected": "Dùng |x·y|/(||x||||y||) so với tolerance tương đối."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một rủi ro mixed precision trong similarity search.",
+          "expected": "Score gần nhau có thể đổi thứ tự do roundoff/quantization."
+        }
+      ],
+      "masteryGate": "Biết guard near-zero + hiểu scale invariance toán học vs floating point + chọn tolerance phù hợp + kiểm ranking margin",
+      "tags": [
+        "numerical",
+        "E187"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
     }
   ],
   "importPolicy": {
