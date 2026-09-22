@@ -361,6 +361,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "reviewPackId": "E183-dot-RP01",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Giải thích dot product theo hai góc nhìn: tổng tích thành phần và norm×cos góc.",
+          "expected": "x·y=Σxᵢyᵢ=||x||||y||cosθ."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Vì sao dot product lớn chưa chắc nghĩa là hai vector cùng hướng mạnh?",
+          "expected": "Dot phụ thuộc norm; cần cosine để tách scale."
+        },
+        {
+          "type": "formula",
+          "prompt": "Nêu điều kiện trực giao và cách kiểm ổn định số.",
+          "expected": "x·y=0 lý thuyết; thực tế kiểm normalized absolute dot dưới tolerance."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một ứng dụng embedding hoặc tín hiệu và chỉ rõ dùng dot hay cosine.",
+          "expected": "Chọn theo việc norm có mang ý nghĩa hay không; giải thích preprocessing."
+        }
+      ],
+      "masteryGate": "Tính đúng dot + hiểu góc/norm + phân biệt dot/cosine + kiểm near-orthogonality số",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
     }
   ],
   "importPolicy": {
