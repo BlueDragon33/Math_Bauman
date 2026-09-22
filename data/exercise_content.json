@@ -3589,6 +3589,117 @@
         "semidefinite",
         "caveat"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "exerciseId": "E204-opt-E01",
+      "level": "easy",
+      "prompt": "Tìm stationary point của f(x)=x²-4x+1.",
+      "solution": "f'=2x-4=0 ⇒ x*=2; f''=2>0 nên là cực tiểu chặt cục bộ (và toàn cục vì quadratic lồi).",
+      "tags": [
+        "stationary-point",
+        "1d"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "exerciseId": "E204-opt-E02",
+      "level": "easy",
+      "prompt": "Tìm và phân loại stationary point của f(x,y)=x²+y².",
+      "solution": "∇f=[2x,2y]=0 ⇒ (0,0). H=2I≻0 ⇒ cực tiểu chặt; do f≥0 nên cũng là global min.",
+      "tags": [
+        "minimum",
+        "hessian"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "exerciseId": "E204-opt-E03",
+      "level": "medium",
+      "prompt": "Tìm và phân loại stationary point của f(x,y)=x²-y².",
+      "solution": "∇f=[2x,-2y]=0 ⇒ (0,0). H=diag(2,-2) bất định ⇒ saddle.",
+      "tags": [
+        "saddle",
+        "classification"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "exerciseId": "E204-opt-E04",
+      "level": "medium",
+      "prompt": "Cho ∇f=[2,-1]ᵀ. Vector p=[-1,0]ᵀ có là hướng giảm không?",
+      "solution": "∇fᵀp=-2<0 nên có, theo xấp xỉ bậc nhất với bước đủ nhỏ.",
+      "tags": [
+        "descent-direction"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "exerciseId": "E204-opt-E05",
+      "level": "medium",
+      "prompt": "Với cùng ∇f=[2,-1]ᵀ, p=[1,3]ᵀ có là hướng giảm không?",
+      "solution": "∇fᵀp=2-3=-1<0 nên là hướng giảm.",
+      "tags": [
+        "descent-direction",
+        "dot-product"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "exerciseId": "E204-opt-E06",
+      "level": "medium",
+      "prompt": "Tại x* có ∇f=0 và H=diag(2,0). Có thể kết luận cực tiểu chặt chỉ từ test bậc hai không?",
+      "solution": "Không. Hessian bán dương nên test bậc hai không kết luận chặt; cần xét cấu trúc/bậc cao.",
+      "tags": [
+        "semidefinite",
+        "caveat"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "exerciseId": "E204-opt-E07",
+      "level": "hard",
+      "prompt": "Cho f(x,y)=(x-1)²+10(y+2)². Tìm nghiệm tối ưu không ràng buộc.",
+      "solution": "∇f=[2(x-1),20(y+2)]=0 ⇒ (1,-2). H=diag(2,20)≻0, quadratic lồi ⇒ global minimum.",
+      "tags": [
+        "quadratic",
+        "global-minimum"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "exerciseId": "E204-opt-E08",
+      "level": "hard",
+      "prompt": "Giải thích vì sao điểm x*=0 của f(x)=x³ có f'(0)=0 nhưng không là min hay max.",
+      "solution": "f đổi dấu và vẫn tăng qua 0; f''(0)=0 nên second-order test không kết luận. Đây là stationary inflection point.",
+      "tags": [
+        "stationary-point",
+        "counterexample"
+      ]
     }
   ],
   "importPolicy": {
