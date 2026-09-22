@@ -791,6 +791,98 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "simulationId": "E181-norm-SIM1",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng quả cầu đơn vị Lp",
+      "purpose": "Thay đổi p giữa 1,2 và ∞ để quan sát hình học tập {x:||x||p≤1}.",
+      "controls": [
+        {
+          "key": "p",
+          "type": "select",
+          "default": 2,
+          "options": [
+            1,
+            2,
+            "inf"
+          ]
+        },
+        {
+          "key": "radius",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "boundary_shape",
+          "label": "Hình dạng biên"
+        },
+        {
+          "key": "axis_intercepts",
+          "label": "Giao trục"
+        },
+        {
+          "key": "corner_behavior",
+          "label": "Độ góc/độ tròn"
+        }
+      ],
+      "expectedObservation": "L1 tạo hình thoi, L2 tròn, L∞ vuông; hình học khác nhau dẫn đến hành vi tối ưu khác nhau.",
+      "tags": [
+        "norm",
+        "geometry",
+        "lp-ball"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "simulationId": "E181-norm-SIM2",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng scale feature và khoảng cách",
+      "purpose": "Thay scale của hai feature và xem L1/L2/L∞ giữa hai mẫu đổi thế nào.",
+      "controls": [
+        {
+          "key": "feature1_scale",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "feature2_scale",
+          "type": "number",
+          "default": 10
+        },
+        {
+          "key": "standardize",
+          "type": "boolean",
+          "default": false
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "l1_distance",
+          "label": "Khoảng cách L1"
+        },
+        {
+          "key": "l2_distance",
+          "label": "Khoảng cách L2"
+        },
+        {
+          "key": "linf_distance",
+          "label": "Khoảng cách L∞"
+        }
+      ],
+      "expectedObservation": "Feature có scale lớn có thể chi phối mọi norm; standardization thay đổi cân bằng đóng góp.",
+      "tags": [
+        "norm",
+        "feature-scaling",
+        "distance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
     }
   ],
   "importPolicy": {

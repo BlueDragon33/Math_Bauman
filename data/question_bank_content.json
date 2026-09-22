@@ -5687,6 +5687,556 @@
       "auditStatus": "PASS",
       "sourceBundle": "E180_VECTOR_SPACE_SPAN",
       "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q001",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Công thức của chuẩn L1 là gì?",
+      "options": [
+        "Σ|xᵢ|",
+        "sqrt(Σxᵢ²)",
+        "max|xᵢ|",
+        "Σxᵢ"
+      ],
+      "answer": "Σ|xᵢ|",
+      "explanation": "L1 là tổng trị tuyệt đối các thành phần.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q002",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Công thức của chuẩn L2 là gì?",
+      "options": [
+        "sqrt(Σxᵢ²)",
+        "Σ|xᵢ|",
+        "max|xᵢ|",
+        "Σxᵢ² không căn"
+      ],
+      "answer": "sqrt(Σxᵢ²)",
+      "explanation": "L2 là căn tổng bình phương.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q003",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Công thức của chuẩn L∞ là gì?",
+      "options": [
+        "max|xᵢ|",
+        "Σ|xᵢ|",
+        "sqrt(Σxᵢ²)",
+        "min|xᵢ|"
+      ],
+      "answer": "max|xᵢ|",
+      "explanation": "L∞ lấy trị tuyệt đối lớn nhất.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q004",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Với x=(3,-4), ||x||₂ bằng?",
+      "options": [
+        "5",
+        "7",
+        "4",
+        "25"
+      ],
+      "answer": "5",
+      "explanation": "sqrt(9+16)=5.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q005",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Với x=(3,-4), ||x||₁ bằng?",
+      "options": [
+        "7",
+        "5",
+        "4",
+        "1"
+      ],
+      "answer": "7",
+      "explanation": "|3|+|-4|=7.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q006",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Với x=(3,-4), ||x||∞ bằng?",
+      "options": [
+        "4",
+        "5",
+        "7",
+        "3"
+      ],
+      "answer": "4",
+      "explanation": "max(3,4)=4.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q007",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Norm nào trực tiếp đo component lớn nhất?",
+      "options": [
+        "L∞",
+        "L1",
+        "L2",
+        "Squared L2"
+      ],
+      "answer": "L∞",
+      "explanation": "L∞ là max absolute component.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q008",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Quả cầu đơn vị L2 trong R² có dạng?",
+      "options": [
+        "Đường tròn",
+        "Hình thoi",
+        "Hình vuông",
+        "Đường thẳng"
+      ],
+      "answer": "Đường tròn",
+      "explanation": "L2 cho hình học Euclid.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q009",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Quả cầu đơn vị L1 trong R² có dạng?",
+      "options": [
+        "Hình thoi",
+        "Đường tròn",
+        "Hình vuông",
+        "Parabol"
+      ],
+      "answer": "Hình thoi",
+      "explanation": "|x|+|y|≤1 tạo hình thoi.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q010",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Quả cầu đơn vị L∞ trong R² có dạng?",
+      "options": [
+        "Hình vuông song song trục",
+        "Hình tròn",
+        "Hình thoi",
+        "Ellipse bắt buộc"
+      ],
+      "answer": "Hình vuông song song trục",
+      "explanation": "max(|x|,|y|)≤1 tương đương |x|≤1,|y|≤1.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q011",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Bất đẳng thức nào đúng trong Rⁿ?",
+      "options": [
+        "||x||∞≤||x||₂≤||x||₁",
+        "||x||₁≤||x||₂≤||x||∞",
+        "Tất cả luôn bằng nhau",
+        "||x||₂≤||x||∞"
+      ],
+      "answer": "||x||∞≤||x||₂≤||x||₁",
+      "explanation": "Mỗi chuẩn bị chặn theo quan hệ chuẩn hữu hạn chiều.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q012",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Vì sao cần scale feature trước khi dùng khoảng cách?",
+      "options": [
+        "Đơn vị/scale lớn có thể chi phối norm",
+        "Norm tự động bỏ qua đơn vị",
+        "Scale không ảnh hưởng khoảng cách",
+        "Chỉ để tăng tốc"
+      ],
+      "answer": "Đơn vị/scale lớn có thể chi phối norm",
+      "explanation": "Khoảng cách số phụ thuộc trực tiếp scale tọa độ.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q013",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "L1 regularization thường liên hệ với?",
+      "options": [
+        "Sparsity",
+        "Bắt buộc tất cả trọng số bằng nhau",
+        "FFT",
+        "Tăng rank"
+      ],
+      "answer": "Sparsity",
+      "explanation": "Hình học L1 có các góc tại trục nên nghiệm tối ưu dễ có nhiều hệ số 0.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q014",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "L2 regularization thường có xu hướng?",
+      "options": [
+        "Co đều độ lớn trọng số",
+        "Tạo chính xác nhiều số 0 hơn L1 trong mọi bài toán",
+        "Không ảnh hưởng nghiệm",
+        "Chỉ giới hạn max component"
+      ],
+      "answer": "Co đều độ lớn trọng số",
+      "explanation": "Penalty bình phương phân bố co trên nhiều hệ số.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q015",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Squared L2 thường dùng làm loss vì?",
+      "options": [
+        "Mượt và đạo hàm thuận tiện",
+        "Nó là norm tốt hơn L2",
+        "Không phụ thuộc scale",
+        "Luôn robust với outlier"
+      ],
+      "answer": "Mượt và đạo hàm thuận tiện",
+      "explanation": "Bỏ căn giúp tối ưu đơn giản hơn dù không còn là norm.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q016",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Squared L2 vi phạm tiên đề norm nào?",
+      "options": [
+        "Homogeneity bậc 1",
+        "Không âm",
+        "Tách điểm 0",
+        "Đối xứng ma trận"
+      ],
+      "answer": "Homogeneity bậc 1",
+      "explanation": "f(αx)=α²f(x) thay vì |α|f(x).",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q017",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Nếu một kênh cảm biến có scale 1000 lần kênh khác, khoảng cách L2 thô có nguy cơ gì?",
+      "options": [
+        "Bị kênh scale lớn chi phối",
+        "Tự động cân bằng",
+        "Không đổi",
+        "Luôn thành L∞"
+      ],
+      "answer": "Bị kênh scale lớn chi phối",
+      "explanation": "Bình phương độ lệch lớn làm kênh đó áp đảo metric.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q018",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Norm nào phù hợp khi yêu cầu mọi sai số thành phần không vượt ε?",
+      "options": [
+        "L∞≤ε",
+        "L1≤ε luôn tương đương",
+        "L2²≤ε luôn tương đương",
+        "Không norm nào"
+      ],
+      "answer": "L∞≤ε",
+      "explanation": "Max component bounded chính là điều kiện từng thành phần.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q019",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Vì sao L2 bất biến dưới ma trận trực giao Q?",
+      "options": [
+        "||Qx||₂²=xᵀQᵀQx=xᵀx",
+        "Q luôn là identity",
+        "L2 bỏ qua vector",
+        "Vì Q chỉ có số dương"
+      ],
+      "answer": "||Qx||₂²=xᵀQᵀQx=xᵀx",
+      "explanation": "QᵀQ=I bảo toàn inner product.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q020",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Trong robustness, chọn norm perturbation xác định điều gì?",
+      "options": [
+        "Hình dạng tập nhiễu cho phép",
+        "Số lớp mạng",
+        "Kích thước batch duy nhất",
+        "Kiểu dữ liệu file"
+      ],
+      "answer": "Hình dạng tập nhiễu cho phép",
+      "explanation": "L1/L2/L∞ tạo các tập perturbation khác nhau.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q021",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Nếu ||x||₂=0 thì kết luận gì?",
+      "options": [
+        "x=0",
+        "x có tổng phần tử bằng 0",
+        "x có thể khác 0",
+        "x vuông góc chính nó"
+      ],
+      "answer": "x=0",
+      "explanation": "Definiteness của norm: chỉ vector 0 có norm 0.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q022",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Trong hữu hạn chiều, các norm khác nhau tương đương theo nghĩa nào?",
+      "options": [
+        "Sinh cùng topology và chặn nhau bởi hằng số dương",
+        "Cho cùng giá trị mọi vector",
+        "Tạo cùng quả cầu đơn vị",
+        "Cho cùng nghiệm tối ưu mọi bài toán"
+      ],
+      "answer": "Sinh cùng topology và chặn nhau bởi hằng số dương",
+      "explanation": "Tồn tại c,C>0 sao cho c||x||a≤||x||b≤C||x||a.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q023",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Tại sao L1 loss thường robust hơn squared L2 với outlier?",
+      "options": [
+        "Penalty tăng tuyến tính thay vì bình phương",
+        "L1 bỏ qua mọi outlier",
+        "L2 không phải hàm",
+        "L1 luôn differentiable tại 0"
+      ],
+      "answer": "Penalty tăng tuyến tính thay vì bình phương",
+      "explanation": "Outlier lớn bị squared L2 khuếch đại mạnh hơn.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q024",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Dual norm của L1 là norm nào?",
+      "options": [
+        "L∞",
+        "L2",
+        "L1/2",
+        "Không tồn tại"
+      ],
+      "answer": "L∞",
+      "explanation": "Theo Hölder, sup dưới ||x||1≤1 tương ứng L∞.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E181-norm-Q025",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Dual norm của L2 là?",
+      "options": [
+        "L2",
+        "L1",
+        "L∞",
+        "Squared L2"
+      ],
+      "answer": "L2",
+      "explanation": "L2 tự đối ngẫu qua Cauchy–Schwarz.",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS",
+      "stage": "vn"
     }
   ],
   "importPolicy": {

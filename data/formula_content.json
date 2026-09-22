@@ -586,6 +586,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "formulaId": "E181-norm-F1",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Chuẩn L1",
+      "formula": "||x||₁ = Σᵢ |xᵢ|",
+      "meaning": "Chuẩn L1 đo tổng độ lớn tuyệt đối của các thành phần và tạo hình học quả cầu dạng hình thoi trong R².",
+      "conditions": [
+        "x là vector hữu hạn chiều hoặc chuỗi có tổng tuyệt đối hữu hạn trong bối cảnh mở rộng."
+      ],
+      "commonMistakes": [
+        "Bỏ dấu giá trị tuyệt đối.",
+        "Nhầm L1 với tổng đại số Σxᵢ."
+      ],
+      "programmingUse": "np.linalg.norm(x,1) hoặc np.abs(x).sum(); thường xuất hiện trong regularization khuyến khích nghiệm thưa.",
+      "tags": [
+        "norm",
+        "l1",
+        "geometry"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "formulaId": "E181-norm-F2",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Chuẩn Euclid L2",
+      "formula": "||x||₂ = sqrt(Σᵢ xᵢ²)",
+      "meaning": "Chuẩn L2 là độ dài Euclid, bất biến dưới phép quay trực giao và liên hệ trực tiếp với năng lượng bình phương.",
+      "conditions": [
+        "Các thành phần dùng cùng hệ tọa độ và scale có ý nghĩa khi so sánh khoảng cách."
+      ],
+      "commonMistakes": [
+        "Quên căn bậc hai khi cần norm thay vì squared norm.",
+        "So sánh feature khác đơn vị mà chưa scale/chuẩn hóa."
+      ],
+      "programmingUse": "np.linalg.norm(x) là L2 mặc định; squared L2 thường được dùng trong loss vì đạo hàm thuận tiện hơn.",
+      "tags": [
+        "norm",
+        "l2",
+        "euclidean"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "formulaId": "E181-norm-F3",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Chuẩn L∞",
+      "formula": "||x||∞ = maxᵢ |xᵢ|",
+      "meaning": "Chuẩn L∞ chỉ nhìn sai lệch thành phần lớn nhất; quả cầu đơn vị trong R² là hình vuông song song các trục.",
+      "conditions": [
+        "Cần quan tâm worst-case theo từng thành phần."
+      ],
+      "commonMistakes": [
+        "Lấy max xᵢ mà bỏ trị tuyệt đối.",
+        "Nhầm L∞ với giới hạn của giá trị vector theo thời gian."
+      ],
+      "programmingUse": "np.linalg.norm(x,np.inf); hữu ích trong ràng buộc sai số cực đại và robustness theo worst component.",
+      "tags": [
+        "norm",
+        "linf",
+        "robustness"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
     }
   ],
   "importPolicy": {
