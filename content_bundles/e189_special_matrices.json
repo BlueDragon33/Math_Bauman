@@ -980,10 +980,6 @@
           {
             "from": "diag",
             "to": "compute"
-          },
-          {
-            "from": "tri",
-            "to": "compute"
           }
         ],
         "tags": [
