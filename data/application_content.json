@@ -985,6 +985,38 @@
         "kinematics",
         "singularity"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "applicationId": "E203-hessian-A1",
+      "title": "Curvature của loss và lựa chọn bước tối ưu",
+      "scenario": "Loss có một hướng rất dốc và một hướng rất phẳng, khiến gradient descent dao động.",
+      "method": "Tính/ước lượng Hessian hoặc phổ trị riêng gần operating point; dùng tỷ lệ trị riêng để hiểu conditioning và cân nhắc scaling, preconditioning hoặc phương pháp bậc hai.",
+      "expectedOutcome": "Giải thích được zig-zag và vì sao cùng một learning rate không phù hợp mọi hướng.",
+      "tags": [
+        "machine-learning",
+        "conditioning",
+        "optimization"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "applicationId": "E203-hessian-A2",
+      "title": "Độ cong trong hiệu chỉnh mô hình kỹ thuật",
+      "scenario": "Hàm chi phí calibration theo hai tham số có nhiều stationary point.",
+      "method": "Tại mỗi điểm dừng, đánh giá Hessian và trị riêng để phân biệt minimum, maximum và saddle; kiểm tra thêm nếu Hessian bán xác định.",
+      "expectedOutcome": "Không nhầm điểm dừng với nghiệm tối ưu và có tiêu chí hình học để chọn vùng nghiệm.",
+      "tags": [
+        "calibration",
+        "extrema",
+        "engineering"
+      ]
     }
   ],
   "importPolicy": {
