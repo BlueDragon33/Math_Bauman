@@ -837,6 +837,41 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "reviewPackId": "E197-limits-RP01",
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "items": [
+        {
+          "type": "limit",
+          "prompt": "Phân biệt f(a) và lim_{x→a}f(x).",
+          "expected": "f(a) là giá trị tại điểm; limit là hành vi quanh điểm và có thể tồn tại khi f(a) khác hoặc không xác định."
+        },
+        {
+          "type": "continuity",
+          "prompt": "Ba điều kiện liên tục tại a?",
+          "expected": "f(a) xác định; lim tồn tại; lim=f(a)."
+        },
+        {
+          "type": "rate",
+          "prompt": "Difference quotient nói gì?",
+          "expected": "Tốc độ biến thiên trung bình, tiến tới tốc độ tức thời khi h→0 nếu giới hạn tồn tại."
+        },
+        {
+          "type": "numerical",
+          "prompt": "Hai nguồn lỗi khi finite difference?",
+          "expected": "Truncation khi h lớn và roundoff/cancellation khi h quá nhỏ."
+        }
+      ],
+      "masteryGate": "Phân biệt giá trị và giới hạn + kiểm liên tục + hiểu difference quotient + giải thích trade-off finite difference",
+      "tags": [
+        "limit",
+        "continuity",
+        "E197"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E197_LIMITS_CONTINUITY"
     }
   ],
   "importPolicy": {
