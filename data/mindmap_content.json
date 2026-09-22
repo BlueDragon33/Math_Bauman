@@ -825,6 +825,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "mindmapId": "E183-dot-MM01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Tích vô hướng = magnitude × direction",
+          "type": "root"
+        },
+        {
+          "id": "definition",
+          "label": "x·y = Σxᵢyᵢ",
+          "type": "formula"
+        },
+        {
+          "id": "angle",
+          "label": "x·y=||x||||y||cosθ",
+          "type": "formula"
+        },
+        {
+          "id": "orthogonal",
+          "label": "x·y=0 ⇒ trực giao",
+          "type": "concept"
+        },
+        {
+          "id": "scale",
+          "label": "Cảnh báo: dot phụ thuộc norm",
+          "type": "warning"
+        },
+        {
+          "id": "cosine",
+          "label": "Cosine = dot/(||x||||y||)",
+          "type": "validation"
+        },
+        {
+          "id": "application",
+          "label": "Embedding · tín hiệu · Gram matrix",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "definition"
+        },
+        {
+          "from": "definition",
+          "to": "angle"
+        },
+        {
+          "from": "angle",
+          "to": "orthogonal"
+        },
+        {
+          "from": "angle",
+          "to": "scale"
+        },
+        {
+          "from": "scale",
+          "to": "cosine"
+        },
+        {
+          "from": "cosine",
+          "to": "application"
+        }
+      ],
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
     }
   ],
   "importPolicy": {
