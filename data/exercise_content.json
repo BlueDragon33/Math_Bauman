@@ -2832,7 +2832,7 @@
     {
       "exerciseId": "E197-limits-E01",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "level": "easy",
       "prompt": "lim_{x→2}(3x+1) bằng bao nhiêu?",
       "solution": "Vì hàm tuyến tính liên tục, thay x=2 được 7.",
@@ -2845,7 +2845,7 @@
     {
       "exerciseId": "E197-limits-E02",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "level": "easy",
       "prompt": "Nếu lim_{x→a}f(x)=5 nhưng f(a)=2, f có liên tục tại a không?",
       "solution": "Không, vì điều kiện liên tục yêu cầu giới hạn bằng giá trị hàm.",
@@ -2858,7 +2858,7 @@
     {
       "exerciseId": "E197-limits-E03",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "level": "medium",
       "prompt": "Tính lim_{x→1}(x²-1)/(x-1).",
       "solution": "Phân tích x²-1=(x-1)(x+1), rút gọn khi x≠1 rồi giới hạn bằng 2.",
@@ -2871,7 +2871,7 @@
     {
       "exerciseId": "E197-limits-E04",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "level": "medium",
       "prompt": "Một hàm piecewise có giới hạn trái 3 và giới hạn phải 4 tại a. Giới hạn hai phía tồn tại không?",
       "solution": "Không. Hai giới hạn một phía khác nhau.",
@@ -2884,7 +2884,7 @@
     {
       "exerciseId": "E197-limits-E05",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "level": "medium",
       "prompt": "Với f(x)=x², tính tốc độ biến thiên trung bình từ x=2 đến x=2+h.",
       "solution": "[(2+h)²-4]/h=4+h, h≠0.",
@@ -2897,7 +2897,7 @@
     {
       "exerciseId": "E197-limits-E06",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "level": "hard",
       "prompt": "Giải thích vì sao finite difference với h quá lớn và h quá nhỏ đều có thể kém chính xác.",
       "solution": "h lớn gây truncation error; h quá nhỏ gây cancellation/roundoff trong floating point.",
@@ -2910,7 +2910,7 @@
     {
       "exerciseId": "E197-limits-E07",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "level": "hard",
       "prompt": "Một mô hình điều khiển có luật piecewise tạo jump discontinuity tại ngưỡng. Rủi ro là gì?",
       "solution": "Output có thể nhảy đột ngột, gây chatter/command discontinuity và làm gradient-based tuning hoặc sensitivity analysis khó ổn định.",
@@ -2924,7 +2924,7 @@
     {
       "exerciseId": "E197-limits-E08",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "level": "expert",
       "prompt": "Tại sao continuity không đủ để đảm bảo khả vi?",
       "solution": "Ví dụ |x| liên tục tại 0 nhưng đạo hàm trái=-1 và phải=1 nên không khả vi.",
