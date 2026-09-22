@@ -1,0 +1,996 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E192_MATRIX_POWERS_POLYNOMIAL",
+  "lessonId": "MATH-VN-LA-C02-L06",
+  "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+  "title": "§2.6 · Lũy thừa ma trận và đa thức của ma trận",
+  "sources": {
+    "formula_content": [
+      {
+        "formulaId": "E192-power-F1",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Lũy thừa ma trận",
+        "formula": "A^k = A·A·...·A,  A^0=I",
+        "meaning": "A^k mô tả composition lặp k lần của cùng linear transform.",
+        "conditions": [
+          "A vuông để các tích A·A tiếp tục tương thích.",
+          "k là số nguyên không âm trong định nghĩa cơ bản."
+        ],
+        "commonMistakes": [
+          "Nhầm A^2 với bình phương từng phần tử.",
+          "Dùng A^0=0."
+        ],
+        "programmingUse": "matrix_power(A,k); kiểm shape và conditioning khi k lớn.",
+        "tags": [
+          "matrix-power",
+          "composition"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "formulaId": "E192-power-F2",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Đa thức ma trận",
+        "formula": "p(A)=c₀I+c₁A+...+c_rA^r",
+        "meaning": "Thay biến vô hướng trong đa thức bằng ma trận vuông A, giữ thứ tự lũy thừa của A.",
+        "conditions": [
+          "A vuông.",
+          "Hệ số cᵢ tương thích trường số."
+        ],
+        "commonMistakes": [
+          "Bỏ c₀I và viết c₀ như scalar trần.",
+          "Khai triển công thức vô hướng với nhiều ma trận không giao hoán."
+        ],
+        "programmingUse": "Dùng Horner: Y=c_r I; Y=A@Y+c_{r-1}I ... để giảm matrix multiply.",
+        "tags": [
+          "matrix-polynomial",
+          "horner"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "formulaId": "E192-power-F3",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Lan truyền trạng thái rời rạc",
+        "formula": "x_k = A^k x_0",
+        "meaning": "Không có input, trạng thái sau k bước được tạo bởi A^k tác động lên trạng thái đầu.",
+        "conditions": [
+          "Mô hình x_{k+1}=Ax_k tuyến tính bất biến theo thời gian.",
+          "Không có input hoặc input đã tách riêng."
+        ],
+        "commonMistakes": [
+          "Suy ổn định chỉ từ một vài bước nhỏ.",
+          "Bỏ qua spectral radius/conditioning."
+        ],
+        "programmingUse": "Theo dõi norm(A^k) hoặc dùng eig/schur để đánh giá tăng/giảm.",
+        "tags": [
+          "control",
+          "state-transition"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      }
+    ],
+    "exercise_content": [
+      {
+        "exerciseId": "E192-power-E01",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "prompt": "Cho A=I₂. Tính A^5.",
+        "solution": "A^5=I₂.",
+        "tags": [
+          "identity"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "exerciseId": "E192-power-E02",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "prompt": "Cho D=diag(2,3). Tính D^3.",
+        "solution": "diag(8,27).",
+        "tags": [
+          "diagonal"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "exerciseId": "E192-power-E03",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Khai triển (A+B)^2 khi không giả sử AB=BA.",
+        "solution": "A²+AB+BA+B².",
+        "tags": [
+          "noncommutative"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "exerciseId": "E192-power-E04",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Vì sao p(A) luôn giao hoán với A?",
+        "solution": "Mỗi A^k giao hoán với A và tổ hợp tuyến tính các lũy thừa cũng vậy.",
+        "tags": [
+          "polynomial"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "exerciseId": "E192-power-E05",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Tính p(A)=2I-3A+A² cho A=diag(1,2).",
+        "solution": "diag(0,0) vì p(1)=0, p(2)=0.",
+        "tags": [
+          "diagonal",
+          "polynomial"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "exerciseId": "E192-power-E06",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "prompt": "Nếu spectral radius(A)=0.8, giải thích trực giác về A^k khi k tăng.",
+        "solution": "Các mode eigen có magnitude <1 nên thường suy giảm theo k, dù non-normality có thể gây transient growth.",
+        "tags": [
+          "stability"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "exerciseId": "E192-power-E07",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "prompt": "So sánh nhân A 64 lần và exponentiation by squaring để tính A^64.",
+        "solution": "Squaring dùng khoảng log2(64)=6 bước nhân theo cấu trúc lũy thừa thay vì 63 phép nhân tuần tự.",
+        "tags": [
+          "algorithm"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "exerciseId": "E192-power-E08",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "prompt": "Nêu lý do không nên suy numerical stability chỉ từ eigenvalue khi A non-normal.",
+        "solution": "Eigenvector conditioning và transient growth có thể làm ||A^k|| lớn dù spectral radius <1 trong giai đoạn hữu hạn.",
+        "tags": [
+          "non-normal",
+          "numerical"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      }
+    ],
+    "application_content": [
+      {
+        "applicationId": "E192-power-A1",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Lan truyền trạng thái nhiều bước",
+        "scenario": "Mô hình rời rạc x_{k+1}=Ax_k cần dự đoán k bước không input.",
+        "method": "Dùng A^k hoặc thuật toán propagate lặp; theo dõi spectral radius, conditioning và norm.",
+        "expectedOutcome": "Hiểu rõ mode nào suy giảm/khuếch đại và tránh kết luận ổn định hời hợt.",
+        "tags": [
+          "control",
+          "state-transition"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "applicationId": "E192-power-A2",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Polynomial graph filter",
+        "scenario": "Cần aggregate thông tin nhiều hop trên graph mà không diagonalize toàn bộ matrix.",
+        "method": "Dùng p(A)=Σc_kA^k trên adjacency/Laplacian với bậc phù hợp.",
+        "expectedOutcome": "Biểu diễn lọc cục bộ nhiều hop và kiểm được cost/độ ổn định.",
+        "tags": [
+          "graph",
+          "polynomial-filter"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      }
+    ],
+    "simulation_content": [
+      {
+        "simulationId": "E192-power-SIM1",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Mô phỏng norm(A^k) theo spectral radius",
+        "purpose": "Thay eigenvalue magnitude và số bước để quan sát decay/growth.",
+        "controls": [
+          {
+            "key": "lambda_max",
+            "type": "number",
+            "default": 0.9
+          },
+          {
+            "key": "steps",
+            "type": "number",
+            "default": 20
+          },
+          {
+            "key": "non_normality",
+            "type": "number",
+            "default": 0
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "norm_curve",
+            "label": "||A^k||"
+          },
+          {
+            "key": "spectral_radius",
+            "label": "ρ(A)"
+          },
+          {
+            "key": "transient_peak",
+            "label": "Transient peak"
+          }
+        ],
+        "expectedObservation": "ρ<1 thường dẫn decay dài hạn nhưng non-normality có thể tạo transient growth.",
+        "tags": [
+          "stability",
+          "power"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      },
+      {
+        "simulationId": "E192-power-SIM2",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Mô phỏng polynomial filter",
+        "purpose": "Thay hệ số c_k và xem response của p(A) trên các mode.",
+        "controls": [
+          {
+            "key": "degree",
+            "type": "number",
+            "default": 3
+          },
+          {
+            "key": "c0",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "c1",
+            "type": "number",
+            "default": 0.5
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "response",
+            "label": "p(λ)"
+          },
+          {
+            "key": "matrix_cost",
+            "label": "Chi phí nhân ma trận"
+          },
+          {
+            "key": "gain_max",
+            "label": "Max gain"
+          }
+        ],
+        "expectedObservation": "Hệ số đa thức điều khiển gain theo spectrum và bậc quyết định locality/cost.",
+        "tags": [
+          "polynomial",
+          "filter"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "qaId": "E192-power-QA01",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "question": "Nếu giáo sư hỏi 'A^k chỉ là ký hiệu lũy thừa hay có ý nghĩa hệ thống?', bạn trả lời thế nào?",
+        "answer": "A^k là composition k lần của cùng linear transform. Trong hệ rời rạc x_{k+1}=Ax_k, nó là toán tử chuyển trạng thái k bước; hành vi của A^k phản ánh mode động lực, spectral radius và conditioning, nên có ý nghĩa trực tiếp về ổn định và khuếch đại.",
+        "followUp": [
+          "Tại sao (A+B)^2 không luôn có 2AB?",
+          "Cayley-Hamilton giúp gì?",
+          "Non-normality ảnh hưởng A^k thế nào?"
+        ],
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      }
+    ],
+    "review_pack_content": [
+      {
+        "reviewPackId": "E192-power-RP01",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "items": [
+          {
+            "type": "definition",
+            "prompt": "Nêu A^0 và A^k.",
+            "expected": "A^0=I; A^k là tích k lần A khi A vuông."
+          },
+          {
+            "type": "polynomial",
+            "prompt": "Nêu dạng p(A).",
+            "expected": "c₀I+c₁A+...+c_rA^r."
+          },
+          {
+            "type": "trap",
+            "prompt": "Vì sao (A+B)^2 không luôn bằng A²+2AB+B²?",
+            "expected": "Vì nói chung AB≠BA."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Nêu ý nghĩa A^k trong hệ rời rạc.",
+            "expected": "Chuyển trạng thái k bước."
+          }
+        ],
+        "masteryGate": "Hiểu matrix power là composition + đa thức ma trận + noncommutativity + liên hệ A^k với dynamics và numerical stability",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      }
+    ],
+    "question_bank_content": [
+      {
+        "questionId": "E192-power-Q001",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "A² nghĩa là?",
+        "options": [
+          "AA",
+          "2A",
+          "A+A",
+          "AᵀA luôn"
+        ],
+        "answer": "AA",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q002",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "A^0 với ma trận vuông thường được định nghĩa là?",
+        "options": [
+          "I",
+          "0",
+          "A",
+          "A⁻¹"
+        ],
+        "answer": "I",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q003",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "A^k chỉ được định nghĩa trực tiếp theo tích lặp khi A?",
+        "options": [
+          "Vuông",
+          "Có một hàng",
+          "Có một cột",
+          "Đối xứng bắt buộc"
+        ],
+        "answer": "Vuông",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q004",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "p(A)=c₀I+c₁A+...+c_kA^k là?",
+        "options": [
+          "Đa thức của ma trận",
+          "Transpose",
+          "Inverse",
+          "Rank"
+        ],
+        "answer": "Đa thức của ma trận",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q005",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Nếu A=I thì A^k bằng?",
+        "options": [
+          "I",
+          "kI",
+          "0",
+          "Aᵀ"
+        ],
+        "answer": "I",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q006",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Nếu A=0 thì A^k với k≥1 bằng?",
+        "options": [
+          "0",
+          "I",
+          "A",
+          "kA"
+        ],
+        "answer": "0",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q007",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "A³ bằng?",
+        "options": [
+          "AAA",
+          "3A",
+          "A+A+A",
+          "AᵀA"
+        ],
+        "answer": "AAA",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q008",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Đa thức ma trận luôn chứa c₀ nhân với?",
+        "options": [
+          "I",
+          "0",
+          "A",
+          "Aᵀ"
+        ],
+        "answer": "I",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q009",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Nếu A và B không giao hoán thì (A+B)² bằng?",
+        "options": [
+          "A²+AB+BA+B²",
+          "A²+2AB+B² luôn",
+          "A²+B²",
+          "ABBA"
+        ],
+        "answer": "A²+AB+BA+B²",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q010",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Điều kiện để dùng nhị thức A²+2AB+B² là?",
+        "options": [
+          "AB=BA",
+          "A,B cùng determinant",
+          "A,B đối xứng",
+          "A,B khả nghịch"
+        ],
+        "answer": "AB=BA",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q011",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Nếu A diagonal thì A^k?",
+        "options": [
+          "Nâng từng phần tử đường chéo lên lũy thừa k",
+          "Luôn bằng I",
+          "Luôn bằng 0",
+          "Đổi thành dense ngẫu nhiên"
+        ],
+        "answer": "Nâng từng phần tử đường chéo lên lũy thừa k",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q012",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "p(A) có giao hoán với A không?",
+        "options": [
+          "Có",
+          "Không bao giờ",
+          "Chỉ khi A đối xứng",
+          "Chỉ khi det(A)=1"
+        ],
+        "answer": "Có",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q013",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Cayley-Hamilton nói A thỏa?",
+        "options": [
+          "Đa thức đặc trưng của chính nó",
+          "Mọi đa thức",
+          "Chỉ p(A)=A",
+          "Chỉ det(A)=0"
+        ],
+        "answer": "Đa thức đặc trưng của chính nó",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q014",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Matrix polynomial hữu ích để?",
+        "options": [
+          "Biểu diễn bộ lọc/động lực tuyến tính theo A",
+          "Đổi shape",
+          "Tính median",
+          "Xóa dimension"
+        ],
+        "answer": "Biểu diễn bộ lọc/động lực tuyến tính theo A",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q015",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Tính A^k hiệu quả nên?",
+        "options": [
+          "Khai thác cấu trúc hoặc exponentiation by squaring khi phù hợp",
+          "Nhân k lần bất kể k",
+          "Tính inverse trước",
+          "Transpose trước"
+        ],
+        "answer": "Khai thác cấu trúc hoặc exponentiation by squaring khi phù hợp",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q016",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Vì sao A^k có thể làm sai số số tăng mạnh?",
+        "options": [
+          "Conditioning/eigenvalue magnitude có thể khuếch đại sai số",
+          "Shape tự đổi",
+          "Rank luôn tăng",
+          "Determinant luôn 1"
+        ],
+        "answer": "Conditioning/eigenvalue magnitude có thể khuếch đại sai số",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q017",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Nếu spectral radius(A)<1 thì A^k thường có xu hướng?",
+        "options": [
+          "Giảm về 0 trong nhiều trường hợp chuẩn",
+          "Nổ vô hạn luôn",
+          "Bằng I",
+          "Đổi shape"
+        ],
+        "answer": "Giảm về 0 trong nhiều trường hợp chuẩn",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q018",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Nếu A có eigenvalue |λ|>1 thì A^k có thể?",
+        "options": [
+          "Khuếch đại theo |λ|^k",
+          "Luôn bằng 0",
+          "Luôn ổn định",
+          "Mất mọi eigenvector"
+        ],
+        "answer": "Khuếch đại theo |λ|^k",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q019",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Horner form cho p(A) nhằm?",
+        "options": [
+          "Giảm số phép nhân ma trận",
+          "Tăng rank",
+          "Tính inverse",
+          "Đổi basis bắt buộc"
+        ],
+        "answer": "Giảm số phép nhân ma trận",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q020",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Trong graph filtering, polynomial của adjacency/Laplacian có thể biểu diễn?",
+        "options": [
+          "Lan truyền cục bộ nhiều hop",
+          "Chỉ node degree",
+          "Chỉ transpose",
+          "Chỉ determinant"
+        ],
+        "answer": "Lan truyền cục bộ nhiều hop",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q021",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Matrix exponential e^{At} có liên hệ với?",
+        "options": [
+          "Chuỗi lũy thừa/đa thức của A",
+          "Chỉ determinant",
+          "Chỉ inverse",
+          "Chỉ rank"
+        ],
+        "answer": "Chuỗi lũy thừa/đa thức của A",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q022",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Dùng p(A) để xấp xỉ hàm ma trận cần kiểm?",
+        "options": [
+          "Miền phổ của A và sai số xấp xỉ",
+          "Chỉ số hàng",
+          "Màu heatmap",
+          "Tên biến"
+        ],
+        "answer": "Miền phổ của A và sai số xấp xỉ",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q023",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Krylov methods khai thác không gian?",
+        "options": [
+          "span{b,Ab,A²b,...}",
+          "Chỉ span{A}",
+          "Chỉ kernel(A)",
+          "Chỉ diagonal(A)"
+        ],
+        "answer": "span{b,Ab,A²b,...}",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q024",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Trong discrete-time state model x_{k+1}=Ax_k, A^k mô tả?",
+        "options": [
+          "Lan truyền trạng thái k bước",
+          "Chỉ input bias",
+          "Transpose state",
+          "Rank state"
+        ],
+        "answer": "Lan truyền trạng thái k bước",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E192-power-Q025",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Unit test tốt cho matrix powers nên kiểm?",
+        "options": [
+          "A^0=I, A^{k+1}=A^kA, cấu trúc đặc biệt và ổn định số",
+          "Chỉ trace",
+          "Chỉ determinant",
+          "Chỉ shape"
+        ],
+        "answer": "A^0=I, A^{k+1}=A^kA, cấu trúc đặc biệt và ổn định số",
+        "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, noncommutativity, spectral behavior và ứng dụng dynamics/filtering.",
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL",
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "mindmapId": "E192-power-MM01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "lessonId": "MATH-VN-LA-C02-L06",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "A^k = composition lặp của linear map",
+            "type": "root"
+          },
+          {
+            "id": "power",
+            "label": "A^0=I, A^k=A…A",
+            "type": "formula"
+          },
+          {
+            "id": "poly",
+            "label": "p(A)=Σc_kA^k",
+            "type": "formula"
+          },
+          {
+            "id": "noncomm",
+            "label": "(A+B)^2 có AB và BA",
+            "type": "warning"
+          },
+          {
+            "id": "dynamics",
+            "label": "x_k=A^k x_0",
+            "type": "application"
+          },
+          {
+            "id": "spectrum",
+            "label": "ρ(A) định hình tăng/giảm dài hạn",
+            "type": "concept"
+          },
+          {
+            "id": "numerical",
+            "label": "Theo dõi conditioning/transient growth",
+            "type": "validation"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "power"
+          },
+          {
+            "from": "root",
+            "to": "poly"
+          },
+          {
+            "from": "root",
+            "to": "noncomm"
+          },
+          {
+            "from": "power",
+            "to": "dynamics"
+          },
+          {
+            "from": "dynamics",
+            "to": "spectrum"
+          },
+          {
+            "from": "spectrum",
+            "to": "numerical"
+          }
+        ],
+        "tags": [
+          "matrix-power",
+          "E192"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+      }
+    ]
+  }
+}
