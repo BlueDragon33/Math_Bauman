@@ -3815,6 +3815,116 @@
         "training",
         "gradient-check"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "exerciseId": "E206-prob-E01",
+      "level": "easy",
+      "prompt": "Tung một đồng xu một lần. Viết Ω và biến cố A='ra ngửa'.",
+      "solution": "Ω={N,S} (ngửa, sấp); A={N}.",
+      "tags": [
+        "sample-space"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "exerciseId": "E206-prob-E02",
+      "level": "easy",
+      "prompt": "Tung xúc xắc 6 mặt. A='số chẵn'. Viết A.",
+      "solution": "A={2,4,6}.",
+      "tags": [
+        "event"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "exerciseId": "E206-prob-E03",
+      "level": "easy",
+      "prompt": "Với Ω={1,2,3,4,5,6}, A={2,4,6}. Tính Aᶜ.",
+      "solution": "Aᶜ={1,3,5}.",
+      "tags": [
+        "complement"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "exerciseId": "E206-prob-E04",
+      "level": "medium",
+      "prompt": "Xúc xắc: A='chẵn', B='≥4'. Tính A∩B và A∪B.",
+      "solution": "A={2,4,6}, B={4,5,6}; A∩B={4,6}; A∪B={2,4,5,6}.",
+      "tags": [
+        "intersection",
+        "union"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "exerciseId": "E206-prob-E05",
+      "level": "medium",
+      "prompt": "Với A='sensor nhiệt báo lỗi', B='sensor áp suất báo lỗi', diễn giải A∪B.",
+      "solution": "Ít nhất một trong hai sensor báo lỗi, bao gồm cả trường hợp cả hai cùng báo.",
+      "tags": [
+        "engineering",
+        "union"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "exerciseId": "E206-prob-E06",
+      "level": "medium",
+      "prompt": "Diễn giải (A∪B)ᶜ bằng lời và dùng De Morgan.",
+      "solution": "Không sensor nào trong A hoặc B xảy ra; bằng Aᶜ∩Bᶜ.",
+      "tags": [
+        "de-morgan",
+        "logic"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "exerciseId": "E206-prob-E07",
+      "level": "hard",
+      "prompt": "Một record có cờ low_voltage V và overheat H. Viết event 'có đúng một lỗi'.",
+      "solution": "(V∩Hᶜ)∪(Vᶜ∩H), không phải V∪H vì union còn chứa cả hai lỗi cùng lúc.",
+      "tags": [
+        "exclusive-or",
+        "events"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "exerciseId": "E206-prob-E08",
+      "level": "hard",
+      "prompt": "Vì sao cần định nghĩa Ω trước khi nói Aᶜ?",
+      "solution": "Complement phụ thuộc universe: Aᶜ=Ω\\A. Đổi Ω có thể đổi hoàn toàn biến cố bù.",
+      "tags": [
+        "sample-space",
+        "complement",
+        "concept"
+      ]
     }
   ],
   "importPolicy": {
