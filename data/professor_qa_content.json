@@ -183,6 +183,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "qaId": "E181-norm-QA01",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "question": "Nếu giáo sư hỏi vì sao cần nhiều loại norm thay vì chỉ dùng độ dài Euclid, bạn sẽ trả lời thế nào?",
+      "answer": "Norm là cách đo độ lớn phù hợp với mục tiêu. L2 đo năng lượng/hình học Euclid, L1 nhạy theo tổng độ lớn và liên hệ sparsity, L∞ kiểm worst-case thành phần. Các norm trong hữu hạn chiều tương đương về topology nhưng tạo hình học và bài toán tối ưu khác nhau; vì vậy lựa chọn norm phải gắn với ý nghĩa kỹ thuật và scale dữ liệu.",
+      "followUp": [
+        "Squared L2 có phải norm không?",
+        "Vì sao scale feature làm metric sai lệch?",
+        "Một ràng buộc worst-case nên dùng norm nào?"
+      ],
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
     }
   ],
   "importPolicy": {
