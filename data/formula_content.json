@@ -2061,6 +2061,78 @@
         "uncertainty",
         "error-propagation"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "formulaId": "E203-hessian-F1",
+      "title": "Ma trận Hessian",
+      "formula": "H_f(x)=[∂²f/∂x_i∂x_j]",
+      "meaning": "Hessian gom các đạo hàm riêng bậc hai và mô tả độ cong cục bộ của hàm vô hướng.",
+      "conditions": [
+        "f khả vi bậc hai quanh điểm xét.",
+        "Nếu các đạo hàm chéo liên tục thì Hessian đối xứng theo định lý Clairaut."
+      ],
+      "commonMistakes": [
+        "Đảo nhầm chỉ số đạo hàm chéo khi không kiểm điều kiện liên tục.",
+        "Nhầm Hessian với Jacobian của hàm vector."
+      ],
+      "programmingUse": "Dùng trong Newton, phân tích cực trị, curvature và điều kiện tối ưu.",
+      "tags": [
+        "hessian",
+        "second-derivative",
+        "curvature"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "formulaId": "E203-hessian-F2",
+      "title": "Taylor bậc hai",
+      "formula": "f(x+Δ)≈f(x)+∇f(x)ᵀΔ+½ΔᵀH_f(x)Δ",
+      "meaning": "Thành phần gradient cho slope bậc nhất; quadratic form của Hessian cho độ cong bậc hai.",
+      "conditions": [
+        "Δ đủ nhỏ.",
+        "f đủ trơn quanh operating point."
+      ],
+      "commonMistakes": [
+        "Quên hệ số 1/2.",
+        "Dùng H tại điểm khác operating point."
+      ],
+      "programmingUse": "Phân tích bước tối ưu, xấp xỉ loss và độ tin cậy của linearization.",
+      "tags": [
+        "taylor",
+        "quadratic-form",
+        "curvature"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "formulaId": "E203-hessian-F3",
+      "title": "Phân loại điểm dừng theo Hessian",
+      "formula": "∇f(x*)=0: H≻0 ⇒ cực tiểu chặt cục bộ; H≺0 ⇒ cực đại chặt cục bộ; H bất định ⇒ điểm yên ngựa",
+      "meaning": "Dấu các trị riêng của Hessian cho biết hàm cong lên, cong xuống hay trái dấu theo các hướng khác nhau.",
+      "conditions": [
+        "x* là điểm dừng.",
+        "f khả vi bậc hai gần x*."
+      ],
+      "commonMistakes": [
+        "Kết luận cực tiểu chỉ từ ∇f=0.",
+        "Xem Hessian bán xác định là đủ để kết luận chặt mà không kiểm bậc cao."
+      ],
+      "programmingUse": "Chẩn đoán stationary point và landscape tối ưu.",
+      "tags": [
+        "extrema",
+        "eigenvalues",
+        "second-order-test"
+      ]
     }
   ],
   "importPolicy": {
