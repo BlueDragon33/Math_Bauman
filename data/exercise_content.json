@@ -1429,6 +1429,120 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "exerciseId": "E184-cos-E01",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Tính cosine similarity giữa x=(1,0) và y=(1,1).",
+      "solution": "dot=1, ||x||=1, ||y||=√2 nên cosine=1/√2≈0.707.",
+      "tags": [
+        "cosine",
+        "numeric"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "exerciseId": "E184-cos-E02",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Cosine similarity giữa hai vector cùng hướng khác 0 bằng bao nhiêu?",
+      "solution": "Bằng 1.",
+      "tags": [
+        "cosine",
+        "angle"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "exerciseId": "E184-cos-E03",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "So sánh cosine(x,y) và cosine(10x,0.5y) với hệ số dương.",
+      "solution": "Không đổi vì tử và mẫu cùng nhân 10·0.5.",
+      "tags": [
+        "cosine",
+        "scale-invariance"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "exerciseId": "E184-cos-E04",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Nếu cosine=-0.8 thì góc giữa hai vector là nhọn hay tù?",
+      "solution": "Tù vì cosine âm, θ>90°.",
+      "tags": [
+        "cosine",
+        "geometry"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "exerciseId": "E184-cos-E05",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Vì sao cosine similarity không xác định với vector 0?",
+      "solution": "Mẫu số chứa ||x||||y||; nếu một norm bằng 0 thì phép chia không xác định và vector 0 cũng không có hướng.",
+      "tags": [
+        "cosine",
+        "zero-vector"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "exerciseId": "E184-cos-E06",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Chứng minh với x̂,ŷ đơn vị rằng ||x̂-ŷ||²=2-2cosθ.",
+      "solution": "Khai triển (x̂-ŷ)·(x̂-ŷ)=||x̂||²+||ŷ||²-2x̂·ŷ=1+1-2cosθ.",
+      "tags": [
+        "cosine",
+        "euclidean",
+        "proof"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "exerciseId": "E184-cos-E07",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Hai embedding có cosine bằng nhau nhưng norm khác rất lớn. Khi nào dot score có thể cho ranking khác cosine?",
+      "solution": "Dot=xnorm·ynorm·cos; norm lớn có thể làm dot lớn hơn dù góc giống hoặc kém hơn. Khi magnitude mang biến thiên, ranking có thể đổi.",
+      "tags": [
+        "embedding",
+        "dot-vs-cosine"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "exerciseId": "E184-cos-E08",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "prompt": "Giải thích vì sao thêm cùng một offset vector c vào tất cả embedding có thể làm cosine similarity thay đổi mạnh.",
+      "solution": "Cosine không bất biến với phép tịnh tiến; hướng từ gốc thay đổi khi x→x+c. Vì vậy centering/preprocessing có thể thay đổi geometry cosine.",
+      "tags": [
+        "cosine",
+        "centering",
+        "embedding"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
     }
   ],
   "importPolicy": {
