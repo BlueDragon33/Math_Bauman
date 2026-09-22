@@ -1778,6 +1778,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "formulaId": "E199-chain-F1",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Chain rule một tầng",
+      "formula": "y=f(u), u=g(x) ⇒ dy/dx=(df/du)(du/dx)",
+      "meaning": "Đạo hàm đầu ra theo đầu vào bằng tích sensitivity qua biến trung gian.",
+      "conditions": [
+        "f khả vi tại u=g(x).",
+        "g khả vi tại x."
+      ],
+      "commonMistakes": [
+        "Đạo hàm outer nhưng quên nhân inner derivative.",
+        "Thế sai biến khi đánh giá df/du."
+      ],
+      "programmingUse": "Nền tảng của backpropagation, sensitivity propagation và automatic differentiation.",
+      "tags": [
+        "chain-rule",
+        "composition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "formulaId": "E199-chain-F2",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Chain rule nhiều tầng",
+      "formula": "dy/dx=(dy/du_n)(du_n/du_{n-1})…(du_1/dx)",
+      "meaning": "Sensitivity toàn chuỗi là tích các đạo hàm cục bộ dọc theo đường phụ thuộc.",
+      "conditions": [
+        "Mỗi phép biến đổi trên đường đi khả vi.",
+        "Thứ tự nhân bám đúng hướng dependency."
+      ],
+      "commonMistakes": [
+        "Bỏ sót một local derivative.",
+        "Nhân sai thứ tự khi mở rộng sang Jacobian/matrix case."
+      ],
+      "programmingUse": "Diễn giải computational graph sâu và nguyên nhân vanishing/exploding gradients.",
+      "tags": [
+        "deep-chain",
+        "backprop"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "formulaId": "E199-chain-F3",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Ví dụ hàm hợp chuẩn",
+      "formula": "d/dx sin(x²)=cos(x²)·2x",
+      "meaning": "Đạo hàm outer sin(u) là cos(u), rồi nhân đạo hàm inner u=x² là 2x.",
+      "conditions": [
+        "Nhận diện đúng outer và inner function.",
+        "Giữ nguyên inner expression khi đạo hàm outer."
+      ],
+      "commonMistakes": [
+        "Viết cos(x)·2x.",
+        "Viết cos(x²) nhưng quên 2x."
+      ],
+      "programmingUse": "Mẫu nhỏ để kiểm chain-rule implementation trước khi chuyển sang computational graph lớn.",
+      "tags": [
+        "sin",
+        "nested-function"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
     }
   ],
   "importPolicy": {

@@ -858,6 +858,37 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "applicationId": "E199-chain-A1",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Backprop qua computational graph nhỏ",
+      "scenario": "Loss J phụ thuộc w qua z=wx+b, a=tanh(z), J=(a-y*)².",
+      "method": "Tính dJ/da, da/dz, dz/dw rồi nhân theo chain rule; so với finite difference theo w.",
+      "expectedOutcome": "Hiểu backprop là chain rule có tổ chức, không phải công thức riêng biệt.",
+      "tags": [
+        "backprop",
+        "machine-learning"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "applicationId": "E199-chain-A2",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Lan truyền sensitivity trong pipeline cảm biến",
+      "scenario": "raw voltage → calibration → nonlinear transform → control feature.",
+      "method": "Tính derivative cục bộ ở từng block rồi nhân để biết feature cuối nhạy đến đâu với raw voltage.",
+      "expectedOutcome": "Xác định block khuếch đại hoặc làm suy giảm sensitivity và hỗ trợ chọn scale/gain.",
+      "tags": [
+        "sensor",
+        "control",
+        "sensitivity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
     }
   ],
   "importPolicy": {

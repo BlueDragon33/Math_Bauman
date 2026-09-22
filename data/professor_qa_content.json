@@ -496,6 +496,25 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "qaId": "E199-chain-QA01",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "question": "Nếu giáo sư hỏi 'chain rule liên hệ thế nào với backpropagation?', bạn trả lời thế nào?",
+      "answer": "Chain rule cho đạo hàm hàm hợp bằng tích các sensitivity cục bộ. Computational graph biểu diễn phép tính thành các node; backprop đi ngược graph, tái sử dụng local derivatives và tích/cộng đóng góp theo dependency để lấy gradient của loss theo tham số. Vì vậy backprop là cách tổ chức chain rule hiệu quả trên graph.",
+      "followUp": [
+        "Vanishing gradient xuất hiện thế nào?",
+        "Vì sao finite difference vẫn hữu ích?",
+        "Khi graph phân nhánh thì gradient gộp ra sao?"
+      ],
+      "tags": [
+        "chain-rule",
+        "backprop",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
     }
   ],
   "importPolicy": {
