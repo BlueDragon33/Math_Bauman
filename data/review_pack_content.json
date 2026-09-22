@@ -429,6 +429,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "reviewPackId": "E185-proj-RP01",
+      "lessonId": "MATH-VN-LA-C01-L06",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Nêu hệ số projection và projection vector lên u.",
+          "expected": "α=(u·x)/(u·u), proj_u(x)=αu."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Lỗi nào xảy ra khi dùng u·x làm projection coefficient với u không đơn vị?",
+          "expected": "Bỏ mất mẫu u·u nên kết quả phụ thuộc scale của u."
+        },
+        {
+          "type": "geometry",
+          "prompt": "Nêu điều kiện residual của projection.",
+          "expected": "r=x-proj_u(x) và u·r=0."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Liên hệ projection với least squares.",
+          "expected": "Residual trực giao Col(A), tạo AᵀA x̂=Aᵀb."
+        }
+      ],
+      "masteryGate": "Tính projection đúng + kiểm residual trực giao + giải thích scale invariance + nối được sang least squares",
+      "tags": [
+        "projection",
+        "E185"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
     }
   ],
   "importPolicy": {
