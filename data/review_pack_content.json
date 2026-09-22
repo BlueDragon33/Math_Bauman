@@ -1015,6 +1015,47 @@
         "optimization",
         "E201"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "reviewPackId": "E202-jacobian-RP01",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Jacobian của f:ℝⁿ→ℝᵐ có kích thước?",
+          "expected": "m×n."
+        },
+        {
+          "type": "linearization",
+          "prompt": "Perturbation output bậc nhất?",
+          "expected": "Δy≈JΔx."
+        },
+        {
+          "type": "uncertainty",
+          "prompt": "Covariance propagation?",
+          "expected": "Σ_y≈JΣ_xJᵀ."
+        },
+        {
+          "type": "implementation",
+          "prompt": "Một cột Jacobian đại diện gì?",
+          "expected": "Sensitivity của toàn bộ output theo một input."
+        },
+        {
+          "type": "verification",
+          "prompt": "Kiểm tra Jacobian số?",
+          "expected": "Finite difference theo từng basis direction hoặc directional check."
+        }
+      ],
+      "masteryGate": "Tính đúng Jacobian + đọc đúng kích thước/hàng/cột + linearize perturbation + propagate covariance + kiểm tra số + giải thích giới hạn xấp xỉ",
+      "tags": [
+        "jacobian",
+        "linearization",
+        "uncertainty",
+        "E202"
+      ]
     }
   ],
   "importPolicy": {
