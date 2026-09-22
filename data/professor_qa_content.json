@@ -534,6 +534,26 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "qaId": "E201-gradient-QA01",
+      "question": "Nếu giáo sư hỏi 'vì sao gradient là hướng tăng nhanh nhất và tại sao nó vuông góc đường mức?', bạn trả lời thế nào?",
+      "answer": "Với mọi hướng đơn vị u, đạo hàm theo hướng là Dᵤf=∇f·u=‖∇f‖cosθ. Giá trị lớn nhất xảy ra khi θ=0, tức u cùng hướng ∇f; nhỏ nhất khi θ=π, tức -∇f. Trên đường mức, f không đổi theo hướng tiếp tuyến nên đạo hàm theo tiếp tuyến bằng 0, suy ra ∇f vuông góc tiếp tuyến và do đó vuông góc đường mức tại điểm khả vi.",
+      "followUp": [
+        "Nếu ∇f=0 thì còn nói được hướng tăng nhanh nhất không?",
+        "Vì sao đổi thang đo biến có thể đổi hướng gradient số học?",
+        "-∇f có đảm bảo đi tới cực tiểu toàn cục không?"
+      ],
+      "tags": [
+        "gradient",
+        "geometry",
+        "oral-exam",
+        "E201"
+      ]
     }
   ],
   "importPolicy": {
