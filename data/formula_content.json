@@ -1155,6 +1155,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "formulaId": "E190-transpose-F1",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Định nghĩa transpose",
+      "formula": "(Aᵀ)ᵢⱼ = aⱼᵢ",
+      "meaning": "Transpose hoán đổi vai trò hàng và cột; A m×n trở thành Aᵀ n×m.",
+      "conditions": [
+        "A là ma trận hữu hạn.",
+        "Semantics của hai axis được xác định trước khi diễn giải."
+      ],
+      "commonMistakes": [
+        "Nhầm transpose với inverse.",
+        "Transpose mù chỉ để code hết lỗi shape."
+      ],
+      "programmingUse": "AT=A.T; assert AT.shape==(A.shape[1],A.shape[0]).",
+      "tags": [
+        "transpose",
+        "index"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "formulaId": "E190-transpose-F2",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Transpose của tích",
+      "formula": "(AB)ᵀ = BᵀAᵀ",
+      "meaning": "Transpose đảo thứ tự composition vì hàng/cột và domain/codomain đổi vai.",
+      "conditions": [
+        "AB được định nghĩa.",
+        "Kích thước tương thích."
+      ],
+      "commonMistakes": [
+        "Viết AᵀBᵀ.",
+        "Bỏ kiểm shape sau khi đảo thứ tự."
+      ],
+      "programmingUse": "(A@B).T == B.T@A.T.",
+      "tags": [
+        "transpose",
+        "matrix-product"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "formulaId": "E190-transpose-F3",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Gram matrix",
+      "formula": "G = XᵀX",
+      "meaning": "Với X samples×features, G là ma trận inner-product giữa các feature.",
+      "conditions": [
+        "X∈R^{N×d}.",
+        "Feature order và preprocessing nhất quán."
+      ],
+      "commonMistakes": [
+        "Nhầm XᵀX với XXᵀ.",
+        "Diễn giải covariance mà quên centering/normalization."
+      ],
+      "programmingUse": "G=X.T@X; covariance cần thêm centering và hệ số chuẩn hóa phù hợp.",
+      "tags": [
+        "gram",
+        "features"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
     }
   ],
   "importPolicy": {

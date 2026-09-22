@@ -1343,6 +1343,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "mindmapId": "E190-transpose-MM01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Transpose = đổi hàng ↔ cột có kiểm soát",
+          "type": "root"
+        },
+        {
+          "id": "index",
+          "label": "(Aᵀ)ᵢⱼ=aⱼᵢ",
+          "type": "formula"
+        },
+        {
+          "id": "shape",
+          "label": "m×n → n×m",
+          "type": "definition"
+        },
+        {
+          "id": "product",
+          "label": "(AB)ᵀ=BᵀAᵀ",
+          "type": "formula"
+        },
+        {
+          "id": "gram",
+          "label": "XᵀX: feature Gram",
+          "type": "application"
+        },
+        {
+          "id": "backprop",
+          "label": "Wᵀ truyền gradient về input",
+          "type": "application"
+        },
+        {
+          "id": "guard",
+          "label": "Không transpose mù để sửa shape",
+          "type": "warning"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "index"
+        },
+        {
+          "from": "root",
+          "to": "shape"
+        },
+        {
+          "from": "root",
+          "to": "product"
+        },
+        {
+          "from": "product",
+          "to": "gram"
+        },
+        {
+          "from": "product",
+          "to": "backprop"
+        },
+        {
+          "from": "root",
+          "to": "guard"
+        }
+      ],
+      "tags": [
+        "transpose",
+        "E190"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
     }
   ],
   "importPolicy": {

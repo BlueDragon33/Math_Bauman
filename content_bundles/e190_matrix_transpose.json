@@ -1,0 +1,1001 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E190_MATRIX_TRANSPOSE",
+  "lessonId": "MATH-VN-LA-C02-L03",
+  "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+  "title": "§2.3 · Ma trận chuyển vị và ý nghĩa đổi hàng thành cột",
+  "sources": {
+    "formula_content": [
+      {
+        "formulaId": "E190-transpose-F1",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Định nghĩa transpose",
+        "formula": "(Aᵀ)ᵢⱼ = aⱼᵢ",
+        "meaning": "Transpose hoán đổi vai trò hàng và cột; A m×n trở thành Aᵀ n×m.",
+        "conditions": [
+          "A là ma trận hữu hạn.",
+          "Semantics của hai axis được xác định trước khi diễn giải."
+        ],
+        "commonMistakes": [
+          "Nhầm transpose với inverse.",
+          "Transpose mù chỉ để code hết lỗi shape."
+        ],
+        "programmingUse": "AT=A.T; assert AT.shape==(A.shape[1],A.shape[0]).",
+        "tags": [
+          "transpose",
+          "index"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "formulaId": "E190-transpose-F2",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Transpose của tích",
+        "formula": "(AB)ᵀ = BᵀAᵀ",
+        "meaning": "Transpose đảo thứ tự composition vì hàng/cột và domain/codomain đổi vai.",
+        "conditions": [
+          "AB được định nghĩa.",
+          "Kích thước tương thích."
+        ],
+        "commonMistakes": [
+          "Viết AᵀBᵀ.",
+          "Bỏ kiểm shape sau khi đảo thứ tự."
+        ],
+        "programmingUse": "(A@B).T == B.T@A.T.",
+        "tags": [
+          "transpose",
+          "matrix-product"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "formulaId": "E190-transpose-F3",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Gram matrix",
+        "formula": "G = XᵀX",
+        "meaning": "Với X samples×features, G là ma trận inner-product giữa các feature.",
+        "conditions": [
+          "X∈R^{N×d}.",
+          "Feature order và preprocessing nhất quán."
+        ],
+        "commonMistakes": [
+          "Nhầm XᵀX với XXᵀ.",
+          "Diễn giải covariance mà quên centering/normalization."
+        ],
+        "programmingUse": "G=X.T@X; covariance cần thêm centering và hệ số chuẩn hóa phù hợp.",
+        "tags": [
+          "gram",
+          "features"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      }
+    ],
+    "exercise_content": [
+      {
+        "exerciseId": "E190-transpose-E01",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "prompt": "Cho A=[[1,2,3],[4,5,6]]. Tính Aᵀ.",
+        "solution": "[[1,4],[2,5],[3,6]].",
+        "tags": [
+          "transpose"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "exerciseId": "E190-transpose-E02",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "prompt": "A có shape 5×2. Shape của Aᵀ?",
+        "solution": "2×5.",
+        "tags": [
+          "shape"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "exerciseId": "E190-transpose-E03",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Kiểm tra (Aᵀ)ᵀ=A bằng một ma trận 2×3 bất kỳ.",
+        "solution": "Transpose lần hai đưa mỗi phần tử về vị trí ban đầu.",
+        "tags": [
+          "involution"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "exerciseId": "E190-transpose-E04",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "X∈R^{100×8}. XᵀX và XXᵀ có shape gì?",
+        "solution": "XᵀX: 8×8; XXᵀ: 100×100.",
+        "tags": [
+          "gram",
+          "shape"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "exerciseId": "E190-transpose-E05",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Vì sao transpose không đồng nghĩa với đổi layout bộ nhớ?",
+        "solution": "Transpose là phép toán trên axis/index; layout vật lý phụ thuộc cách thư viện lưu view/copy.",
+        "tags": [
+          "memory-layout"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "exerciseId": "E190-transpose-E06",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "prompt": "Chứng minh theo phần tử rằng (AB)ᵀ=BᵀAᵀ.",
+        "solution": "((AB)ᵀ)ᵢⱼ=(AB)ⱼᵢ=Σₖaⱼₖbₖᵢ=Σₖ(Bᵀ)ᵢₖ(Aᵀ)ₖⱼ.",
+        "tags": [
+          "proof"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "exerciseId": "E190-transpose-E07",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "prompt": "Một pipeline nhận features×samples nhưng model cần samples×features. Bạn kiểm gì trước khi dùng transpose?",
+        "solution": "Kiểm semantics axis, thứ tự feature/sample, labels đi kèm và downstream shape contract.",
+        "tags": [
+          "pipeline"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "exerciseId": "E190-transpose-E08",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "prompt": "Giải thích vai trò của Wᵀ trong gradient của y=Wx.",
+        "solution": "Transpose chuyển gradient từ không gian output về input theo adjoint của linear map trong Euclidean inner product.",
+        "tags": [
+          "backprop",
+          "adjoint"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      }
+    ],
+    "application_content": [
+      {
+        "applicationId": "E190-transpose-A1",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Feature Gram matrix cho phân tích dữ liệu",
+        "scenario": "Cần đo mức đồng biến/inner-product giữa các feature từ matrix samples×features.",
+        "method": "Dùng XᵀX sau khi xác định preprocessing; nếu diễn giải covariance thì center và scale đúng.",
+        "expectedOutcome": "Thu được d×d matrix mô tả quan hệ feature thay vì N×N quan hệ sample.",
+        "tags": [
+          "data",
+          "gram"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "applicationId": "E190-transpose-A2",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Backprop qua linear transform",
+        "scenario": "Một layer y=Wx nhận gradient ở output và cần truyền về input.",
+        "method": "Dùng Wᵀ theo chain rule/adjoint với shape contract rõ.",
+        "expectedOutcome": "Gradient input có đúng dimension và đúng phép ghép tuyến tính.",
+        "tags": [
+          "ai",
+          "backprop"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      }
+    ],
+    "simulation_content": [
+      {
+        "simulationId": "E190-transpose-SIM1",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Mô phỏng mapping index qua transpose",
+        "purpose": "Chọn i,j trên A và quan sát vị trí tương ứng trên Aᵀ.",
+        "controls": [
+          {
+            "key": "rows",
+            "type": "number",
+            "default": 3
+          },
+          {
+            "key": "cols",
+            "type": "number",
+            "default": 4
+          },
+          {
+            "key": "i",
+            "type": "number",
+            "default": 2
+          },
+          {
+            "key": "j",
+            "type": "number",
+            "default": 3
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "aij",
+            "label": "aᵢⱼ"
+          },
+          {
+            "key": "transpose_index",
+            "label": "Vị trí trên Aᵀ"
+          },
+          {
+            "key": "shape_t",
+            "label": "Shape Aᵀ"
+          }
+        ],
+        "expectedObservation": "Phần tử không đổi giá trị nhưng chỉ số chuyển từ (i,j) sang (j,i).",
+        "tags": [
+          "transpose",
+          "index"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      },
+      {
+        "simulationId": "E190-transpose-SIM2",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Mô phỏng XᵀX và XXᵀ",
+        "purpose": "Thay N,d và quan sát hai Gram matrix khác nhau về shape và semantics.",
+        "controls": [
+          {
+            "key": "samples",
+            "type": "number",
+            "default": 100
+          },
+          {
+            "key": "features",
+            "type": "number",
+            "default": 8
+          },
+          {
+            "key": "centered",
+            "type": "toggle",
+            "default": true
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "xtx_shape",
+            "label": "Shape XᵀX"
+          },
+          {
+            "key": "xxt_shape",
+            "label": "Shape XXᵀ"
+          },
+          {
+            "key": "interpretation",
+            "label": "Feature-vs-sample semantics"
+          }
+        ],
+        "expectedObservation": "XᵀX gắn quan hệ feature; XXᵀ gắn quan hệ sample.",
+        "tags": [
+          "gram",
+          "data"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "qaId": "E190-transpose-QA01",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "question": "Nếu giáo sư hỏi transpose chỉ là 'xoay bảng' hay có ý nghĩa sâu hơn, bạn trả lời thế nào?",
+        "answer": "Về chỉ số, transpose đổi aᵢⱼ thành aⱼᵢ; về linear algebra, nó đổi vai domain/codomain và trong Euclidean spaces đóng vai adjoint. Vì vậy nó xuất hiện tự nhiên trong Gram matrix, least squares và backprop, không chỉ là thao tác trình bày.",
+        "followUp": [
+          "Vì sao (AB)ᵀ đảo thứ tự?",
+          "XᵀX khác XXᵀ thế nào?",
+          "Khi nào transpose mù gây bug semantic?"
+        ],
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      }
+    ],
+    "review_pack_content": [
+      {
+        "reviewPackId": "E190-transpose-RP01",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "items": [
+          {
+            "type": "definition",
+            "prompt": "Nêu định nghĩa phần tử của Aᵀ.",
+            "expected": "(Aᵀ)ᵢⱼ=aⱼᵢ."
+          },
+          {
+            "type": "identity",
+            "prompt": "Nêu hai đẳng thức transpose cơ bản.",
+            "expected": "(Aᵀ)ᵀ=A; (AB)ᵀ=BᵀAᵀ."
+          },
+          {
+            "type": "shape",
+            "prompt": "X N×d thì XᵀX và XXᵀ có shape gì?",
+            "expected": "d×d và N×N."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Nêu một vai trò của transpose trong AI.",
+            "expected": "Backprop gradient qua linear layer bằng Wᵀ."
+          }
+        ],
+        "masteryGate": "Đọc đúng transpose theo chỉ số + kiểm shape + hiểu đảo thứ tự tích + phân biệt feature/sample Gram + không dùng transpose để che lỗi semantics",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      }
+    ],
+    "question_bank_content": [
+      {
+        "questionId": "E190-transpose-Q001",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Transpose của A ký hiệu là?",
+        "options": [
+          "Aᵀ",
+          "A⁻¹",
+          "det(A)",
+          "rank(A)"
+        ],
+        "answer": "Aᵀ",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q002",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Nếu A có shape m×n thì Aᵀ có shape?",
+        "options": [
+          "n×m",
+          "m×n",
+          "m×m",
+          "n×n"
+        ],
+        "answer": "n×m",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q003",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Phần tử của Aᵀ thỏa?",
+        "options": [
+          "(Aᵀ)ᵢⱼ=aⱼᵢ",
+          "(Aᵀ)ᵢⱼ=aᵢⱼ luôn",
+          "(Aᵀ)ᵢⱼ=-aᵢⱼ",
+          "(Aᵀ)ᵢⱼ=1/aᵢⱼ"
+        ],
+        "answer": "(Aᵀ)ᵢⱼ=aⱼᵢ",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q004",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "(Aᵀ)ᵀ bằng?",
+        "options": [
+          "A",
+          "I",
+          "0",
+          "A⁻¹"
+        ],
+        "answer": "A",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q005",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Transpose của vector hàng 1×n là?",
+        "options": [
+          "Vector cột n×1",
+          "Vector hàng 1×n",
+          "Ma trận n×n",
+          "Scalar"
+        ],
+        "answer": "Vector cột n×1",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q006",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Transpose có làm đổi giá trị số của phần tử không?",
+        "options": [
+          "Không, chỉ đổi vị trí chỉ số",
+          "Có, luôn đổi dấu",
+          "Có, luôn lấy nghịch đảo",
+          "Có, luôn chuẩn hóa"
+        ],
+        "answer": "Không, chỉ đổi vị trí chỉ số",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q007",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận đối xứng thỏa?",
+        "options": [
+          "Aᵀ=A",
+          "Aᵀ=-A",
+          "A²=0",
+          "det(A)=0"
+        ],
+        "answer": "Aᵀ=A",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q008",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Transpose của ma trận chéo là?",
+        "options": [
+          "Chính nó",
+          "Ma trận không",
+          "Ma trận nghịch đảo",
+          "Ma trận mọi phần tử 1"
+        ],
+        "answer": "Chính nó",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q009",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "(A+B)ᵀ bằng?",
+        "options": [
+          "Aᵀ+Bᵀ",
+          "Aᵀ-Bᵀ",
+          "BA",
+          "AB"
+        ],
+        "answer": "Aᵀ+Bᵀ",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q010",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "(AB)ᵀ bằng?",
+        "options": [
+          "BᵀAᵀ",
+          "AᵀBᵀ",
+          "AB",
+          "BA"
+        ],
+        "answer": "BᵀAᵀ",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q011",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Nếu X là samples×features thì Xᵀ thường là?",
+        "options": [
+          "features×samples",
+          "samples×features",
+          "features×features luôn",
+          "samples×samples luôn"
+        ],
+        "answer": "features×samples",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q012",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Trong dot product xᵀy, x và y thường là?",
+        "options": [
+          "Vector cột cùng chiều",
+          "Hai ma trận vuông bất kỳ",
+          "Hai scalar",
+          "Hai vector khác chiều tùy ý"
+        ],
+        "answer": "Vector cột cùng chiều",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q013",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Transpose khác reshape ở điểm nào?",
+        "options": [
+          "Transpose hoán đổi axis có cấu trúc; reshape chỉ đổi cách nhìn shape theo thứ tự phần tử",
+          "Không khác",
+          "Transpose luôn đổi dữ liệu số",
+          "Reshape luôn đảo hàng cột"
+        ],
+        "answer": "Transpose hoán đổi axis có cấu trúc; reshape chỉ đổi cách nhìn shape theo thứ tự phần tử",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q014",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Trong NumPy, A.T với 2D matrix thực hiện?",
+        "options": [
+          "Đổi hàng thành cột",
+          "Nghịch đảo A",
+          "Tính determinant",
+          "Chuẩn hóa A"
+        ],
+        "answer": "Đổi hàng thành cột",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q015",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Sai lầm phổ biến khi dùng transpose trong ML là?",
+        "options": [
+          "Dùng transpose để che lỗi shape mà không kiểm semantics axis",
+          "Không tính trace",
+          "Không dùng determinant",
+          "Không sắp xếp eigenvalue"
+        ],
+        "answer": "Dùng transpose để che lỗi shape mà không kiểm semantics axis",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q016",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Vì sao (AB)ᵀ đảo thứ tự thành BᵀAᵀ?",
+        "options": [
+          "Do tương thích chỉ số và thứ tự composition tuyến tính",
+          "Do determinant",
+          "Do rank luôn đổi",
+          "Do A,B phải đối xứng"
+        ],
+        "answer": "Do tương thích chỉ số và thứ tự composition tuyến tính",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q017",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Nếu X∈R^{N×d}, XᵀX có shape?",
+        "options": [
+          "d×d",
+          "N×N",
+          "N×d",
+          "d×N"
+        ],
+        "answer": "d×d",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q018",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Nếu X∈R^{N×d}, XXᵀ có shape?",
+        "options": [
+          "N×N",
+          "d×d",
+          "N×d",
+          "d×N"
+        ],
+        "answer": "N×N",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q019",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Trong least squares, XᵀX xuất hiện vì?",
+        "options": [
+          "Transpose đưa residual/feature contraction về không gian tham số",
+          "Để X trở thành identity",
+          "Để loại mọi noise",
+          "Để rank luôn đầy"
+        ],
+        "answer": "Transpose đưa residual/feature contraction về không gian tham số",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q020",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Một transpose có thể thay đổi memory contiguity trong code không?",
+        "options": [
+          "Có, tùy thư viện/view layout",
+          "Không bao giờ",
+          "Luôn copy dữ liệu",
+          "Luôn làm matrix sparse"
+        ],
+        "answer": "Có, tùy thư viện/view layout",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q021",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Trong backprop linear layer y=Wx, gradient theo x thường chứa?",
+        "options": [
+          "Wᵀ",
+          "W⁻¹ bắt buộc",
+          "det(W)",
+          "trace(W)"
+        ],
+        "answer": "Wᵀ",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q022",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Trong covariance XᵀX/N, transpose phục vụ?",
+        "options": [
+          "Ghép các feature theo inner products",
+          "Đảo nhãn sample",
+          "Tạo inverse",
+          "Xóa dimension"
+        ],
+        "answer": "Ghép các feature theo inner products",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q023",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Một API tự transpose input khi shape lệch nguy hiểm vì?",
+        "options": [
+          "Có thể làm code chạy nhưng semantics sai âm thầm",
+          "Luôn chậm hơn 1%",
+          "Luôn gây syntax error",
+          "Không ảnh hưởng"
+        ],
+        "answer": "Có thể làm code chạy nhưng semantics sai âm thầm",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q024",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Khi chuyển dữ liệu row-major/column-major, điều cần tách biệt là?",
+        "options": [
+          "Transpose toán học và layout bộ nhớ",
+          "Rank và determinant",
+          "Scale và bias",
+          "Label và loss"
+        ],
+        "answer": "Transpose toán học và layout bộ nhớ",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E190-transpose-Q025",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Kiểm thử transpose tốt nên kiểm?",
+        "options": [
+          "Shape, mapping aᵢⱼ↔aⱼᵢ, double-transpose và semantics axis",
+          "Chỉ tổng phần tử",
+          "Chỉ determinant",
+          "Chỉ số hàng"
+        ],
+        "answer": "Shape, mapping aᵢⱼ↔aⱼᵢ, double-transpose và semantics axis",
+        "explanation": "Đáp án dựa trên định nghĩa transpose, quy tắc shape, tính chất tích và semantics hàng-cột trong linear algebra/data pipelines.",
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE",
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "mindmapId": "E190-transpose-MM01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "lessonId": "MATH-VN-LA-C02-L03",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Transpose = đổi hàng ↔ cột có kiểm soát",
+            "type": "root"
+          },
+          {
+            "id": "index",
+            "label": "(Aᵀ)ᵢⱼ=aⱼᵢ",
+            "type": "formula"
+          },
+          {
+            "id": "shape",
+            "label": "m×n → n×m",
+            "type": "definition"
+          },
+          {
+            "id": "product",
+            "label": "(AB)ᵀ=BᵀAᵀ",
+            "type": "formula"
+          },
+          {
+            "id": "gram",
+            "label": "XᵀX: feature Gram",
+            "type": "application"
+          },
+          {
+            "id": "backprop",
+            "label": "Wᵀ truyền gradient về input",
+            "type": "application"
+          },
+          {
+            "id": "guard",
+            "label": "Không transpose mù để sửa shape",
+            "type": "warning"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "index"
+          },
+          {
+            "from": "root",
+            "to": "shape"
+          },
+          {
+            "from": "root",
+            "to": "product"
+          },
+          {
+            "from": "product",
+            "to": "gram"
+          },
+          {
+            "from": "product",
+            "to": "backprop"
+          },
+          {
+            "from": "root",
+            "to": "guard"
+          }
+        ],
+        "tags": [
+          "transpose",
+          "E190"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E190_MATRIX_TRANSPOSE"
+      }
+    ]
+  }
+}

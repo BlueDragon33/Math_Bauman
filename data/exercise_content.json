@@ -2085,6 +2085,112 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "exerciseId": "E190-transpose-E01",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Cho A=[[1,2,3],[4,5,6]]. Tính Aᵀ.",
+      "solution": "[[1,4],[2,5],[3,6]].",
+      "tags": [
+        "transpose"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "exerciseId": "E190-transpose-E02",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "A có shape 5×2. Shape của Aᵀ?",
+      "solution": "2×5.",
+      "tags": [
+        "shape"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "exerciseId": "E190-transpose-E03",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Kiểm tra (Aᵀ)ᵀ=A bằng một ma trận 2×3 bất kỳ.",
+      "solution": "Transpose lần hai đưa mỗi phần tử về vị trí ban đầu.",
+      "tags": [
+        "involution"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "exerciseId": "E190-transpose-E04",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "X∈R^{100×8}. XᵀX và XXᵀ có shape gì?",
+      "solution": "XᵀX: 8×8; XXᵀ: 100×100.",
+      "tags": [
+        "gram",
+        "shape"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "exerciseId": "E190-transpose-E05",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Vì sao transpose không đồng nghĩa với đổi layout bộ nhớ?",
+      "solution": "Transpose là phép toán trên axis/index; layout vật lý phụ thuộc cách thư viện lưu view/copy.",
+      "tags": [
+        "memory-layout"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "exerciseId": "E190-transpose-E06",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Chứng minh theo phần tử rằng (AB)ᵀ=BᵀAᵀ.",
+      "solution": "((AB)ᵀ)ᵢⱼ=(AB)ⱼᵢ=Σₖaⱼₖbₖᵢ=Σₖ(Bᵀ)ᵢₖ(Aᵀ)ₖⱼ.",
+      "tags": [
+        "proof"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "exerciseId": "E190-transpose-E07",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Một pipeline nhận features×samples nhưng model cần samples×features. Bạn kiểm gì trước khi dùng transpose?",
+      "solution": "Kiểm semantics axis, thứ tự feature/sample, labels đi kèm và downstream shape contract.",
+      "tags": [
+        "pipeline"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "exerciseId": "E190-transpose-E08",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "prompt": "Giải thích vai trò của Wᵀ trong gradient của y=Wx.",
+      "solution": "Transpose chuyển gradient từ không gian output về input theo adjoint của linear map trong Euclidean inner product.",
+      "tags": [
+        "backprop",
+        "adjoint"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
     }
   ],
   "importPolicy": {
