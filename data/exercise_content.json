@@ -2723,6 +2723,111 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "exerciseId": "E196-inv-E01",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Khi nào A⁻¹ tồn tại?",
+      "solution": "A vuông và full rank; tương đương det(A)≠0 trong trường hợp chuẩn.",
+      "tags": [
+        "condition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "exerciseId": "E196-inv-E02",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Tính nghịch đảo của [[2,0],[0,4]].",
+      "solution": "[[1/2,0],[0,1/4]].",
+      "tags": [
+        "diagonal"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "exerciseId": "E196-inv-E03",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Viết đúng (AB)⁻¹.",
+      "solution": "(AB)⁻¹=B⁻¹A⁻¹.",
+      "tags": [
+        "order"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "exerciseId": "E196-inv-E04",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "A=[[1,2],[2,4]] có khả nghịch không?",
+      "solution": "Không; det=0 và rank<2.",
+      "tags": [
+        "singular"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "exerciseId": "E196-inv-E05",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Vì sao inv(A)@b thường kém khuyến nghị hơn solve(A,b)?",
+      "solution": "Tạo nghịch đảo explicit tốn hơn, có thể kém ổn định và không cần thiết để giải hệ.",
+      "tags": [
+        "numerical"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "exerciseId": "E196-inv-E06",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Một ma trận có det rất nhỏ nhưng khác 0. Có nên coi là 'an toàn để invert' không?",
+      "solution": "Không; có thể rất ill-conditioned, khiến nghịch đảo nhạy mạnh với nhiễu/roundoff.",
+      "tags": [
+        "conditioning"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "exerciseId": "E196-inv-E07",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Nếu A và B khả nghịch, chứng minh (AB)(B⁻¹A⁻¹)=I.",
+      "solution": "AB·B⁻¹A⁻¹=A(BB⁻¹)A⁻¹=AIA⁻¹=I.",
+      "tags": [
+        "proof"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "exerciseId": "E196-inv-E08",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "prompt": "Trong estimation, covariance matrix gần singular gợi ý gì?",
+      "solution": "Có directions thông tin yếu/phụ thuộc; inverse có thể khuếch đại nhiễu, nên cần regularization/pseudoinverse hoặc reformulation.",
+      "tags": [
+        "estimation",
+        "regularization"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
     }
   ],
   "importPolicy": {

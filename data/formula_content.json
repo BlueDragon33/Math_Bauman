@@ -1569,6 +1569,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "formulaId": "E196-inv-F1",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Định nghĩa ma trận nghịch đảo",
+      "formula": "AA⁻¹=A⁻¹A=I",
+      "meaning": "A⁻¹ là ma trận đảo của A khi nhân ở cả hai phía cho ma trận đơn vị cùng cấp.",
+      "conditions": [
+        "A phải là ma trận vuông.",
+        "A phải khả nghịch/full rank; tương đương det(A)≠0 trong trường hợp hữu hạn chiều chuẩn."
+      ],
+      "commonMistakes": [
+        "Chỉ kiểm AA⁻¹=I mà bỏ chiều ngược.",
+        "Nhầm nghịch đảo ma trận với lấy nghịch đảo từng phần tử."
+      ],
+      "programmingUse": "Ưu tiên solve(A,b) thay vì tạo inv(A) khi mục tiêu là giải Ax=b.",
+      "tags": [
+        "inverse",
+        "invertibility"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "formulaId": "E196-inv-F2",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Nghịch đảo của tích",
+      "formula": "(AB)⁻¹=B⁻¹A⁻¹",
+      "meaning": "Khi A và B đều khả nghịch, nghịch đảo của composition đảo thứ tự các phép biến đổi.",
+      "conditions": [
+        "A,B vuông và khả nghịch.",
+        "AB được xác định cùng cấp."
+      ],
+      "commonMistakes": [
+        "Viết (AB)⁻¹=A⁻¹B⁻¹.",
+        "Áp dụng công thức khi một factor singular."
+      ],
+      "programmingUse": "Dùng để kiểm thứ tự transform/normalization pipeline và derivation symbolic.",
+      "tags": [
+        "inverse-product",
+        "order"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "formulaId": "E196-inv-F3",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Nghịch đảo ma trận 2×2",
+      "formula": "A⁻¹=(1/(ad-bc))[[d,-b],[-c,a]]",
+      "meaning": "Với A=[[a,b],[c,d]], công thức đóng cho 2×2 chỉ hợp lệ khi ad-bc≠0.",
+      "conditions": [
+        "det(A)=ad-bc≠0.",
+        "Trong floating point, determinant rất nhỏ là dấu hiệu cảnh báo conditioning."
+      ],
+      "commonMistakes": [
+        "Quên đổi dấu b,c.",
+        "Dùng công thức khi det gần 0 mà không đánh giá sai số."
+      ],
+      "programmingUse": "Chủ yếu dùng minh họa/kiểm tay; production nên dùng solver/factorization.",
+      "tags": [
+        "inverse-2x2",
+        "determinant"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
     }
   ],
   "importPolicy": {

@@ -803,6 +803,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "reviewPackId": "E196-inv-RP01",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Nêu định nghĩa A⁻¹.",
+          "expected": "AA⁻¹=A⁻¹A=I."
+        },
+        {
+          "type": "condition",
+          "prompt": "Điều kiện tồn tại?",
+          "expected": "A vuông và full rank/det≠0."
+        },
+        {
+          "type": "order",
+          "prompt": "Nghịch đảo của AB?",
+          "expected": "B⁻¹A⁻¹."
+        },
+        {
+          "type": "numerical",
+          "prompt": "Khi nào không nên explicit inverse?",
+          "expected": "Khi chỉ cần solve Ax=b hoặc khi conditioning kém."
+        }
+      ],
+      "masteryGate": "Điều kiện khả nghịch + inverse product đúng thứ tự + tính tay 2×2 + nhận diện ill-conditioning + ưu tiên solve/pseudoinverse khi thích hợp",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
     }
   ],
   "importPolicy": {

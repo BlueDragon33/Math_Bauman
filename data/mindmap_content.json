@@ -1787,6 +1787,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "mindmapId": "E196-inv-MM01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Matrix inverse = tồn tại + đúng thứ tự + ổn định số",
+          "type": "root"
+        },
+        {
+          "id": "def",
+          "label": "AA⁻¹=A⁻¹A=I",
+          "type": "formula"
+        },
+        {
+          "id": "condition",
+          "label": "square + full rank / det≠0",
+          "type": "criterion"
+        },
+        {
+          "id": "product",
+          "label": "(AB)⁻¹=B⁻¹A⁻¹",
+          "type": "formula"
+        },
+        {
+          "id": "ill",
+          "label": "Near singular → ill-conditioned",
+          "type": "warning"
+        },
+        {
+          "id": "solve",
+          "label": "solve(A,b) > explicit inverse",
+          "type": "method"
+        },
+        {
+          "id": "regularize",
+          "label": "Regularize / pseudoinverse",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "def"
+        },
+        {
+          "from": "def",
+          "to": "condition"
+        },
+        {
+          "from": "root",
+          "to": "product"
+        },
+        {
+          "from": "condition",
+          "to": "ill"
+        },
+        {
+          "from": "ill",
+          "to": "solve"
+        },
+        {
+          "from": "ill",
+          "to": "regularize"
+        }
+      ],
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
     }
   ],
   "importPolicy": {

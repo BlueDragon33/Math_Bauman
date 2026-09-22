@@ -13387,6 +13387,556 @@
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS",
       "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q001",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "A⁻¹ tồn tại khi A?",
+      "options": [
+        "Vuông và full rank",
+        "Chỉ cần vuông",
+        "Chỉ cần det nhỏ",
+        "Chỉ cần đối xứng"
+      ],
+      "answer": "Vuông và full rank",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q002",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Định nghĩa inverse đúng là?",
+      "options": [
+        "AA⁻¹=A⁻¹A=I",
+        "AA⁻¹=0",
+        "A+A⁻¹=I",
+        "A⊙A⁻¹=I"
+      ],
+      "answer": "AA⁻¹=A⁻¹A=I",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q003",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Nếu det(A)=0 thì A?",
+      "options": [
+        "Không khả nghịch",
+        "Khả nghịch",
+        "Identity",
+        "Orthogonal"
+      ],
+      "answer": "Không khả nghịch",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q004",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "(AB)⁻¹ bằng?",
+      "options": [
+        "B⁻¹A⁻¹",
+        "A⁻¹B⁻¹",
+        "A⁻¹+B⁻¹",
+        "(A+B)⁻¹"
+      ],
+      "answer": "B⁻¹A⁻¹",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q005",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Inverse của I là?",
+      "options": [
+        "I",
+        "0",
+        "-I",
+        "Không tồn tại"
+      ],
+      "answer": "I",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q006",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Inverse của diagonal diag(d₁,d₂) với dᵢ≠0 là?",
+      "options": [
+        "diag(1/d₁,1/d₂)",
+        "diag(d₁²,d₂²)",
+        "I luôn",
+        "diag(-d₁,-d₂)"
+      ],
+      "answer": "diag(1/d₁,1/d₂)",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q007",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Ma trận 2×2 [[a,b],[c,d]] khả nghịch khi?",
+      "options": [
+        "ad-bc≠0",
+        "a+d≠0",
+        "b+c≠0",
+        "ab-cd≠0"
+      ],
+      "answer": "ad-bc≠0",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q008",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Nghịch đảo ma trận có phải lấy 1/aᵢⱼ từng phần tử?",
+      "options": [
+        "Không",
+        "Có luôn",
+        "Chỉ với 2×2",
+        "Chỉ với matrix vuông"
+      ],
+      "answer": "Không",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q009",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Nếu A khả nghịch thì rank(A) bằng?",
+      "options": [
+        "n với A n×n",
+        "0",
+        "1 luôn",
+        "n-1"
+      ],
+      "answer": "n với A n×n",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q010",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Nếu A singular thì Ax=b có thể có?",
+      "options": [
+        "0 hoặc vô số nghiệm tùy b",
+        "Luôn nghiệm duy nhất",
+        "Luôn vô nghiệm",
+        "Luôn hai nghiệm"
+      ],
+      "answer": "0 hoặc vô số nghiệm tùy b",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q011",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Vì sao solve(A,b) thường tốt hơn inv(A)@b?",
+      "options": [
+        "Ít phép toán hơn và thường ổn định hơn",
+        "Vì inv không tồn tại với mọi A khả nghịch",
+        "Vì solve chỉ dùng số nguyên",
+        "Vì solve không cần A"
+      ],
+      "answer": "Ít phép toán hơn và thường ổn định hơn",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q012",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Nếu A và B khả nghịch thì AB?",
+      "options": [
+        "Khả nghịch",
+        "Luôn singular",
+        "Không xác định",
+        "Chỉ khả nghịch nếu commute"
+      ],
+      "answer": "Khả nghịch",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q013",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Inverse của Aᵀ khi A khả nghịch là?",
+      "options": [
+        "A^{-T}=(A⁻¹)ᵀ",
+        "Aᵀ",
+        "A",
+        "0"
+      ],
+      "answer": "A^{-T}=(A⁻¹)ᵀ",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q014",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Nếu A orthogonal thì A⁻¹ bằng?",
+      "options": [
+        "Aᵀ",
+        "A²",
+        "I luôn",
+        "-A"
+      ],
+      "answer": "Aᵀ",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q015",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "det(A) rất nhỏ nhưng khác 0 gợi ý?",
+      "options": [
+        "Có thể ill-conditioned",
+        "Chắc chắn ổn định",
+        "A là identity",
+        "Rank tăng"
+      ],
+      "answer": "Có thể ill-conditioned",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q016",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Condition number lớn thường nghĩa là?",
+      "options": [
+        "Nghiệm/inverse nhạy với nhiễu và roundoff",
+        "A luôn singular exact",
+        "A luôn symmetric",
+        "Det luôn 1"
+      ],
+      "answer": "Nghiệm/inverse nhạy với nhiễu và roundoff",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q017",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Pseudoinverse hữu ích khi?",
+      "options": [
+        "A không vuông hoặc rank-deficient",
+        "A luôn identity",
+        "Chỉ với scalar",
+        "Không bao giờ"
+      ],
+      "answer": "A không vuông hoặc rank-deficient",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q018",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Regularization A+λI thường nhằm?",
+      "options": [
+        "Cải thiện conditioning/ổn định trong một số bài toán",
+        "Đổi shape",
+        "Làm determinant bằng 0",
+        "Biến A thành transpose"
+      ],
+      "answer": "Cải thiện conditioning/ổn định trong một số bài toán",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q019",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Nếu AA⁻¹≈I nhưng residual lớn khi giải hệ, nên kiểm?",
+      "options": [
+        "Conditioning, precision và solver",
+        "Chỉ UI",
+        "Chỉ trace",
+        "Chỉ tên biến"
+      ],
+      "answer": "Conditioning, precision và solver",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q020",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Một regression test tốt cho inverse nên có?",
+      "options": [
+        "Well-conditioned, singular, near-singular và product-order cases",
+        "Chỉ identity",
+        "Chỉ diagonal",
+        "Chỉ integer"
+      ],
+      "answer": "Well-conditioned, singular, near-singular và product-order cases",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q021",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Trong covariance inversion, eigenvalue rất nhỏ gây?",
+      "options": [
+        "Precision matrix rất lớn theo direction đó và khuếch đại noise",
+        "Không ảnh hưởng",
+        "Rank tăng",
+        "Shape đổi"
+      ],
+      "answer": "Precision matrix rất lớn theo direction đó và khuếch đại noise",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q022",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Woodbury/Sherman-Morrison hữu ích khi?",
+      "options": [
+        "Cập nhật inverse theo low-rank change trong điều kiện phù hợp",
+        "Tính transpose",
+        "Tính rank exact mọi matrix",
+        "Thay mọi solver"
+      ],
+      "answer": "Cập nhật inverse theo low-rank change trong điều kiện phù hợp",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q023",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Inverse explicit có thể làm chi phí tăng vì?",
+      "options": [
+        "Tính toàn bộ A⁻¹ dù chỉ cần tác động lên vài RHS",
+        "Không cần matrix multiplication",
+        "Luôn O(n)",
+        "Không dùng memory"
+      ],
+      "answer": "Tính toàn bộ A⁻¹ dù chỉ cần tác động lên vài RHS",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q024",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Với ill-conditioned A, điều quan trọng hơn det(A)≠0 là?",
+      "options": [
+        "Condition number/singular values và residual",
+        "Trace",
+        "Số phần tử",
+        "Màu UI"
+      ],
+      "answer": "Condition number/singular values và residual",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E196-inv-Q025",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Khi matrix không khả nghịch nhưng cần nghiệm least-squares tối thiểu norm, có thể dùng?",
+      "options": [
+        "Moore-Penrose pseudoinverse/SVD",
+        "Inverse thường",
+        "Chỉ determinant",
+        "Row sum"
+      ],
+      "answer": "Moore-Penrose pseudoinverse/SVD",
+      "explanation": "Đáp án dựa trên điều kiện khả nghịch, inverse product, công thức 2×2, conditioning và thực hành số an toàn khi giải hệ.",
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE",
+      "stage": "vn"
     }
   ],
   "importPolicy": {
