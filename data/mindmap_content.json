@@ -2630,6 +2630,104 @@
         "convergence",
         "E205"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "mindmapId": "E206-prob-MM01",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Sample space & events",
+          "type": "root"
+        },
+        {
+          "id": "omega",
+          "label": "Ω = all outcomes",
+          "type": "definition"
+        },
+        {
+          "id": "event",
+          "label": "A⊆Ω",
+          "type": "definition"
+        },
+        {
+          "id": "union",
+          "label": "A∪B = OR",
+          "type": "operation"
+        },
+        {
+          "id": "inter",
+          "label": "A∩B = AND",
+          "type": "operation"
+        },
+        {
+          "id": "comp",
+          "label": "Aᶜ = NOT",
+          "type": "operation"
+        },
+        {
+          "id": "demorgan",
+          "label": "De Morgan",
+          "type": "rule"
+        },
+        {
+          "id": "mask",
+          "label": "boolean masks",
+          "type": "application"
+        },
+        {
+          "id": "design",
+          "label": "define Ω before probability",
+          "type": "warning"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "omega"
+        },
+        {
+          "from": "omega",
+          "to": "event"
+        },
+        {
+          "from": "event",
+          "to": "union"
+        },
+        {
+          "from": "event",
+          "to": "inter"
+        },
+        {
+          "from": "event",
+          "to": "comp"
+        },
+        {
+          "from": "union",
+          "to": "demorgan"
+        },
+        {
+          "from": "inter",
+          "to": "demorgan"
+        },
+        {
+          "from": "event",
+          "to": "mask"
+        },
+        {
+          "from": "omega",
+          "to": "design"
+        }
+      ],
+      "tags": [
+        "sample-space",
+        "events",
+        "set-algebra",
+        "E206"
+      ]
     }
   ],
   "importPolicy": {
