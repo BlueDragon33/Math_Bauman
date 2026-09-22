@@ -164,6 +164,25 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "qaId": "E180-span-QA01",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "question": "Nếu giáo sư hỏi 'span khác gì một tập vector thông thường, và vì sao span luôn là không gian con?', bạn sẽ trả lời thế nào?",
+      "answer": "Span của một tập sinh chứa mọi tổ hợp tuyến tính của các vector đó, không chỉ các vector ban đầu. Vì tổ hợp tuyến tính của các phần tử trong span vẫn là một tổ hợp tuyến tính của cùng tập sinh, span chứa vector 0 và đóng dưới cộng, nhân vô hướng, nên là một không gian con.",
+      "followUp": [
+        "Thêm một vector vào tập sinh khi nào không làm span lớn hơn?",
+        "Phân biệt subspace với affine set Ax=b, b≠0.",
+        "Trong dữ liệu nhiễu, bạn kiểm x thuộc span bằng cách nào?"
+      ],
+      "tags": [
+        "vector_space",
+        "span",
+        "E180"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
     }
   ],
   "importPolicy": {
