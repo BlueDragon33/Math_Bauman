@@ -6237,6 +6237,556 @@
       "auditStatus": "PASS",
       "sourceBundle": "E181_VECTOR_NORMS",
       "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q001",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Công thức dot product chuẩn là gì?",
+      "options": [
+        "Σxᵢyᵢ",
+        "Σ|xᵢ-yᵢ|",
+        "max|xᵢ|",
+        "sqrt(Σxᵢ²)"
+      ],
+      "answer": "Σxᵢyᵢ",
+      "explanation": "Dot product là tổng tích các thành phần tương ứng.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q002",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Với x=(1,2), y=(3,4), x·y bằng?",
+      "options": [
+        "11",
+        "10",
+        "7",
+        "14"
+      ],
+      "answer": "11",
+      "explanation": "1·3+2·4=11.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q003",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Hai vector trực giao khi dot product bằng?",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "norm"
+      ],
+      "answer": "0",
+      "explanation": "Trong inner product Euclid, orthogonality tương đương inner product bằng 0.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q004",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "x·x bằng gì?",
+      "options": [
+        "||x||₂²",
+        "||x||₁",
+        "||x||∞",
+        "0"
+      ],
+      "answer": "||x||₂²",
+      "explanation": "Tổng bình phương thành phần chính là squared L2 norm.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q005",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Nếu góc giữa hai vector là 90°, dot product có dấu gì?",
+      "options": [
+        "Bằng 0",
+        "Dương",
+        "Âm",
+        "Không xác định luôn"
+      ],
+      "answer": "Bằng 0",
+      "explanation": "cos90°=0.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q006",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Nếu góc nhọn và hai vector khác 0, dot product thường?",
+      "options": [
+        "Dương",
+        "Âm",
+        "Bằng 0",
+        "Không thể biết"
+      ],
+      "answer": "Dương",
+      "explanation": "cosθ>0 với góc nhọn.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q007",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Nếu góc tù và hai vector khác 0, dot product thường?",
+      "options": [
+        "Âm",
+        "Dương",
+        "Bằng 0",
+        "Luôn 1"
+      ],
+      "answer": "Âm",
+      "explanation": "cosθ<0 với góc tù.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q008",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Cosine similarity của hai vector cùng hướng dương là?",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "Phụ thuộc norm"
+      ],
+      "answer": "1",
+      "explanation": "Sau chuẩn hóa, cos0°=1.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q009",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Vì sao dot product không phải similarity chỉ theo hướng?",
+      "options": [
+        "Nó phụ thuộc cả norm",
+        "Nó không dùng thành phần vector",
+        "Nó luôn bằng cosine",
+        "Nó luôn âm"
+      ],
+      "answer": "Nó phụ thuộc cả norm",
+      "explanation": "Rescale vector làm dot đổi dù hướng giữ nguyên.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q010",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Cosine similarity không xác định khi?",
+      "options": [
+        "Một vector có norm bằng 0",
+        "Hai vector trực giao",
+        "Hai vector cùng chiều",
+        "Dot âm"
+      ],
+      "answer": "Một vector có norm bằng 0",
+      "explanation": "Mẫu số chứa tích hai norm.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q011",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Điều kiện Cauchy–Schwarz là?",
+      "options": [
+        "|x·y|≤||x||||y||",
+        "x·y≥||x||||y||",
+        "||x||≤x·y",
+        "x·y=0 luôn"
+      ],
+      "answer": "|x·y|≤||x||||y||",
+      "explanation": "Đây là bất đẳng thức nền của inner product.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q012",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Khi nào đạt đẳng thức trong Cauchy–Schwarz?",
+      "options": [
+        "Khi x,y phụ thuộc tuyến tính",
+        "Khi x,y trực giao",
+        "Khi mọi thành phần bằng 1",
+        "Khi norm bằng 0 duy nhất"
+      ],
+      "answer": "Khi x,y phụ thuộc tuyến tính",
+      "explanation": "Hai vector cùng một hướng đường thẳng, kể cả ngược hướng.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q013",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Gram matrix của các cột X có dạng?",
+      "options": [
+        "XᵀX",
+        "XXᵀ luôn duy nhất",
+        "X+Xᵀ",
+        "X⁻¹"
+      ],
+      "answer": "XᵀX",
+      "explanation": "Mỗi phần tử là dot product giữa hai cột.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q014",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Phần tử Gᵢⱼ của Gram matrix biểu diễn?",
+      "options": [
+        "Dot product giữa cột i và cột j",
+        "Khoảng cách L1",
+        "Max component",
+        "Determinant"
+      ],
+      "answer": "Dot product giữa cột i và cột j",
+      "explanation": "Gram matrix lưu các inner products cặp.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q015",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Kiểm trực giao số nên dùng cách nào?",
+      "options": [
+        "So |x·y|/(||x||||y||) với tolerance",
+        "So x·y==0 tuyệt đối",
+        "Chỉ nhìn một component",
+        "Lấy determinant"
+      ],
+      "answer": "So |x·y|/(||x||||y||) với tolerance",
+      "explanation": "Chuẩn hóa làm tiêu chuẩn ít phụ thuộc scale hơn.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q016",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Vì sao Gram matrix XᵀX là bán xác định dương?",
+      "options": [
+        "zᵀXᵀXz=||Xz||²≥0",
+        "Vì mọi phần tử dương",
+        "Vì X luôn đối xứng",
+        "Vì determinant luôn >0"
+      ],
+      "answer": "zᵀXᵀXz=||Xz||²≥0",
+      "explanation": "Đây là định nghĩa PSD qua quadratic form.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q017",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Dot product gần 0 có suy ra hai biến thống kê độc lập không?",
+      "options": [
+        "Không",
+        "Có luôn",
+        "Chỉ khi số mẫu lớn",
+        "Chỉ khi Gaussian không cần điều kiện"
+      ],
+      "answer": "Không",
+      "explanation": "Orthogonality/correlation zero không đồng nghĩa independence nói chung.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q018",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Nếu scale x thành 10x, dot(x,y) thay đổi thế nào?",
+      "options": [
+        "Tăng 10 lần",
+        "Không đổi",
+        "Tăng 100 lần",
+        "Đổi dấu"
+      ],
+      "answer": "Tăng 10 lần",
+      "explanation": "Inner product tuyến tính theo từng đối số.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q019",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Nếu scale x thành 10x, cosine(x,y) với hệ số dương thay đổi thế nào?",
+      "options": [
+        "Không đổi",
+        "Tăng 10 lần",
+        "Tăng 100 lần",
+        "Thành 0"
+      ],
+      "answer": "Không đổi",
+      "explanation": "Cả tử và norm x cùng nhân 10.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q020",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Projection coefficient của x lên hướng đơn vị u dùng đại lượng nào?",
+      "options": [
+        "u·x",
+        "||x||₁",
+        "det(x)",
+        "max(x)"
+      ],
+      "answer": "u·x",
+      "explanation": "Khi ||u||=1, scalar projection là uᵀx.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q021",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Nếu u không phải unit vector, hệ số projection lên span{u} là?",
+      "options": [
+        "(u·x)/(u·u)",
+        "u·x",
+        "||u||+||x||",
+        "(x·x)/(u·x)"
+      ],
+      "answer": "(u·x)/(u·u)",
+      "explanation": "Projection vector là ((uᵀx)/(uᵀu))u.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q022",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Inner product tổng quát <x,y>_M=xᵀMy là hợp lệ khi M?",
+      "options": [
+        "Đối xứng xác định dương",
+        "Bất kỳ ma trận nào",
+        "Chỉ ma trận 0",
+        "Chỉ ma trận skew-symmetric"
+      ],
+      "answer": "Đối xứng xác định dương",
+      "explanation": "SPD bảo đảm symmetry và positivity của inner product.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q023",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Nếu M SPD, norm cảm sinh là?",
+      "options": [
+        "sqrt(xᵀMx)",
+        "xᵀMx không căn",
+        "Σ|xᵢ|",
+        "max|xᵢ|"
+      ],
+      "answer": "sqrt(xᵀMx)",
+      "explanation": "Norm induced từ inner product là sqrt(<x,x>_M).",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q024",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Tại sao attention dùng scaled dot product chia sqrt(d)?",
+      "options": [
+        "Để giữ độ lớn score ổn định hơn khi chiều d tăng",
+        "Để biến dot thành L1",
+        "Để làm mọi score bằng nhau",
+        "Để loại softmax"
+      ],
+      "answer": "Để giữ độ lớn score ổn định hơn khi chiều d tăng",
+      "explanation": "Phương sai của dot có thể tăng theo d nên scale giúp tránh softmax quá bão hòa.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E183-dot-Q025",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Trong không gian Hilbert, khái niệm trực giao vẫn dựa trên?",
+      "options": [
+        "Inner product bằng 0",
+        "Khoảng cách L1 bằng 0",
+        "Determinant bằng 0",
+        "Rank đầy đủ"
+      ],
+      "answer": "Inner product bằng 0",
+      "explanation": "Orthogonality được định nghĩa qua inner product.",
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT",
+      "stage": "vn"
     }
   ],
   "importPolicy": {

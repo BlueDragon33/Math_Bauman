@@ -655,6 +655,78 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "formulaId": "E183-dot-F1",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Tích vô hướng chuẩn",
+      "formula": "x·y = Σᵢ xᵢyᵢ = xᵀy",
+      "meaning": "Tích vô hướng ghép hai vector cùng chiều thành một vô hướng; dấu và độ lớn phản ánh mức đồng hướng khi scale được kiểm soát.",
+      "conditions": [
+        "x và y có cùng số chiều.",
+        "Các thành phần được đặt trong cùng hệ tọa độ và quy ước."
+      ],
+      "commonMistakes": [
+        "Nhân từng phần tử rồi giữ nguyên vector thay vì cộng lại.",
+        "So sánh dot product giữa các vector có scale rất khác mà không xét chuẩn."
+      ],
+      "programmingUse": "np.dot(x,y) hoặc x @ y; kiểm shape trước khi dùng.",
+      "tags": [
+        "dot-product",
+        "inner-product",
+        "vector"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "formulaId": "E183-dot-F2",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Liên hệ dot product với góc",
+      "formula": "x·y = ||x||₂||y||₂ cosθ",
+      "meaning": "Dot product tách thành độ lớn hai vector và độ tương đồng hướng; cosθ chỉ phụ thuộc hướng khi hai vector khác 0.",
+      "conditions": [
+        "x≠0 và y≠0 nếu muốn suy cosθ.",
+        "Dùng chuẩn Euclid tương thích với inner product chuẩn."
+      ],
+      "commonMistakes": [
+        "Suy góc từ dot product mà quên chia cho hai norm.",
+        "Dùng công thức khi một vector bằng 0."
+      ],
+      "programmingUse": "cos = np.dot(x,y)/(norm(x)*norm(y)); cần guard norm gần 0.",
+      "tags": [
+        "dot-product",
+        "angle",
+        "cosine"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "formulaId": "E183-dot-F3",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Tính trực giao",
+      "formula": "x ⟂ y ⇔ x·y = 0",
+      "meaning": "Trong không gian Euclid, dot product bằng 0 là tiêu chuẩn trực giao; nó tách các thành phần độc lập về hướng.",
+      "conditions": [
+        "Đang dùng inner product chuẩn hoặc inner product được chỉ rõ.",
+        "Trong tính toán số cần tolerance thay vì so bằng 0 tuyệt đối."
+      ],
+      "commonMistakes": [
+        "Cho rằng dot≈0 theo số thực máy luôn bằng 0 chính xác.",
+        "Nhầm trực giao với độc lập thống kê."
+      ],
+      "programmingUse": "abs(np.dot(x,y)) <= tol*norm(x)*norm(y) là kiểm thực tế ổn hơn so với ==0.",
+      "tags": [
+        "dot-product",
+        "orthogonality",
+        "numerical"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
     }
   ],
   "importPolicy": {
