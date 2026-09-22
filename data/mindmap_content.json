@@ -602,6 +602,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "mindmapId": "E178-matmul-MM01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Nhân ma trận = hợp thành biến đổi",
+          "type": "root"
+        },
+        {
+          "id": "shape",
+          "label": "Shape: (m×n)(n×p)→m×p",
+          "type": "gate"
+        },
+        {
+          "id": "cell",
+          "label": "(AB)_ij = hàng i · cột j",
+          "type": "formula"
+        },
+        {
+          "id": "order",
+          "label": "AB ≠ BA nói chung",
+          "type": "warning"
+        },
+        {
+          "id": "assoc",
+          "label": "A(BC)=(AB)C",
+          "type": "concept"
+        },
+        {
+          "id": "application",
+          "label": "AI · cảm biến · đổi tọa độ",
+          "type": "application"
+        },
+        {
+          "id": "debug",
+          "label": "Kiểm shape + semantics từng trục",
+          "type": "validation"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "shape"
+        },
+        {
+          "from": "root",
+          "to": "cell"
+        },
+        {
+          "from": "root",
+          "to": "order"
+        },
+        {
+          "from": "shape",
+          "to": "assoc"
+        },
+        {
+          "from": "order",
+          "to": "application"
+        },
+        {
+          "from": "application",
+          "to": "debug"
+        }
+      ],
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION"
     }
   ],
   "importPolicy": {
@@ -640,7 +714,7 @@
     "edges": [],
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "emoji": "🧠",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
