@@ -15087,6 +15087,581 @@
       "auditStatus": "PASS",
       "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE",
       "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q001",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Nếu y=f(g(x)) thì dy/dx bằng?",
+      "options": [
+        "f'(g(x))g'(x)",
+        "f'(x)+g'(x)",
+        "f'(x)g(x)",
+        "g'(f(x))"
+      ],
+      "answer": "f'(g(x))g'(x)",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q002",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "d/dx sin(x²) là?",
+      "options": [
+        "2x cos(x²)",
+        "cos(x)",
+        "2x sin(x²)",
+        "cos(x²)"
+      ],
+      "answer": "2x cos(x²)",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q003",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "d/dx (3x+1)^2 là?",
+      "options": [
+        "6(3x+1)",
+        "2(3x+1)",
+        "6x+1",
+        "9x²"
+      ],
+      "answer": "6(3x+1)",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q004",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Trong computational graph, local derivative mô tả?",
+      "options": [
+        "Sensitivity của node output theo input trực tiếp",
+        "Toàn bộ loss luôn",
+        "Chỉ giá trị node",
+        "Số node trong graph"
+      ],
+      "answer": "Sensitivity của node output theo input trực tiếp",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q005",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Backpropagation dựa chủ yếu trên?",
+      "options": [
+        "Chain rule",
+        "Determinant rule",
+        "Cramer rule",
+        "Fourier transform"
+      ],
+      "answer": "Chain rule",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q006",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Nếu dy/du=4 và du/dx=3 thì dy/dx=?",
+      "options": [
+        "12",
+        "7",
+        "1",
+        "4/3"
+      ],
+      "answer": "12",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q007",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Outer derivative của e^u theo u là?",
+      "options": [
+        "e^u",
+        "u e^u",
+        "1/u",
+        "ln u"
+      ],
+      "answer": "e^u",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q008",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Inner derivative của u=x²+1 là?",
+      "options": [
+        "2x",
+        "x",
+        "2",
+        "x²"
+      ],
+      "answer": "2x",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q009",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "d/dx ln(x²+1) là?",
+      "options": [
+        "2x/(x²+1)",
+        "1/(x²+1)",
+        "ln(2x)",
+        "2/(x²+1)"
+      ],
+      "answer": "2x/(x²+1)",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q010",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "d/dx e^{x³} là?",
+      "options": [
+        "3x²e^{x³}",
+        "e^{3x²}",
+        "x³e^x",
+        "3xe^{x³}"
+      ],
+      "answer": "3x²e^{x³}",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q011",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Nếu local derivatives là 0.5,0.5,0.5 thì total derivative=?",
+      "options": [
+        "0.125",
+        "1.5",
+        "0.75",
+        "8"
+      ],
+      "answer": "0.125",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q012",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Graph x→u→v→y có total derivative?",
+      "options": [
+        "dy/dv·dv/du·du/dx",
+        "dy/dv+dv/du+du/dx",
+        "dy/dx trực tiếp bỏ node",
+        "du/dx"
+      ],
+      "answer": "dy/dv·dv/du·du/dx",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q013",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Vanishing gradient thường liên hệ với?",
+      "options": [
+        "Tích nhiều local derivatives có magnitude <1",
+        "Một derivative duy nhất bằng 2",
+        "Không dùng chain rule",
+        "Loss luôn tuyến tính"
+      ],
+      "answer": "Tích nhiều local derivatives có magnitude <1",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q014",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Exploding gradient thường liên hệ với?",
+      "options": [
+        "Tích nhiều local derivatives có magnitude >1",
+        "Mọi derivative bằng 0",
+        "Hàm hằng",
+        "Không có graph"
+      ],
+      "answer": "Tích nhiều local derivatives có magnitude >1",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q015",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Finite difference dùng trong E199 chủ yếu để?",
+      "options": [
+        "Sanity-check gradient analytic/AD",
+        "Thay chain rule mọi lúc",
+        "Xóa roundoff",
+        "Tạo graph"
+      ],
+      "answer": "Sanity-check gradient analytic/AD",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q016",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "question": "Khi computational graph phân nhánh rồi hội tụ, gradient tại node chung thường?",
+      "options": [
+        "Cộng đóng góp từ các đường downstream",
+        "Chọn một đường ngẫu nhiên",
+        "Luôn nhân mọi đường với nhau",
+        "Luôn bằng 0"
+      ],
+      "answer": "Cộng đóng góp từ các đường downstream",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q017",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "question": "Nếu một node nằm tại điểm không khả vi thì?",
+      "options": [
+        "Chain-rule derivative cổ điển có thể không xác định tại điểm đó",
+        "Backprop luôn exact",
+        "Derivative luôn 1",
+        "Finite difference luôn 0"
+      ],
+      "answer": "Chain-rule derivative cổ điển có thể không xác định tại điểm đó",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q018",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "question": "Tại sao cache/state khác nhau giữa hai evaluation có thể phá gradient check?",
+      "options": [
+        "Hai lần đánh giá không còn đo cùng một hàm",
+        "Chain rule sai toán học",
+        "Finite difference không cần cùng state",
+        "Derivative không phụ thuộc input"
+      ],
+      "answer": "Hai lần đánh giá không còn đo cùng một hàm",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q019",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "question": "Trong deep graph, log |gradient| hữu ích vì?",
+      "options": [
+        "Biến tích nhiều magnitude thành tổng log dễ theo dõi",
+        "Xóa mọi lỗi số",
+        "Thay derivative",
+        "Đảm bảo convergence"
+      ],
+      "answer": "Biến tích nhiều magnitude thành tổng log dễ theo dõi",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q020",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "question": "Một local derivative âm ảnh hưởng total gradient thế nào?",
+      "options": [
+        "Có thể đổi dấu tùy số lượng factor âm",
+        "Luôn làm magnitude bằng 0",
+        "Không ảnh hưởng dấu",
+        "Luôn gây explosion"
+      ],
+      "answer": "Có thể đổi dấu tùy số lượng factor âm",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q021",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "question": "Backprop hiệu quả hơn việc khai triển symbolic toàn hàm lớn vì?",
+      "options": [
+        "Tái sử dụng intermediate/local derivatives theo graph",
+        "Không cần chain rule",
+        "Không tính gradient",
+        "Chỉ dùng số nguyên"
+      ],
+      "answer": "Tái sử dụng intermediate/local derivatives theo graph",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q022",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "question": "Nếu analytic gradient và AD giống nhau nhưng finite difference lệch ở h cực nhỏ, nghi ngờ đầu tiên?",
+      "options": [
+        "Roundoff/cancellation",
+        "Cả analytic và AD chắc chắn sai",
+        "Chain rule không tồn tại",
+        "Graph không có node"
+      ],
+      "answer": "Roundoff/cancellation",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q023",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "question": "Để kiểm chain rule implementation robust, nên test?",
+      "options": [
+        "Nhiều nested functions, nhiều điểm, nhiều h và cả dấu/magnitude gradient",
+        "Chỉ sin(x) tại x=0",
+        "Chỉ một h",
+        "Chỉ output value"
+      ],
+      "answer": "Nhiều nested functions, nhiều điểm, nhiều h và cả dấu/magnitude gradient",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q024",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "question": "Trong control pipeline nhiều block, product derivative cho biết?",
+      "options": [
+        "Sensitivity end-to-end của output theo input dọc path",
+        "Ổn định tuyệt đối",
+        "Tần số Nyquist",
+        "Rank ma trận"
+      ],
+      "answer": "Sensitivity end-to-end của output theo input dọc path",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E199-chain-Q025",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "question": "Khi total gradient cực nhỏ do chain product, biện pháp kiến trúc thường nhắm tới?",
+      "options": [
+        "Giữ đường truyền gradient tốt hơn, ví dụ normalization/residual/gating phù hợp",
+        "Tăng depth vô hạn",
+        "Ép mọi local derivative=0",
+        "Bỏ loss"
+      ],
+      "answer": "Giữ đường truyền gradient tốt hơn, ví dụ normalization/residual/gating phù hợp",
+      "explanation": "Đáp án bám chain rule, đạo hàm hàm hợp, computational graph, lan truyền sensitivity và kiểm tra bằng finite difference.",
+      "tags": [
+        "chain-rule",
+        "computational-graph",
+        "E199"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
+      "stage": "vn"
     }
   ],
   "importPolicy": {
