@@ -899,6 +899,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "mindmapId": "E184-cos-MM01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Cosine similarity = similarity về hướng",
+          "type": "root"
+        },
+        {
+          "id": "formula",
+          "label": "cosθ=(x·y)/(||x||||y||)",
+          "type": "formula"
+        },
+        {
+          "id": "scale",
+          "label": "Bất biến với scale dương",
+          "type": "concept"
+        },
+        {
+          "id": "zero",
+          "label": "Vector 0: cosine không xác định",
+          "type": "warning"
+        },
+        {
+          "id": "euclid",
+          "label": "Normalized Euclid²=2-2cos",
+          "type": "validation"
+        },
+        {
+          "id": "centering",
+          "label": "Không bất biến với tịnh tiến/centering",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Embedding retrieval · signal pattern",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "formula"
+        },
+        {
+          "from": "formula",
+          "to": "scale"
+        },
+        {
+          "from": "formula",
+          "to": "zero"
+        },
+        {
+          "from": "scale",
+          "to": "euclid"
+        },
+        {
+          "from": "scale",
+          "to": "centering"
+        },
+        {
+          "from": "centering",
+          "to": "application"
+        }
+      ],
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
     }
   ],
   "importPolicy": {
