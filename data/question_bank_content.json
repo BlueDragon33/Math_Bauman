@@ -19075,6 +19075,562 @@
         "E205"
       ],
       "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q001",
+      "level": "easy",
+      "question": "Một outcome ω là?",
+      "options": [
+        "Một kết quả đơn lẻ",
+        "Toàn bộ sample space",
+        "Một xác suất",
+        "Một phân phối"
+      ],
+      "answer": "Một kết quả đơn lẻ",
+      "explanation": "Outcome là phần tử của Ω.",
+      "tags": [
+        "outcome",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q002",
+      "level": "easy",
+      "question": "Sample space Ω là?",
+      "options": [
+        "Tập mọi outcome được mô hình cho phép",
+        "Một event duy nhất",
+        "Luôn là số thực",
+        "Xác suất của A"
+      ],
+      "answer": "Tập mọi outcome được mô hình cho phép",
+      "explanation": "Ω xác định universe của thí nghiệm.",
+      "tags": [
+        "sample-space",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q003",
+      "level": "easy",
+      "question": "Event A là?",
+      "options": [
+        "Một tập con của Ω",
+        "Một số luôn từ 0 đến 1",
+        "Một outcome bắt buộc",
+        "Một tham số"
+      ],
+      "answer": "Một tập con của Ω",
+      "explanation": "Event gom các outcome làm mệnh đề xảy ra.",
+      "tags": [
+        "event",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q004",
+      "level": "easy",
+      "question": "A∩B nghĩa là?",
+      "options": [
+        "A và B cùng xảy ra",
+        "A hoặc B",
+        "Không A",
+        "Chỉ A"
+      ],
+      "answer": "A và B cùng xảy ra",
+      "explanation": "Intersection là phần chung.",
+      "tags": [
+        "intersection",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q005",
+      "level": "easy",
+      "question": "A∪B trong xác suất chuẩn thường nghĩa?",
+      "options": [
+        "A hoặc B hoặc cả hai",
+        "Đúng một trong hai",
+        "Không cái nào",
+        "Chỉ giao"
+      ],
+      "answer": "A hoặc B hoặc cả hai",
+      "explanation": "Union là OR inclusive.",
+      "tags": [
+        "union",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q006",
+      "level": "easy",
+      "question": "Aᶜ bằng?",
+      "options": [
+        "Ω\\A",
+        "A∪Ω",
+        "A∩Ω",
+        "A"
+      ],
+      "answer": "Ω\\A",
+      "explanation": "Complement là mọi outcome trong Ω không thuộc A.",
+      "tags": [
+        "complement",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q007",
+      "level": "medium",
+      "question": "(A∪B)ᶜ bằng?",
+      "options": [
+        "Aᶜ∩Bᶜ",
+        "Aᶜ∪Bᶜ",
+        "A∩B",
+        "A∪B"
+      ],
+      "answer": "Aᶜ∩Bᶜ",
+      "explanation": "De Morgan đổi union thành intersection khi phủ định.",
+      "tags": [
+        "de-morgan",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q008",
+      "level": "medium",
+      "question": "(A∩B)ᶜ bằng?",
+      "options": [
+        "Aᶜ∪Bᶜ",
+        "Aᶜ∩Bᶜ",
+        "A∩B",
+        "A\\B"
+      ],
+      "answer": "Aᶜ∪Bᶜ",
+      "explanation": "De Morgan.",
+      "tags": [
+        "de-morgan",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q009",
+      "level": "medium",
+      "question": "A\\B nghĩa là?",
+      "options": [
+        "A xảy ra nhưng B không xảy ra",
+        "B xảy ra nhưng A không",
+        "A và B",
+        "Không A"
+      ],
+      "answer": "A xảy ra nhưng B không xảy ra",
+      "explanation": "A\\B=A∩Bᶜ.",
+      "tags": [
+        "difference",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q010",
+      "level": "medium",
+      "question": "Nếu A⊆B, A∩B bằng?",
+      "options": [
+        "A",
+        "B",
+        "Ω",
+        "∅"
+      ],
+      "answer": "A",
+      "explanation": "Mọi phần tử A đã thuộc B.",
+      "tags": [
+        "subset",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q011",
+      "level": "medium",
+      "question": "Nếu A⊆B, A∪B bằng?",
+      "options": [
+        "B",
+        "A",
+        "∅",
+        "Aᶜ"
+      ],
+      "answer": "B",
+      "explanation": "B đã chứa A.",
+      "tags": [
+        "subset",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q012",
+      "level": "medium",
+      "question": "Hai biến cố rời nhau khi?",
+      "options": [
+        "A∩B=∅",
+        "A∪B=∅",
+        "A=B",
+        "Aᶜ=B"
+      ],
+      "answer": "A∩B=∅",
+      "explanation": "Không outcome nào thuộc cả hai.",
+      "tags": [
+        "disjoint",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q013",
+      "level": "medium",
+      "question": "Union của 'sensor A lỗi' và 'sensor B lỗi' có chứa trường hợp cả hai lỗi?",
+      "options": [
+        "Có",
+        "Không",
+        "Chỉ khi độc lập",
+        "Chỉ khi xác suất bằng nhau"
+      ],
+      "answer": "Có",
+      "explanation": "Union là inclusive OR.",
+      "tags": [
+        "engineering",
+        "union",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q014",
+      "level": "medium",
+      "question": "Event 'đúng một trong A,B' là?",
+      "options": [
+        "A∩Bᶜ hoặc Aᶜ∩B",
+        "A∪B",
+        "A∩B",
+        "(A∪B)ᶜ"
+      ],
+      "answer": "A∩Bᶜ hoặc Aᶜ∩B",
+      "explanation": "Exclusive-or loại phần giao.",
+      "tags": [
+        "xor",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q015",
+      "level": "medium",
+      "question": "Vì sao complement phụ thuộc Ω?",
+      "options": [
+        "Vì Aᶜ=Ω\\A",
+        "Vì Aᶜ luôn rỗng",
+        "Vì Ω=A",
+        "Vì complement là xác suất"
+      ],
+      "answer": "Vì Aᶜ=Ω\\A",
+      "explanation": "Đổi universe làm đổi tập phần tử bên ngoài A.",
+      "tags": [
+        "complement",
+        "sample-space",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q016",
+      "level": "hard",
+      "question": "Một sample space tốt cần ưu tiên gì?",
+      "options": [
+        "Đủ outcome cho câu hỏi và không mơ hồ về mức mô tả",
+        "Càng ít outcome càng đúng",
+        "Luôn liên tục",
+        "Luôn hữu hạn"
+      ],
+      "answer": "Đủ outcome cho câu hỏi và không mơ hồ về mức mô tả",
+      "explanation": "Mô hình hóa phải phù hợp câu hỏi phân tích.",
+      "tags": [
+        "modeling",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q017",
+      "level": "hard",
+      "question": "Nếu outcome được định nghĩa không mutually exclusive ở cùng mức mô tả, vấn đề gì?",
+      "options": [
+        "Sample space partition có thể mơ hồ và đếm sai",
+        "Không ảnh hưởng",
+        "Xác suất luôn bằng 1",
+        "Event tự sửa"
+      ],
+      "answer": "Sample space partition có thể mơ hồ và đếm sai",
+      "explanation": "Các outcome nguyên tử nên là kết quả phân biệt khi dùng như partition.",
+      "tags": [
+        "modeling",
+        "counting",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q018",
+      "level": "hard",
+      "question": "Boolean OR trên masks tương ứng?",
+      "options": [
+        "Union",
+        "Intersection",
+        "Complement",
+        "Difference bắt buộc"
+      ],
+      "answer": "Union",
+      "explanation": "OR chọn record thuộc ít nhất một mask.",
+      "tags": [
+        "data",
+        "boolean-mask",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q019",
+      "level": "hard",
+      "question": "Boolean AND tương ứng?",
+      "options": [
+        "Intersection",
+        "Union",
+        "Complement",
+        "Symmetric difference"
+      ],
+      "answer": "Intersection",
+      "explanation": "AND yêu cầu cả hai điều kiện.",
+      "tags": [
+        "data",
+        "boolean-mask",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q020",
+      "level": "hard",
+      "question": "Boolean NOT của mask A tương ứng?",
+      "options": [
+        "Complement theo universe dataset đang xét",
+        "Union",
+        "Intersection",
+        "Probability"
+      ],
+      "answer": "Complement theo universe dataset đang xét",
+      "explanation": "NOT chỉ có nghĩa khi universe record đã xác định.",
+      "tags": [
+        "data",
+        "complement",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q021",
+      "level": "hard",
+      "question": "Biến cố bất khả là?",
+      "options": [
+        "∅",
+        "Ω",
+        "A∪Aᶜ",
+        "A"
+      ],
+      "answer": "∅",
+      "explanation": "Không outcome nào làm nó xảy ra.",
+      "tags": [
+        "empty-event",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q022",
+      "level": "hard",
+      "question": "Biến cố chắc chắn là?",
+      "options": [
+        "Ω",
+        "∅",
+        "A∩Aᶜ",
+        "A\\A"
+      ],
+      "answer": "Ω",
+      "explanation": "Mọi outcome đều thuộc Ω.",
+      "tags": [
+        "certain-event",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q023",
+      "level": "hard",
+      "question": "A∪Aᶜ bằng?",
+      "options": [
+        "Ω",
+        "∅",
+        "A",
+        "Aᶜ"
+      ],
+      "answer": "Ω",
+      "explanation": "Một outcome hoặc thuộc A hoặc không thuộc A.",
+      "tags": [
+        "set-identity",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q024",
+      "level": "hard",
+      "question": "A∩Aᶜ bằng?",
+      "options": [
+        "∅",
+        "Ω",
+        "A",
+        "Aᶜ"
+      ],
+      "answer": "∅",
+      "explanation": "Không outcome nào vừa thuộc A vừa không thuộc A.",
+      "tags": [
+        "set-identity",
+        "E206"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "questionId": "E206-prob-Q025",
+      "level": "hard",
+      "question": "Cặp nào đúng?",
+      "options": [
+        "Event logic phải được định nghĩa rõ trước khi gắn probability",
+        "Probability tự định nghĩa sample space",
+        "Union luôn exclusive",
+        "Complement không cần Ω"
+      ],
+      "answer": "Event logic phải được định nghĩa rõ trước khi gắn probability",
+      "explanation": "Xác suất chỉ có ý nghĩa khi đối tượng event/sample space đã rõ.",
+      "tags": [
+        "summary",
+        "E206"
+      ],
+      "stage": "vn"
     }
   ],
   "importPolicy": {
