@@ -3363,6 +3363,120 @@
         "gradient-check",
         "finite-difference"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "exerciseId": "E202-jacobian-E01",
+      "level": "easy",
+      "prompt": "Cho f(x,y)=[x²+y, x-y]ᵀ. Tính Jacobian.",
+      "solution": "J=[[2x,1],[1,-1]].",
+      "tags": [
+        "jacobian",
+        "calculation"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "exerciseId": "E202-jacobian-E02",
+      "level": "easy",
+      "prompt": "Nếu f:ℝ³→ℝ² thì Jacobian có kích thước bao nhiêu?",
+      "solution": "2×3: hai output là hai hàng, ba input là ba cột.",
+      "tags": [
+        "dimension",
+        "jacobian"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "exerciseId": "E202-jacobian-E03",
+      "level": "medium",
+      "prompt": "Với J=[[2,1],[0,3]] và Δx=[0.1,-0.2]ᵀ, ước lượng Δy.",
+      "solution": "Δy≈JΔx=[0,-0.6]ᵀ.",
+      "tags": [
+        "linearization",
+        "matrix-vector"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "exerciseId": "E202-jacobian-E04",
+      "level": "medium",
+      "prompt": "Cho y=[x₁+x₂, x₁-x₂]ᵀ và Σ_x=diag(0.04,0.01). Tính J.",
+      "solution": "J=[[1,1],[1,-1]]. Từ đó có thể tính Σ_y=JΣ_xJᵀ.",
+      "tags": [
+        "covariance",
+        "jacobian"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "exerciseId": "E202-jacobian-E05",
+      "level": "medium",
+      "prompt": "Tiếp bài trước, tính Σ_y.",
+      "solution": "JΣ_xJᵀ=[[0.05,0.03],[0.03,0.05]].",
+      "tags": [
+        "covariance",
+        "propagation"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "exerciseId": "E202-jacobian-E06",
+      "level": "medium",
+      "prompt": "Vì sao phải giữ đúng thứ tự biến khi dùng Jacobian?",
+      "solution": "Mỗi cột gắn với một input cụ thể; đổi thứ tự mà không đổi Δx/Σ_x tương ứng sẽ ánh xạ sensitivity sai.",
+      "tags": [
+        "indexing",
+        "implementation"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "exerciseId": "E202-jacobian-E07",
+      "level": "hard",
+      "prompt": "Cho g:ℝ²→ℝ² và h:ℝ²→ℝ, biểu thức Jacobian/gradient của h∘g theo chain rule là gì?",
+      "solution": "∇(h∘g)(x)=J_g(x)ᵀ∇h(g(x)) nếu dùng gradient dạng cột.",
+      "tags": [
+        "chain-rule",
+        "jacobian",
+        "backprop"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "exerciseId": "E202-jacobian-E08",
+      "level": "hard",
+      "prompt": "Finite difference cho cột j của Jacobian nên làm thế nào?",
+      "solution": "Dùng [f(x+εe_j)-f(x)]/ε để xấp xỉ cột j; thử nhiều ε để tránh truncation và round-off.",
+      "tags": [
+        "gradient-check",
+        "finite-difference",
+        "jacobian"
+      ]
     }
   ],
   "importPolicy": {

@@ -953,6 +953,38 @@
         "engineering",
         "operating-point"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "applicationId": "E202-jacobian-A1",
+      "title": "Lan truyền sai số cảm biến qua phép biến đổi",
+      "scenario": "Nhiệt độ, áp suất và độ ẩm đi qua một hàm hiệu chỉnh phi tuyến tạo ra hai đại lượng đầu ra; cần ước lượng uncertainty đầu ra.",
+      "method": "Tính Jacobian tại operating point, xây Σ_x từ độ lệch chuẩn/correlation cảm biến, rồi dùng Σ_y≈JΣ_xJᵀ và kiểm tra Monte Carlo khi phi tuyến mạnh.",
+      "expectedOutcome": "Biết output nào nhạy với sensor nào và uncertainty nào chi phối kết quả.",
+      "tags": [
+        "sensor",
+        "uncertainty",
+        "calibration"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "applicationId": "E202-jacobian-A2",
+      "title": "Jacobian trong kinematics robot",
+      "scenario": "Tốc độ khớp q̇ ánh xạ thành vận tốc đầu công tác v qua mô hình phi tuyến.",
+      "method": "Tính Jacobian kinematics J(q), dùng v≈J(q)q̇ cho vận tốc cục bộ; kiểm tra rank để nhận biết hướng chuyển động bị mất gần singularity.",
+      "expectedOutcome": "Nối Jacobian với chuyển động robot và hiểu vì sao điều kiện/singularity ảnh hưởng điều khiển.",
+      "tags": [
+        "robotics",
+        "kinematics",
+        "singularity"
+      ]
     }
   ],
   "importPolicy": {

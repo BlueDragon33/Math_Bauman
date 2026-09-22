@@ -16805,6 +16805,580 @@
         "E201"
       ],
       "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q001",
+      "level": "easy",
+      "question": "Jacobian của f:ℝⁿ→ℝᵐ có kích thước?",
+      "options": [
+        "m×n",
+        "n×m",
+        "n×n",
+        "m×m"
+      ],
+      "answer": "m×n",
+      "explanation": "Mỗi output tạo một hàng, mỗi input tạo một cột.",
+      "tags": [
+        "jacobian",
+        "dimension",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q002",
+      "level": "easy",
+      "question": "Phần tử hàng i cột j của Jacobian là?",
+      "options": [
+        "∂f_i/∂x_j",
+        "∂x_j/∂f_i",
+        "f_i x_j",
+        "∂²f_i/∂x_j²"
+      ],
+      "answer": "∂f_i/∂x_j",
+      "explanation": "Đó là sensitivity của output i theo input j.",
+      "tags": [
+        "jacobian",
+        "definition",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q003",
+      "level": "easy",
+      "question": "Nếu f:ℝ³→ℝ thì Jacobian liên hệ gradient thế nào?",
+      "options": [
+        "Có thể xem là gradient chuyển vị tùy convention",
+        "Luôn là 3×3",
+        "Không liên quan",
+        "Bằng Hessian"
+      ],
+      "answer": "Có thể xem là gradient chuyển vị tùy convention",
+      "explanation": "Với output scalar, Jacobian chỉ có một hàng; gradient thường viết dạng cột.",
+      "tags": [
+        "gradient",
+        "jacobian",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q004",
+      "level": "easy",
+      "question": "Tuyến tính hóa bậc nhất dùng công thức?",
+      "options": [
+        "f(x+Δx)≈f(x)+JΔx",
+        "f(x+Δx)=JᵀJ",
+        "f(x)=Σ_x",
+        "Δx=J"
+      ],
+      "answer": "f(x+Δx)≈f(x)+JΔx",
+      "explanation": "Jacobian là đạo hàm tuyến tính cục bộ.",
+      "tags": [
+        "linearization",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q005",
+      "level": "easy",
+      "question": "Trong Jacobian, một cột mô tả?",
+      "options": [
+        "Ảnh hưởng của một input lên mọi output",
+        "Một output theo mọi input",
+        "Covariance output",
+        "Hessian"
+      ],
+      "answer": "Ảnh hưởng của một input lên mọi output",
+      "explanation": "Cột j gồm ∂f_i/∂x_j qua các i.",
+      "tags": [
+        "jacobian",
+        "interpretation",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q006",
+      "level": "easy",
+      "question": "Trong Jacobian, một hàng mô tả?",
+      "options": [
+        "Gradient của một output f_i theo tất cả input",
+        "Một input duy nhất",
+        "Covariance input",
+        "Eigenvector"
+      ],
+      "answer": "Gradient của một output f_i theo tất cả input",
+      "explanation": "Hàng i chứa đạo hàm của f_i theo từng x_j.",
+      "tags": [
+        "jacobian",
+        "interpretation",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q007",
+      "level": "medium",
+      "question": "Nếu J là 2×3 và Δx là 3×1 thì JΔx có kích thước?",
+      "options": [
+        "2×1",
+        "3×1",
+        "2×3",
+        "3×2"
+      ],
+      "answer": "2×1",
+      "explanation": "Kích thước khớp output dimension.",
+      "tags": [
+        "dimension",
+        "matrix-vector",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q008",
+      "level": "medium",
+      "question": "Công thức covariance propagation bậc nhất là?",
+      "options": [
+        "Σ_y≈JΣ_xJᵀ",
+        "Σ_y≈JᵀΣ_xJ",
+        "Σ_y≈J+Σ_x",
+        "Σ_y≈Σ_x"
+      ],
+      "answer": "Σ_y≈JΣ_xJᵀ",
+      "explanation": "Đây là covariance của ánh xạ tuyến tính JΔx.",
+      "tags": [
+        "covariance",
+        "propagation",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q009",
+      "level": "medium",
+      "question": "Vì sao JΣ_xJᵀ cho ma trận m×m?",
+      "options": [
+        "J là m×n và Σ_x là n×n",
+        "Vì J luôn vuông",
+        "Vì Σ_x là m×m",
+        "Do chuyển vị không đổi chiều"
+      ],
+      "answer": "J là m×n và Σ_x là n×n",
+      "explanation": "Nhân m×n · n×n · n×m cho m×m.",
+      "tags": [
+        "dimension",
+        "covariance",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q010",
+      "level": "medium",
+      "question": "Nếu perturbation lớn trong hệ phi tuyến, tuyến tính hóa bằng Jacobian thường?",
+      "options": [
+        "Kém chính xác hơn",
+        "Chính xác hơn tuyệt đối",
+        "Không đổi",
+        "Biến thành Hessian tự động"
+      ],
+      "answer": "Kém chính xác hơn",
+      "explanation": "Jacobian là xấp xỉ cục bộ bậc nhất.",
+      "tags": [
+        "linearization",
+        "nonlinearity",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q011",
+      "level": "medium",
+      "question": "Jacobian phải được tính tại đâu?",
+      "options": [
+        "Operating point đang linearize",
+        "Bất kỳ điểm nào cũng như nhau",
+        "Luôn tại gốc tọa độ",
+        "Luôn tại cực tiểu"
+      ],
+      "answer": "Operating point đang linearize",
+      "explanation": "Sensitivity thay đổi theo trạng thái với hệ phi tuyến.",
+      "tags": [
+        "operating-point",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q012",
+      "level": "medium",
+      "question": "Để kiểm tra cột j của Jacobian bằng finite difference, dùng?",
+      "options": [
+        "[f(x+εe_j)-f(x)]/ε",
+        "f(x)/ε",
+        "JᵀJ",
+        "Σ_xe_j"
+      ],
+      "answer": "[f(x+εe_j)-f(x)]/ε",
+      "explanation": "Perturb riêng input j để xấp xỉ sensitivity cột j.",
+      "tags": [
+        "finite-difference",
+        "verification",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q013",
+      "level": "medium",
+      "question": "Nếu đổi thứ tự input nhưng giữ nguyên các cột J cũ, hậu quả?",
+      "options": [
+        "Ánh xạ sensitivity sai",
+        "Không ảnh hưởng",
+        "J tự sắp xếp lại",
+        "Chỉ đổi dấu determinant"
+      ],
+      "answer": "Ánh xạ sensitivity sai",
+      "explanation": "Cột Jacobian gắn chặt với thứ tự biến đầu vào.",
+      "tags": [
+        "indexing",
+        "implementation",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q014",
+      "level": "medium",
+      "question": "Nếu Σ_x có tương quan khác 0, có nên bỏ các phần tử ngoài đường chéo?",
+      "options": [
+        "Không, nếu correlation là thật và có ý nghĩa",
+        "Có, luôn luôn",
+        "Chỉ khi J vuông",
+        "Chỉ khi m=n"
+      ],
+      "answer": "Không, nếu correlation là thật và có ý nghĩa",
+      "explanation": "Bỏ correlation làm sai covariance output.",
+      "tags": [
+        "covariance",
+        "correlation",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q015",
+      "level": "medium",
+      "question": "Nếu có thêm nhiễu output độc lập covariance R, mô hình thường dùng?",
+      "options": [
+        "Σ_y≈JΣ_xJᵀ+R",
+        "Σ_y≈JΣ_x",
+        "Σ_y≈R-J",
+        "Σ_y≈JᵀRJ"
+      ],
+      "answer": "Σ_y≈JΣ_xJᵀ+R",
+      "explanation": "Covariance từ input và nhiễu output độc lập được cộng.",
+      "tags": [
+        "uncertainty",
+        "noise",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q016",
+      "level": "hard",
+      "question": "Chain rule cho y=g(x), z=h(y) dùng Jacobian?",
+      "options": [
+        "J_{h∘g}=J_h(g(x))J_g(x)",
+        "J_{h∘g}=J_g+J_h",
+        "J_{h∘g}=J_gᵀJ_hᵀ bắt buộc",
+        "Không có chain rule"
+      ],
+      "answer": "J_{h∘g}=J_h(g(x))J_g(x)",
+      "explanation": "Đạo hàm của phép hợp là tích các ánh xạ tuyến tính theo đúng thứ tự.",
+      "tags": [
+        "chain-rule",
+        "jacobian",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q017",
+      "level": "hard",
+      "question": "Trong backpropagation với gradient dạng cột, vì sao thường xuất hiện Jᵀ?",
+      "options": [
+        "Để kéo gradient output ngược về input qua adjoint của ánh xạ tuyến tính",
+        "Vì Jacobian luôn đối xứng",
+        "Để đổi dấu loss",
+        "Do covariance"
+      ],
+      "answer": "Để kéo gradient output ngược về input qua adjoint của ánh xạ tuyến tính",
+      "explanation": "Với scalar loss, ∇_xL=J_g(x)ᵀ∇_yL.",
+      "tags": [
+        "backprop",
+        "chain-rule",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q018",
+      "level": "hard",
+      "question": "Jacobian rank-deficient trong robot có thể báo hiệu?",
+      "options": [
+        "Mất một số hướng vận tốc cục bộ/singularity",
+        "Luôn ổn định hơn",
+        "Covariance bằng 0",
+        "Gradient descent hội tụ"
+      ],
+      "answer": "Mất một số hướng vận tốc cục bộ/singularity",
+      "explanation": "Rank thấp làm ánh xạ vận tốc không bao phủ đủ không gian output.",
+      "tags": [
+        "robotics",
+        "rank",
+        "singularity",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q019",
+      "level": "hard",
+      "question": "Nếu J có singular value rất lớn, perturbation theo hướng tương ứng có thể?",
+      "options": [
+        "Được khuếch đại mạnh",
+        "Luôn bị triệt tiêu",
+        "Không đổi",
+        "Chỉ đổi dấu"
+      ],
+      "answer": "Được khuếch đại mạnh",
+      "explanation": "Singular values mô tả hệ số khuếch đại cục bộ theo các hướng chính.",
+      "tags": [
+        "sensitivity",
+        "svd-bridge",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q020",
+      "level": "hard",
+      "question": "Nếu J có singular value gần 0, điều gì có thể xảy ra?",
+      "options": [
+        "Một hướng input gần như không quan sát/không ảnh hưởng output cục bộ",
+        "Output luôn tăng mạnh",
+        "Covariance âm",
+        "Hessian bằng 0"
+      ],
+      "answer": "Một hướng input gần như không quan sát/không ảnh hưởng output cục bộ",
+      "explanation": "Hướng đó bị nén mạnh bởi ánh xạ tuyến tính cục bộ.",
+      "tags": [
+        "sensitivity",
+        "singularity",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q021",
+      "level": "hard",
+      "question": "Σ_y=JΣ_xJᵀ là chính xác tuyệt đối cho hệ phi tuyến?",
+      "options": [
+        "Không, thường là xấp xỉ bậc nhất quanh operating point",
+        "Có, luôn chính xác",
+        "Chỉ khi Σ_x chéo",
+        "Chỉ khi J vuông"
+      ],
+      "answer": "Không, thường là xấp xỉ bậc nhất quanh operating point",
+      "explanation": "Phi tuyến bậc cao bị bỏ qua.",
+      "tags": [
+        "covariance",
+        "caveat",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q022",
+      "level": "hard",
+      "question": "Khi nhiễu lớn và phi tuyến mạnh, cách kiểm tra phù hợp hơn có thể là?",
+      "options": [
+        "Monte Carlo hoặc phương pháp phi tuyến cao hơn",
+        "Chỉ tăng số chữ số J",
+        "Đặt covariance bằng 0",
+        "Bỏ Jacobian"
+      ],
+      "answer": "Monte Carlo hoặc phương pháp phi tuyến cao hơn",
+      "explanation": "Mô phỏng mẫu giúp kiểm tra giới hạn của linearization.",
+      "tags": [
+        "uncertainty",
+        "monte-carlo",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q023",
+      "level": "hard",
+      "question": "Đơn vị của ∂f_i/∂x_j là?",
+      "options": [
+        "Đơn vị output i chia đơn vị input j",
+        "Không có đơn vị luôn",
+        "Đơn vị input nhân output",
+        "Đơn vị covariance"
+      ],
+      "answer": "Đơn vị output i chia đơn vị input j",
+      "explanation": "Đạo hàm là tỷ số biến thiên output trên input.",
+      "tags": [
+        "units",
+        "jacobian",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q024",
+      "level": "hard",
+      "question": "Mục đích chính của Jacobian trong linearization là?",
+      "options": [
+        "Thay hệ phi tuyến bằng ánh xạ tuyến tính cục bộ cho perturbation nhỏ",
+        "Tìm mọi cực trị toàn cục",
+        "Loại bỏ nhiễu hoàn toàn",
+        "Biến covariance thành scalar"
+      ],
+      "answer": "Thay hệ phi tuyến bằng ánh xạ tuyến tính cục bộ cho perturbation nhỏ",
+      "explanation": "Đây là vai trò cốt lõi nối vi phân với hệ kỹ thuật.",
+      "tags": [
+        "linearization",
+        "summary",
+        "E202"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "questionId": "E202-jacobian-Q025",
+      "level": "hard",
+      "question": "Cặp nào đúng?",
+      "options": [
+        "Δy≈JΔx và Σ_y≈JΣ_xJᵀ",
+        "Δy≈JᵀΔx và Σ_y≈Σ_xJ",
+        "Δy≈Σ_xΔx và Σ_y≈J",
+        "Δy≈J+Δx và Σ_y≈JᵀJ"
+      ],
+      "answer": "Δy≈JΔx và Σ_y≈JΣ_xJᵀ",
+      "explanation": "Hai công thức cùng xuất phát từ linearization bậc nhất.",
+      "tags": [
+        "jacobian",
+        "summary",
+        "E202"
+      ],
+      "stage": "vn"
     }
   ],
   "importPolicy": {

@@ -2255,6 +2255,100 @@
         "optimization",
         "E201"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "mindmapId": "E202-jacobian-MM01",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Jacobian & error propagation",
+          "type": "root"
+        },
+        {
+          "id": "definition",
+          "label": "J=[∂f_i/∂x_j]",
+          "type": "formula"
+        },
+        {
+          "id": "rows",
+          "label": "rows = output gradients",
+          "type": "interpretation"
+        },
+        {
+          "id": "cols",
+          "label": "columns = input sensitivities",
+          "type": "interpretation"
+        },
+        {
+          "id": "linear",
+          "label": "Δy≈JΔx",
+          "type": "formula"
+        },
+        {
+          "id": "cov",
+          "label": "Σ_y≈JΣ_xJᵀ",
+          "type": "formula"
+        },
+        {
+          "id": "chain",
+          "label": "chain rule / backprop",
+          "type": "bridge"
+        },
+        {
+          "id": "robot",
+          "label": "robot kinematics",
+          "type": "application"
+        },
+        {
+          "id": "limits",
+          "label": "local approximation limits",
+          "type": "warning"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "definition"
+        },
+        {
+          "from": "definition",
+          "to": "rows"
+        },
+        {
+          "from": "definition",
+          "to": "cols"
+        },
+        {
+          "from": "definition",
+          "to": "linear"
+        },
+        {
+          "from": "linear",
+          "to": "cov"
+        },
+        {
+          "from": "definition",
+          "to": "chain"
+        },
+        {
+          "from": "linear",
+          "to": "robot"
+        },
+        {
+          "from": "linear",
+          "to": "limits"
+        }
+      ],
+      "tags": [
+        "jacobian",
+        "linearization",
+        "uncertainty",
+        "E202"
+      ]
     }
   ],
   "importPolicy": {
