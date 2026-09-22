@@ -7887,6 +7887,556 @@
       "auditStatus": "PASS",
       "sourceBundle": "E185_ORTHOGONAL_PROJECTION",
       "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q001",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Điều gì thay đổi khi đổi cơ sở?",
+      "options": [
+        "Tọa độ của vector",
+        "Vector hình học luôn biến mất",
+        "Số chiều luôn tăng",
+        "Norm luôn bằng 1"
+      ],
+      "answer": "Tọa độ của vector",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q002",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Nếu x=Bc thì c là gì?",
+      "options": [
+        "[x]_B",
+        "B⁻¹",
+        "det(B)",
+        "xᵀx"
+      ],
+      "answer": "[x]_B",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q003",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Điều kiện để cột B tạo basis của Rⁿ?",
+      "options": [
+        "B khả nghịch",
+        "B đối xứng bắt buộc",
+        "B toàn số dương",
+        "det(B)=0"
+      ],
+      "answer": "B khả nghịch",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q004",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Tọa độ trong cơ sở chuẩn của x là?",
+      "options": [
+        "Chính các thành phần chuẩn của x",
+        "Luôn bằng 0",
+        "Luôn bằng 1",
+        "det(x)"
+      ],
+      "answer": "Chính các thành phần chuẩn của x",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q005",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Đổi cơ sở có làm vector vật lý đổi không?",
+      "options": [
+        "Không",
+        "Có luôn",
+        "Chỉ khi 2D",
+        "Chỉ với PCA"
+      ],
+      "answer": "Không",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q006",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Nếu B trực chuẩn thì B⁻¹ bằng?",
+      "options": [
+        "Bᵀ",
+        "B",
+        "0",
+        "det(B)"
+      ],
+      "answer": "Bᵀ",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q007",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Ma trận đổi B→C là?",
+      "options": [
+        "C⁻¹B",
+        "B⁻¹C",
+        "BC",
+        "CB"
+      ],
+      "answer": "C⁻¹B",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q008",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "question": "Hai tọa độ khác nhau có thể biểu diễn cùng vector không?",
+      "options": [
+        "Có",
+        "Không bao giờ",
+        "Chỉ vector 0",
+        "Chỉ trong R1"
+      ],
+      "answer": "Có",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q009",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Vì sao basis cần độc lập tuyến tính?",
+      "options": [
+        "Để tọa độ duy nhất",
+        "Để mọi norm bằng 1",
+        "Để determinant luôn 1",
+        "Để vector bằng 0"
+      ],
+      "answer": "Để tọa độ duy nhất",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q010",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Nếu det(B)=0 thì?",
+      "options": [
+        "B không là basis đầy đủ",
+        "B trực chuẩn",
+        "B luôn là rotation",
+        "Không ảnh hưởng"
+      ],
+      "answer": "B không là basis đầy đủ",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q011",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Công thức tìm [x]_B là?",
+      "options": [
+        "B⁻¹x hoặc solve(B,x)",
+        "Bx",
+        "xB",
+        "BᵀB"
+      ],
+      "answer": "B⁻¹x hoặc solve(B,x)",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q012",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Vì sao solve(B,x) thường tốt hơn inv(B)@x?",
+      "options": [
+        "Ổn định và hiệu quả hơn",
+        "Cho đáp án khác định nghĩa",
+        "Không cần B vuông",
+        "Luôn chính xác tuyệt đối"
+      ],
+      "answer": "Ổn định và hiệu quả hơn",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q013",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Nếu B gần suy biến thì điều gì xảy ra?",
+      "options": [
+        "Tọa độ nhạy với nhiễu",
+        "Mọi tọa độ bằng 0",
+        "Norm không đổi tuyệt đối",
+        "Không có ảnh hưởng"
+      ],
+      "answer": "Tọa độ nhạy với nhiễu",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q014",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "PCA tạo cơ sở từ đâu?",
+      "options": [
+        "Eigenvectors/singular vectors chính",
+        "Random labels",
+        "Bias term",
+        "Determinant"
+      ],
+      "answer": "Eigenvectors/singular vectors chính",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q015",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "question": "Với rotation matrix R trực chuẩn, đổi world→body dùng?",
+      "options": [
+        "Rᵀ",
+        "R²",
+        "R⁻²",
+        "det(R)"
+      ],
+      "answer": "Rᵀ",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q016",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Similarity transform của A khi đổi cùng basis S là?",
+      "options": [
+        "S⁻¹AS",
+        "SAS⁻¹ luôn",
+        "S+A",
+        "SᵀS"
+      ],
+      "answer": "S⁻¹AS",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q017",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Eigenvalues có đổi dưới similarity transform không?",
+      "options": [
+        "Không",
+        "Có tùy basis",
+        "Luôn đổi dấu",
+        "Luôn bằng 0"
+      ],
+      "answer": "Không",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q018",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Diagonalization giúp gì?",
+      "options": [
+        "Biểu diễn toán tử đơn giản trong eigenbasis",
+        "Tăng dimension",
+        "Xóa eigenvalues",
+        "Làm mọi matrix trực giao"
+      ],
+      "answer": "Biểu diễn toán tử đơn giản trong eigenbasis",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q019",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Condition number lớn của B cảnh báo gì?",
+      "options": [
+        "Đổi tọa độ dễ khuếch đại sai số",
+        "B luôn orthogonal",
+        "B không có vector",
+        "PCA luôn sai"
+      ],
+      "answer": "Đổi tọa độ dễ khuếch đại sai số",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q020",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Nếu basis trực chuẩn, norm Euclid của tọa độ và vector?",
+      "options": [
+        "Bằng nhau",
+        "Luôn khác",
+        "Tọa độ luôn lớn hơn",
+        "Không xác định"
+      ],
+      "answer": "Bằng nhau",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q021",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "question": "Covariance trong PCA basis lý tưởng có dạng?",
+      "options": [
+        "Gần diagonal",
+        "Luôn full ones",
+        "Skew-symmetric",
+        "Zero matrix"
+      ],
+      "answer": "Gần diagonal",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q022",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Đổi basis không trực chuẩn có thể làm Euclidean coordinates norm thế nào?",
+      "options": [
+        "Thay đổi dù vector hình học không đổi",
+        "Không bao giờ đổi",
+        "Luôn thành 1",
+        "Luôn thành 0"
+      ],
+      "answer": "Thay đổi dù vector hình học không đổi",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q023",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Cùng linear map nhưng domain basis B và codomain basis C cho matrix?",
+      "options": [
+        "C⁻¹AB",
+        "B⁻¹AC",
+        "ABC",
+        "A+B+C"
+      ],
+      "answer": "C⁻¹AB",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q024",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "Basis của subspace k chiều cần bao nhiêu vector độc lập?",
+      "options": [
+        "k",
+        "n luôn",
+        "1 luôn",
+        "k²"
+      ],
+      "answer": "k",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E186-basis-Q025",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "question": "SVD có thể tạo basis ổn định cho column/row spaces bằng?",
+      "options": [
+        "Singular vectors",
+        "Determinant",
+        "Trace",
+        "Bias vectors"
+      ],
+      "answer": "Singular vectors",
+      "explanation": "Đáp án theo định nghĩa và tính chất chuẩn của cơ sở, tọa độ và đổi cơ sở.",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE",
+      "stage": "vn"
     }
   ],
   "importPolicy": {

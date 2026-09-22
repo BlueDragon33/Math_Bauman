@@ -463,6 +463,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "reviewPackId": "E186-basis-RP01",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Phân biệt x và [x]_B.",
+          "expected": "x là vector; [x]_B là tọa độ của x trong cơ sở B."
+        },
+        {
+          "type": "formula",
+          "prompt": "Nêu công thức đổi tọa độ B→C.",
+          "expected": "[x]_C=C⁻¹B[x]_B."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Sai lầm phổ biến khi đổi cơ sở là gì?",
+          "expected": "Đảo sai thứ tự ma trận hoặc nhầm đổi biểu diễn với đổi vector."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu ứng dụng PCA/robotics.",
+          "expected": "PCA đổi trục dữ liệu; robotics đổi coordinate frame."
+        }
+      ],
+      "masteryGate": "Tính đúng tọa độ + đổi cơ sở đúng chiều + hiểu invariance của vector + nhận biết conditioning",
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
     }
   ],
   "importPolicy": {
