@@ -765,6 +765,37 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "applicationId": "E196-inv-A1",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Giải hệ tuyến tính và tránh explicit inverse",
+      "scenario": "Cần tính x từ Ax=b trong pipeline số.",
+      "method": "Dùng LU/QR/solver phù hợp thay vì tính A⁻¹ trước; kiểm conditioning và residual.",
+      "expectedOutcome": "Giải hệ ổn định và hiệu quả hơn, giảm lỗi do explicit inverse.",
+      "tags": [
+        "solver",
+        "numerical"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "applicationId": "E196-inv-A2",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Inverse covariance trong estimation/whitening",
+      "scenario": "Cần dùng inverse/precision matrix để cân trọng số sai số hoặc whitening.",
+      "method": "Kiểm eigen/singular values, condition number; regularize Σ+λI hoặc dùng pseudoinverse khi cần.",
+      "expectedOutcome": "Tránh khuếch đại noise do covariance gần singular.",
+      "tags": [
+        "covariance",
+        "whitening",
+        "estimation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
     }
   ],
   "importPolicy": {
