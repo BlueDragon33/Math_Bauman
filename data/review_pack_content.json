@@ -599,6 +599,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "reviewPackId": "E190-transpose-RP01",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Nêu định nghĩa phần tử của Aᵀ.",
+          "expected": "(Aᵀ)ᵢⱼ=aⱼᵢ."
+        },
+        {
+          "type": "identity",
+          "prompt": "Nêu hai đẳng thức transpose cơ bản.",
+          "expected": "(Aᵀ)ᵀ=A; (AB)ᵀ=BᵀAᵀ."
+        },
+        {
+          "type": "shape",
+          "prompt": "X N×d thì XᵀX và XXᵀ có shape gì?",
+          "expected": "d×d và N×N."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một vai trò của transpose trong AI.",
+          "expected": "Backprop gradient qua linear layer bằng Wᵀ."
+        }
+      ],
+      "masteryGate": "Đọc đúng transpose theo chỉ số + kiểm shape + hiểu đảo thứ tự tích + phân biệt feature/sample Gram + không dùng transpose để che lỗi semantics",
+      "tags": [
+        "transpose",
+        "E190"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
     }
   ],
   "importPolicy": {
