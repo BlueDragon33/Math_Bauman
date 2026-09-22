@@ -889,6 +889,38 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "applicationId": "E200-partial-A1",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Sensitivity đa cảm biến",
+      "scenario": "Output z=f(T,P) phụ thuộc nhiệt độ và áp suất; cần biết sensor nào ảnh hưởng mạnh tại operating point.",
+      "method": "Tính ∂z/∂T và ∂z/∂P tại điểm làm việc; nhân với uncertainty dự kiến của từng sensor để so đóng góp.",
+      "expectedOutcome": "Ưu tiên calibration/precision cho biến có sensitivity-weighted uncertainty lớn hơn.",
+      "tags": [
+        "sensor",
+        "uncertainty",
+        "sensitivity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "applicationId": "E200-partial-A2",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Loss theo nhiều tham số trước gradient",
+      "scenario": "Loss J(w,b) của mô hình tuyến tính cần kiểm từng thành phần trước khi ghép gradient.",
+      "method": "Tính ∂J/∂w khi giữ b cố định và ∂J/∂b khi giữ w cố định; so từng thành phần với finite difference riêng.",
+      "expectedOutcome": "Hiểu gradient là vector các partial derivatives và debug được từng tham số.",
+      "tags": [
+        "machine-learning",
+        "loss",
+        "gradient-bridge"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
     }
   ],
   "importPolicy": {

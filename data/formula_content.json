@@ -1847,6 +1847,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "formulaId": "E200-partial-F1",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Đạo hàm riêng theo x",
+      "formula": "∂f/∂x = lim_{h→0}[f(x+h,y)-f(x,y)]/h",
+      "meaning": "Đo sensitivity của f theo x khi các biến còn lại, ở đây y, được giữ cố định.",
+      "conditions": [
+        "f được xét trong lân cận điểm theo hướng x.",
+        "Giới hạn một biến theo h tồn tại."
+      ],
+      "commonMistakes": [
+        "Cho y cũng thay đổi khi đang tính ∂f/∂x.",
+        "Nhầm ký hiệu ∂ với đạo hàm toàn phần."
+      ],
+      "programmingUse": "Đo ảnh hưởng cục bộ của từng feature/parameter khi các đầu vào khác được đóng băng.",
+      "tags": [
+        "partial-x",
+        "sensitivity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "formulaId": "E200-partial-F2",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Đạo hàm riêng của đa thức hai biến",
+      "formula": "f(x,y)=x²y+3y² ⇒ f_x=2xy; f_y=x²+6y",
+      "meaning": "Khi lấy partial theo một biến, các biến khác được xem như hằng số.",
+      "conditions": [
+        "Xác định rõ biến đang đạo hàm.",
+        "Giữ đúng các biến còn lại như hằng số trong phép tính."
+      ],
+      "commonMistakes": [
+        "Đạo hàm y theo x dù y độc lập.",
+        "Bỏ các hạng còn phụ thuộc biến đang xét."
+      ],
+      "programmingUse": "Kiểm tra symbolic/automatic partial derivatives trước khi ghép thành gradient.",
+      "tags": [
+        "polynomial",
+        "partial"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "formulaId": "E200-partial-F3",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Linearization theo hai biến",
+      "formula": "Δf≈f_x(a,b)Δx+f_y(a,b)Δy",
+      "meaning": "Biến thiên nhỏ của output được xấp xỉ bằng tổng đóng góp sensitivity từng biến.",
+      "conditions": [
+        "Δx, Δy đủ nhỏ quanh operating point.",
+        "Các partial derivative tồn tại và mô hình đủ trơn cục bộ."
+      ],
+      "commonMistakes": [
+        "Dùng xấp xỉ tuyến tính cho biến thiên quá lớn.",
+        "Quên một thành phần sensitivity khi nhiều input cùng thay đổi."
+      ],
+      "programmingUse": "Ước lượng ảnh hưởng sai số cảm biến và perturbation nhiều đầu vào trước khi dùng Jacobian tổng quát.",
+      "tags": [
+        "linearization",
+        "error-propagation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
     }
   ],
   "importPolicy": {

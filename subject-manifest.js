@@ -33,25 +33,25 @@ window.SUBJECT_MANIFEST = {
     "theory_lecture_frame": 56,
     "theory_lecture_content": 347,
     "formula_frame": 56,
-    "formula_content": 84,
+    "formula_content": 87,
     "simulation_frame": 56,
-    "simulation_content": 56,
+    "simulation_content": 58,
     "exercise_frame": 56,
-    "exercise_content": 224,
+    "exercise_content": 232,
     "application_frame": 56,
-    "application_content": 56,
+    "application_content": 58,
     "professor_qa_frame": 56,
-    "professor_qa_content": 28,
+    "professor_qa_content": 29,
     "review_pack_frame": 56,
-    "review_pack_content": 28,
+    "review_pack_content": 29,
     "question_bank_frame": 56,
-    "question_bank_content": 700,
+    "question_bank_content": 725,
     "test_blueprint_frame": 56,
     "test_blueprint_content": 4,
     "chapter_lecture_frame": 56,
     "chapter_lecture_content": 0,
     "mindmap_frame": 56,
-    "mindmap_content": 28,
+    "mindmap_content": 29,
     "concept_map_frame": 56,
     "concept_map_content": 0,
     "media_frame": 56,
@@ -412,8 +412,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/formula_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 84,
-      "recordCount": 84
+      "plannedCount": 87,
+      "recordCount": 87
     },
     {
       "id": "simulation_frame",
@@ -428,8 +428,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/simulation_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56,
-      "recordCount": 56
+      "plannedCount": 58,
+      "recordCount": 58
     },
     {
       "id": "exercise_frame",
@@ -444,8 +444,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/exercise_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 224,
-      "recordCount": 224
+      "plannedCount": 232,
+      "recordCount": 232
     },
     {
       "id": "application_frame",
@@ -460,8 +460,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/application_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 56,
-      "recordCount": 56
+      "plannedCount": 58,
+      "recordCount": 58
     },
     {
       "id": "professor_qa_frame",
@@ -476,8 +476,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/professor_qa_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 28,
-      "recordCount": 28
+      "plannedCount": 29,
+      "recordCount": 29
     },
     {
       "id": "review_pack_frame",
@@ -492,8 +492,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/review_pack_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 28,
-      "recordCount": 28
+      "plannedCount": 29,
+      "recordCount": 29
     },
     {
       "id": "question_bank_frame",
@@ -508,8 +508,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/question_bank_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 700,
-      "recordCount": 700
+      "plannedCount": 725,
+      "recordCount": 725
     },
     {
       "id": "test_blueprint_frame",
@@ -556,8 +556,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/mindmap_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 28,
-      "recordCount": 28
+      "plannedCount": 29,
+      "recordCount": 29
     },
     {
       "id": "concept_map_frame",
@@ -730,14 +730,14 @@ window.SUBJECT_MANIFEST = {
     "review_packs": 260,
     "chapter_lectures": 32,
     "lessonSlides": 4160,
-    "formula_content": 84,
-    "simulation_content": 56,
-    "exercise_content": 224,
-    "application_content": 56,
-    "professor_qa_content": 28,
-    "review_pack_content": 28,
-    "question_bank_content": 700,
-    "mindmap_content": 28
+    "formula_content": 87,
+    "simulation_content": 58,
+    "exercise_content": 232,
+    "application_content": 58,
+    "professor_qa_content": 29,
+    "review_pack_content": 29,
+    "question_bank_content": 725,
+    "mindmap_content": 29
   },
   "simulationMode": "unified_only_260_labs_e76",
   "packageType": "FINAL_WITH_TEMPLATE_REFERENCE",
@@ -884,7 +884,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/formula_content.json",
       "group": "Công thức",
       "required": true,
-      "plannedCount": 84,
+      "plannedCount": 87,
       "description": "Records nội dung import/export cho Công thức"
     },
     "simulation_frame": {
@@ -900,7 +900,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/simulation_content.json",
       "group": "Mô phỏng",
       "required": true,
-      "plannedCount": 56,
+      "plannedCount": 58,
       "description": "Records nội dung import/export cho Mô phỏng"
     },
     "exercise_frame": {
@@ -916,7 +916,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/exercise_content.json",
       "group": "Bài tập",
       "required": true,
-      "plannedCount": 224,
+      "plannedCount": 232,
       "description": "Records nội dung import/export cho Bài tập"
     },
     "application_frame": {
@@ -932,7 +932,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/application_content.json",
       "group": "Ứng dụng",
       "required": true,
-      "plannedCount": 56,
+      "plannedCount": 58,
       "description": "Records nội dung import/export cho Ứng dụng"
     },
     "professor_qa_frame": {
@@ -948,7 +948,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/professor_qa_content.json",
       "group": "Vấn đáp",
       "required": true,
-      "plannedCount": 28,
+      "plannedCount": 29,
       "description": "Records nội dung import/export cho Vấn đáp"
     },
     "review_pack_frame": {
@@ -964,7 +964,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/review_pack_content.json",
       "group": "Ôn tập",
       "required": true,
-      "plannedCount": 28,
+      "plannedCount": 29,
       "description": "Records nội dung import/export cho Ôn tập"
     },
     "question_bank_frame": {
@@ -980,7 +980,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/question_bank_content.json",
       "group": "Ngân hàng câu hỏi",
       "required": true,
-      "plannedCount": 700,
+      "plannedCount": 725,
       "description": "Records nội dung import/export cho Ngân hàng câu hỏi"
     },
     "test_blueprint_frame": {
@@ -1028,7 +1028,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/mindmap_content.json",
       "group": "Mind map",
       "required": true,
-      "plannedCount": 28,
+      "plannedCount": 29,
       "description": "Records nội dung import/export cho Mind map"
     },
     "concept_map_frame": {

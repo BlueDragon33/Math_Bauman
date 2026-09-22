@@ -940,6 +940,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "reviewPackId": "E200-partial-RP01",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Khi tính ∂f/∂x, các biến khác xử lý thế nào?",
+          "expected": "Giữ cố định như hằng số."
+        },
+        {
+          "type": "calculation",
+          "prompt": "Với f=x²y, f_x và f_y?",
+          "expected": "f_x=2xy; f_y=x²."
+        },
+        {
+          "type": "meaning",
+          "prompt": "Partial derivative nói gì trong kỹ thuật?",
+          "expected": "Sensitivity output theo một input/parameter tại operating point khi input khác cố định."
+        },
+        {
+          "type": "bridge",
+          "prompt": "Các partial derivatives của scalar f ghép thành gì?",
+          "expected": "Gradient."
+        }
+      ],
+      "masteryGate": "Tính đúng partial theo từng biến + giải thích giữ biến khác cố định + dùng partial cho sensitivity/linearization + nối được sang gradient",
+      "tags": [
+        "partial-derivative",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
     }
   ],
   "importPolicy": {

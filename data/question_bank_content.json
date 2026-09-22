@@ -15662,6 +15662,581 @@
       "auditStatus": "PASS",
       "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS",
       "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q001",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Khi tính ∂f/∂x của f(x,y), y được xem là?",
+      "options": [
+        "Hằng số",
+        "Hàm của x bắt buộc",
+        "Luôn bằng 0",
+        "Không tồn tại"
+      ],
+      "answer": "Hằng số",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q002",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Nếu f=x²+3y thì f_x=?",
+      "options": [
+        "2x",
+        "3",
+        "2x+3",
+        "x"
+      ],
+      "answer": "2x",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q003",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Nếu f=x²+3y thì f_y=?",
+      "options": [
+        "3",
+        "2x",
+        "y",
+        "0"
+      ],
+      "answer": "3",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q004",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Ký hiệu đạo hàm riêng thường dùng?",
+      "options": [
+        "∂",
+        "Σ",
+        "det",
+        "∫"
+      ],
+      "answer": "∂",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q005",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Partial derivative đo chủ yếu?",
+      "options": [
+        "Sensitivity theo một biến khi biến khác cố định",
+        "Diện tích toàn miền",
+        "Tổng mọi biến",
+        "Số chiều dữ liệu"
+      ],
+      "answer": "Sensitivity theo một biến khi biến khác cố định",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q006",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Với f=xy, ∂f/∂x=?",
+      "options": [
+        "y",
+        "x",
+        "1",
+        "xy"
+      ],
+      "answer": "y",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q007",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Với f=xy, ∂f/∂y=?",
+      "options": [
+        "x",
+        "y",
+        "1",
+        "xy"
+      ],
+      "answer": "x",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q008",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "easy",
+      "question": "Các partial derivatives của scalar f ghép thành?",
+      "options": [
+        "Gradient",
+        "Determinant",
+        "Trace",
+        "Eigenvalue"
+      ],
+      "answer": "Gradient",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q009",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Với f=x²y, f_x=?",
+      "options": [
+        "2xy",
+        "x²",
+        "2x",
+        "y²"
+      ],
+      "answer": "2xy",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q010",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Với f=x²y, f_y=?",
+      "options": [
+        "x²",
+        "2xy",
+        "2y",
+        "x"
+      ],
+      "answer": "x²",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q011",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Tại (2,3), f=x²y có f_x=?",
+      "options": [
+        "12",
+        "4",
+        "9",
+        "6"
+      ],
+      "answer": "12",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q012",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Tại (2,3), f=x²y có f_y=?",
+      "options": [
+        "4",
+        "12",
+        "6",
+        "9"
+      ],
+      "answer": "4",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q013",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Linearization scalar hai biến có dạng?",
+      "options": [
+        "Δf≈f_xΔx+f_yΔy",
+        "Δf≈f_x+f_y",
+        "Δf≈ΔxΔy",
+        "Δf≈f"
+      ],
+      "answer": "Δf≈f_xΔx+f_yΔy",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q014",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Nếu ∂f/∂x lớn hơn nhiều ∂f/∂y về độ lớn tại điểm xét thì?",
+      "options": [
+        "f nhạy hơn với x cục bộ theo đơn vị/scaling hiện tại",
+        "y không tồn tại",
+        "x luôn quan trọng hơn toàn cục",
+        "gradient bằng 0"
+      ],
+      "answer": "f nhạy hơn với x cục bộ theo đơn vị/scaling hiện tại",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q015",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "medium",
+      "question": "Finite difference để check f_x cần làm gì với y?",
+      "options": [
+        "Giữ y cố định",
+        "Đổi y cùng x",
+        "Cho y=0 luôn",
+        "Random y mỗi lần"
+      ],
+      "answer": "Giữ y cố định",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q016",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "question": "Vì sao so trực tiếp magnitude f_x và f_y đôi khi gây hiểu sai?",
+      "options": [
+        "Đơn vị/scaling của x,y có thể khác nhau",
+        "Partial không có đơn vị",
+        "Gradient không tồn tại",
+        "Mọi partial đều bằng nhau"
+      ],
+      "answer": "Đơn vị/scaling của x,y có thể khác nhau",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q017",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "question": "Một điểm có f_x=f_y=0 được gọi an toàn nhất là?",
+      "options": [
+        "Điểm dừng theo gradient, chưa đủ kết luận cực trị",
+        "Cực tiểu chắc chắn",
+        "Cực đại chắc chắn",
+        "Điểm không liên tục"
+      ],
+      "answer": "Điểm dừng theo gradient, chưa đủ kết luận cực trị",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q018",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "question": "Nếu y vô tình thay đổi giữa hai lần finite-difference theo x thì?",
+      "options": [
+        "Không còn đo đúng partial theo x tại cùng operating point",
+        "Kết quả vẫn exact",
+        "Roundoff biến mất",
+        "Gradient luôn 0"
+      ],
+      "answer": "Không còn đo đúng partial theo x tại cùng operating point",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q019",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "question": "Trong uncertainty propagation tuyến tính, partial derivative đóng vai trò?",
+      "options": [
+        "Hệ số sensitivity nhân perturbation từng input",
+        "Xóa uncertainty",
+        "Tạo eigenvector",
+        "Đảm bảo Gaussian"
+      ],
+      "answer": "Hệ số sensitivity nhân perturbation từng input",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q020",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "hard",
+      "question": "Partial derivatives tồn tại riêng lẻ có luôn đảm bảo differentiability toàn phần?",
+      "options": [
+        "Không luôn; cần điều kiện mạnh hơn về hành vi phối hợp/cục bộ",
+        "Có luôn",
+        "Chỉ khi f=0",
+        "Chỉ trong một biến"
+      ],
+      "answer": "Không luôn; cần điều kiện mạnh hơn về hành vi phối hợp/cục bộ",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q021",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "question": "Để chuyển từ scalar output sang vector output, đối tượng gom các partial derivatives thường là?",
+      "options": [
+        "Jacobian",
+        "Determinant",
+        "Scalar gradient duy nhất",
+        "Trace"
+      ],
+      "answer": "Jacobian",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q022",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "question": "Gradient của scalar f theo vector x là?",
+      "options": [
+        "Vector các partial derivatives",
+        "Ma trận mọi eigenvalue",
+        "Tích phân của f",
+        "Một hằng số"
+      ],
+      "answer": "Vector các partial derivatives",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q023",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "question": "Một test robust cho partial derivative implementation nên?",
+      "options": [
+        "Perturb từng biến riêng, giữ biến khác cố định, quét h và nhiều operating points",
+        "Perturb mọi biến cùng lúc rồi đoán",
+        "Chỉ kiểm một điểm",
+        "Chỉ kiểm output"
+      ],
+      "answer": "Perturb từng biến riêng, giữ biến khác cố định, quét h và nhiều operating points",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q024",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "question": "Nếu input được rescale từ mét sang millimet thì numeric magnitude của partial theo input có thể?",
+      "options": [
+        "Đổi theo scale/đơn vị dù physical relation không đổi",
+        "Luôn giữ nguyên",
+        "Luôn bằng 0",
+        "Mất ý nghĩa hoàn toàn"
+      ],
+      "answer": "Đổi theo scale/đơn vị dù physical relation không đổi",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E200-partial-Q025",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "level": "expert",
+      "question": "Cầu nối tự nhiên từ E200 sang lesson tiếp theo về gradient là?",
+      "options": [
+        "Xếp các partial derivatives theo từng biến thành vector gradient",
+        "Lấy determinant của partial",
+        "Cộng mọi input",
+        "Bỏ operating point"
+      ],
+      "answer": "Xếp các partial derivatives theo từng biến thành vector gradient",
+      "explanation": "Đáp án bám hàm nhiều biến, đạo hàm riêng, ý nghĩa giữ các biến khác cố định, sensitivity cục bộ và kiểm tra số theo từng trục.",
+      "tags": [
+        "partial-derivative",
+        "multivariable",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES",
+      "stage": "vn"
     }
   ],
   "importPolicy": {
