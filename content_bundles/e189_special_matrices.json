@@ -1,0 +1,998 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E189_SPECIAL_MATRICES",
+  "lessonId": "MATH-VN-LA-C02-L02",
+  "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+  "title": "§2.2 · Các ma trận đặc biệt: không, vuông, chéo, đơn vị, tam giác, hàng, cột",
+  "sources": {
+    "formula_content": [
+      {
+        "formulaId": "E189-special-F1",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Ma trận đơn vị",
+        "formula": "Iₙx = x,  AIₙ = IₘA = A",
+        "meaning": "I là phần tử trung hòa của phép nhân ma trận với kích thước phù hợp.",
+        "conditions": [
+          "I phải có kích thước tương thích.",
+          "Phép nhân ma trận được định nghĩa."
+        ],
+        "commonMistakes": [
+          "Dùng I sai cấp.",
+          "Nhầm identity với ma trận mọi phần tử bằng 1."
+        ],
+        "programmingUse": "np.eye(n); dùng identity initialization hoặc kiểm biến đổi.",
+        "tags": [
+          "identity",
+          "special-matrix"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "formulaId": "E189-special-F2",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Ma trận chéo",
+        "formula": "D = diag(d₁,…,dₙ)",
+        "meaning": "Chỉ đường chéo chính có thể khác 0; Dx scale độc lập từng component.",
+        "conditions": [
+          "D vuông.",
+          "Thứ tự dᵢ khớp component tương ứng."
+        ],
+        "commonMistakes": [
+          "Dùng dense multiplication khi chỉ cần elementwise scale.",
+          "Quên kiểm dᵢ=0 khi cần inverse."
+        ],
+        "programmingUse": "y=d*x thay vì dựng dense D khi chỉ cần scaling.",
+        "tags": [
+          "diagonal",
+          "scaling"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "formulaId": "E189-special-F3",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Định thức ma trận tam giác",
+        "formula": "det(T)=∏ᵢ tᵢᵢ",
+        "meaning": "Với ma trận tam giác, determinant là tích các phần tử đường chéo.",
+        "conditions": [
+          "T là ma trận vuông tam giác.",
+          "Đường chéo được xác định đúng."
+        ],
+        "commonMistakes": [
+          "Áp dụng cho ma trận không tam giác.",
+          "Suy ra khả nghịch mà không kiểm phần tử đường chéo bằng 0."
+        ],
+        "programmingUse": "triangular solve và logdet khai thác diagonal.",
+        "tags": [
+          "triangular",
+          "determinant"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      }
+    ],
+    "exercise_content": [
+      {
+        "exerciseId": "E189-special-E01",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "prompt": "Viết I₃.",
+        "solution": "diag(1,1,1).",
+        "tags": [
+          "identity"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "exerciseId": "E189-special-E02",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "prompt": "Cho D=diag(2,-1,3), x=(1,4,2). Tính Dx.",
+        "solution": "(2,-4,6).",
+        "tags": [
+          "diagonal"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "exerciseId": "E189-special-E03",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Tại sao D=diag(2,0,5) không khả nghịch?",
+        "solution": "Có phần tử đường chéo bằng 0 nên det(D)=0.",
+        "tags": [
+          "inverse"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "exerciseId": "E189-special-E04",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Tính det của T=[[2,1,3],[0,-4,2],[0,0,5]].",
+        "solution": "2·(-4)·5=-40.",
+        "tags": [
+          "triangular"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "exerciseId": "E189-special-E05",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Nêu khác biệt semantic giữa identity matrix và zero matrix trong linear layer.",
+        "solution": "Identity giữ nguyên tín hiệu; zero matrix triệt toàn bộ linear contribution.",
+        "tags": [
+          "linear-layer"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "exerciseId": "E189-special-E06",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "prompt": "Vì sao nên biểu diễn feature scaling bằng vector d thay vì dense diag(d) khi n lớn?",
+        "solution": "Tiết kiệm bộ nhớ và giảm phép tính từ dense O(n²) xuống elementwise O(n).",
+        "tags": [
+          "efficiency"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "exerciseId": "E189-special-E07",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "prompt": "Một triangular system Tx=b nên giải bằng inverse hay triangular solve? Vì sao?",
+        "solution": "Triangular solve; ít tốn tính toán, ổn định và không cần dựng T^{-1}.",
+        "tags": [
+          "solve"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "exerciseId": "E189-special-E08",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "prompt": "Trong covariance approximation, dùng diagonal covariance đánh đổi gì?",
+        "solution": "Giảm tham số/tính toán nhưng bỏ qua tương quan chéo giữa các feature.",
+        "tags": [
+          "covariance",
+          "approximation"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      }
+    ],
+    "application_content": [
+      {
+        "applicationId": "E189-special-A1",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Diagonal scaling cho chuẩn hóa feature",
+        "scenario": "Các feature cảm biến có scale khác nhau cần rescale trước mô hình.",
+        "method": "Dùng D=diag(s₁,…,s_d) hoặc vector scale tương đương; lưu đơn vị và policy.",
+        "expectedOutcome": "Scale feature rõ ràng, có thể audit và tính nhanh.",
+        "tags": [
+          "sensor",
+          "diagonal"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "applicationId": "E189-special-A2",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Triangular solve trong pipeline số",
+        "scenario": "Sau phân rã LU/Cholesky cần giải nhiều hệ tuyến tính.",
+        "method": "Giữ cấu trúc tam giác và dùng forward/back substitution thay vì inverse dense.",
+        "expectedOutcome": "Giảm chi phí và cải thiện ổn định số.",
+        "tags": [
+          "numerical",
+          "triangular"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      }
+    ],
+    "simulation_content": [
+      {
+        "simulationId": "E189-special-SIM1",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Mô phỏng diagonal scaling",
+        "purpose": "Thay dᵢ và quan sát từng component output thay đổi độc lập.",
+        "controls": [
+          {
+            "key": "d1",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "d2",
+            "type": "number",
+            "default": 2
+          },
+          {
+            "key": "d3",
+            "type": "number",
+            "default": 0.5
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "y",
+            "label": "Dx"
+          },
+          {
+            "key": "det",
+            "label": "det(D)"
+          },
+          {
+            "key": "invertible",
+            "label": "Khả nghịch"
+          }
+        ],
+        "expectedObservation": "Mỗi dᵢ chỉ scale component tương ứng; dᵢ=0 làm D singular.",
+        "tags": [
+          "diagonal"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      },
+      {
+        "simulationId": "E189-special-SIM2",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Mô phỏng triangular solve",
+        "purpose": "Thay diagonal/off-diagonal của T và quan sát nghiệm, determinant, conditioning proxy.",
+        "controls": [
+          {
+            "key": "diag_min",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "offdiag",
+            "type": "number",
+            "default": 0.2
+          },
+          {
+            "key": "size",
+            "type": "number",
+            "default": 4
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "det",
+            "label": "Determinant"
+          },
+          {
+            "key": "solution_norm",
+            "label": "Norm nghiệm"
+          },
+          {
+            "key": "near_singular",
+            "label": "Cảnh báo gần suy biến"
+          }
+        ],
+        "expectedObservation": "Diagonal tiến gần 0 làm hệ nhạy hơn và determinant giảm mạnh.",
+        "tags": [
+          "triangular",
+          "conditioning"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "qaId": "E189-special-QA01",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "question": "Vì sao phân loại ma trận đặc biệt quan trọng thay vì coi mọi ma trận như dense matrix tổng quát?",
+        "answer": "Cấu trúc đặc biệt vừa cho biết tính chất toán học vừa cho phép thuật toán nhanh và ổn định hơn. Identity giữ nguyên, diagonal scale độc lập, triangular cho phép solve hiệu quả; bỏ cấu trúc sẽ mất cả ý nghĩa lẫn hiệu suất.",
+        "followUp": [
+          "Khi nào diagonal matrix khả nghịch?",
+          "Vì sao triangular solve tốt hơn inverse?",
+          "Diagonal covariance bỏ qua thông tin gì?"
+        ],
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      }
+    ],
+    "review_pack_content": [
+      {
+        "reviewPackId": "E189-special-RP01",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "items": [
+          {
+            "type": "concept",
+            "prompt": "Phân biệt zero, identity và diagonal matrix.",
+            "expected": "Zero triệt tín hiệu; identity giữ nguyên; diagonal scale từng component."
+          },
+          {
+            "type": "property",
+            "prompt": "Điều kiện khả nghịch của diagonal matrix?",
+            "expected": "Mọi phần tử đường chéo khác 0."
+          },
+          {
+            "type": "algorithm",
+            "prompt": "Vì sao triangular matrix thuận lợi khi giải hệ?",
+            "expected": "Có thể forward/back substitution."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Nêu một ứng dụng của diagonal structure trong ML.",
+            "expected": "Feature scaling, diagonal covariance hoặc preconditioner."
+          }
+        ],
+        "masteryGate": "Nhận diện đúng ma trận đặc biệt + nêu tính chất lõi + biết khi nào khai thác cấu trúc để giảm chi phí và tăng độ ổn định",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      }
+    ],
+    "question_bank_content": [
+      {
+        "questionId": "E189-special-Q001",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận không là ma trận?",
+        "options": [
+          "Mọi phần tử bằng 0",
+          "Đường chéo bằng 1",
+          "Chỉ có một hàng",
+          "Chỉ có một cột"
+        ],
+        "answer": "Mọi phần tử bằng 0",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q002",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận đơn vị I có?",
+        "options": [
+          "1 trên đường chéo chính và 0 ngoài đường chéo",
+          "Mọi phần tử bằng 1",
+          "Định thức luôn 0",
+          "Chỉ một phần tử"
+        ],
+        "answer": "1 trên đường chéo chính và 0 ngoài đường chéo",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q003",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận chéo bắt buộc phải?",
+        "options": [
+          "Vuông",
+          "Tam giác trên nhưng không vuông",
+          "Có một hàng",
+          "Có một cột"
+        ],
+        "answer": "Vuông",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q004",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận tam giác trên có các phần tử nào bằng 0?",
+        "options": [
+          "Phía dưới đường chéo chính",
+          "Phía trên đường chéo chính",
+          "Trên đường chéo chính",
+          "Mọi phần tử"
+        ],
+        "answer": "Phía dưới đường chéo chính",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q005",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận tam giác dưới có các phần tử nào bằng 0?",
+        "options": [
+          "Phía trên đường chéo chính",
+          "Phía dưới đường chéo chính",
+          "Trên đường chéo chính",
+          "Không phần tử nào"
+        ],
+        "answer": "Phía trên đường chéo chính",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q006",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận vuông là ma trận?",
+        "options": [
+          "Có số hàng bằng số cột",
+          "Mọi phần tử bằng nhau",
+          "Chỉ có đường chéo",
+          "Luôn khả nghịch"
+        ],
+        "answer": "Có số hàng bằng số cột",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q007",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận hàng có shape?",
+        "options": [
+          "1×n",
+          "n×1",
+          "n×n",
+          "1×1 bắt buộc"
+        ],
+        "answer": "1×n",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q008",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận cột có shape?",
+        "options": [
+          "m×1",
+          "1×m",
+          "m×m",
+          "1×1 bắt buộc"
+        ],
+        "answer": "m×1",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q009",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Iₙx bằng?",
+        "options": [
+          "x",
+          "0",
+          "n x",
+          "xᵀ"
+        ],
+        "answer": "x",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q010",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "A+0 bằng?",
+        "options": [
+          "A",
+          "0",
+          "I",
+          "Aᵀ"
+        ],
+        "answer": "A",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q011",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Tích của hai ma trận chéo cùng cấp là?",
+        "options": [
+          "Ma trận chéo",
+          "Luôn ma trận không",
+          "Luôn ma trận đơn vị",
+          "Không xác định"
+        ],
+        "answer": "Ma trận chéo",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q012",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Ma trận đường chéo D dễ nhân với vector vì?",
+        "options": [
+          "Mỗi output chủ yếu scale component tương ứng",
+          "Cần O(n³)",
+          "Phải giải hệ tuyến tính",
+          "Luôn cần inverse"
+        ],
+        "answer": "Mỗi output chủ yếu scale component tương ứng",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q013",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Ma trận tam giác hữu ích trong giải hệ vì?",
+        "options": [
+          "Có thể thế tiến/thế lùi",
+          "Luôn trực giao",
+          "Luôn đối xứng",
+          "Không cần dữ liệu"
+        ],
+        "answer": "Có thể thế tiến/thế lùi",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q014",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Ma trận đơn vị trong pipeline tuyến tính biểu diễn?",
+        "options": [
+          "Biến đổi giữ nguyên",
+          "Xóa mọi dữ liệu",
+          "Đổi dấu mọi phần tử",
+          "Transpose"
+        ],
+        "answer": "Biến đổi giữ nguyên",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q015",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Một ma trận chéo có thể dùng để biểu diễn?",
+        "options": [
+          "Scale độc lập từng feature",
+          "Hoán vị tùy ý mọi hàng",
+          "Tích chập 2D bắt buộc",
+          "Xóa dimension"
+        ],
+        "answer": "Scale độc lập từng feature",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q016",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Vì sao sparse diagonal/triangular structure nên được bảo toàn trong code?",
+        "options": [
+          "Giảm tính toán và giữ ý nghĩa cấu trúc",
+          "Để determinant luôn 1",
+          "Để mọi matrix khả nghịch",
+          "Để tránh kiểm shape"
+        ],
+        "answer": "Giảm tính toán và giữ ý nghĩa cấu trúc",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q017",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Một ma trận tam giác có determinant bằng?",
+        "options": [
+          "Tích các phần tử đường chéo",
+          "Tổng mọi phần tử",
+          "Trace bình phương",
+          "Luôn bằng 1"
+        ],
+        "answer": "Tích các phần tử đường chéo",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q018",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Ma trận chéo khả nghịch khi?",
+        "options": [
+          "Mọi phần tử đường chéo khác 0",
+          "Có ít nhất một phần tử khác 0",
+          "Trace khác 0",
+          "Kích thước chẵn"
+        ],
+        "answer": "Mọi phần tử đường chéo khác 0",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q019",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Dùng dense matrix cho phép scale độc lập từng feature có nhược điểm gì?",
+        "options": [
+          "Mất cấu trúc rõ và tốn tài nguyên hơn diagonal representation",
+          "Không thể tính",
+          "Luôn sai toán học",
+          "Không lưu được số thực"
+        ],
+        "answer": "Mất cấu trúc rõ và tốn tài nguyên hơn diagonal representation",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q020",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Ma trận không trong residual path tương ứng?",
+        "options": [
+          "Không đóng góp tín hiệu",
+          "Giữ nguyên tín hiệu",
+          "Nhân đôi tín hiệu",
+          "Luôn normalize"
+        ],
+        "answer": "Không đóng góp tín hiệu",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q021",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Preconditioner diagonal thường nhằm?",
+        "options": [
+          "Cải thiện scale/conditioning với chi phí thấp",
+          "Đổi dimension",
+          "Bảo đảm nghiệm nguyên",
+          "Loại mọi nhiễu"
+        ],
+        "answer": "Cải thiện scale/conditioning với chi phí thấp",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q022",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Mask dạng diagonal trong covariance approximation ngụ ý?",
+        "options": [
+          "Bỏ qua tương quan chéo giữa feature",
+          "Giữ đầy đủ mọi tương quan",
+          "Đổi sample thành feature",
+          "Tăng rank bắt buộc"
+        ],
+        "answer": "Bỏ qua tương quan chéo giữa feature",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q023",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Triangular factor thường xuất hiện trong?",
+        "options": [
+          "LU/Cholesky và giải hệ hiệu quả",
+          "Chỉ phép cộng matrix",
+          "Chỉ indexing",
+          "Chỉ visualization"
+        ],
+        "answer": "LU/Cholesky và giải hệ hiệu quả",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q024",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Identity initialization có ý nghĩa gì trong một số linear transform?",
+        "options": [
+          "Khởi đầu gần phép biến đổi giữ nguyên",
+          "Khởi đầu bằng zero mapping",
+          "Loại mọi gradient",
+          "Bảo đảm optimum toàn cục"
+        ],
+        "answer": "Khởi đầu gần phép biến đổi giữ nguyên",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E189-special-Q025",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Khi tối ưu matrix computation, lựa chọn tốt nhất là?",
+        "options": [
+          "Khai thác cấu trúc đặc biệt thay vì luôn dùng kernel dense tổng quát",
+          "Luôn chuyển mọi matrix thành dense",
+          "Luôn tính inverse trước",
+          "Bỏ kiểm tính chất matrix"
+        ],
+        "answer": "Khai thác cấu trúc đặc biệt thay vì luôn dùng kernel dense tổng quát",
+        "explanation": "Đáp án dựa trên định nghĩa và tính chất của zero, identity, diagonal, triangular, row/column matrices và cách khai thác cấu trúc trong tính toán.",
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES",
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "mindmapId": "E189-special-MM01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "lessonId": "MATH-VN-LA-C02-L02",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Ma trận đặc biệt = cấu trúc + thuật toán phù hợp",
+            "type": "root"
+          },
+          {
+            "id": "zero",
+            "label": "Zero: triệt đóng góp tuyến tính",
+            "type": "concept"
+          },
+          {
+            "id": "identity",
+            "label": "Identity: giữ nguyên",
+            "type": "concept"
+          },
+          {
+            "id": "diag",
+            "label": "Diagonal: scale độc lập",
+            "type": "concept"
+          },
+          {
+            "id": "tri",
+            "label": "Triangular: solve nhanh",
+            "type": "concept"
+          },
+          {
+            "id": "shape",
+            "label": "Row/column/square: shape semantics",
+            "type": "definition"
+          },
+          {
+            "id": "compute",
+            "label": "Khai thác structure, tránh dense mù",
+            "type": "application"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "zero"
+          },
+          {
+            "from": "root",
+            "to": "identity"
+          },
+          {
+            "from": "root",
+            "to": "diag"
+          },
+          {
+            "from": "root",
+            "to": "tri"
+          },
+          {
+            "from": "root",
+            "to": "shape"
+          },
+          {
+            "from": "diag",
+            "to": "compute"
+          },
+          {
+            "from": "tri",
+            "to": "compute"
+          }
+        ],
+        "tags": [
+          "special-matrix",
+          "E189"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E189_SPECIAL_MATRICES"
+      }
+    ]
+  }
+}
