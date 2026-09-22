@@ -1707,6 +1707,77 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "formulaId": "E198-derivative-F1",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Định nghĩa đạo hàm tại một điểm",
+      "formula": "f'(a)=lim_{h→0}[f(a+h)-f(a)]/h",
+      "meaning": "Đạo hàm là giới hạn của tốc độ biến thiên trung bình khi khoảng h co về 0; về hình học là hệ số góc tiếp tuyến tại x=a.",
+      "conditions": [
+        "f phải xác định quanh a.",
+        "Giới hạn difference quotient phải tồn tại và hữu hạn."
+      ],
+      "commonMistakes": [
+        "Cho h=0 ngay trong thương sai phân.",
+        "Nhầm đạo hàm tại a với giá trị f(a)."
+      ],
+      "programmingUse": "Là chuẩn tham chiếu để hiểu numerical differentiation, gradient checking và sensitivity theo một tham số.",
+      "tags": [
+        "derivative",
+        "limit",
+        "tangent"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "formulaId": "E198-derivative-F2",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Các quy tắc tuyến tính và tích",
+      "formula": "(cf+g)'=cf'+g'; (fg)'=f'g+fg'",
+      "meaning": "Đạo hàm phân phối tuyến tính qua tổng và cần quy tắc tích khi hai thừa số cùng phụ thuộc biến.",
+      "conditions": [
+        "Các hàm thành phần khả vi tại điểm xét.",
+        "Khi dùng product rule phải đạo hàm cả hai thừa số."
+      ],
+      "commonMistakes": [
+        "Đạo hàm tích thành f'g'.",
+        "Bỏ hệ số hằng c hoặc đạo hàm sai hằng số."
+      ],
+      "programmingUse": "Rút đạo hàm analytic cho model, loss và transfer expression trước khi code hoặc so với automatic differentiation.",
+      "tags": [
+        "product-rule",
+        "linearity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "formulaId": "E198-derivative-F3",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Quy tắc thương và tiếp tuyến",
+      "formula": "(f/g)'=(f'g-fg')/g²; y≈f(a)+f'(a)(x-a)",
+      "meaning": "Quy tắc thương áp dụng khi mẫu khác 0; linearization bậc một dùng đạo hàm để tạo tiếp tuyến xấp xỉ hàm gần a.",
+      "conditions": [
+        "g(a)≠0 cho quy tắc thương.",
+        "Xấp xỉ tiếp tuyến chỉ đáng tin gần điểm tuyến tính hóa."
+      ],
+      "commonMistakes": [
+        "Đảo dấu tử số trong quotient rule.",
+        "Dùng tiếp tuyến quá xa a mà không kiểm sai số."
+      ],
+      "programmingUse": "Tuyến tính hóa cục bộ sensor/model và đánh giá sensitivity đầu ra theo biến vào.",
+      "tags": [
+        "quotient-rule",
+        "linearization",
+        "tangent"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
     }
   ],
   "importPolicy": {
@@ -1764,5 +1835,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
 }
