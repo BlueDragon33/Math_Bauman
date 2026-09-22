@@ -554,6 +554,26 @@
         "oral-exam",
         "E201"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "qaId": "E202-jacobian-QA01",
+      "question": "Nếu giáo sư hỏi 'Jacobian khác gradient thế nào và vì sao dùng JΣJᵀ để lan truyền sai số?', bạn trả lời thế nào?",
+      "answer": "Gradient thường mô tả hàm vô hướng f:ℝⁿ→ℝ và là vector các partial derivatives. Jacobian mở rộng sang f:ℝⁿ→ℝᵐ, có phần tử ∂f_i/∂x_j. Với perturbation nhỏ, Δy≈JΔx. Nếu Δx là biến ngẫu nhiên zero-mean có covariance Σ_x, thì covariance của ánh xạ tuyến tính JΔx là JΣ_xJᵀ; đây là xấp xỉ bậc nhất cho hệ phi tuyến quanh operating point.",
+      "followUp": [
+        "Khi nào JΣJᵀ không đủ chính xác?",
+        "Singularity của Jacobian nói gì trong robot?",
+        "Chain rule của Jacobian liên hệ backpropagation ra sao?"
+      ],
+      "tags": [
+        "jacobian",
+        "covariance",
+        "oral-exam",
+        "E202"
+      ]
     }
   ],
   "importPolicy": {
