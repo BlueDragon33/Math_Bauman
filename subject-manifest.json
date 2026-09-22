@@ -33,25 +33,25 @@
     "theory_lecture_frame": 56,
     "theory_lecture_content": 347,
     "formula_frame": 56,
-    "formula_content": 27,
+    "formula_content": 30,
     "simulation_frame": 56,
-    "simulation_content": 18,
+    "simulation_content": 20,
     "exercise_frame": 56,
-    "exercise_content": 72,
+    "exercise_content": 80,
     "application_frame": 56,
-    "application_content": 18,
+    "application_content": 20,
     "professor_qa_frame": 56,
-    "professor_qa_content": 9,
+    "professor_qa_content": 10,
     "review_pack_frame": 56,
-    "review_pack_content": 9,
+    "review_pack_content": 10,
     "question_bank_frame": 56,
-    "question_bank_content": 225,
+    "question_bank_content": 250,
     "test_blueprint_frame": 56,
     "test_blueprint_content": 4,
     "chapter_lecture_frame": 56,
     "chapter_lecture_content": 0,
     "mindmap_frame": 56,
-    "mindmap_content": 9,
+    "mindmap_content": 10,
     "concept_map_frame": 56,
     "concept_map_content": 0,
     "media_frame": 56,
@@ -412,8 +412,8 @@
       "path": "data/formula_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 27,
-      "recordCount": 27
+      "plannedCount": 30,
+      "recordCount": 30
     },
     {
       "id": "simulation_frame",
@@ -428,8 +428,8 @@
       "path": "data/simulation_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 18,
-      "recordCount": 18
+      "plannedCount": 20,
+      "recordCount": 20
     },
     {
       "id": "exercise_frame",
@@ -444,8 +444,8 @@
       "path": "data/exercise_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 72,
-      "recordCount": 72
+      "plannedCount": 80,
+      "recordCount": 80
     },
     {
       "id": "application_frame",
@@ -460,8 +460,8 @@
       "path": "data/application_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 18,
-      "recordCount": 18
+      "plannedCount": 20,
+      "recordCount": 20
     },
     {
       "id": "professor_qa_frame",
@@ -476,8 +476,8 @@
       "path": "data/professor_qa_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 9,
-      "recordCount": 9
+      "plannedCount": 10,
+      "recordCount": 10
     },
     {
       "id": "review_pack_frame",
@@ -492,8 +492,8 @@
       "path": "data/review_pack_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 9,
-      "recordCount": 9
+      "plannedCount": 10,
+      "recordCount": 10
     },
     {
       "id": "question_bank_frame",
@@ -508,8 +508,8 @@
       "path": "data/question_bank_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 225,
-      "recordCount": 225
+      "plannedCount": 250,
+      "recordCount": 250
     },
     {
       "id": "test_blueprint_frame",
@@ -556,8 +556,8 @@
       "path": "data/mindmap_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 9,
-      "recordCount": 9
+      "plannedCount": 10,
+      "recordCount": 10
     },
     {
       "id": "concept_map_frame",
