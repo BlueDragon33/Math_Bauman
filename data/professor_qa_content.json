@@ -457,6 +457,25 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "qaId": "E197-limits-QA01",
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "question": "Nếu giáo sư hỏi 'giới hạn, liên tục và tốc độ biến thiên liên quan với nhau thế nào trong mô hình kỹ thuật?', bạn trả lời thế nào?",
+      "answer": "Giới hạn mô tả hành vi khi biến tiến tới một điểm. Liên tục tại a yêu cầu giới hạn bằng giá trị hàm, nên không có jump tại điểm đó. Difference quotient mô tả tốc độ biến thiên trung bình; khi h→0 và giới hạn tồn tại ta có đạo hàm/tốc độ tức thời. Trong tính số, finite difference chỉ xấp xỉ giới hạn và cần cân bằng truncation với roundoff.",
+      "followUp": [
+        "Liên tục có kéo theo khả vi không?",
+        "Vì sao h quá nhỏ làm finite difference xấu đi?",
+        "Jump discontinuity gây gì trong control law?"
+      ],
+      "tags": [
+        "limit",
+        "continuity",
+        "E197"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E197_LIMITS_CONTINUITY"
     }
   ],
   "importPolicy": {
