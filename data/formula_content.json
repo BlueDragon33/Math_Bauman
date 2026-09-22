@@ -442,6 +442,78 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "formulaId": "E178-matmul-F1",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Điều kiện kích thước của tích ma trận",
+      "formula": "A ∈ R^(m×n), B ∈ R^(n×p) ⇒ AB ∈ R^(m×p)",
+      "meaning": "Số cột của A phải bằng số hàng của B; tích AB giữ số hàng của A và số cột của B.",
+      "conditions": [
+        "Kích thước trong n phải trùng nhau.",
+        "Giữ đúng thứ tự A rồi B theo phép hợp thành cần mô tả."
+      ],
+      "commonMistakes": [
+        "Chỉ nhìn A và B cùng là ma trận rồi mặc định nhân được.",
+        "Suy ra AB và BA có cùng ý nghĩa hoặc cùng tồn tại."
+      ],
+      "programmingUse": "Trong NumPy, A @ B chỉ hợp lệ khi A.shape[1] == B.shape[0].",
+      "tags": [
+        "matrix-multiplication",
+        "shape",
+        "linear-transform"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "formulaId": "E178-matmul-F2",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Phần tử của tích ma trận",
+      "formula": "(AB)_ij = Σ_(k=1)^n a_ik b_kj",
+      "meaning": "Mỗi phần tử của AB là tích vô hướng giữa hàng i của A và cột j của B.",
+      "conditions": [
+        "A có n cột và B có n hàng.",
+        "Chỉ số k chạy trên chiều trung gian dùng để ghép hai phép biến đổi."
+      ],
+      "commonMistakes": [
+        "Nhân từng phần tử A và B như Hadamard product.",
+        "Lấy hàng nhân hàng hoặc cột nhân cột."
+      ],
+      "programmingUse": "Có thể kiểm một ô C[i,j] bằng np.dot(A[i,:], B[:,j]) trước khi tin toàn bộ A @ B.",
+      "tags": [
+        "matrix-multiplication",
+        "row-column",
+        "dot-product"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "formulaId": "E178-matmul-F3",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Thứ tự và tính kết hợp của phép nhân ma trận",
+      "formula": "AB ≠ BA (nói chung); A(BC) = (AB)C",
+      "meaning": "Nhân ma trận không giao hoán nhưng có tính kết hợp; thứ tự phép biến đổi mang ý nghĩa hệ thống.",
+      "conditions": [
+        "Các tích liên quan phải tồn tại theo kích thước.",
+        "Khi so AB với BA phải kiểm cả hai tích đều xác định."
+      ],
+      "commonMistakes": [
+        "Đổi thứ tự ma trận như nhân số.",
+        "Nhầm tính kết hợp A(BC)=(AB)C với tính giao hoán AB=BA."
+      ],
+      "programmingUse": "Có thể đổi cách đặt ngoặc để giảm chi phí tính, nhưng không được đảo thứ tự các toán tử.",
+      "tags": [
+        "matrix-multiplication",
+        "noncommutative",
+        "associative"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION"
     }
   ],
   "importPolicy": {
@@ -491,7 +563,7 @@
     ],
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "emoji": "∑",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,

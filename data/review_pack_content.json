@@ -258,6 +258,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "reviewPackId": "E178-matmul-RP01",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự giải thích trong 60 giây: điều kiện tồn tại, shape output và ý nghĩa hợp thành của AB.",
+          "expected": "Nêu đúng kích thước trong phải bằng nhau; output lấy hai chiều ngoài; thứ tự biểu diễn chuỗi biến đổi."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao 'A và B cùng vuông nên AB=BA' là sai.",
+          "expected": "Cùng kích thước chỉ làm cả hai tích tồn tại; không bảo đảm giao hoán."
+        },
+        {
+          "type": "formula",
+          "prompt": "Viết (AB)_ij và chỉ rõ hàng, cột, chỉ số tổng k.",
+          "expected": "(AB)_ij=Σ_k a_ik b_kj; hàng i của A ghép với cột j của B."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một pipeline AI/cảm biến mà đổi thứ tự hai ma trận làm đổi ý nghĩa kỹ thuật.",
+          "expected": "Ví dụ co giãn/chuẩn hóa theo trục rồi quay/chuyển hệ tọa độ; thứ tự khác cho output khác."
+        }
+      ],
+      "masteryGate": "Đúng shape + đúng hàng-cột + phân biệt kết hợp với giao hoán + giải thích được thứ tự trong pipeline",
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION"
     }
   ],
   "importPolicy": {
@@ -306,7 +340,7 @@
     ],
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "emoji": "🧪",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,

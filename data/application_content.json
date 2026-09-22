@@ -266,6 +266,38 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "applicationId": "E178-matmul-A1",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Nhân ma trận trong lớp tuyến tính của mô hình AI",
+      "scenario": "Vector đặc trưng x đi qua hai lớp tuyến tính B rồi A trước khi vào hàm phi tuyến.",
+      "method": "Kiểm shape Bx trước, sau đó A(Bx); dùng A(BC)=(AB)C để hiểu phép hợp thành nhưng giữ nguyên thứ tự toán tử.",
+      "expectedOutcome": "Pipeline có shape nhất quán, tránh đảo trục và giải thích được mỗi ma trận đang biến đổi không gian nào.",
+      "tags": [
+        "matrix-multiplication",
+        "ai",
+        "linear-layer"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "applicationId": "E178-matmul-A2",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Chuỗi biến đổi tọa độ cảm biến và trạng thái",
+      "scenario": "Dữ liệu cảm biến cần hiệu chỉnh trục rồi chuyển sang hệ tọa độ của mô hình điều khiển.",
+      "method": "Biểu diễn từng phép đổi tọa độ bằng ma trận, ghép theo đúng thứ tự tác động lên vector và kiểm kích thước ở mỗi nút.",
+      "expectedOutcome": "Vector trạng thái cuối cùng nằm đúng hệ tọa độ; sai thứ tự được phát hiện bằng so sánh ABx với BAx trên test vector.",
+      "tags": [
+        "matrix-multiplication",
+        "sensor",
+        "control"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION"
     }
   ],
   "importPolicy": {
@@ -313,7 +345,7 @@
     "method": "Chuẩn hóa rồi tính cosine similarity.",
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "emoji": "🧩",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
