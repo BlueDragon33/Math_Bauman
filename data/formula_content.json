@@ -2133,6 +2133,76 @@
         "eigenvalues",
         "second-order-test"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "formulaId": "E204-opt-F1",
+      "title": "Điều kiện dừng bậc nhất",
+      "formula": "∇f(x*) = 0",
+      "meaning": "Với cực trị cục bộ nằm trong miền trong và f khả vi, gradient bằng 0 là điều kiện cần; đây chưa phải điều kiện đủ.",
+      "conditions": [
+        "x* là điểm trong miền xét.",
+        "f khả vi tại x*."
+      ],
+      "commonMistakes": [
+        "Coi mọi điểm ∇f=0 là cực tiểu.",
+        "Bỏ qua điểm không khả vi hoặc biên miền."
+      ],
+      "programmingUse": "Tạo tập ứng viên stationary points trước bước phân loại.",
+      "tags": [
+        "stationary-point",
+        "first-order-condition"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "formulaId": "E204-opt-F2",
+      "title": "Hướng giảm",
+      "formula": "∇f(x)ᵀp < 0",
+      "meaning": "Một vector p là hướng giảm bậc nhất nếu directional derivative của f theo p âm.",
+      "conditions": [
+        "∇f(x) ≠ 0 để có hướng giảm rõ theo bậc nhất.",
+        "Bước α phải đủ nhỏ để x+αp nằm trong vùng xấp xỉ cục bộ hợp lý."
+      ],
+      "commonMistakes": [
+        "Nghĩ mọi p≠0 đều giảm f.",
+        "Chọn bước quá lớn rồi đổ lỗi cho hướng p."
+      ],
+      "programmingUse": "Cơ sở cho line search, gradient descent và quasi-Newton.",
+      "tags": [
+        "descent-direction",
+        "directional-derivative"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "formulaId": "E204-opt-F3",
+      "title": "Phân loại điểm dừng bậc hai",
+      "formula": "∇f(x*)=0; H≻0 ⇒ local min, H≺0 ⇒ local max, H indefinite ⇒ saddle",
+      "meaning": "Curvature từ Hessian phân biệt các loại stationary point khi second-order test đủ mạnh.",
+      "conditions": [
+        "f khả vi bậc hai quanh x*.",
+        "Trường hợp Hessian bán xác định có thể cần xét bậc cao."
+      ],
+      "commonMistakes": [
+        "Kết luận từ determinant Hessian mà không xét đủ điều kiện.",
+        "Nhầm local minimum với global minimum."
+      ],
+      "programmingUse": "Kiểm định nghiệm tối ưu cục bộ và debug landscape loss.",
+      "tags": [
+        "hessian",
+        "classification",
+        "local-optimum"
+      ]
     }
   ],
   "importPolicy": {

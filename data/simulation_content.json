@@ -2780,6 +2780,98 @@
         "curvature",
         "approximation"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "simulationId": "E204-opt-SIM1",
+      "title": "Bản đồ stationary points",
+      "purpose": "Thay hệ số của một hàm hai biến để tạo min, max, saddle và vùng bán xác định rồi quan sát gradient/Hessian.",
+      "controls": [
+        {
+          "key": "a",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "b",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "cross",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "stationary_points",
+          "label": "Điểm dừng"
+        },
+        {
+          "key": "hessian_eigenvalues",
+          "label": "Trị riêng Hessian"
+        },
+        {
+          "key": "classification",
+          "label": "Phân loại"
+        }
+      ],
+      "expectedObservation": "Gradient bằng 0 chỉ tạo ứng viên; dấu curvature mới phân biệt min/max/saddle trong trường hợp test đủ mạnh.",
+      "tags": [
+        "stationary-point",
+        "hessian",
+        "surface"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "simulationId": "E204-opt-SIM2",
+      "title": "Hướng giảm và độ dài bước",
+      "purpose": "Chọn vector p và step α để thấy một hướng giảm có thể vẫn làm f tăng nếu bước quá lớn.",
+      "controls": [
+        {
+          "key": "direction_angle",
+          "type": "number",
+          "default": 180
+        },
+        {
+          "key": "alpha",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "x0",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "gradient_dot_p",
+          "label": "∇fᵀp"
+        },
+        {
+          "key": "predicted_change",
+          "label": "Thay đổi bậc nhất"
+        },
+        {
+          "key": "actual_change",
+          "label": "Thay đổi thật"
+        }
+      ],
+      "expectedObservation": "Điều kiện ∇fᵀp<0 là cục bộ; step size quyết định liệu bước hữu hạn có thực sự giảm hàm.",
+      "tags": [
+        "descent-direction",
+        "line-search",
+        "step-size"
+      ]
     }
   ],
   "importPolicy": {

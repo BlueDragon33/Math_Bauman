@@ -1,0 +1,1042 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E204_UNCONSTRAINED_OPTIMIZATION",
+  "lessonId": "MATH-VN-CA-C03-L08",
+  "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+  "title": "§1.8 · Tối ưu hóa không ràng buộc: điểm dừng, cực tiểu, cực đại, yên ngựa",
+  "sources": {
+    "formula_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "formulaId": "E204-opt-F1",
+        "title": "Điều kiện dừng bậc nhất",
+        "formula": "∇f(x*) = 0",
+        "meaning": "Với cực trị cục bộ nằm trong miền trong và f khả vi, gradient bằng 0 là điều kiện cần; đây chưa phải điều kiện đủ.",
+        "conditions": [
+          "x* là điểm trong miền xét.",
+          "f khả vi tại x*."
+        ],
+        "commonMistakes": [
+          "Coi mọi điểm ∇f=0 là cực tiểu.",
+          "Bỏ qua điểm không khả vi hoặc biên miền."
+        ],
+        "programmingUse": "Tạo tập ứng viên stationary points trước bước phân loại.",
+        "tags": [
+          "stationary-point",
+          "first-order-condition"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "formulaId": "E204-opt-F2",
+        "title": "Hướng giảm",
+        "formula": "∇f(x)ᵀp < 0",
+        "meaning": "Một vector p là hướng giảm bậc nhất nếu directional derivative của f theo p âm.",
+        "conditions": [
+          "∇f(x) ≠ 0 để có hướng giảm rõ theo bậc nhất.",
+          "Bước α phải đủ nhỏ để x+αp nằm trong vùng xấp xỉ cục bộ hợp lý."
+        ],
+        "commonMistakes": [
+          "Nghĩ mọi p≠0 đều giảm f.",
+          "Chọn bước quá lớn rồi đổ lỗi cho hướng p."
+        ],
+        "programmingUse": "Cơ sở cho line search, gradient descent và quasi-Newton.",
+        "tags": [
+          "descent-direction",
+          "directional-derivative"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "formulaId": "E204-opt-F3",
+        "title": "Phân loại điểm dừng bậc hai",
+        "formula": "∇f(x*)=0; H≻0 ⇒ local min, H≺0 ⇒ local max, H indefinite ⇒ saddle",
+        "meaning": "Curvature từ Hessian phân biệt các loại stationary point khi second-order test đủ mạnh.",
+        "conditions": [
+          "f khả vi bậc hai quanh x*.",
+          "Trường hợp Hessian bán xác định có thể cần xét bậc cao."
+        ],
+        "commonMistakes": [
+          "Kết luận từ determinant Hessian mà không xét đủ điều kiện.",
+          "Nhầm local minimum với global minimum."
+        ],
+        "programmingUse": "Kiểm định nghiệm tối ưu cục bộ và debug landscape loss.",
+        "tags": [
+          "hessian",
+          "classification",
+          "local-optimum"
+        ]
+      }
+    ],
+    "exercise_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "exerciseId": "E204-opt-E01",
+        "level": "easy",
+        "prompt": "Tìm stationary point của f(x)=x²-4x+1.",
+        "solution": "f'=2x-4=0 ⇒ x*=2; f''=2>0 nên là cực tiểu chặt cục bộ (và toàn cục vì quadratic lồi).",
+        "tags": [
+          "stationary-point",
+          "1d"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "exerciseId": "E204-opt-E02",
+        "level": "easy",
+        "prompt": "Tìm và phân loại stationary point của f(x,y)=x²+y².",
+        "solution": "∇f=[2x,2y]=0 ⇒ (0,0). H=2I≻0 ⇒ cực tiểu chặt; do f≥0 nên cũng là global min.",
+        "tags": [
+          "minimum",
+          "hessian"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "exerciseId": "E204-opt-E03",
+        "level": "medium",
+        "prompt": "Tìm và phân loại stationary point của f(x,y)=x²-y².",
+        "solution": "∇f=[2x,-2y]=0 ⇒ (0,0). H=diag(2,-2) bất định ⇒ saddle.",
+        "tags": [
+          "saddle",
+          "classification"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "exerciseId": "E204-opt-E04",
+        "level": "medium",
+        "prompt": "Cho ∇f=[2,-1]ᵀ. Vector p=[-1,0]ᵀ có là hướng giảm không?",
+        "solution": "∇fᵀp=-2<0 nên có, theo xấp xỉ bậc nhất với bước đủ nhỏ.",
+        "tags": [
+          "descent-direction"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "exerciseId": "E204-opt-E05",
+        "level": "medium",
+        "prompt": "Với cùng ∇f=[2,-1]ᵀ, p=[1,3]ᵀ có là hướng giảm không?",
+        "solution": "∇fᵀp=2-3=-1<0 nên là hướng giảm.",
+        "tags": [
+          "descent-direction",
+          "dot-product"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "exerciseId": "E204-opt-E06",
+        "level": "medium",
+        "prompt": "Tại x* có ∇f=0 và H=diag(2,0). Có thể kết luận cực tiểu chặt chỉ từ test bậc hai không?",
+        "solution": "Không. Hessian bán dương nên test bậc hai không kết luận chặt; cần xét cấu trúc/bậc cao.",
+        "tags": [
+          "semidefinite",
+          "caveat"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "exerciseId": "E204-opt-E07",
+        "level": "hard",
+        "prompt": "Cho f(x,y)=(x-1)²+10(y+2)². Tìm nghiệm tối ưu không ràng buộc.",
+        "solution": "∇f=[2(x-1),20(y+2)]=0 ⇒ (1,-2). H=diag(2,20)≻0, quadratic lồi ⇒ global minimum.",
+        "tags": [
+          "quadratic",
+          "global-minimum"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "exerciseId": "E204-opt-E08",
+        "level": "hard",
+        "prompt": "Giải thích vì sao điểm x*=0 của f(x)=x³ có f'(0)=0 nhưng không là min hay max.",
+        "solution": "f đổi dấu và vẫn tăng qua 0; f''(0)=0 nên second-order test không kết luận. Đây là stationary inflection point.",
+        "tags": [
+          "stationary-point",
+          "counterexample"
+        ]
+      }
+    ],
+    "application_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "applicationId": "E204-opt-A1",
+        "title": "Hiệu chỉnh tham số mô hình không ràng buộc",
+        "scenario": "Một mô hình cảm biến có hai tham số calibration và hàm chi phí bình phương sai số không đặt ràng buộc cứng.",
+        "method": "Tìm stationary point bằng ∇J=0 nếu giải được; kiểm Hessian/convexity; nếu giải số, dùng descent method và kiểm gradient norm, cost decrease, sensitivity.",
+        "expectedOutcome": "Phân biệt nghiệm dừng với nghiệm tối ưu có thể bảo vệ bằng curvature và cấu trúc hàm.",
+        "tags": [
+          "calibration",
+          "least-squares",
+          "optimization"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "applicationId": "E204-opt-A2",
+        "title": "Loss landscape trong học máy",
+        "scenario": "Training có thể đi qua local minimum, saddle hoặc vùng phẳng.",
+        "method": "Theo dõi gradient norm, loss, và nếu cần curvature/Hessian-vector information; không dùng riêng tiêu chí gradient nhỏ để khẳng định đã đạt minimum tốt.",
+        "expectedOutcome": "Đọc đúng trạng thái tối ưu và tránh dừng sai ở saddle/plateau.",
+        "tags": [
+          "machine-learning",
+          "loss-landscape",
+          "saddle"
+        ]
+      }
+    ],
+    "simulation_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "simulationId": "E204-opt-SIM1",
+        "title": "Bản đồ stationary points",
+        "purpose": "Thay hệ số của một hàm hai biến để tạo min, max, saddle và vùng bán xác định rồi quan sát gradient/Hessian.",
+        "controls": [
+          {
+            "key": "a",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "b",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "cross",
+            "type": "number",
+            "default": 0
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "stationary_points",
+            "label": "Điểm dừng"
+          },
+          {
+            "key": "hessian_eigenvalues",
+            "label": "Trị riêng Hessian"
+          },
+          {
+            "key": "classification",
+            "label": "Phân loại"
+          }
+        ],
+        "expectedObservation": "Gradient bằng 0 chỉ tạo ứng viên; dấu curvature mới phân biệt min/max/saddle trong trường hợp test đủ mạnh.",
+        "tags": [
+          "stationary-point",
+          "hessian",
+          "surface"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "simulationId": "E204-opt-SIM2",
+        "title": "Hướng giảm và độ dài bước",
+        "purpose": "Chọn vector p và step α để thấy một hướng giảm có thể vẫn làm f tăng nếu bước quá lớn.",
+        "controls": [
+          {
+            "key": "direction_angle",
+            "type": "number",
+            "default": 180
+          },
+          {
+            "key": "alpha",
+            "type": "number",
+            "default": 0.1
+          },
+          {
+            "key": "x0",
+            "type": "number",
+            "default": 1
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "gradient_dot_p",
+            "label": "∇fᵀp"
+          },
+          {
+            "key": "predicted_change",
+            "label": "Thay đổi bậc nhất"
+          },
+          {
+            "key": "actual_change",
+            "label": "Thay đổi thật"
+          }
+        ],
+        "expectedObservation": "Điều kiện ∇fᵀp<0 là cục bộ; step size quyết định liệu bước hữu hạn có thực sự giảm hàm.",
+        "tags": [
+          "descent-direction",
+          "line-search",
+          "step-size"
+        ]
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "qaId": "E204-opt-QA01",
+        "question": "Nếu giáo sư hỏi 'vì sao ∇f=0 chưa đủ để nói đã tối ưu, và một hướng giảm được định nghĩa thế nào?', bạn trả lời thế nào?",
+        "answer": "∇f=0 chỉ là điều kiện cần bậc nhất cho cực trị nội tại của hàm khả vi; stationary point có thể là min, max, saddle hoặc điểm uốn. Phải dùng curvature/Hessian, convexity hoặc phân tích bổ sung để phân loại. Tại điểm có gradient khác 0, p là hướng giảm nếu ∇fᵀp<0; nhưng để một bước hữu hạn giảm f thì step size cũng phải phù hợp.",
+        "followUp": [
+          "Local min khác global min thế nào?",
+          "Hessian bán xác định xử lý ra sao?",
+          "Vì sao -∇f luôn là một hướng giảm khi ∇f≠0?"
+        ],
+        "tags": [
+          "unconstrained-optimization",
+          "oral-exam",
+          "E204"
+        ]
+      }
+    ],
+    "review_pack_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "reviewPackId": "E204-opt-RP01",
+        "items": [
+          {
+            "type": "first-order",
+            "prompt": "Điều kiện cần bậc nhất cho local extremum nội tại khả vi?",
+            "expected": "∇f(x*)=0."
+          },
+          {
+            "type": "direction",
+            "prompt": "Điều kiện p là hướng giảm?",
+            "expected": "∇fᵀp<0."
+          },
+          {
+            "type": "classification",
+            "prompt": "Hessian bất định tại stationary point?",
+            "expected": "Saddle."
+          },
+          {
+            "type": "caveat",
+            "prompt": "Gradient nhỏ có đủ chứng minh minimum?",
+            "expected": "Không; có thể saddle/plateau và cần curvature/cấu trúc bổ sung."
+          },
+          {
+            "type": "scope",
+            "prompt": "Local minimum có nhất thiết global?",
+            "expected": "Không, trừ khi có cấu trúc như convexity phù hợp."
+          }
+        ],
+        "masteryGate": "Tìm stationary point + kiểm hướng giảm + phân loại bằng Hessian khi hợp lệ + phân biệt local/global + nhận ra trường hợp first/second-order tests không đủ",
+        "tags": [
+          "unconstrained-optimization",
+          "stationary-point",
+          "E204"
+        ]
+      }
+    ],
+    "question_bank_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q001",
+        "level": "easy",
+        "question": "Điều kiện cần bậc nhất cho local extremum nội tại của hàm khả vi là?",
+        "options": [
+          "∇f=0",
+          "H=0",
+          "f=0",
+          "det(H)=1"
+        ],
+        "answer": "∇f=0",
+        "explanation": "Stationarity là điều kiện cần, không phải đủ.",
+        "tags": [
+          "first-order",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q002",
+        "level": "easy",
+        "question": "Một stationary point có thể là?",
+        "options": [
+          "Min, max, saddle hoặc loại suy biến khác",
+          "Chỉ minimum",
+          "Chỉ maximum",
+          "Luôn global optimum"
+        ],
+        "answer": "Min, max, saddle hoặc loại suy biến khác",
+        "explanation": "Gradient bằng 0 không phân loại điểm.",
+        "tags": [
+          "stationary-point",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q003",
+        "level": "easy",
+        "question": "p là hướng giảm bậc nhất khi?",
+        "options": [
+          "∇fᵀp<0",
+          "∇fᵀp>0",
+          "p=0",
+          "H p=0"
+        ],
+        "answer": "∇fᵀp<0",
+        "explanation": "Directional derivative theo p âm.",
+        "tags": [
+          "descent-direction",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q004",
+        "level": "easy",
+        "question": "Nếu ∇f≠0 thì -∇f là?",
+        "options": [
+          "Một hướng giảm",
+          "Luôn saddle",
+          "Một hướng tăng",
+          "Không xác định"
+        ],
+        "answer": "Một hướng giảm",
+        "explanation": "∇fᵀ(-∇f)=-‖∇f‖²<0.",
+        "tags": [
+          "gradient",
+          "descent-direction",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q005",
+        "level": "easy",
+        "question": "H≻0 tại stationary point cho?",
+        "options": [
+          "Local minimum chặt",
+          "Local maximum",
+          "Saddle",
+          "Không khả vi"
+        ],
+        "answer": "Local minimum chặt",
+        "explanation": "Curvature dương theo mọi hướng.",
+        "tags": [
+          "hessian",
+          "minimum",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q006",
+        "level": "easy",
+        "question": "H bất định tại stationary point cho?",
+        "options": [
+          "Saddle",
+          "Global minimum",
+          "Global maximum",
+          "Plateau chắc chắn"
+        ],
+        "answer": "Saddle",
+        "explanation": "Có hướng curvature dương và âm.",
+        "tags": [
+          "hessian",
+          "saddle",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q007",
+        "level": "medium",
+        "question": "Local minimum có nhất thiết global minimum?",
+        "options": [
+          "Không",
+          "Có luôn",
+          "Chỉ trong 1D mới không",
+          "Chỉ khi Hessian tồn tại"
+        ],
+        "answer": "Không",
+        "explanation": "Hàm không lồi có thể có nhiều local minima.",
+        "tags": [
+          "local-global",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q008",
+        "level": "medium",
+        "question": "Nếu f convex và khả vi, stationary point là?",
+        "options": [
+          "Global minimum",
+          "Global maximum",
+          "Saddle",
+          "Không có ý nghĩa"
+        ],
+        "answer": "Global minimum",
+        "explanation": "Convexity nâng điều kiện stationarity thành đủ cho global minimum.",
+        "tags": [
+          "convexity",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q009",
+        "level": "medium",
+        "question": "Nếu ∇fᵀp=0 thì theo bậc nhất p là?",
+        "options": [
+          "Hướng không đổi bậc nhất; cần bậc cao để biết thêm",
+          "Hướng giảm chắc chắn",
+          "Hướng tăng chắc chắn",
+          "Global optimum"
+        ],
+        "answer": "Hướng không đổi bậc nhất; cần bậc cao để biết thêm",
+        "explanation": "Directional derivative bằng 0 không quyết định thay đổi bậc hai.",
+        "tags": [
+          "directional-derivative",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q010",
+        "level": "medium",
+        "question": "Một hướng giảm với step quá lớn có thể?",
+        "options": [
+          "Làm f tăng",
+          "Luôn giảm f",
+          "Không di chuyển",
+          "Luôn tới optimum"
+        ],
+        "answer": "Làm f tăng",
+        "explanation": "Điều kiện hướng giảm là cục bộ; step size hữu hạn cần kiểm soát.",
+        "tags": [
+          "step-size",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q011",
+        "level": "medium",
+        "question": "Gradient norm nhỏ có thể xuất hiện ở?",
+        "options": [
+          "Minimum, saddle hoặc plateau",
+          "Chỉ global minimum",
+          "Chỉ maximum",
+          "Chỉ điểm không khả vi"
+        ],
+        "answer": "Minimum, saddle hoặc plateau",
+        "explanation": "Gradient nhỏ riêng lẻ chưa đủ để đánh giá chất lượng nghiệm.",
+        "tags": [
+          "stopping-criterion",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q012",
+        "level": "medium",
+        "question": "Điểm x=0 của f=x³ có f'=0 nhưng là?",
+        "options": [
+          "Stationary inflection",
+          "Strict minimum",
+          "Strict maximum",
+          "Saddle 2D"
+        ],
+        "answer": "Stationary inflection",
+        "explanation": "Hàm vẫn tăng qua 0 và f''(0)=0.",
+        "tags": [
+          "counterexample",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q013",
+        "level": "medium",
+        "question": "Nếu H bán dương tại stationary point thì?",
+        "options": [
+          "Second-order test có thể không kết luận strict min",
+          "Chắc chắn strict min",
+          "Chắc chắn max",
+          "Chắc chắn saddle"
+        ],
+        "answer": "Second-order test có thể không kết luận strict min",
+        "explanation": "Cần xét bậc cao/cấu trúc.",
+        "tags": [
+          "semidefinite",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q014",
+        "level": "medium",
+        "question": "Trong quadratic lồi chặt, stationary point thường?",
+        "options": [
+          "Duy nhất và global minimum",
+          "Nhiều saddle",
+          "Global maximum",
+          "Không tồn tại"
+        ],
+        "answer": "Duy nhất và global minimum",
+        "explanation": "Positive definite quadratic có nghiệm tối ưu duy nhất.",
+        "tags": [
+          "quadratic",
+          "convexity",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q015",
+        "level": "medium",
+        "question": "Line search dùng để?",
+        "options": [
+          "Chọn step size dọc một hướng",
+          "Tìm Hessian bằng eigenvector",
+          "Biến local min thành max",
+          "Loại gradient"
+        ],
+        "answer": "Chọn step size dọc một hướng",
+        "explanation": "Sau khi chọn direction, line search chọn α.",
+        "tags": [
+          "line-search",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q016",
+        "level": "hard",
+        "question": "Điều kiện ∇fᵀp<0 đảm bảo gì với α đủ nhỏ?",
+        "options": [
+          "f(x+αp)<f(x) trong điều kiện trơn phù hợp",
+          "Global convergence tức thì",
+          "p=-∇f bắt buộc",
+          "Hessian dương xác định"
+        ],
+        "answer": "f(x+αp)<f(x) trong điều kiện trơn phù hợp",
+        "explanation": "Directional derivative âm cho giảm cục bộ.",
+        "tags": [
+          "descent-direction",
+          "analysis",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q017",
+        "level": "hard",
+        "question": "Vì sao local optimum và global optimum cần phân biệt?",
+        "options": [
+          "Thông tin đạo hàm cục bộ không tự mô tả toàn bộ landscape",
+          "Gradient luôn toàn cục",
+          "Hessian biết toàn bộ miền",
+          "Không cần phân biệt"
+        ],
+        "answer": "Thông tin đạo hàm cục bộ không tự mô tả toàn bộ landscape",
+        "explanation": "Derivative tại một vùng không loại trừ nghiệm tốt hơn nơi khác.",
+        "tags": [
+          "local-global",
+          "landscape",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q018",
+        "level": "hard",
+        "question": "Nếu f strictly convex, có thể có hai global minima khác nhau không?",
+        "options": [
+          "Không",
+          "Có luôn",
+          "Chỉ khi gradient 0",
+          "Chỉ trong 2D"
+        ],
+        "answer": "Không",
+        "explanation": "Strict convexity cho nghiệm tối ưu duy nhất nếu tồn tại.",
+        "tags": [
+          "strict-convexity",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q019",
+        "level": "hard",
+        "question": "Trong bài toán unconstrained, biên ràng buộc được xử lý thế nào?",
+        "options": [
+          "Không có ràng buộc biên bắt buộc; miền vẫn phải được xác định",
+          "Luôn dùng KKT",
+          "Luôn dùng Lagrange multiplier",
+          "Không cần miền xác định"
+        ],
+        "answer": "Không có ràng buộc biên bắt buộc; miền vẫn phải được xác định",
+        "explanation": "Unconstrained khác constrained nhưng domain vẫn quan trọng.",
+        "tags": [
+          "scope",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q020",
+        "level": "hard",
+        "question": "Nếu hàm không khả vi tại nghiệm tiềm năng, điều kiện ∇f=0?",
+        "options": [
+          "Có thể không áp dụng",
+          "Luôn áp dụng",
+          "Tự đặt gradient=0",
+          "Dùng Hessian ngay"
+        ],
+        "answer": "Có thể không áp dụng",
+        "explanation": "Cần công cụ khác như subgradient tùy bài.",
+        "tags": [
+          "nondifferentiable",
+          "caveat",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q021",
+        "level": "hard",
+        "question": "Một saddle trong loss landscape nguy hiểm cho stopping criterion vì?",
+        "options": [
+          "Gradient có thể bằng hoặc rất nhỏ nhưng không phải minimum",
+          "Loss luôn bằng 0",
+          "Hessian luôn dương",
+          "Không có descent direction"
+        ],
+        "answer": "Gradient có thể bằng hoặc rất nhỏ nhưng không phải minimum",
+        "explanation": "Curvature âm theo ít nhất một hướng có thể cho hướng thoát.",
+        "tags": [
+          "saddle",
+          "stopping",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q022",
+        "level": "hard",
+        "question": "Nếu H≻0 mọi nơi trên miền lồi, f có tính chất gì?",
+        "options": [
+          "Strictly convex",
+          "Concave",
+          "Indefinite",
+          "Linear"
+        ],
+        "answer": "Strictly convex",
+        "explanation": "Positive definite Hessian mọi nơi là điều kiện mạnh cho strict convexity.",
+        "tags": [
+          "convexity",
+          "hessian",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q023",
+        "level": "hard",
+        "question": "Với p=-B∇f, điều kiện nào giúp p là hướng giảm?",
+        "options": [
+          "B đối xứng dương xác định",
+          "B âm xác định",
+          "B=0",
+          "B bất kỳ"
+        ],
+        "answer": "B đối xứng dương xác định",
+        "explanation": "∇fᵀp=-∇fᵀB∇f<0 khi gradient khác 0.",
+        "tags": [
+          "preconditioning",
+          "descent-direction",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q024",
+        "level": "hard",
+        "question": "Stopping rule tốt hơn chỉ dùng loss change rất nhỏ là?",
+        "options": [
+          "Kết hợp gradient norm, step, loss và giới hạn iteration/tolerance",
+          "Chỉ nhìn một iteration",
+          "Chỉ nhìn Hessian determinant",
+          "Không cần tolerance"
+        ],
+        "answer": "Kết hợp gradient norm, step, loss và giới hạn iteration/tolerance",
+        "explanation": "Nhiều tín hiệu giảm nguy cơ dừng sai do scale hoặc plateau.",
+        "tags": [
+          "stopping-criterion",
+          "E204"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "questionId": "E204-opt-Q025",
+        "level": "hard",
+        "question": "Cặp nào đúng?",
+        "options": [
+          "Stationarity tạo ứng viên; curvature/convexity giúp xác nhận loại nghiệm",
+          "∇f=0 luôn global min",
+          "Mọi hướng giảm đều cho mọi step giảm",
+          "Local min luôn unique"
+        ],
+        "answer": "Stationarity tạo ứng viên; curvature/convexity giúp xác nhận loại nghiệm",
+        "explanation": "Đây là logic cốt lõi của tối ưu không ràng buộc.",
+        "tags": [
+          "summary",
+          "E204"
+        ],
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L08",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+        "mindmapId": "E204-opt-MM01",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Unconstrained optimization",
+            "type": "root"
+          },
+          {
+            "id": "stationary",
+            "label": "∇f=0 → candidate",
+            "type": "criterion"
+          },
+          {
+            "id": "descent",
+            "label": "∇fᵀp<0",
+            "type": "criterion"
+          },
+          {
+            "id": "hessian",
+            "label": "Hessian classification",
+            "type": "bridge"
+          },
+          {
+            "id": "min",
+            "label": "local minimum",
+            "type": "result"
+          },
+          {
+            "id": "max",
+            "label": "local maximum",
+            "type": "result"
+          },
+          {
+            "id": "saddle",
+            "label": "saddle / stationary inflection",
+            "type": "warning"
+          },
+          {
+            "id": "convex",
+            "label": "convexity → global guarantees",
+            "type": "criterion"
+          },
+          {
+            "id": "step",
+            "label": "direction + step size",
+            "type": "application"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "stationary"
+          },
+          {
+            "from": "root",
+            "to": "descent"
+          },
+          {
+            "from": "stationary",
+            "to": "hessian"
+          },
+          {
+            "from": "hessian",
+            "to": "min"
+          },
+          {
+            "from": "hessian",
+            "to": "max"
+          },
+          {
+            "from": "hessian",
+            "to": "saddle"
+          },
+          {
+            "from": "min",
+            "to": "convex"
+          },
+          {
+            "from": "descent",
+            "to": "step"
+          }
+        ],
+        "tags": [
+          "unconstrained-optimization",
+          "stationary-point",
+          "E204"
+        ]
+      }
+    ]
+  }
+}
