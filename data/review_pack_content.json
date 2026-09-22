@@ -327,6 +327,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "reviewPackId": "E181-norm-RP01",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Tự nói lại L1, L2, L∞ và ý nghĩa hình học của từng norm.",
+          "expected": "L1=tổng trị tuyệt đối, L2=độ dài Euclid, L∞=thành phần lớn nhất."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Giải thích vì sao squared L2 không phải norm.",
+          "expected": "Không thỏa homogeneity bậc 1."
+        },
+        {
+          "type": "formula",
+          "prompt": "Với x=(3,-4), tính cả ba norm và kiểm bất đẳng thức ||x||∞≤||x||₂≤||x||₁.",
+          "expected": "4≤5≤7."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Chọn norm cho một hệ cần giới hạn sai số từng kênh và giải thích.",
+          "expected": "L∞ vì trực tiếp khống chế component lớn nhất; vẫn cần scale đơn vị phù hợp."
+        }
+      ],
+      "masteryGate": "Tính đúng L1/L2/L∞ + hiểu hình học + biết scale ảnh hưởng metric + chọn norm theo mục tiêu kỹ thuật",
+      "tags": [
+        "vector_norms",
+        "E181"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
     }
   ],
   "importPolicy": {
