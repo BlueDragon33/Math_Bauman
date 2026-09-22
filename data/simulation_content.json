@@ -2592,6 +2592,98 @@
         "directional-derivative",
         "steepest-direction"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "simulationId": "E202-jacobian-SIM1",
+      "title": "Perturbation qua Jacobian",
+      "purpose": "So Δy thật với JΔx khi tăng dần độ lớn perturbation trong một ánh xạ phi tuyến hai đầu vào hai đầu ra.",
+      "controls": [
+        {
+          "key": "dx1",
+          "type": "number",
+          "default": 0.01
+        },
+        {
+          "key": "dx2",
+          "type": "number",
+          "default": 0.01
+        },
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "true_delta_y",
+          "label": "Δy thật"
+        },
+        {
+          "key": "linear_delta_y",
+          "label": "JΔx"
+        },
+        {
+          "key": "relative_error",
+          "label": "Sai số tuyến tính hóa"
+        }
+      ],
+      "expectedObservation": "Sai số tăng khi perturbation lớn hoặc độ cong cao; Jacobian mô tả tốt nhất vùng cục bộ quanh operating point.",
+      "tags": [
+        "linearization",
+        "jacobian",
+        "nonlinearity"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "simulationId": "E202-jacobian-SIM2",
+      "title": "Biến dạng ellipse covariance",
+      "purpose": "Quan sát covariance ellipse input được Jacobian co, giãn, xoay thành ellipse output.",
+      "controls": [
+        {
+          "key": "sigma1",
+          "type": "number",
+          "default": 0.2
+        },
+        {
+          "key": "sigma2",
+          "type": "number",
+          "default": 0.1
+        },
+        {
+          "key": "correlation",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "sigma_x",
+          "label": "Σ_x"
+        },
+        {
+          "key": "sigma_y",
+          "label": "Σ_y=JΣ_xJᵀ"
+        },
+        {
+          "key": "principal_axes",
+          "label": "Trục chính uncertainty output"
+        }
+      ],
+      "expectedObservation": "Jacobian không chỉ scale độ lớn sai số mà còn tạo tương quan và xoay hướng uncertainty.",
+      "tags": [
+        "covariance",
+        "ellipse",
+        "uncertainty"
+      ]
     }
   ],
   "importPolicy": {
