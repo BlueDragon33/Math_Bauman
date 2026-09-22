@@ -476,6 +476,26 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "qaId": "E198-derivative-QA01",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "question": "Nếu giáo sư hỏi 'đạo hàm là gì và tại sao kỹ sư cần quan tâm ngoài việc tính công thức?', bạn trả lời thế nào?",
+      "answer": "Đạo hàm tại một điểm là giới hạn của difference quotient, nên đo tốc độ biến thiên tức thời và là hệ số góc tiếp tuyến. Với kỹ thuật, nó cho sensitivity của output theo input, cho phép tuyến tính hóa cục bộ mô hình phi tuyến và tạo hướng cập nhật trong tối ưu. Khi kiểm trên máy tính, finite difference chỉ là xấp xỉ và phải kiểm trade-off truncation với roundoff.",
+      "followUp": [
+        "Khác nhau giữa secant và tangent?",
+        "Continuity có đủ để derivative tồn tại không?",
+        "Vì sao linearization chỉ cục bộ?",
+        "Product rule sai thường sai ở đâu?"
+      ],
+      "tags": [
+        "derivative",
+        "sensitivity",
+        "E198"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
     }
   ],
   "importPolicy": {
@@ -529,5 +549,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
 }
