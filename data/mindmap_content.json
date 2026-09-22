@@ -1565,6 +1565,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E192_MATRIX_MULTIPLICATION"
+    },
+    {
+      "mindmapId": "E193-power-MM01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Matrix powers & polynomials",
+          "type": "root"
+        },
+        {
+          "id": "power",
+          "label": "A⁰=I, Aᵏ=A·A^{k-1}",
+          "type": "formula"
+        },
+        {
+          "id": "poly",
+          "label": "p(A)=Σc_kA^k",
+          "type": "formula"
+        },
+        {
+          "id": "horner",
+          "label": "Horner giảm phép nhân",
+          "type": "method"
+        },
+        {
+          "id": "elementwise",
+          "label": "A² ≠ A⊙A",
+          "type": "warning"
+        },
+        {
+          "id": "ch",
+          "label": "χ_A(A)=0",
+          "type": "bridge"
+        },
+        {
+          "id": "state",
+          "label": "A^k trong state transition/graph",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "power"
+        },
+        {
+          "from": "root",
+          "to": "poly"
+        },
+        {
+          "from": "poly",
+          "to": "horner"
+        },
+        {
+          "from": "root",
+          "to": "elementwise"
+        },
+        {
+          "from": "poly",
+          "to": "ch"
+        },
+        {
+          "from": "power",
+          "to": "state"
+        }
+      ],
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
     }
   ],
   "importPolicy": {
