@@ -395,6 +395,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "reviewPackId": "E184-cos-RP01",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Nói lại cosine similarity bằng dot product, norm và góc.",
+          "expected": "cosθ=(x·y)/(||x||||y||), đo similarity hướng khi vector khác 0."
+        },
+        {
+          "type": "mistake",
+          "prompt": "Vì sao không được nói cosine luôn tốt hơn dot product?",
+          "expected": "Cosine bỏ magnitude; nếu norm mang thông tin thì dot có thể phù hợp hơn."
+        },
+        {
+          "type": "formula",
+          "prompt": "Chứng minh quan hệ Euclid-cosine trên vector đơn vị.",
+          "expected": "||x̂-ŷ||²=2-2cosθ."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Thiết kế pipeline retrieval dùng cosine và nêu hai kiểm tra preprocessing.",
+          "expected": "Cùng embedding model, L2-normalize/guard zero; kiểm centering/scale và index metric."
+        }
+      ],
+      "masteryGate": "Tính đúng cosine + hiểu scale invariance + phân biệt dot/cosine/Euclid + hiểu normalization/centering",
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
     }
   ],
   "importPolicy": {
