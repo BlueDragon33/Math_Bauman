@@ -1988,6 +1988,79 @@
         "steepest-descent",
         "optimization"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "formulaId": "E202-jacobian-F1",
+      "title": "Ma trận Jacobian",
+      "formula": "J_f(x) = [∂f_i/∂x_j] ∈ ℝ^{m×n},  f:ℝⁿ→ℝᵐ",
+      "meaning": "Hàng i mô tả sensitivity của output f_i; cột j mô tả ảnh hưởng của input x_j lên toàn bộ output.",
+      "conditions": [
+        "Các đạo hàm riêng cần tồn tại; để tuyến tính hóa tốt thường cần khả vi trong lân cận.",
+        "Giữ nhất quán thứ tự input/output."
+      ],
+      "commonMistakes": [
+        "Đảo hàng và cột của Jacobian.",
+        "Nhầm Jacobian m×n với gradient n×1 của output vô hướng."
+      ],
+      "programmingUse": "Dùng trong backpropagation, kinematics, linearization và propagation uncertainty.",
+      "tags": [
+        "jacobian",
+        "matrix",
+        "sensitivity"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "formulaId": "E202-jacobian-F2",
+      "title": "Tuyến tính hóa ánh xạ vector",
+      "formula": "f(x+Δx) ≈ f(x) + J_f(x)Δx",
+      "meaning": "Jacobian biến perturbation nhỏ ở input thành xấp xỉ perturbation ở output.",
+      "conditions": [
+        "Δx đủ nhỏ so với độ cong cục bộ.",
+        "J_f được tính tại đúng operating point x."
+      ],
+      "commonMistakes": [
+        "Dùng Jacobian ở operating point khác.",
+        "Quên rằng xấp xỉ suy giảm khi perturbation lớn."
+      ],
+      "programmingUse": "Mô hình hóa cục bộ hệ phi tuyến quanh điểm làm việc.",
+      "tags": [
+        "linearization",
+        "perturbation",
+        "operating-point"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L06",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E202_JACOBIAN_ERROR_PROPAGATION",
+      "formulaId": "E202-jacobian-F3",
+      "title": "Lan truyền covariance bậc nhất",
+      "formula": "Σ_y ≈ J Σ_x Jᵀ",
+      "meaning": "Với sai số nhỏ, Jacobian ánh xạ covariance input sang covariance output theo xấp xỉ tuyến tính.",
+      "conditions": [
+        "Nhiễu đủ nhỏ để linearization hợp lý.",
+        "Σ_x phù hợp với hệ đơn vị và thứ tự input.",
+        "Nếu có nhiễu bổ sung ở output, cần cộng covariance tương ứng."
+      ],
+      "commonMistakes": [
+        "Viết JᵀΣ_xJ sai chiều.",
+        "Xem kết quả là chính xác khi phi tuyến mạnh hoặc nhiễu lớn."
+      ],
+      "programmingUse": "Ước lượng uncertainty trong sensor fusion, calibration và state estimation.",
+      "tags": [
+        "covariance",
+        "uncertainty",
+        "error-propagation"
+      ]
     }
   ],
   "importPolicy": {
