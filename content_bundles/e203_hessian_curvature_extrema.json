@@ -1,0 +1,1065 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E203_HESSIAN_CURVATURE_EXTREMA",
+  "lessonId": "MATH-VN-CA-C03-L07",
+  "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+  "title": "§1.7 · Hessian, độ cong và phân loại cực trị",
+  "sources": {
+    "formula_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "formulaId": "E203-hessian-F1",
+        "title": "Ma trận Hessian",
+        "formula": "H_f(x)=[∂²f/∂x_i∂x_j]",
+        "meaning": "Hessian gom các đạo hàm riêng bậc hai và mô tả độ cong cục bộ của hàm vô hướng.",
+        "conditions": [
+          "f khả vi bậc hai quanh điểm xét.",
+          "Nếu các đạo hàm chéo liên tục thì Hessian đối xứng theo định lý Clairaut."
+        ],
+        "commonMistakes": [
+          "Đảo nhầm chỉ số đạo hàm chéo khi không kiểm điều kiện liên tục.",
+          "Nhầm Hessian với Jacobian của hàm vector."
+        ],
+        "programmingUse": "Dùng trong Newton, phân tích cực trị, curvature và điều kiện tối ưu.",
+        "tags": [
+          "hessian",
+          "second-derivative",
+          "curvature"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "formulaId": "E203-hessian-F2",
+        "title": "Taylor bậc hai",
+        "formula": "f(x+Δ)≈f(x)+∇f(x)ᵀΔ+½ΔᵀH_f(x)Δ",
+        "meaning": "Thành phần gradient cho slope bậc nhất; quadratic form của Hessian cho độ cong bậc hai.",
+        "conditions": [
+          "Δ đủ nhỏ.",
+          "f đủ trơn quanh operating point."
+        ],
+        "commonMistakes": [
+          "Quên hệ số 1/2.",
+          "Dùng H tại điểm khác operating point."
+        ],
+        "programmingUse": "Phân tích bước tối ưu, xấp xỉ loss và độ tin cậy của linearization.",
+        "tags": [
+          "taylor",
+          "quadratic-form",
+          "curvature"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "formulaId": "E203-hessian-F3",
+        "title": "Phân loại điểm dừng theo Hessian",
+        "formula": "∇f(x*)=0: H≻0 ⇒ cực tiểu chặt cục bộ; H≺0 ⇒ cực đại chặt cục bộ; H bất định ⇒ điểm yên ngựa",
+        "meaning": "Dấu các trị riêng của Hessian cho biết hàm cong lên, cong xuống hay trái dấu theo các hướng khác nhau.",
+        "conditions": [
+          "x* là điểm dừng.",
+          "f khả vi bậc hai gần x*."
+        ],
+        "commonMistakes": [
+          "Kết luận cực tiểu chỉ từ ∇f=0.",
+          "Xem Hessian bán xác định là đủ để kết luận chặt mà không kiểm bậc cao."
+        ],
+        "programmingUse": "Chẩn đoán stationary point và landscape tối ưu.",
+        "tags": [
+          "extrema",
+          "eigenvalues",
+          "second-order-test"
+        ]
+      }
+    ],
+    "exercise_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "exerciseId": "E203-hessian-E01",
+        "level": "easy",
+        "prompt": "Cho f=x²+3y². Tính Hessian.",
+        "solution": "H=[[2,0],[0,6]].",
+        "tags": [
+          "hessian",
+          "calculation"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "exerciseId": "E203-hessian-E02",
+        "level": "easy",
+        "prompt": "Cho f=x²+2xy+4y². Tính Hessian.",
+        "solution": "H=[[2,2],[2,8]].",
+        "tags": [
+          "cross-partial",
+          "hessian"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "exerciseId": "E203-hessian-E03",
+        "level": "medium",
+        "prompt": "Tại điểm dừng có Hessian diag(2,5). Phân loại.",
+        "solution": "Hai trị riêng dương nên H dương xác định; điểm là cực tiểu chặt cục bộ.",
+        "tags": [
+          "classification",
+          "positive-definite"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "exerciseId": "E203-hessian-E04",
+        "level": "medium",
+        "prompt": "Tại điểm dừng có Hessian diag(-1,-4). Phân loại.",
+        "solution": "Hai trị riêng âm nên H âm xác định; cực đại chặt cục bộ.",
+        "tags": [
+          "classification",
+          "negative-definite"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "exerciseId": "E203-hessian-E05",
+        "level": "medium",
+        "prompt": "Tại điểm dừng có Hessian diag(3,-2). Phân loại.",
+        "solution": "Trị riêng trái dấu nên Hessian bất định; điểm yên ngựa.",
+        "tags": [
+          "classification",
+          "saddle"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "exerciseId": "E203-hessian-E06",
+        "level": "medium",
+        "prompt": "Với f=x²+y² tại x=(1,1), dùng Taylor bậc hai cho Δ=[0.1,-0.2]ᵀ.",
+        "solution": "∇f=[2,2], H=2I. Δf≈[2,2]·[0.1,-0.2]+0.5·2·(0.1²+0.2²)=-0.2+0.05=-0.15; thực tế cũng bằng -0.15 vì hàm bậc hai.",
+        "tags": [
+          "taylor",
+          "quadratic"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "exerciseId": "E203-hessian-E07",
+        "level": "hard",
+        "prompt": "Vì sao Hessian có condition number lớn có thể làm gradient descent khó chọn learning rate?",
+        "solution": "Độ cong rất khác theo các hướng; bước ổn cho hướng cong lớn lại quá nhỏ theo hướng cong nhỏ, tạo zig-zag và hội tụ chậm.",
+        "tags": [
+          "conditioning",
+          "optimization"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "exerciseId": "E203-hessian-E08",
+        "level": "hard",
+        "prompt": "Nếu tại điểm dừng H=diag(2,0), second-order test kết luận chắc gì?",
+        "solution": "Chỉ biết H bán xác định; test bậc hai không đủ để kết luận cực tiểu chặt, cần xét bậc cao hoặc cấu trúc hàm.",
+        "tags": [
+          "semidefinite",
+          "caveat"
+        ]
+      }
+    ],
+    "application_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "applicationId": "E203-hessian-A1",
+        "title": "Curvature của loss và lựa chọn bước tối ưu",
+        "scenario": "Loss có một hướng rất dốc và một hướng rất phẳng, khiến gradient descent dao động.",
+        "method": "Tính/ước lượng Hessian hoặc phổ trị riêng gần operating point; dùng tỷ lệ trị riêng để hiểu conditioning và cân nhắc scaling, preconditioning hoặc phương pháp bậc hai.",
+        "expectedOutcome": "Giải thích được zig-zag và vì sao cùng một learning rate không phù hợp mọi hướng.",
+        "tags": [
+          "machine-learning",
+          "conditioning",
+          "optimization"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "applicationId": "E203-hessian-A2",
+        "title": "Độ cong trong hiệu chỉnh mô hình kỹ thuật",
+        "scenario": "Hàm chi phí calibration theo hai tham số có nhiều stationary point.",
+        "method": "Tại mỗi điểm dừng, đánh giá Hessian và trị riêng để phân biệt minimum, maximum và saddle; kiểm tra thêm nếu Hessian bán xác định.",
+        "expectedOutcome": "Không nhầm điểm dừng với nghiệm tối ưu và có tiêu chí hình học để chọn vùng nghiệm.",
+        "tags": [
+          "calibration",
+          "extrema",
+          "engineering"
+        ]
+      }
+    ],
+    "simulation_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "simulationId": "E203-hessian-SIM1",
+        "title": "Quadratic surface và trị riêng Hessian",
+        "purpose": "Thay đổi λ₁, λ₂ của quadratic f=½(λ₁z₁²+λ₂z₂²) để quan sát bowl, hill và saddle.",
+        "controls": [
+          {
+            "key": "lambda1",
+            "type": "number",
+            "default": 2
+          },
+          {
+            "key": "lambda2",
+            "type": "number",
+            "default": 5
+          },
+          {
+            "key": "rotation_deg",
+            "type": "number",
+            "default": 0
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "classification",
+            "label": "Phân loại độ cong"
+          },
+          {
+            "key": "condition_number",
+            "label": "Condition number nếu xác định"
+          },
+          {
+            "key": "principal_directions",
+            "label": "Hướng riêng"
+          }
+        ],
+        "expectedObservation": "Cùng dấu dương tạo bowl, cùng dấu âm tạo hill, trái dấu tạo saddle; tỉ số độ lớn trị riêng điều khiển độ méo ellipse.",
+        "tags": [
+          "hessian",
+          "eigenvalues",
+          "surface"
+        ]
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "simulationId": "E203-hessian-SIM2",
+        "title": "Taylor bậc hai quanh operating point",
+        "purpose": "So xấp xỉ tuyến tính và bậc hai với giá trị thật khi Δ tăng dần.",
+        "controls": [
+          {
+            "key": "dx",
+            "type": "number",
+            "default": 0.05
+          },
+          {
+            "key": "dy",
+            "type": "number",
+            "default": 0.05
+          },
+          {
+            "key": "scale",
+            "type": "number",
+            "default": 1
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "true_delta",
+            "label": "Δf thật"
+          },
+          {
+            "key": "first_order",
+            "label": "Gradient-only"
+          },
+          {
+            "key": "second_order",
+            "label": "Gradient + Hessian"
+          },
+          {
+            "key": "error_ratio",
+            "label": "Tỉ lệ sai số"
+          }
+        ],
+        "expectedObservation": "Khi curvature đáng kể, thêm Hessian cải thiện xấp xỉ gần operating point; lợi ích giảm khi đi quá xa.",
+        "tags": [
+          "taylor",
+          "curvature",
+          "approximation"
+        ]
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "qaId": "E203-hessian-QA01",
+        "question": "Nếu giáo sư hỏi 'Hessian cho biết gì mà gradient không cho biết, và phân loại điểm dừng ra sao?', bạn trả lời thế nào?",
+        "answer": "Gradient cho slope bậc nhất và bằng 0 tại stationary point nhưng không nói điểm đó là min, max hay saddle. Hessian là ma trận đạo hàm bậc hai, mô tả curvature theo mọi hướng qua quadratic form dᵀHd. Tại điểm dừng: H dương xác định cho cực tiểu chặt cục bộ, âm xác định cho cực đại chặt, bất định cho saddle. Nếu Hessian chỉ bán xác định thì second-order test có thể không kết luận.",
+        "followUp": [
+          "Vì sao Hessian đối xứng khi f đủ trơn?",
+          "Condition number Hessian ảnh hưởng gradient descent thế nào?",
+          "Newton dùng Hessian ra sao?"
+        ],
+        "tags": [
+          "hessian",
+          "extrema",
+          "oral-exam",
+          "E203"
+        ]
+      }
+    ],
+    "review_pack_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "reviewPackId": "E203-hessian-RP01",
+        "items": [
+          {
+            "type": "definition",
+            "prompt": "Hessian chứa gì?",
+            "expected": "Các đạo hàm riêng bậc hai ∂²f/∂x_i∂x_j."
+          },
+          {
+            "type": "geometry",
+            "prompt": "Quadratic form dᵀHd nói gì?",
+            "expected": "Độ cong bậc hai theo hướng d."
+          },
+          {
+            "type": "classification",
+            "prompt": "H≻0 tại stationary point?",
+            "expected": "Cực tiểu chặt cục bộ."
+          },
+          {
+            "type": "classification",
+            "prompt": "H bất định tại stationary point?",
+            "expected": "Điểm yên ngựa."
+          },
+          {
+            "type": "caveat",
+            "prompt": "H bán xác định thì sao?",
+            "expected": "Second-order test có thể không kết luận; cần xét thêm."
+          }
+        ],
+        "masteryGate": "Tính đúng Hessian + dùng Taylor bậc hai + đọc trị riêng/definiteness + phân loại stationary point + nhận ra trường hợp second-order test không đủ",
+        "tags": [
+          "hessian",
+          "curvature",
+          "extrema",
+          "E203"
+        ]
+      }
+    ],
+    "question_bank_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q001",
+        "level": "easy",
+        "question": "Hessian của hàm vô hướng gồm?",
+        "options": [
+          "Các đạo hàm riêng bậc hai",
+          "Các đạo hàm riêng bậc nhất",
+          "Giá trị hàm",
+          "Covariance"
+        ],
+        "answer": "Các đạo hàm riêng bậc hai",
+        "explanation": "Hessian là Jacobian của gradient.",
+        "tags": [
+          "hessian",
+          "definition",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q002",
+        "level": "easy",
+        "question": "Với f=x²+y², Hessian là?",
+        "options": [
+          "2I",
+          "I",
+          "diag(x,y)",
+          "0"
+        ],
+        "answer": "2I",
+        "explanation": "Đạo hàm bậc hai theo mỗi biến bằng 2 và đạo hàm chéo bằng 0.",
+        "tags": [
+          "hessian",
+          "calculation",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q003",
+        "level": "easy",
+        "question": "Nếu f đủ trơn C², Hessian thường?",
+        "options": [
+          "Đối xứng",
+          "Phản đối xứng",
+          "Luôn chéo",
+          "Luôn singular"
+        ],
+        "answer": "Đối xứng",
+        "explanation": "Đạo hàm chéo bằng nhau theo Clairaut/Schwarz.",
+        "tags": [
+          "symmetry",
+          "hessian",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q004",
+        "level": "easy",
+        "question": "Tại stationary point, H dương xác định gợi ý?",
+        "options": [
+          "Cực tiểu chặt cục bộ",
+          "Cực đại chặt",
+          "Saddle",
+          "Không có kết luận nào"
+        ],
+        "answer": "Cực tiểu chặt cục bộ",
+        "explanation": "Curvature dương theo mọi hướng.",
+        "tags": [
+          "classification",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q005",
+        "level": "easy",
+        "question": "Tại stationary point, H âm xác định gợi ý?",
+        "options": [
+          "Cực đại chặt cục bộ",
+          "Cực tiểu chặt",
+          "Saddle",
+          "Điểm không khả vi"
+        ],
+        "answer": "Cực đại chặt cục bộ",
+        "explanation": "Curvature âm theo mọi hướng.",
+        "tags": [
+          "classification",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q006",
+        "level": "easy",
+        "question": "Tại stationary point, H bất định gợi ý?",
+        "options": [
+          "Điểm yên ngựa",
+          "Cực tiểu toàn cục",
+          "Cực đại toàn cục",
+          "Hàm tuyến tính"
+        ],
+        "answer": "Điểm yên ngựa",
+        "explanation": "Có hướng cong lên và hướng cong xuống.",
+        "tags": [
+          "saddle",
+          "classification",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q007",
+        "level": "medium",
+        "question": "Taylor bậc hai thêm hạng nào so với tuyến tính?",
+        "options": [
+          "½ΔᵀHΔ",
+          "HΔ",
+          "∇fᵀH",
+          "det(H)"
+        ],
+        "answer": "½ΔᵀHΔ",
+        "explanation": "Đây là correction curvature bậc hai.",
+        "tags": [
+          "taylor",
+          "hessian",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q008",
+        "level": "medium",
+        "question": "Tại stationary point, hạng bậc nhất trong Taylor bằng?",
+        "options": [
+          "0",
+          "1",
+          "H",
+          "det(H)"
+        ],
+        "answer": "0",
+        "explanation": "Vì ∇f=0.",
+        "tags": [
+          "stationary-point",
+          "taylor",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q009",
+        "level": "medium",
+        "question": "Một Hessian có các trị riêng 1 và 4 là?",
+        "options": [
+          "Dương xác định",
+          "Âm xác định",
+          "Bất định",
+          "Zero matrix"
+        ],
+        "answer": "Dương xác định",
+        "explanation": "Mọi trị riêng đều dương.",
+        "tags": [
+          "eigenvalues",
+          "positive-definite",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q010",
+        "level": "medium",
+        "question": "Các trị riêng -2 và -5 cho Hessian?",
+        "options": [
+          "Âm xác định",
+          "Dương xác định",
+          "Bất định",
+          "Bán dương"
+        ],
+        "answer": "Âm xác định",
+        "explanation": "Mọi trị riêng đều âm.",
+        "tags": [
+          "eigenvalues",
+          "negative-definite",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q011",
+        "level": "medium",
+        "question": "Các trị riêng 3 và -1 cho Hessian?",
+        "options": [
+          "Bất định",
+          "Dương xác định",
+          "Âm xác định",
+          "Bán dương"
+        ],
+        "answer": "Bất định",
+        "explanation": "Có dấu trái nhau.",
+        "tags": [
+          "eigenvalues",
+          "indefinite",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q012",
+        "level": "medium",
+        "question": "Hessian bán dương tại stationary point có luôn chứng minh cực tiểu chặt?",
+        "options": [
+          "Không",
+          "Có luôn",
+          "Chỉ khi dimension 2",
+          "Chỉ khi gradient khác 0"
+        ],
+        "answer": "Không",
+        "explanation": "Có thể cần xét bậc cao hoặc cấu trúc hàm.",
+        "tags": [
+          "semidefinite",
+          "caveat",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q013",
+        "level": "medium",
+        "question": "Quadratic form dᵀHd đại diện gần đúng gì?",
+        "options": [
+          "Curvature theo hướng d",
+          "Gradient theo hướng d",
+          "Giá trị hàm tuyệt đối",
+          "Covariance"
+        ],
+        "answer": "Curvature theo hướng d",
+        "explanation": "Nó là đạo hàm bậc hai theo hướng.",
+        "tags": [
+          "quadratic-form",
+          "geometry",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q014",
+        "level": "medium",
+        "question": "Nếu Hessian có condition number lớn và dương xác định, level sets gần optimum thường?",
+        "options": [
+          "Ellipse rất kéo dài",
+          "Tròn hoàn hảo",
+          "Không tồn tại",
+          "Luôn hyperbola"
+        ],
+        "answer": "Ellipse rất kéo dài",
+        "explanation": "Curvature chênh lệch lớn giữa các hướng.",
+        "tags": [
+          "conditioning",
+          "geometry",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q015",
+        "level": "medium",
+        "question": "Conditioning xấu gây gradient descent thường?",
+        "options": [
+          "Zig-zag và hội tụ chậm",
+          "Luôn một bước tới nghiệm",
+          "Không ảnh hưởng",
+          "Gradient bằng 0 mọi nơi"
+        ],
+        "answer": "Zig-zag và hội tụ chậm",
+        "explanation": "Một learning rate khó phù hợp đồng thời hướng dốc và phẳng.",
+        "tags": [
+          "conditioning",
+          "gradient-descent",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q016",
+        "level": "hard",
+        "question": "Hessian là Jacobian của?",
+        "options": [
+          "Gradient",
+          "Hàm scalar trực tiếp không qua đạo hàm",
+          "Covariance",
+          "Eigenvector"
+        ],
+        "answer": "Gradient",
+        "explanation": "Mỗi hàng/cột chứa derivative của các thành phần gradient.",
+        "tags": [
+          "hessian",
+          "jacobian-bridge",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q017",
+        "level": "hard",
+        "question": "Newton step cho tối ưu unconstrained gần nghiệm thường có dạng?",
+        "options": [
+          "p=-H⁻¹∇f",
+          "p=-∇f luôn",
+          "p=H∇f",
+          "p=det(H)"
+        ],
+        "answer": "p=-H⁻¹∇f",
+        "explanation": "Newton cân bằng gradient theo curvature cục bộ.",
+        "tags": [
+          "newton",
+          "optimization",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q018",
+        "level": "hard",
+        "question": "Nếu Hessian gần singular, Newton step có thể?",
+        "options": [
+          "Rất lớn/không ổn định",
+          "Luôn bằng 0",
+          "Luôn giảm loss",
+          "Không phụ thuộc gradient"
+        ],
+        "answer": "Rất lớn/không ổn định",
+        "explanation": "Nghịch đảo Hessian khuếch đại hướng có trị riêng rất nhỏ.",
+        "tags": [
+          "newton",
+          "singularity",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q019",
+        "level": "hard",
+        "question": "Hessian không đối xứng số học do sai số tính toán nhỏ nên xử lý thường?",
+        "options": [
+          "Kiểm tra đạo hàm và có thể đối xứng hóa (H+Hᵀ)/2 nếu phù hợp",
+          "Luôn bỏ Hessian",
+          "Đặt mọi phần tử bằng 0",
+          "Đổi dấu"
+        ],
+        "answer": "Kiểm tra đạo hàm và có thể đối xứng hóa (H+Hᵀ)/2 nếu phù hợp",
+        "explanation": "Hessian lý tưởng của hàm C² là đối xứng.",
+        "tags": [
+          "numerical",
+          "symmetry",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q020",
+        "level": "hard",
+        "question": "Vì sao gradient=0 chưa đủ để kết luận cực tiểu?",
+        "options": [
+          "Stationary point có thể là max hoặc saddle",
+          "Gradient=0 luôn cực tiểu",
+          "Vì Hessian luôn 0",
+          "Vì f phải tuyến tính"
+        ],
+        "answer": "Stationary point có thể là max hoặc saddle",
+        "explanation": "Cần thông tin curvature hoặc cấu trúc bổ sung.",
+        "tags": [
+          "stationary-point",
+          "classification",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q021",
+        "level": "hard",
+        "question": "Nếu f lồi và khả vi, stationary point có tính chất gì?",
+        "options": [
+          "Là cực tiểu toàn cục",
+          "Luôn là cực đại",
+          "Luôn là saddle",
+          "Không liên quan"
+        ],
+        "answer": "Là cực tiểu toàn cục",
+        "explanation": "Tính lồi bổ sung cấu trúc mạnh hơn kiểm tra cục bộ.",
+        "tags": [
+          "convexity",
+          "optimization",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q022",
+        "level": "hard",
+        "question": "Trong bài toán quadratic f=½xᵀHx+bᵀx, Hessian là?",
+        "options": [
+          "H nếu H đối xứng",
+          "b",
+          "x",
+          "H⁻¹ luôn"
+        ],
+        "answer": "H nếu H đối xứng",
+        "explanation": "Đạo hàm bậc hai của quadratic là ma trận hệ số đối xứng.",
+        "tags": [
+          "quadratic",
+          "hessian",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q023",
+        "level": "hard",
+        "question": "Trị riêng Hessian lớn về độ lớn thường chỉ?",
+        "options": [
+          "Curvature mạnh theo hướng riêng tương ứng",
+          "Gradient lớn tuyệt đối",
+          "Hàm không khả vi",
+          "Covariance lớn bắt buộc"
+        ],
+        "answer": "Curvature mạnh theo hướng riêng tương ứng",
+        "explanation": "Eigenpairs cho principal curvatures/directions của mô hình quadratic cục bộ.",
+        "tags": [
+          "eigenvalues",
+          "curvature",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q024",
+        "level": "hard",
+        "question": "Second-order approximation tốt nhất khi?",
+        "options": [
+          "Perturbation nhỏ và f đủ trơn",
+          "Perturbation vô hạn",
+          "Hàm discontinuous",
+          "Không cần Hessian đúng"
+        ],
+        "answer": "Perturbation nhỏ và f đủ trơn",
+        "explanation": "Taylor local phụ thuộc vùng lân cận.",
+        "tags": [
+          "taylor",
+          "assumptions",
+          "E203"
+        ],
+        "stage": "vn"
+      },
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "questionId": "E203-hessian-Q025",
+        "level": "hard",
+        "question": "Cặp nào đúng?",
+        "options": [
+          "Gradient mô tả slope bậc nhất; Hessian mô tả curvature bậc hai",
+          "Gradient và Hessian luôn giống nhau",
+          "Hessian chỉ dành cho vector output",
+          "Gradient phân loại saddle chắc chắn"
+        ],
+        "answer": "Gradient mô tả slope bậc nhất; Hessian mô tả curvature bậc hai",
+        "explanation": "Hai cấp đạo hàm bổ sung nhau trong tối ưu hóa.",
+        "tags": [
+          "summary",
+          "curvature",
+          "E203"
+        ],
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "lessonId": "MATH-VN-CA-C03-L07",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+        "auditStatus": "PASS",
+        "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+        "mindmapId": "E203-hessian-MM01",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Hessian, curvature & extrema",
+            "type": "root"
+          },
+          {
+            "id": "h",
+            "label": "H=[∂²f/∂x_i∂x_j]",
+            "type": "formula"
+          },
+          {
+            "id": "taylor",
+            "label": "2nd-order Taylor",
+            "type": "formula"
+          },
+          {
+            "id": "pd",
+            "label": "H≻0 → local min",
+            "type": "criterion"
+          },
+          {
+            "id": "nd",
+            "label": "H≺0 → local max",
+            "type": "criterion"
+          },
+          {
+            "id": "indef",
+            "label": "indefinite → saddle",
+            "type": "criterion"
+          },
+          {
+            "id": "semi",
+            "label": "semidefinite → inconclusive",
+            "type": "warning"
+          },
+          {
+            "id": "cond",
+            "label": "conditioning / eigenvalues",
+            "type": "geometry"
+          },
+          {
+            "id": "newton",
+            "label": "Newton / curvature-aware optimization",
+            "type": "application"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "h"
+          },
+          {
+            "from": "h",
+            "to": "taylor"
+          },
+          {
+            "from": "h",
+            "to": "pd"
+          },
+          {
+            "from": "h",
+            "to": "nd"
+          },
+          {
+            "from": "h",
+            "to": "indef"
+          },
+          {
+            "from": "h",
+            "to": "semi"
+          },
+          {
+            "from": "h",
+            "to": "cond"
+          },
+          {
+            "from": "cond",
+            "to": "newton"
+          }
+        ],
+        "tags": [
+          "hessian",
+          "curvature",
+          "extrema",
+          "E203"
+        ]
+      }
+    ]
+  }
+}
