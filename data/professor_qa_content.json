@@ -633,6 +633,26 @@
         "oral-exam",
         "E205"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "qaId": "E206-prob-QA01",
+      "question": "Nếu giáo sư hỏi 'khác nhau giữa outcome, sample space và event là gì, và tại sao complement cần biết Ω?', bạn trả lời thế nào?",
+      "answer": "Một outcome ω là một kết quả đơn lẻ của thí nghiệm. Sample space Ω là tập tất cả outcome được mô hình cho phép. Event A là một tập con của Ω, tức tập các outcome làm mệnh đề A xảy ra. Complement Aᶜ được định nghĩa là Ω\\A nên không thể xác định đúng nếu chưa chốt universe Ω.",
+      "followUp": [
+        "Union khác exclusive-or thế nào?",
+        "De Morgan chuyển phủ định của event ra sao?",
+        "Một sample space thiết kế kém gây lỗi phân tích thế nào?"
+      ],
+      "tags": [
+        "sample-space",
+        "events",
+        "oral-exam",
+        "E206"
+      ]
     }
   ],
   "importPolicy": {
