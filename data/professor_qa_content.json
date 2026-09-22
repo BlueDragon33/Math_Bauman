@@ -515,6 +515,25 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "qaId": "E200-partial-QA01",
+      "lessonId": "MATH-VN-CA-C03-L04",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "question": "Nếu giáo sư hỏi 'đạo hàm riêng khác gì đạo hàm một biến và tại sao cần giữ biến khác cố định?', bạn trả lời thế nào?",
+      "answer": "Đạo hàm riêng mở rộng ý tưởng slope sang hàm nhiều biến bằng cách chọn một biến để thay đổi và đóng băng các biến còn lại. Vì vậy ∂f/∂x đo sensitivity cục bộ theo trục x tại một operating point cụ thể. Các partial derivatives ghép lại thành gradient; với vector output chúng dẫn tới Jacobian.",
+      "followUp": [
+        "Partial derivative có phụ thuộc operating point không?",
+        "Vì sao partial riêng lẻ chưa cho hướng tăng nhanh nhất?",
+        "Linearization nhiều biến dùng các partial ra sao?"
+      ],
+      "tags": [
+        "partial-derivative",
+        "gradient-bridge",
+        "E200"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
     }
   ],
   "importPolicy": {
