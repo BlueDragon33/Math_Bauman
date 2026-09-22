@@ -729,7 +729,15 @@ window.SUBJECT_MANIFEST = {
     "question_bank": 1040,
     "review_packs": 260,
     "chapter_lectures": 32,
-    "lessonSlides": 4160
+    "lessonSlides": 4160,
+    "formula_content": 30,
+    "simulation_content": 20,
+    "exercise_content": 80,
+    "application_content": 20,
+    "professor_qa_content": 10,
+    "review_pack_content": 10,
+    "question_bank_content": 250,
+    "mindmap_content": 10
   },
   "simulationMode": "unified_only_260_labs_e76",
   "packageType": "FINAL_WITH_TEMPLATE_REFERENCE",
@@ -876,7 +884,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/formula_content.json",
       "group": "Công thức",
       "required": true,
-      "plannedCount": 27,
+      "plannedCount": 30,
       "description": "Records nội dung import/export cho Công thức"
     },
     "simulation_frame": {
@@ -892,7 +900,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/simulation_content.json",
       "group": "Mô phỏng",
       "required": true,
-      "plannedCount": 18,
+      "plannedCount": 20,
       "description": "Records nội dung import/export cho Mô phỏng"
     },
     "exercise_frame": {
@@ -908,7 +916,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/exercise_content.json",
       "group": "Bài tập",
       "required": true,
-      "plannedCount": 72,
+      "plannedCount": 80,
       "description": "Records nội dung import/export cho Bài tập"
     },
     "application_frame": {
@@ -924,7 +932,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/application_content.json",
       "group": "Ứng dụng",
       "required": true,
-      "plannedCount": 18,
+      "plannedCount": 20,
       "description": "Records nội dung import/export cho Ứng dụng"
     },
     "professor_qa_frame": {
@@ -940,7 +948,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/professor_qa_content.json",
       "group": "Vấn đáp",
       "required": true,
-      "plannedCount": 9,
+      "plannedCount": 10,
       "description": "Records nội dung import/export cho Vấn đáp"
     },
     "review_pack_frame": {
@@ -956,7 +964,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/review_pack_content.json",
       "group": "Ôn tập",
       "required": true,
-      "plannedCount": 9,
+      "plannedCount": 10,
       "description": "Records nội dung import/export cho Ôn tập"
     },
     "question_bank_frame": {
@@ -972,7 +980,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/question_bank_content.json",
       "group": "Ngân hàng câu hỏi",
       "required": true,
-      "plannedCount": 225,
+      "plannedCount": 250,
       "description": "Records nội dung import/export cho Ngân hàng câu hỏi"
     },
     "test_blueprint_frame": {
@@ -1020,7 +1028,7 @@ window.SUBJECT_MANIFEST = {
       "path": "data/mindmap_content.json",
       "group": "Mind map",
       "required": true,
-      "plannedCount": 9,
+      "plannedCount": 10,
       "description": "Records nội dung import/export cho Mind map"
     },
     "concept_map_frame": {
