@@ -1918,6 +1918,86 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "simulationId": "E194-rowop-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng Gauss elimination từng bước",
+      "purpose": "Chọn row operation và quan sát pivot/zero pattern thay đổi.",
+      "controls": [
+        {
+          "key": "pivot_strategy",
+          "type": "select",
+          "default": "partial"
+        },
+        {
+          "key": "step",
+          "type": "number",
+          "default": 0
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "pivot_columns",
+          "label": "Cột pivot"
+        },
+        {
+          "key": "zero_below",
+          "label": "Đã triệt dưới pivot"
+        },
+        {
+          "key": "row_log",
+          "label": "Nhật ký phép biến đổi"
+        }
+      ],
+      "expectedObservation": "Mỗi bước hợp lệ tiến gần REF và không thay đổi tập nghiệm của hệ tương ứng.",
+      "tags": [
+        "gauss",
+        "interactive"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "simulationId": "E194-rowop-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng ảnh hưởng của pivot nhỏ",
+      "purpose": "So sánh elimination không pivoting và partial pivoting khi pivot đầu rất nhỏ.",
+      "controls": [
+        {
+          "key": "epsilon",
+          "type": "number",
+          "default": 1e-8
+        },
+        {
+          "key": "strategy",
+          "type": "select",
+          "default": "none"
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "multiplier_max",
+          "label": "Hệ số elimination lớn nhất"
+        },
+        {
+          "key": "residual",
+          "label": "Residual"
+        },
+        {
+          "key": "warning",
+          "label": "Cảnh báo ổn định"
+        }
+      ],
+      "expectedObservation": "Pivot nhỏ làm multiplier lớn và dễ khuếch đại sai số; partial pivoting thường ổn định hơn.",
+      "tags": [
+        "pivoting",
+        "numerical"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
     }
   ],
   "importPolicy": {
