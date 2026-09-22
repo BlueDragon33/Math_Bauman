@@ -1293,6 +1293,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "formulaId": "E192-power-F1",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Lũy thừa ma trận",
+      "formula": "A^k = A·A·...·A,  A^0=I",
+      "meaning": "A^k mô tả composition lặp k lần của cùng linear transform.",
+      "conditions": [
+        "A vuông để các tích A·A tiếp tục tương thích.",
+        "k là số nguyên không âm trong định nghĩa cơ bản."
+      ],
+      "commonMistakes": [
+        "Nhầm A^2 với bình phương từng phần tử.",
+        "Dùng A^0=0."
+      ],
+      "programmingUse": "matrix_power(A,k); kiểm shape và conditioning khi k lớn.",
+      "tags": [
+        "matrix-power",
+        "composition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "formulaId": "E192-power-F2",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Đa thức ma trận",
+      "formula": "p(A)=c₀I+c₁A+...+c_rA^r",
+      "meaning": "Thay biến vô hướng trong đa thức bằng ma trận vuông A, giữ thứ tự lũy thừa của A.",
+      "conditions": [
+        "A vuông.",
+        "Hệ số cᵢ tương thích trường số."
+      ],
+      "commonMistakes": [
+        "Bỏ c₀I và viết c₀ như scalar trần.",
+        "Khai triển công thức vô hướng với nhiều ma trận không giao hoán."
+      ],
+      "programmingUse": "Dùng Horner: Y=c_r I; Y=A@Y+c_{r-1}I ... để giảm matrix multiply.",
+      "tags": [
+        "matrix-polynomial",
+        "horner"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "formulaId": "E192-power-F3",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Lan truyền trạng thái rời rạc",
+      "formula": "x_k = A^k x_0",
+      "meaning": "Không có input, trạng thái sau k bước được tạo bởi A^k tác động lên trạng thái đầu.",
+      "conditions": [
+        "Mô hình x_{k+1}=Ax_k tuyến tính bất biến theo thời gian.",
+        "Không có input hoặc input đã tách riêng."
+      ],
+      "commonMistakes": [
+        "Suy ổn định chỉ từ một vài bước nhỏ.",
+        "Bỏ qua spectral radius/conditioning."
+      ],
+      "programmingUse": "Theo dõi norm(A^k) hoặc dùng eig/schur để đánh giá tăng/giảm.",
+      "tags": [
+        "control",
+        "state-transition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
     }
   ],
   "importPolicy": {
