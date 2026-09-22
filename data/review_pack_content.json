@@ -1097,6 +1097,46 @@
         "extrema",
         "E203"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "reviewPackId": "E204-opt-RP01",
+      "items": [
+        {
+          "type": "first-order",
+          "prompt": "Điều kiện cần bậc nhất cho local extremum nội tại khả vi?",
+          "expected": "∇f(x*)=0."
+        },
+        {
+          "type": "direction",
+          "prompt": "Điều kiện p là hướng giảm?",
+          "expected": "∇fᵀp<0."
+        },
+        {
+          "type": "classification",
+          "prompt": "Hessian bất định tại stationary point?",
+          "expected": "Saddle."
+        },
+        {
+          "type": "caveat",
+          "prompt": "Gradient nhỏ có đủ chứng minh minimum?",
+          "expected": "Không; có thể saddle/plateau và cần curvature/cấu trúc bổ sung."
+        },
+        {
+          "type": "scope",
+          "prompt": "Local minimum có nhất thiết global?",
+          "expected": "Không, trừ khi có cấu trúc như convexity phù hợp."
+        }
+      ],
+      "masteryGate": "Tìm stationary point + kiểm hướng giảm + phân loại bằng Hessian khi hợp lệ + phân biệt local/global + nhận ra trường hợp first/second-order tests không đủ",
+      "tags": [
+        "unconstrained-optimization",
+        "stationary-point",
+        "E204"
+      ]
     }
   ],
   "importPolicy": {
