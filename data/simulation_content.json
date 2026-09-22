@@ -975,6 +975,98 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "simulationId": "E184-cos-SIM1",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng cosine theo góc và scale",
+      "purpose": "Thay góc và scale để quan sát cosine bất biến với scale dương nhưng đổi theo hướng.",
+      "controls": [
+        {
+          "key": "angle_deg",
+          "type": "number",
+          "default": 45
+        },
+        {
+          "key": "scale_x",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "scale_y",
+          "type": "number",
+          "default": 5
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "cosine",
+          "label": "Cosine similarity"
+        },
+        {
+          "key": "dot",
+          "label": "Dot product"
+        },
+        {
+          "key": "euclidean_raw",
+          "label": "Euclid chưa normalize"
+        }
+      ],
+      "expectedObservation": "Scale làm dot và Euclid thô đổi nhưng cosine giữ nguyên nếu chỉ rescale dương.",
+      "tags": [
+        "cosine",
+        "scale",
+        "geometry"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "simulationId": "E184-cos-SIM2",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng centering và cosine embedding",
+      "purpose": "Thêm common offset/mean vào embedding rồi so cosine trước và sau centering.",
+      "controls": [
+        {
+          "key": "common_offset",
+          "type": "number",
+          "default": 0
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.05
+        },
+        {
+          "key": "center",
+          "type": "boolean",
+          "default": false
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "cosine_raw",
+          "label": "Cosine thô"
+        },
+        {
+          "key": "cosine_centered",
+          "label": "Cosine sau centering"
+        },
+        {
+          "key": "norms",
+          "label": "Norm hai vector"
+        }
+      ],
+      "expectedObservation": "Cosine phụ thuộc gốc tọa độ; common offset có thể làm các vector trông giống nhau hơn về hướng.",
+      "tags": [
+        "cosine",
+        "centering",
+        "embedding"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
     }
   ],
   "importPolicy": {
