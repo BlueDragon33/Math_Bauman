@@ -439,6 +439,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "qaId": "E196-inv-QA01",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Nếu giáo sư hỏi 'khi nào ma trận khả nghịch và vì sao trong tính số không nên lạm dụng inv(A)?', bạn trả lời thế nào?",
+      "answer": "A⁻¹ tồn tại khi A vuông và full rank; tương đương det(A)≠0 trong bối cảnh chuẩn. Nhưng trong tính số, det khác 0 chưa đủ để nói ổn định: A có thể ill-conditioned. Nếu chỉ cần giải Ax=b, dùng factorization/solve thường rẻ và ổn định hơn explicit inverse; khi A gần singular cần conditioning, regularization hoặc pseudoinverse.",
+      "followUp": [
+        "(AB)⁻¹ bằng gì?",
+        "det rất nhỏ cảnh báo điều gì?",
+        "Pseudoinverse khác inverse ở đâu?"
+      ],
+      "tags": [
+        "inverse",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_MATRIX_INVERSE"
     }
   ],
   "importPolicy": {
