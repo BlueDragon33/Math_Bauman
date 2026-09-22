@@ -1651,6 +1651,115 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "exerciseId": "E186-basis-E01",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Với B=[(1,0),(1,1)] và x=(3,2), tìm [x]_B.",
+      "solution": "Giải x=a(1,0)+b(1,1): b=2, a=1 nên [x]_B=(1,2).",
+      "tags": [
+        "basis",
+        "coordinates"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "exerciseId": "E186-basis-E02",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "easy",
+      "prompt": "Cơ sở chuẩn của R² cho tọa độ của x=(2,-3) là gì?",
+      "solution": "[x]_E=(2,-3).",
+      "tags": [
+        "standard-basis"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "exerciseId": "E186-basis-E03",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Cho B=[[1,1],[0,1]], c_B=(2,3). Tìm x trong cơ sở chuẩn.",
+      "solution": "x=B c_B=(5,3).",
+      "tags": [
+        "basis",
+        "matrix"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "exerciseId": "E186-basis-E04",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Cho x=(5,3), C=[[1,0],[1,1]]. Tìm [x]_C.",
+      "solution": "Giải Cc=x: c2=3, c1=2 nên [x]_C=(2,3).",
+      "tags": [
+        "coordinates"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "exerciseId": "E186-basis-E05",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "medium",
+      "prompt": "Vì sao ma trận đổi cơ sở phải khả nghịch?",
+      "solution": "Vì tọa độ phải biểu diễn duy nhất; khả nghịch tương đương các vector cơ sở độc lập và span toàn không gian.",
+      "tags": [
+        "invertibility"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "exerciseId": "E186-basis-E06",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Chứng minh đổi B→C rồi C→B trả lại tọa độ ban đầu.",
+      "solution": "T_CB=C⁻¹B, T_BC=B⁻¹C; tích T_BC T_CB=B⁻¹CC⁻¹B=I.",
+      "tags": [
+        "basis-change",
+        "proof"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "exerciseId": "E186-basis-E07",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "hard",
+      "prompt": "Vì sao nên dùng solve thay vì tính nghịch đảo trực tiếp trong code?",
+      "solution": "solve thường ổn định số và hiệu quả hơn explicit inverse, giảm sai số/lãng phí tính toán.",
+      "tags": [
+        "numerical",
+        "programming"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "exerciseId": "E186-basis-E08",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "level": "expert",
+      "prompt": "Liên hệ đổi cơ sở với diagonalization A=SΛS⁻¹.",
+      "solution": "Các cột S là eigenvectors; trong eigenbasis, toán tử có ma trận Λ, đơn giản hóa lũy thừa/hệ động lực.",
+      "tags": [
+        "eigenbasis",
+        "diagonalization"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
     }
   ],
   "importPolicy": {
