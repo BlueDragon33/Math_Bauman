@@ -531,6 +531,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "reviewPackId": "E188-matrix-RP01",
+      "lessonId": "MATH-VN-LA-C02-L01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Nêu nghĩa của A∈R^{m×n} và aᵢⱼ.",
+          "expected": "m hàng, n cột; aᵢⱼ ở hàng i cột j."
+        },
+        {
+          "type": "shape",
+          "prompt": "Nêu điều kiện shape cho y=Ax.",
+          "expected": "A m×n, x n chiều, y m chiều."
+        },
+        {
+          "type": "data",
+          "prompt": "Trong X∈R^{N×d}, nêu một quy ước phổ biến.",
+          "expected": "N hàng mẫu, d cột đặc trưng."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một lỗi thực tế do đảo semantics hàng/cột.",
+          "expected": "Đảo sample-feature hoặc feature order khiến model/pipeline dùng sai dữ liệu."
+        }
+      ],
+      "masteryGate": "Đọc đúng m×n và aᵢⱼ + kiểm shape trước phép toán + mô tả rõ semantics hàng/cột + liên hệ được matrix dữ liệu và linear map",
+      "tags": [
+        "matrix",
+        "E188"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E188_MATRIX_DEFINITION"
     }
   ],
   "importPolicy": {
