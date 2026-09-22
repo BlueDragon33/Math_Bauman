@@ -1362,6 +1362,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E192_MATRIX_MULTIPLICATION"
+    },
+    {
+      "formulaId": "E193-power-F1",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Lũy thừa ma trận vuông",
+      "formula": "A⁰=I, Aᵏ=A·A^{k-1}",
+      "meaning": "Lũy thừa ma trận được xây từ phép nhân lặp của cùng một ma trận vuông; số mũ 0 cho ma trận đơn vị cùng cấp.",
+      "conditions": [
+        "A phải là ma trận vuông để mọi Aᵏ được xác định cùng cấp.",
+        "k là số nguyên không âm trong định nghĩa cơ bản."
+      ],
+      "commonMistakes": [
+        "Tính A² bằng cách bình phương từng phần tử.",
+        "Dùng A⁰=1 scalar thay vì I cùng cấp."
+      ],
+      "programmingUse": "matrix_power(A,k) hoặc exponentiation by squaring; kiểm A.shape[0]==A.shape[1].",
+      "tags": [
+        "matrix-power",
+        "square-matrix"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "formulaId": "E193-power-F2",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Đa thức của ma trận",
+      "formula": "p(A)=c₀I+c₁A+⋯+cᵣAʳ",
+      "meaning": "Thay biến vô hướng x trong đa thức bằng ma trận vuông A; hệ số scalar nhân ma trận và hạng tự do đi với I.",
+      "conditions": [
+        "A vuông và các hệ số thuộc trường phù hợp.",
+        "Mọi hạng tử được cộng theo cùng shape."
+      ],
+      "commonMistakes": [
+        "Viết c₀ thay vì c₀I.",
+        "Tính p(A) bằng cách áp p lên từng phần tử."
+      ],
+      "programmingUse": "Horner matrix form giúp giảm số phép nhân: p(A)=(((cᵣA+cᵣ₋₁I)A+...)A+c₀I).",
+      "tags": [
+        "matrix-polynomial",
+        "horner"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "formulaId": "E193-power-F3",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Cayley–Hamilton ở mức cầu nối",
+      "formula": "χ_A(A)=0",
+      "meaning": "Mỗi ma trận vuông thỏa mãn đa thức đặc trưng của chính nó; điều này cho phép rút lũy thừa cao về tổ hợp các lũy thừa thấp hơn.",
+      "conditions": [
+        "Dùng cho ma trận vuông.",
+        "Cần đa thức đặc trưng đúng theo convention dấu đang dùng."
+      ],
+      "commonMistakes": [
+        "Hiểu 0 là scalar thay vì zero matrix.",
+        "Dùng Cayley–Hamilton mà không kiểm đa thức đặc trưng."
+      ],
+      "programmingUse": "Giảm biểu thức A^k, xây hàm ma trận bậc thấp và kiểm symbolic/numeric consistency.",
+      "tags": [
+        "cayley-hamilton",
+        "reduction"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
     }
   ],
   "importPolicy": {

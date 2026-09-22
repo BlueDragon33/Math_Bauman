@@ -11737,6 +11737,556 @@
       "auditStatus": "PASS",
       "sourceBundle": "E192_MATRIX_MULTIPLICATION",
       "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q001",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "A⁰ bằng gì với A vuông n×n?",
+      "options": [
+        "Iₙ",
+        "0",
+        "1 scalar",
+        "A"
+      ],
+      "answer": "Iₙ",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q002",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "A² theo định nghĩa ma trận là?",
+      "options": [
+        "A·A",
+        "Bình phương từng phần tử",
+        "2A",
+        "A+A"
+      ],
+      "answer": "A·A",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q003",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Để A² luôn được định nghĩa theo cách cơ bản, A cần?",
+      "options": [
+        "Vuông",
+        "Đối xứng",
+        "Khả nghịch",
+        "Chéo"
+      ],
+      "answer": "Vuông",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q004",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "p(x)=x²+1 cho p(A) bằng?",
+      "options": [
+        "A²+I",
+        "A⊙A+1",
+        "A²+1 scalar",
+        "2A"
+      ],
+      "answer": "A²+I",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q005",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "A³ bằng?",
+      "options": [
+        "A·A·A",
+        "3A",
+        "A⊙A⊙A",
+        "A+A+A"
+      ],
+      "answer": "A·A·A",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q006",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Nếu A=I thì A^k bằng?",
+      "options": [
+        "I",
+        "kI",
+        "0",
+        "Aᵀ"
+      ],
+      "answer": "I",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q007",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Hạng tự do c₀ trong p(A) trở thành?",
+      "options": [
+        "c₀I",
+        "c₀A",
+        "c₀ scalar đứng riêng",
+        "0"
+      ],
+      "answer": "c₀I",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q008",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "A² và A⊙A có giống nhau nói chung?",
+      "options": [
+        "Không",
+        "Có luôn",
+        "Chỉ khác notation",
+        "Chỉ khác với matrix vuông"
+      ],
+      "answer": "Không",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q009",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Nếu A²=A thì A⁴ bằng?",
+      "options": [
+        "A",
+        "A² khác A",
+        "I",
+        "0"
+      ],
+      "answer": "A",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q010",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Nếu A²=I thì A⁶ bằng?",
+      "options": [
+        "I",
+        "A",
+        "0",
+        "6A"
+      ],
+      "answer": "I",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q011",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "p(x)=2x²-3x+5 cho p(A)?",
+      "options": [
+        "2A²-3A+5I",
+        "2A⊙A-3A+5",
+        "2A²-3A+5A",
+        "2A-3A²+5I"
+      ],
+      "answer": "2A²-3A+5I",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q012",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Horner cho p(A) chủ yếu giúp?",
+      "options": [
+        "Giảm số phép nhân ma trận",
+        "Đổi eigenvalue",
+        "Làm A khả nghịch",
+        "Đổi shape"
+      ],
+      "answer": "Giảm số phép nhân ma trận",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q013",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "A shape 2×3 thì A²?",
+      "options": [
+        "Không định nghĩa theo matrix product chuẩn",
+        "Shape 2×3",
+        "Shape 2×2",
+        "Luôn tồn tại"
+      ],
+      "answer": "Không định nghĩa theo matrix product chuẩn",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q014",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Trong x_k=A^k x₀, k biểu diễn?",
+      "options": [
+        "Số bước truyền trạng thái",
+        "Số hàng A",
+        "Rank A",
+        "Số eigenvalue"
+      ],
+      "answer": "Số bước truyền trạng thái",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q015",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Đa thức ma trận p(A) có cùng shape với?",
+      "options": [
+        "A",
+        "Vector riêng",
+        "Hệ số c₀",
+        "Không xác định"
+      ],
+      "answer": "A",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q016",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Cayley–Hamilton phát biểu?",
+      "options": [
+        "χ_A(A)=0",
+        "det(A)=0 luôn",
+        "A²=A luôn",
+        "trace(A)=rank(A)"
+      ],
+      "answer": "χ_A(A)=0",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q017",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Nếu χ_A(λ)=λ²-3λ+2 thì A² bằng?",
+      "options": [
+        "3A-2I",
+        "3A+2I",
+        "A-2I",
+        "0"
+      ],
+      "answer": "3A-2I",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q018",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Lợi ích của Cayley–Hamilton với A^k lớn là?",
+      "options": [
+        "Rút lũy thừa cao về tổ hợp bậc thấp hơn",
+        "Làm mọi A diagonal",
+        "Tính determinant bằng 0",
+        "Loại bỏ matrix multiplication"
+      ],
+      "answer": "Rút lũy thừa cao về tổ hợp bậc thấp hơn",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q019",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Trong graph propagation, A^2 thường gợi ý?",
+      "options": [
+        "Ảnh hưởng hai bước/hop theo operator A",
+        "Bình phương từng cạnh độc lập",
+        "Chỉ self-loop",
+        "Không có ý nghĩa"
+      ],
+      "answer": "Ảnh hưởng hai bước/hop theo operator A",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q020",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Tính p(A) bằng elementwise p trên từng entry có đúng nói chung?",
+      "options": [
+        "Không",
+        "Có luôn",
+        "Đúng nếu A vuông",
+        "Đúng nếu A khả nghịch"
+      ],
+      "answer": "Không",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q021",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Exponentiation by squaring hữu ích khi?",
+      "options": [
+        "Tính A^k với k lớn bằng ít phép nhân hơn",
+        "Tính transpose",
+        "Tính shape",
+        "Tính rank chính xác"
+      ],
+      "answer": "Tính A^k với k lớn bằng ít phép nhân hơn",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q022",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Trong hệ rời rạc, A^k tăng mạnh có thể gợi ý?",
+      "options": [
+        "State propagation có xu hướng khuếch đại/không ổn định",
+        "A luôn singular",
+        "A luôn đối xứng",
+        "A^k không tồn tại"
+      ],
+      "answer": "State propagation có xu hướng khuếch đại/không ổn định",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q023",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Khi dùng p(A) làm graph/filter operator, điều nên kiểm?",
+      "options": [
+        "Scale/spectrum của A và hệ số để tránh khuếch đại không mong muốn",
+        "Chỉ determinant",
+        "Chỉ số hàng",
+        "Chỉ trace"
+      ],
+      "answer": "Scale/spectrum của A và hệ số để tránh khuếch đại không mong muốn",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q024",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Horner matrix form vẫn phụ thuộc điều gì?",
+      "options": [
+        "Thứ tự matrix multiplication và I đúng cấp",
+        "AB=BA",
+        "A luôn diagonal",
+        "Hệ số phải integer"
+      ],
+      "answer": "Thứ tự matrix multiplication và I đúng cấp",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E193-power-Q025",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Một regression test tốt cho matrix powers nên gồm?",
+      "options": [
+        "A⁰=I, A¹=A, ví dụ A² thủ công và so matrix_power với repeated product",
+        "Chỉ determinant",
+        "Chỉ trace",
+        "Chỉ shape A"
+      ],
+      "answer": "A⁰=I, A¹=A, ví dụ A² thủ công và so matrix_power với repeated product",
+      "explanation": "Đáp án dựa trên định nghĩa lũy thừa ma trận, đa thức ma trận, Horner, phân biệt elementwise và cầu nối Cayley–Hamilton/state transition.",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
+      "stage": "vn"
     }
   ],
   "importPolicy": {

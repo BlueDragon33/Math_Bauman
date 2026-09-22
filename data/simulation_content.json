@@ -1833,6 +1833,91 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E192_MATRIX_MULTIPLICATION"
+    },
+    {
+      "simulationId": "E193-power-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng A^k và tăng/giảm norm trạng thái",
+      "purpose": "Thay ma trận 2×2 và k để quan sát A^k x₀.",
+      "controls": [
+        {
+          "key": "k",
+          "type": "number",
+          "default": 5
+        },
+        {
+          "key": "a11",
+          "type": "number",
+          "default": 0.9
+        },
+        {
+          "key": "a22",
+          "type": "number",
+          "default": 0.8
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "state_norm",
+          "label": "||A^k x₀||"
+        },
+        {
+          "key": "power_norm",
+          "label": "||A^k||"
+        },
+        {
+          "key": "trend",
+          "label": "Xu hướng tăng/giảm"
+        }
+      ],
+      "expectedObservation": "Eigen/spectral behavior của A chi phối xu hướng dài hạn của A^k, dù bài hiện tại mới dùng như trực giác cầu nối.",
+      "tags": [
+        "power",
+        "control"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "simulationId": "E193-power-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng Horner cho đa thức ma trận",
+      "purpose": "So sánh số phép nhân khi tính p(A) trực tiếp qua A^k và qua Horner.",
+      "controls": [
+        {
+          "key": "degree",
+          "type": "number",
+          "default": 6
+        },
+        {
+          "key": "matrix_size",
+          "type": "number",
+          "default": 4
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "naive_multiplies",
+          "label": "Số phép nhân naive"
+        },
+        {
+          "key": "horner_multiplies",
+          "label": "Số phép nhân Horner"
+        },
+        {
+          "key": "difference_norm",
+          "label": "Sai khác số học"
+        }
+      ],
+      "expectedObservation": "Horner giảm số phép nhân ma trận và cho cùng kết quả trong sai số số học cho phép.",
+      "tags": [
+        "horner",
+        "numerical"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
     }
   ],
   "importPolicy": {
