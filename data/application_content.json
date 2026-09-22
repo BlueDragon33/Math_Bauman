@@ -583,6 +583,36 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "applicationId": "E190-transpose-A1",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Feature Gram matrix cho phân tích dữ liệu",
+      "scenario": "Cần đo mức đồng biến/inner-product giữa các feature từ matrix samples×features.",
+      "method": "Dùng XᵀX sau khi xác định preprocessing; nếu diễn giải covariance thì center và scale đúng.",
+      "expectedOutcome": "Thu được d×d matrix mô tả quan hệ feature thay vì N×N quan hệ sample.",
+      "tags": [
+        "data",
+        "gram"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "applicationId": "E190-transpose-A2",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Backprop qua linear transform",
+      "scenario": "Một layer y=Wx nhận gradient ở output và cần truyền về input.",
+      "method": "Dùng Wᵀ theo chain rule/adjoint với shape contract rõ.",
+      "expectedOutcome": "Gradient input có đúng dimension và đúng phép ghép tuyến tính.",
+      "tags": [
+        "ai",
+        "backprop"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
     }
   ],
   "importPolicy": {
