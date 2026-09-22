@@ -2618,6 +2618,111 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "exerciseId": "E195-rank-E01",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Một REF có 3 pivot. Rank của ma trận là bao nhiêu?",
+      "solution": "rank=3.",
+      "tags": [
+        "rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "exerciseId": "E195-rank-E02",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "A có 5 cột và rank(A)=3. Nullity bằng?",
+      "solution": "5-3=2.",
+      "tags": [
+        "nullity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "exerciseId": "E195-rank-E03",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Nếu rank(A)=2 nhưng rank([A|b])=3 thì hệ Ax=b thế nào?",
+      "solution": "Vô nghiệm vì augmented matrix có rank lớn hơn.",
+      "tags": [
+        "consistency"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "exerciseId": "E195-rank-E04",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "A là 3×3, rank(A)=3. Hệ Ax=b có nghiệm duy nhất với mọi b không?",
+      "solution": "Có; A full rank vuông nên khả nghịch và nghiệm duy nhất.",
+      "tags": [
+        "full-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "exerciseId": "E195-rank-E05",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "A 2×4 có rank 2. Hệ thuần nhất Ax=0 có bao nhiêu biến tự do?",
+      "solution": "4-2=2.",
+      "tags": [
+        "free-variable"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "exerciseId": "E195-rank-E06",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Giải thích vì sao row operations không thay đổi rank.",
+      "solution": "Row operations tương ứng với nhân trái bởi elementary invertible matrices, nên không đổi dimension của row/column space.",
+      "tags": [
+        "row-equivalence"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "exerciseId": "E195-rank-E07",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Tại sao rank trong floating point phụ thuộc tolerance?",
+      "solution": "Singular values/pivots rất nhỏ có thể là nhiễu số; ngưỡng quyết định xem chúng là zero hay độc lập thực sự.",
+      "tags": [
+        "numerical-rank"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "exerciseId": "E195-rank-E08",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "prompt": "Trong least squares, rank deficiency gây vấn đề gì?",
+      "solution": "Nghiệm có thể không duy nhất, normal equations kém điều kiện và cần QR/SVD/pseudoinverse hoặc regularization.",
+      "tags": [
+        "least-squares",
+        "rank-deficiency"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
     }
   ],
   "importPolicy": {
