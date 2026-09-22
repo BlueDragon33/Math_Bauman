@@ -727,6 +727,78 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "formulaId": "E184-cos-F1",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Cosine của góc giữa hai vector",
+      "formula": "cosθ = (x·y)/(||x||₂||y||₂)",
+      "meaning": "Cosine similarity chuẩn hóa dot product để đo mức cùng hướng, tách ảnh hưởng độ lớn của hai vector.",
+      "conditions": [
+        "x và y khác vector 0.",
+        "Hai vector cùng không gian tọa độ và preprocessing nhất quán."
+      ],
+      "commonMistakes": [
+        "Chia cho norm bằng 0.",
+        "Quên rằng cosine bỏ thông tin magnitude."
+      ],
+      "programmingUse": "cos = dot(x,y)/(norm(x)*norm(y)+eps) chỉ khi eps được dùng có chủ đích; tốt hơn nên guard vector gần 0.",
+      "tags": [
+        "cosine",
+        "angle",
+        "embedding"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "formulaId": "E184-cos-F2",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Khoảng cách cosine",
+      "formula": "d_cos(x,y) = 1 - cosθ",
+      "meaning": "Khoảng cách cosine thường dùng để biến similarity thành độ khác biệt hướng; với cosine trong [-1,1], d_cos nằm trong [0,2].",
+      "conditions": [
+        "Vector khác 0.",
+        "Cần phân biệt 'cosine distance' dùng trong thư viện với metric toán học nghiêm ngặt trong từng ngữ cảnh."
+      ],
+      "commonMistakes": [
+        "Cho rằng 1-cos luôn thỏa mọi tiên đề metric.",
+        "Nhầm cosine distance với Euclidean distance trên vector chưa normalize."
+      ],
+      "programmingUse": "Sau L2-normalize, ranking theo cosine similarity tương đương ranking theo squared Euclidean distance.",
+      "tags": [
+        "cosine-distance",
+        "embedding",
+        "metric"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
+    },
+    {
+      "formulaId": "E184-cos-F3",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Cosine và Euclid trên vector đơn vị",
+      "formula": "||x̂-ŷ||₂² = 2 - 2 cosθ",
+      "meaning": "Khi x,y được L2-normalize, cosine similarity và khoảng cách Euclid liên hệ đơn điệu, nên cho cùng thứ tự láng giềng.",
+      "conditions": [
+        "x̂=x/||x||₂ và ŷ=y/||y||₂.",
+        "Cả hai vector đều normalize chính xác theo cùng chuẩn."
+      ],
+      "commonMistakes": [
+        "Áp dụng quan hệ này cho vector chưa chuẩn hóa.",
+        "Suy ra dot score và cosine score luôn cùng ranking khi norm khác nhau."
+      ],
+      "programmingUse": "ANN index có thể chuyển bài toán cosine sang Euclidean trên embedding đã normalize.",
+      "tags": [
+        "cosine",
+        "euclidean",
+        "normalization"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
     }
   ],
   "importPolicy": {
