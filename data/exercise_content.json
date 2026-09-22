@@ -2297,6 +2297,112 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "exerciseId": "E192-power-E01",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Cho A=I₂. Tính A^5.",
+      "solution": "A^5=I₂.",
+      "tags": [
+        "identity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "exerciseId": "E192-power-E02",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Cho D=diag(2,3). Tính D^3.",
+      "solution": "diag(8,27).",
+      "tags": [
+        "diagonal"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "exerciseId": "E192-power-E03",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Khai triển (A+B)^2 khi không giả sử AB=BA.",
+      "solution": "A²+AB+BA+B².",
+      "tags": [
+        "noncommutative"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "exerciseId": "E192-power-E04",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Vì sao p(A) luôn giao hoán với A?",
+      "solution": "Mỗi A^k giao hoán với A và tổ hợp tuyến tính các lũy thừa cũng vậy.",
+      "tags": [
+        "polynomial"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "exerciseId": "E192-power-E05",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Tính p(A)=2I-3A+A² cho A=diag(1,2).",
+      "solution": "diag(0,0) vì p(1)=0, p(2)=0.",
+      "tags": [
+        "diagonal",
+        "polynomial"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "exerciseId": "E192-power-E06",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Nếu spectral radius(A)=0.8, giải thích trực giác về A^k khi k tăng.",
+      "solution": "Các mode eigen có magnitude <1 nên thường suy giảm theo k, dù non-normality có thể gây transient growth.",
+      "tags": [
+        "stability"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "exerciseId": "E192-power-E07",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "So sánh nhân A 64 lần và exponentiation by squaring để tính A^64.",
+      "solution": "Squaring dùng khoảng log2(64)=6 bước nhân theo cấu trúc lũy thừa thay vì 63 phép nhân tuần tự.",
+      "tags": [
+        "algorithm"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "exerciseId": "E192-power-E08",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "prompt": "Nêu lý do không nên suy numerical stability chỉ từ eigenvalue khi A non-normal.",
+      "solution": "Eigenvector conditioning và transient growth có thể làm ||A^k|| lớn dù spectral radius <1 trong giai đoạn hữu hạn.",
+      "tags": [
+        "non-normal",
+        "numerical"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
     }
   ],
   "importPolicy": {
