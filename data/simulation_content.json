@@ -602,6 +602,98 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "simulationId": "E178-matmul-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng shape và hàng-nhân-cột",
+      "purpose": "Thay đổi m,n,p và quan sát khi nào A@B hợp lệ, kích thước output và một phần tử C_ij được tạo từ hàng-cột nào.",
+      "controls": [
+        {
+          "key": "m",
+          "type": "number",
+          "default": 2
+        },
+        {
+          "key": "n",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "key": "p",
+          "type": "number",
+          "default": 2
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "compatible",
+          "label": "Điều kiện kích thước"
+        },
+        {
+          "key": "output_shape",
+          "label": "Shape của AB"
+        },
+        {
+          "key": "cell_trace",
+          "label": "Hàng × cột tạo C_ij"
+        }
+      ],
+      "expectedObservation": "Chỉ chiều trung gian phải trùng; output lấy hai chiều ngoài và mỗi ô là một dot product.",
+      "tags": [
+        "matrix-multiplication",
+        "shape",
+        "row-column"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "simulationId": "E178-matmul-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng tính không giao hoán",
+      "purpose": "So sánh hai chuỗi biến đổi quay và co giãn không đẳng hướng theo thứ tự RSx và SRx.",
+      "controls": [
+        {
+          "key": "angle_deg",
+          "type": "number",
+          "default": 30
+        },
+        {
+          "key": "scale_x",
+          "type": "number",
+          "default": 2
+        },
+        {
+          "key": "scale_y",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "rs_vector",
+          "label": "RSx"
+        },
+        {
+          "key": "sr_vector",
+          "label": "SRx"
+        },
+        {
+          "key": "difference_norm",
+          "label": "||RSx-SRx||"
+        }
+      ],
+      "expectedObservation": "Khi phép co giãn không đẳng hướng và góc quay khác 0, hai thứ tự thường cho hai vector khác nhau.",
+      "tags": [
+        "matrix-multiplication",
+        "noncommutative",
+        "transform"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION"
     }
   ],
   "importPolicy": {
@@ -662,7 +754,7 @@
     ],
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "emoji": "🔬",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
