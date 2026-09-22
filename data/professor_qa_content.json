@@ -439,6 +439,25 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "qaId": "E196-inverse-QA01",
+      "lessonId": "MATH-VN-LA-C02-L09",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Nếu giáo sư hỏi 'khi nào A^{-1} tồn tại và tại sao trong code không nên giải Ax=b bằng inv(A)@b?', bạn trả lời thế nào?",
+      "answer": "A^{-1} chỉ tồn tại cho ma trận vuông full-rank, tương đương det(A)≠0. Tuy nhiên det khác 0 chưa đảm bảo ổn định số nếu A gần suy biến; cần xem condition number. Khi giải Ax=b, solver dựa trên factorization thường ít phép tính và ít khuếch đại sai số hơn việc tạo inverse tường minh rồi nhân b. Với ma trận không vuông/rank-deficient nên xét least squares, pseudoinverse hoặc regularization.",
+      "followUp": [
+        "AA^{-1}=I nên kiểm bằng exact equality hay tolerance?",
+        "Det rất nhỏ nói gì về conditioning?",
+        "Pseudoinverse khác inverse thường ở đâu?"
+      ],
+      "tags": [
+        "inverse",
+        "numerical-linear-algebra",
+        "E196"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E196_INVERSE_MATRIX"
     }
   ],
   "importPolicy": {
