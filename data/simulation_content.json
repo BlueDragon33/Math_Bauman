@@ -2238,6 +2238,98 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "simulationId": "E198-derivative-SIM1",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Mô phỏng secant tiến về tangent",
+      "purpose": "Quan sát hệ số góc secant [f(a+h)-f(a)]/h hội tụ về f'(a) khi h giảm.",
+      "controls": [
+        {
+          "key": "a",
+          "type": "number",
+          "default": 2
+        },
+        {
+          "key": "h",
+          "type": "number",
+          "default": 0.5
+        },
+        {
+          "key": "function",
+          "type": "select",
+          "default": "x^2"
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "secant_slope",
+          "label": "Secant slope"
+        },
+        {
+          "key": "analytic_derivative",
+          "label": "f'(a)"
+        },
+        {
+          "key": "absolute_error",
+          "label": "|secant-f'(a)|"
+        }
+      ],
+      "expectedObservation": "Với h vừa đủ nhỏ, secant slope tiến gần tangent slope; h quá nhỏ có thể lộ roundoff trong tính số.",
+      "tags": [
+        "secant",
+        "tangent",
+        "limit"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "simulationId": "E198-derivative-SIM2",
+      "lessonId": "MATH-VN-CA-C03-L02",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Mô phỏng tiếp tuyến và sai số tuyến tính hóa",
+      "purpose": "So f(x) với f(a)+f'(a)(x-a) khi khoảng cách |x-a| tăng.",
+      "controls": [
+        {
+          "key": "a",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "x",
+          "type": "number",
+          "default": 1.2
+        },
+        {
+          "key": "function",
+          "type": "select",
+          "default": "x^2"
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "true_value",
+          "label": "f(x)"
+        },
+        {
+          "key": "tangent_value",
+          "label": "Linearized value"
+        },
+        {
+          "key": "linearization_error",
+          "label": "Absolute error"
+        }
+      ],
+      "expectedObservation": "Tiếp tuyến xấp xỉ tốt gần a và sai số tăng khi đi xa điểm tuyến tính hóa với hàm có độ cong.",
+      "tags": [
+        "linearization",
+        "tangent",
+        "error"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
     }
   ],
   "importPolicy": {
@@ -2306,5 +2398,5 @@
     "defaultImportMode": "replace_by_key_then_append",
     "auditBeforeImport": true
   },
-  "sourceBundle": "E15_LOGICAL_BRIDGE_E137"
+  "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
 }
