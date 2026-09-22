@@ -2443,6 +2443,99 @@
         "extrema",
         "E203"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L08",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E204_UNCONSTRAINED_OPTIMIZATION",
+      "mindmapId": "E204-opt-MM01",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Unconstrained optimization",
+          "type": "root"
+        },
+        {
+          "id": "stationary",
+          "label": "∇f=0 → candidate",
+          "type": "criterion"
+        },
+        {
+          "id": "descent",
+          "label": "∇fᵀp<0",
+          "type": "criterion"
+        },
+        {
+          "id": "hessian",
+          "label": "Hessian classification",
+          "type": "bridge"
+        },
+        {
+          "id": "min",
+          "label": "local minimum",
+          "type": "result"
+        },
+        {
+          "id": "max",
+          "label": "local maximum",
+          "type": "result"
+        },
+        {
+          "id": "saddle",
+          "label": "saddle / stationary inflection",
+          "type": "warning"
+        },
+        {
+          "id": "convex",
+          "label": "convexity → global guarantees",
+          "type": "criterion"
+        },
+        {
+          "id": "step",
+          "label": "direction + step size",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "stationary"
+        },
+        {
+          "from": "root",
+          "to": "descent"
+        },
+        {
+          "from": "stationary",
+          "to": "hessian"
+        },
+        {
+          "from": "hessian",
+          "to": "min"
+        },
+        {
+          "from": "hessian",
+          "to": "max"
+        },
+        {
+          "from": "hessian",
+          "to": "saddle"
+        },
+        {
+          "from": "min",
+          "to": "convex"
+        },
+        {
+          "from": "descent",
+          "to": "step"
+        }
+      ],
+      "tags": [
+        "unconstrained-optimization",
+        "stationary-point",
+        "E204"
+      ]
     }
   ],
   "importPolicy": {
