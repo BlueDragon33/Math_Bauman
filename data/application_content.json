@@ -459,6 +459,38 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "applicationId": "E186-basis-A1",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Đổi cơ sở sang principal components",
+      "scenario": "Dữ liệu cảm biến nhiều chiều được PCA để biểu diễn trong hệ trục mới.",
+      "method": "Các principal directions tạo cơ sở trực chuẩn; tọa độ mới z=Uᵀ(x-μ).",
+      "expectedOutcome": "Hiểu PCA là đổi hệ tọa độ sang trục phương sai chính chứ không phải tạo dữ liệu vật lý mới.",
+      "tags": [
+        "basis",
+        "pca",
+        "sensor"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "applicationId": "E186-basis-A2",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Đổi hệ tọa độ robot",
+      "scenario": "Vector vận tốc/điểm được mô tả trong frame body và cần chuyển sang world frame.",
+      "method": "Dùng ma trận rotation làm cơ sở trực chuẩn; x_world=R x_body và x_body=Rᵀ x_world.",
+      "expectedOutcome": "Phân biệt rõ vector vật lý và tọa độ phụ thuộc frame.",
+      "tags": [
+        "basis",
+        "robotics",
+        "coordinate-frame"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
     }
   ],
   "importPolicy": {
