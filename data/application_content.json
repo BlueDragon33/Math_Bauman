@@ -330,6 +330,39 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "applicationId": "E181-norm-A1",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Chọn metric sai số cho cảm biến",
+      "scenario": "Một hệ cảm biến có nhiều kênh và yêu cầu vừa kiểm tổng năng lượng sai số vừa giới hạn kênh tệ nhất.",
+      "method": "Dùng L2 để theo dõi năng lượng tổng thể và L∞ để khóa worst-case; scale các kênh trước nếu đơn vị khác nhau.",
+      "expectedOutcome": "Không dùng một metric duy nhất cho mọi mục tiêu; báo cả lỗi tổng và lỗi cực đại với scale rõ ràng.",
+      "tags": [
+        "norm",
+        "sensor",
+        "error"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "applicationId": "E181-norm-A2",
+      "lessonId": "MATH-VN-LA-C01-L03",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Norm trong regularization và robustness AI",
+      "scenario": "Mô hình cần kiểm soát độ lớn tham số và độ nhạy với nhiễu.",
+      "method": "So sánh L1 regularization (khuyến khích sparsity), L2 regularization (co đều trọng số) và ràng buộc L∞ cho nhiễu worst-case.",
+      "expectedOutcome": "Chọn norm theo hình học và mục tiêu hệ thống, không theo thói quen; hiểu norm thay đổi nghiệm tối ưu.",
+      "tags": [
+        "norm",
+        "ai",
+        "regularization",
+        "robustness"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E181_VECTOR_NORMS"
     }
   ],
   "importPolicy": {
