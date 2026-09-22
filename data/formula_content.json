@@ -871,6 +871,78 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "formulaId": "E186-basis-F1",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Tọa độ theo cơ sở B",
+      "formula": "x = B[x]_B",
+      "meaning": "Các cột của B là vector cơ sở; [x]_B là tọa độ của x trong cơ sở đó.",
+      "conditions": [
+        "Các cột B độc lập tuyến tính.",
+        "B có đúng số vector cơ sở cần thiết cho không gian đang xét."
+      ],
+      "commonMistakes": [
+        "Nhầm vector hình học x với vector tọa độ [x]_B.",
+        "Dùng ma trận B suy biến như một cơ sở đầy đủ."
+      ],
+      "programmingUse": "solve(B, x) để tìm tọa độ ổn định hơn inv(B)@x.",
+      "tags": [
+        "basis",
+        "coordinates",
+        "linear-algebra"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "formulaId": "E186-basis-F2",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Đổi tọa độ giữa hai cơ sở",
+      "formula": "[x]_C = C⁻¹B[x]_B",
+      "meaning": "Ma trận C⁻¹B biến tọa độ từ cơ sở B sang cơ sở C mà không thay đổi vector hình học x.",
+      "conditions": [
+        "B và C là các cơ sở khả nghịch của cùng không gian.",
+        "Quy ước cột cơ sở nhất quán."
+      ],
+      "commonMistakes": [
+        "Đảo thứ tự C⁻¹B thành B⁻¹C.",
+        "Cho rằng đổi cơ sở làm thay đổi đối tượng vật lý thay vì chỉ đổi biểu diễn."
+      ],
+      "programmingUse": "coords_C = solve(C, B @ coords_B).",
+      "tags": [
+        "basis-change",
+        "coordinates",
+        "matrix"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "formulaId": "E186-basis-F3",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Biểu diễn toán tử khi đổi cơ sở",
+      "formula": "A_C = C⁻¹ A B",
+      "meaning": "Ma trận của cùng phép biến đổi thay đổi khi domain dùng cơ sở B và codomain dùng cơ sở C.",
+      "conditions": [
+        "A biểu diễn cùng ánh xạ tuyến tính trong cơ sở chuẩn tương ứng.",
+        "B,C khả nghịch."
+      ],
+      "commonMistakes": [
+        "Dùng C A B⁻¹ sai chiều.",
+        "Nhầm similarity transform S⁻¹AS với trường hợp domain/codomain dùng hai cơ sở khác nhau."
+      ],
+      "programmingUse": "A_C = solve(C, A @ B).",
+      "tags": [
+        "operator",
+        "basis-change",
+        "representation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
     }
   ],
   "importPolicy": {
