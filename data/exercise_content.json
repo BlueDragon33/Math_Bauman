@@ -1980,6 +1980,111 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "exerciseId": "E189-special-E01",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Viết I₃.",
+      "solution": "diag(1,1,1).",
+      "tags": [
+        "identity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "exerciseId": "E189-special-E02",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Cho D=diag(2,-1,3), x=(1,4,2). Tính Dx.",
+      "solution": "(2,-4,6).",
+      "tags": [
+        "diagonal"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "exerciseId": "E189-special-E03",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Tại sao D=diag(2,0,5) không khả nghịch?",
+      "solution": "Có phần tử đường chéo bằng 0 nên det(D)=0.",
+      "tags": [
+        "inverse"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "exerciseId": "E189-special-E04",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Tính det của T=[[2,1,3],[0,-4,2],[0,0,5]].",
+      "solution": "2·(-4)·5=-40.",
+      "tags": [
+        "triangular"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "exerciseId": "E189-special-E05",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Nêu khác biệt semantic giữa identity matrix và zero matrix trong linear layer.",
+      "solution": "Identity giữ nguyên tín hiệu; zero matrix triệt toàn bộ linear contribution.",
+      "tags": [
+        "linear-layer"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "exerciseId": "E189-special-E06",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Vì sao nên biểu diễn feature scaling bằng vector d thay vì dense diag(d) khi n lớn?",
+      "solution": "Tiết kiệm bộ nhớ và giảm phép tính từ dense O(n²) xuống elementwise O(n).",
+      "tags": [
+        "efficiency"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "exerciseId": "E189-special-E07",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Một triangular system Tx=b nên giải bằng inverse hay triangular solve? Vì sao?",
+      "solution": "Triangular solve; ít tốn tính toán, ổn định và không cần dựng T^{-1}.",
+      "tags": [
+        "solve"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "exerciseId": "E189-special-E08",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "prompt": "Trong covariance approximation, dùng diagonal covariance đánh đổi gì?",
+      "solution": "Giảm tham số/tính toán nhưng bỏ qua tương quan chéo giữa các feature.",
+      "tags": [
+        "covariance",
+        "approximation"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
     }
   ],
   "importPolicy": {

@@ -1454,6 +1454,95 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "simulationId": "E189-special-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng diagonal scaling",
+      "purpose": "Thay dᵢ và quan sát từng component output thay đổi độc lập.",
+      "controls": [
+        {
+          "key": "d1",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "d2",
+          "type": "number",
+          "default": 2
+        },
+        {
+          "key": "d3",
+          "type": "number",
+          "default": 0.5
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "y",
+          "label": "Dx"
+        },
+        {
+          "key": "det",
+          "label": "det(D)"
+        },
+        {
+          "key": "invertible",
+          "label": "Khả nghịch"
+        }
+      ],
+      "expectedObservation": "Mỗi dᵢ chỉ scale component tương ứng; dᵢ=0 làm D singular.",
+      "tags": [
+        "diagonal"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "simulationId": "E189-special-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng triangular solve",
+      "purpose": "Thay diagonal/off-diagonal của T và quan sát nghiệm, determinant, conditioning proxy.",
+      "controls": [
+        {
+          "key": "diag_min",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "offdiag",
+          "type": "number",
+          "default": 0.2
+        },
+        {
+          "key": "size",
+          "type": "number",
+          "default": 4
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "det",
+          "label": "Determinant"
+        },
+        {
+          "key": "solution_norm",
+          "label": "Norm nghiệm"
+        },
+        {
+          "key": "near_singular",
+          "label": "Cảnh báo gần suy biến"
+        }
+      ],
+      "expectedObservation": "Diagonal tiến gần 0 làm hệ nhạy hơn và determinant giảm mạnh.",
+      "tags": [
+        "triangular",
+        "conditioning"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
     }
   ],
   "importPolicy": {
