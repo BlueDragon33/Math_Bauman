@@ -2,14 +2,14 @@
   "schema": "bauman_math_supplement_bundle_v1",
   "release": "E197_LIMITS_CONTINUITY",
   "lessonId": "MATH-VN-CA-C03-L01",
-  "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+  "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
   "title": "§1.1 · Giới hạn, liên tục và ý nghĩa tốc độ biến thiên",
   "sources": {
     "formula_content": [
       {
         "formulaId": "E197-limits-F1",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "title": "Định nghĩa giới hạn hàm số",
         "formula": "lim_{x→a} f(x)=L",
         "meaning": "Giá trị f(x) có thể tiến gần L khi x tiến đủ gần a, không đòi hỏi x=a hay f(a)=L.",
@@ -32,7 +32,7 @@
       {
         "formulaId": "E197-limits-F2",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "title": "Điều kiện liên tục tại một điểm",
         "formula": "f liên tục tại a ⇔ lim_{x→a}f(x)=f(a)",
         "meaning": "Liên tục yêu cầu giới hạn tồn tại, f(a) xác định và hai giá trị bằng nhau.",
@@ -55,7 +55,7 @@
       {
         "formulaId": "E197-limits-F3",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "title": "Tốc độ biến thiên trung bình và tức thời",
         "formula": "Δf/Δx=[f(x+h)-f(x)]/h; h→0 cho đạo hàm",
         "meaning": "Tốc độ biến thiên trung bình trên một khoảng trở thành tốc độ tức thời khi khoảng co về 0.",
@@ -80,7 +80,7 @@
       {
         "exerciseId": "E197-limits-E01",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "easy",
         "prompt": "lim_{x→2}(3x+1) bằng bao nhiêu?",
         "solution": "Vì hàm tuyến tính liên tục, thay x=2 được 7.",
@@ -93,7 +93,7 @@
       {
         "exerciseId": "E197-limits-E02",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "easy",
         "prompt": "Nếu lim_{x→a}f(x)=5 nhưng f(a)=2, f có liên tục tại a không?",
         "solution": "Không, vì điều kiện liên tục yêu cầu giới hạn bằng giá trị hàm.",
@@ -106,7 +106,7 @@
       {
         "exerciseId": "E197-limits-E03",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "medium",
         "prompt": "Tính lim_{x→1}(x²-1)/(x-1).",
         "solution": "Phân tích x²-1=(x-1)(x+1), rút gọn khi x≠1 rồi giới hạn bằng 2.",
@@ -119,7 +119,7 @@
       {
         "exerciseId": "E197-limits-E04",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "medium",
         "prompt": "Một hàm piecewise có giới hạn trái 3 và giới hạn phải 4 tại a. Giới hạn hai phía tồn tại không?",
         "solution": "Không. Hai giới hạn một phía khác nhau.",
@@ -132,7 +132,7 @@
       {
         "exerciseId": "E197-limits-E05",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "medium",
         "prompt": "Với f(x)=x², tính tốc độ biến thiên trung bình từ x=2 đến x=2+h.",
         "solution": "[(2+h)²-4]/h=4+h, h≠0.",
@@ -145,7 +145,7 @@
       {
         "exerciseId": "E197-limits-E06",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "hard",
         "prompt": "Giải thích vì sao finite difference với h quá lớn và h quá nhỏ đều có thể kém chính xác.",
         "solution": "h lớn gây truncation error; h quá nhỏ gây cancellation/roundoff trong floating point.",
@@ -158,7 +158,7 @@
       {
         "exerciseId": "E197-limits-E07",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "hard",
         "prompt": "Một mô hình điều khiển có luật piecewise tạo jump discontinuity tại ngưỡng. Rủi ro là gì?",
         "solution": "Output có thể nhảy đột ngột, gây chatter/command discontinuity và làm gradient-based tuning hoặc sensitivity analysis khó ổn định.",
@@ -172,7 +172,7 @@
       {
         "exerciseId": "E197-limits-E08",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "expert",
         "prompt": "Tại sao continuity không đủ để đảm bảo khả vi?",
         "solution": "Ví dụ |x| liên tục tại 0 nhưng đạo hàm trái=-1 và phải=1 nên không khả vi.",
@@ -188,7 +188,7 @@
       {
         "applicationId": "E197-limits-A1",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "title": "Gradient checking trong machine learning",
         "scenario": "Cần kiểm gradient analytic của loss trước khi dùng optimizer.",
         "method": "So đạo hàm analytic với finite difference [J(θ+h)-J(θ-h)]/(2h), quét h theo log-scale để quan sát truncation và roundoff.",
@@ -203,7 +203,7 @@
       {
         "applicationId": "E197-limits-A2",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "title": "Kiểm tính liên tục của luật điều khiển theo ngưỡng",
         "scenario": "Control law đổi chế độ khi error vượt một ngưỡng.",
         "method": "Đánh giá giới hạn trái/phải tại switching threshold và so với output tại threshold; thêm hysteresis/smoothing nếu jump gây chatter.",
@@ -221,7 +221,7 @@
       {
         "simulationId": "E197-limits-SIM1",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "title": "Mô phỏng giới hạn removable singularity",
         "purpose": "Cho x tiến tới 1 trong (x²-1)/(x-1) và so với biểu thức rút gọn x+1.",
         "controls": [
@@ -261,7 +261,7 @@
       {
         "simulationId": "E197-limits-SIM2",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "title": "Mô phỏng finite-difference error theo h",
         "purpose": "Quan sát error của derivative estimate khi h giảm từ thô đến cực nhỏ.",
         "controls": [
@@ -303,7 +303,7 @@
       {
         "qaId": "E197-limits-QA01",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "question": "Nếu giáo sư hỏi 'giới hạn, liên tục và tốc độ biến thiên liên quan với nhau thế nào trong mô hình kỹ thuật?', bạn trả lời thế nào?",
         "answer": "Giới hạn mô tả hành vi khi biến tiến tới một điểm. Liên tục tại a yêu cầu giới hạn bằng giá trị hàm, nên không có jump tại điểm đó. Difference quotient mô tả tốc độ biến thiên trung bình; khi h→0 và giới hạn tồn tại ta có đạo hàm/tốc độ tức thời. Trong tính số, finite difference chỉ xấp xỉ giới hạn và cần cân bằng truncation với roundoff.",
         "followUp": [
@@ -324,7 +324,7 @@
       {
         "reviewPackId": "E197-limits-RP01",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "items": [
           {
             "type": "limit",
@@ -361,7 +361,7 @@
       {
         "questionId": "E197-limits-Q001",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "easy",
         "question": "lim_{x→3}(2x+1) bằng?",
         "options": [
@@ -384,7 +384,7 @@
       {
         "questionId": "E197-limits-Q002",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "easy",
         "question": "Liên tục tại a yêu cầu?",
         "options": [
@@ -407,7 +407,7 @@
       {
         "questionId": "E197-limits-Q003",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "easy",
         "question": "Nếu giới hạn trái khác giới hạn phải thì?",
         "options": [
@@ -430,7 +430,7 @@
       {
         "questionId": "E197-limits-Q004",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "easy",
         "question": "Difference quotient dùng h nào?",
         "options": [
@@ -453,7 +453,7 @@
       {
         "questionId": "E197-limits-Q005",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "easy",
         "question": "Hàm đa thức tại mọi điểm thực là?",
         "options": [
@@ -476,7 +476,7 @@
       {
         "questionId": "E197-limits-Q006",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "easy",
         "question": "lim_{x→1}(x²-1)/(x-1) bằng?",
         "options": [
@@ -499,7 +499,7 @@
       {
         "questionId": "E197-limits-Q007",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "easy",
         "question": "f(a) không xác định nhưng limit tồn tại có thể xảy ra không?",
         "options": [
@@ -522,7 +522,7 @@
       {
         "questionId": "E197-limits-Q008",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "easy",
         "question": "Tốc độ tức thời được liên hệ với?",
         "options": [
@@ -545,7 +545,7 @@
       {
         "questionId": "E197-limits-Q009",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "medium",
         "question": "|x| tại 0 là?",
         "options": [
@@ -568,7 +568,7 @@
       {
         "questionId": "E197-limits-Q010",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "medium",
         "question": "Nếu lim f(x)=4 và f(a)=4 thì?",
         "options": [
@@ -591,7 +591,7 @@
       {
         "questionId": "E197-limits-Q011",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "medium",
         "question": "Forward difference của f tại x là?",
         "options": [
@@ -614,7 +614,7 @@
       {
         "questionId": "E197-limits-Q012",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "medium",
         "question": "Central difference thường có truncation order nào?",
         "options": [
@@ -637,7 +637,7 @@
       {
         "questionId": "E197-limits-Q013",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "medium",
         "question": "h quá nhỏ trong floating point có thể gây?",
         "options": [
@@ -660,7 +660,7 @@
       {
         "questionId": "E197-limits-Q014",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "medium",
         "question": "Jump discontinuity trong control có thể gây?",
         "options": [
@@ -683,7 +683,7 @@
       {
         "questionId": "E197-limits-Q015",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "medium",
         "question": "Continuity có đảm bảo differentiability?",
         "options": [
@@ -706,7 +706,7 @@
       {
         "questionId": "E197-limits-Q016",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "hard",
         "question": "Tại sao limit hữu ích cho numerical algorithms?",
         "options": [
@@ -729,7 +729,7 @@
       {
         "questionId": "E197-limits-Q017",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "hard",
         "question": "Một removable discontinuity khác jump ở điểm nào?",
         "options": [
@@ -752,7 +752,7 @@
       {
         "questionId": "E197-limits-Q018",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "hard",
         "question": "Gradient checking nên chọn h thế nào?",
         "options": [
@@ -775,7 +775,7 @@
       {
         "questionId": "E197-limits-Q019",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "hard",
         "question": "Nếu model piecewise liên tục nhưng kink tại threshold thì?",
         "options": [
@@ -798,7 +798,7 @@
       {
         "questionId": "E197-limits-Q020",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "hard",
         "question": "Điều kiện cần để derivative tại a tồn tại là?",
         "options": [
@@ -821,7 +821,7 @@
       {
         "questionId": "E197-limits-Q021",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "expert",
         "question": "Trong automatic differentiation, finite difference vẫn hữu ích vì?",
         "options": [
@@ -844,7 +844,7 @@
       {
         "questionId": "E197-limits-Q022",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "expert",
         "question": "Một law dùng sign(error) tại 0 có đặc điểm?",
         "options": [
@@ -867,7 +867,7 @@
       {
         "questionId": "E197-limits-Q023",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "expert",
         "question": "Khi h→0 trong exact math nhưng máy tính hữu hạn precision, điều gì xảy ra?",
         "options": [
@@ -890,7 +890,7 @@
       {
         "questionId": "E197-limits-Q024",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "expert",
         "question": "Một test tốt cho continuity logic nên gồm?",
         "options": [
@@ -913,7 +913,7 @@
       {
         "questionId": "E197-limits-Q025",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "level": "expert",
         "question": "Quan hệ đúng là?",
         "options": [
@@ -938,7 +938,7 @@
       {
         "mindmapId": "E197-limits-MM01",
         "lessonId": "MATH-VN-CA-C03-L01",
-        "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+        "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
         "nodes": [
           {
             "id": "root",
