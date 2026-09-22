@@ -735,6 +735,36 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "applicationId": "E195-rank-A1",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Phát hiện feature dư thừa trong dữ liệu",
+      "scenario": "Feature matrix có nhiều cột tương quan tuyến tính hoặc trùng thông tin.",
+      "method": "Đánh giá numerical rank/SVD để phát hiện các chiều phụ thuộc và xem null space/condition trước khi fitting.",
+      "expectedOutcome": "Nhận biết redundancy và tránh mô hình kém xác định hoặc hệ tuyến tính rank-deficient.",
+      "tags": [
+        "data",
+        "feature-redundancy"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
+    },
+    {
+      "applicationId": "E195-rank-A2",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Kiểm tính xác định của bài toán ước lượng/điều khiển",
+      "scenario": "Một hệ phương trình từ đo lường/ràng buộc cần biết có đủ thông tin độc lập hay không.",
+      "method": "So rank của system matrix và augmented matrix; kiểm số bậc tự do để xác định unique/underdetermined/inconsistent.",
+      "expectedOutcome": "Phân loại đúng bài toán trước khi chọn solver.",
+      "tags": [
+        "estimation",
+        "control"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
     }
   ],
   "importPolicy": {
