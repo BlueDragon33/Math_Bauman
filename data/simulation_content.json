@@ -1263,6 +1263,102 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "simulationId": "E187-num-SIM1",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng cosine theo scale và precision",
+      "purpose": "Thay scale vector và precision để quan sát score lý thuyết và score số.",
+      "controls": [
+        {
+          "key": "scale",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "angle_deg",
+          "type": "number",
+          "default": 20
+        },
+        {
+          "key": "precision_bits",
+          "type": "number",
+          "default": 32
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "cos_true",
+          "label": "Cosine lý thuyết"
+        },
+        {
+          "key": "cos_numeric",
+          "label": "Cosine số"
+        },
+        {
+          "key": "abs_error",
+          "label": "Sai số tuyệt đối"
+        },
+        {
+          "key": "ranking_margin",
+          "label": "Margin"
+        }
+      ],
+      "expectedObservation": "Khi precision giảm hoặc scale cực đoan, sai số có thể đủ lớn để ảnh hưởng cặp ranking sát nhau.",
+      "tags": [
+        "cosine",
+        "precision",
+        "numerical"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+    },
+    {
+      "simulationId": "E187-num-SIM2",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng near-zero normalization",
+      "purpose": "Giảm norm của vector về gần 0 và quan sát độ nhạy của normalization.",
+      "controls": [
+        {
+          "key": "norm_x",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.001
+        },
+        {
+          "key": "tol",
+          "type": "number",
+          "default": 0.000001
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "normalized_variation",
+          "label": "Biến thiên sau normalize"
+        },
+        {
+          "key": "valid_flag",
+          "label": "Trạng thái hợp lệ"
+        },
+        {
+          "key": "cosine_spread",
+          "label": "Độ phân tán cosine"
+        }
+      ],
+      "expectedObservation": "Khi norm tiến về 0, nhiễu nhỏ bị khuếch đại mạnh; guard tolerance phải chặn trước normalize.",
+      "tags": [
+        "near-zero",
+        "normalization",
+        "noise"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
     }
   ],
   "importPolicy": {
