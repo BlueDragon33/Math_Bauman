@@ -1733,6 +1733,106 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "simulationId": "E192-matmul-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng shape contract của matrix multiplication",
+      "purpose": "Thay m,n,p,q để xem khi nào AB/BA tồn tại và shape đầu ra.",
+      "controls": [
+        {
+          "key": "m",
+          "type": "number",
+          "default": 2
+        },
+        {
+          "key": "n",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "key": "p",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "key": "q",
+          "type": "number",
+          "default": 4
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "ab_defined",
+          "label": "AB hợp lệ"
+        },
+        {
+          "key": "ab_shape",
+          "label": "Shape AB"
+        },
+        {
+          "key": "ba_defined",
+          "label": "BA hợp lệ"
+        }
+      ],
+      "expectedObservation": "AB phụ thuộc n=p; BA có điều kiện khác và không được suy ra chỉ từ việc AB tồn tại.",
+      "tags": [
+        "shape",
+        "order"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION"
+    },
+    {
+      "simulationId": "E192-matmul-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng AB so với BA",
+      "purpose": "Thay phần tử hai ma trận 2×2 để quan sát tính không giao hoán và ảnh hưởng thứ tự composition.",
+      "controls": [
+        {
+          "key": "a12",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "a21",
+          "type": "number",
+          "default": 0
+        },
+        {
+          "key": "b12",
+          "type": "number",
+          "default": 0
+        },
+        {
+          "key": "b21",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "ab",
+          "label": "AB"
+        },
+        {
+          "key": "ba",
+          "label": "BA"
+        },
+        {
+          "key": "difference_norm",
+          "label": "||AB-BA||"
+        }
+      ],
+      "expectedObservation": "Phần lớn lựa chọn cho AB≠BA; các trường hợp giao hoán là trường hợp đặc biệt.",
+      "tags": [
+        "non-commutative",
+        "composition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION"
     }
   ],
   "importPolicy": {
