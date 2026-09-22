@@ -1543,6 +1543,101 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "simulationId": "E190-transpose-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng mapping index qua transpose",
+      "purpose": "Chọn i,j trên A và quan sát vị trí tương ứng trên Aᵀ.",
+      "controls": [
+        {
+          "key": "rows",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "key": "cols",
+          "type": "number",
+          "default": 4
+        },
+        {
+          "key": "i",
+          "type": "number",
+          "default": 2
+        },
+        {
+          "key": "j",
+          "type": "number",
+          "default": 3
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "aij",
+          "label": "aᵢⱼ"
+        },
+        {
+          "key": "transpose_index",
+          "label": "Vị trí trên Aᵀ"
+        },
+        {
+          "key": "shape_t",
+          "label": "Shape Aᵀ"
+        }
+      ],
+      "expectedObservation": "Phần tử không đổi giá trị nhưng chỉ số chuyển từ (i,j) sang (j,i).",
+      "tags": [
+        "transpose",
+        "index"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "simulationId": "E190-transpose-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng XᵀX và XXᵀ",
+      "purpose": "Thay N,d và quan sát hai Gram matrix khác nhau về shape và semantics.",
+      "controls": [
+        {
+          "key": "samples",
+          "type": "number",
+          "default": 100
+        },
+        {
+          "key": "features",
+          "type": "number",
+          "default": 8
+        },
+        {
+          "key": "centered",
+          "type": "toggle",
+          "default": true
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "xtx_shape",
+          "label": "Shape XᵀX"
+        },
+        {
+          "key": "xxt_shape",
+          "label": "Shape XXᵀ"
+        },
+        {
+          "key": "interpretation",
+          "label": "Feature-vs-sample semantics"
+        }
+      ],
+      "expectedObservation": "XᵀX gắn quan hệ feature; XXᵀ gắn quan hệ sample.",
+      "tags": [
+        "gram",
+        "data"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
     }
   ],
   "importPolicy": {
