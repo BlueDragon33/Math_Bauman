@@ -735,6 +735,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "reviewPackId": "E194-rowop-RP01",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "operations",
+          "prompt": "Nêu 3 row operations.",
+          "expected": "Swap; scale α≠0; row addition."
+        },
+        {
+          "type": "echelon",
+          "prompt": "Nêu 2 đặc điểm chính của REF.",
+          "expected": "Pivot dịch phải; zero rows ở cuối."
+        },
+        {
+          "type": "pivot",
+          "prompt": "Pivot 0 xử lý thế nào?",
+          "expected": "Swap hàng; trong numeric dùng pivoting phù hợp."
+        },
+        {
+          "type": "stability",
+          "prompt": "Vì sao tránh pivot rất nhỏ?",
+          "expected": "Giảm hệ số elimination lớn và khuếch đại sai số."
+        }
+      ],
+      "masteryGate": "Thực hiện đúng row operations + nhận dạng REF/RREF + xử lý pivot 0 + hiểu partial pivoting và invariant của elimination",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
     }
   ],
   "importPolicy": {
