@@ -667,6 +667,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "reviewPackId": "E192-power-RP01",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Nêu A^0 và A^k.",
+          "expected": "A^0=I; A^k là tích k lần A khi A vuông."
+        },
+        {
+          "type": "polynomial",
+          "prompt": "Nêu dạng p(A).",
+          "expected": "c₀I+c₁A+...+c_rA^r."
+        },
+        {
+          "type": "trap",
+          "prompt": "Vì sao (A+B)^2 không luôn bằng A²+2AB+B²?",
+          "expected": "Vì nói chung AB≠BA."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu ý nghĩa A^k trong hệ rời rạc.",
+          "expected": "Chuyển trạng thái k bước."
+        }
+      ],
+      "masteryGate": "Hiểu matrix power là composition + đa thức ma trận + noncommutativity + liên hệ A^k với dynamics và numerical stability",
+      "tags": [
+        "matrix-power",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
     }
   ],
   "importPolicy": {
