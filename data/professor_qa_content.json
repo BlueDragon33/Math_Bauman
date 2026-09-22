@@ -201,6 +201,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E181_VECTOR_NORMS"
+    },
+    {
+      "qaId": "E183-dot-QA01",
+      "lessonId": "MATH-VN-LA-C01-L04",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "question": "Nếu giáo sư hỏi dot product đang đo 'độ giống nhau' hay 'năng lượng', bạn sẽ trả lời thế nào để không nói quá?",
+      "answer": "Dot product là inner product hình học. Với x=y nó cho ||x||² nên liên hệ năng lượng; với hai vector nó kết hợp cả norm và góc. Nếu muốn similarity chỉ theo hướng phải chuẩn hóa thành cosine. Dot product gần 0 nói gần trực giao, không tự động suy ra độc lập thống kê.",
+      "followUp": [
+        "Khi nào cosine không xác định?",
+        "Vì sao Gram matrix là PSD?",
+        "Bạn kiểm trực giao số như thế nào?"
+      ],
+      "tags": [
+        "dot_product",
+        "E183"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E183_DOT_PRODUCT"
     }
   ],
   "importPolicy": {
