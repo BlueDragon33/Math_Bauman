@@ -1047,6 +1047,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "mindmapId": "E186-basis-MM01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Vector cố định · tọa độ phụ thuộc cơ sở",
+          "type": "root"
+        },
+        {
+          "id": "basis",
+          "label": "B = [b₁ … bₙ]",
+          "type": "concept"
+        },
+        {
+          "id": "coords",
+          "label": "x=B[x]_B",
+          "type": "formula"
+        },
+        {
+          "id": "change",
+          "label": "[x]_C=C⁻¹B[x]_B",
+          "type": "formula"
+        },
+        {
+          "id": "condition",
+          "label": "Basis gần suy biến → tọa độ nhạy",
+          "type": "warning"
+        },
+        {
+          "id": "pca",
+          "label": "PCA = đổi sang principal basis",
+          "type": "application"
+        },
+        {
+          "id": "robot",
+          "label": "Robot frames = đổi hệ tọa độ",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "basis"
+        },
+        {
+          "from": "basis",
+          "to": "coords"
+        },
+        {
+          "from": "coords",
+          "to": "change"
+        },
+        {
+          "from": "change",
+          "to": "condition"
+        },
+        {
+          "from": "change",
+          "to": "pca"
+        },
+        {
+          "from": "change",
+          "to": "robot"
+        }
+      ],
+      "tags": [
+        "basis",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
     }
   ],
   "importPolicy": {
