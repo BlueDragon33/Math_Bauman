@@ -921,6 +921,38 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "applicationId": "E201-gradient-A1",
+      "title": "Gradient của loss trong mô hình học máy",
+      "scenario": "Loss J(θ₁,θ₂) thay đổi theo hai tham số và cần biết hướng cập nhật cục bộ để giảm loss.",
+      "method": "Tính từng đạo hàm riêng, ghép thành ∇J, kiểm tra bằng directional finite difference rồi cập nhật θ←θ-η∇J với η đủ nhỏ.",
+      "expectedOutcome": "Hiểu rõ gradient là thông tin hướng cục bộ, còn chất lượng bước đi phụ thuộc learning rate và hình học loss.",
+      "tags": [
+        "machine-learning",
+        "loss",
+        "gradient-descent"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "applicationId": "E201-gradient-A2",
+      "title": "Hướng nhạy nhất của chỉ tiêu kỹ thuật",
+      "scenario": "Một chỉ tiêu hiệu năng g(p₁,p₂) phụ thuộc hai tham số hiệu chỉnh; cần biết tổ hợp thay đổi nhỏ nào làm g tăng mạnh nhất.",
+      "method": "Chuẩn hóa đơn vị tham số nếu cần, tính ∇g tại operating point, dùng hướng ∇g/‖∇g‖ để nhận diện hướng tăng nhạy nhất và -∇g cho hướng giảm.",
+      "expectedOutcome": "Xác định đúng hướng sensitivity lớn nhất thay vì chỉ nhìn từng đạo hàm riêng riêng lẻ.",
+      "tags": [
+        "sensitivity",
+        "engineering",
+        "operating-point"
+      ]
     }
   ],
   "importPolicy": {
