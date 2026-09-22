@@ -456,12 +456,113 @@ def check_bridge_contract(counts: dict[str, int]) -> None:
             fail(f"E140 bridge missing hydrated source mapping: {source}")
 
 
+
+def check_canonical_lesson_references() -> tuple[int, int, int]:
+    """E176: validate non-theory lesson/chapter refs against base theory + E138 overlay."""
+    base = records(load_json(DATA / "theory_lecture_content.json"))
+    overlay = records(load_json(DATA / "theory_lecture_overlay_e138.json"))
+    chapter_payload = load_json(DATA / "chapter_spine.json")
+    chapters = chapter_payload if isinstance(chapter_payload, list) else records(chapter_payload)
+
+    canonical: dict[str, dict] = {}
+    for source_label, items in (("base", base), ("overlay", overlay)):
+        seen_local: set[str] = set()
+        for index, item in enumerate(items):
+            if not isinstance(item, dict):
+                fail(f"E176 {source_label} theory[{index}] is not an object")
+                continue
+            lesson_id = str(item.get("lessonId") or item.get("id") or "").strip()
+            if not lesson_id:
+                fail(f"E176 {source_label} theory[{index}] missing lessonId")
+                continue
+            if lesson_id in seen_local:
+                fail(f"E176 duplicate {source_label} lessonId: {lesson_id}")
+            seen_local.add(lesson_id)
+            # Overlay is an intentional runtime patch layer and may replace a
+            # base lesson with the same ID. Its record is canonical at runtime.
+            canonical[lesson_id] = item
+
+    chapter_by_id: dict[str, dict] = {}
+    for index, chapter in enumerate(chapters):
+        if not isinstance(chapter, dict):
+            fail(f"E176 chapter_spine[{index}] is not an object")
+            continue
+        chapter_id = str(chapter.get("chapterId") or chapter.get("id") or "").strip()
+        if not chapter_id:
+            fail(f"E176 chapter_spine[{index}] missing chapterId")
+            continue
+        if chapter_id in chapter_by_id:
+            fail(f"E176 duplicate chapterId: {chapter_id}")
+        chapter_by_id[chapter_id] = chapter
+
+    source_names = (
+        "formula_content",
+        "exercise_content",
+        "application_content",
+        "simulation_content",
+        "professor_qa_content",
+        "review_pack_content",
+        "question_bank_content",
+        "mindmap_content",
+    )
+    checked_refs = 0
+    overlay_refs = 0
+    overlay_ids = {
+        str(item.get("lessonId") or item.get("id") or "").strip()
+        for item in overlay
+        if isinstance(item, dict)
+    }
+
+    for source_name in source_names:
+        payload = load_json(DATA / f"{source_name}.json")
+        for index, item in enumerate(records(payload)):
+            if not isinstance(item, dict):
+                fail(f"E176 {source_name}[{index}] is not an object")
+                continue
+            lesson_id = str(item.get("lessonId") or "").strip()
+            chapter_id = str(item.get("chapterId") or "").strip()
+            if not lesson_id:
+                fail(f"E176 {source_name}[{index}] missing lessonId")
+                continue
+            checked_refs += 1
+            lesson = canonical.get(lesson_id)
+            if lesson is None:
+                fail(f"E176 {source_name}[{index}] orphan lessonId: {lesson_id}")
+                continue
+            if lesson_id in overlay_ids:
+                overlay_refs += 1
+
+            if not chapter_id:
+                fail(f"E176 {source_name}[{index}] missing chapterId for {lesson_id}")
+                continue
+            chapter = chapter_by_id.get(chapter_id)
+            if chapter is None:
+                fail(f"E176 {source_name}[{index}] unknown chapterId: {chapter_id}")
+                continue
+
+            lesson_no = int(lesson.get("sourceChapterNo") or 0)
+            chapter_no = int(
+                chapter.get("globalChapterNo")
+                or chapter.get("chapterNo")
+                or chapter.get("localChapterNo")
+                or 0
+            )
+            if lesson_no and chapter_no and lesson_no != chapter_no:
+                fail(
+                    f"E176 {source_name}[{index}] chapter mismatch for {lesson_id}: "
+                    f"lesson sourceChapterNo={lesson_no}, chapterId={chapter_id} -> {chapter_no}"
+                )
+
+    return len(canonical), checked_refs, overlay_refs
+
+
 def main() -> int:
     json_files = check_all_json_files()
     counts, manifest = check_manifest_counts()
     check_manifest_federation(counts, manifest)
     check_adapter_counts(counts)
     questions, blueprints = check_questions_and_blueprints()
+    canonical_lessons, lesson_refs, overlay_refs = check_canonical_lesson_references()
     check_mindmap_graph()
     check_pwa_contract()
     check_runtime_shell()
@@ -472,6 +573,9 @@ def main() -> int:
     print(f"- Content Vault domains: {len(counts)}")
     print(f"- Questions: {questions}")
     print(f"- Blueprints: {blueprints}")
+    print(f"- Canonical lessons (base + overlay): {canonical_lessons}")
+    print(f"- Non-theory lesson refs checked: {lesson_refs}")
+    print(f"- Overlay lesson refs checked: {overlay_refs}")
     print(f"- Errors: {len(ERRORS)}")
     print(f"- Warnings: {len(WARNINGS)}")
 
