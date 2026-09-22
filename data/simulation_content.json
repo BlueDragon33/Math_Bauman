@@ -694,6 +694,103 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E178_MATRIX_MULTIPLICATION"
+    },
+    {
+      "simulationId": "E180-span-SIM1",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng span trong R²",
+      "purpose": "Thay đổi hai vector sinh và các hệ số α,β để quan sát vùng vector tạo được và khi nào span sụp từ mặt phẳng xuống một đường.",
+      "controls": [
+        {
+          "key": "v1_angle_deg",
+          "type": "number",
+          "default": 0
+        },
+        {
+          "key": "v2_angle_deg",
+          "type": "number",
+          "default": 60
+        },
+        {
+          "key": "alpha",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "key": "beta",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "result_vector",
+          "label": "αv₁+βv₂"
+        },
+        {
+          "key": "matrix_rank",
+          "label": "rank([v₁ v₂])"
+        },
+        {
+          "key": "span_dimension",
+          "label": "Số chiều span"
+        }
+      ],
+      "expectedObservation": "Hai vector không cùng phương sinh R²; khi chúng trở nên cùng phương, rank và số chiều span giảm còn 1.",
+      "tags": [
+        "span",
+        "rank",
+        "geometry"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
+    },
+    {
+      "simulationId": "E180-span-SIM2",
+      "lessonId": "MATH-VN-LA-C01-L02",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "title": "Mô phỏng membership và residual",
+      "purpose": "Kiểm một vector x có được biểu diễn bởi các vector sinh hay chỉ xấp xỉ do nhiễu.",
+      "controls": [
+        {
+          "key": "noise",
+          "type": "number",
+          "default": 0.02
+        },
+        {
+          "key": "tolerance",
+          "type": "number",
+          "default": 0.001
+        },
+        {
+          "key": "basis_condition",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "least_squares_coefficients",
+          "label": "Hệ số xấp xỉ"
+        },
+        {
+          "key": "relative_residual",
+          "label": "Residual tương đối"
+        },
+        {
+          "key": "svd_rank",
+          "label": "Rank theo SVD/tolerance"
+        }
+      ],
+      "expectedObservation": "Quyết định membership số phụ thuộc tolerance; residual và điều kiện số phải đi kèm kết luận.",
+      "tags": [
+        "span",
+        "least-squares",
+        "numerical"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E180_VECTOR_SPACE_SPAN"
     }
   ],
   "importPolicy": {
