@@ -403,6 +403,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "qaId": "E194-rowop-QA01",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Nếu giáo sư hỏi 'vì sao row operations bảo toàn nghiệm và khi nào cần pivoting?', bạn trả lời thế nào?",
+      "answer": "Mỗi phép biến đổi sơ cấp tương ứng với một biến đổi khả nghịch của các phương trình, nên tập nghiệm không đổi. Pivoting cần khi pivot bằng 0 để tiếp tục khử và trong tính số thường dùng partial pivoting khi pivot quá nhỏ để giảm khuếch đại sai số.",
+      "followUp": [
+        "REF khác RREF thế nào?",
+        "Vì sao α phải khác 0 khi scale hàng?",
+        "Ma trận mở rộng cần xử lý ra sao?"
+      ],
+      "tags": [
+        "gaussian-elimination",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
     }
   ],
   "importPolicy": {
