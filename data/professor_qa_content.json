@@ -313,6 +313,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "qaId": "E189-special-QA01",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Vì sao phân loại ma trận đặc biệt quan trọng thay vì coi mọi ma trận như dense matrix tổng quát?",
+      "answer": "Cấu trúc đặc biệt vừa cho biết tính chất toán học vừa cho phép thuật toán nhanh và ổn định hơn. Identity giữ nguyên, diagonal scale độc lập, triangular cho phép solve hiệu quả; bỏ cấu trúc sẽ mất cả ý nghĩa lẫn hiệu suất.",
+      "followUp": [
+        "Khi nào diagonal matrix khả nghịch?",
+        "Vì sao triangular solve tốt hơn inverse?",
+        "Diagonal covariance bỏ qua thông tin gì?"
+      ],
+      "tags": [
+        "special-matrix",
+        "E189"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
     }
   ],
   "importPolicy": {
