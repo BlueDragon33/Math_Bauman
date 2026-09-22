@@ -2330,6 +2330,86 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E198_SINGLE_VARIABLE_DERIVATIVE"
+    },
+    {
+      "simulationId": "E199-chain-SIM1",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Mô phỏng chain-rule product theo chiều sâu",
+      "purpose": "Quan sát total sensitivity khi tăng số tầng với local derivative cố định.",
+      "controls": [
+        {
+          "key": "depth",
+          "type": "number",
+          "default": 5
+        },
+        {
+          "key": "local_derivative",
+          "type": "number",
+          "default": 0.8
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "total_derivative",
+          "label": "Product derivative"
+        },
+        {
+          "key": "log_magnitude",
+          "label": "log |gradient|"
+        },
+        {
+          "key": "regime",
+          "label": "vanish/stable/explode"
+        }
+      ],
+      "expectedObservation": "|local derivative|<1 lặp sâu làm gradient nhỏ; >1 làm gradient tăng mạnh.",
+      "tags": [
+        "vanishing-gradient",
+        "exploding-gradient"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
+    },
+    {
+      "simulationId": "E199-chain-SIM2",
+      "lessonId": "MATH-VN-CA-C03-L03",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Mô phỏng analytic vs finite-difference chain gradient",
+      "purpose": "So chain-rule derivative của sin(x²) với central difference theo h.",
+      "controls": [
+        {
+          "key": "x",
+          "type": "number",
+          "default": 1.2
+        },
+        {
+          "key": "h",
+          "type": "number",
+          "default": 0.001
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "analytic",
+          "label": "2x cos(x²)"
+        },
+        {
+          "key": "numeric",
+          "label": "Central difference"
+        },
+        {
+          "key": "absolute_error",
+          "label": "Absolute error"
+        }
+      ],
+      "expectedObservation": "Numeric derivative gần analytic với h hợp lý và lệch khi h quá lớn/quá nhỏ.",
+      "tags": [
+        "gradient-check",
+        "finite-difference"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E199_CHAIN_RULE_COMPUTATIONAL_GRAPHS"
     }
   ],
   "importPolicy": {
