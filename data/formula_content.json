@@ -1086,6 +1086,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "formulaId": "E189-special-F1",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Ma trận đơn vị",
+      "formula": "Iₙx = x,  AIₙ = IₘA = A",
+      "meaning": "I là phần tử trung hòa của phép nhân ma trận với kích thước phù hợp.",
+      "conditions": [
+        "I phải có kích thước tương thích.",
+        "Phép nhân ma trận được định nghĩa."
+      ],
+      "commonMistakes": [
+        "Dùng I sai cấp.",
+        "Nhầm identity với ma trận mọi phần tử bằng 1."
+      ],
+      "programmingUse": "np.eye(n); dùng identity initialization hoặc kiểm biến đổi.",
+      "tags": [
+        "identity",
+        "special-matrix"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "formulaId": "E189-special-F2",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Ma trận chéo",
+      "formula": "D = diag(d₁,…,dₙ)",
+      "meaning": "Chỉ đường chéo chính có thể khác 0; Dx scale độc lập từng component.",
+      "conditions": [
+        "D vuông.",
+        "Thứ tự dᵢ khớp component tương ứng."
+      ],
+      "commonMistakes": [
+        "Dùng dense multiplication khi chỉ cần elementwise scale.",
+        "Quên kiểm dᵢ=0 khi cần inverse."
+      ],
+      "programmingUse": "y=d*x thay vì dựng dense D khi chỉ cần scaling.",
+      "tags": [
+        "diagonal",
+        "scaling"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "formulaId": "E189-special-F3",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Định thức ma trận tam giác",
+      "formula": "det(T)=∏ᵢ tᵢᵢ",
+      "meaning": "Với ma trận tam giác, determinant là tích các phần tử đường chéo.",
+      "conditions": [
+        "T là ma trận vuông tam giác.",
+        "Đường chéo được xác định đúng."
+      ],
+      "commonMistakes": [
+        "Áp dụng cho ma trận không tam giác.",
+        "Suy ra khả nghịch mà không kiểm phần tử đường chéo bằng 0."
+      ],
+      "programmingUse": "triangular solve và logdet khai thác diagonal.",
+      "tags": [
+        "triangular",
+        "determinant"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
     }
   ],
   "importPolicy": {
