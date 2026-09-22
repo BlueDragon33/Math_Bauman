@@ -12287,6 +12287,556 @@
       "auditStatus": "PASS",
       "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS",
       "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q001",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Phép nào là row operation hợp lệ?",
+      "options": [
+        "R₂←R₂+3R₁",
+        "R₂←0·R₂",
+        "Chỉ đổi một phần hàng",
+        "Xóa hàng tùy ý"
+      ],
+      "answer": "R₂←R₂+3R₁",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q002",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Scale row hợp lệ cần α?",
+      "options": [
+        "α≠0",
+        "α=0",
+        "α=1 bắt buộc",
+        "α nguyên dương"
+      ],
+      "answer": "α≠0",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q003",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Đổi hai hàng ký hiệu?",
+      "options": [
+        "Rᵢ↔Rⱼ",
+        "Rᵢ+Rⱼ",
+        "RᵢRⱼ",
+        "Rᵢᵀ"
+      ],
+      "answer": "Rᵢ↔Rⱼ",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q004",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "REF yêu cầu hàng 0 ở đâu?",
+      "options": [
+        "Dưới cùng",
+        "Trên cùng",
+        "Bất kỳ",
+        "Không được có"
+      ],
+      "answer": "Dưới cùng",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q005",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Trong REF, pivot hàng sau nằm?",
+      "options": [
+        "Bên phải pivot hàng trước",
+        "Cùng cột bắt buộc",
+        "Bên trái",
+        "Không có quy tắc"
+      ],
+      "answer": "Bên phải pivot hàng trước",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q006",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Khử Gauss chủ yếu đưa ma trận về?",
+      "options": [
+        "Dạng bậc thang",
+        "Dạng chéo luôn",
+        "Dạng đối xứng",
+        "Dạng trực giao"
+      ],
+      "answer": "Dạng bậc thang",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q007",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Nếu pivot bằng 0 nhưng bên dưới có số khác 0, thao tác tự nhiên là?",
+      "options": [
+        "Đổi hàng",
+        "Chia cho 0",
+        "Xóa cột",
+        "Dừng luôn"
+      ],
+      "answer": "Đổi hàng",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q008",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Row operation trên [A|b] phải áp dụng?",
+      "options": [
+        "Toàn hàng kể cả b",
+        "Chỉ phần A",
+        "Chỉ b",
+        "Chỉ pivot"
+      ],
+      "answer": "Toàn hàng kể cả b",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q009",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "RREF khác REF vì?",
+      "options": [
+        "Pivot bằng 1 và là phần tử khác 0 duy nhất trong cột pivot",
+        "REF luôn vuông",
+        "RREF không có pivot",
+        "RREF chỉ dùng swap"
+      ],
+      "answer": "Pivot bằng 1 và là phần tử khác 0 duy nhất trong cột pivot",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q010",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Phép Rᵢ←Rᵢ+αRⱼ có khả nghịch không?",
+      "options": [
+        "Có, dùng Rᵢ←Rᵢ-αRⱼ",
+        "Không",
+        "Chỉ khi α=1",
+        "Chỉ với ma trận vuông"
+      ],
+      "answer": "Có, dùng Rᵢ←Rᵢ-αRⱼ",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q011",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Vì sao nhân hàng với 0 không hợp lệ?",
+      "options": [
+        "Không khả nghịch và làm mất thông tin",
+        "Vì quá chậm",
+        "Vì đổi shape",
+        "Vì tạo transpose"
+      ],
+      "answer": "Không khả nghịch và làm mất thông tin",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q012",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Partial pivoting chọn pivot theo tiêu chí điển hình nào?",
+      "options": [
+        "|aᵢⱼ| lớn nhất trong các hàng còn lại",
+        "Phần tử nhỏ nhất",
+        "Phần tử đầu tiên bất kỳ",
+        "Chỉ đường chéo"
+      ],
+      "answer": "|aᵢⱼ| lớn nhất trong các hàng còn lại",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q013",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Zero row xuất hiện sau elimination thường gợi ý?",
+      "options": [
+        "Phụ thuộc/ràng buộc dư",
+        "Ma trận chắc chắn nghịch đảo được",
+        "Rank đầy đủ luôn",
+        "Sai cú pháp"
+      ],
+      "answer": "Phụ thuộc/ràng buộc dư",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q014",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Back-substitution thường dùng sau khi có?",
+      "options": [
+        "Upper triangular/echelon form",
+        "Identity ngay từ đầu",
+        "Transpose",
+        "Hadamard product"
+      ],
+      "answer": "Upper triangular/echelon form",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q015",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Một invariant của elimination là?",
+      "options": [
+        "Các phần tử dưới pivot đã xử lý phải bằng 0 về mặt số học/tolerance",
+        "Determinant luôn 1",
+        "Trace không đổi",
+        "Mọi hàng chuẩn hóa"
+      ],
+      "answer": "Các phần tử dưới pivot đã xử lý phải bằng 0 về mặt số học/tolerance",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q016",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Pivot rất nhỏ có thể gây?",
+      "options": [
+        "Hệ số elimination lớn và khuếch đại roundoff",
+        "Matrix tự đổi shape",
+        "Rank luôn tăng",
+        "RREF luôn sai"
+      ],
+      "answer": "Hệ số elimination lớn và khuếch đại roundoff",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q017",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Trong floating point, kiểm zero nên dùng?",
+      "options": [
+        "Tolerance phù hợp",
+        "So sánh tuyệt đối ==0 mọi lúc",
+        "Chỉ nhìn sign",
+        "Bỏ qua"
+      ],
+      "answer": "Tolerance phù hợp",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q018",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Row swaps có thể ảnh hưởng determinant thế nào?",
+      "options": [
+        "Đổi dấu determinant",
+        "Không bao giờ ảnh hưởng",
+        "Nhân determinant với 0",
+        "Bình phương determinant"
+      ],
+      "answer": "Đổi dấu determinant",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q019",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Scale một hàng bởi α ảnh hưởng determinant thế nào?",
+      "options": [
+        "Nhân determinant với α",
+        "Không đổi",
+        "Chia determinant cho α luôn",
+        "Đổi dấu bất kể α"
+      ],
+      "answer": "Nhân determinant với α",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q020",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Cộng bội hàng khác vào một hàng ảnh hưởng determinant?",
+      "options": [
+        "Không đổi determinant",
+        "Nhân α",
+        "Đổi dấu",
+        "Đưa determinant về 0 luôn"
+      ],
+      "answer": "Không đổi determinant",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q021",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Vì sao production solver thường không triển khai naive Gauss không pivoting?",
+      "options": [
+        "Ổn định số kém với pivot nhỏ/0",
+        "Vì luôn chậm hơn mọi thuật toán",
+        "Vì không giải được hệ vuông",
+        "Vì row operation sai toán"
+      ],
+      "answer": "Ổn định số kém với pivot nhỏ/0",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q022",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Regression test tốt cho Gaussian elimination nên có?",
+      "options": [
+        "Case cần row swap, near-zero pivot, singular/redundant rows và residual check",
+        "Chỉ ma trận identity",
+        "Chỉ matrix random full rank",
+        "Chỉ integer"
+      ],
+      "answer": "Case cần row swap, near-zero pivot, singular/redundant rows và residual check",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q023",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Khi theo dõi rank qua REF, rank thường bằng?",
+      "options": [
+        "Số pivot/hàng khác 0",
+        "Số cột luôn",
+        "Trace",
+        "Determinant"
+      ],
+      "answer": "Số pivot/hàng khác 0",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q024",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Trong sparse system, row operations có thể gây vấn đề nào?",
+      "options": [
+        "Fill-in làm ma trận bớt sparse",
+        "Tự giảm dimension",
+        "Luôn cải thiện conditioning",
+        "Không có"
+      ],
+      "answer": "Fill-in làm ma trận bớt sparse",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E194-rowop-Q025",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Nếu residual lớn sau solver dù REF có vẻ hợp lệ, nên kiểm?",
+      "options": [
+        "Pivoting, roundoff, tolerance và việc áp row operation lên toàn augmented row",
+        "Chỉ tên biến",
+        "Chỉ UI",
+        "Chỉ số hàng"
+      ],
+      "answer": "Pivoting, roundoff, tolerance và việc áp row operation lên toàn augmented row",
+      "explanation": "Đáp án dựa trên row operations, echelon form, pivoting, tính tương đương hệ và ổn định số của Gaussian elimination.",
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON",
+      "stage": "vn"
     }
   ],
   "importPolicy": {
