@@ -1713,6 +1713,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "mindmapId": "E195-rank-MM01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "lessonId": "MATH-VN-LA-C02-L08",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Rank → independence → solution structure",
+          "type": "root"
+        },
+        {
+          "id": "pivot",
+          "label": "rank = số pivot",
+          "type": "formula"
+        },
+        {
+          "id": "consistent",
+          "label": "rank(A)=rank([A|b])",
+          "type": "criterion"
+        },
+        {
+          "id": "unique",
+          "label": "rank=n → unique",
+          "type": "result"
+        },
+        {
+          "id": "free",
+          "label": "nullity=n-rank",
+          "type": "formula"
+        },
+        {
+          "id": "numeric",
+          "label": "Numerical rank phụ thuộc tolerance",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "Redundancy / estimation / least squares",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "pivot"
+        },
+        {
+          "from": "root",
+          "to": "consistent"
+        },
+        {
+          "from": "consistent",
+          "to": "unique"
+        },
+        {
+          "from": "root",
+          "to": "free"
+        },
+        {
+          "from": "pivot",
+          "to": "numeric"
+        },
+        {
+          "from": "free",
+          "to": "application"
+        }
+      ],
+      "tags": [
+        "rank",
+        "E195"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E195_RANK_LINEAR_SYSTEMS"
     }
   ],
   "importPolicy": {
