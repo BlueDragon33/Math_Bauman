@@ -701,6 +701,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E192_MATRIX_MULTIPLICATION"
+    },
+    {
+      "reviewPackId": "E193-power-RP01",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Nêu A⁰ và Aᵏ.",
+          "expected": "A⁰=I, Aᵏ=A·A^{k-1} cho A vuông."
+        },
+        {
+          "type": "contrast",
+          "prompt": "A² khác A⊙A thế nào?",
+          "expected": "A² là matrix product; A⊙A là elementwise square."
+        },
+        {
+          "type": "polynomial",
+          "prompt": "Viết p(A) cho p(x)=c₀+c₁x+c₂x².",
+          "expected": "c₀I+c₁A+c₂A²."
+        },
+        {
+          "type": "bridge",
+          "prompt": "Nêu một ứng dụng A^k.",
+          "expected": "State transition k bước, graph propagation hoặc repeated transform."
+        }
+      ],
+      "masteryGate": "Phân biệt matrix power/elementwise + viết đúng p(A) + hiểu c₀I + dùng Horner/Cayley–Hamilton ở mức cầu nối + liên hệ state transition",
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
     }
   ],
   "importPolicy": {
