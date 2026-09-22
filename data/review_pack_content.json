@@ -669,40 +669,6 @@
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
     },
     {
-      "reviewPackId": "E192-matmul-RP01",
-      "lessonId": "MATH-VN-LA-C02-L05",
-      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
-      "items": [
-        {
-          "type": "shape",
-          "prompt": "Nêu điều kiện AB tồn tại và shape kết quả.",
-          "expected": "A m×n, B n×p ⇒ AB m×p."
-        },
-        {
-          "type": "entry",
-          "prompt": "Viết công thức (AB)ᵢⱼ.",
-          "expected": "Σₖ aᵢₖbₖⱼ."
-        },
-        {
-          "type": "contrast",
-          "prompt": "Phân biệt AB và A⊙B.",
-          "expected": "AB hàng×cột có tổng; Hadamard nhân từng phần tử."
-        },
-        {
-          "type": "order",
-          "prompt": "Vì sao AB≠BA nói chung?",
-          "expected": "Matrix product biểu diễn composition có thứ tự và shape/order không đối xứng."
-        }
-      ],
-      "masteryGate": "Đọc đúng shape contract + tính hàng×cột + phân biệt Hadamard + giải thích tính không giao hoán + áp dụng đúng convention trong AI/control",
-      "tags": [
-        "matrix-multiplication",
-        "E192"
-      ],
-      "auditStatus": "PASS",
-      "sourceBundle": "E192_MATRIX_MULTIPLICATION"
-    },
-    {
       "reviewPackId": "E193-power-RP01",
       "lessonId": "MATH-VN-LA-C02-L06",
       "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
