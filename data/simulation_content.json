@@ -2964,6 +2964,88 @@
         "trajectory",
         "optimization"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "simulationId": "E206-prob-SIM1",
+      "title": "Venn event explorer",
+      "purpose": "Bật/tắt A, B và xem union, intersection, complement thay đổi trên sơ đồ Venn.",
+      "controls": [
+        {
+          "key": "operation",
+          "type": "select",
+          "default": "union"
+        },
+        {
+          "key": "show_complement",
+          "type": "boolean",
+          "default": false
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "selected_region",
+          "label": "Vùng biến cố"
+        },
+        {
+          "key": "set_expression",
+          "label": "Biểu thức tập hợp"
+        },
+        {
+          "key": "logic_expression",
+          "label": "Biểu thức logic"
+        }
+      ],
+      "expectedObservation": "Union bao gồm giao; complement luôn được hiểu theo Ω.",
+      "tags": [
+        "venn",
+        "set-algebra",
+        "events"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "simulationId": "E206-prob-SIM2",
+      "title": "Sinh outcome và kiểm event mask",
+      "purpose": "Sinh các outcome rời rạc, áp dụng rule A/B và so tập kết quả với boolean mask.",
+      "controls": [
+        {
+          "key": "n_trials",
+          "type": "number",
+          "default": 20
+        },
+        {
+          "key": "event_rule",
+          "type": "select",
+          "default": "A_union_B"
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "outcomes",
+          "label": "Outcomes"
+        },
+        {
+          "key": "event_hits",
+          "label": "Outcome thuộc biến cố"
+        },
+        {
+          "key": "count",
+          "label": "Số lần event xảy ra"
+        }
+      ],
+      "expectedObservation": "Một event là tập các outcome thỏa rule; phép toán tập hợp khớp phép logic trên mask.",
+      "tags": [
+        "simulation",
+        "boolean-mask",
+        "sample-space"
+      ]
     }
   ],
   "importPolicy": {

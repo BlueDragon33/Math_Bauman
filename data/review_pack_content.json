@@ -1178,6 +1178,47 @@
         "convergence",
         "E205"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-PS-C04-L01",
+      "chapterId": "MATH-VN-C04-xac_suat_co_ban_va_bien_",
+      "auditStatus": "PASS",
+      "sourceBundle": "E206_SAMPLE_SPACE_EVENTS",
+      "reviewPackId": "E206-prob-RP01",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Outcome, Ω và event khác nhau thế nào?",
+          "expected": "Outcome là phần tử; Ω là tập outcome; event là tập con Ω."
+        },
+        {
+          "type": "operation",
+          "prompt": "A∪B nghĩa gì?",
+          "expected": "A hoặc B hoặc cả hai."
+        },
+        {
+          "type": "operation",
+          "prompt": "A∩B nghĩa gì?",
+          "expected": "A và B cùng xảy ra."
+        },
+        {
+          "type": "logic",
+          "prompt": "(A∪B)ᶜ bằng?",
+          "expected": "Aᶜ∩Bᶜ."
+        },
+        {
+          "type": "design",
+          "prompt": "Vì sao Ω phải được chốt trước?",
+          "expected": "Để universe và complement/event interpretation không mơ hồ."
+        }
+      ],
+      "masteryGate": "Phân biệt outcome/sample space/event + thao tác union/intersection/complement + dùng De Morgan + mô hình hóa được event từ tình huống cảm biến/dữ liệu",
+      "tags": [
+        "sample-space",
+        "events",
+        "set-algebra",
+        "E206"
+      ]
     }
   ],
   "importPolicy": {
