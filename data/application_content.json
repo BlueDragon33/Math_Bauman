@@ -643,6 +643,36 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "applicationId": "E192-power-A1",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Lan truyền trạng thái nhiều bước",
+      "scenario": "Mô hình rời rạc x_{k+1}=Ax_k cần dự đoán k bước không input.",
+      "method": "Dùng A^k hoặc thuật toán propagate lặp; theo dõi spectral radius, conditioning và norm.",
+      "expectedOutcome": "Hiểu rõ mode nào suy giảm/khuếch đại và tránh kết luận ổn định hời hợt.",
+      "tags": [
+        "control",
+        "state-transition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
+    },
+    {
+      "applicationId": "E192-power-A2",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Polynomial graph filter",
+      "scenario": "Cần aggregate thông tin nhiều hop trên graph mà không diagonalize toàn bộ matrix.",
+      "method": "Dùng p(A)=Σc_kA^k trên adjacency/Laplacian với bậc phù hợp.",
+      "expectedOutcome": "Biểu diễn lọc cục bộ nhiều hop và kiểm được cost/độ ổn định.",
+      "tags": [
+        "graph",
+        "polynomial-filter"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_POWERS_POLYNOMIAL"
     }
   ],
   "importPolicy": {
