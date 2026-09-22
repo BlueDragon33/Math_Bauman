@@ -1638,6 +1638,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "formulaId": "E197-limits-F1",
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Định nghĩa giới hạn hàm số",
+      "formula": "lim_{x→a} f(x)=L",
+      "meaning": "Giá trị f(x) có thể tiến gần L khi x tiến đủ gần a, không đòi hỏi x=a hay f(a)=L.",
+      "conditions": [
+        "Xét hành vi của f quanh a.",
+        "Cần phân biệt giới hạn một phía khi miền xác định bị chặn."
+      ],
+      "commonMistakes": [
+        "Thay x=a trực tiếp rồi gọi đó là giới hạn trong mọi trường hợp.",
+        "Nhầm f(a) với lim_{x→a}f(x)."
+      ],
+      "programmingUse": "Dùng kiểm tra hội tụ, sai số truncation và hành vi của thuật toán khi bước h→0.",
+      "tags": [
+        "limit",
+        "continuity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "formulaId": "E197-limits-F2",
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Điều kiện liên tục tại một điểm",
+      "formula": "f liên tục tại a ⇔ lim_{x→a}f(x)=f(a)",
+      "meaning": "Liên tục yêu cầu giới hạn tồn tại, f(a) xác định và hai giá trị bằng nhau.",
+      "conditions": [
+        "a thuộc miền xác định của f.",
+        "Giới hạn hai phía tồn tại và hữu hạn."
+      ],
+      "commonMistakes": [
+        "Chỉ kiểm f(a) tồn tại.",
+        "Chỉ kiểm giới hạn tồn tại mà không so với f(a)."
+      ],
+      "programmingUse": "Kiểm tính liên tục của model/piecewise mapping trước khi dùng gradient-based optimization.",
+      "tags": [
+        "continuity",
+        "limit"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "formulaId": "E197-limits-F3",
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Tốc độ biến thiên trung bình và tức thời",
+      "formula": "Δf/Δx=[f(x+h)-f(x)]/h; h→0 cho đạo hàm",
+      "meaning": "Tốc độ biến thiên trung bình trên một khoảng trở thành tốc độ tức thời khi khoảng co về 0.",
+      "conditions": [
+        "h≠0 trước khi lấy giới hạn.",
+        "Giới hạn h→0 phải tồn tại để đạo hàm tồn tại."
+      ],
+      "commonMistakes": [
+        "Cho h=0 ngay từ đầu.",
+        "Đồng nhất finite difference với đạo hàm exact khi h còn hữu hạn."
+      ],
+      "programmingUse": "Nền tảng của finite differences, numerical differentiation, sensitivity và gradient checking.",
+      "tags": [
+        "rate-of-change",
+        "difference-quotient"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E197_LIMITS_CONTINUITY"
     }
   ],
   "importPolicy": {

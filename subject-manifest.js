@@ -33,25 +33,25 @@ window.SUBJECT_MANIFEST = {
     "theory_lecture_frame": 56,
     "theory_lecture_content": 347,
     "formula_frame": 56,
-    "formula_content": 75,
+    "formula_content": 78,
     "simulation_frame": 56,
-    "simulation_content": 50,
+    "simulation_content": 52,
     "exercise_frame": 56,
-    "exercise_content": 200,
+    "exercise_content": 208,
     "application_frame": 56,
-    "application_content": 50,
+    "application_content": 52,
     "professor_qa_frame": 56,
-    "professor_qa_content": 25,
+    "professor_qa_content": 26,
     "review_pack_frame": 56,
-    "review_pack_content": 25,
+    "review_pack_content": 26,
     "question_bank_frame": 56,
-    "question_bank_content": 625,
+    "question_bank_content": 650,
     "test_blueprint_frame": 56,
     "test_blueprint_content": 4,
     "chapter_lecture_frame": 56,
     "chapter_lecture_content": 0,
     "mindmap_frame": 56,
-    "mindmap_content": 25,
+    "mindmap_content": 26,
     "concept_map_frame": 56,
     "concept_map_content": 0,
     "media_frame": 56,
@@ -412,8 +412,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/formula_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 75,
-      "recordCount": 75
+      "plannedCount": 78,
+      "recordCount": 78
     },
     {
       "id": "simulation_frame",
@@ -428,8 +428,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/simulation_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 50,
-      "recordCount": 50
+      "plannedCount": 52,
+      "recordCount": 52
     },
     {
       "id": "exercise_frame",
@@ -444,8 +444,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/exercise_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 200,
-      "recordCount": 200
+      "plannedCount": 208,
+      "recordCount": 208
     },
     {
       "id": "application_frame",
@@ -460,8 +460,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/application_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 50,
-      "recordCount": 50
+      "plannedCount": 52,
+      "recordCount": 52
     },
     {
       "id": "professor_qa_frame",
@@ -476,8 +476,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/professor_qa_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 25,
-      "recordCount": 25
+      "plannedCount": 26,
+      "recordCount": 26
     },
     {
       "id": "review_pack_frame",
@@ -492,8 +492,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/review_pack_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 25,
-      "recordCount": 25
+      "plannedCount": 26,
+      "recordCount": 26
     },
     {
       "id": "question_bank_frame",
@@ -508,8 +508,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/question_bank_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 625,
-      "recordCount": 625
+      "plannedCount": 650,
+      "recordCount": 650
     },
     {
       "id": "test_blueprint_frame",
@@ -556,8 +556,8 @@ window.SUBJECT_MANIFEST = {
       "path": "data/mindmap_content.json",
       "required": false,
       "lazy": false,
-      "plannedCount": 25,
-      "recordCount": 25
+      "plannedCount": 26,
+      "recordCount": 26
     },
     {
       "id": "concept_map_frame",
@@ -730,14 +730,14 @@ window.SUBJECT_MANIFEST = {
     "review_packs": 260,
     "chapter_lectures": 32,
     "lessonSlides": 4160,
-    "formula_content": 75,
-    "simulation_content": 50,
-    "exercise_content": 200,
-    "application_content": 50,
-    "professor_qa_content": 25,
-    "review_pack_content": 25,
-    "question_bank_content": 625,
-    "mindmap_content": 25
+    "formula_content": 78,
+    "simulation_content": 52,
+    "exercise_content": 208,
+    "application_content": 52,
+    "professor_qa_content": 26,
+    "review_pack_content": 26,
+    "question_bank_content": 650,
+    "mindmap_content": 26
   },
   "simulationMode": "unified_only_260_labs_e76",
   "packageType": "FINAL_WITH_TEMPLATE_REFERENCE",

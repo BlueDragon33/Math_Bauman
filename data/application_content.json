@@ -796,6 +796,37 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "applicationId": "E197-limits-A1",
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Gradient checking trong machine learning",
+      "scenario": "Cần kiểm gradient analytic của loss trước khi dùng optimizer.",
+      "method": "So đạo hàm analytic với finite difference [J(θ+h)-J(θ-h)]/(2h), quét h theo log-scale để quan sát truncation và roundoff.",
+      "expectedOutcome": "Phát hiện sai implementation gradient mà không nhầm sai số số học với sai công thức.",
+      "tags": [
+        "machine-learning",
+        "gradient-check"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E197_LIMITS_CONTINUITY"
+    },
+    {
+      "applicationId": "E197-limits-A2",
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "title": "Kiểm tính liên tục của luật điều khiển theo ngưỡng",
+      "scenario": "Control law đổi chế độ khi error vượt một ngưỡng.",
+      "method": "Đánh giá giới hạn trái/phải tại switching threshold và so với output tại threshold; thêm hysteresis/smoothing nếu jump gây chatter.",
+      "expectedOutcome": "Thiết kế chuyển chế độ mượt hơn và giảm dao động không mong muốn.",
+      "tags": [
+        "control",
+        "switching",
+        "continuity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E197_LIMITS_CONTINUITY"
     }
   ],
   "importPolicy": {

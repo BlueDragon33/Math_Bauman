@@ -1861,6 +1861,81 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E196_MATRIX_INVERSE"
+    },
+    {
+      "mindmapId": "E197-limits-MM01",
+      "lessonId": "MATH-VN-CA-C03-L01",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Limit → continuity → rate of change",
+          "type": "root"
+        },
+        {
+          "id": "limit",
+          "label": "lim x→a f(x)",
+          "type": "concept"
+        },
+        {
+          "id": "onesided",
+          "label": "left/right limits",
+          "type": "criterion"
+        },
+        {
+          "id": "continuity",
+          "label": "lim=f(a)",
+          "type": "criterion"
+        },
+        {
+          "id": "quotient",
+          "label": "[f(x+h)-f(x)]/h",
+          "type": "formula"
+        },
+        {
+          "id": "numerical",
+          "label": "h: truncation ↔ roundoff",
+          "type": "warning"
+        },
+        {
+          "id": "application",
+          "label": "gradient check / control threshold",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "limit"
+        },
+        {
+          "from": "limit",
+          "to": "onesided"
+        },
+        {
+          "from": "limit",
+          "to": "continuity"
+        },
+        {
+          "from": "root",
+          "to": "quotient"
+        },
+        {
+          "from": "quotient",
+          "to": "numerical"
+        },
+        {
+          "from": "numerical",
+          "to": "application"
+        }
+      ],
+      "tags": [
+        "limit",
+        "continuity",
+        "E197"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E197_LIMITS_CONTINUITY"
     }
   ],
   "importPolicy": {
