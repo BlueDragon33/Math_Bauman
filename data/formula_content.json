@@ -1431,6 +1431,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "formulaId": "E194-rowop-F1",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Ba phép biến đổi sơ cấp trên hàng",
+      "formula": "Rᵢ↔Rⱼ; Rᵢ←αRᵢ (α≠0); Rᵢ←Rᵢ+αRⱼ",
+      "meaning": "Ba phép biến đổi hàng cơ bản bảo toàn tập nghiệm của hệ tuyến tính tương ứng và là nền của khử Gauss.",
+      "conditions": [
+        "Nhân hàng phải dùng α≠0.",
+        "Thao tác phải áp dụng cho toàn bộ hàng, kể cả cột vế phải trong ma trận mở rộng."
+      ],
+      "commonMistakes": [
+        "Chỉ sửa một phần hàng.",
+        "Nhân hàng với 0 rồi coi là tương đương."
+      ],
+      "programmingUse": "Implement row_swap, row_scale, row_add với copy/aliasing rõ ràng; log từng phép để debug.",
+      "tags": [
+        "row-operation",
+        "gaussian-elimination"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "formulaId": "E194-rowop-F2",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Dạng bậc thang hàng",
+      "formula": "pivot(r₁)<pivot(r₂)<⋯; các hàng 0 ở dưới",
+      "meaning": "Trong row-echelon form, pivot của mỗi hàng khác 0 nằm về bên phải pivot hàng trên, và các hàng 0 được đẩy xuống cuối.",
+      "conditions": [
+        "Thứ tự pivot tăng dần theo cột.",
+        "Không yêu cầu pivot bằng 1 hay triệt hết phần trên pivot như RREF."
+      ],
+      "commonMistakes": [
+        "Nhầm REF với RREF.",
+        "Để hàng 0 nằm xen giữa các hàng khác 0."
+      ],
+      "programmingUse": "Sau elimination, kiểm pivot columns tăng nghiêm ngặt và zero rows ở cuối.",
+      "tags": [
+        "row-echelon",
+        "pivot"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "formulaId": "E194-rowop-F3",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Khử Gauss dưới pivot",
+      "formula": "Rᵢ←Rᵢ-(aᵢⱼ/aᵣⱼ)Rᵣ",
+      "meaning": "Dùng hàng pivot r để triệt phần tử ở cùng cột j của các hàng phía dưới, đưa ma trận dần về dạng bậc thang.",
+      "conditions": [
+        "Pivot aᵣⱼ≠0; nếu bằng 0 cần đổi hàng/pivoting.",
+        "Trong tính số nên cân nhắc partial pivoting để giảm sai số."
+      ],
+      "commonMistakes": [
+        "Chia cho pivot bằng 0.",
+        "Bỏ qua sai số số học khi pivot rất nhỏ."
+      ],
+      "programmingUse": "Partial pivoting: chọn hàng có |aᵢⱼ| lớn nhất rồi swap trước khi elimination.",
+      "tags": [
+        "gaussian-elimination",
+        "pivoting"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
     }
   ],
   "importPolicy": {

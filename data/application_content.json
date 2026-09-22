@@ -705,6 +705,36 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "applicationId": "E194-rowop-A1",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Giải hệ tuyến tính bằng khử Gauss",
+      "scenario": "Hệ Ax=b cần giải hoặc kiểm tính tương thích.",
+      "method": "Tạo [A|b], dùng row operations và partial pivoting để đưa về REF/RREF, sau đó back-substitution hoặc đọc nghiệm.",
+      "expectedOutcome": "Hệ được biến đổi về dạng dễ giải nhưng vẫn tương đương với hệ ban đầu.",
+      "tags": [
+        "linear-system",
+        "gauss"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "applicationId": "E194-rowop-A2",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Tiền xử lý symbolic/numeric cho ma trận ràng buộc",
+      "scenario": "Cần phát hiện hàng phụ thuộc và cấu trúc pivot của các ràng buộc.",
+      "method": "Đưa constraint matrix về echelon form, theo dõi pivot columns và zero rows để nhận diện redundancy.",
+      "expectedOutcome": "Nhìn được cấu trúc độc lập/phụ thuộc trước các bước rank/solution tiếp theo.",
+      "tags": [
+        "constraints",
+        "rank-prep"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
     }
   ],
   "importPolicy": {

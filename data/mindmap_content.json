@@ -1639,6 +1639,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "mindmapId": "E194-rowop-MM01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Row operations → echelon form",
+          "type": "root"
+        },
+        {
+          "id": "swap",
+          "label": "Rᵢ↔Rⱼ",
+          "type": "operation"
+        },
+        {
+          "id": "scale",
+          "label": "Rᵢ←αRᵢ, α≠0",
+          "type": "operation"
+        },
+        {
+          "id": "add",
+          "label": "Rᵢ←Rᵢ+αRⱼ",
+          "type": "operation"
+        },
+        {
+          "id": "pivot",
+          "label": "Pivot tiến sang phải",
+          "type": "concept"
+        },
+        {
+          "id": "ref",
+          "label": "REF: zero rows ở cuối",
+          "type": "structure"
+        },
+        {
+          "id": "stability",
+          "label": "Partial pivoting cho ổn định số",
+          "type": "warning"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "swap"
+        },
+        {
+          "from": "root",
+          "to": "scale"
+        },
+        {
+          "from": "root",
+          "to": "add"
+        },
+        {
+          "from": "add",
+          "to": "pivot"
+        },
+        {
+          "from": "pivot",
+          "to": "ref"
+        },
+        {
+          "from": "pivot",
+          "to": "stability"
+        }
+      ],
+      "tags": [
+        "row-operations",
+        "E194"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
     }
   ],
   "importPolicy": {

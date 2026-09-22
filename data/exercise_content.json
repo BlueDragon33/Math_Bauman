@@ -2512,6 +2512,112 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
+    },
+    {
+      "exerciseId": "E194-rowop-E01",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Nêu ba phép biến đổi sơ cấp trên hàng.",
+      "solution": "Đổi hai hàng; nhân một hàng với α≠0; cộng vào một hàng bội α của hàng khác.",
+      "tags": [
+        "definition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "exerciseId": "E194-rowop-E02",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Cho [[1,2],[3,4]], thực hiện R₂←R₂-3R₁.",
+      "solution": "[[1,2],[0,-2]].",
+      "tags": [
+        "elimination"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "exerciseId": "E194-rowop-E03",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Vì sao Rᵢ←0·Rᵢ không phải phép biến đổi sơ cấp hợp lệ?",
+      "solution": "Nó làm mất thông tin và không khả nghịch, nên không bảo toàn hệ tương đương.",
+      "tags": [
+        "invertibility"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "exerciseId": "E194-rowop-E04",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Phân biệt REF và RREF.",
+      "solution": "REF chỉ cần pivot dịch phải và zero rows ở cuối; RREF thêm pivot bằng 1 và mỗi pivot là phần tử khác 0 duy nhất trong cột của nó.",
+      "tags": [
+        "ref",
+        "rref"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "exerciseId": "E194-rowop-E05",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Pivot đầu tiên bằng 0 nhưng bên dưới có phần tử khác 0. Nên làm gì?",
+      "solution": "Đổi hàng để đưa phần tử khác 0 lên vị trí pivot.",
+      "tags": [
+        "pivot"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "exerciseId": "E194-rowop-E06",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Tại sao partial pivoting thường tốt hơn việc giữ một pivot rất nhỏ?",
+      "solution": "Giảm hệ số nhân elimination quá lớn và hạn chế khuếch đại sai số làm tròn.",
+      "tags": [
+        "numerical-stability"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "exerciseId": "E194-rowop-E07",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Trong ma trận mở rộng [A|b], vì sao mọi row operation phải tác động cả cột b?",
+      "solution": "Vì row operation biểu diễn biến đổi phương trình; bỏ cột b sẽ tạo hệ khác không tương đương.",
+      "tags": [
+        "augmented-matrix"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
+    },
+    {
+      "exerciseId": "E194-rowop-E08",
+      "lessonId": "MATH-VN-LA-C02-L07",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "prompt": "Một implementation Gauss elimination cần những invariant nào để dễ kiểm thử?",
+      "solution": "Pivot columns tăng dần; các phần tử dưới pivot đã triệt; row operations áp dụng toàn hàng; không chia pivot 0; permutation/pivot log nhất quán.",
+      "tags": [
+        "testing",
+        "invariant"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E194_ROW_OPERATIONS_ECHELON"
     }
   ],
   "importPolicy": {
