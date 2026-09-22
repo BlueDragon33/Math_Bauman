@@ -574,6 +574,26 @@
         "oral-exam",
         "E202"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L07",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E203_HESSIAN_CURVATURE_EXTREMA",
+      "qaId": "E203-hessian-QA01",
+      "question": "Nếu giáo sư hỏi 'Hessian cho biết gì mà gradient không cho biết, và phân loại điểm dừng ra sao?', bạn trả lời thế nào?",
+      "answer": "Gradient cho slope bậc nhất và bằng 0 tại stationary point nhưng không nói điểm đó là min, max hay saddle. Hessian là ma trận đạo hàm bậc hai, mô tả curvature theo mọi hướng qua quadratic form dᵀHd. Tại điểm dừng: H dương xác định cho cực tiểu chặt cục bộ, âm xác định cho cực đại chặt, bất định cho saddle. Nếu Hessian chỉ bán xác định thì second-order test có thể không kết luận.",
+      "followUp": [
+        "Vì sao Hessian đối xứng khi f đủ trơn?",
+        "Condition number Hessian ảnh hưởng gradient descent thế nào?",
+        "Newton dùng Hessian ra sao?"
+      ],
+      "tags": [
+        "hessian",
+        "extrema",
+        "oral-exam",
+        "E203"
+      ]
     }
   ],
   "importPolicy": {
