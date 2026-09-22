@@ -146,6 +146,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E139_E15_LOGICAL"
+    },
+    {
+      "qaId": "E178-matmul-QA01",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Nếu giáo sư hỏi vì sao phép nhân ma trận không chỉ là 'nhân các số trong bảng', bạn sẽ giải thích thế nào và nêu bẫy quan trọng nhất?",
+      "answer": "AB mô tả phép hợp thành: cột của B phải khớp không gian đầu vào của A, và mỗi phần tử của AB là hàng của A tích vô hướng với cột của B. Bẫy quan trọng là đảo thứ tự: nói chung AB≠BA, nên đổi thứ tự đồng nghĩa đổi chuỗi biến đổi.",
+      "followUp": [
+        "Khi nào AB tồn tại nhưng BA không tồn tại?",
+        "Vì sao A(BC)=(AB)C không cho phép đổi A và B?",
+        "Bạn sẽ kiểm một lỗi shape trong NumPy như thế nào?"
+      ],
+      "tags": [
+        "matrix_multiplication",
+        "E178"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E178_MATRIX_MULTIPLICATION"
     }
   ],
   "importPolicy": {
@@ -191,7 +209,7 @@
     "answer": "Vì tích vô hướng bị ảnh hưởng bởi độ dài; cần chuẩn hóa để xét hướng.",
     "auditStatus": "DRAFT"
   },
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "emoji": "🎓",
   "cleanArchitecturePolicy": {
     "contentMustNotStoreStageTree": true,
