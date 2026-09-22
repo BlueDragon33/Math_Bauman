@@ -256,6 +256,25 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E185_ORTHOGONAL_PROJECTION"
+    },
+    {
+      "qaId": "E186-basis-QA01",
+      "lessonId": "MATH-VN-LA-C01-L07",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "question": "Nếu giáo sư hỏi 'vector có thay đổi khi đổi cơ sở không?', bạn trả lời thế nào?",
+      "answer": "Đối tượng vector hình học không đổi; chỉ tọa độ của nó thay đổi theo cơ sở. Nếu x=B[x]_B=C[x]_C thì hai vector tọa độ khác nhau nhưng đều biểu diễn cùng x. Trong hệ thống kỹ thuật phải ghi rõ frame/basis để tránh trộn tọa độ.",
+      "followUp": [
+        "Khi nào B không tạo được cơ sở?",
+        "Vì sao condition number quan trọng?",
+        "PCA có thể xem là đổi cơ sở thế nào?"
+      ],
+      "tags": [
+        "basis",
+        "coordinates",
+        "E186"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
     }
   ],
   "importPolicy": {
