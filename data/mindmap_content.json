@@ -2161,6 +2161,100 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E200_MULTIVARIABLE_PARTIAL_DERIVATIVES"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L05",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E201_GRADIENT_GEOMETRIC_MEANING",
+      "mindmapId": "E201-gradient-MM01",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Gradient & geometric meaning",
+          "type": "root"
+        },
+        {
+          "id": "partials",
+          "label": "partials → ∇f",
+          "type": "formula"
+        },
+        {
+          "id": "directional",
+          "label": "Dᵤf=∇f·u",
+          "type": "formula"
+        },
+        {
+          "id": "levelset",
+          "label": "∇f ⟂ level set",
+          "type": "geometry"
+        },
+        {
+          "id": "ascent",
+          "label": "+∇f = steepest ascent",
+          "type": "criterion"
+        },
+        {
+          "id": "descent",
+          "label": "-∇f = steepest descent",
+          "type": "criterion"
+        },
+        {
+          "id": "scaling",
+          "label": "coordinate scaling matters",
+          "type": "warning"
+        },
+        {
+          "id": "gd",
+          "label": "gradient descent",
+          "type": "application"
+        },
+        {
+          "id": "check",
+          "label": "finite-difference check",
+          "type": "verification"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "partials"
+        },
+        {
+          "from": "partials",
+          "to": "directional"
+        },
+        {
+          "from": "directional",
+          "to": "levelset"
+        },
+        {
+          "from": "directional",
+          "to": "ascent"
+        },
+        {
+          "from": "ascent",
+          "to": "descent"
+        },
+        {
+          "from": "descent",
+          "to": "gd"
+        },
+        {
+          "from": "partials",
+          "to": "scaling"
+        },
+        {
+          "from": "directional",
+          "to": "check"
+        }
+      ],
+      "tags": [
+        "gradient",
+        "geometry",
+        "optimization",
+        "E201"
+      ]
     }
   ],
   "importPolicy": {
