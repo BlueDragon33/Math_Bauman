@@ -10637,6 +10637,556 @@
       "auditStatus": "PASS",
       "sourceBundle": "E190_MATRIX_TRANSPOSE",
       "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q001",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Điều kiện để cộng A+B là?",
+      "options": [
+        "A và B cùng cấp",
+        "A,B đều vuông",
+        "det(A)=det(B)",
+        "A,B đều khả nghịch"
+      ],
+      "answer": "A và B cùng cấp",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q002",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "(A+B)ᵢⱼ bằng?",
+      "options": [
+        "aᵢⱼ+bᵢⱼ",
+        "aᵢⱼbᵢⱼ",
+        "aⱼᵢ+bⱼᵢ",
+        "aᵢⱼ-bᵢⱼ"
+      ],
+      "answer": "aᵢⱼ+bᵢⱼ",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q003",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "(A-B)ᵢⱼ bằng?",
+      "options": [
+        "aᵢⱼ-bᵢⱼ",
+        "aᵢⱼ+bᵢⱼ",
+        "aᵢⱼ/bᵢⱼ",
+        "bᵢⱼ-aᵢⱼ luôn"
+      ],
+      "answer": "aᵢⱼ-bᵢⱼ",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q004",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "Nhân vô hướng αA tác động thế nào?",
+      "options": [
+        "Nhân mọi phần tử của A với α",
+        "Chỉ nhân đường chéo",
+        "Chỉ nhân hàng đầu",
+        "Đổi shape"
+      ],
+      "answer": "Nhân mọi phần tử của A với α",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q005",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "A+0 bằng?",
+      "options": [
+        "A",
+        "0",
+        "I",
+        "Aᵀ"
+      ],
+      "answer": "A",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q006",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "A-A bằng?",
+      "options": [
+        "0",
+        "I",
+        "A",
+        "2A"
+      ],
+      "answer": "0",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q007",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "1·A bằng?",
+      "options": [
+        "A",
+        "0",
+        "I",
+        "Aᵀ"
+      ],
+      "answer": "A",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q008",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "question": "0·A bằng?",
+      "options": [
+        "0",
+        "A",
+        "I",
+        "A⁻¹"
+      ],
+      "answer": "0",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q009",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "α(A+B) bằng?",
+      "options": [
+        "αA+αB",
+        "αA+B",
+        "A+αB luôn",
+        "αAB"
+      ],
+      "answer": "αA+αB",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q010",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "(α+β)A bằng?",
+      "options": [
+        "αA+βA",
+        "αβA",
+        "A",
+        "0"
+      ],
+      "answer": "αA+βA",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q011",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Nếu A,B∈R^{m×n} thì A+B thuộc?",
+      "options": [
+        "R^{m×n}",
+        "R^{n×m}",
+        "R^{m×m}",
+        "R^{n×n}"
+      ],
+      "answer": "R^{m×n}",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q012",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Cộng ma trận khác shape nên?",
+      "options": [
+        "Báo lỗi/không định nghĩa theo đại số chuẩn",
+        "Tự transpose một bên",
+        "Padding 0 im lặng",
+        "Crop tự động"
+      ],
+      "answer": "Báo lỗi/không định nghĩa theo đại số chuẩn",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q013",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Trong data pipeline, A+B thường đòi hỏi thêm điều gì ngoài shape?",
+      "options": [
+        "Semantics và đơn vị tương thích",
+        "A,B khả nghịch",
+        "A,B đối xứng",
+        "det khác 0"
+      ],
+      "answer": "Semantics và đơn vị tương thích",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q014",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Averaging hai matrix cùng shape dùng công thức?",
+      "options": [
+        "0.5(A+B)",
+        "AB",
+        "A-B",
+        "AᵀB"
+      ],
+      "answer": "0.5(A+B)",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q015",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "question": "Broadcasting có thể làm A+B chạy dù không cùng shape tuyệt đối?",
+      "options": [
+        "Có, tùy thư viện",
+        "Không bao giờ",
+        "Chỉ với matrix vuông",
+        "Chỉ với integer"
+      ],
+      "answer": "Có, tùy thư viện",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q016",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Vì sao broadcasting nguy hiểm trong kiểm thử đại số ma trận?",
+      "options": [
+        "Code có thể chạy nhưng không còn là phép cộng hai ma trận cùng cấp theo nghĩa bài học",
+        "Luôn chậm",
+        "Luôn làm NaN",
+        "Luôn đổi dtype"
+      ],
+      "answer": "Code có thể chạy nhưng không còn là phép cộng hai ma trận cùng cấp theo nghĩa bài học",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q017",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Nếu A là signal matrix và B là bias vector broadcast theo cột, phép toán đó nên được mô tả thế nào?",
+      "options": [
+        "Broadcasted affine addition, không phải cộng hai ma trận cùng cấp thuần túy",
+        "Matrix inverse",
+        "Transpose",
+        "Hadamard product"
+      ],
+      "answer": "Broadcasted affine addition, không phải cộng hai ma trận cùng cấp thuần túy",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q018",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Nhân scalar âm với A ảnh hưởng hình học thế nào?",
+      "options": [
+        "Đổi hướng sign và scale magnitude theo |α|",
+        "Đổi shape",
+        "Luôn rotate 90°",
+        "Không ảnh hưởng"
+      ],
+      "answer": "Đổi hướng sign và scale magnitude theo |α|",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q019",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Nếu A,B chứa đại lượng khác đơn vị vật lý thì A+B?",
+      "options": [
+        "Có thể vô nghĩa dù shape giống nhau",
+        "Luôn hợp lệ",
+        "Luôn bằng 0",
+        "Luôn cần transpose"
+      ],
+      "answer": "Có thể vô nghĩa dù shape giống nhau",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q020",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "question": "Tính chất giao hoán A+B=B+A đúng khi?",
+      "options": [
+        "Hai phép cộng đều được định nghĩa cùng cấp",
+        "A,B vuông bất kỳ",
+        "A,B khả nghịch",
+        "A,B có cùng determinant"
+      ],
+      "answer": "Hai phép cộng đều được định nghĩa cùng cấp",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q021",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Trong residual connection Y=X+F(X), điều kiện tối thiểu là?",
+      "options": [
+        "Shape và representation semantics tương thích",
+        "F(X) khả nghịch",
+        "det(X)≠0",
+        "X đối xứng"
+      ],
+      "answer": "Shape và representation semantics tương thích",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q022",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Weighted ensemble Y=αA+βB cần kiểm gì?",
+      "options": [
+        "Cùng shape, cùng semantics, scale/đơn vị và ý nghĩa hệ số α,β",
+        "Chỉ determinant",
+        "Chỉ trace",
+        "Chỉ số hàng"
+      ],
+      "answer": "Cùng shape, cùng semantics, scale/đơn vị và ý nghĩa hệ số α,β",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q023",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Nếu dùng mixed precision cho A+B, rủi ro chính là?",
+      "options": [
+        "Roundoff/overflow/underflow tùy scale và dtype",
+        "Matrix tự transpose",
+        "Rank luôn tăng",
+        "Shape tự đổi"
+      ],
+      "answer": "Roundoff/overflow/underflow tùy scale và dtype",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q024",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Khi chuẩn hóa gradient bằng scalar α, điều cần theo dõi là?",
+      "options": [
+        "Scale của gradient và ảnh hưởng đến bước cập nhật",
+        "Determinant gradient",
+        "Transpose bắt buộc",
+        "Số hàng bằng số cột"
+      ],
+      "answer": "Scale của gradient và ảnh hưởng đến bước cập nhật",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
+    },
+    {
+      "questionId": "E191-arith-Q025",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "question": "Một unit test tốt cho matrix arithmetic nên kiểm?",
+      "options": [
+        "Shape contract, phần tử mẫu, identity laws và broadcasting guard",
+        "Chỉ tổng phần tử",
+        "Chỉ max value",
+        "Chỉ dtype"
+      ],
+      "answer": "Shape contract, phần tử mẫu, identity laws và broadcasting guard",
+      "explanation": "Đáp án dựa trên định nghĩa cộng/trừ ma trận, nhân vô hướng, shape contract, broadcasting guard và semantics của tổ hợp tuyến tính trong kỹ thuật.",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC",
+      "stage": "vn"
     }
   ],
   "importPolicy": {

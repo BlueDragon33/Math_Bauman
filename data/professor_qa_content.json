@@ -349,6 +349,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "qaId": "E191-arith-QA01",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Nếu giáo sư hỏi 'hai ma trận cùng shape là đủ để cộng chưa?', bạn trả lời thế nào?",
+      "answer": "Về đại số thuần túy, cùng shape là điều kiện để cộng phần tử tương ứng. Nhưng trong ứng dụng kỹ thuật còn phải kiểm semantics và đơn vị của các phần tử tương ứng; nếu hai ma trận biểu diễn đại lượng khác nhau thì phép cộng có thể vô nghĩa dù code chạy.",
+      "followUp": [
+        "Broadcasting khác cộng cùng cấp thế nào?",
+        "Residual connection cần contract gì?",
+        "Khi nào αA+βB là fusion hợp lý?"
+      ],
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
     }
   ],
   "importPolicy": {

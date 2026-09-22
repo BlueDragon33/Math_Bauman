@@ -613,6 +613,36 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "applicationId": "E191-arith-A1",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Residual connection trong mạng sâu",
+      "scenario": "Cần cộng representation X với F(X) để giữ đường truyền thông tin.",
+      "method": "Kiểm shape, feature ordering và scale; sau đó Y=X+F(X), có thể kèm projection nếu contract được thiết kế rõ.",
+      "expectedOutcome": "Cộng đúng representation thay vì dựa vào broadcasting/transpose ngầm.",
+      "tags": [
+        "ai",
+        "residual"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "applicationId": "E191-arith-A2",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Fusion dữ liệu đa nguồn bằng trọng số",
+      "scenario": "Hai estimator tạo matrix cùng shape cho cùng đại lượng cần hợp nhất.",
+      "method": "Calibrate scale/units, chọn α,β theo độ tin cậy rồi tạo Y=αA+βB.",
+      "expectedOutcome": "Fusion có diễn giải được và không trộn các representation không tương thích.",
+      "tags": [
+        "sensor-fusion",
+        "weighted-sum"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
     }
   ],
   "importPolicy": {

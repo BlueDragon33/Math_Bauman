@@ -2191,6 +2191,112 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "exerciseId": "E191-arith-E01",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Cho A=[[1,2],[3,4]], B=[[5,6],[7,8]]. Tính A+B.",
+      "solution": "[[6,8],[10,12]].",
+      "tags": [
+        "addition"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "exerciseId": "E191-arith-E02",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "easy",
+      "prompt": "Tính 2A với A=[[1,-1],[0,3]].",
+      "solution": "[[2,-2],[0,6]].",
+      "tags": [
+        "scalar"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "exerciseId": "E191-arith-E03",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "A shape 4×3, B shape 4×2. Có được cộng trực tiếp theo định nghĩa chuẩn không?",
+      "solution": "Không, hai ma trận khác cấp.",
+      "tags": [
+        "shape"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "exerciseId": "E191-arith-E04",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Chứng minh A+0=A theo phần tử.",
+      "solution": "(A+0)ᵢⱼ=aᵢⱼ+0=aᵢⱼ.",
+      "tags": [
+        "identity"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "exerciseId": "E191-arith-E05",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "medium",
+      "prompt": "Giải thích vì sao nhiệt độ °C matrix không nên cộng trực tiếp với áp suất kPa matrix dù cùng shape.",
+      "solution": "Đơn vị và semantics khác nhau nên phép cộng không có ý nghĩa vật lý.",
+      "tags": [
+        "units",
+        "semantics"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "exerciseId": "E191-arith-E06",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Một thư viện broadcast bias vector b∈R^d vào X∈R^{N×d}. Vì sao không nên gọi đây đơn giản là 'cộng hai ma trận cùng cấp'?",
+      "solution": "b được mở rộng theo quy tắc broadcasting; đây là phép cộng affine theo axis, không phải hai operand cùng shape ban đầu.",
+      "tags": [
+        "broadcasting"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "exerciseId": "E191-arith-E07",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "hard",
+      "prompt": "Trong residual Y=X+F(X), nêu 3 điều cần kiểm.",
+      "solution": "Shape tương thích; cùng representation/feature ordering; scale đủ tương thích để phép cộng không phá ổn định.",
+      "tags": [
+        "residual"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "exerciseId": "E191-arith-E08",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "level": "expert",
+      "prompt": "Weighted fusion αA+βB có thể thất bại dù α+β=1 vì sao?",
+      "solution": "Nếu A,B khác scale, calibration, đơn vị hoặc semantics thì convex weights không tự làm fusion có ý nghĩa.",
+      "tags": [
+        "fusion",
+        "calibration"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
     }
   ],
   "importPolicy": {

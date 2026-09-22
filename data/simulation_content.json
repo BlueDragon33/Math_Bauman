@@ -1638,6 +1638,101 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "simulationId": "E191-arith-SIM1",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng cộng ma trận và broadcasting guard",
+      "purpose": "Thay shape A,B và bật/tắt broadcasting để quan sát khi phép toán chuẩn được định nghĩa.",
+      "controls": [
+        {
+          "key": "rowsA",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "key": "colsA",
+          "type": "number",
+          "default": 4
+        },
+        {
+          "key": "rowsB",
+          "type": "number",
+          "default": 3
+        },
+        {
+          "key": "colsB",
+          "type": "number",
+          "default": 4
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "same_shape",
+          "label": "Cùng shape"
+        },
+        {
+          "key": "standard_add_defined",
+          "label": "Cộng chuẩn hợp lệ"
+        },
+        {
+          "key": "broadcast_warning",
+          "label": "Cảnh báo broadcasting"
+        }
+      ],
+      "expectedObservation": "Cộng ma trận chuẩn chỉ hợp lệ khi shape bằng nhau; broadcasting là cơ chế khác cần mô tả riêng.",
+      "tags": [
+        "addition",
+        "broadcasting"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "simulationId": "E191-arith-SIM2",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Mô phỏng weighted matrix fusion",
+      "purpose": "Thay α,β và scale hai nguồn để quan sát output và độ nhạy fusion.",
+      "controls": [
+        {
+          "key": "alpha",
+          "type": "number",
+          "default": 0.5
+        },
+        {
+          "key": "beta",
+          "type": "number",
+          "default": 0.5
+        },
+        {
+          "key": "scale_ratio",
+          "type": "number",
+          "default": 1
+        }
+      ],
+      "computedReadouts": [
+        {
+          "key": "output_norm",
+          "label": "Norm output"
+        },
+        {
+          "key": "source_contribution",
+          "label": "Tỷ lệ đóng góp"
+        },
+        {
+          "key": "scale_warning",
+          "label": "Cảnh báo lệch scale"
+        }
+      ],
+      "expectedObservation": "Weights có cùng tổng 1 vẫn không đủ nếu hai nguồn lệch scale/semantics.",
+      "tags": [
+        "fusion",
+        "scaling"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
     }
   ],
   "importPolicy": {
