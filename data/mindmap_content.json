@@ -1491,6 +1491,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "mindmapId": "E192-matmul-MM01",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "lessonId": "MATH-VN-LA-C02-L05",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Matrix multiplication = shape contract + hàng×cột + thứ tự",
+          "type": "root"
+        },
+        {
+          "id": "shape",
+          "label": "A m×n, B n×p ⇒ AB m×p",
+          "type": "formula"
+        },
+        {
+          "id": "entry",
+          "label": "(AB)ᵢⱼ=Σₖaᵢₖbₖⱼ",
+          "type": "formula"
+        },
+        {
+          "id": "dot",
+          "label": "Hàng A · cột B",
+          "type": "concept"
+        },
+        {
+          "id": "hadamard",
+          "label": "AB ≠ A⊙B",
+          "type": "warning"
+        },
+        {
+          "id": "order",
+          "label": "AB≠BA nói chung",
+          "type": "warning"
+        },
+        {
+          "id": "pipeline",
+          "label": "Composition trong AI/control/robotics",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "shape"
+        },
+        {
+          "from": "root",
+          "to": "entry"
+        },
+        {
+          "from": "entry",
+          "to": "dot"
+        },
+        {
+          "from": "root",
+          "to": "hadamard"
+        },
+        {
+          "from": "root",
+          "to": "order"
+        },
+        {
+          "from": "order",
+          "to": "pipeline"
+        }
+      ],
+      "tags": [
+        "matrix-multiplication",
+        "E192"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E192_MATRIX_MULTIPLICATION"
     }
   ],
   "importPolicy": {
