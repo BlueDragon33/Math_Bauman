@@ -3700,6 +3700,121 @@
         "stationary-point",
         "counterexample"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "exerciseId": "E205-gd-E01",
+      "level": "easy",
+      "prompt": "Với f(x)=½·4x² và η=0.1, hệ số lặp x_{k+1}=cx_k là bao nhiêu?",
+      "solution": "c=1-ηa=1-0.4=0.6; hội tụ đơn điệu về 0 nếu x giữ dấu.",
+      "tags": [
+        "quadratic",
+        "learning-rate"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "exerciseId": "E205-gd-E02",
+      "level": "easy",
+      "prompt": "Cùng f với a=4, η=0.3 cho hệ số lặp nào?",
+      "solution": "c=1-1.2=-0.2; |c|<1 nên hội tụ nhưng đổi dấu/dao động quanh optimum.",
+      "tags": [
+        "oscillation",
+        "convergence"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "exerciseId": "E205-gd-E03",
+      "level": "easy",
+      "prompt": "Cùng f với a=4, η=0.6 sẽ thế nào?",
+      "solution": "c=1-2.4=-1.4; |c|>1 nên phân kỳ dao động.",
+      "tags": [
+        "divergence",
+        "learning-rate"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "exerciseId": "E205-gd-E04",
+      "level": "medium",
+      "prompt": "Với f(x)=½ax², xác định miền η hội tụ.",
+      "solution": "|1-ηa|<1 ⇒ 0<η<2/a.",
+      "tags": [
+        "stability",
+        "derivation"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "exerciseId": "E205-gd-E05",
+      "level": "medium",
+      "prompt": "Cho ∇f(x_k)=[3,4]ᵀ, η=0.05. Viết bước cập nhật.",
+      "solution": "x_{k+1}=x_k-[0.15,0.20]ᵀ.",
+      "tags": [
+        "update",
+        "vector"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "exerciseId": "E205-gd-E06",
+      "level": "medium",
+      "prompt": "Loss giảm rất chậm, gradient norm vẫn lớn nhưng bước thay đổi tham số rất nhỏ. Một nguyên nhân có thể là gì?",
+      "solution": "Learning rate quá nhỏ hoặc scaling/conditioning xấu. Cần kiểm η, scale feature và curvature, không kết luận đã hội tụ.",
+      "tags": [
+        "diagnosis",
+        "learning-rate",
+        "conditioning"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "exerciseId": "E205-gd-E07",
+      "level": "hard",
+      "prompt": "Quadratic 2D có Hessian eigenvalues 1 và 100. Vì sao η=0.015 có thể hội tụ nhưng zig-zag?",
+      "solution": "Ổn định vì η<2/100=0.02; hướng λ=100 có hệ số 1-1.5=-0.5 nên đổi dấu, còn hướng λ=1 có hệ số 0.985 giảm rất chậm. Chênh curvature gây zig-zag và tốc độ không đều.",
+      "tags": [
+        "conditioning",
+        "eigenvalues",
+        "zigzag"
+      ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "exerciseId": "E205-gd-E08",
+      "level": "hard",
+      "prompt": "Một training run có loss lúc giảm lúc tăng mạnh. Nêu tối thiểu ba kiểm tra trước khi kết luận mô hình/bài toán sai.",
+      "solution": "Kiểm learning rate và scheduler; scaling/normalization; gradient explosion/numerical issue; minibatch noise; curvature/conditioning; implementation gradient bằng finite difference nếu cần.",
+      "tags": [
+        "debugging",
+        "training",
+        "gradient-check"
+      ]
     }
   ],
   "importPolicy": {
