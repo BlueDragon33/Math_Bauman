@@ -1,0 +1,1012 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E187_NUMERICAL_NORMALIZATION",
+  "lessonId": "MATH-VN-LA-C01-L08",
+  "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+  "title": "§1.8 · Sai số số, chuẩn hóa vector và lỗi thường gặp khi dùng similarity",
+  "sources": {
+    "formula_content": [
+      {
+        "formulaId": "E187-num-F1",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "L2-normalization ổn định",
+        "formula": "x̂ = x / ||x||₂",
+        "meaning": "Chuẩn hóa đưa vector khác 0 về unit sphere để similarity theo hướng ít phụ thuộc magnitude.",
+        "conditions": [
+          "||x||₂ lớn hơn ngưỡng near-zero được chọn.",
+          "Mọi vector trong pipeline dùng cùng quy tắc preprocessing."
+        ],
+        "commonMistakes": [
+          "Chuẩn hóa vector 0 hoặc gần 0 không có guard.",
+          "Chuẩn hóa train nhưng quên normalize query/reference ở inference."
+        ],
+        "programmingUse": "n=norm(x); if n<=tol: xử lý riêng; else x_hat=x/n.",
+        "tags": [
+          "normalization",
+          "l2",
+          "numerical"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "formulaId": "E187-num-F2",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Cosine similarity với guard số",
+        "formula": "cos(x,y) = (x·y)/(||x||₂||y||₂)",
+        "meaning": "Cosine chỉ đáng tin khi hai norm không quá nhỏ và phép tích vô hướng không bị mất ổn định do scale.",
+        "conditions": [
+          "||x||,||y|| > tol.",
+          "Dtype và scale dữ liệu phù hợp với miền tính toán."
+        ],
+        "commonMistakes": [
+          "Cộng epsilon tùy tiện làm thay đổi semantics ở vector nhỏ.",
+          "So cosine vượt [-1,1] mà không nhận ra roundoff."
+        ],
+        "programmingUse": "den=nx*ny; nếu den<=tol thì trả trạng thái undefined/invalid; sau đó clip cos về [-1,1] chỉ để chống roundoff nhỏ.",
+        "tags": [
+          "cosine",
+          "tolerance",
+          "floating-point"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "formulaId": "E187-num-F3",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Sai số tương đối khi kiểm trực giao/similarity",
+        "formula": "ρ = |x·y|/(||x||₂||y||₂)",
+        "meaning": "ρ là normalized absolute inner product; dùng để đánh giá gần trực giao ít phụ thuộc scale hơn dot tuyệt đối.",
+        "conditions": [
+          "Hai vector khác 0.",
+          "Tolerance chọn theo precision và bài toán, không dùng một số cứng cho mọi scale."
+        ],
+        "commonMistakes": [
+          "Dùng |x·y|<1e-12 cho mọi dữ liệu.",
+          "Đồng nhất numerical orthogonality với độc lập thống kê."
+        ],
+        "programmingUse": "rho=abs(dot(x,y))/(norm(x)*norm(y)); compare rho <= tol_rel.",
+        "tags": [
+          "relative-error",
+          "orthogonality",
+          "similarity"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      }
+    ],
+    "exercise_content": [
+      {
+        "exerciseId": "E187-num-E01",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "prompt": "Chuẩn hóa x=(3,4).",
+        "solution": "||x||=5 nên x̂=(0.6,0.8).",
+        "tags": [
+          "normalization"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "exerciseId": "E187-num-E02",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "prompt": "Vì sao không thể L2-normalize vector 0?",
+        "solution": "Mẫu số ||x|| bằng 0 và vector 0 không có hướng.",
+        "tags": [
+          "zero-vector"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "exerciseId": "E187-num-E03",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "prompt": "Nếu x được nhân 1000 lần, cosine(x,y) thay đổi thế nào với hệ số dương?",
+        "solution": "Không đổi về lý thuyết; thực tế có thể chịu ảnh hưởng precision nếu scale cực đoan.",
+        "tags": [
+          "cosine",
+          "scale"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "exerciseId": "E187-num-E04",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "prompt": "Một phép tính cosine cho 1.0000000002. Bạn xử lý thế nào?",
+        "solution": "Nếu sai lệch nhỏ do roundoff, clip về 1 trước arccos; đồng thời kiểm magnitude sai số để chắc không phải lỗi pipeline.",
+        "tags": [
+          "roundoff"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "exerciseId": "E187-num-E05",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "prompt": "Vì sao thêm eps vào mẫu cosine có thể làm sai semantic với vector rất nhỏ?",
+        "solution": "eps trở thành thành phần chi phối mẫu số, biến kết quả thành hàm của eps thay vì hình học vector.",
+        "tags": [
+          "epsilon",
+          "near-zero"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "exerciseId": "E187-num-E06",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "prompt": "So sánh kiểm trực giao bằng |x·y|<tol_abs và ρ<tol_rel.",
+        "solution": "Kiểm tương đối ρ ít phụ thuộc scale; tol_abs có thể sai khi vector rất lớn/nhỏ.",
+        "tags": [
+          "orthogonality",
+          "tolerance"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "exerciseId": "E187-num-E07",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "prompt": "Nêu cách giảm overflow khi tính norm của vector có component rất lớn.",
+        "solution": "Dùng scaled norm/hypot hoặc thuật toán norm ổn định thay vì bình phương trực tiếp mọi component.",
+        "tags": [
+          "overflow",
+          "norm"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "exerciseId": "E187-num-E08",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "expert",
+        "prompt": "Vì sao mixed precision có thể làm ranking embedding đổi ở các cặp similarity sát nhau?",
+        "solution": "Roundoff/quantization làm score dịch nhỏ; khi margin giữa top-k nhỏ, thứ tự có thể đảo. Cần kiểm precision, calibration và tie margin.",
+        "tags": [
+          "embedding",
+          "precision",
+          "ranking"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      }
+    ],
+    "application_content": [
+      {
+        "applicationId": "E187-num-A1",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Similarity search với embedding gần zero",
+        "scenario": "Một embedding sau preprocessing có norm rất nhỏ nhưng vẫn bị đưa vào cosine search.",
+        "method": "Phát hiện near-zero trước normalize; gắn trạng thái invalid/fallback thay vì ép chia epsilon; log tỷ lệ vector lỗi.",
+        "expectedOutcome": "Tránh score cosine giả tạo và ranking không ổn định.",
+        "tags": [
+          "embedding",
+          "cosine",
+          "validation"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "applicationId": "E187-num-A2",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Chuẩn hóa dữ liệu cảm biến trước so hướng",
+        "scenario": "Các cửa sổ cảm biến có biên độ khác nhau nhưng cần so pattern hình dạng.",
+        "method": "Loại offset/scale theo policy, kiểm norm, L2-normalize rồi so cosine; song song giữ magnitude riêng nếu nó mang ý nghĩa vật lý.",
+        "expectedOutcome": "Phân biệt được similarity hướng và thông tin biên độ để không mất tín hiệu quan trọng.",
+        "tags": [
+          "sensor",
+          "normalization",
+          "similarity"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      }
+    ],
+    "simulation_content": [
+      {
+        "simulationId": "E187-num-SIM1",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Mô phỏng cosine theo scale và precision",
+        "purpose": "Thay scale vector và precision để quan sát score lý thuyết và score số.",
+        "controls": [
+          {
+            "key": "scale",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "angle_deg",
+            "type": "number",
+            "default": 20
+          },
+          {
+            "key": "precision_bits",
+            "type": "number",
+            "default": 32
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "cos_true",
+            "label": "Cosine lý thuyết"
+          },
+          {
+            "key": "cos_numeric",
+            "label": "Cosine số"
+          },
+          {
+            "key": "abs_error",
+            "label": "Sai số tuyệt đối"
+          },
+          {
+            "key": "ranking_margin",
+            "label": "Margin"
+          }
+        ],
+        "expectedObservation": "Khi precision giảm hoặc scale cực đoan, sai số có thể đủ lớn để ảnh hưởng cặp ranking sát nhau.",
+        "tags": [
+          "cosine",
+          "precision",
+          "numerical"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      },
+      {
+        "simulationId": "E187-num-SIM2",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "title": "Mô phỏng near-zero normalization",
+        "purpose": "Giảm norm của vector về gần 0 và quan sát độ nhạy của normalization.",
+        "controls": [
+          {
+            "key": "norm_x",
+            "type": "number",
+            "default": 1
+          },
+          {
+            "key": "noise",
+            "type": "number",
+            "default": 0.001
+          },
+          {
+            "key": "tol",
+            "type": "number",
+            "default": 0.000001
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "normalized_variation",
+            "label": "Biến thiên sau normalize"
+          },
+          {
+            "key": "valid_flag",
+            "label": "Trạng thái hợp lệ"
+          },
+          {
+            "key": "cosine_spread",
+            "label": "Độ phân tán cosine"
+          }
+        ],
+        "expectedObservation": "Khi norm tiến về 0, nhiễu nhỏ bị khuếch đại mạnh; guard tolerance phải chặn trước normalize.",
+        "tags": [
+          "near-zero",
+          "normalization",
+          "noise"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "qaId": "E187-num-QA01",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "question": "Nếu giáo sư hỏi tại sao 'cosine similarity scale-invariant' nhưng code vẫn có thể cho kết quả khác khi scale dữ liệu, bạn trả lời thế nào?",
+        "answer": "Scale invariance là tính chất toán học trong số thực chính xác. Trong floating point, scale cực lớn/nhỏ có thể gây overflow, underflow, mất precision hoặc kích hoạt epsilon/guard khác nhau. Vì vậy cần norm ổn định, tolerance có ý nghĩa và kiểm dtype/pipeline.",
+        "followUp": [
+          "Khi nào clip cosine về [-1,1] là hợp lý?",
+          "Vì sao vector near-zero nguy hiểm?",
+          "Tolerance tuyệt đối và tương đối khác nhau thế nào?"
+        ],
+        "tags": [
+          "numerical",
+          "cosine",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      }
+    ],
+    "review_pack_content": [
+      {
+        "reviewPackId": "E187-num-RP01",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "items": [
+          {
+            "type": "concept",
+            "prompt": "Nêu điều kiện L2-normalize hợp lệ.",
+            "expected": "Norm phải lớn hơn ngưỡng near-zero phù hợp."
+          },
+          {
+            "type": "mistake",
+            "prompt": "Vì sao không nên cộng eps tùy tiện vào mọi mẫu cosine?",
+            "expected": "Có thể thay đổi semantic, nhất là với vector nhỏ."
+          },
+          {
+            "type": "numerical",
+            "prompt": "Nêu cách kiểm near-orthogonality ít phụ thuộc scale.",
+            "expected": "Dùng |x·y|/(||x||||y||) so với tolerance tương đối."
+          },
+          {
+            "type": "transfer",
+            "prompt": "Nêu một rủi ro mixed precision trong similarity search.",
+            "expected": "Score gần nhau có thể đổi thứ tự do roundoff/quantization."
+          }
+        ],
+        "masteryGate": "Biết guard near-zero + hiểu scale invariance toán học vs floating point + chọn tolerance phù hợp + kiểm ranking margin",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      }
+    ],
+    "question_bank_content": [
+      {
+        "questionId": "E187-num-Q001",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "L2-normalization của x khác 0 là?",
+        "options": [
+          "x/||x||₂",
+          "x·||x||₂",
+          "x+||x||₂",
+          "||x||₂"
+        ],
+        "answer": "x/||x||₂",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q002",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Vector nào không có hướng để cosine chuẩn xác định?",
+        "options": [
+          "Vector 0",
+          "Mọi vector đơn vị",
+          "Vector dương",
+          "Vector 2D"
+        ],
+        "answer": "Vector 0",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q003",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Cosine lý thuyết nằm trong khoảng?",
+        "options": [
+          "[-1,1]",
+          "[0,1] luôn",
+          "(-∞,∞)",
+          "[1,2]"
+        ],
+        "answer": "[-1,1]",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q004",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "L2-normalize có giữ hướng với scale dương không?",
+        "options": [
+          "Có",
+          "Không",
+          "Chỉ 2D",
+          "Chỉ integer"
+        ],
+        "answer": "Có",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q005",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Sau normalize, norm L2 lý tưởng bằng?",
+        "options": [
+          "1",
+          "0",
+          "2",
+          "Phụ thuộc dimension"
+        ],
+        "answer": "1",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q006",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Cosine của hai vector trực giao là?",
+        "options": [
+          "0",
+          "1",
+          "-1",
+          "Không xác định nếu khác 0"
+        ],
+        "answer": "0",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q007",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Cosine của hai vector cùng hướng khác 0 là?",
+        "options": [
+          "1",
+          "0",
+          "-1",
+          "Phụ thuộc norm"
+        ],
+        "answer": "1",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q008",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "easy",
+        "question": "Cosine của hai vector ngược hướng là?",
+        "options": [
+          "-1",
+          "0",
+          "1",
+          "2"
+        ],
+        "answer": "-1",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q009",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Vì sao cosine ít phụ thuộc magnitude?",
+        "options": [
+          "Norm được chia ra khỏi dot product",
+          "Dot product bị bỏ hoàn toàn",
+          "Mọi vector thành 0",
+          "Không dùng component"
+        ],
+        "answer": "Norm được chia ra khỏi dot product",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q010",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Khi norm gần 0, normalization thường?",
+        "options": [
+          "Khuếch đại nhiễu",
+          "Giảm mọi nhiễu về 0",
+          "Luôn ổn định hơn",
+          "Không ảnh hưởng"
+        ],
+        "answer": "Khuếch đại nhiễu",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q011",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Clip cosine 1.0000000001 về 1 phù hợp khi?",
+        "options": [
+          "Sai lệch nhỏ rõ ràng do roundoff",
+          "Mọi lúc bất kể lỗi",
+          "Khi vector 0",
+          "Khi score âm"
+        ],
+        "answer": "Sai lệch nhỏ rõ ràng do roundoff",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q012",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Tolerance tương đối hữu ích vì?",
+        "options": [
+          "Ít phụ thuộc scale của vector",
+          "Không cần norm",
+          "Luôn bằng machine epsilon",
+          "Loại mọi noise"
+        ],
+        "answer": "Ít phụ thuộc scale của vector",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q013",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Thêm eps vào mẫu số cosine có thể?",
+        "options": [
+          "Làm đổi semantic ở vector nhỏ",
+          "Luôn chính xác hơn",
+          "Không bao giờ ảnh hưởng",
+          "Biến cosine thành Euclid"
+        ],
+        "answer": "Làm đổi semantic ở vector nhỏ",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q014",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Mixed precision chủ yếu gây?",
+        "options": [
+          "Roundoff/quantization lớn hơn",
+          "Dimension tự tăng",
+          "Vector luôn trực giao",
+          "Không có sai số"
+        ],
+        "answer": "Roundoff/quantization lớn hơn",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q015",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "medium",
+        "question": "Nếu ranking margin rất nhỏ thì?",
+        "options": [
+          "Sai số score nhỏ có thể đảo thứ tự",
+          "Ranking bất biến tuyệt đối",
+          "Tất cả score bằng nhau",
+          "Norm không cần kiểm"
+        ],
+        "answer": "Sai số score nhỏ có thể đảo thứ tự",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q016",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Kiểm near-orthogonality scale-invariant nên dùng?",
+        "options": [
+          "|x·y|/(||x||||y||)",
+          "|x·y| tuyệt đối duy nhất",
+          "det(x)",
+          "trace(x)"
+        ],
+        "answer": "|x·y|/(||x||||y||)",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q017",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Overflow norm có thể xảy ra khi?",
+        "options": [
+          "Bình phương component cực lớn trực tiếp",
+          "Vector đơn vị",
+          "Dùng hypot ổn định",
+          "Mọi component bằng 0"
+        ],
+        "answer": "Bình phương component cực lớn trực tiếp",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q018",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Underflow có thể làm gì?",
+        "options": [
+          "Mất component rất nhỏ khỏi phép tính",
+          "Tăng dimension",
+          "Tạo exact inverse",
+          "Luôn tăng norm"
+        ],
+        "answer": "Mất component rất nhỏ khỏi phép tính",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q019",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Scale vector bởi hệ số dương ảnh hưởng cosine lý thuyết?",
+        "options": [
+          "Không",
+          "Tăng tuyến tính",
+          "Giảm tuyến tính",
+          "Đổi dấu"
+        ],
+        "answer": "Không",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q020",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Scale bởi hệ số âm ảnh hưởng cosine hướng thế nào?",
+        "options": [
+          "Đổi dấu tương ứng do đảo hướng",
+          "Không đổi luôn",
+          "Thành 0",
+          "Không xác định luôn"
+        ],
+        "answer": "Đổi dấu tương ứng do đảo hướng",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q021",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "hard",
+        "question": "Nếu preprocessing train/inference khác nhau, cosine ranking có thể?",
+        "options": [
+          "Bị drift",
+          "Không bao giờ đổi",
+          "Luôn tốt hơn",
+          "Luôn bằng dot"
+        ],
+        "answer": "Bị drift",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q022",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "expert",
+        "question": "Stable norm implementation thường dùng ý tưởng gì?",
+        "options": [
+          "Rescale theo component lớn trước khi cộng bình phương",
+          "Bình phương mọi số rồi hi vọng không overflow",
+          "Ép integer",
+          "Bỏ component nhỏ"
+        ],
+        "answer": "Rescale theo component lớn trước khi cộng bình phương",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q023",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "expert",
+        "question": "Kahan/pairwise summation hữu ích cho dot product vì?",
+        "options": [
+          "Giảm lỗi cộng dồn floating-point",
+          "Làm dot luôn bằng 1",
+          "Loại nhu cầu multiplication",
+          "Tăng dimension"
+        ],
+        "answer": "Giảm lỗi cộng dồn floating-point",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q024",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "expert",
+        "question": "Cosine trên quantized embeddings cần kiểm gì thêm?",
+        "options": [
+          "Sai số lượng tử và ranking margin",
+          "Chỉ màu UI",
+          "Determinant",
+          "Số lượng labels"
+        ],
+        "answer": "Sai số lượng tử và ranking margin",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E187-num-Q025",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "level": "expert",
+        "question": "Một vector có norm dưới tolerance nên xử lý tốt nhất bằng?",
+        "options": [
+          "Gắn invalid/fallback theo policy thay vì normalize mù",
+          "Luôn chia epsilon cố định",
+          "Ép thành unit vector bất kỳ",
+          "Đặt cosine=1 luôn"
+        ],
+        "answer": "Gắn invalid/fallback theo policy thay vì normalize mù",
+        "explanation": "Đáp án theo nguyên tắc chuẩn hóa vector và tính toán floating-point ổn định.",
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION",
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "mindmapId": "E187-num-MM01",
+        "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+        "lessonId": "MATH-VN-LA-C01-L08",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Similarity đáng tin = hình học + kiểm soát số",
+            "type": "root"
+          },
+          {
+            "id": "normalize",
+            "label": "x̂=x/||x||",
+            "type": "formula"
+          },
+          {
+            "id": "guard",
+            "label": "Guard vector near-zero trước normalize",
+            "type": "warning"
+          },
+          {
+            "id": "relative",
+            "label": "Dùng tolerance tương đối",
+            "type": "validation"
+          },
+          {
+            "id": "precision",
+            "label": "Floating point: overflow · underflow · roundoff",
+            "type": "concept"
+          },
+          {
+            "id": "ranking",
+            "label": "Score error có thể đảo top-k khi margin nhỏ",
+            "type": "application"
+          },
+          {
+            "id": "pipeline",
+            "label": "Train/inference preprocessing phải nhất quán",
+            "type": "application"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "normalize"
+          },
+          {
+            "from": "normalize",
+            "to": "guard"
+          },
+          {
+            "from": "guard",
+            "to": "relative"
+          },
+          {
+            "from": "relative",
+            "to": "precision"
+          },
+          {
+            "from": "precision",
+            "to": "ranking"
+          },
+          {
+            "from": "ranking",
+            "to": "pipeline"
+          }
+        ],
+        "tags": [
+          "numerical",
+          "E187"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
+      }
+    ]
+  }
+}
