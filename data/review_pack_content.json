@@ -565,6 +565,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E188_MATRIX_DEFINITION"
+    },
+    {
+      "reviewPackId": "E189-special-RP01",
+      "lessonId": "MATH-VN-LA-C02-L02",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "concept",
+          "prompt": "Phân biệt zero, identity và diagonal matrix.",
+          "expected": "Zero triệt tín hiệu; identity giữ nguyên; diagonal scale từng component."
+        },
+        {
+          "type": "property",
+          "prompt": "Điều kiện khả nghịch của diagonal matrix?",
+          "expected": "Mọi phần tử đường chéo khác 0."
+        },
+        {
+          "type": "algorithm",
+          "prompt": "Vì sao triangular matrix thuận lợi khi giải hệ?",
+          "expected": "Có thể forward/back substitution."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một ứng dụng của diagonal structure trong ML.",
+          "expected": "Feature scaling, diagonal covariance hoặc preconditioner."
+        }
+      ],
+      "masteryGate": "Nhận diện đúng ma trận đặc biệt + nêu tính chất lõi + biết khi nào khai thác cấu trúc để giảm chi phí và tăng độ ổn định",
+      "tags": [
+        "special-matrix",
+        "E189"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E189_SPECIAL_MATRICES"
     }
   ],
   "importPolicy": {
