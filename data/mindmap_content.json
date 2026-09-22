@@ -1121,6 +1121,80 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E186_BASIS_COORDINATE_CHANGE"
+    },
+    {
+      "mindmapId": "E187-num-MM01",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "lessonId": "MATH-VN-LA-C01-L08",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Similarity đáng tin = hình học + kiểm soát số",
+          "type": "root"
+        },
+        {
+          "id": "normalize",
+          "label": "x̂=x/||x||",
+          "type": "formula"
+        },
+        {
+          "id": "guard",
+          "label": "Guard vector near-zero trước normalize",
+          "type": "warning"
+        },
+        {
+          "id": "relative",
+          "label": "Dùng tolerance tương đối",
+          "type": "validation"
+        },
+        {
+          "id": "precision",
+          "label": "Floating point: overflow · underflow · roundoff",
+          "type": "concept"
+        },
+        {
+          "id": "ranking",
+          "label": "Score error có thể đảo top-k khi margin nhỏ",
+          "type": "application"
+        },
+        {
+          "id": "pipeline",
+          "label": "Train/inference preprocessing phải nhất quán",
+          "type": "application"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "normalize"
+        },
+        {
+          "from": "normalize",
+          "to": "guard"
+        },
+        {
+          "from": "guard",
+          "to": "relative"
+        },
+        {
+          "from": "relative",
+          "to": "precision"
+        },
+        {
+          "from": "precision",
+          "to": "ranking"
+        },
+        {
+          "from": "ranking",
+          "to": "pipeline"
+        }
+      ],
+      "tags": [
+        "numerical",
+        "E187"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E187_NUMERICAL_NORMALIZATION"
     }
   ],
   "importPolicy": {
