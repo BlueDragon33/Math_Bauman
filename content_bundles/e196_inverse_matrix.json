@@ -1,0 +1,1001 @@
+{
+  "schema": "bauman_math_supplement_bundle_v1",
+  "release": "E196_INVERSE_MATRIX",
+  "lessonId": "MATH-VN-LA-C02-L09",
+  "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+  "title": "§2.9 · Ma trận nghịch đảo: điều kiện tồn tại, cách tìm và bẫy tính toán",
+  "sources": {
+    "formula_content": [
+      {
+        "formulaId": "E196-inverse-F1",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Điều kiện tồn tại của ma trận nghịch đảo",
+        "formula": "A^{-1} tồn tại ⇔ det(A)≠0 ⇔ rank(A)=n",
+        "meaning": "Với ma trận vuông n×n, khả nghịch tương đương định thức khác 0, full rank và hệ Ax=b có nghiệm duy nhất với mọi b.",
+        "conditions": [
+          "A phải là ma trận vuông.",
+          "Trong tính số, cần phân biệt khả nghịch lý thuyết với gần suy biến/kém điều kiện."
+        ],
+        "commonMistakes": [
+          "Tìm inverse cho ma trận không vuông như inverse thông thường.",
+          "Thấy det(A) rất nhỏ nhưng vẫn coi phép nghịch đảo ổn định."
+        ],
+        "programmingUse": "Trong code, ưu tiên solve(A,b) thay vì tạo A^{-1} rồi nhân b; kiểm condition number khi nghi ngờ gần suy biến.",
+        "tags": [
+          "inverse",
+          "invertibility",
+          "determinant"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "formulaId": "E196-inverse-F2",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Công thức nghịch đảo ma trận 2×2",
+        "formula": "A^{-1}=1/(ad-bc) · [[d,-b],[-c,a]]",
+        "meaning": "Với A=[[a,b],[c,d]], nghịch đảo tồn tại khi ad-bc≠0 và có thể tính trực tiếp bằng adjugate chia determinant.",
+        "conditions": [
+          "A là 2×2.",
+          "ad-bc khác 0."
+        ],
+        "commonMistakes": [
+          "Đổi dấu sai hai phần tử ngoài đường chéo.",
+          "Quên đổi vị trí a và d.",
+          "Chia từng phần tử A cho determinant thay vì dùng adjugate."
+        ],
+        "programmingUse": "Hữu ích để kiểm tay và unit test; với ma trận lớn không dùng công thức adjugate vì kém hiệu quả và kém ổn định.",
+        "tags": [
+          "inverse-2x2",
+          "adjugate"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "formulaId": "E196-inverse-F3",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Kiểm chứng inverse",
+        "formula": "AA^{-1}=A^{-1}A=I",
+        "meaning": "Nghịch đảo là phép biến đổi ngược hai phía của ma trận vuông khả nghịch; nhân kiểm tra phải thu được identity.",
+        "conditions": [
+          "A và A^{-1} cùng cấp n×n.",
+          "Trong floating point, kiểm gần bằng I với tolerance thay vì equality tuyệt đối."
+        ],
+        "commonMistakes": [
+          "Chỉ kiểm một phần tử hoặc một phía rồi kết luận.",
+          "Dùng exact equality cho số thực floating point."
+        ],
+        "programmingUse": "Regression test: norm(A@Ainv-I) nhỏ; kết hợp condition number để phân biệt residual nhỏ nhưng nghiệm nhạy.",
+        "tags": [
+          "inverse",
+          "identity",
+          "residual"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      }
+    ],
+    "exercise_content": [
+      {
+        "exerciseId": "E196-inverse-E01",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "prompt": "Ma trận vuông A có det(A)=0. A có nghịch đảo không?",
+        "solution": "Không. det(A)=0 nghĩa là A suy biến và không khả nghịch.",
+        "tags": [
+          "invertibility"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "exerciseId": "E196-inverse-E02",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "prompt": "Tính nghịch đảo của [[2,0],[0,4]].",
+        "solution": "A^{-1}=[[1/2,0],[0,1/4]].",
+        "tags": [
+          "inverse-2x2"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "exerciseId": "E196-inverse-E03",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Tính A^{-1} với A=[[1,2],[3,5]].",
+        "solution": "det=-1; A^{-1}=[[-5,2],[3,-1]].",
+        "tags": [
+          "inverse-2x2"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "exerciseId": "E196-inverse-E04",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Giải thích vì sao ma trận có hai hàng phụ thuộc tuyến tính không thể khả nghịch.",
+        "solution": "Hai hàng phụ thuộc làm rank<n, determinant bằng 0 và phép biến đổi mất thông tin nên không tồn tại ánh xạ ngược duy nhất.",
+        "tags": [
+          "rank",
+          "invertibility"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "exerciseId": "E196-inverse-E05",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "prompt": "Nếu A khả nghịch và Ax=b, viết nghiệm x.",
+        "solution": "x=A^{-1}b. Trong tính số thực tế nên dùng solver thay vì tạo inverse tường minh.",
+        "tags": [
+          "linear-system"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "exerciseId": "E196-inverse-E06",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "prompt": "Vì sao không nên dùng inv(A)@b để giải hệ tuyến tính trong code số?",
+        "solution": "Tạo inverse tường minh tốn tính toán, tăng sai số và kém ổn định hơn các solver dùng LU/QR phù hợp.",
+        "tags": [
+          "numerical-linear-algebra"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "exerciseId": "E196-inverse-E07",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "prompt": "Một ma trận có det rất nhỏ nhưng khác 0. Vì sao vẫn cần cảnh giác?",
+        "solution": "Nó có thể gần suy biến, condition number lớn; nghịch đảo tồn tại lý thuyết nhưng rất nhạy với nhiễu và roundoff.",
+        "tags": [
+          "condition-number",
+          "near-singular"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "exerciseId": "E196-inverse-E08",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "prompt": "Trong ước lượng trạng thái/điều khiển, khi nào regularization hoặc pseudoinverse phù hợp hơn inverse thường?",
+        "solution": "Khi ma trận không vuông, rank-deficient hoặc gần suy biến; pseudoinverse/SVD và regularization xử lý nghiệm least-squares hay giảm nhạy số tốt hơn inverse thường.",
+        "tags": [
+          "pseudoinverse",
+          "regularization",
+          "control"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      }
+    ],
+    "application_content": [
+      {
+        "applicationId": "E196-inverse-A1",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Khôi phục biến trạng thái từ phép biến đổi tọa độ",
+        "scenario": "Trong mô hình trạng thái, z=T^{-1}x dùng khi đổi cơ sở/tọa độ với T khả nghịch.",
+        "method": "Kiểm rank/condition của T, giải Tz=x hoặc dùng solver ổn định; không tạo inverse nếu không cần.",
+        "expectedOutcome": "Hiểu nghịch đảo như phép hoàn tác biến đổi tuyến tính và nhận biết khi biến đổi mất thông tin.",
+        "tags": [
+          "state-space",
+          "change-of-basis"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "applicationId": "E196-inverse-A2",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Giải hệ hiệu chuẩn cảm biến và reconstruction",
+        "scenario": "Ma trận hiệu chuẩn liên hệ tín hiệu đo y với đại lượng thật x qua y=Ax.",
+        "method": "Nếu A vuông full-rank có thể giải Ax=y; nếu A gần suy biến kiểm condition, nếu không vuông dùng least squares/pseudoinverse.",
+        "expectedOutcome": "Không dùng inverse máy móc; chọn solve/pseudoinverse theo shape, rank và conditioning.",
+        "tags": [
+          "calibration",
+          "sensor",
+          "reconstruction"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      }
+    ],
+    "simulation_content": [
+      {
+        "simulationId": "E196-inverse-SIM1",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "Mô phỏng inverse khi determinant tiến về 0",
+        "purpose": "Thay ε trong A=[[1,1],[1,1+ε]] và quan sát det, condition number, inverse và residual.",
+        "controls": [
+          {
+            "key": "epsilon",
+            "type": "number",
+            "default": 0.1
+          },
+          {
+            "key": "noise",
+            "type": "number",
+            "default": 0
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "determinant",
+            "label": "det(A)"
+          },
+          {
+            "key": "condition_number",
+            "label": "cond(A)"
+          },
+          {
+            "key": "inverse_norm",
+            "label": "||A^{-1}||"
+          },
+          {
+            "key": "residual",
+            "label": "||AA^{-1}-I||"
+          }
+        ],
+        "expectedObservation": "Khi ε→0, determinant→0, condition number và độ lớn inverse tăng mạnh; nghiệm nhạy với nhiễu dù inverse còn tồn tại trước khi ε=0.",
+        "tags": [
+          "inverse",
+          "conditioning"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      },
+      {
+        "simulationId": "E196-inverse-SIM2",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "title": "So sánh inv(A)@b với solve(A,b)",
+        "purpose": "Đo sai số và chi phí giữa tạo inverse tường minh và giải trực tiếp hệ Ax=b.",
+        "controls": [
+          {
+            "key": "matrix_size",
+            "type": "number",
+            "default": 10
+          },
+          {
+            "key": "conditioning",
+            "type": "number",
+            "default": 10
+          }
+        ],
+        "computedReadouts": [
+          {
+            "key": "solve_error",
+            "label": "Sai số solve"
+          },
+          {
+            "key": "inverse_error",
+            "label": "Sai số inv@b"
+          },
+          {
+            "key": "solve_time",
+            "label": "Thời gian solve"
+          },
+          {
+            "key": "inverse_time",
+            "label": "Thời gian inverse"
+          }
+        ],
+        "expectedObservation": "solve thường trực tiếp và ổn định hơn; khác biệt rõ hơn khi kích thước/condition tăng.",
+        "tags": [
+          "solver",
+          "numerical-stability"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      }
+    ],
+    "professor_qa_content": [
+      {
+        "qaId": "E196-inverse-QA01",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "question": "Nếu giáo sư hỏi 'khi nào A^{-1} tồn tại và tại sao trong code không nên giải Ax=b bằng inv(A)@b?', bạn trả lời thế nào?",
+        "answer": "A^{-1} chỉ tồn tại cho ma trận vuông full-rank, tương đương det(A)≠0. Tuy nhiên det khác 0 chưa đảm bảo ổn định số nếu A gần suy biến; cần xem condition number. Khi giải Ax=b, solver dựa trên factorization thường ít phép tính và ít khuếch đại sai số hơn việc tạo inverse tường minh rồi nhân b. Với ma trận không vuông/rank-deficient nên xét least squares, pseudoinverse hoặc regularization.",
+        "followUp": [
+          "AA^{-1}=I nên kiểm bằng exact equality hay tolerance?",
+          "Det rất nhỏ nói gì về conditioning?",
+          "Pseudoinverse khác inverse thường ở đâu?"
+        ],
+        "tags": [
+          "inverse",
+          "numerical-linear-algebra",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      }
+    ],
+    "review_pack_content": [
+      {
+        "reviewPackId": "E196-inverse-RP01",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "items": [
+          {
+            "type": "condition",
+            "prompt": "Điều kiện tương đương để A vuông khả nghịch?",
+            "expected": "det(A)≠0 ⇔ rank(A)=n ⇔ Ax=b có nghiệm duy nhất với mọi b."
+          },
+          {
+            "type": "compute",
+            "prompt": "Inverse 2×2 tính thế nào?",
+            "expected": "Đổi a↔d, đổi dấu b,c rồi chia cho ad-bc."
+          },
+          {
+            "type": "verify",
+            "prompt": "Kiểm A^{-1} trong floating point thế nào?",
+            "expected": "Kiểm norm(AA^{-1}-I) hoặc norm(A^{-1}A-I) nhỏ theo tolerance."
+          },
+          {
+            "type": "numerical",
+            "prompt": "Vì sao ưu tiên solve hơn inv(A)@b?",
+            "expected": "Ít chi phí và ổn định số hơn; tránh tạo inverse tường minh."
+          }
+        ],
+        "masteryGate": "Nêu đúng điều kiện khả nghịch + tính inverse 2×2 + kiểm residual + phân biệt inverse lý thuyết với conditioning + biết khi dùng solve/pseudoinverse",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      }
+    ],
+    "question_bank_content": [
+      {
+        "questionId": "E196-inverse-Q001",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "A khả nghịch khi điều kiện nào đúng?",
+        "options": [
+          "A vuông và det(A)≠0",
+          "A có phần tử dương",
+          "A đối xứng",
+          "A có trace khác 0"
+        ],
+        "answer": "A vuông và det(A)≠0",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q002",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Nếu det(A)=0 thì A^{-1}?",
+        "options": [
+          "Không tồn tại",
+          "Luôn là I",
+          "Bằng Aᵀ",
+          "Bằng 0"
+        ],
+        "answer": "Không tồn tại",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q003",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Với A=[[a,b],[c,d]], mẫu số của A^{-1} là?",
+        "options": [
+          "ad-bc",
+          "a+d",
+          "ac-bd",
+          "ab+cd"
+        ],
+        "answer": "ad-bc",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q004",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Điều kiện rank cho ma trận n×n khả nghịch là?",
+        "options": [
+          "rank(A)=n",
+          "rank(A)=0",
+          "rank(A)<n",
+          "rank(A)=1"
+        ],
+        "answer": "rank(A)=n",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q005",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Nếu A=I thì A^{-1} bằng?",
+        "options": [
+          "I",
+          "0",
+          "-I",
+          "Aᵀ khác I"
+        ],
+        "answer": "I",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q006",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Để kiểm inverse trong số thực nên dùng?",
+        "options": [
+          "Residual gần 0 với tolerance",
+          "Exact string equality",
+          "Chỉ determinant",
+          "Chỉ trace"
+        ],
+        "answer": "Residual gần 0 với tolerance",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q007",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Nếu A khả nghịch, nghiệm Ax=b là?",
+        "options": [
+          "x=A^{-1}b",
+          "x=Ab",
+          "x=Aᵀb",
+          "x=b"
+        ],
+        "answer": "x=A^{-1}b",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q008",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "easy",
+        "question": "Ma trận không vuông có inverse hai phía thông thường không?",
+        "options": [
+          "Không",
+          "Luôn có",
+          "Chỉ khi nhiều hàng",
+          "Chỉ khi nhiều cột"
+        ],
+        "answer": "Không",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q009",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "A=[[2,0],[0,5]], A^{-1} là?",
+        "options": [
+          "[[1/2,0],[0,1/5]]",
+          "[[2,0],[0,5]]",
+          "[[5,0],[0,2]]",
+          "[[1/5,0],[0,1/2]]"
+        ],
+        "answer": "[[1/2,0],[0,1/5]]",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q010",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Nếu hai hàng của A phụ thuộc tuyến tính thì?",
+        "options": [
+          "A không khả nghịch",
+          "A luôn khả nghịch",
+          "det(A)=1",
+          "rank tăng"
+        ],
+        "answer": "A không khả nghịch",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q011",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "A gần suy biến thường có?",
+        "options": [
+          "Condition number lớn",
+          "Condition number luôn 1",
+          "Rank luôn 0 exact",
+          "Determinant luôn 1"
+        ],
+        "answer": "Condition number lớn",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q012",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Trong code giải Ax=b, lựa chọn mặc định tốt hơn là?",
+        "options": [
+          "solve/factorization",
+          "inv(A)@b",
+          "Tính adjugate thủ công",
+          "Dùng transpose"
+        ],
+        "answer": "solve/factorization",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q013",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Nếu AA^{-1}=I nhưng A có condition rất lớn thì?",
+        "options": [
+          "Inverse lý thuyết tồn tại nhưng bài toán có thể nhạy số",
+          "A chắc chắn ổn định",
+          "Condition không liên quan",
+          "A là orthogonal"
+        ],
+        "answer": "Inverse lý thuyết tồn tại nhưng bài toán có thể nhạy số",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q014",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Inverse của tích AB khi A,B khả nghịch là?",
+        "options": [
+          "(AB)^{-1}=B^{-1}A^{-1}",
+          "A^{-1}B^{-1}",
+          "AB",
+          "B A"
+        ],
+        "answer": "(AB)^{-1}=B^{-1}A^{-1}",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q015",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "medium",
+        "question": "Inverse của Aᵀ khi A khả nghịch là?",
+        "options": [
+          "(A^{-1})ᵀ",
+          "A^{-1} không transpose",
+          "A",
+          "I"
+        ],
+        "answer": "(A^{-1})ᵀ",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q016",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Vì sao determinant rất nhỏ không phải kiểm tra ổn định số đủ tốt?",
+        "options": [
+          "Nó phụ thuộc scale và không trực tiếp đo sensitivity như condition number",
+          "Vì det luôn bằng 0",
+          "Vì det chỉ cho ma trận chéo",
+          "Vì det không tồn tại"
+        ],
+        "answer": "Nó phụ thuộc scale và không trực tiếp đo sensitivity như condition number",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q017",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Nếu A orthogonal thì A^{-1}=?",
+        "options": [
+          "Aᵀ",
+          "A",
+          "-A",
+          "det(A)"
+        ],
+        "answer": "Aᵀ",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q018",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Pseudoinverse phù hợp khi?",
+        "options": [
+          "A không vuông hoặc rank-deficient",
+          "Chỉ khi A=I",
+          "Chỉ khi det>1",
+          "Không bao giờ"
+        ],
+        "answer": "A không vuông hoặc rank-deficient",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q019",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Regularization có thể giúp hệ gần suy biến bằng cách?",
+        "options": [
+          "Giảm nhạy và cải thiện conditioning hiệu dụng",
+          "Làm det bằng 0",
+          "Xóa mọi dữ liệu",
+          "Buộc rank=1"
+        ],
+        "answer": "Giảm nhạy và cải thiện conditioning hiệu dụng",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q020",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "hard",
+        "question": "Residual ||AA^{-1}-I|| nhỏ nhưng condition lớn có nghĩa?",
+        "options": [
+          "Inverse tính được vẫn có thể khuếch đại nhiễu mạnh",
+          "Không có vấn đề số nào",
+          "A chắc chắn orthogonal",
+          "Rank bằng 0"
+        ],
+        "answer": "Inverse tính được vẫn có thể khuếch đại nhiễu mạnh",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q021",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Trong Kalman/filtering, inverse covariance gần suy biến nên xử lý thế nào?",
+        "options": [
+          "Dùng factorization/solve, kiểm conditioning và regularize khi cần",
+          "Luôn inv trực tiếp",
+          "Bỏ covariance",
+          "Đặt mọi phần tử=1"
+        ],
+        "answer": "Dùng factorization/solve, kiểm conditioning và regularize khi cần",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q022",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Vì sao explicit inverse thường bị tránh trong numerical linear algebra?",
+        "options": [
+          "Tốn hơn và thường kém ổn định hơn solving bằng factorization",
+          "Vì inverse không tồn tại cho ma trận vuông",
+          "Vì LU không dùng được",
+          "Vì matrix multiplication bị cấm"
+        ],
+        "answer": "Tốn hơn và thường kém ổn định hơn solving bằng factorization",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q023",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Nếu A có singular value nhỏ nhất rất gần 0 thì?",
+        "options": [
+          "A gần suy biến và inverse nhạy",
+          "A chắc chắn orthogonal",
+          "A có rank 0",
+          "A luôn diagonal"
+        ],
+        "answer": "A gần suy biến và inverse nhạy",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q024",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Một regression test tốt cho inverse nên gồm?",
+        "options": [
+          "Well-conditioned, singular, near-singular và non-square cases",
+          "Chỉ identity",
+          "Chỉ random 2×2",
+          "Chỉ zero matrix"
+        ],
+        "answer": "Well-conditioned, singular, near-singular và non-square cases",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      },
+      {
+        "questionId": "E196-inverse-Q025",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "level": "expert",
+        "question": "Cầu nối đúng giữa inverse và rank là?",
+        "options": [
+          "A n×n khả nghịch ⇔ rank(A)=n",
+          "A khả nghịch ⇔ rank=0",
+          "A khả nghịch ⇔ rank<n",
+          "Không liên quan"
+        ],
+        "answer": "A n×n khả nghịch ⇔ rank(A)=n",
+        "explanation": "Đáp án bám điều kiện khả nghịch, công thức inverse 2×2, kiểm residual, conditioning và thực hành giải hệ ổn định số.",
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX",
+        "stage": "vn"
+      }
+    ],
+    "mindmap_content": [
+      {
+        "mindmapId": "E196-inverse-MM01",
+        "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+        "lessonId": "MATH-VN-LA-C02-L09",
+        "nodes": [
+          {
+            "id": "root",
+            "label": "Inverse → invertibility → stable solving",
+            "type": "root"
+          },
+          {
+            "id": "conditions",
+            "label": "det≠0 ⇔ rank=n",
+            "type": "criterion"
+          },
+          {
+            "id": "formula2",
+            "label": "Inverse 2×2",
+            "type": "formula"
+          },
+          {
+            "id": "identity",
+            "label": "AA⁻¹=I",
+            "type": "verification"
+          },
+          {
+            "id": "conditioning",
+            "label": "Gần suy biến → cond lớn",
+            "type": "warning"
+          },
+          {
+            "id": "solve",
+            "label": "solve(A,b) > inv(A)@b",
+            "type": "practice"
+          },
+          {
+            "id": "pseudo",
+            "label": "Pseudoinverse / regularization",
+            "type": "application"
+          }
+        ],
+        "edges": [
+          {
+            "from": "root",
+            "to": "conditions"
+          },
+          {
+            "from": "root",
+            "to": "formula2"
+          },
+          {
+            "from": "root",
+            "to": "identity"
+          },
+          {
+            "from": "conditions",
+            "to": "conditioning"
+          },
+          {
+            "from": "conditioning",
+            "to": "solve"
+          },
+          {
+            "from": "solve",
+            "to": "pseudo"
+          }
+        ],
+        "tags": [
+          "inverse",
+          "E196"
+        ],
+        "auditStatus": "PASS",
+        "sourceBundle": "E196_INVERSE_MATRIX"
+      }
+    ]
+  }
+}
