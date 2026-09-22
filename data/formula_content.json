@@ -1642,7 +1642,7 @@
     {
       "formulaId": "E197-limits-F1",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "title": "Định nghĩa giới hạn hàm số",
       "formula": "lim_{x→a} f(x)=L",
       "meaning": "Giá trị f(x) có thể tiến gần L khi x tiến đủ gần a, không đòi hỏi x=a hay f(a)=L.",
@@ -1665,7 +1665,7 @@
     {
       "formulaId": "E197-limits-F2",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "title": "Điều kiện liên tục tại một điểm",
       "formula": "f liên tục tại a ⇔ lim_{x→a}f(x)=f(a)",
       "meaning": "Liên tục yêu cầu giới hạn tồn tại, f(a) xác định và hai giá trị bằng nhau.",
@@ -1688,7 +1688,7 @@
     {
       "formulaId": "E197-limits-F3",
       "lessonId": "MATH-VN-CA-C03-L01",
-      "chapterId": "MATH-VN-C03-gioi_han_lien_tuc_va_y_nghia_",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
       "title": "Tốc độ biến thiên trung bình và tức thời",
       "formula": "Δf/Δx=[f(x+h)-f(x)]/h; h→0 cho đạo hàm",
       "meaning": "Tốc độ biến thiên trung bình trên một khoảng trở thành tốc độ tức thời khi khoảng co về 0.",
