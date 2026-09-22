@@ -331,6 +331,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E189_SPECIAL_MATRICES"
+    },
+    {
+      "qaId": "E190-transpose-QA01",
+      "lessonId": "MATH-VN-LA-C02-L03",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Nếu giáo sư hỏi transpose chỉ là 'xoay bảng' hay có ý nghĩa sâu hơn, bạn trả lời thế nào?",
+      "answer": "Về chỉ số, transpose đổi aᵢⱼ thành aⱼᵢ; về linear algebra, nó đổi vai domain/codomain và trong Euclidean spaces đóng vai adjoint. Vì vậy nó xuất hiện tự nhiên trong Gram matrix, least squares và backprop, không chỉ là thao tác trình bày.",
+      "followUp": [
+        "Vì sao (AB)ᵀ đảo thứ tự?",
+        "XᵀX khác XXᵀ thế nào?",
+        "Khi nào transpose mù gây bug semantic?"
+      ],
+      "tags": [
+        "transpose",
+        "E190"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E190_MATRIX_TRANSPOSE"
     }
   ],
   "importPolicy": {
