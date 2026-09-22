@@ -1224,6 +1224,75 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "formulaId": "E191-arith-F1",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Cộng/trừ ma trận theo phần tử",
+      "formula": "(A±B)ᵢⱼ = aᵢⱼ ± bᵢⱼ",
+      "meaning": "Phép cộng/trừ chuẩn được định nghĩa khi A và B cùng shape; mỗi phần tử tương ứng được cộng/trừ.",
+      "conditions": [
+        "A,B cùng m×n.",
+        "Semantics/đơn vị của phần tử tương ứng tương thích nếu diễn giải kỹ thuật."
+      ],
+      "commonMistakes": [
+        "Broadcasting im lặng rồi coi đó là cộng hai ma trận cùng cấp.",
+        "Cộng đại lượng khác đơn vị chỉ vì shape giống nhau."
+      ],
+      "programmingUse": "assert A.shape==B.shape; C=A+B hoặc A-B.",
+      "tags": [
+        "matrix-addition",
+        "shape"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "formulaId": "E191-arith-F2",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Nhân vô hướng",
+      "formula": "(αA)ᵢⱼ = αaᵢⱼ",
+      "meaning": "Scalar multiplication giữ shape và scale mọi phần tử của A cùng hệ số α.",
+      "conditions": [
+        "α thuộc trường số phù hợp.",
+        "Dtype đủ để biểu diễn scale mong muốn."
+      ],
+      "commonMistakes": [
+        "Nhầm scalar multiplication với matrix multiplication.",
+        "Bỏ qua overflow/underflow khi α rất lớn/nhỏ."
+      ],
+      "programmingUse": "C=alpha*A; theo dõi dtype và scale.",
+      "tags": [
+        "scalar",
+        "matrix-scaling"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
+    },
+    {
+      "formulaId": "E191-arith-F3",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "title": "Tổ hợp tuyến tính hai ma trận",
+      "formula": "Y = αA + βB",
+      "meaning": "Tổ hợp tuyến tính gom hai ma trận cùng không gian biểu diễn thành một đầu ra cùng shape.",
+      "conditions": [
+        "A,B cùng shape và semantics.",
+        "α,β có ý nghĩa rõ trong pipeline."
+      ],
+      "commonMistakes": [
+        "Trộn representation khác scale/đơn vị.",
+        "Không chuẩn hóa hoặc calibrate trước weighted fusion."
+      ],
+      "programmingUse": "Y=alpha*A+beta*B; dùng trong residual/fusion/ensemble khi contract hợp lệ.",
+      "tags": [
+        "linear-combination",
+        "fusion"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
     }
   ],
   "importPolicy": {
