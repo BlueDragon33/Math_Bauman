@@ -219,6 +219,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E183_DOT_PRODUCT"
+    },
+    {
+      "qaId": "E184-cos-QA01",
+      "lessonId": "MATH-VN-LA-C01-L05",
+      "chapterId": "MATH-VN-C01-vector_trong_khong_gian_",
+      "question": "Nếu giáo sư hỏi 'cosine similarity tốt hơn Euclidean hay dot product không?', bạn sẽ trả lời thế nào?",
+      "answer": "Không có metric tốt tuyệt đối. Cosine bỏ magnitude và đo hướng, phù hợp khi độ lớn không mang ý nghĩa hoặc embedding đã chuẩn hóa. Euclidean đo khoảng cách tọa độ và phụ thuộc scale; dot product giữ cả hướng lẫn magnitude. Sau L2-normalization, cosine và Euclidean có quan hệ đơn điệu. Chọn metric phải dựa vào semantics, preprocessing và cách mô hình được huấn luyện.",
+      "followUp": [
+        "Vì sao vector 0 là trường hợp đặc biệt?",
+        "Khi nào dot và cosine ranking giống nhau?",
+        "Centering có thể làm cosine thay đổi ra sao?"
+      ],
+      "tags": [
+        "cosine_similarity",
+        "E184"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E184_COSINE_SIMILARITY"
     }
   ],
   "importPolicy": {
