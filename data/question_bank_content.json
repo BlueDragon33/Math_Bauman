@@ -18512,6 +18512,569 @@
         "E204"
       ],
       "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q001",
+      "level": "easy",
+      "question": "Cập nhật gradient descent chuẩn là?",
+      "options": [
+        "x_{k+1}=x_k-η∇f(x_k)",
+        "x_{k+1}=x_k+η∇f(x_k)",
+        "x_{k+1}=∇²f",
+        "x_{k+1}=η"
+      ],
+      "answer": "x_{k+1}=x_k-η∇f(x_k)",
+      "explanation": "Dấu trừ đi theo hướng giảm cục bộ.",
+      "tags": [
+        "update",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q002",
+      "level": "easy",
+      "question": "Learning rate η điều khiển chủ yếu?",
+      "options": [
+        "Độ dài bước",
+        "Số chiều dữ liệu",
+        "Số output",
+        "Định nghĩa gradient"
+      ],
+      "answer": "Độ dài bước",
+      "explanation": "η scale vector gradient trước khi cập nhật.",
+      "tags": [
+        "learning-rate",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q003",
+      "level": "easy",
+      "question": "Với f=½ax², hệ số lặp là?",
+      "options": [
+        "1-ηa",
+        "1+ηa",
+        "η/a",
+        "a-η"
+      ],
+      "answer": "1-ηa",
+      "explanation": "Gradient ax dẫn tới x_{k+1}=x_k-ηax_k.",
+      "tags": [
+        "quadratic",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q004",
+      "level": "easy",
+      "question": "Điều kiện hội tụ quadratic 1D a>0 là?",
+      "options": [
+        "0<η<2/a",
+        "η>2/a",
+        "η<0",
+        "η=2/a duy nhất"
+      ],
+      "answer": "0<η<2/a",
+      "explanation": "Cần |1-ηa|<1.",
+      "tags": [
+        "convergence",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q005",
+      "level": "easy",
+      "question": "Nếu 0<ηa<1, phép lặp quadratic thường?",
+      "options": [
+        "Hội tụ không đổi dấu",
+        "Phân kỳ dao động",
+        "Đứng yên",
+        "Luôn đổi dấu"
+      ],
+      "answer": "Hội tụ không đổi dấu",
+      "explanation": "Multiplier nằm giữa 0 và 1.",
+      "tags": [
+        "stability",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q006",
+      "level": "easy",
+      "question": "Nếu 1<ηa<2, phép lặp quadratic thường?",
+      "options": [
+        "Hội tụ dao động",
+        "Phân kỳ luôn",
+        "Không thay đổi",
+        "Hội tụ một bước"
+      ],
+      "answer": "Hội tụ dao động",
+      "explanation": "Multiplier âm nhưng độ lớn nhỏ hơn 1.",
+      "tags": [
+        "oscillation",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q007",
+      "level": "medium",
+      "question": "Nếu ηa>2, quadratic 1D thường?",
+      "options": [
+        "Phân kỳ dao động",
+        "Hội tụ chậm",
+        "Hội tụ đơn điệu",
+        "Đạt optimum một bước"
+      ],
+      "answer": "Phân kỳ dao động",
+      "explanation": "Multiplier nhỏ hơn -1 về độ lớn.",
+      "tags": [
+        "divergence",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q008",
+      "level": "medium",
+      "question": "η=1/a trong quadratic 1D lý tưởng cho?",
+      "options": [
+        "x₁=0 sau một bước",
+        "Phân kỳ",
+        "Multiplier=-1",
+        "Không di chuyển"
+      ],
+      "answer": "x₁=0 sau một bước",
+      "explanation": "1-ηa=0.",
+      "tags": [
+        "quadratic",
+        "optimal-step",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q009",
+      "level": "medium",
+      "question": "Learning rate quá nhỏ thường gây?",
+      "options": [
+        "Hội tụ rất chậm",
+        "Phân kỳ tức thì",
+        "Gradient sai dấu",
+        "Hessian biến mất"
+      ],
+      "answer": "Hội tụ rất chậm",
+      "explanation": "Bước thay đổi tham số nhỏ dù hướng đúng.",
+      "tags": [
+        "learning-rate",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q010",
+      "level": "medium",
+      "question": "Learning rate quá lớn có thể?",
+      "options": [
+        "Overshoot, dao động hoặc phân kỳ",
+        "Luôn nhanh hơn",
+        "Làm gradient bằng 0",
+        "Bảo đảm global optimum"
+      ],
+      "answer": "Overshoot, dao động hoặc phân kỳ",
+      "explanation": "Step vượt vùng giảm cục bộ.",
+      "tags": [
+        "learning-rate",
+        "divergence",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q011",
+      "level": "medium",
+      "question": "Trong quadratic nhiều chiều, curvature lớn nhất ảnh hưởng gì?",
+      "options": [
+        "Giới hạn learning rate ổn định",
+        "Chỉ ảnh hưởng intercept",
+        "Không liên quan",
+        "Luôn làm gradient nhỏ"
+      ],
+      "answer": "Giới hạn learning rate ổn định",
+      "explanation": "Eigenvalue lớn nhất quyết định hướng nhạy nhất với step.",
+      "tags": [
+        "eigenvalues",
+        "stability",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q012",
+      "level": "medium",
+      "question": "Condition number lớn thường gây?",
+      "options": [
+        "Tốc độ hội tụ rất khác giữa các hướng và zig-zag",
+        "Một bước hội tụ",
+        "Gradient luôn 0",
+        "Loss luôn convex mạnh"
+      ],
+      "answer": "Tốc độ hội tụ rất khác giữa các hướng và zig-zag",
+      "explanation": "Curvature chênh lệch làm một η khó phù hợp mọi hướng.",
+      "tags": [
+        "conditioning",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q013",
+      "level": "medium",
+      "question": "Nếu loss gần như không đổi nhưng gradient norm còn lớn, nên?",
+      "options": [
+        "Kiểm learning rate/scaling thay vì kết luận hội tụ",
+        "Dừng chắc chắn",
+        "Tăng η vô hạn",
+        "Bỏ gradient"
+      ],
+      "answer": "Kiểm learning rate/scaling thay vì kết luận hội tụ",
+      "explanation": "Step nhỏ có thể do η quá nhỏ.",
+      "tags": [
+        "diagnosis",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q014",
+      "level": "medium",
+      "question": "Một stopping criterion chỉ dựa vào loss change nhỏ có thể sai vì?",
+      "options": [
+        "Learning rate quá nhỏ hoặc plateau tạo thay đổi nhỏ",
+        "Loss change nhỏ luôn là optimum",
+        "Gradient không liên quan",
+        "Hessian luôn dương"
+      ],
+      "answer": "Learning rate quá nhỏ hoặc plateau tạo thay đổi nhỏ",
+      "explanation": "Nên kết hợp nhiều tín hiệu.",
+      "tags": [
+        "stopping",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q015",
+      "level": "medium",
+      "question": "Gradient norm nên được theo dõi vì?",
+      "options": [
+        "Cho biết mức stationarity bậc nhất",
+        "Cho biết trực tiếp accuracy test",
+        "Luôn bằng loss",
+        "Không phụ thuộc scale"
+      ],
+      "answer": "Cho biết mức stationarity bậc nhất",
+      "explanation": "Gradient nhỏ là một tín hiệu dừng, dù chưa đủ một mình.",
+      "tags": [
+        "gradient-norm",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q016",
+      "level": "hard",
+      "question": "Với Hessian eigenvalues 1 và 100, η=0.019 thì hướng λ=100 có multiplier?",
+      "options": [
+        "-0.9",
+        "0.981",
+        "1.9",
+        "-1.9"
+      ],
+      "answer": "-0.9",
+      "explanation": "1-0.019·100=-0.9, hội tụ dao động ở hướng cong lớn.",
+      "tags": [
+        "eigenvalues",
+        "oscillation",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q017",
+      "level": "hard",
+      "question": "Cùng bài, hướng λ=1 có multiplier?",
+      "options": [
+        "0.981",
+        "-0.9",
+        "0",
+        "1.019"
+      ],
+      "answer": "0.981",
+      "explanation": "Hướng phẳng co rất chậm.",
+      "tags": [
+        "conditioning",
+        "slow-convergence",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q018",
+      "level": "hard",
+      "question": "Tại sao scaling feature có thể cải thiện gradient descent?",
+      "options": [
+        "Giảm chênh curvature/conditioning của bài toán",
+        "Làm gradient biến mất",
+        "Bảo đảm convexity",
+        "Tăng số chiều"
+      ],
+      "answer": "Giảm chênh curvature/conditioning của bài toán",
+      "explanation": "Scaling hợp lý có thể làm level sets bớt kéo dài.",
+      "tags": [
+        "scaling",
+        "conditioning",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q019",
+      "level": "hard",
+      "question": "Nếu ∇f là L-Lipschitz, η≤1/L thường cho?",
+      "options": [
+        "Một bound descent an toàn theo descent lemma",
+        "Global optimum trong một bước",
+        "Hessian bằng LI bắt buộc",
+        "Không cần kiểm loss"
+      ],
+      "answer": "Một bound descent an toàn theo descent lemma",
+      "explanation": "Đây là bảo đảm giảm dưới giả thiết smoothness.",
+      "tags": [
+        "smoothness",
+        "descent-lemma",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q020",
+      "level": "hard",
+      "question": "L-smooth có đồng nghĩa strongly convex không?",
+      "options": [
+        "Không",
+        "Có",
+        "Chỉ trong 1D",
+        "Chỉ khi η=1/L"
+      ],
+      "answer": "Không",
+      "explanation": "Smoothness giới hạn thay đổi gradient; strong convexity là điều kiện curvature dưới.",
+      "tags": [
+        "smoothness",
+        "convexity",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q021",
+      "level": "hard",
+      "question": "Backtracking line search giải quyết chủ yếu vấn đề gì?",
+      "options": [
+        "Tự điều chỉnh step để thỏa điều kiện giảm",
+        "Tính gradient thay thế",
+        "Tăng dimension",
+        "Tạo Hessian chính xác"
+      ],
+      "answer": "Tự điều chỉnh step để thỏa điều kiện giảm",
+      "explanation": "Line search tránh cố định η không phù hợp cục bộ.",
+      "tags": [
+        "line-search",
+        "step-size",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q022",
+      "level": "hard",
+      "question": "Minibatch training có loss dao động dù η hợp lý vì?",
+      "options": [
+        "Gradient stochastic có nhiễu",
+        "Gradient descent luôn deterministic",
+        "Hessian không tồn tại",
+        "η luôn âm"
+      ],
+      "answer": "Gradient stochastic có nhiễu",
+      "explanation": "Noise minibatch tạo variability quanh xu hướng giảm.",
+      "tags": [
+        "stochastic-gradient",
+        "noise",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q023",
+      "level": "hard",
+      "question": "Phân kỳ sau khi tăng η chưa chứng minh điều gì?",
+      "options": [
+        "Chưa chứng minh gradient code sai; có thể chỉ vượt miền ổn định",
+        "Chắc chắn model sai",
+        "Chắc chắn dữ liệu sai",
+        "Chắc chắn Hessian âm"
+      ],
+      "answer": "Chưa chứng minh gradient code sai; có thể chỉ vượt miền ổn định",
+      "explanation": "Cần tách lỗi step-size khỏi lỗi derivative/implementation.",
+      "tags": [
+        "debugging",
+        "learning-rate",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q024",
+      "level": "hard",
+      "question": "Metric nào hữu ích khi debug gradient descent?",
+      "options": [
+        "Loss, gradient norm, step norm, parameter norm và validation metric",
+        "Chỉ số iteration duy nhất",
+        "Chỉ learning rate",
+        "Chỉ số lượng dữ liệu"
+      ],
+      "answer": "Loss, gradient norm, step norm, parameter norm và validation metric",
+      "explanation": "Nhiều tín hiệu giúp phân biệt scale, divergence và overfitting.",
+      "tags": [
+        "debugging",
+        "metrics",
+        "E205"
+      ],
+      "stage": "vn"
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "questionId": "E205-gd-Q025",
+      "level": "hard",
+      "question": "Cặp nào đúng?",
+      "options": [
+        "Gradient cho hướng; learning rate và curvature quyết định động lực hội tụ",
+        "Gradient tự quyết định mọi step",
+        "η càng lớn càng tốt",
+        "Hội tụ luôn đơn điệu"
+      ],
+      "answer": "Gradient cho hướng; learning rate và curvature quyết định động lực hội tụ",
+      "explanation": "Đây là kết luận trung tâm của bài.",
+      "tags": [
+        "summary",
+        "convergence",
+        "E205"
+      ],
+      "stage": "vn"
     }
   ],
   "importPolicy": {

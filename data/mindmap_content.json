@@ -2536,6 +2536,100 @@
         "stationary-point",
         "E204"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "mindmapId": "E205-gd-MM01",
+      "nodes": [
+        {
+          "id": "root",
+          "label": "Gradient descent dynamics",
+          "type": "root"
+        },
+        {
+          "id": "update",
+          "label": "x←x-η∇f",
+          "type": "formula"
+        },
+        {
+          "id": "eta",
+          "label": "learning rate",
+          "type": "control"
+        },
+        {
+          "id": "quad",
+          "label": "1-ηa multiplier",
+          "type": "formula"
+        },
+        {
+          "id": "mono",
+          "label": "monotone convergence",
+          "type": "result"
+        },
+        {
+          "id": "osc",
+          "label": "oscillatory convergence",
+          "type": "result"
+        },
+        {
+          "id": "div",
+          "label": "divergence",
+          "type": "warning"
+        },
+        {
+          "id": "cond",
+          "label": "conditioning / curvature",
+          "type": "geometry"
+        },
+        {
+          "id": "metrics",
+          "label": "loss + grad norm + step norm",
+          "type": "verification"
+        }
+      ],
+      "edges": [
+        {
+          "from": "root",
+          "to": "update"
+        },
+        {
+          "from": "update",
+          "to": "eta"
+        },
+        {
+          "from": "eta",
+          "to": "quad"
+        },
+        {
+          "from": "quad",
+          "to": "mono"
+        },
+        {
+          "from": "quad",
+          "to": "osc"
+        },
+        {
+          "from": "quad",
+          "to": "div"
+        },
+        {
+          "from": "update",
+          "to": "cond"
+        },
+        {
+          "from": "update",
+          "to": "metrics"
+        }
+      ],
+      "tags": [
+        "gradient-descent",
+        "learning-rate",
+        "convergence",
+        "E205"
+      ]
     }
   ],
   "importPolicy": {

@@ -1137,6 +1137,47 @@
         "stationary-point",
         "E204"
       ]
+    },
+    {
+      "lessonId": "MATH-VN-CA-C03-L09",
+      "chapterId": "MATH-VN-C03-ham_so_ao_ham_va_gradien",
+      "auditStatus": "PASS",
+      "sourceBundle": "E205_GRADIENT_DESCENT_CONVERGENCE",
+      "reviewPackId": "E205-gd-RP01",
+      "items": [
+        {
+          "type": "update",
+          "prompt": "Công thức gradient descent?",
+          "expected": "x_{k+1}=x_k-η_k∇f(x_k)."
+        },
+        {
+          "type": "quadratic",
+          "prompt": "Với f=½ax², điều kiện η hội tụ?",
+          "expected": "0<η<2/a."
+        },
+        {
+          "type": "oscillation",
+          "prompt": "Khi nào quadratic 1D hội tụ đổi dấu?",
+          "expected": "1<ηa<2."
+        },
+        {
+          "type": "diagnosis",
+          "prompt": "Loss giảm chậm + gradient còn lớn gợi ý gì?",
+          "expected": "η quá nhỏ hoặc conditioning/scaling xấu, chưa chắc đã hội tụ."
+        },
+        {
+          "type": "engineering",
+          "prompt": "Theo dõi những metric nào?",
+          "expected": "Loss, gradient norm, step norm, validation/engineering metric và trạng thái số."
+        }
+      ],
+      "masteryGate": "Viết đúng update + phân tích quadratic learning-rate regimes + giải thích oscillation/divergence + liên hệ curvature/conditioning + biết chẩn đoán training trace",
+      "tags": [
+        "gradient-descent",
+        "learning-rate",
+        "convergence",
+        "E205"
+      ]
     }
   ],
   "importPolicy": {
