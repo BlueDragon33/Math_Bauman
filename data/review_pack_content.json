@@ -633,6 +633,40 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E190_MATRIX_TRANSPOSE"
+    },
+    {
+      "reviewPackId": "E191-arith-RP01",
+      "lessonId": "MATH-VN-LA-C02-L04",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "items": [
+        {
+          "type": "definition",
+          "prompt": "Nêu điều kiện và định nghĩa A+B.",
+          "expected": "A,B cùng m×n; cộng từng phần tử tương ứng."
+        },
+        {
+          "type": "scalar",
+          "prompt": "Nêu nghĩa αA.",
+          "expected": "Mọi phần tử của A nhân α, shape giữ nguyên."
+        },
+        {
+          "type": "guard",
+          "prompt": "Vì sao broadcasting cần cảnh báo riêng?",
+          "expected": "Operand ban đầu không cùng shape và semantics phép toán khác cộng ma trận chuẩn."
+        },
+        {
+          "type": "transfer",
+          "prompt": "Nêu một ví dụ αA+βB trong kỹ thuật.",
+          "expected": "Residual/fusion/ensemble khi hai representation tương thích."
+        }
+      ],
+      "masteryGate": "Cộng/trừ đúng shape + hiểu scalar multiplication + nhận diện broadcasting + kiểm semantics/đơn vị trước matrix fusion",
+      "tags": [
+        "matrix-arithmetic",
+        "E191"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E191_MATRIX_ARITHMETIC"
     }
   ],
   "importPolicy": {
