@@ -385,6 +385,24 @@
       ],
       "auditStatus": "PASS",
       "sourceBundle": "E192_MATRIX_MULTIPLICATION"
+    },
+    {
+      "qaId": "E193-power-QA01",
+      "lessonId": "MATH-VN-LA-C02-L06",
+      "chapterId": "MATH-VN-C02-ma_tran_va_phep_bien_oi_",
+      "question": "Nếu giáo sư hỏi 'A² khác gì bình phương từng phần tử, và p(A) được hiểu thế nào?', bạn trả lời thế nào?",
+      "answer": "A² là A·A theo phép nhân ma trận, nên mỗi phần tử có tổng hàng×cột; không phải elementwise square. Với p(x)=Σc_kx^k, p(A)=Σc_kA^k và hạng tự do là c₀I. Cách nhìn này nối trực tiếp tới state transition, graph propagation và Cayley–Hamilton.",
+      "followUp": [
+        "A⁰ là gì?",
+        "Khi nào A^k không định nghĩa theo cách cơ bản?",
+        "Horner giúp gì khi tính p(A)?"
+      ],
+      "tags": [
+        "matrix-power",
+        "E193"
+      ],
+      "auditStatus": "PASS",
+      "sourceBundle": "E193_MATRIX_POWERS_POLYNOMIALS"
     }
   ],
   "importPolicy": {
