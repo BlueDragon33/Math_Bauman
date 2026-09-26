@@ -1,6 +1,6 @@
 'use strict';
 
-const RELEASE='math-bauman-e169-pwa-v3';
+const RELEASE='math-bauman-e169-pwa-v4-site-identity';
 const SHELL_CACHE=RELEASE+'-shell';
 const RUNTIME_CACHE=RELEASE+'-runtime';
 const CACHE_PREFIX='math-bauman-';
