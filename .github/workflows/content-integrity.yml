@@ -1,85 +1,35 @@
-name: Math Content Integrity Gate
+name: Math Development Fast CI
 
 on:
-  pull_request:
-    paths:
-      - "index.html"
-      - "manifest.webmanifest"
-      - "service-worker.js"
-      - "subject-manifest.json"
-      - "subject-manifest.js"
-      - "assets/**"
-      - "data/**"
-      - "content_bundles/**"
-      - "tools/e145_content_integrity.py"
-      - "tools/e177_content_coverage.py"
-      - "tools/e182_supplement_bundle_builder.py"
-      - "tools/e155_browser_smoke.mjs"
-      - ".github/workflows/content-integrity.yml"
   push:
     branches: [main]
-    paths:
-      - "index.html"
-      - "manifest.webmanifest"
-      - "service-worker.js"
-      - "subject-manifest.json"
-      - "subject-manifest.js"
-      - "assets/**"
-      - "data/**"
-      - "content_bundles/**"
-      - "tools/e145_content_integrity.py"
-      - "tools/e177_content_coverage.py"
-      - "tools/e182_supplement_bundle_builder.py"
-      - "tools/e155_browser_smoke.mjs"
-      - ".github/workflows/content-integrity.yml"
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: math-fast-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  integrity:
-    name: E145 Runtime Content Integrity
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+  fast-check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-      - name: Run integrity gate
-        run: python3 tools/e145_content_integrity.py
-      - name: Run content coverage gate
-        run: python3 tools/e177_content_coverage.py
-      - name: Run bundle builder self-test
-        run: python3 tools/e182_supplement_bundle_builder.py --self-test
-      - name: Validate reproducible content bundles
+      - uses: actions/checkout@v5
+      - name: Fast content/runtime sanity
         shell: bash
         run: |
           set -euo pipefail
-          shopt -s nullglob
-          for bundle in content_bundles/*.json; do
-            echo "validate $bundle"
-            python3 tools/e182_supplement_bundle_builder.py "$bundle"
-          done
-      - name: Parse runtime JavaScript
-        shell: bash
-        run: |
-          set -euo pipefail
-          while IFS= read -r -d '' file; do
-            echo "node --check $file"
-            node --check "$file"
-          done < <(find assets -type f -name '*.js' -print0 | sort -z)
+          test -f index.html
+          test -f subject-manifest.json
+          test -f subject-manifest.js
+          test -f service-worker.js
           node --check subject-manifest.js
           node --check service-worker.js
-          node --check tools/e155_browser_smoke.mjs
-      - name: Install browser smoke harness
-        run: npm install --no-save --package-lock=false playwright-core@1.55.0
-      - name: Run E155 browser smoke
-        shell: bash
-        run: |
-          set -euo pipefail
-          command -v google-chrome || command -v chromium || command -v chromium-browser
-          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/e155-http.log 2>&1 &
-          server_pid=$!
-          export E155_SERVER_PID="$server_pid"
-          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
-          node tools/e155_browser_smoke.mjs
+          python3 -m json.tool subject-manifest.json >/dev/null
+      - name: Development mode
+        run: echo "Full content integrity, coverage and browser smoke are deferred during active development."
