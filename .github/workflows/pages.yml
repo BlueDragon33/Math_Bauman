@@ -16,22 +16,48 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  publish:
     runs-on: ubuntu-24.04
+    outputs:
+      pages_enabled: ${{ steps.detect.outputs.enabled }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - uses: actions/checkout@v4
+
+      - name: Detect GitHub Pages availability
+        id: detect
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          code="$(curl --silent --output /tmp/pages.json --write-out '%{http_code}'             -H "Authorization: Bearer $GH_TOKEN"             -H "Accept: application/vnd.github+json"             -H "X-GitHub-Api-Version: 2022-11-28"             "https://api.github.com/repos/${{ github.repository }}/pages")"
+          if [[ "$code" == "200" ]]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Pages is not enabled yet; static development artifact will be preserved without blocking local work."
+          fi
+
+      - name: Preserve standalone web-app artifact
+        uses: actions/upload-artifact@v4
         with:
-          enablement: true
-      - name: Upload static web-app
+          name: math-bauman-standalone-site
+          path: .
+          retention-days: 3
+
+      - name: Configure Pages
+        if: ${{ steps.detect.outputs.enabled == 'true' }}
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: ${{ steps.detect.outputs.enabled == 'true' }}
         uses: actions/upload-pages-artifact@v4
         with:
           path: .
+
       - name: Deploy live
-        id: deployment
+        if: ${{ steps.detect.outputs.enabled == 'true' }}
         uses: actions/deploy-pages@v4
+
+      - name: Summary
+        if: ${{ always() }}
+        run: echo "Math Bauman remains a standalone local-first web-app; live Pages activates automatically once Pages is enabled."
