@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "blueprint-os:universal-century-grade",
+  "policyVersion": "1.2.0",
+  "projectId": "project:math-bauman",
+  "posture": "LOCAL_CORE_OFFLINE_CAPABLE",
+  "canonicalAuthority": {
+    "curriculum": "repository-content-and-subject-manifest",
+    "simulations": "browser-local",
+    "learnerProgress": "local-first-with-optional-sync",
+    "ai": "optional-intelligence-only"
+  },
+  "dependencies": [
+    {
+      "id": "browser-runtime",
+      "class": "LOCAL_CORE",
+      "costClass": "local-free",
+      "purpose": "Lessons, simulations and editor runtime",
+      "dataBoundary": "on-device/browser",
+      "offlineBehavior": "Core learning remains available from cached/local assets",
+      "exitPath": "Static web assets and portable subject data"
+    },
+    {
+      "id": "google-drive-or-equivalent",
+      "class": "OPTIONAL_SYNC",
+      "costClass": "free-or-optional-paid",
+      "purpose": "Optional progress/content backup and cross-device restore",
+      "dataBoundary": "Portable learning state/content exports only; not mathematical truth authority",
+      "offlineBehavior": "Local learning continues and queues/saves locally",
+      "exitPath": "Export/import portable JSON/files"
+    },
+    {
+      "id": "ai-provider",
+      "class": "OPTIONAL_INTELLIGENCE",
+      "costClass": "optional",
+      "purpose": "Explanation, tutoring and author assistance",
+      "dataBoundary": "Task/context only as explicitly requested",
+      "offlineBehavior": "Lessons, canonical solutions and simulations remain usable without AI",
+      "exitPath": "Provider can be disabled/replaced; curriculum truth stays in repo contracts/content"
+    }
+  ],
+  "forbidden": [
+    "cloud-required-core-lesson-runtime",
+    "ai-owned-mathematical-truth",
+    "drive-as-canonical-curriculum-authority",
+    "mandatory-paid-provider-for-basic-learning"
+  ]
+}

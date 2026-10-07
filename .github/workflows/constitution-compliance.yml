@@ -12,3 +12,27 @@ permissions:
 jobs:
   constitution:
     uses: BlueDragon33/Software-Blueprint-Hub/.github/workflows/constitution-compliance.yml@main
+
+  dependency-sovereignty:
+    name: Constitution 1.2 dependency sovereignty
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate offline-first math posture
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          a=json.loads(Path(".blueprint/constitution-adoption.json").read_text())
+          b=json.loads(Path(".blueprint/dependency-budget.json").read_text())
+          assert a["policyVersion"]=="1.2.0"
+          assert "operational-sovereignty-dependency-minimization" in a["inheritedPillars"]
+          assert b["policyVersion"]=="1.2.0"
+          assert b["projectId"]==a["projectId"]
+          assert b["posture"]=="LOCAL_CORE_OFFLINE_CAPABLE"
+          forbidden=set(b.get("forbidden",[]))
+          assert {"cloud-required-core-lesson-runtime","ai-owned-mathematical-truth","drive-as-canonical-curriculum-authority"} <= forbidden
+          print("Math Constitution 1.2 sovereignty: PASS")
+          PY
