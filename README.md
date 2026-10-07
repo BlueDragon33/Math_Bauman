@@ -33,3 +33,18 @@ Math_Bauman
 3. Mọi contract quản trị từ xa phải được công bố rõ trước khi bật nút điều khiển trong Application Management.
 4. Nội dung legacy chỉ được nhập khi đã xác định nguồn và tránh tạo bản sao trùng lặp.
 5. Repo được theo dõi trong danh mục dự án GitHub của `BlueDragon33/Application-Management` để không bị thất lạc khỏi hệ thống quản lý chung.
+
+
+## Operational sovereignty
+
+Math_Bauman adopts **Universal Constitution 1.2.0** at **B2**.
+
+Default posture: **LOCAL_CORE / OFFLINE_CAPABLE**.
+
+- Lessons, simulations and canonical subject content must remain usable without a paid cloud runtime.
+- Mathematical truth stays in repository content/contracts, never in an AI provider or Google Drive.
+- Google Drive or equivalent may optionally synchronize/backup portable learner progress or content exports.
+- AI may provide explanations or tutoring, but is optional intelligence and may be replaced/disabled.
+- Basic learning must not become dependent on a mandatory paid provider when browser/local execution satisfies the requirement.
+
+Canonical dependency posture: `.blueprint/dependency-budget.json`.
