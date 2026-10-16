@@ -14,7 +14,7 @@ jobs:
     uses: BlueDragon33/Software-Blueprint-Hub/.github/workflows/constitution-compliance.yml@main
 
   dependency-sovereignty:
-    name: Constitution 1.2 dependency sovereignty
+    name: Constitution 1.3 dependency sovereignty
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,12 +27,14 @@ jobs:
 
           a=json.loads(Path(".blueprint/constitution-adoption.json").read_text())
           b=json.loads(Path(".blueprint/dependency-budget.json").read_text())
-          assert a["policyVersion"]=="1.2.0"
+          assert a["policyVersion"]=="1.3.0"
           assert "operational-sovereignty-dependency-minimization" in a["inheritedPillars"]
-          assert b["policyVersion"]=="1.2.0"
+          assert b["policyVersion"]=="1.3.0"
           assert b["projectId"]==a["projectId"]
           assert b["posture"]=="LOCAL_CORE_OFFLINE_CAPABLE"
           forbidden=set(b.get("forbidden",[]))
           assert {"cloud-required-core-lesson-runtime","ai-owned-mathematical-truth","drive-as-canonical-curriculum-authority"} <= forbidden
-          print("Math Constitution 1.2 sovereignty: PASS")
+          print("Math Constitution 1.3 sovereignty: PASS")
           PY
+      - name: Check B2 seven-pillar source audit and honest offline evidence boundary
+        run: node --test tests/governance/constitution-13-b2-adoption.test.mjs
