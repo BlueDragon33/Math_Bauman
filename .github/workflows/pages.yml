@@ -1,10 +1,13 @@
 name: Math Bauman Live Pages
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
+    inputs:
+      enable_online_release:
+        type: boolean
+        required: true
+        default: false
+        description: "Explicit online release only; development runs locally"
 
 permissions:
   contents: read
@@ -45,19 +48,19 @@ jobs:
           retention-days: 3
 
       - name: Configure Pages
-        if: ${{ steps.detect.outputs.enabled == 'true' }}
+        if: ${{ steps.detect.outputs.enabled == 'true' && inputs.enable_online_release == true }}
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
-        if: ${{ steps.detect.outputs.enabled == 'true' }}
+        if: ${{ steps.detect.outputs.enabled == 'true' && inputs.enable_online_release == true }}
         uses: actions/upload-pages-artifact@v4
         with:
           path: .
 
       - name: Deploy live
-        if: ${{ steps.detect.outputs.enabled == 'true' }}
+        if: ${{ steps.detect.outputs.enabled == 'true' && inputs.enable_online_release == true }}
         uses: actions/deploy-pages@v4
 
       - name: Summary
         if: ${{ always() }}
-        run: echo "Math Bauman remains a standalone local-first web-app; live Pages activates automatically once Pages is enabled."
+        run: echo "Math Bauman is offline-local by default; online deployment requires explicit future owner opt-in."
