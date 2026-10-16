@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "app-constitution-adoption-evidence",
+  "status": "SOURCE_AUDIT_CANDIDATE",
+  "projectId": "project:math-bauman",
+  "blueprintLevel": "B2",
+  "scope": "SOURCE_POLICY_INHERITANCE_ONLY",
+  "sourceAuthority": {
+    "repo": "BlueDragon33/Software-Blueprint-Hub",
+    "policyId": "blueprint-os:universal-century-grade",
+    "version": "1.3.0",
+    "isNewRatification": false
+  },
+  "baseCommit": "a3556a504caf2db64b80b6b1aa755d27effe9192",
+  "retainedRequirements": {
+    "allSevenPillars": true,
+    "zeroWaivers": true,
+    "localFirst": true,
+    "productionAuthority": "separate-explicit-release-gate",
+    "posture": "LOCAL_CORE_OFFLINE_CAPABLE",
+    "canonicalDataNoRequiredCloud": true
+  },
+  "sourcePaths": [
+    ".blueprint/constitution-adoption.json",
+    ".blueprint/dependency-budget.json",
+    "index.html",
+    "editor.html",
+    "subject-manifest.json",
+    "manifest.webmanifest"
+  ],
+  "unverified": [
+    "Real cold start with external network denied and all local assets resolved",
+    "Save, reload, export and import learner progress without networking",
+    "Representative canonical math problem validation and subject-specific UX review"
+  ],
+  "release": {
+    "offlineRuntime": "UNVERIFIED",
+    "productAcceptance": "UNVERIFIED",
+    "independentReview": "PENDING",
+    "remotePublication": "DISABLED_BY_ECOSYSTEM_DEFAULT",
+    "userWorkstationInstalled": false,
+    "productionAuthorized": false
+  },
+  "note": "Real evidence is restricted to checked source contracts and reviewed CI. This is not approval of actual functionality, user acceptance or a release."
+}
