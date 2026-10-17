@@ -77,3 +77,11 @@ test('offline PWA shell precaches the new stylesheet before activation', () => {
   assert.match(sw, /'\.\/assets\/accessibility-contrast-v1\.css'/);
   assert.match(sw, /caches\.open\(SHELL_CACHE\)[\s\S]*cache\.addAll\(SHELL\)/);
 });
+
+test('real E121 hero failure has own text and CTA surfaces (not inherited body ink)', () => {
+  assert.match(css, /#view \.e121-hero :is\(h1, h2, h3\)/);
+  assert.match(css, /#view \.e121-hero :is\(p, aside p\)/);
+  assert.match(css, /#view \.e121-main-cta/);
+  assert.ok(contrast(token('on-dark'), token('dark-bg')) >= 4.5);
+  assert.ok(contrast(token('muted-dark'), token('dark-card')) >= 4.5);
+});
