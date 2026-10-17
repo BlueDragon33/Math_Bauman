@@ -5,6 +5,7 @@ on:
     paths:
       - 'index.html'
       - 'service-worker.js'
+      - 'assets/core.js'
       - 'assets/accessibility-contrast-v1.css'
       - 'tests/ui/contrast-aa.test.mjs'
       - 'tests/ui/contrast-browser.mjs'
@@ -33,7 +34,7 @@ jobs:
         with:
           node-version: '22'
       - name: Install browser test dependency (CI-only; no runtime dependency)
-        run: npm install --no-save --no-package-lock --ignore-scripts playwright@1.56.1
+        run: npm install --no-save --no-package-lock --ignore-scripts playwright@1.56.1 pngjs@7.0.0
       - name: Install Chromium system dependencies and browser
         run: npx playwright install --with-deps chromium
       - name: Start standalone Math site bound to CI loopback only
