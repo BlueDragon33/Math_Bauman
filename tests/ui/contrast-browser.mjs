@@ -9,7 +9,7 @@ const output = process.env.MATH_CONTRAST_OUTPUT || 'artifacts/math-ui-contrast';
 fs.mkdirSync(output, { recursive: true });
 const report = {
   schema: 'math-ui-contrast-browser/1',
-  head: process.env.GITHUB_SHA || 'LOCAL_UNVERIFIED',
+  head: process.env.MATH_CONTRAST_HEAD || 'LOCAL_UNVERIFIED',
   origin, testedAt: new Date().toISOString(),
   browser: 'chromium', platform: process.platform,
   scope: 'computed-color/surface browser spot checks; no real workstation acceptance',
@@ -83,8 +83,12 @@ try {
             if (normalTap) await locator.click({ timeout: 10000 });
             else await locator.evaluate(node => node.click()); // records non-user simulated navigation
             await page.waitForFunction(
-              () => document.querySelector('#view')?.textContent?.trim().length > 35,
-              null, { timeout: 15000 }
+              expected => {
+                const title = (document.querySelector('#pageTitle')?.textContent || '').trim().toLowerCase();
+                const content = document.querySelector('#view')?.textContent?.trim() || '';
+                return title.includes(expected.toLowerCase()) && content.length > 35;
+              },
+              route.text, { timeout: 20000 }
             );
             const current = await page.evaluate(() => ({
               title: document.querySelector('#pageTitle')?.textContent?.trim(),
