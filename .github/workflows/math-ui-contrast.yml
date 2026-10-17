@@ -50,6 +50,7 @@ jobs:
         env:
           MATH_CONTRAST_ORIGIN: http://127.0.0.1:8765
           MATH_CONTRAST_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+          MATH_UI_ROOT_CAUSE_DIAG: '1'
         run: node tests/ui/contrast-browser.mjs
       - name: Save browser screenshots and computed-style evidence (also on FAIL)
         if: always()
