@@ -5410,8 +5410,13 @@ window.BAUMAN_MATH_E70_SELF_CHECK=function(){
 };
 /* ===== END E70 ===== */
 
-async function init(){loadState(); await loadData(); buildShell(); document.addEventListener('pointerdown',handleMindMapDrag,{passive:true}); document.addEventListener('pointerover',handleMindMapHover,{passive:true}); document.addEventListener('pointerout',handleMindMapHoverOut,{passive:true}); document.addEventListener('dblclick',handleMindMapDoubleClick); document.addEventListener('click',handleClick); document.addEventListener('change',handleChange); document.addEventListener('input',handleInput); document.addEventListener('keydown',handleKeys); window.addEventListener('resize',()=>{if(state.view==='mindmap')requestAnimationFrame(()=>updateMindMapConnectors(document.querySelector('[data-mindmap-canvas=\"1\"]')));},{passive:true}); $('#modalClose').addEventListener('click',closeModal); $('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()}); $('#themeBtn').addEventListener('click',()=>openModal(renderInterfaceModal(),'interface')); $('#aiBtn').addEventListener('click',()=>openModal(renderAiMentor(),'ai')); bridge(); render(); }
-init();
+async function init(){loadState(); await loadData(); buildShell(); document.addEventListener('pointerdown',handleMindMapDrag,{passive:true}); document.addEventListener('pointerover',handleMindMapHover,{passive:true}); document.addEventListener('pointerout',handleMindMapHoverOut,{passive:true}); document.addEventListener('dblclick',handleMindMapDoubleClick); document.addEventListener('click',handleClick); document.addEventListener('change',handleChange); document.addEventListener('input',handleInput); document.addEventListener('keydown',handleKeys); window.addEventListener('resize',()=>{if(state.view==='mindmap')requestAnimationFrame(()=>updateMindMapConnectors(document.querySelector('[data-mindmap-canvas=\"1\"]')));},{passive:true}); $('#modalClose').addEventListener('click',closeModal); $('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()}); $('#themeBtn').addEventListener('click',()=>openModal(renderInterfaceModal(),'interface')); $('#aiBtn').addEventListener('click',()=>openModal(renderAiMentor(),'ai')); bridge(); render();
+ const root=$('#app'); if(root)root.setAttribute('aria-busy','false');
+ const nav=$('#nav'); if(nav)nav.removeAttribute('inert');
+ ['#stageSelect','#themeBtn','#aiBtn'].forEach(sel=>{const el=$(sel); if(el)el.disabled=false;});
+ const status=$('#saveState'); if(status&&status.textContent==='Đang tải')status.textContent='Sẵn sàng';
+ }
+init().catch(error=>{console.error('MATH_INIT_FAILED',error);const s=document.getElementById('saveState');if(s){s.textContent='Không thể khởi tạo';s.dataset.initError='1';}});
 
 /* E71_STABLE_CANDIDATE_GUARD: active UI smoke helpers, no split simulation mode. */
 function baumanE71CleanVisibleText(root){
