@@ -1,6 +1,7 @@
 // UI-CONTRAST-02: real Chromium computed-style audit for Math_Bauman.
  // This is CI browser evidence, NOT user Windows / human visual acceptance.
 import { chromium } from 'playwright';
+import { PNG } from 'pngjs';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -71,6 +72,73 @@ async function waitForInteractiveApp(page, ms=45000) {
   } finally { await session.detach(); }
 }
 
+
+/* Capture composited page pixels with glyphs hidden. Unlike reading CSS
+   background-image alone, this measures real gradient/alpha blending rendered
+   by Chromium at three points within each visible target's text box. */
+const GRADIENT_TEXT_TARGETS = [
+  '.sidebar .brand h1', '.sidebar .brand p',
+  '#nav button.active span', '#nav button:not(.active) span',
+  '.topbar h2', '.topbar p',
+  '#view .e121-hero h1', '#view .e121-hero p', '#view .e121-kicker',
+  '#view .e126-brand h3', '#view .e126-brand p',
+  '#view .e126-hero h2', '#view .e126-slide h3',
+  '#view .e126-card h4', '#view .e126-card p'
+];
+async function auditCompositedTextPixels(page) {
+  const targets = await page.evaluate(selectors => {
+    const result=[];
+    const visible = el => {
+      const r=el.getBoundingClientRect();
+      const s=getComputedStyle(el);
+      return r.width > 6 && r.height > 6 && r.right > 0 && r.bottom > 0 &&
+        r.left < innerWidth && r.top < innerHeight && s.visibility !== 'hidden' && s.display !== 'none';
+    };
+    for(const selector of selectors) {
+      for(const el of Array.from(document.querySelectorAll(selector)).filter(visible).slice(0,2)) {
+        const r=el.getBoundingClientRect(), cs=getComputedStyle(el);
+        const points=[.2,.5,.8].map(f=>({
+          x:Math.round(r.left+r.width*f),y:Math.round(r.top+r.height*.5)
+        })).filter(p=>p.x>=1&&p.y>=1&&p.x<innerWidth-1&&p.y<innerHeight-1);
+        if(points.length) result.push({
+          selector,text:(el.textContent||'').trim().slice(0,65),
+          foreground:cs.color,opacity:cs.opacity,points,
+          parentBackground:getComputedStyle(el.parentElement).backgroundImage.slice(0,120)
+        });
+      }
+    }
+    return result;
+  }, GRADIENT_TEXT_TARGETS);
+  const hiddenText=await page.addStyleTag({
+    content:'body, body * { color:transparent!important; -webkit-text-fill-color:transparent!important; text-shadow:none!important; }'
+  });
+  let screenshot;
+  try {
+    screenshot=await page.screenshot({type:'png',fullPage:false,animations:'disabled'});
+  } finally {
+    await hiddenText.evaluate(el=>el.remove()).catch(()=>{});
+  }
+  const img=PNG.sync.read(screenshot);
+  const results=[];
+  for(const t of targets) {
+    const fg=parseRgb(t.foreground);
+    if(!fg || fg[3]!==1 || Number(t.opacity)!==1) {
+      results.push({...t,measurement:'UNVERIFIED_ALPHA_OR_FOREGROUND'});continue;
+    }
+    const points=t.points.map(p=>{
+      if(p.x>=img.width||p.y>=img.height)return null;
+      const pos=(p.y*img.width+p.x)*4;
+      const bg=[img.data[pos],img.data[pos+1],img.data[pos+2],img.data[pos+3]/255];
+      if(bg[3]<1)return null;
+      return {x:p.x,y:p.y,backgroundRgb:bg.slice(0,3),ratio:Number(ratio(fg,bg).toFixed(2))};
+    }).filter(Boolean);
+    const minRatio=points.length?Math.min(...points.map(p=>p.ratio)):null;
+    results.push({...t,points,ratio:minRatio,
+      measurement:minRatio===null?'UNVERIFIED_SAMPLING':
+        minRatio>=4.5?'WCAG_AA_PIXEL_SAMPLE_PASS':'WCAG_AA_PIXEL_SAMPLE_FAIL'});
+  }
+  return results;
+}
 const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
 try {
   for (const device of combos) {
@@ -83,6 +151,13 @@ try {
       });
       const page = await context.newPage();
       const name = device.name + '-' + mode;
+      if(name==='desktop-dark') {
+        let delayed=false;
+        await page.route('**/data/*.json',async route=>{
+          if(!delayed){delayed=true;await new Promise(resolve=>setTimeout(resolve,1000));}
+          await route.continue();
+        });
+      }
       if (process.env.MATH_UI_ROOT_CAUSE_DIAG === '2' && name !== 'desktop-dark') { await context.close(); continue; }
       const scenario = {
         name, requested: routes.map(r => r.name), rendered: [], measurements: [],
@@ -181,10 +256,46 @@ try {
       }
       try {
         await page.goto(origin + '/index.html', { waitUntil: 'domcontentloaded', timeout: 45000 });
+        if(name==='desktop-dark') {
+          const loading=await page.evaluate(()=>({
+            busy:document.querySelector('#app')?.getAttribute('aria-busy'),
+            themeDisabled:document.querySelector('#themeBtn')?.disabled,
+            aiDisabled:document.querySelector('#aiBtn')?.disabled,
+            stageDisabled:document.querySelector('#stageSelect')?.disabled,
+            navInert:document.querySelector('#nav')?.hasAttribute('inert'),
+          }));
+          scenario.startup=loading;
+          if(loading.busy!=='true'||!loading.themeDisabled||!loading.aiDisabled||
+             !loading.stageDisabled||!loading.navInert) {
+            throw new Error('Premature interactive state while JSON is loading: '+JSON.stringify(loading));
+          }
+        }
         await page.waitForFunction(() => document.querySelectorAll('#nav button,#nav a').length >= 3, null, { timeout: 25000 });
         const appReady=await waitForInteractiveApp(page);
         scenario.appReady=appReady;
         if (!appReady.ready) throw new Error('Math app did not attach actual theme click handler after '+appReady.waitMs+'ms');
+        const loaded=await page.evaluate(()=>({
+          busy:document.querySelector('#app')?.getAttribute('aria-busy'),
+          themeDisabled:document.querySelector('#themeBtn')?.disabled,
+          aiDisabled:document.querySelector('#aiBtn')?.disabled,
+          stageDisabled:document.querySelector('#stageSelect')?.disabled,
+          navInert:document.querySelector('#nav')?.hasAttribute('inert'),
+        }));
+        scenario.interactive=loaded;
+        if(loaded.busy!=='false'||loaded.themeDisabled||loaded.aiDisabled||
+           loaded.stageDisabled||loaded.navInert)throw new Error('App listeners ready but UI still blocked: '+JSON.stringify(loaded));
+        if(name==='desktop-dark') {
+          await page.locator('a.skip-link').focus();
+          const skip=await page.locator('a.skip-link').evaluate(el=>{
+            const r=el.getBoundingClientRect(), cs=getComputedStyle(el);
+            return {color:cs.color,bg:cs.backgroundColor,width:r.width,height:r.height,
+              focused:document.activeElement===el};
+          });
+          scenario.skipLink=skip;
+          const f=parseRgb(skip.color),b=parseRgb(skip.bg);
+          if(!skip.focused||skip.width<70||!f||!b||ratio(f,b)<4.5)
+            throw new Error('Keyboard skip-link focus is not perceivable/contrasting: '+JSON.stringify(skip));
+        }
         // Real application theme switch, not a CSS-only forced class:
         // applyInterface() resets body classes on every route render.
         await page.locator('#themeBtn').click();
@@ -332,7 +443,14 @@ try {
                 : x.computedRatio >= 4.5 ? 'AA_NORMAL_TEXT_PASS' : 'AA_NORMAL_TEXT_FAIL';
               if (x.computedRatio !== null) solid++;
             }
-            scenario.measurements.push({ route: route.name, solid, samples });
+            const composited=await auditCompositedTextPixels(page);
+            const pixelFailures=composited.filter(x=>x.measurement==='WCAG_AA_PIXEL_SAMPLE_FAIL');
+            const pixelMeasured=composited.filter(x=>x.ratio!=null).length;
+            scenario.measurements.push({ route: route.name, solid, samples,
+              composited, pixelMeasured, pixelFailures:pixelFailures.length });
+            if(pixelFailures.length) throw new Error('Composited gradient/text pixel contrast below 4.5: '+
+              JSON.stringify(pixelFailures.map(x=>({selector:x.selector,text:x.text,ratio:x.ratio,points:x.points}))));
+            if(pixelMeasured<4)throw new Error('Insufficient real page pixels sampled: '+pixelMeasured);
             const failures = samples.filter(x => x.audit === 'AA_NORMAL_TEXT_FAIL');
             if (failures.length) {
               throw new Error('Low computed contrast on ' + route.name + ': ' + JSON.stringify(failures.map(
@@ -374,8 +492,9 @@ try {
 const total = report.scenarios.reduce((n,s) => n + s.rendered.length, 0);
 const failed = report.errors.length + report.scenarios.reduce((n,s) => n + s.routeErrors.length, 0);
 const measured = report.scenarios.reduce((n,s) => n + s.measurements.reduce((k,m) => k + m.solid,0), 0);
-console.log(JSON.stringify({ kind:'MATH_CONTRAST_BROWSER_QA', head:report.head, rendered:total, expected:12, measured, failures:failed, scenarios: report.scenarios.map(s=>({name:s.name,rendered:s.rendered.map(x=>x.route),errors:s.routeErrors})) }));
-if (total !== 12 || failed > 0 || measured < 8) {
+const pixelMeasured=report.scenarios.reduce((n,s) => n + s.measurements.reduce((k,m) => k + (m.pixelMeasured||0),0), 0);
+console.log(JSON.stringify({ kind:'MATH_CONTRAST_BROWSER_QA', head:report.head, rendered:total, expected:12, measured, pixelMeasured, failures:failed, scenarios: report.scenarios.map(s=>({name:s.name,rendered:s.rendered.map(x=>x.route),errors:s.routeErrors})) }));
+if (total !== 12 || failed > 0 || measured < 8 || pixelMeasured < 48) {
   console.error('Browser QA is NOT PASS; inspect measurements.json and screenshots. No approval implied.');
   process.exitCode = 1;
 }
