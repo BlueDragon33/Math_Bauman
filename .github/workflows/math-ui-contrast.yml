@@ -26,6 +26,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -46,7 +48,7 @@ jobs:
       - name: Compute real Chromium CSS colors, 3 routes x 2 themes x 2 viewports
         env:
           MATH_CONTRAST_ORIGIN: http://127.0.0.1:8765
-          GITHUB_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          MATH_CONTRAST_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
         run: node tests/ui/contrast-browser.mjs
       - name: Save browser screenshots and computed-style evidence (also on FAIL)
         if: always()
