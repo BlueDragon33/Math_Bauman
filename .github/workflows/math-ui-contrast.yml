@@ -1,4 +1,4 @@
-name: Math UI Contrast Source Gate
+name: Math UI Contrast Source + Real Browser Gate
 
 on:
   pull_request:
@@ -6,6 +6,7 @@ on:
       - 'index.html'
       - 'assets/accessibility-contrast-v1.css'
       - 'tests/ui/contrast-aa.test.mjs'
+      - 'tests/ui/contrast-browser.mjs'
       - '.github/workflows/math-ui-contrast.yml'
   workflow_dispatch:
 
@@ -19,3 +20,39 @@ jobs:
       - uses: actions/checkout@v4
       - name: Node and WCAG AA source regression checks (no online deploy)
         run: node --test tests/ui/contrast-aa.test.mjs
+
+  chromium-computed-contrast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test dependency (CI-only; no runtime dependency)
+        run: npm install --no-save --no-package-lock --ignore-scripts playwright@1.56.1
+      - name: Install Chromium system dependencies and browser
+        run: npx playwright install --with-deps chromium
+      - name: Start standalone Math site bound to CI loopback only
+        run: |
+          nohup python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/math-contrast-http.log 2>&1 &
+          echo $! >/tmp/math-contrast-http.pid
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            if curl --fail --silent http://127.0.0.1:8765/index.html >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/math-contrast-http.log
+          exit 1
+      - name: Compute real Chromium CSS colors, 3 routes x 2 themes x 2 viewports
+        env:
+          MATH_CONTRAST_ORIGIN: http://127.0.0.1:8765
+          GITHUB_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: node tests/ui/contrast-browser.mjs
+      - name: Save browser screenshots and computed-style evidence (also on FAIL)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: math-ui-contrast-chromium
+          path: artifacts/math-ui-contrast
+          if-no-files-found: warn
+          retention-days: 7
