@@ -1,0 +1,351 @@
+/* Blueprint OS 1.3.0 / Math_Bauman / UI-CONTRAST-01
+   Scoped accessibility layer. Source owners: assets/core.css + assets/math.css.
+   Legacy bug: .panel b/h3/h4 white text leaks onto #fff descendant cards.
+   Keep a quiet canvas, distinct dark chrome, and truly light reading islands.
+   Exact numeric tokens are asserted by tests/ui/contrast-aa.test.mjs.
+   Not an online release or human visual-acceptance claim. */
+:root {
+  --math-cx-dark-bg: #0b1b33;
+  --math-cx-dark-card: #142943;
+  --math-cx-on-dark: #f8fbff;
+  --math-cx-muted-dark: #cbdcf0;
+  --math-cx-light-bg: #f7faff;
+  --math-cx-light-card: #ffffff;
+  --math-cx-on-light: #15253b;
+  --math-cx-muted-light: #42566d;
+  --math-cx-action: #183a73;
+  --math-cx-gold: #f6cf82;
+}
+
+/* Dark chrome: increasing opacity makes the content, not decorative glow, lead. */
+body:not(.theme-clean):not(.theme-warm):not(.theme-focus) {
+  color: var(--math-cx-on-dark);
+  background: #071326 !important;
+}
+body::after { opacity: .16 !important; }
+.sidebar, .topbar {
+  color: var(--math-cx-on-dark) !important;
+  background: linear-gradient(155deg, #0b1b33, #142943) !important;
+  border-color: #465f7b !important;
+}
+#view .panel {
+  background: linear-gradient(175deg, #0b1b33, #142943) !important;
+  border-color: #465f7b !important;
+  color: var(--math-cx-on-dark);
+}
+.sidebar .brand p, .sidebar .select-label, .topbar p,
+#view .panel > p, #view .panel > small {
+  color: var(--math-cx-muted-dark) !important;
+}
+.sidebar .nav button { color: var(--math-cx-muted-dark) !important; }
+.sidebar .nav button:is(:hover, .active) {
+  background: #183a73 !important;
+  border-color: #6886a9 !important;
+  color: #ffffff !important;
+}
+.sidebar .nav button.active :is(span, b) { color: #ffffff !important; }
+.topbar .kicker, .sidebar .brand h1 { color: var(--math-cx-on-dark) !important; }
+
+/* Core's light-theme sidebar wins on specificity; its ink must be dark too.
+   This is a distinct light-mode surface, not a global theme override. */
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar {
+  background: #f7faff !important;
+  color: var(--math-cx-on-light) !important;
+  border-color: #c6d4e4 !important;
+}
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar .brand h1 {
+  color: var(--math-cx-on-light) !important;
+}
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar
+:is(.brand p, .select-label) {
+  color: var(--math-cx-muted-light) !important;
+}
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar .nav button:not(.active):not(:hover) {
+  color: var(--math-cx-on-light) !important;
+  background: #f7faff !important;
+  border-color: #c6d4e4 !important;
+}
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar .nav button:not(.active):not(:hover)
+:is(span, b) {
+  color: var(--math-cx-on-light) !important;
+}
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar .nav button:is(:hover, .active)
+:is(span, b) {
+  color: #ffffff !important;
+}
+
+/* White-on-cyan gradients failed text contrast: use a stable deep action color. */
+#app .btn.primary, #app .mathlab-v9 .mathlab-subtabs .btn.active {
+  color: #ffffff !important;
+  background: #183a73 !important;
+  border-color: #6886a9 !important;
+}
+#app .mathlab-v9.mode-application .mathlab-subtabs .btn.active {
+  color: #ffffff !important;
+  background: #80510d !important;
+}
+#app .btn.soft, #app .btn.gold {
+  color: var(--math-cx-on-dark) !important;
+  background: #243a55 !important;
+  border-color: #6886a9 !important;
+}
+
+
+/* Real Chromium screenshot: E121 hero inherited dark theme-clean ink on a
+   navy/teal gradient. Give the hero (not the global body) its own readable ink. */
+#view .e121-hero {
+  color: var(--math-cx-on-dark) !important;
+}
+#view .e121-hero :is(h1, h2, h3) {
+  color: var(--math-cx-on-dark) !important;
+}
+#view .e121-hero :is(p, aside p) {
+  color: var(--math-cx-muted-dark) !important;
+}
+#view .e121-hero aside {
+  background: #142943 !important;
+  border-color: #6886a9 !important;
+}
+#view .e121-main-cta {
+  background: var(--math-cx-action) !important;
+  border: 1px solid #6886a9 !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 26px rgba(2,6,23,.22) !important;
+}
+#view .e121-main-cta :is(b, small) {
+  color: #ffffff !important;
+}
+
+/* A light surface must own its ink, even when nested in a dark .panel.
+   Keep these classes scoped, rather than replacing all p/b elements globally. */
+#view :is(
+  .lesson-content, .slide-section, .present-slide, .e133-tabs,
+  .metric, .item-card, .source-tile, .slide-nav, .compact-card,
+  .test-question, .answer-card, .mini-dialogue, .method-steps article,
+  .math-sim-item, .math-sim-info article, .math-sim-vars article,
+  .math-term-grid article, .deep-review-item, .deep-drill-card,
+  .storage-preview, .routeCard, .e133-source
+) {
+  background: var(--math-cx-light-card) !important;
+  color: var(--math-cx-on-light) !important;
+  border-color: #c6d4e4 !important;
+}
+#view :is(
+  .lesson-content, .slide-section, .present-slide, .e133-tabs,
+  .metric, .item-card, .source-tile, .slide-nav, .compact-card,
+  .test-question, .answer-card, .mini-dialogue, .method-steps article,
+  .math-sim-item, .math-sim-info article, .math-sim-vars article,
+  .math-term-grid article, .deep-review-item, .deep-drill-card,
+  .storage-preview, .routeCard, .e133-source
+) :is(h1, h2, h3, h4, b, strong, p, li) {
+  color: var(--math-cx-on-light) !important;
+}
+#view :is(
+  .lesson-content, .slide-section, .present-slide, .e133-tabs,
+  .metric, .item-card, .source-tile, .slide-nav, .compact-card,
+  .test-question, .answer-card, .mini-dialogue, .method-steps article,
+  .math-sim-item, .math-sim-info article, .math-sim-vars article,
+  .math-term-grid article, .deep-review-item, .deep-drill-card,
+  .storage-preview, .routeCard, .e133-source
+) :is(small, p.muted, .muted, .description) {
+  color: var(--math-cx-muted-light) !important;
+}
+/* Hover and active states must not turn the light text islands translucent. */
+#view :is(.item-card, .slide-nav, .source-tile, .answer-card, .mini-dialogue, .math-sim-item):is(:hover, .active) {
+  background: #edf4ff !important;
+  border-color: #4776ad !important;
+}
+/* Dark containers nested inside a light reading area retain bright text. */
+#view :is(.deep-ru-block, .mathlab-formula pre) {
+  background: #0b1b33 !important;
+  color: var(--math-cx-on-dark) !important;
+}
+/* Stable dark captions in purposely dark laboratory and presentation chrome. */
+#view :is(.math-app-card, .math-ai-pipeline, .math-mastery-panel,
+          .oral-current-card, .mathlab-sidebar, .mathlab-main, .mathlab-command) {
+  color: var(--math-cx-on-dark) !important;
+}
+#view :is(.math-app-card, .math-ai-pipeline, .math-mastery-panel,
+          .oral-current-card, .mathlab-sidebar, .mathlab-main, .mathlab-command)
+:is(p, small, li) {
+  color: var(--math-cx-muted-dark) !important;
+}
+
+/* Form controls: no inherited dark-on-dark or white-on-white placeholder. */
+#app :is(.input, .textarea, select.input) {
+  background: var(--math-cx-light-bg) !important;
+  color: var(--math-cx-on-light) !important;
+  border: 1px solid #8195ad !important;
+}
+#app :is(.input, .textarea, select.input)::placeholder {
+  color: var(--math-cx-muted-light) !important;
+  opacity: 1;
+}
+#app :is(.sidebar, .topbar) :is(.input, .textarea, select.input) {
+  background: #142943 !important;
+  color: var(--math-cx-on-dark) !important;
+  border-color: #829ab6 !important;
+}
+#app :is(.sidebar, .topbar) :is(.input, .textarea)::placeholder {
+  color: var(--math-cx-muted-dark) !important;
+}
+#app select.input option { background: #ffffff; color: #15253b; }
+
+/* Context-aware controls on light tab bars; no white caption on a white tab. */
+#view :is(.e133-tabs, .lesson-content, .present-slide) .btn:not(.primary):not(.active) {
+  background: #e6eef9 !important;
+  color: var(--math-cx-on-light) !important;
+  border-color: #8195ad !important;
+}
+#view :is(.e133-tabs, .lesson-content, .present-slide) .btn.active {
+  background: var(--math-cx-action) !important;
+  color: #ffffff !important;
+}
+
+/* Intentional dark-mode exception for E133 source status rows. */
+html[data-theme="dark"] #view .e133-source {
+  background: var(--math-cx-dark-card) !important;
+  color: var(--math-cx-on-dark) !important;
+}
+html[data-theme="dark"] #view .e133-source :is(b, strong) {
+  color: var(--math-cx-on-dark) !important;
+}
+html[data-theme="dark"] #view .e133-source small {
+  color: var(--math-cx-muted-dark) !important;
+}
+html[data-theme="dark"] #view .e133-source > span {
+  color: var(--math-cx-gold) !important;
+}
+
+/* Browser artifact 12104083441: E126 uses a permanent dark teaching canvas.
+   Generic light-theme ink overrides created #0f172a headings on #1c2740
+   (hero title, lesson title and lesson support cards). Restore E126-owned ink. */
+#view .e126-theory-integrated {
+  --e126-text: var(--math-cx-on-dark);
+  --e126-muted: var(--math-cx-muted-dark);
+  color: var(--math-cx-on-dark) !important;
+}
+#view .e126-theory-integrated :is(
+  .e126-side, .e126-main, .e126-hero,
+  .e126-slide, .e126-card, .e126-block
+) :is(h1,h2,h3,h4,h5,b,strong) {
+  color: var(--math-cx-on-dark) !important;
+}
+#view .e126-theory-integrated :is(
+  .e126-side, .e126-main, .e126-hero,
+  .e126-slide, .e126-card, .e126-block
+) :is(p,li,small) {
+  color: var(--math-cx-muted-dark) !important;
+}
+#view .e126-theory-integrated :is(.e126-lesson-btn, .e126-slide-pill, .e126-role-grid button) {
+  color: var(--math-cx-muted-dark) !important;
+}
+#view .e126-theory-integrated :is(.e126-lesson-btn, .e126-slide-pill, .e126-role-grid button):is(.active,:hover) {
+  color: var(--math-cx-on-dark) !important;
+}
+#view .e126-theory-integrated :is(.e126-stage-tabs button.active, .e126-role-grid button.active) {
+  background: var(--math-cx-action) !important;
+  color: #ffffff !important;
+}
+#view .e126-theory-integrated .e126-slide-pill span,
+#view .e126-theory-integrated .e126-kicker,
+#view .e126-theory-integrated .e126-role {
+  color: var(--math-cx-gold) !important;
+}
+/* Mobile screenshot: navigation labels were hidden, leaving unexplained emoji.
+   Two compact columns restore readable names while reducing vertical chrome. */
+@media(max-width:680px) {
+  #app .sidebar .brand > div:last-child { display:block !important; }
+  #app .sidebar .brand h1 { display:block !important; color:var(--math-cx-on-dark) !important; }
+  #app .sidebar .brand p { display:block !important; color:var(--math-cx-muted-dark) !important; }
+  body:is(.theme-clean,.theme-warm,.theme-focus) #app .sidebar .brand h1 {
+    color:var(--math-cx-on-light) !important;
+  }
+  body:is(.theme-clean,.theme-warm,.theme-focus) #app .sidebar .brand p {
+    color:var(--math-cx-muted-light) !important;
+  }
+  #app .sidebar .nav {
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:7px !important;
+  }
+  #app .sidebar .nav button {
+    min-height:52px !important;
+    min-width:0;
+    display:flex !important;
+    flex-direction:row !important;
+    justify-content:flex-start !important;
+    align-items:center !important;
+    gap:7px !important;
+    padding:8px !important;
+    text-align:left !important;
+    font-size:12px !important;
+  }
+  #app .sidebar .nav button span {
+    display:inline !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    overflow:visible !important;
+    white-space:normal !important;
+    text-overflow:clip !important;
+    color:inherit !important;
+    line-height:1.25 !important;
+  }
+  #app .sidebar .nav button b { flex:0 0 auto; }
+  #app .sidebar .nav button.active span { color:#ffffff !important; }
+}
+
+
+/* Startup must not look clickable before core.js completes awaited data load.
+   The matching disabled/inert attributes are removed only by successful init(). */
+#app[aria-busy="true"] .top-actions .btn:disabled,
+#app[aria-busy="true"] .sidebar .input:disabled,
+#app[aria-busy="true"] .sidebar .nav[inert] {
+  opacity: .58 !important;
+  cursor: progress !important;
+}
+
+/* Keyboard-only skip link: no low-contrast blue text at the top of the page. */
+a.skip-link:not(:focus-visible) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  clip-path: inset(50%) !important;
+}
+a.skip-link:focus-visible {
+  position: fixed !important;
+  top: 12px !important;
+  left: 12px !important;
+  z-index: 100000 !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 12px 16px !important;
+  background: var(--math-cx-action) !important;
+  color: #ffffff !important;
+  border: 2px solid var(--math-cx-gold) !important;
+  border-radius: 12px !important;
+  clip-path: none !important;
+  outline: 3px solid var(--math-cx-gold) !important;
+  outline-offset: 2px !important;
+}
+
+/* Keyboard focus must remain perceivable on both surface families. */
+#app :is(a, button, input, select, textarea, [tabindex]):focus-visible,
+#modal :is(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--math-cx-gold) !important;
+  outline-offset: 3px !important;
+}
+#view :is(.lesson-content, .present-slide, .e133-tabs, .item-card, .slide-nav, .source-tile)
+:is(a, button, input, select, textarea, [tabindex]):focus-visible,
+#app :is(.input, .textarea, select.input):focus-visible {
+  outline-color: var(--math-cx-action) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  #app :is(button, a) { transition: none !important; transform: none !important; }
+}
+@media (prefers-contrast: more) {
+  body::after { opacity: 0 !important; }
+  #view .panel, .sidebar, .topbar { border-color: #a5b9d2 !important; }
+}
