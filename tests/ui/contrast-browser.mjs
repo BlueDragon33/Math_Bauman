@@ -73,6 +73,20 @@ try {
         try {
           await page.goto(origin + '/index.html', { waitUntil:'domcontentloaded', timeout:45000 });
           await page.waitForFunction(() => document.querySelectorAll('#nav button').length > 3, null, {timeout:25000});
+          const cdp = await context.newCDPSession(page);
+          await cdp.send('Runtime.enable');
+          const listenerCount = async expression => {
+            try {
+              const obj=await cdp.send('Runtime.evaluate',{expression,returnByValue:false});
+              if (!obj.result?.objectId) return -1;
+              const list=await cdp.send('DOMDebugger.getEventListeners',{objectId:obj.result.objectId});
+              return (list.listeners||[]).filter(x=>x.type==='click').length;
+            } catch(e) { return 'CDP_UNAVAILABLE:'+String(e.message||e); }
+          };
+          const initialListeners = {
+            theme:await listenerCount('document.getElementById("themeBtn")'),
+            document:await listenerCount('document')
+          };
           await page.evaluate(() => {
             window.__uiDiag = { events: [], mutations: [] };
             document.addEventListener('click', e => {
@@ -111,7 +125,25 @@ try {
             mutations:window.__uiDiag.mutations.slice(-20),
           }));
           await page.screenshot({ path:path.join(output,'diag-after-learning-click.png') });
-          report.diagnostic = { before, after, browserExceptions:scenario.browserExceptions };
+          const afterListeners = {
+            theme:await listenerCount('document.getElementById("themeBtn")'),
+            document:await listenerCount('document')
+          };
+          let readyWaitMs = 0;
+          if (afterListeners.theme === 0) {
+            const t0 = Date.now();
+            for (let i = 0; i < 32; i++) {
+              await page.waitForTimeout(250);
+              if ((await listenerCount('document.getElementById("themeBtn")')) > 0) { readyWaitMs=Date.now()-t0; break; }
+            }
+          }
+          const lateListeners={
+            theme:await listenerCount('document.getElementById("themeBtn")'),
+            document:await listenerCount('document')
+          };
+          report.diagnostic = { before, after, initialListeners, afterListeners, lateListeners, readyWaitMs,
+            browserExceptions:scenario.browserExceptions };
+
           console.log('MATH_UI_ROOT_CAUSE_DIAG', JSON.stringify(report.diagnostic));
         } catch (e) {
           report.diagnosticError = String(e.stack||e);
