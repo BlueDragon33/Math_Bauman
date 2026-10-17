@@ -62,3 +62,12 @@ test('keyboard, contrast preference, reduced-motion, and offline-only CSS', () =
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
   assert.doesNotMatch(css, /@import|https?:\/\/|url\(/i);
 });
+test('light sidebar themes keep dark ink while selected tabs keep white ink', () => {
+  assert.match(css, /body:is\(\.theme-clean, \.theme-warm, \.theme-focus\) \.sidebar \.nav button:not\(\.active\):not\(:hover\)/);
+  assert.match(css, /body:is\(\.theme-clean, \.theme-warm, \.theme-focus\) \.sidebar \.brand h1/);
+  assert.ok(contrast(token('on-light'), token('light-bg')) >= 4.5);
+});
+test('dark E133 source count never inherits low-contrast royal blue', () => {
+  assert.match(css, /html\[data-theme="dark"\] #view \.e133-source > span/);
+  assert.ok(contrast(token('gold'), token('dark-card')) >= 4.5);
+});
