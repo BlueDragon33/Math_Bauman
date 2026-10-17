@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'index.html'
+      - 'service-worker.js'
       - 'assets/accessibility-contrast-v1.css'
       - 'tests/ui/contrast-aa.test.mjs'
       - 'tests/ui/contrast-browser.mjs'
