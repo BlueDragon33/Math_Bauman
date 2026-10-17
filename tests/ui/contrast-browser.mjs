@@ -55,6 +55,7 @@ try {
       });
       const page = await context.newPage();
       const name = device.name + '-' + mode;
+      if (process.env.MATH_UI_ROOT_CAUSE_DIAG === '1' && name !== 'desktop-dark') { await context.close(); continue; }
       const scenario = {
         name, requested: routes.map(r => r.name), rendered: [], measurements: [],
         routeErrors: [], browserExceptions: [],
