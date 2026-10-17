@@ -19,6 +19,7 @@ const SHELL=[
   './assets/overview_cleanup/overview-home-E129.css',
   './assets/overview_state_guard/overview-state-guard-E130.css',
   './assets/runtime_audit/runtime-ui-consistency-E133.css',
+  './assets/accessibility-contrast-v1.css',
   './assets/platform/storage-adapter.js',
   './assets/platform/subject-storage.js',
   './assets/subject-adapter.js',
