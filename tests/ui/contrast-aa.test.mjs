@@ -85,3 +85,25 @@ test('real E121 hero failure has own text and CTA surfaces (not inherited body i
   assert.ok(contrast(token('on-dark'), token('dark-bg')) >= 4.5);
   assert.ok(contrast(token('muted-dark'), token('dark-card')) >= 4.5);
 });
+
+test('startup controls stay inert until real init completes and correctly release', () => {
+  const core = readFileSync(new URL('../../assets/core.js', import.meta.url), 'utf8');
+  assert.match(html, /<div id="app" class="app" aria-busy="true">/);
+  assert.match(html, /<nav id="nav"[^>]*\binert>/);
+  assert.match(html, /id="themeBtn"[^>]*\bdisabled>/);
+  assert.match(html, /id="aiBtn"[^>]*\bdisabled>/);
+  assert.match(html, /id="stageSelect"[^>]*\bdisabled>/);
+  assert.match(core, /async function init\(\)\{loadState\(\); await loadData\(\)/);
+  assert.match(core, /root\.setAttribute\('aria-busy','false'\)/);
+  assert.match(core, /nav\.removeAttribute\('inert'\)/);
+  assert.match(core, /el\.disabled=false/);
+  assert.match(core, /MATH_INIT_FAILED/);
+});
+test('skip-link is keyboard-only until focused and on readable solid background', () => {
+  assert.match(html, /<a class="skip-link" href="#view">/);
+  assert.match(css, /a\.skip-link:not\(:focus-visible\)/);
+  assert.match(css, /a\.skip-link:focus-visible/);
+  assert.match(css, /clip-path: inset\(50%\)/);
+  assert.ok(contrast('#ffffff', token('action')) >= 4.5);
+  assert.ok(contrast(token('gold'), token('action')) >= 3);
+});
