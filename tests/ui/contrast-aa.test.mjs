@@ -71,3 +71,9 @@ test('dark E133 source count never inherits low-contrast royal blue', () => {
   assert.match(css, /html\[data-theme="dark"\] #view \.e133-source > span/);
   assert.ok(contrast(token('gold'), token('dark-card')) >= 4.5);
 });
+
+test('offline PWA shell precaches the new stylesheet before activation', () => {
+  const sw = readFileSync(new URL('../../service-worker.js', import.meta.url), 'utf8');
+  assert.match(sw, /'\.\/assets\/accessibility-contrast-v1\.css'/);
+  assert.match(sw, /caches\.open\(SHELL_CACHE\)[\s\S]*cache\.addAll\(SHELL\)/);
+});
