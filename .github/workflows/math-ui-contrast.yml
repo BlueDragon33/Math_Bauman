@@ -1,0 +1,21 @@
+name: Math UI Contrast Source Gate
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'assets/accessibility-contrast-v1.css'
+      - 'tests/ui/contrast-aa.test.mjs'
+      - '.github/workflows/math-ui-contrast.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  wcag-token-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node and WCAG AA source regression checks (no online deploy)
+        run: node --test tests/ui/contrast-aa.test.mjs
