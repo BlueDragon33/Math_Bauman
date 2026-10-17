@@ -43,6 +43,34 @@ function ratio(a, b) {
   const l = [luminance(a), luminance(b)].sort((x, y) => y - x);
   return (l[0] + 0.05) / (l[1] + 0.05);
 }
+
+/* Wait for the app's *real* direct #themeBtn handler, not merely populated
+   navigation HTML. Source init() awaits sequential data fetches before
+   registering handlers. CDP inspects live listener registration without
+   modifying runtime source or arbitrary fixed startup sleeps. */
+async function waitForInteractiveApp(page, ms=45000) {
+  const session=await page.context().newCDPSession(page);
+  await session.send('Runtime.enable');
+  const start=Date.now();
+  let observed=-1;
+  try {
+    while(Date.now()-start < ms) {
+      const remote=await session.send('Runtime.evaluate',{
+        expression:'document.getElementById("themeBtn")',returnByValue:false
+      });
+      if(remote.result?.objectId) {
+        const listeners=await session.send('DOMDebugger.getEventListeners',{
+          objectId:remote.result.objectId
+        });
+        observed=(listeners.listeners||[]).filter(l=>l.type==='click').length;
+        if(observed>0) return {ready:true,waitMs:Date.now()-start,listeners:observed};
+      }
+      await page.waitForTimeout(200);
+    }
+    return {ready:false,waitMs:Date.now()-start,listeners:observed};
+  } finally { await session.detach(); }
+}
+
 const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
 try {
   for (const device of combos) {
@@ -55,11 +83,11 @@ try {
       });
       const page = await context.newPage();
       const name = device.name + '-' + mode;
-      if (process.env.MATH_UI_ROOT_CAUSE_DIAG === '1' && name !== 'desktop-dark') { await context.close(); continue; }
+      if (process.env.MATH_UI_ROOT_CAUSE_DIAG === '2' && name !== 'desktop-dark') { await context.close(); continue; }
       const scenario = {
         name, requested: routes.map(r => r.name), rendered: [], measurements: [],
         routeErrors: [], browserExceptions: [],
-        themeMethod: 'forced actual CSS classes/data-theme (switch-control workflow unverified)',
+        themeMethod: 'real in-app Giao diện swatch click after CDP-proven event readiness',
       };
       report.scenarios.push(scenario);
       page.on('pageerror', e => scenario.browserExceptions.push(String(e)));
@@ -69,7 +97,7 @@ try {
           scenario.routeErrors.push({ status: res.status(), url: res.url() });
         }
       });
-      if (name === 'desktop-dark' && process.env.MATH_UI_ROOT_CAUSE_DIAG === '1') {
+      if (name === 'desktop-dark' && process.env.MATH_UI_ROOT_CAUSE_DIAG === '2') {
         try {
           await page.goto(origin + '/index.html', { waitUntil:'domcontentloaded', timeout:45000 });
           await page.waitForFunction(() => document.querySelectorAll('#nav button').length > 3, null, {timeout:25000});
@@ -154,6 +182,9 @@ try {
       try {
         await page.goto(origin + '/index.html', { waitUntil: 'domcontentloaded', timeout: 45000 });
         await page.waitForFunction(() => document.querySelectorAll('#nav button,#nav a').length >= 3, null, { timeout: 25000 });
+        const appReady=await waitForInteractiveApp(page);
+        scenario.appReady=appReady;
+        if (!appReady.ready) throw new Error('Math app did not attach actual theme click handler after '+appReady.waitMs+'ms');
         // Real application theme switch, not a CSS-only forced class:
         // applyInterface() resets body classes on every route render.
         await page.locator('#themeBtn').click();
