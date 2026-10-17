@@ -68,6 +68,56 @@ try {
           scenario.routeErrors.push({ status: res.status(), url: res.url() });
         }
       });
+      if (name === 'desktop-dark' && process.env.MATH_UI_ROOT_CAUSE_DIAG === '1') {
+        try {
+          await page.goto(origin + '/index.html', { waitUntil:'domcontentloaded', timeout:45000 });
+          await page.waitForFunction(() => document.querySelectorAll('#nav button').length > 3, null, {timeout:25000});
+          await page.evaluate(() => {
+            window.__uiDiag = { events: [], mutations: [] };
+            document.addEventListener('click', e => {
+              window.__uiDiag.events.push({target:e.target.id||e.target.tagName, dataView:e.target.closest('[data-view]')?.getAttribute('data-view'), at:Date.now()});
+            }, {capture:true});
+            new MutationObserver(records => {
+              window.__uiDiag.mutations.push(...records.map(r => ({
+                target:r.target.id||r.target.tagName, attr:r.attributeName||null,
+                childNodes:r.target.childNodes?.length ?? null, at:Date.now()
+              })));
+            }).observe(document.querySelector('#modal'), { attributes:true, attributeFilter:['class'], childList:true, subtree:true });
+          });
+          await page.locator('#themeBtn').click();
+          await page.waitForTimeout(150);
+          const before = await page.evaluate(() => ({
+            modalClass:document.querySelector('#modal')?.className,
+            modalBodyChars:document.querySelector('#modalBody')?.innerHTML.length,
+            swatches:document.querySelectorAll('[data-ui-theme]').length,
+            selectedTheme:document.body.className,
+            events:window.__uiDiag.events,
+            mutations:window.__uiDiag.mutations.slice(0,20),
+            nav:Array.from(document.querySelectorAll('#nav button')).map(b=>({text:b.textContent.trim(),view:b.dataset.view}))
+          }));
+          await page.screenshot({ path: path.join(output,'diag-after-theme-click.png') });
+          const nav=page.locator('#nav button[data-view="learning"]');
+          await nav.click({timeout:10000});
+          await page.waitForTimeout(1400);
+          const after = await page.evaluate(() => ({
+            title:document.querySelector('#pageTitle')?.textContent?.trim(),
+            active:Array.from(document.querySelectorAll('#nav button.active')).map(b=>b.dataset.view),
+            view:(document.querySelector('#view')?.innerText||'').slice(0,1100),
+            bodyClass:document.body.className,
+            modalClass:document.querySelector('#modal')?.className,
+            hardRecovery:!!document.querySelector('.hard-recovery'),
+            events:window.__uiDiag.events.slice(-12),
+            mutations:window.__uiDiag.mutations.slice(-20),
+          }));
+          await page.screenshot({ path:path.join(output,'diag-after-learning-click.png') });
+          report.diagnostic = { before, after, browserExceptions:scenario.browserExceptions };
+          console.log('MATH_UI_ROOT_CAUSE_DIAG', JSON.stringify(report.diagnostic));
+        } catch (e) {
+          report.diagnosticError = String(e.stack||e);
+          console.log('MATH_UI_ROOT_CAUSE_DIAG_ERROR', report.diagnosticError);
+        }
+        throw new Error('ROOT_CAUSE_DIAGNOSTIC_ONLY; UX gate intentionally NOT PASS');
+      }
       try {
         await page.goto(origin + '/index.html', { waitUntil: 'domcontentloaded', timeout: 45000 });
         await page.waitForFunction(() => document.querySelectorAll('#nav button,#nav a').length >= 3, null, { timeout: 25000 });
