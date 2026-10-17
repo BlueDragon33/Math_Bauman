@@ -217,6 +217,84 @@ html[data-theme="dark"] #view .e133-source > span {
   color: var(--math-cx-gold) !important;
 }
 
+/* Browser artifact 12104083441: E126 uses a permanent dark teaching canvas.
+   Generic light-theme ink overrides created #0f172a headings on #1c2740
+   (hero title, lesson title and lesson support cards). Restore E126-owned ink. */
+#view .e126-theory-integrated {
+  --e126-text: var(--math-cx-on-dark);
+  --e126-muted: var(--math-cx-muted-dark);
+  color: var(--math-cx-on-dark) !important;
+}
+#view .e126-theory-integrated :is(
+  .e126-side, .e126-main, .e126-hero,
+  .e126-slide, .e126-card, .e126-block
+) :is(h1,h2,h3,h4,h5,b,strong) {
+  color: var(--math-cx-on-dark) !important;
+}
+#view .e126-theory-integrated :is(
+  .e126-side, .e126-main, .e126-hero,
+  .e126-slide, .e126-card, .e126-block
+) :is(p,li,small) {
+  color: var(--math-cx-muted-dark) !important;
+}
+#view .e126-theory-integrated :is(.e126-lesson-btn, .e126-slide-pill, .e126-role-grid button) {
+  color: var(--math-cx-muted-dark) !important;
+}
+#view .e126-theory-integrated :is(.e126-lesson-btn, .e126-slide-pill, .e126-role-grid button):is(.active,:hover) {
+  color: var(--math-cx-on-dark) !important;
+}
+#view .e126-theory-integrated :is(.e126-stage-tabs button.active, .e126-role-grid button.active) {
+  background: var(--math-cx-action) !important;
+  color: #ffffff !important;
+}
+#view .e126-theory-integrated .e126-slide-pill span,
+#view .e126-theory-integrated .e126-kicker,
+#view .e126-theory-integrated .e126-role {
+  color: var(--math-cx-gold) !important;
+}
+/* Mobile screenshot: navigation labels were hidden, leaving unexplained emoji.
+   Two compact columns restore readable names while reducing vertical chrome. */
+@media(max-width:680px) {
+  #app .sidebar .brand > div:last-child { display:block !important; }
+  #app .sidebar .brand h1 { display:block !important; color:var(--math-cx-on-dark) !important; }
+  #app .sidebar .brand p { display:block !important; color:var(--math-cx-muted-dark) !important; }
+  body:is(.theme-clean,.theme-warm,.theme-focus) #app .sidebar .brand h1 {
+    color:var(--math-cx-on-light) !important;
+  }
+  body:is(.theme-clean,.theme-warm,.theme-focus) #app .sidebar .brand p {
+    color:var(--math-cx-muted-light) !important;
+  }
+  #app .sidebar .nav {
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:7px !important;
+  }
+  #app .sidebar .nav button {
+    min-height:52px !important;
+    min-width:0;
+    display:flex !important;
+    flex-direction:row !important;
+    justify-content:flex-start !important;
+    align-items:center !important;
+    gap:7px !important;
+    padding:8px !important;
+    text-align:left !important;
+    font-size:12px !important;
+  }
+  #app .sidebar .nav button span {
+    display:inline !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    overflow:visible !important;
+    white-space:normal !important;
+    text-overflow:clip !important;
+    color:inherit !important;
+    line-height:1.25 !important;
+  }
+  #app .sidebar .nav button b { flex:0 0 auto; }
+  #app .sidebar .nav button.active span { color:#ffffff !important; }
+}
+
 /* Keyboard focus must remain perceivable on both surface families. */
 #app :is(a, button, input, select, textarea, [tabindex]):focus-visible,
 #modal :is(a, button, input, select, textarea, [tabindex]):focus-visible {
