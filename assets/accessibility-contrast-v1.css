@@ -46,6 +46,34 @@ body::after { opacity: .16 !important; }
 .sidebar .nav button.active :is(span, b) { color: #ffffff !important; }
 .topbar .kicker, .sidebar .brand h1 { color: var(--math-cx-on-dark) !important; }
 
+/* Core's light-theme sidebar wins on specificity; its ink must be dark too.
+   This is a distinct light-mode surface, not a global theme override. */
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar {
+  background: #f7faff !important;
+  color: var(--math-cx-on-light) !important;
+  border-color: #c6d4e4 !important;
+}
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar .brand h1 {
+  color: var(--math-cx-on-light) !important;
+}
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar
+:is(.brand p, .select-label) {
+  color: var(--math-cx-muted-light) !important;
+}
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar .nav button:not(.active):not(:hover) {
+  color: var(--math-cx-on-light) !important;
+  background: #f7faff !important;
+  border-color: #c6d4e4 !important;
+}
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar .nav button:not(.active):not(:hover)
+:is(span, b) {
+  color: var(--math-cx-on-light) !important;
+}
+body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar .nav button:is(:hover, .active)
+:is(span, b) {
+  color: #ffffff !important;
+}
+
 /* White-on-cyan gradients failed text contrast: use a stable deep action color. */
 #app .btn.primary, #app .mathlab-v9 .mathlab-subtabs .btn.active {
   color: #ffffff !important;
@@ -158,6 +186,9 @@ html[data-theme="dark"] #view .e133-source :is(b, strong) {
 }
 html[data-theme="dark"] #view .e133-source small {
   color: var(--math-cx-muted-dark) !important;
+}
+html[data-theme="dark"] #view .e133-source > span {
+  color: var(--math-cx-gold) !important;
 }
 
 /* Keyboard focus must remain perceivable on both surface families. */
