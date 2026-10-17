@@ -295,6 +295,42 @@ html[data-theme="dark"] #view .e133-source > span {
   #app .sidebar .nav button.active span { color:#ffffff !important; }
 }
 
+
+/* Startup must not look clickable before core.js completes awaited data load.
+   The matching disabled/inert attributes are removed only by successful init(). */
+#app[aria-busy="true"] .top-actions .btn:disabled,
+#app[aria-busy="true"] .sidebar .input:disabled,
+#app[aria-busy="true"] .sidebar .nav[inert] {
+  opacity: .58 !important;
+  cursor: progress !important;
+}
+
+/* Keyboard-only skip link: no low-contrast blue text at the top of the page. */
+a.skip-link:not(:focus-visible) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  clip-path: inset(50%) !important;
+}
+a.skip-link:focus-visible {
+  position: fixed !important;
+  top: 12px !important;
+  left: 12px !important;
+  z-index: 100000 !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 12px 16px !important;
+  background: var(--math-cx-action) !important;
+  color: #ffffff !important;
+  border: 2px solid var(--math-cx-gold) !important;
+  border-radius: 12px !important;
+  clip-path: none !important;
+  outline: 3px solid var(--math-cx-gold) !important;
+  outline-offset: 2px !important;
+}
+
 /* Keyboard focus must remain perceivable on both surface families. */
 #app :is(a, button, input, select, textarea, [tabindex]):focus-visible,
 #modal :is(a, button, input, select, textarea, [tabindex]):focus-visible {
