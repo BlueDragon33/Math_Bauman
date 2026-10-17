@@ -62,6 +62,7 @@ try {
       };
       report.scenarios.push(scenario);
       page.on('pageerror', e => scenario.browserExceptions.push(String(e)));
+      page.on('console', msg => { if (msg.type() === 'error' && scenario.browserExceptions.length < 12) scenario.browserExceptions.push('console: ' + msg.text().slice(0,500)); });
       page.on('response', res => {
         if (res.status() >= 400 && (res.url().includes('.css') || res.url().includes('core.js'))) {
           scenario.routeErrors.push({ status: res.status(), url: res.url() });
@@ -70,11 +71,13 @@ try {
       try {
         await page.goto(origin + '/index.html', { waitUntil: 'domcontentloaded', timeout: 45000 });
         await page.waitForFunction(() => document.querySelectorAll('#nav button,#nav a').length >= 3, null, { timeout: 25000 });
-        await page.evaluate(theme => {
-          document.body.classList.remove('theme-clean','theme-warm','theme-focus');
-          if (theme === 'light') document.body.classList.add('theme-clean');
-          document.documentElement.dataset.theme = theme;
-        }, mode);
+        // Real application theme switch, not a CSS-only forced class:
+        // applyInterface() resets body classes on every route render.
+        await page.locator('#themeBtn').click();
+        await page.locator('[data-ui-theme="' + (mode === 'light' ? 'clean' : 'navy') + '"]').first().click();
+        await page.locator('#modalClose').click();
+        await page.waitForFunction(expected => document.body.classList.contains('theme-' + expected),
+          mode === 'light' ? 'clean' : 'navy', { timeout: 12000 });
         for (const route of routes) {
           try {
             const locator = page.locator('#nav button, #nav a').filter({ hasText: route.text }).first();
@@ -100,6 +103,9 @@ try {
             }));
             if (!current.loadedCss) throw new Error('contrast CSS missing in computed browser document');
             if (current.viewChars < 35 || current.viewNodes < 4) throw new Error('empty rendered route: ' + route.name);
+            if (!current.currentThemeClass.includes('theme-' + (mode === 'light' ? 'clean' : 'navy'))) {
+              throw new Error('selected app theme did not survive navigation: ' + current.currentThemeClass);
+            }
             if (!current.title?.toLowerCase().includes(route.text.toLowerCase())) {
               throw new Error('route mismatch: wanted ' + route.text + ', title=' + current.title);
             }
@@ -109,6 +115,7 @@ try {
                 '.sidebar .brand h1', '.sidebar .brand p', '.sidebar .select-label',
                 '#nav button:not(.active) span', '#nav button.active span',
                 '.topbar h2', '.topbar p', '.topbar .btn.primary',
+                '#view .e121-hero h1', '#view .e121-hero p', '#view .e121-main-cta b', '#view .e121-hero aside p',
                 '#view .lesson-content h3', '#view .slide-section h4',
                 '#view .item-card b', '#view .source-tile b',
                 '#view .metric b', '#view .compact-card b',
@@ -151,6 +158,17 @@ try {
               }
               return results;
             });
+            if (route.name === 'overview') {
+              const heroTitle = samples.find(x => x.selector === '#view .e121-hero h1');
+              if (!heroTitle) throw new Error('E121 hero title absent: cannot verify visual contrast');
+              if (heroTitle.color !== 'rgb(248, 251, 255)') {
+                throw new Error('E121 hero heading must be foreground white, got ' + heroTitle.color);
+              }
+              const heroCopy = samples.find(x => x.selector === '#view .e121-hero p');
+              if (!heroCopy || heroCopy.color !== 'rgb(203, 220, 240)') {
+                throw new Error('E121 hero paragraph computed ink mismatch ' + (heroCopy?.color || 'MISSING'));
+              }
+            }
             let solid = 0;
             for (const x of samples) {
               const fg = parseRgb(x.color);
@@ -177,7 +195,14 @@ try {
             }
             await page.screenshot({ path: path.join(output, name + '-' + route.name + '.png'), fullPage: false });
           } catch (error) {
-            scenario.routeErrors.push({ route: route.name, message: String(error.message || error) });
+            const debug = await page.evaluate(() => ({
+              title: document.querySelector('#pageTitle')?.textContent?.trim(),
+              activeNav: Array.from(document.querySelectorAll('#nav button.active')).map(e => ({text:e.textContent.trim(),view:e.dataset.view})),
+              pageTextLength: document.querySelector('#view')?.textContent?.trim().length || 0,
+              bodyClass: document.body.className,
+              hardRecovery: Boolean(document.querySelector('.hard-recovery')),
+            })).catch(() => ({}));
+            scenario.routeErrors.push({ route: route.name, message: String(error.message || error), debug, browserExceptions: scenario.browserExceptions.slice(-8) });
             await page.screenshot({ path: path.join(output, name + '-' + route.name + '-FAILED.png'), fullPage: false }).catch(() => {});
           }
         }
