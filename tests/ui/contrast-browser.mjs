@@ -230,6 +230,10 @@ try {
                 '#nav button:not(.active) span', '#nav button.active span',
                 '.topbar h2', '.topbar p', '.topbar .btn.primary',
                 '#view .e121-hero h1', '#view .e121-hero p', '#view .e121-main-cta b', '#view .e121-hero aside p',
+                '#view .e126-brand h3', '#view .e126-brand p',
+                '#view .e126-hero h2', '#view .e126-slide h3',
+                '#view .e126-card h4', '#view .e126-card p',
+                '#view .e126-lesson-btn small',
                 '#view .lesson-content h3', '#view .slide-section h4',
                 '#view .item-card b', '#view .source-tile b',
                 '#view .metric b', '#view .compact-card b',
@@ -283,6 +287,34 @@ try {
                 throw new Error('E121 hero paragraph computed ink mismatch ' + (heroCopy?.color || 'MISSING'));
               }
             }
+            // E126 visually failed despite 12/12 route tests: #0f172a was
+            // rendered over a navy lesson surface, outside prior selector list.
+            if (route.name === 'learning') {
+              const headings = samples.filter(x => ['#view .e126-brand h3','#view .e126-hero h2',
+                '#view .e126-slide h3','#view .e126-card h4'].includes(x.selector));
+              const descriptions = samples.filter(x => ['#view .e126-brand p',
+                '#view .e126-card p','#view .e126-lesson-btn small'].includes(x.selector));
+              if (headings.length < 3 || descriptions.length < 2) {
+                throw new Error('E126 coverage missing: headings='+headings.length+' descriptions='+descriptions.length);
+              }
+              const darkInkFails = [
+                ...headings.filter(x => x.color !== 'rgb(248, 251, 255)'),
+                ...descriptions.filter(x => x.color !== 'rgb(203, 220, 240)')
+              ];
+              if (darkInkFails.length) throw new Error('E126 dark-on-dark regression: '+
+                JSON.stringify(darkInkFails.map(x=>({selector:x.selector,color:x.color,text:x.text}))));
+            }
+            if(device.name === 'mobile') {
+              const navVisibility=await page.locator('#nav button').evaluateAll(nodes=>nodes.map(btn=>{
+                const span=btn.querySelector('span');
+                const st=span?getComputedStyle(span):null;
+                return {text:span?.textContent?.trim(),display:st?.display,visibility:st?.visibility,
+                  width:span?.getBoundingClientRect()?.width||0};
+              }));
+              scenario.mobileNav=navVisibility;
+              if(navVisibility.filter(x=>x.text&&x.display!=='none'&&x.visibility!=='hidden'&&x.width>0).length<8)
+                throw new Error('Mobile nav captions remain hidden: '+JSON.stringify(navVisibility));
+            }
             let solid = 0;
             for (const x of samples) {
               const fg = parseRgb(x.color);
@@ -306,6 +338,13 @@ try {
               throw new Error('Low computed contrast on ' + route.name + ': ' + JSON.stringify(failures.map(
                 f => ({ selector:f.selector, text:f.text, foreground:f.color, ratio:f.computedRatio })
               )));
+            }
+            if(device.name==='mobile') {
+              const focus = route.name==='learning' ? '#view .e126-hero h2'
+                : route.name==='overview' ? '#view .e121-hero h1'
+                : '#view h2';
+              const node=page.locator(focus).first();
+              if(await node.count()) await node.scrollIntoViewIfNeeded().catch(()=>{});
             }
             await page.screenshot({ path: path.join(output, name + '-' + route.name + '.png'), fullPage: false });
           } catch (error) {
