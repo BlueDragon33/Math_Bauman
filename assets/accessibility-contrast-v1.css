@@ -90,6 +90,32 @@ body:is(.theme-clean, .theme-warm, .theme-focus) .sidebar .nav button:is(:hover,
   border-color: #6886a9 !important;
 }
 
+
+/* Real Chromium screenshot: E121 hero inherited dark theme-clean ink on a
+   navy/teal gradient. Give the hero (not the global body) its own readable ink. */
+#view .e121-hero {
+  color: var(--math-cx-on-dark) !important;
+}
+#view .e121-hero :is(h1, h2, h3) {
+  color: var(--math-cx-on-dark) !important;
+}
+#view .e121-hero :is(p, aside p) {
+  color: var(--math-cx-muted-dark) !important;
+}
+#view .e121-hero aside {
+  background: #142943 !important;
+  border-color: #6886a9 !important;
+}
+#view .e121-main-cta {
+  background: var(--math-cx-action) !important;
+  border: 1px solid #6886a9 !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 26px rgba(2,6,23,.22) !important;
+}
+#view .e121-main-cta :is(b, small) {
+  color: #ffffff !important;
+}
+
 /* A light surface must own its ink, even when nested in a dark .panel.
    Keep these classes scoped, rather than replacing all p/b elements globally. */
 #view :is(
